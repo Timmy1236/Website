@@ -60,7 +60,7 @@ const Home = {
               ]),
 
               m(".proyects-buttons", [
-                m("button.btn", { onclick: () => window.open("https://github.com/Timmy1236/Website/compare", "_blank") }, [
+                m("button.btn", { onclick: () => window.open("https://github.com/Timmy1236/Website", "_blank") }, [
                   m("img", { src: "./assets/images/icons/github-icon.svg", alt: "GitFront" }),
                   "GitHub"
                 ])
