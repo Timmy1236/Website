@@ -3,7 +3,7 @@ title: "Update 2: Rediseño"
 date: 2023-08-20
 description: "Nuevo diseño, en vez de tenerlo todo en horizontal, ahora esta todo vertical, cool."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Información

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="./favicon.png">
+  <title>404 - Timmy</title>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="contenedor">
+    <a id="title">ERROR 404</a>
+    <a href="https://timmy.nekoweb.org" id="link"> &#8666; GO HOME</a>
+  </div>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, monospace;
+      box-sizing: border-box;
+      background-image: url("assets/images/backgrounds/404.png");
+      background-repeat: repeat;
+      background-size: 350px 350px;
+      animation: scroll-background 20s linear infinite;
+    }
+
+    @keyframes scroll-background {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 700px 0;
+      }
+    }
+
+    .contenedor {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      color: rgb(255 255 255);
+      font-size: 24px;
+      background-color: rgb(0 0 0);
+      padding: 15px 20px 15px 20px;
+      transition: all 0.25s;
+    }
+
+    #link:hover {
+      font-size: 28px;
+      color: rgb(131 131 255);
+      transition: all 0.25s;
+    }
+
+    #link:hover:after {
+      content: " NOW";
+      transition: all 0.25s;
+    }
+
+    #title {
+      padding: 3px 8px 0 8px;
+    }
+  </style>
+</body>
+
+</html>

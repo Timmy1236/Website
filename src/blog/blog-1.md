@@ -3,7 +3,7 @@ title: "Blog 1: ¿Hola?"
 date: 2026-01-18
 description: "¿Qué se supone que se hace en un Blog, hablarse uno mismo?"
 layout: layouts/base.html
-back: /generated/blog/index.html
+back: /content/blog/index.html
 ---
 
 # ¿Hola?

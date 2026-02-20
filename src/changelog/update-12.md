@@ -3,7 +3,7 @@ title: "Update 12: Nekoweb!"
 date: 2025-08-18
 description: "Oh! Ya tenia una pagina creada en este sitio antiguamente porque seguía a Dimden desde hace tiempo, pero honestamente nunca se me paso la idea de pasar mi pagina de GitHub a Nekoweb, wassup!"
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Información

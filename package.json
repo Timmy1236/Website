@@ -1,10 +1,11 @@
 {
-  "name": "Timmy digital garbage",
+  "name": "Timmy's Digital Dumpster",
   "version": "1.0.0",
   "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,8 @@
   },
   "homepage": "https://github.com/Timmy1236/Timmy1236.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
-  },
-  "dependencies": {
-    "@11ty/eleventy-plugin-rss": "^2.0.4"
+    "@11ty/eleventy": "^3.1.2",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }

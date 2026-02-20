@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title }} - Timmy</title>
   <meta name="description" content="{{ description or 'Personal site' }}">
-  <link rel="icon" href="/assets/images/favicons/favicon.webp">
+  <link rel="icon" href="../../favicon.png">
   <link rel="stylesheet" href="/css/base.css">
 </head>
 
@@ -20,7 +20,7 @@
               {% if back %}
               <a href="{{ back }}">← Volver</a>
               {% else %}
-              <a href="/generated/sitemap/index.html">← Sitemap</a>
+              <a href="/content/sitemap/index.html">← Sitemap</a>
               {% endif %}
             </div>
 
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <audio id="player" src="/assets/sounds/music/elevator-music.mp3" loop></audio>
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
   <div class="audio-widget">
     <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
 

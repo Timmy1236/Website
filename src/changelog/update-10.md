@@ -3,7 +3,7 @@ title: "Update 10: Rediseño por completo de la página"
 date: 2024-08-16
 description: "Ahora no todo se encuentra en el simple index, ahora esta separado por paginas, cada dia estoy mas cerca a una pagina '''profesional''' para mi nivel ;)"
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Información

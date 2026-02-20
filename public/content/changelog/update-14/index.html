@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update 14: Styles - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/content/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Update 14: Styles</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Información</h1>
+<p>Rehíce gran parte del código general de la pagina web antes de comenzar de hacer un nuevo layout, el código era tan terrible que si hacia un cambio se rompía todo.</p>
+<hr>
+<h3>Añadidos</h3>
+<ul>
+<li>Ahora la pagina cuenta con un sitemap, tengo pensado en añadir mas paginas o continuar insertando mas links pero esta vez mas en el sitemap antes que dejarlo todo compactado en el nav, por ahora no tiene muchas cosas.</li>
+<li>Nuevas opciones en la sección de settings, ahora hay todo un sistema de themes que se aplica en el style general de la pagina.</li>
+</ul>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Remplace el theme del changelog por uno simple me gusta abusar mucho el CSS pero puede ser imposible intentar leer textos, así que estos tipos de paginas que tendrán mayormente textos, ahora cuentan con un style único y simple.</li>
+<li>Rehíce por completo el about-me, junte la sección de mi perfil y la de discord haciendo que ahora el pfp y username que tenia antes, se actualicen a tiempo real dependiendo de las stats de mi perfil, también mostrara si estoy conectado o no al momento que entres.</li>
+<li>Modifique elements.css para que el site box sea mas simple y lindo que el anterior teniendo toda una imagen borrosa.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Re ajuste el icono del mouse personalizado porque resulta que estaba un poco offset y quedaba raro donde había que clickear</li>
+<li>Arregle un montón de strings del i18n y añadiendo le mas soporte a otros strings que no se traducían, aún hay otros varios mas que pude identificar pero no tengo tiempo para arreglarlos en esta actualización.</li>
+<li>Arregle algunas paginas de los mini-easter eggs que estaban en el about me, como el de minecraft o el del half life 2 que no tenían correctamente bien ubicados las direcciones de los fonts, haciendo que usaran la genérica del arial y rompiendo varios elementos del css.</li>
+</ul>
+<hr>
+<h3>Eliminaciones</h3>
+<ul>
+<li>Elimine completamente la sección &quot;Flash Archive&quot; en others por ahora.</li>
+<li>Elimine un montón de archivos que no se usaban mas en la pagina para ahorrar algo de tamaño y simplificar los directorios del repositorio.</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

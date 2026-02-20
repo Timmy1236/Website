@@ -3,7 +3,7 @@ title: "Recode 1: Layout nuevo"
 date: 2025-12-26
 description: "Después de mucho tiempo estando mejorando el sitio y aprendiendo nuevas tecnológicas y técnicas en el desarrollo de software en web, creo que tengo las bolas suficientes de finalmente hacer un salto y re-codificar prácticamente toda mi pagina desde '0', por ahora solo hice un re-diseño completo del estilo de la pagina a uno mas 'grid' en vez de ponerlo todo vertical."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 # Información

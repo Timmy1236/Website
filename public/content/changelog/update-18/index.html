@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update 16: Directorios - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/content/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Update 16: Directorios</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Información</h1>
+<p>No muchas cosas nuevas, simplemente re organizando todos los archivos internos de la pagina.</p>
+<hr>
+<h3>Añadidos</h3>
+<ul>
+<li>No-Good angel button.</li>
+<li>Nuevo efectos de sonidos para los botones del nav.</li>
+<li>Tooltips, aún no se donde usarlos en la página, pero hay tooltips.</li>
+</ul>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Re hice de vuelta la pagina 404 ya que no había hecho un cambio en ella ya prácticamente un año y me estaba dando un tic.</li>
+<li>La pagina ya no se encuentra en /website/ sino que ahora es /public/, esto es para que quede mas claro en github que lo único que se publicara sera lo que este adentro de esa carpeta y que src solamente sirve para guardar los markdowns y base del content.</li>
+<li>Las paginas generadas con 11ty se encontraran ahora en la carpeta content en vez de 'generated' para que no se confunda con una carpeta temporal.</li>
+<li>Varios archivos multimedia estaban mal organizados o inclusos fuera de sus categorías adecuadas, debería de estar todo ordenado, espero que ninguna pagina haya perdido por una ruta no actualizada :).</li>
+<li>Mayoría de scripts y CSS fueron documentados y estilizados con stylelint para mantener una limpieza en los códigos, pero esta pensado hacer eso mas profundamente en las siguientes actualizaciones.</li>
+<li>Se cambiaron las músicas de la pagina principal y las generadas por 11ty por unas músicas sin copyright, en futuras actualizaciones tengo pensado crear una pagina de créditos para creditar a los compositores!</li>
+<li>Cambie el favicon por uno que hice en 30 segundos en libresprite. wow, horrible.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Settings setup no estaba haciendo su trabajo, me olvide de llamar su función.</li>
+</ul>
+<hr>
+<h3>Eliminaciones</h3>
+<ul>
+<li>Varias imágenes y audios que ya no se estaban usando en la página.</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/content/sitemap/index.html">← Sitemap</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Blog</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Microblog</h1>
+<p><em>Algunas veces pierdo la cabeza y empiezo hablarle hacia la pared, ahora, pierdo la cabeza y empiezo hablarle a la computadora</em></p>
+<hr>
+<ul>
+<li>
+<p><a href="/content/blog/blog-2/">Blog 2: El GitHub</a>  <em>(19 de febrero de 2026)</em> <br>
+Si quieres ver lo horrible que es el código de esta pagina y la cantidad innecesaria de scripts que tienes, ahora puedes hacerlo perfectamente desde GitHub.</p>
+</li>
+<li>
+<p><a href="/content/blog/blog-1/">Blog 1: ¿Hola?</a>  <em>(17 de enero de 2026)</em> <br>
+¿Qué se supone que se hace en un Blog, hablarse uno mismo?</p>
+</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

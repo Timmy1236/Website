@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recode 2: Mithril.js y 11ty - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/content/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Recode 2: Mithril.js y 11ty</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Información</h1>
+<p>Nuevo año, nuevo yo, literalmente. Desde que me pase a NekoWeb me he enfocado en aprender mas como funciona el desarrollo en el frontend, deje un poco de lado mis otros proyectos a dedicarme completamente en investigar como usar un generador de sitios estático. En esta update trae: <a href="https://mithril.js.org/">mithril.js</a> y <a href="https://www.11ty.dev/">11ty</a>, describí como funcionan de forma poca detallada en la sección de añadidos. Recomiendo mucho visitar sus paginas para ver el potencial máximo que tienen, hablo en serio.</p>
+<hr>
+<h3>Añadidos</h3>
+<ul>
+<li>'Mithril.js' Ahora la pagina en vez de correr simplemente en HTML estático, ahora todo se basa en un simple index.html que usa mithril.js como DOM virtual, básicamente cuando te cambias de pagina, en vez de recargar completamente un HTML entero, incluso cuando gran parte sea simplemente un copia y pega, ahora solamente cambiara el contenido de ella, sin necesidad de gastar red al pedo, incluso esto debería ser mas rápido, al instante ya cargas todas mis paginas en el script y al clickear un botón, pum, cambio al instante!</li>
+<li>'11ty' El sitemap, blog, changelog, y posiblemente mas paginas que haga en algún futuro, tampoco serán simplemente copias y pegas del mismo HTML pero con diferente textos, ahora todo se genera al instante gracias a 11ty, un generador de paginas estáticos, simplemente creo un HTML como base y listo, después solamente si quiero crear algo nuevo, como un sitemap, hago un markdown y pongo solamente lo que quiero ver que se vea en ella, una lista con varios links, un titulo h1, y nada mas, 11ty hace todo el trabajo, recomendado!</li>
+</ul>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Acabo de otra vez re-formar los directorios, ahora los scripts se encuentran organizados por categorías y todas las herramientas de 11ty y generadores se encuentran separados del deploy, básicamente nekoweb solamente hosteara lo visible mientras que todas mis herramientas y bases se encuentran afuera guardadas para futuras updates, esto debería de ayudar en no subir tanto el peso con node modules y toda esas mierdas.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Minis fixes en algunos scripts que he encontrado al estar organizándolos, no son nada de importancia.</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

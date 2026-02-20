@@ -3,7 +3,7 @@ title: "Update 6: Navidad"
 date: 2023-11-28
 description: "Cambie los colores-... Obey, esto esta siendo un problema muy rápido, necesito una mejor manera de hacer esto."
 layout: layouts/base.html
-back: generated/changelog/index.html
+back: content/changelog/index.html
 ---
 
 ### Información
