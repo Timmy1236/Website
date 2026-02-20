@@ -1,4 +1,4 @@
-import Layout from "./javascript/components/Layout.js";
+import Layout from "./javascript/components/layout.js";
 
 import Home from "./javascript/spa/home.js";
 import About from "./javascript/spa/about-me.js";
