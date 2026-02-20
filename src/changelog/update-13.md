@@ -3,7 +3,7 @@ title: "Update 13: Uhhh..."
 date: 2025-09-18
 description: "Me toco re-codificar gran parte de la pagina nuevamente al cambiar todo a Nekoweb, resulta que también, ¡MÁGICAMENTE!, escribir todo de forma hecho mierda, puede romperse al mínimo cambio que hagas, incluyendo cambio de host."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Información

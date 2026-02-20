@@ -3,7 +3,7 @@ title: "Update 4: Marquee eliminado"
 date: 2023-09-29
 description: "Firefox tiene terribles problemas intentando renderizar ese tag, pones el mouse sobre encima y todo el texto se rompe, tristemente tendré que quitarlo."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Eliminaciones

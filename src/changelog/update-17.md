@@ -1,9 +1,9 @@
 ---
-title: "Recode 3: Pulir"
+title: "Update 15: Pulir"
 date: 2026-02-03
 description: "Arreglando, añadiendo y cambiando cosas que estaban medio mal con el anterior recode. Este debería de ser el ultimo recode que haga."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 # Información

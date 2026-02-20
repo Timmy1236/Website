@@ -3,7 +3,7 @@ title: "Update 9: Añadiendo de vuelta lo eliminado"
 date: 2024-07-09
 description: "ignora la update de 'simplificado' bruh."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Añadidos

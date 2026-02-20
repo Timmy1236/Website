@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update 13: Uhhh... - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="../../favicon.png">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/content/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Update 13: Uhhh...</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h3>Información</h3>
+<p>Aún sigo teniendo cosas que tengo que arreglar, el deploy automático que tenia configurado en GitHub Actions no estaba funcionando como yo quería y nada se estaba subiendo, si ves esto, significa que pude arreglarlo.</p>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Modifique ligeramente el style del changelog para que sea mas legible.</li>
+<li>Remplace el botón del &quot;No time spent with a cat is wasted&quot; por los buttons que se usan normalmente en nekoweb para hacer promo de otras paginas. Aún sigo viendo como funciona todo eso.</li>
+<li>Moví varios elementos de la pagina &quot;others&quot; a las otras paginas.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Varios links dejaron de funcionar en el cambio de github pages a nekoweb, se supone que la mayoría debería de llevarte a las paginas correctas.</li>
+<li>Intente arreglar la mayoría de paddings y margins que no estaban bien aplicados. No lo testé por ahora en mobiles.</li>
+<li>Arregle el mini changelog del home, por alguna razón no paraba de mostrar &quot;TEXT&quot; en vez de los cambios reales.</li>
+</ul>
+<hr>
+<h3>Eliminaciones</h3>
+<ul>
+<li>Desactive temporalmente el &quot;Flash Archive&quot;.</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

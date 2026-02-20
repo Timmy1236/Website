@@ -3,7 +3,7 @@ title: "Update 3: Error 404"
 date: 2023-08-22
 description: "Ni sabia que podrías personalizar el error 404 con simplemente poniendo un 404.html, voy a probarlo y seguramente olvidarlo para siempre."
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Cambios

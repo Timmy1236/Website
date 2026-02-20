@@ -3,7 +3,7 @@ title: "Recode 2: Mithril.js y 11ty"
 date: 2026-01-17
 description: "Con la ayuda del nuevo diseño de mi pagina, tendiendo el contenido que cambia entre ellas en una sola parte, me permite realizar un cambio de paginas de forma 'smooth' sin la necesidad de re-cargar enteramente todo el código HTML cada vez que el usuario clickea un botón el NAV! Esto lo pude hacer gracias a Mithril.js. También, he empezado a usar 11ty, un generador de paginas estáticas, en vez de escribir otra vez todos los HTML's para cada changelog, blog, sitemap, etc. Ahora puedo usar solamente un html base y escribir cada articulo desde un simple markdown!"
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 # Información

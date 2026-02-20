@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<!-- ¡Wassup! Checkea lo que quieras, de todas formas este código es una basura. -->
+<html lang="es">
+
+<head>
+  <title>Home - Timmy1236</title>
+  <link rel="icon" href="../../../favicon.png" />
+
+  <!--(META)-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Timmy1236" />
+
+  <meta lang="es" name="language" content="es" />
+  <meta lang="es" name="description" content="Página web personal de Timmy1236" />
+  <meta lang="es" name="keywords"
+    content="sitio web personal, Timmy1236, programming, programacion, personal site, indie, indie web, nekoweb, JS, JavaScript, HTML, CSS, chill, lofi" />
+  <!--(META)-->
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="home.css" />
+  <!--(CSS)-->
+
+  <!--(SCRIPTS)-->
+  <script src="stats.js"></script>
+  <script src="i18n.js"></script>
+  <!--(SCRIPTS)-->
+</head>
+
+<body>
+  <div class="content-wrapper">
+
+    <!--(NAV)-->
+    <div class="content-block nav-content">
+      <div class="container">
+        <div class="links-container">
+          <a class="div-link" href="OLD-home.html" style="color: #81eea3">/home/</a>
+          <a class="div-link" href="OLD-about-me.html" style="color: #396b49">/about-me/</a>
+          <a class="div-link" href="OLD-others.html" style="color: #396b49">/others/</a>
+        </div>
+
+        <div class="language-container">
+          <button class="btn" data-lang="es" onclick="changeLanguage('es')">ES</button>
+          <button class="btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+        </div>
+      </div>
+    </div>
+    <!--(NAV)-->
+
+    <!--(INTRO)-->
+    <div class="content-block intro-content">
+      <div class="intro-banner">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="../../../assets/videos/banner-old.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <!--(INTRO)-->
+
+    <!--(CHANGELOG)-->
+    <div class="content-block changelog">
+      <div class="title">
+        <h1 class="text-title" data-i18n="home.changelog.title"></h1>
+      </div>
+      <div class="div-content">
+        <label id="text">
+          <div class="changelog-title">
+            <span id="title" data-i18n="home.changelog.latestEntry.title"></span>
+          </div>
+          <span data-i18n="home.changelog.latestEntry.feature"></span>
+      </div>
+
+      <div class="changelog-footer">
+        <a href="../../../pages/changelog.html" class="links" data-i18n="home.changelog.fullChangelog"></a>
+      </div>
+    </div>
+    <!--(CHANGELOG)-->
+
+    <!--(STATS)-->
+    <div class="content-block">
+      <div class="title">
+        <h1 class="text-title">NekoWeb stats</h1>
+      </div>
+      <div class="div-content">
+        <p id="visitors">Visits: Loading...</p>
+        <p id="followers">Followers: Loading...</p>
+        <p id="created">Created: Loading...</p>
+
+        <iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>
+      </div>
+    </div>
+    <!--(STATS)-->
+
+    <!--(BUTTONS)-->
+    <div class="buttons">
+      <a href="https://chantu.nekoweb.org/"><img src="https://chantu.nekoweb.org/imgs/buttons/Chantu.png"
+          alt="Chantu website"></a>
+    </div>
+    <!--(BUTTONS)-->
+
+  </div>
+  <!--(CONTENT)-->
+
+  <!--(MÚSICA)-->
+  <audio id="audio" src="../../../assets\sounds\music\background.mp3" muted loop></audio>
+  <!--(MÚSICA)-->
+
+  <script src="i18n.js"></script>
+</body>
+
+</html>

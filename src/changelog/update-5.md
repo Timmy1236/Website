@@ -3,7 +3,7 @@ title: "Update 5: Halloween!1!"
 date: 2023-10-03
 description: "Cambie los colores de la pagina para una estética de halloween... ¿Tendré que hacerlo todo manualmente cada vez que cambiamos de fiestas?"
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 ### Información

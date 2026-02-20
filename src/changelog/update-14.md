@@ -3,7 +3,7 @@ title: "Update 14: Styles"
 date: 2025-11-08
 description: "¿Sabes que es lo mas importante? ¡La presentación!"
 layout: layouts/base.html
-back: /generated/changelog/index.html
+back: /content/changelog/index.html
 ---
 
 # Información

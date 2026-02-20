@@ -15,16 +15,16 @@ back: ../../
 
 ## Pages
 
-- [Sitemap](/generated/sitemap/index.html)
-- [Microblog (Spanish)](/generated/blog/)
-- [Changelog (Spanish)](/generated/changelog/)
+- [Sitemap](/content/sitemap/index.html)
+- [Microblog (Spanish)](/content/blog/)
+- [Changelog (Spanish)](/content/changelog/)
 
 ---
 
 ## Others
 
 - [Follow](https://nekoweb.org/follow/timmy.nekoweb.org/)
-- [RSS](/generated/feed.xml)
+- [RSS](/content/feed.xml)
 - - [Minecraft](../../pages/others/minecraft.html), [Half Life 2](../../pages/others/half-life-2.html), [Warframe](../../pages/others/ordis.html)
 
 ---
