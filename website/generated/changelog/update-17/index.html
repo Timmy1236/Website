@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recode 3: Pulir - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="/assets/images/favicons/favicon.webp">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/generated/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Recode 3: Pulir</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Información</h1>
+<p>Con todos estos nuevos cambios que he hecho, no todos salieron lo mejor posible ('' •᷄ ᴗ •᷅ ). Esta update esta enfocado en arreglar las mayorías de cosas que se rompieron con el recode anterior.</p>
+<hr>
+<h3>Añadidos</h3>
+<ul>
+<li>Generador de RSS automático, ahora todos los changelogs y blogs deberían de crearse al momento de hacer una build de la pagina, esto solucionara cualquier tipo de error que tenia antes con mi feed que no se actualizaba bien.</li>
+</ul>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Cambio de host de imagen del botón de nyani58.</li>
+<li>Un CSS mas &quot;limpio&quot;, elimine la mayoría de efectos, hice las sombras y los fondos transparentes mas opacos, agregue mas padding para juntar el contenido en el medio, quite la mayoría de los bordes redondos, etc.</li>
+<li>Los botones ahora son mas 'clickys' :3, tienen una animación re-hecha completamente nueva y ahora tienen un efecto especial cuando son clickeados.</li>
+<li>Nuevo fondo animado y reproductor mp3 para todas las paginas generados con 11ty, también ahora se usa swup.js, para que tenga una animación de transición cada vez que cambies de pagina y que el navegador no se vea obligado a recargar de vuelta cada vez que te muevas entre paginas.</li>
+<li>Re-escrito de vuelta todos los textos y actualizado los json para el i18n.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Inconsistencias en el CSS, había muchos divs que le faltaban clases importantes y otras que aunque se veían iguales, si cambiabas de theme se rompían o no se actualizaba con las nuevas variables, etc.</li>
+<li>Unos scripts se ejecutaban varias veces y se duplicaban generando problemas de rendimiento dependiendo de la cantidad de veces que te cambiabas de paginas en el home, esto ya no debería de pasar y ahora cada script se ejecuta por separado dependiendo de la pagina, i18n debería de ejecutar una vez cada vez que entres una pagina nueva por precaución.</li>
+</ul>
+<hr>
+<h3>Eliminaciones</h3>
+<ul>
+<li>pursuer</li>
+</ul>
+<img src="https://i.pinimg.com/736x/14/7d/be/147dbe99a775ed1c0d98dba85649f5a1.jpg" alt="NOOOOOOOOOOO" width="200"/>
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/elevator-music.mp3" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

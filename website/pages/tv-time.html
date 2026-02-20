@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Tv Time! - Timmy</title>
+  <link rel="icon" href="../assets/images/favicons/favicon.webp" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      background: transparent;
+      display: flex;
+
+    }
+
+    .tv-container {
+      position: relative;
+      width: 300px;
+      height: 260px;
+    }
+
+    .tv-screen {
+      position: absolute;
+      top: 13%;
+      left: 12%;
+      width: 230px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    #image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: black;
+    }
+
+    .tv-frame {
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tv-container">
+    <div class="tv-screen">
+      <div id="image"></div>
+    </div>
+
+    <img src="../assets/images/others/tv-frame.webp" class="tv-frame" alt="Pixel TV" />
+  </div>
+
+  <script src="../javascript/pages/tv-time.js"></script>
+</body>
+
+</html>

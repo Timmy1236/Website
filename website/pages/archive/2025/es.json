@@ -1,0 +1,63 @@
+{
+  "home": {
+    "changelog": {
+      "title": "Changelog",
+      "fullChangelog": "Changelog Completo",
+      "latestEntry": {
+        "title": "23/11/2025> Actualizando info de proyectos",
+        "feature": "eso mismo."
+      }
+    },
+    "settings": {
+      "title": "Configuración",
+      "options": {
+        "backgroundEffects": "Efectos del fondo",
+        "backgroundMusic": "Música del fondo",
+        "backgroundImage": "Imagen del fondo",
+        "ignoreLandingPage": "Ignorar la pagina de bienvenida"
+      }
+    }
+  },
+  "about-me": {
+    "aboutMe": {
+      "title": "Sobre mi",
+      "introDescription": "No me gusta hacer presentaciones...",
+      "description": "Wassup, soy Timmy1236, programador introvertido de 20 años, siempre estuve interesado en crear arte digital relacionado con la muisca o el dibujo, pero nunca se me dio la mano en eso honestamente, toda mi creatividad e inventos siempre fueron limitados a simplemente crear lineas de códigos, no cuento mucho con que contarte sobre mi ahora mismo cuando estoy enfocado en terminar todos mis proyectos en progreso, así que gracias por visitar mi pagina que se encontrara en desarrollo para siempre. (`･ω･´)",
+      "fact": {
+        "programming": "● Lenguajes de programación: ",
+        "database": "● Sistemas de base de datos: ",
+        "softwares": "● Softwares (Open source): ",
+        "favorite-games": "● Juegos que me gustan: "
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "projectsList": {
+        "website": {
+          "description": "Mi propio sitio web personal, tiene información sobre mis otros proyectos y algo de información personal sobre mí, ¡es lo que estás viendo ahora mismo!"
+        },
+        "leafy": {
+          "description": "Un simple bot para discord, nada más, simple como eso. "
+        },
+        "aiopark": {
+          "description": "Proyecto universitario: 'AIOPark' un software diseñado específicamente para AIO, que le permitirá gestionar su aparcamiento inteligente, incluyendo la gestion de usuarios, vehiculos, pagos y reportes."
+        },
+        "chatcat": {
+          "description": "Proyecto personal experimental: aplicación de mensajería instantánea cliente-servidor, con cliente en .NET/WPF y servidor en Node.js/TypeScript"
+        }
+      }
+    },
+    "stats": {
+      "title": "Estadísticas",
+      "programmingLanguages": "Lenguajes de Programación",
+      "timeSpent": "Horas de mi vida gastadas"
+    }
+  },
+  "others": {
+    "others": {
+      "title": "Otros",
+      "warning": "¡Esta sección es temporal!",
+      "description": "Lo que estás viendo ahora son contenidos experimentales, que no tengo idea de dónde ponerlos, por ahora se quedarán aquí hasta que encuentre en qué sección colocarlos. Es normal esperar ver errores o falta de optimización, aún se encuentran en desarrollo."
+    }
+  }
+}

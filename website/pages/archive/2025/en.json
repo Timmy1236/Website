@@ -1,0 +1,63 @@
+{
+  "home": {
+    "changelog": {
+      "title": "Changelog",
+      "fullChangelog": "Full Changelog",
+      "latestEntry": {
+        "title": "11/23/2025> Updated project info",
+        "feature": "that is."
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "options": {
+        "backgroundEffects": "Background effects",
+        "backgroundMusic": "Background music",
+        "backgroundImage": "Background image",
+        "ignoreLandingPage": "Skip landing page"
+      }
+    }
+  },
+  "about-me": {
+    "aboutMe": {
+      "title": "About Me",
+      "introDescription": "I don't like doing introductions...",
+      "description": "Wassup, I'm Timmy1236, a 20-year-old introverted programmer. I've always been interested in creating digital art related to music or drawing, but honestly, I never had much talent for that. All my creativity and inventions have always been limited to simply writing lines of code. I don't have much to tell you about myself right now, as I'm focused on finishing all my projects in progress. So, thanks for visiting my page, which will remain in development forever. (`･ω･´)",
+      "fact": {
+        "programming": "● Programming languages: ",
+        "database": "● Database systems: ",
+        "softwares": "● Softwares: ",
+        "favorite-games": "● Games I like: "
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "projectsList": {
+        "website": {
+          "description": "My own personal website; it contains information about my other projects and some personal details about me — it's what you're looking at right now!"
+        },
+        "leafy": {
+          "description": "(WIP) Refactoring in progress..."
+        },
+        "aiopark": {
+          "description": "University project: 'AIOPark', a software specifically designed for AIO, which allows managing its smart parking system — including user, vehicle, payment, and report management."
+        },
+        "chatcat": {
+          "description": "Experimental personal project: a client-server instant messaging app, with the client built in .NET/WPF and the server in Node.js/TypeScript."
+        }
+      }
+    },
+    "stats": {
+      "title": "Statistics",
+      "programmingLanguages": "Programming Languages",
+      "timeSpent": "Hours of my life spent"
+    }
+  },
+  "others": {
+    "others": {
+      "title": "Others",
+      "warning": "This section is temporary!",
+      "description": "What you’re seeing now are experimental contents that I have no idea where to place yet. For now, they’ll stay here until I decide which section to move them to. It’s normal to expect bugs or lack of optimization — these are still under development."
+    }
+  }
+}

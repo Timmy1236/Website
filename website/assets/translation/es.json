@@ -1,0 +1,51 @@
+{
+  "home": {
+    "welcome": {
+      "title": "¡Bienvenido!",
+      "text": "<p>Gracias por visitar a mi basurero digital. Ahora mismo no hay mucho que te pueda enseñar ya que siempre se va encontrar en una etapa de desarrollo infinita y se ira expandiendo y mejorando con el paso del tiempo. Tenia planeado en dejar cualquier tipo de contenido que me guste o que yo mismo he desarrollado, pero como no hay nada por ahora, simplemente ve clickeando los botones del nav para ver que mierdas he hecho en otros lados. El home, lo que estas viendo, nunca va tener nada. Ignóralo. <br><br>Si quieres, puedes volver nuevanmente en algun futuro para ver lo nuevo que he añadido, recuerda utilizar <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\" style=\"color: #8A8AFF\">control + f5</a> para obtener la ultima version de la pagina. ヾ(•ω•`)o<br><br></p>"
+    }
+  },
+  "about-me": {
+    "aboutMe": {
+      "title": "Sobre mi",
+      "startDescription": "Odio escribir esto.",
+      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?</a> <p>¡Hey! Soy Timmy(1236), un desarrollador de software fullstack introvertido que no le gusta hablar en persona. Aunque mis únicos hobbys sea programar, jugar y diseñar en 3D, siempre estuve interesado en crear arte digital <span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >de  alta  calidad</span>, pero nunca se me dio la mano para ese tipo de cosas. Así que toda mi creatividad siempre fue limitada a simplemente unas líneas de códigos, eso no quita que no sea una persona creativa, incluso, me gusta la idea de crear cualquier tipo de solución para arreglar un problema que nunca nadie ha tenido en su vida. Incluyendo esta misma pagina web, para guardar los registros de mis proyectos que se encuentran en desarrollo y que nunca llegaran ver la luz del sol. ;)</p> </span>",
+      "fact": {
+        "programming": "● Lenguajes: ",
+        "softwares": "● Softwares: ",
+        "favorite-games": "● Juegos: ",
+        "series": "● Series:"
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "projectsList": {
+        "website": {
+          "description": "Mi sitio web personal hosteado en Nekoweb, sera mi sitio principal donde mantendré actualizado todos los tipos de proyectos o blogs que haga sobre mi. Si ves este texto en primer lugar, eso significa que ya estas viendo mi pagina!"
+        },
+        "WIP": {
+          "description": "Todos los demás proyectos fueron removidos ya que quiero mover toda esta sección a una pagina por separado, solamente esta mi pagina web por si alguien quiere ver el código fuente."
+        }
+      }
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "sections": {
+      "visual-effects": "Efectos visuales",
+      "audio": "Audio",
+      "others": "Otros",
+      "themes": "Temas (W.I.P)",
+      "languages": "Lenguajes"
+    },
+    "options": {
+      "rainEffects": "Lluvia",
+      "staticEffects": "Estática",
+      "backgroundMusic": "Música de fondo",
+      "ignoreLandingPage": "Ignorar la pagina de bienvenida",
+      "vignetteEffects": "Viñeta",
+      "mouseClicks": "Clics del mouse",
+      "readableFont": "Fuente legible (W.I.P)"
+    }
+  }
+}

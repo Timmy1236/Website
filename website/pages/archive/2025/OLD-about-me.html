@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+  <title>About me - Timmy</title>
+  <link rel="icon" href="../../../assets/images/favicons/favicon.webp">
+
+  <!--(META)-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="language" content="ES" />
+  <meta name="author" content="Timmy1236" />
+  <meta name="description" content="Personal website of Timmy1236." />
+  <meta name="keywords" content="Timmy1236, Personal site, Indie, Indie Web, NekoWeb, JS, HTML, CSS, Chill, Green" />
+
+  <!--(CSS)-->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="about-me.css" />
+
+  <!--(SCRIPTS)-->
+  <script src="settings-loader.js"></script>
+  <script src="i18n.js"></script>
+  <script src="autoplay.js"></script>
+
+  <script src="discord.js"></script>
+</head>
+
+<body>
+  <div class="vignette"></div>
+  <div class="content-wrapper">
+
+    <!--(NAV)-->
+    <div class="content-block nav-content">
+      <div class="container">
+        <div class="links-container">
+          <a class="div-link" id="page-link" href="OLD-home.html">/home/</a>
+          <a class="div-link" id="page-link-selected" href="OLD-about-me.html">/about-me/</a>
+          <a class="div-link" id="page-link" href="OLD-others.html">/others/</a>
+        </div>
+
+        <div class="language-container">
+          <button class="btn" data-lang="es" onclick="changeLanguage('es')">ES</button>
+          <button class="btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+        </div>
+      </div>
+    </div>
+    <!--(NAV)-->
+
+    <!--(ABOUT ME)-->
+    <div class="content-block about-me">
+      <div class="title">
+        <h1 class="text-title" data-i18n="about-me.aboutMe.title">Sobre Mí</h1>
+      </div>
+
+      <div class="div-content">
+
+        <!-- PERFIL PRINCIPAL -->
+        <div class="profile-section">
+          <div class="profile-avatar" id="discord-avatar-container">
+            <!-- Avatar de Discord se insertará aquí -->
+          </div>
+
+          <div class="profile-info">
+            <h1 class="profile-username">Timmy1236</h1>
+            <p class="profile-subinfo" id="discord-status-text">Status: Loading...</p>
+            <p class="profile-subinfo">🌍 Uruguay | 🎂 20 Years old</p>
+          </div>
+        </div>
+
+
+        <!-- RESUMEN -->
+        <div class="resume">
+          <span data-i18n="about-me.aboutMe.description"></span>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="list">
+          <h2 class="about-section-title">Skills</h2>
+          <ul class="about-list">
+            <li>
+              <span data-i18n="about-me.aboutMe.fact.programming"></span>
+              <span style="color: #e7ff7f;">JavaScript</span>,&nbsp;
+              <span style="color: #ffc271;">HTML</span>,&nbsp;
+              <span style="color: #83ceff;">CSS</span>,&nbsp;
+              <span style="color: #ffcb86;">Java</span>,&nbsp;
+              <span style="color: #d47afd;">C#</span>,&nbsp;
+              <span style="color: #69aedb;">Python</span>,&nbsp;
+              <span style="color: #2f6d96;">GDScript</span>,&nbsp;
+              <span style="color: #6a6abd;">Lua</span>&nbsp;
+              <span style="color: gray">(Learning C++)</span>
+            </li>
+
+            <li>
+              <span data-i18n="about-me.aboutMe.fact.database"></span>
+              <a style="text-decoration: none; color: #80e288;" href="https://www.mongodb.com/"
+                target="_blank">MongoDB</a>,&nbsp;
+              <a style="text-decoration: none; color: #4bb7ff;" href="https://www.mysql.com/" target="_blank">MySQL</a>
+              /
+              <a style="text-decoration: none; color: #c3745c;" href="https://mariadb.org/"
+                target="_blank">MariaDB</a>,&nbsp;
+              <a style="text-decoration: none; color: #5c7fc3;" href="https://sqlite.org/" target="_blank">SQLite</a>
+            </li>
+
+            <li>
+              <span data-i18n="about-me.aboutMe.fact.softwares"></span>
+              <a style="text-decoration: none; color: rgb(71 140 191);" href="https://github.com/godotengine/godot"
+                target="_blank">Godot (150^ horas)</a>,&nbsp;
+              <a style="text-decoration: none; color: #e4ab6e;" href="https://github.com/blender/blender"
+                target="_blank">Blender</a>,&nbsp;
+              <a style="text-decoration: none; color: #6bafdb;" href="https://github.com/OpenShot/openshot-qt"
+                target="_blank">OpenShot</a>,&nbsp;
+              <a style="text-decoration: none; color: #4cadf3;" href="https://github.com/KDE/krita"
+                target="_blank">Krita</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="list">
+          <h2 class="about-section-title">Interests</h2>
+          <ul class="about-list">
+            <li>
+              <span data-i18n="about-me.aboutMe.fact.favorite-games"></span>
+              <a style="text-decoration: none; color: rgb(216, 148, 109);" href="../../../pages/others/minecraft.html"
+                target="_blank">Minecraft</a>,&nbsp;
+              <a style="text-decoration: none; color: rgb(104, 212, 104);" href="https://terraria.wiki.gg/"
+                target="_blank">Terraria</a>,&nbsp;
+              <a style="text-decoration: none; color: rgb(97, 141, 207);" href="../../../pages/others/ordis.html"
+                target="_blank">Warframe</a>,&nbsp;
+              <a style="text-decoration: none; color: rgb(230, 121, 121);"
+                href="https://www.roblox.com/es/users/89179192/profile" target="_blank">Roblox</a>,&nbsp;
+              <a style="text-decoration: none; color: rgb(206, 160, 100);" href="../../../pages/others/half-life-2.html"
+                target="_blank">Half-Life</a>,&nbsp;
+              <a style="text-decoration: none; color: #626294;" href="https://mrdrnose.itch.io/votv"
+                target="_blank">Voices of the Void</a>
+            </li>
+
+            <li>
+              <span></span>
+              <a style="text-decoration: none;" href="../../../assets/images/about-me/rat.webp" target="_blank">● 🐀</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BOTONES SOCIALES -->
+        <div class="social-buttons">
+          <button class="btn" onclick="window.open('https://github.com/Timmy1236', '_blank')">
+            <img src="../../../assets/images/socials/github-icon.svg" alt="GitHub" style="width: 24px;"> GitHub
+          </button>
+
+          <button class="btn" onclick="window.open('https://discordapp.com/users/375889010419171328', '_blank')">
+            <img src="../../../assets/images/socials/discord-icon.svg" alt="Discord" style="width: 24px;"> Discord
+          </button>
+
+          <button class="btn" onclick="window.open('https://steamcommunity.com/id/Timmy1236/', '_blank')">
+            <img src="../../../assets/images/socials/steam-icon.svg" alt="Steam" style="width: 24px;"> Steam
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <!--(ABOUT ME)-->
+
+
+    <!--(PROYECTOS)-->
+    <div class="content-block proyects">
+      <div class="title">
+        <h1 class="text-title" data-i18n="about-me.projects.title"></h1>
+      </div>
+      <div class="projects-list">
+        <!-- (WEBSITE) -->
+        <div class="project">
+          <div class="project-thumbnail">
+            <img src="../../../assets/images/proyects-icons/test.webp" alt="Timmy1236 website icon" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <p>Website</p>
+            </div>
+
+            <div class="project-description">
+              <span data-i18n="about-me.projects.projectsList.website.description"></span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://gitfront.io/r/Timmy1236321/ZuPo2opeJXre/Timmy1236.github.io/" class="links">GitFront</a>
+            </div>
+          </div>
+        </div>
+        <!-- (WEBSITE) -->
+
+        <!-- (LEAFY) -->
+        <div class="project">
+          <div class="project-thumbnail">
+            <img src="../../../assets/images/proyects-icons/leafy.png" alt="Leafy Logo" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <p>Leafy</p>
+            </div>
+
+            <div class="project-description">
+              <span data-i18n="about-me.projects.projectsList.leafy.description"></span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/Timmy1236/Leafy" class="links">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- (LEAFY) -->
+
+        <!-- (ChatCat) -->
+        <div class="project">
+          <div class="project-thumbnail">
+            <img src="../../../assets/images/proyects-icons/ChatCatIcon.png" alt="AIOPark Logo" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <p>ChatCat</p>
+            </div>
+
+            <div class="project-description">
+              <span data-i18n="about-me.projects.projectsList.chatcat.description"></span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/Timmy1236/ChatCat" class="links">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- (ChatCat) -->
+
+        <!-- (AIOPark) -->
+        <div class="project">
+          <div class="project-thumbnail">
+            <img src="../../../assets/images/proyects-icons/AIOPark.webp" alt="AIOPark Logo" />
+          </div>
+
+          <div class="project-info">
+            <div class="project-title">
+              <p>AIOPark</p>
+            </div>
+
+            <div class="project-description">
+              <span data-i18n="about-me.projects.projectsList.aiopark.description"></span>
+            </div>
+          </div>
+        </div>
+        <!-- (AIOPark) -->
+      </div>
+    </div>
+    <!--(PROYECTOS)-->
+
+
+    <!--(STATS)-->
+    <div class="content-block stats">
+      <div class="title">
+        <h1 class="text-title">WakaTime</h1>
+      </div>
+      <div class="stats-content">
+        <figure>
+          <embed src="https://wakatime.com/share/@Timmy1236/617b68e8-948c-405e-ae2e-d6911a7b9f61.svg"></embed>
+        </figure>
+      </div>
+    </div>
+    <!--(STATS)-->
+
+
+    <!--(BUTTONS 88x31)-->
+    <div class="buttons">
+      <a href="https://timmy.nekoweb.org/"><img src="../../../assets/images/timmy1236-button.gif"
+          alt="Timmy website"></a>
+      <a href="https://chantu.nekoweb.org/"><img src="https://chantu.nekoweb.org/imgs/buttons/Chantu.png"
+          alt="Chantu website"></a>
+    </div>
+    <!--(BUTTONS 88x31)-->
+  </div>
+
+  <audio id="audio" src="../../../assets\sounds\music\background.mp3" muted loop></audio>
+</body>
+
+</html>

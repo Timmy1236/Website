@@ -1,0 +1,27 @@
+{
+  "name": "Timmy digital garbage",
+  "version": "1.0.0",
+  "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timmy1236/Timmy1236.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Timmy1236/Timmy1236.github.io/issues"
+  },
+  "homepage": "https://github.com/Timmy1236/Timmy1236.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recode 1: Layout nuevo - Timmy</title>
+  <meta name="description" content="true">
+  <link rel="icon" href="/assets/images/favicons/favicon.webp">
+  <link rel="stylesheet" href="/css/base.css">
+</head>
+
+<body>
+  <div id="swup" class="transition-fade">
+    <div class="page">
+      <div class="content">
+        <header class="window-bar">
+          <div class="wrapper">
+            <div class="intro">
+              
+              <a href="/generated/changelog/index.html">← Volver</a>
+              
+            </div>
+
+            <div class="extra">
+              <p>Recode 1: Layout nuevo</p>
+            </div>
+          </div>
+        </header>
+
+        <main class="content-body">
+          <h1>Información</h1>
+<p>La pagina ahora funciona con un nuevo layout mas al estilo de un grid, en vez de encontrarse todo el contenido en vertical, ahora el banner se encuentra en la parte superior de los 2 paneles, el primer panel siendo el nav que ahora es vertical y esta a la izquierda y el segundo panel de contenido, que es el único que cambia dependiendo de la pagina que te encuentres. Esto lo estoy haciendo porque en la siguiente update del Recode, pienso cambiar todo el sistema de como funciona mi pagina a uno estilo &quot;SPA&quot; (Single-page application) ;)</p>
+<hr>
+<h3>Añadidos</h3>
+<ul>
+<li>pursuer.</li>
+<li>Nuevo layout enfocado a ser mas horizontal. Alado ahora se encuentra pursuer.</li>
+<li>Nuevos sonidos especiales al hacer click en la pagina, y sonidos únicos dependiendo del objeto que estes clickeando, por ejemplo: el pursuer.</li>
+<li>pursuer.</li>
+</ul>
+<hr>
+<h3>Cambios</h3>
+<ul>
+<li>Minis cambios y arreglos generales en el about me.</li>
+</ul>
+<hr>
+<h3>Arreglos</h3>
+<ul>
+<li>Después de un año entero, finalmente pude arreglar el tema sobre de la música y animaciones siendo cortadas al instante cuando cambias de pagina, ahora con el nuevo sistema esto ya no debería pasar nunca mas :3</li>
+<li>El script encargado de gestionar las configuraciones debería de funcionar correctamente, anteriormente había un 50/50 de que dejara de funcionar, literalmente.</li>
+</ul>
+<hr>
+<h3>Eliminaciones</h3>
+<ul>
+<li>Removí por completo temporalmente la sección &quot;Others&quot;, puede ser que lo agregue después en un futuro o que finalmente encuentra un mejor lugar en donde ponerlos.</li>
+<li>Eliminé completamente los proyectos que se encontraban en la sección del about-me, tengo pensado en darles una sección especifica para ellos.</li>
+</ul>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="player" src="/assets/sounds/music/elevator-music.mp3" loop></audio>
+  <div class="audio-widget">
+    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
+
+    <button id="playPause" class="btn">▶</button>
+  </div>
+
+  <script src="https://unpkg.com/swup@4"></script>
+  <script>
+    const swup = new Swup();
+  </script>
+  <script src="/javascript/pages/audio-player.js"></script>
+</body>
+
+</html>

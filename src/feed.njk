@@ -1,0 +1,23 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+---
+
+<rss version="2.0">
+<script src="https://www.rss.style/js/rss-style.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+<channel>
+  <title>Timmy Feed</title>
+  <link>https://timmy.nekoweb.org/generated/</link>
+  <description>Actualizaciones del blog y changelog</description>
+
+  {% for post in collections.combinedFeed %}
+  <item>
+    <title>{{ post.data.title }}</title>
+    <link>https://timmy.nekoweb.org/generated{{ post.url }}</link>
+    <guid>https://timmy.nekoweb.org/generated{{ post.url }}</guid>
+    <pubDate>{{ post.date | rssDate }}</pubDate>
+    <description>{{ post.data.description }}</description>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

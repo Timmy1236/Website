@@ -1,0 +1,51 @@
+{
+  "home": {
+    "welcome": {
+      "title": "Welcome!",
+      "text": "<p>Thank you for visiting my digital dumpster. Right now there isn’t much I can show you since it will always be in an infinite development stage and will expand and improve over time. I had planned to leave any type of content that I like or that I have developed myself, but since there’s nothing for now, just click the nav buttons to see the crap I’ve made elsewhere. The home, what you are seeing, will never have anything. Ignore it. <br><br>If you want, you can come back again in the future to see what new things I’ve added. Remember to use <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\" style=\"color: #8A8AFF\">control + f5</a> to get the latest version of the page. ヾ(•ω•`)o<br><br></p>"
+    }
+  },
+  "about-me": {
+    "aboutMe": {
+      "title": "About me",
+      "startDescription": "I hate writing this.",
+      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">How do people introduce themselves without feeling weird?</a> <p>Hey! I'm Timmy(1236), an introverted fullstack software developer who doesn't like talking in person. Even though my only hobbies are programming, gaming, and 3D design, I’ve always been interested in creating high <span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >quality</span> digital art, but I never had the talent for that kind of thing. So all my creativity has always been limited to just a few lines of code, although that doesn’t mean I’m not a creative person. In fact, I like the idea of creating any type of solution to fix a problem that no one has ever had in their life. Including this very website, to store records of my projects that are in development and will never see the light of day. ;)</p> </span>",
+      "fact": {
+        "programming": "● Languages: ",
+        "softwares": "● Softwares: ",
+        "favorite-games": "● Games: ",
+        "series": "● Series:"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "projectsList": {
+        "website": {
+          "description": "My personal website hosted on Nekoweb, it will be my main site where I will keep all types of projects or blogs about me updated. If you see this text in the first place, that means you are already viewing my page!"
+        },
+        "WIP": {
+          "description": "All the other projects were removed since I want to move this entire section to a separate page, only my website remains in case someone wants to see the source code."
+        }
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": {
+      "visual-effects": "Visual effects",
+      "audio": "Audio",
+      "others": "Others",
+      "themes": "Themes (W.I.P)",
+      "languages": "Languages"
+    },
+    "options": {
+      "rainEffects": "Rain",
+      "staticEffects": "Static",
+      "backgroundMusic": "Background music",
+      "ignoreLandingPage": "Ignore landing page",
+      "vignetteEffects": "Vignette",
+      "mouseClicks": "Mouse clicks",
+      "readableFont": "Readable font (W.I.P)"
+    }
+  }
+}

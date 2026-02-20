@@ -1,0 +1,22 @@
+/*
+  bro
+*/
+
+.settings-group {
+  margin-bottom: 15px;
+}
+
+.option label {
+  padding-left: 10px;
+}
+
+#theme-select-id {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.divider {
+  width: 10px;
+  height: auto;
+  display: inline-block;
+}

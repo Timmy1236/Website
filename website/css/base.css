@@ -1,0 +1,255 @@
+/* 
+  ====
+  PAGE
+  ====
+*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, monospace;
+  background: #191a22;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  background-image: url("../assets/images/backgrounds/patron.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: scrollBackground 30s linear infinite;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+
+.transition-fade {
+  opacity: 1;
+  transition: opacity 0.125s ease;
+}
+
+html.is-changing .transition-fade {
+  opacity: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p {
+  font-size: 17px;
+}
+
+a {
+  color: #3ee670;
+  text-decoration: none;
+  transition: letter-spacing 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725);
+  font-size: clamp(14px, 3.5vw, 18px);
+}
+
+a:hover {
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+hr {
+  color: #433f55;
+}
+
+
+li {
+  margin: 10px 0;
+}
+
+/* 
+  ==========
+  CONTENEDOR
+  ==========
+*/
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+
+  background-color: #282a36;
+  box-shadow: 0 0 0.5rem rgb(0, 0, 0);
+  border: 5px solid #433f55;
+  border-top: none;
+  overflow-y: auto;
+}
+
+.window-bar {
+  background-color: #433f55;
+  padding: 4px 6px;
+}
+
+.window-bar .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-bar p {
+  margin: 0;
+}
+
+.content-body {
+  padding: 0px 10px 0px 10px;
+}
+
+/* 
+  ========
+  MARKDOWN
+  ========
+*/
+.content h1,
+.content h2,
+.content h3 {
+  color: #ffffff;
+}
+
+.content p {
+  line-height: 1.7;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 6px;
+}
+
+code {
+  font-family: monospace;
+  display: block;
+  width: auto;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #00000041;
+}
+
+
+/* 
+  =======
+  SITEMAP
+  =======
+*/
+.entry {
+  margin-bottom: 25px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 22px);
+  margin-bottom: 12px;
+}
+
+
+/* 
+  =========
+  CHANGELOG
+  =========
+*/
+.entry {
+  border-bottom: 1px solid #433f55;
+  padding-bottom: 20px;
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.date {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.changes {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.changes li {
+  margin-bottom: 8px;
+}
+
+.changelog-footer {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+/* 
+  ============
+  AUDIO PLAYER
+  ============
+*/
+.audio-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  padding: 10px;
+  background: #282A35;
+  border: 4px #433F55 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 0.5rem rgb(0, 0, 0);
+}
+
+.audio-widget .btn {
+  width: 30px;
+  height: 30px;
+  background: #433F55;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume-slider {
+  writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+  width: 6px;
+  height: 80px;
+  background: transparent;
+}
+
+/* Firefox <3 */
+.volume-slider::-moz-range-track {
+  background: #181921;
+  width: 5px;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #433F55;
+  border: 1px #6f6991 solid;
+  border-radius: 0;
+}
