@@ -67,6 +67,10 @@
   margin-bottom: 8px;
 }
 
+#list1 {
+  margin-bottom: 20px;
+}
+
 /* SOCIALS */
 .social-buttons {
   display: flex;
