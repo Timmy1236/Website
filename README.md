@@ -3,8 +3,8 @@ Una simple pagina web personal hosteada en Nekoweb y open source en GitHub.
 
 ## Screenshot
 <p align="middle">
-  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/default.webp" width="490"/>
-  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/simple.webp" width="490"/> 
+  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/default.webp" width="400"/>
+  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/simple.webp" width="400"/> 
 </p>
 
 ## Créditos
