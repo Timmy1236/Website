@@ -125,20 +125,20 @@ const AboutMePage = {
             // BOTONES SOCIALES
             m(".social-buttons", [
 
-              m("button.btn", { onclick: () => window.open("https://github.com/Timmy1236", "_blank") }, [
+              m("button.btn", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, [
                 m("img", { src: "./assets/images/icons/github.svg", alt: "GitHub" }),
                 "GitHub"
               ]),
-              m("button.btn", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank") }, [
+              m("button.btn", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, [
                 m("img", { src: "./assets/images/icons/discord.svg", alt: "Discord" }),
                 "Discord"
               ]),
-              m("button.btn", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank") }, [
+              m("button.btn", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"), "data-tooltip": "STEAM_0:1:96376877" }, [
                 m("img", { src: "./assets/images/icons/steam.svg", alt: "Steam" }),
                 "Steam"
               ]),
               m("button.btn", {
-                onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank")
+                onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank"), "data-tooltip": "timmy.1236@outlook.com"
               }, [
                 m("img", { src: "./assets/images/icons/mail.svg", alt: "Mail" }),
                 "Mail"
