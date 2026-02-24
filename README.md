@@ -23,7 +23,8 @@ cd public && python -m http.server 8000
 
 ## Créditos
 - **Host**
-- - [Nekoweb](https://nekoweb.org/)
+- - [Website: Nekoweb](https://nekoweb.org/)
+- - [Images: File Garden](https://filegarden.com/)
 <br><br>
 - **Herramientas**
 - - [Mithril.js](https://mithril.js.org/)
