@@ -38,8 +38,14 @@ const AboutMePage = {
               m("span", { "data-i18n": "[html]about-me.aboutMe.description" })
             ]),
 
+            m(".spacing-lines", [
+              m(".start-line"),
+              m(".middle-line"),
+              m(".end-line"),
+            ]),
+
             // SKILLS
-            m(".list", [
+            m(".list#list1", [
               m("h2.about-section-title", "Skills"),
               m("ul.about-list", [
                 m("li", [
@@ -110,19 +116,32 @@ const AboutMePage = {
               ])
             ]),
 
+            m(".spacing-lines", [
+              m(".start-line"),
+              m(".middle-line"),
+              m(".end-line"),
+            ]),
+
             // BOTONES SOCIALES
             m(".social-buttons", [
+
               m("button.btn", { onclick: () => window.open("https://github.com/Timmy1236", "_blank") }, [
-                m("img", { src: "./assets/images/icons/github-icon.svg", alt: "GitHub" }),
-                " GitHub"
+                m("img", { src: "./assets/images/icons/github.svg", alt: "GitHub" }),
+                "GitHub"
               ]),
               m("button.btn", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank") }, [
-                m("img", { src: "./assets/images/icons/discord-icon.svg", alt: "Discord" }),
-                " Discord"
+                m("img", { src: "./assets/images/icons/discord.svg", alt: "Discord" }),
+                "Discord"
               ]),
               m("button.btn", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank") }, [
-                m("img", { src: "./assets/images/icons/steam-icon.svg", alt: "Steam" }),
-                " Steam"
+                m("img", { src: "./assets/images/icons/steam.svg", alt: "Steam" }),
+                "Steam"
+              ]),
+              m("button.btn", {
+                onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank")
+              }, [
+                m("img", { src: "./assets/images/icons/mail.svg", alt: "Mail" }),
+                "Mail"
               ])
             ])
 
