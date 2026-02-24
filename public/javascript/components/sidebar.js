@@ -22,28 +22,40 @@ export default {
           navBtn("Home", "/home"),
           navBtn("About me", "/about"),
           navBtn("Proyects (WIP)", "/proyects"),
+          navBtn("Others (TEMP)", "/others"),
           navBtn("Configuration", "/configuration"),
         ]),
 
-        m(".container-divider"),
+        m(".spacing-lines", [
+          m(".start-line"),
+          m(".middle-line"),
+          m(".end-line"),
+        ]),
 
         m("div.links-container", [
-          m("h2.container-title", "Pages"),
           externalBtn("Sitemap", "./content/sitemap/index.html"),
           externalBtn("Microblog", "./content/blog/index.html"),
           externalBtn("Changelog", "./content/changelog/index.html"),
         ]),
 
-        m(".container-divider"),
+        m(".spacing-lines", [
+          m(".start-line"),
+          m(".middle-line"),
+          m(".end-line"),
+        ]),
 
         m("div.links-container", [
-          m("h2.container-title", "Others"),
           m("a", {
             href: "https://nekoweb.org/follow/timmy.nekoweb.org/",
             style: "width:100%"
           }, m("button.div-button#button", "Follow")),
           externalBtn("RSS", "./content/feed.xml"),
         ])
+      ]),
+
+
+      m("div.content-block.nav-content", [
+        m("img#sidebar-image", { style: "width:100%" }),
       ]),
     ])
 };

@@ -9,6 +9,8 @@ export function spaNavigate(path) {
     return;
   }
 
+  window.changeImage();
+
   isTransitioning = true;
 
   // === SALIDA (SPA) ===
