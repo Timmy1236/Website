@@ -49,7 +49,7 @@ export default {
             href: "https://nekoweb.org/follow/timmy.nekoweb.org/",
             style: "width:100%"
           }, m("button.div-button#button", "Follow")),
-          externalBtn("RSS", "./content/feed.xml"),
+          externalBtn("RSS", "./content/rss/feed.xml"),
         ])
       ]),
 

@@ -1,16 +1,16 @@
 ---
-permalink: feed.xml
+permalink: rss/blog.xml
 eleventyExcludeFromCollections: true
 ---
 
 <rss version="2.0">
 <script src="https://www.rss.style/js/rss-style.js" xmlns="http://www.w3.org/1999/xhtml"></script>
 <channel>
-  <title>Timmy Feed</title>
+  <title>Timmy Blog</title>
   <link>https://timmy.nekoweb.org/content/</link>
-  <description>Actualizaciones del blog y changelog</description>
+  <description>Todos los post exclusivamente del blog</description>
 
-  {% for post in collections.combinedFeed %}
+  {% for post in collections.blog %}
   <item>
     <title>{{ post.data.title }}</title>
     <link>https://timmy.nekoweb.org/content{{ post.url }}</link>
