@@ -4,6 +4,7 @@
   "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
   "main": "index.js",
   "scripts": {
+    "start": "cd public && python -m http.server 8000",
     "stylelint": "npx stylelint \"**/*.css\"",
     "build": "npx @11ty/eleventy"
   },
