@@ -125,7 +125,7 @@ function initializeSettings() {
     loadRainEffect();
   }
 
-  if (enabledVignetteEffect) {
+  if (!enabledVignetteEffect) {
     // notverygood. >:(
     const vignetteCSS = document.getElementById('vignette');
     if (!vignetteCSS) return;
