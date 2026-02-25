@@ -8,6 +8,7 @@ back: ../../
 
 - [Home](/)
 - [About me](/#!/about)
+- - [Minecraft](../../pages/others/minecraft.html) | [Half Life 2](../../pages/others/half-life-2.html) | [Warframe](../../pages/others/ordis.html)
 - [Proyects](/#!/proyects)
 - [Configuration](/#!/configuration)
 
@@ -24,8 +25,8 @@ back: ../../
 ## Others
 
 - [Follow](https://nekoweb.org/follow/timmy.nekoweb.org/)
-- [RSS](/content/feed.xml)
-- - [Minecraft](../../pages/others/minecraft.html), [Half Life 2](../../pages/others/half-life-2.html), [Warframe](../../pages/others/ordis.html)
+- [RSS](/content/rss/feed.xml)
+- - [Feed](/content/rss/feed.xml) | [Blog](/content/rss/blog.xml) | [Changelog](/content/rss/changelog.xml)
 
 ---
 
