@@ -1,6 +1,5 @@
 const images = [
   "../assets/images/sidebar/pursuer.webp",
-  "../assets/images/sidebar/harken.webp",
   "../assets/images/sidebar/artful.webp",
   "../assets/images/sidebar/killdroid.webp",
   "../assets/images/sidebar/badware.webp",
