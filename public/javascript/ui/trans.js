@@ -3,7 +3,7 @@ let isTransitioning = false;
 export function spaNavigate(path) {
   if (isTransitioning) return;
 
-  const mainColumn = document.querySelector(".main-column");
+  const mainColumn = document.querySelector(".content-column");
   if (!mainColumn) {
     m.route.set(path);
     return;

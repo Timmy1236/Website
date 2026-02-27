@@ -1,15 +1,15 @@
-import IntroBanner from "./intro_banner.js";
-import Sidebar from "./sidebar.js";
+import banner from "./banner.js";
+import sidebar from "./sidebar.js";
 
 export default {
   view(vnode) {
     return m("div", [
       m("div.vignette", { id: "vignette" }),
-      m("div.page", [
-        m(IntroBanner),
-        m("div.row", [
-          m(Sidebar),
-          m("div.main-column", vnode.children)
+      m(".container", [
+        m(banner),
+        m(".layout-content", [
+          m(sidebar),
+          m(".content-column", vnode.children)
         ])
       ])
     ]);

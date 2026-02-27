@@ -7,32 +7,30 @@ const Others = {
   },
 
   view: () =>
-    m("div.main-column", [
+    m(".content-column", [
 
       // WARNING / INTRO
-      m("div.content-block", [
-        m("div.title",
+      m(".panel", [
+        m(".panel-header",
           m("h1.text-title", { "data-i18n": "others.title" })
         ),
 
-        m("div.div-content", [
-          m("div.div-inside", [
-            m("span", {
-              style: "color:#ffa5a5;font-size:28px;",
-              "data-i18n": "others.warning"
-            }),
-            m("br"),
-            m("br"),
-            m("span", {
-              "data-i18n": "others.desc"
-            })
-          ])
+        m(".panel-content", [
+          m("span", {
+            style: "color:#ffa5a5;font-size:28px;",
+            "data-i18n": "others.warning"
+          }),
+          m("br"),
+          m("br"),
+          m("span", {
+            "data-i18n": "others.desc"
+          })
         ])
       ]),
 
       // TV TIME
-      m("div.content-block.iframe", [
-        m("div.title",
+      m(".panel", [
+        m(".panel-header",
           m("h1.text-title", "TV TIME")
         ),
 
@@ -49,8 +47,8 @@ const Others = {
       ]),
 
       // BUTTON
-      m("div.content-block.iframe", [
-        m("div.title",
+      m(".panel", [
+        m(".panel-header",
           m("h1.text-title", "BUTTON")
         ),
 

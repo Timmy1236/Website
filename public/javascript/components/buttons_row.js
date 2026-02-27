@@ -1,7 +1,7 @@
 const ButtonsRow = {
   view() {
-    return m(".content-block buttons-row",
-      m(".buttons", [
+    return m(".panel",
+      m(".neighbors", [
         m("a", { href: "https://chantu.nekoweb.org/", "data-tooltip": "Chantu Website!" },
           m("img", {
             src: "https://chantu.nekoweb.org/imgs/buttons/Chantu.png",
