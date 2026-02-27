@@ -5,19 +5,42 @@ const images = [
   "../assets/images/sidebar/killdroid.webp",
   "../assets/images/sidebar/badware.webp",
   "../assets/images/sidebar/dozer.webp",
-  "../assets/images/sidebar/joey.webp"
-]
+  "../assets/images/sidebar/joey.webp",
+  "../assets/images/sidebar/kel.webp",
+  "../assets/images/sidebar/hate.webp"
+];
 
-function changeImage() {
-  var imageElement = document.getElementById("sidebar-image")
+let currentIndex = 0;
+let intervalId = null;
+
+function changeImageWithFade() {
+  const imageElement = document.getElementById("sidebar-image");
   if (!imageElement) return;
 
-  var imageRandom = images[Math.floor(Math.random() * images.length)];
-  imageElement.src = imageRandom
+  imageElement.classList.add("fade-out");
+
+  setTimeout(() => {
+    let newIndex;
+
+    do {
+      newIndex = Math.floor(Math.random() * images.length);
+    } while (newIndex === currentIndex);
+
+    currentIndex = newIndex;
+
+    imageElement.src = images[currentIndex];
+
+    imageElement.classList.remove("fade-out");
+  }, 600); // !!Debe coincidir con la duración del CSS
 }
 
-window.addEventListener('load', function () {
-  changeImage()
-})
+function startImageRotation() {
+  const imageElement = document.getElementById("sidebar-image");
+  if (!imageElement) return;
 
-window.changeImage = changeImage;
+  imageElement.src = images[currentIndex];
+
+  intervalId = setInterval(changeImageWithFade, 10000);
+}
+
+window.addEventListener("load", startImageRotation);

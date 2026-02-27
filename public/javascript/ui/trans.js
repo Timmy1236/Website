@@ -9,21 +9,12 @@ export function spaNavigate(path) {
     return;
   }
 
-  window.changeImage();
-
   isTransitioning = true;
 
-  // === SALIDA (SPA) ===
   mainColumn.classList.add("exit");
 
   setTimeout(() => {
     m.route.set(path);
-
-    // Esperamos a que Mithril renderice
-    requestAnimationFrame(() => {
-      // === ENTRADA ===
-      mainColumn.classList.remove("exit");
-      isTransitioning = false;
-    });
+    requestAnimationFrame(() => { mainColumn.classList.remove("exit"); isTransitioning = false; });
   }, 350);
 }
