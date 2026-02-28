@@ -46,60 +46,65 @@ function loadNoiseEffect() {
 
 // === Inicializa la animación de lluvia ===
 function initRainEffect(canvas) {
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+
   function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    w = canvas.width;
-    h = canvas.height;
+
+    ctx.strokeStyle = "rgba(167, 204, 255, 0.5)";
+    ctx.lineWidth = 2;
+
+    particles = createParticles();
+  }
+
+  function createParticles() {
+    return Array.from({ length: 75 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      l: (Math.random() * (1 - 0.5) + 0.35) * 1.25,
+      xs: 0,
+      ys: Math.random() * 10 + 10
+    }));
   }
 
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
 
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    let w = canvas.width;
-    let h = canvas.height;
-    ctx.strokeStyle = "rgba(167, 204, 255, 0.5)";
-    ctx.lineWidth = 2;
+  ctx.strokeStyle = "rgba(167, 204, 255, 0.5)";
+  ctx.lineWidth = 2;
 
-    const particles = Array.from({ length: 75 }, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      l: (Math.random() * (1 - 0.5) + 0.35) * 1.25,
-      xs: 0,
-      ys: Math.random() * 10 + 10
-    }));
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      for (const p of particles) {
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
-        ctx.stroke();
-      }
-      move();
+    for (const p of particles) {
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(p.x + p.l * p.xs, p.y + p.l * p.ys);
+      ctx.stroke();
     }
 
-    function move() {
-      for (const p of particles) {
-        p.x += p.xs;
-        p.y += p.ys;
-        if (p.x > w || p.y > h) {
-          p.x = Math.random() * w;
-          p.y = -20;
-        }
-      }
-    }
-
-    function animate() {
-      draw();
-      rainAnimationId = requestAnimationFrame(animate);
-    }
-
-    animate();
+    move();
   }
+
+  function move() {
+    for (const p of particles) {
+      p.x += p.xs;
+      p.y += p.ys;
+
+      if (p.x > canvas.width || p.y > canvas.height) {
+        p.x = Math.random() * canvas.width;
+        p.y = -20;
+      }
+    }
+  }
+
+  function animate() {
+    draw();
+    rainAnimationId = requestAnimationFrame(animate);
+  }
+  animate();
 }
 
 // === APLICA EL TEMA GUARDADO ===
