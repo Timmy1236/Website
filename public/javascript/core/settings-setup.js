@@ -5,7 +5,7 @@
   Esta config tiene todos los efectos visuales activado por default, pero menos la música, eso lo activara el mismo usuario si quiere.
 */
 
-const SETTINGS_MAP = {
+export const SETTINGS_MAP = {
   rainEffect: "rain-effect",
   staticEffect: "static-effect",
   vignetteEffect: "vignette-effect",

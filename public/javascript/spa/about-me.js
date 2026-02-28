@@ -1,9 +1,10 @@
+import { loadDiscordProfile } from "../pages/discord.js";
 import ButtonsRow from "../components/buttons_row.js";
 
 const AboutMePage = {
   oncreate() {
     window.refreshI18n?.();
-    window.loadDiscordProfile?.("375889010419171328");
+    loadDiscordProfile("375889010419171328");
   },
 
   view() {

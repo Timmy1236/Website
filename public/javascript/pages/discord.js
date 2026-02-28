@@ -1,4 +1,4 @@
-async function loadDiscordProfile(userId) {
+export async function loadDiscordProfile(userId) {
   console.log("discord.js > Ejecutando loadDiscordProfile.");
 
   // Si ya tenemos datos en memoria → no fetch, solo render

@@ -1,3 +1,4 @@
+import { confirmSettings } from "../pages/settings.js";
 import ButtonsRow from "../components/buttons_row.js";
 
 const ConfigurationPage = {
