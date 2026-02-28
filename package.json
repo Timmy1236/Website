@@ -7,7 +7,7 @@
     "start": "cd public && python -m http.server 8000",
     "stylelint": "npx stylelint \"**/*.css\"",
     "build": "npx @11ty/eleventy",
-    "js": "esbuild public/javascript/core/app-init.js --bundle --minify --outfile=public/app.js"
+    "bundle": "esbuild public/javascript/core/app-init.js --bundle --minify --outfile=public/dist/app.js && esbuild public/javascript/pages/11ty/11ty-init.js --bundle --minify --outfile=public/dist/11ty.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "stylelint-config-standard": "^40.0.0"
   },
   "dependencies": {
-    "mithril": "^2.3.8"
+    "mithril": "^2.3.8",
+    "swup": "^4.8.3"
   }
 }

@@ -8,6 +8,7 @@
   <meta name="description" content="true">
   <link rel="icon" href="../../favicon.png">
   <link rel="stylesheet" href="/css/base.css">
+  <script src="/dist/11ty.js" defer></script>
 </head>
 
 <body>
@@ -60,15 +61,8 @@
   <audio id="player" src="/assets/sounds/music/no-brain.ogg" loop></audio>
   <div class="audio-widget">
     <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" orient="vertical">
-
     <button id="playPause" class="btn">▶</button>
   </div>
-
-  <script src="https://unpkg.com/swup@4"></script>
-  <script>
-    const swup = new Swup();
-  </script>
-  <script src="/javascript/pages/audio-player.js"></script>
 </body>
 
 </html>

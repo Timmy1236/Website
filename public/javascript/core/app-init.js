@@ -1,3 +1,9 @@
+/*
+  app-init.js
+  -----------
+  * Este script esta pensado para ser usado con ESbuild, no cumple ninguna función aparte de eso.
+*/
+
 import Layout from "../components/layout.js";
 
 // SPA
@@ -7,7 +13,7 @@ import Proyects from "../spa/proyects.js";
 import Others from "../spa/others.js";
 import Configuration from "../spa/configuration.js";
 
-// Scripts | Sabes como limpie los scripts del HTML? Ahora todos son importados desde app.js.
+// Scripts
 import "./settings-setup.js";
 import "./settings-loader.js";
 import "./i18n.js";
@@ -19,7 +25,7 @@ import "../pages/discord.js";
 import "../ui/trans.js";
 import "../ui/image-overlay.js";
 
-// UNPKG | Pero ahora local :P
+// Mithril
 import m from "mithril";
 
 m.route(document.getElementById("app"), "/home", {
