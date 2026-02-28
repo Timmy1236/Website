@@ -1,3 +1,4 @@
+import m from "mithril";
 import { loadDiscordProfile } from "../pages/discord.js";
 import ButtonsRow from "../components/buttons_row.js";
 

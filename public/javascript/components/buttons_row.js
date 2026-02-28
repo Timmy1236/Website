@@ -1,3 +1,5 @@
+import m from "mithril";
+
 const ButtonsRow = {
   view() {
     return m(".panel",

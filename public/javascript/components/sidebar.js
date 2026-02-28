@@ -1,3 +1,4 @@
+import m from "mithril";
 import { spaNavigate } from "../ui/trans.js";
 import { buttonSounds } from "../media/mouse-click.js";
 

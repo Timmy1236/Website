@@ -1,3 +1,4 @@
+import m from "mithril";
 let isTransitioning = false;
 
 export function spaNavigate(path) {

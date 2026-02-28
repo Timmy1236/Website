@@ -1,3 +1,4 @@
+import m from "mithril";
 import banner from "./banner.js";
 import sidebar from "./sidebar.js";
 

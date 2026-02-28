@@ -1,3 +1,4 @@
+import m from "mithril";
 import ButtonsRow from "../components/buttons_row.js";
 
 const Others = {

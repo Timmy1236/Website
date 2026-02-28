@@ -1,3 +1,4 @@
+import m from "mithril";
 import { initImageOverlay } from "../ui/image-overlay.js";
 import ButtonsRow from "../components/buttons_row.js";
 

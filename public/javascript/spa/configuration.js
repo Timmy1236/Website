@@ -1,3 +1,4 @@
+import m from "mithril";
 import { confirmSettings } from "../pages/settings.js";
 import ButtonsRow from "../components/buttons_row.js";
 
