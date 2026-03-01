@@ -140,6 +140,11 @@ h2 {
   font-family: "VT323", monospace;
 }
 
+.link {
+  color: #8A8AFF;
+  text-decoration: underline;
+}
+
 /* ==== [ TIPOGRAFÍA ] === */
 
 
