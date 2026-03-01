@@ -17,7 +17,7 @@ back: ../../
 ## Pages
 
 - [Sitemap](/content/sitemap/index.html)
-- [Microblog (Spanish)](/content/blog/)
+- [Blog (Spanish)](/content/blog/)
 - [Changelog (Spanish)](/content/changelog/)
 
 ---
