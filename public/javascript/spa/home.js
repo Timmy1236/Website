@@ -1,14 +1,24 @@
 import m from "mithril";
 import ButtonsRow from "../components/buttons_row.js";
+import { getLatest } from "../pages/home/get-latest.js";
 
 const Home = {
+  latest: null,
+
   oncreate() {
     window.refreshI18n?.();
     window.initDefaultSettings?.();
   },
 
-  view: () =>
-    m(".content-column", [
+  oninit: function () {
+    getLatest().then(data => {
+      this.latest = data;
+      m.redraw();
+    });
+  },
+
+  view: function () {
+    return m(".content-column", [
 
       m(".panel", [
         m(".panel-header", m("h1.text-title", { "data-i18n": "home.welcome.title" })),
@@ -23,8 +33,24 @@ const Home = {
         ])
       ]),
 
+      m(".panel", [
+        m(".panel-header", m("h1.text-title", { "data-i18n": "home.entries.title" })),
+        m(".panel-content", [
+          this.latest ? m("div", [
+            m("div", [
+              m("a.link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title)
+            ]),
+            m("div", [
+              m("a.link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title)
+            ])
+          ])
+            : m("p", "Cargando...")
+        ])
+      ]),
+
       m(ButtonsRow)
     ])
+  }
 };
 
 export default Home;
