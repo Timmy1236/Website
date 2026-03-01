@@ -35,8 +35,8 @@ export default {
 
         m(".sidebar-links-container", [
           externalBtn("Sitemap", "./content/sitemap/index.html"),
-          externalBtn("Microblog", "./content/blog/index.html"),
-          externalBtn("Changelog", "./content/changelog/index.html"),
+          externalBtn("Blog (Spanish)", "./content/blog/index.html"),
+          externalBtn("Changelog (Spanish)", "./content/changelog/index.html"),
         ]),
 
         m(".spacing-lines", [
