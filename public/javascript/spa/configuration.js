@@ -1,5 +1,6 @@
 import m from "mithril";
 import { confirmSettings } from "../pages/settings.js";
+import { changeLanguage } from "../core/i18n.js"
 import ButtonsRow from "../components/buttons_row.js";
 
 const ConfigurationPage = {
