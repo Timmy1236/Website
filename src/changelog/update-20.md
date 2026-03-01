@@ -1,0 +1,37 @@
+---
+title: "Update 18: esbuild"
+date: 2026-03-01
+description: "Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update."
+layout: layouts/base.html
+back: /content/changelog/index.html
+---
+
+### Añadidos
+- [esbuild](https://esbuild.github.io/), este software debería de ayudarme a optimizar y compilar todos mis scripts y dependencias que los cargaba en el index.html en un simple .js, de forma conjunta y minificado para que consuma el mínimo espacio posible permitiendo también que cargue lo mas rápido posible.
+- - Mithril.js instalado de forma local, ya no se obtiene con UNPKG.
+- - Swup instalado de forma local, ya no se obtiene con UNPKG.
+- Sidebar images, ahora cada 10 segundos va cambiando entre imágenes aleatorias para no dejar tan vació el sidebar porque no se me viene nada en que añadirle por ahora
+- Nuevo blog de minecraft legacy edition :3
+- Ahora también puedes ver las ultimas entradas de changelog y blog en el mismo home para que no sea necesario entrar en ellas todo el rato para ver si hay contenido nuevo.
+
+--- 
+
+### Cambios
+- Stylelint actualizado, 17.3.0 > 17.4.0
+- CSS "styles" refactorizado por completo finalmente, ahora todas las clases tienen una consistencia y nombres adecuados en vez de ser simplemente, "div-inside", "div-div", etc.
+- Index.html comprimido totalmente, ahora solamente carga lo necesario, el styles.css y app.js, ya no necesita cargar varios scripts por separado y los UNPKG de las dependencias.
+- Varias imágenes y los banners fueron comprimidas
+- Mejoras en el markdown en el readme del repositorio, varias cosas de ellas se agregaran en un futuro en la misma pagina, esencialmente los "Créditos"
+
+---
+
+### Arreglos
+- Links rotos en el sitemap después de la ultima actualización que los separo en 3 partes, ahora los 3 se encuentran en el mismo sitemap, mientras que el rss del sidebar lleve al general.
+- Arreglos en el efecto de la lluvia que no se re-escalaba correctamente con el tamaño de la ventana del navegador y cuando lo hacia este perdía el color y el aspecto dado por su CSS. Debería de funcionar sin ningún tipo de fallos ahora.
+- Favicon rotos en los changelogs y blogs creo?
+- Se agrego de vuelta el estilo "link" porque parece que lo había removido por una cosa rompiendo varios elementos con el tag "a" que no se notaban que era claramente un link. Todos los links del about me sigue sin con el arreglo por tema de estética 
+
+---
+
+### Eliminaciones
+- Varias imágenes y videos fueron borrados al no estar planeado a ser utilizados de vuelta, se archivo un banner animado que usaba anteriormente en mi antiguo layout.

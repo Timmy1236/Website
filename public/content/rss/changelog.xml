@@ -8,6 +8,14 @@
 
   
   <item>
+    <title>Update 18: esbuild</title>
+    <link>https://timmy.nekoweb.org/content/changelog/update-20/</link>
+    <guid>https://timmy.nekoweb.org/content/changelog/update-20/</guid>
+    <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+    <description>Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update.</description>
+  </item>
+  
+  <item>
     <title>Update 17: Uhhh... 2.0</title>
     <link>https://timmy.nekoweb.org/content/changelog/update-19/</link>
     <guid>https://timmy.nekoweb.org/content/changelog/update-19/</guid>
