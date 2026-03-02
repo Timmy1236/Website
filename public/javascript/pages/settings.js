@@ -4,7 +4,7 @@
   - Es el que controla el UI y guardar las configuraciones en el localstorage
 */
 
-import { SETTINGS_MAP } from "../core/settings-setup.js";
+import { SETTINGS_MAP, initDefaultSettings } from "../core/settings-setup.js";
 
 function loadSettings() {
   console.log("settings.js> Ejecutando loadSettings.") // Si me ves en otras paginas, lo estas haciendo mal!! mongolo. -timmy, para timmy.
@@ -32,6 +32,11 @@ export function confirmSettings() {
   localStorage.setItem("theme", document.getElementById("theme-select").value);
 
   location.reload();
+}
+
+export function restartSettings() {
+  localStorage.setItem("settingsInitialized", "false");
+  initDefaultSettings();
 }
 
 

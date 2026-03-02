@@ -1,5 +1,5 @@
 import m from "mithril";
-import { confirmSettings } from "../pages/settings.js";
+import { confirmSettings, restartSettings } from "../pages/settings.js";
 import { changeLanguage } from "../core/i18n.js"
 import ButtonsRow from "../components/buttons_row.js";
 
@@ -40,6 +40,8 @@ const ConfigurationPage = {
             ])
           ]),
 
+          m(".spacing-line"),
+
           // AUDIO
           m(".settings-group", [
             m("h2.group-title", { "data-i18n": "settings.sections.audio" }),
@@ -55,6 +57,8 @@ const ConfigurationPage = {
             ])
           ]),
 
+          m(".spacing-line"),
+
           // OTHERS
           m(".settings-group", [
             m("h2.group-title", { "data-i18n": "settings.sections.others" }),
@@ -65,18 +69,22 @@ const ConfigurationPage = {
             ])
           ]),
 
+          m(".spacing-line"),
+
           // THEME
           m(".settings-group", [
             m("h2.group-title", { "data-i18n": "settings.sections.themes" }),
 
             m(".option", [
               m("select#theme-select", [
-                m("option", { value: "snew" }, "It snew"),
-                m("option", { value: "default" }, "Default"),
-                m("option", { value: "simple" }, "Simple")
+                m("option", { value: "snew" }, "[DETAILS] - it snew."),
+                m("option", { value: "default" }, "[DETAILS] - Green"),
+                m("option", { value: "simple" }, "[FLAT] - Dark")
               ])
             ])
           ]),
+
+          m(".spacing-line"),
 
           // LENGUAJES
           m(".settings-group", [
@@ -89,7 +97,11 @@ const ConfigurationPage = {
             ])
           ]),
 
-          m("button.button", { onclick: () => confirmSettings() }, "Confirm")
+          m(".spacing-line"),
+
+          m("button.button", { onclick: () => confirmSettings() }, "Confirm"),
+          m(".divider"),
+          m("button.button", { onclick: () => restartSettings() }, "Default Config")
         ])
       ]),
 

@@ -109,13 +109,9 @@ function initRainEffect(canvas) {
 
 // === APLICA EL TEMA GUARDADO ===
 function applySavedTheme() {
-  const savedTheme = localStorage.getItem("theme") || "default";
+  const savedTheme = localStorage.getItem("theme") || "simple";
 
-  if (savedTheme === "default") {
-    document.documentElement.removeAttribute("data-theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }
+  document.documentElement.setAttribute("data-theme", savedTheme);
 }
 
 // === Punto de entrada ===

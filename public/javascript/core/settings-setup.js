@@ -16,7 +16,7 @@ export const SETTINGS_MAP = {
   readableFont: "readable-font"
 };
 
-function initDefaultSettings() {
+export function initDefaultSettings() {
   if (localStorage.getItem("settingsInitialized") === "true") {
     return;
   }
@@ -34,7 +34,7 @@ function initDefaultSettings() {
   localStorage.setItem("readableFont", "false");
 
   // Theme
-  localStorage.setItem("theme", "default");
+  localStorage.setItem("theme", "simple");
 
   // Flag de inicialización y forzamos un reload.
   localStorage.setItem("settingsInitialized", "true");
