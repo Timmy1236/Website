@@ -22,7 +22,7 @@ function initDefaultSettings() {
   }
 
   // Visual effects
-  localStorage.setItem("rainEffect", "true");
+  localStorage.setItem("rainEffect", "false");
   localStorage.setItem("staticEffect", "true");
   localStorage.setItem("vignetteEffect", "true");
 
