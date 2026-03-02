@@ -39,11 +39,7 @@ const AboutMePage = {
             m("span", { "data-i18n": "[html]about-me.aboutMe.description" })
           ]),
 
-          m(".spacing-lines", [
-            m(".spacing-start"),
-            m(".spacing-middle"),
-            m(".spacing-end"),
-          ]),
+          m(".spacing-line"),
 
           // SKILLS
           m(".list#list1", [
@@ -117,11 +113,7 @@ const AboutMePage = {
             ])
           ]),
 
-          m(".spacing-lines", [
-            m(".spacing-start"),
-            m(".spacing-middle"),
-            m(".spacing-end"),
-          ]),
+          m(".spacing-line"),
 
           // BOTONES SOCIALES
           m(".social-buttons", [

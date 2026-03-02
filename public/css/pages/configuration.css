@@ -1,16 +1,11 @@
 /*
   bro
 */
-
-.settings-group {
-  margin-bottom: 15px;
-}
-
 .option label {
   padding-left: 10px;
 }
 
-#theme-select-id {
+#theme-select {
   padding-left: 0;
   padding-right: 10px;
 }
@@ -19,4 +14,22 @@
   width: 10px;
   height: auto;
   display: inline-block;
+}
+
+.group-title {
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 4px 8px;
+  font-family: "VT323", monospace;
+  font-size: 22px;
+  background-color: rgb(0 0 0 / 10%);
+  color: #fff;
+  border: 2px rgb(0 0 0 / 40%) solid;
+  border-radius: 3px;
+}
+
+select:open {
+  background-color: #000;
 }

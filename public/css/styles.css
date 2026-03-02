@@ -8,6 +8,9 @@
   --sidebar-width: 215px;
   --max-page-width: 1800px;
 
+  /* Layout */
+  --gap-size: 5px;
+
   /* Body */
   --main-text: #fff;                                    /* Color para textos generales */
   --accent-color: rgb(74 255 134);                      /* Color para títulos */
@@ -24,7 +27,6 @@
   --content-inside-shadow: inset 0 2px 5px #00000050;   /* Sombra interior de los bloques (efecto de profundidad) */
   --content-inside-background-color: rgb(0 0 0 / 17%);  /* Color de la sombra interior de los bloques */
   --content-border: 2px rgb(0 0 0 / 40%) solid;         /* Borde de los bloques */
-  --content-border-bottom: null;                          /* Borde inferior de los bloques, esto es un hack estúpido. */
 
   /* Title */
   --title-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
@@ -53,7 +55,6 @@
   --content-color: #202020;
   --content-inside-background-color: rgb(0 0 0 / 0%);
   --content-border: 2px rgb(15 15 15) solid;
-  --content-border-bottom: 2px rgb(15 15 15) solid;
 
   /* Banner */
   --banner-image: url("../assets/images/banners/nocolor.png");
@@ -179,7 +180,6 @@ button, a:hover {
   background-color: var(--content-color);
   padding: 15px;
   border: var(--content-border);
-  border-bottom: var(--content-border-bottom);
   box-shadow: var(--content-shadow);
   backdrop-filter: blur(var(--background-drop));
 }
@@ -216,7 +216,7 @@ button, a:hover {
 
 .banner-panel {
   width: 100%;
-  margin: 0 0 20px;
+  margin: 0 0 var(--gap-size);
 }
 
 .banner {
@@ -250,7 +250,7 @@ button, a:hover {
 
 .layout-content {
   display: flex;
-  gap: 20px;
+  gap: var(--gap-size);
   align-items: flex-start;
   width: 100%;
 }
@@ -259,23 +259,23 @@ button, a:hover {
   width: var(--sidebar-width);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--gap-size);
   align-self: stretch;
 }
 
 .content-column {
-  transition: opacity 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.725), transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.725);
+  transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.725);
   opacity: 1;
   transform: translateY(0);
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--gap-size);
 }
 
 .content-column.exit {
   opacity: 0;
-  transform: scale(0.97) translateY(12px);
+  transform: translateY(15px);
 }
 
 .sidebar-links-container {
@@ -428,30 +428,12 @@ button, a:hover {
 }
 
 /* ==== SPACING LINES ==== */
-.spacing-lines {
+.spacing-line {
   display: flex;
-  padding: 1px;
   margin: 25px 0;
-}
-
-.spacing-start {
-  width: 5%;
-  background: linear-gradient(-90deg, rgb(122 255 204 / 20%) 0%, rgb(255 255 255 / 0%) 75%);
+  width: 100%;
   padding: 1px;
-}
-
-.spacing-middle {
-  width: 90%;
-  background-color: rgb(122 255 204 / 20%);
-  padding: 1px;
-}
-
-.spacing-end {
-  width: 5%;
-  background: linear-gradient(90deg, rgb(122 255 204 / 20%) 0%, rgb(255 255 255 / 0%) 75%);
-  padding: 1px;
-}
-
+background: linear-gradient(90deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 25%) 5%, rgb(255 255 255 / 25%) 50%, rgb(255 255 255 / 25%) 95%, rgb(255 255 255 / 0%) 100%);}
 
 /* ==== TEMP = OTHERS ==== */
 .iframe.container {

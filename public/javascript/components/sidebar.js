@@ -27,11 +27,7 @@ export default {
           navBtn("Configuration", "/configuration"),
         ]),
 
-        m(".spacing-lines", [
-          m(".spacing-start"),
-          m(".spacing-middle"),
-          m(".spacing-end"),
-        ]),
+        m(".spacing-line"),
 
         m(".sidebar-links-container", [
           externalBtn("Sitemap", "./content/sitemap/index.html"),
@@ -39,11 +35,7 @@ export default {
           externalBtn("Changelog (Spanish)", "./content/changelog/index.html"),
         ]),
 
-        m(".spacing-lines", [
-          m(".spacing-start"),
-          m(".spacing-middle"),
-          m(".spacing-end"),
-        ]),
+        m(".spacing-line"),
 
         m(".sidebar-links-container", [
           externalBtn("Follow", "https://nekoweb.org/follow/timmy.nekoweb.org/"),
