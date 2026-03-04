@@ -3,6 +3,7 @@
   --------------
   - Reproduce diferentes tipos de sonidos dependiendo de que objeto Estes clickeando por su ID.
 */
+
 const canPlaySounds = (localStorage.getItem("mouseClicks") === "true") ? true : false;
 let clickSoundCooldown = true;
 
@@ -12,13 +13,11 @@ const SFX = {
   click: createAudio("mouse-down"),
   clickUp: createAudio("mouse-up"),
   cat: createAudio("meow"),
-  pursuer: createAudio("fresh-meat"),
   nomnom: createAudio("nom-nom")
 };
 
 const soundConfig = {
   "cat": { audio: SFX.cat, rate: [0.8, 1.5], volume: 0.3, cooldown: 1000 },
-  "pursuer": { audio: SFX.pursuer, rate: [0.75, 1.35], volume: 0.25, cooldown: 1000 },
   "nom-nom": { audio: SFX.nomnom, rate: [0.95, 1.15], volume: 0.75, cooldown: 800 }
 };
 
