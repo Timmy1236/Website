@@ -90,10 +90,10 @@
 /* STATS */
 .stats-content {
   /* eslint-disable-next-line css/no-invalid-properties */
-  background-color: var(--content-inside-background-color);
+  background-color: var(--panel-inside-background-color);
 
   /* eslint-disable-next-line css/no-invalid-properties */
-  box-shadow: var(--content-inside-shadow);
+  box-shadow: var(--panel-inside-shadow);
   margin-bottom: 10px;
 }
 
