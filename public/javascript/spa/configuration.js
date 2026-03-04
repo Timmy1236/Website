@@ -91,17 +91,20 @@ const ConfigurationPage = {
             m("h2.group-title", { "data-i18n": "settings.sections.languages" }),
 
             m(".option", [
-              m("button.button", { onclick: () => changeLanguage("es"), }, "Español"),
-              m(".divider"),
-              m("button.button", { onclick: () => changeLanguage("en"), }, "English")
+              m(".buttons-list", [
+                m("button.button", { onclick: () => changeLanguage("es"), }, "Español"),
+                m("button.button", { onclick: () => changeLanguage("en"), }, "English")
+              ])
             ])
           ]),
 
           m(".spacing-line"),
 
-          m("button.button", { onclick: () => confirmSettings() }, "Confirm"),
-          m(".divider"),
-          m("button.button", { onclick: () => restartSettings() }, "Default Config")
+          // CONFIRMS
+          m(".buttons-list", [
+            m("button.button", { onclick: () => confirmSettings() }, "Confirm"),
+            m("button.button", { onclick: () => restartSettings() }, "Default Config")
+          ])
         ])
       ]),
 
