@@ -58,18 +58,18 @@ export function buttonSounds(type) {
   if (canPlaySounds) {
     switch (type) {
       case "hover": {
-        var audioHover = new Audio("./assets/sounds/sfx/button-hover.wav");
+        var audioHover = new Audio("./assets/sounds/sfx/button-hover.mp3");
         audioHover.play();
         break;
       }
       case "click": {
-        var audioClick = new Audio("./assets/sounds/sfx/button-click.wav");
+        var audioClick = new Audio("./assets/sounds/sfx/button-click.mp3");
         audioClick.volume = 0.5;
         audioClick.play();
         break;
       }
       case "released": {
-        var audioRelease = new Audio("./assets/sounds/sfx/button-release.wav");
+        var audioRelease = new Audio("./assets/sounds/sfx/button-release.mp3");
         audioRelease.volume = 0.5;
         audioRelease.play();
         break;
