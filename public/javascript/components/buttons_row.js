@@ -28,6 +28,12 @@ const ButtonsRow = {
             alt: "nogood-angel website"
           })
         ),
+        m("a", { href: "https://xyzko.nekoweb.org/", "data-tooltip": "xyzko Website!" },
+          m("img", {
+            src: "./assets/images/buttons/no-button.png",
+            alt: "xyzko website"
+          })
+        ),
       ])
     );
   }
