@@ -34,37 +34,36 @@ const Others = {
         m(".panel-header",
           m("h1.text-title", "TV TIME")
         ),
-
-        m("div.iframe.container", [
-          m("iframe", {
-            src: "/pages/tv-time.html", // ajustá si tu build cambia rutas
-            width: "327",
-            height: "339",
-            frameborder: "0"
-          }),
-
-          m("textarea", `<iframe src="https://timmy.nekoweb.org/pages/tv-time" width="327" height="339" frameborder="0"></iframe>`.trim())
+        m(".panel-content", [
+          m("div.iframe.container", [
+            m("iframe", {
+              src: "/pages/tv-time.html",
+              width: "300",
+              height: "314",
+              frameborder: "0"
+            }),
+            m("textarea", `<iframe src="https://timmy.nekoweb.org/pages/tv-time" width="300" height="314" frameborder="0"></iframe>`.trim())
+          ])
         ])
       ]),
 
-      // BUTTON
+      // WebTiles
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", "BUTTON")
+          m("h1.text-title", "WebTiles")
         ),
+        m(".panel-content", [
+          m("div.iframe.container", [
+            m("iframe", {
+              src: "https://webtiles.kicya.net/e/timmy.nekoweb.org",
+              width: "250",
+              height: "270",
+              frameborder: "0"
+            }),
 
-        m("div.iframe.container", [
-          m("a", { href: "https://timmy.nekoweb.org" },
-            m("img", {
-              src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.gif",
-              alt: "timmy website"
-            })
-          ),
-
-          m("textarea", `https://timmy.nekoweb.org/assets/images/buttons/timmy_button.gif
-            
-<a href="https://timmy.nekoweb.org"><img src="https://timmy.nekoweb.org/assets/images/buttons/timmy_button.gif"></a>`.trim())
-        ])
+            m("textarea", `<iframe src="https://webtiles.kicya.net/e/timmy.nekoweb.org" width="250" height="270" frameborder="0"></iframe>`.trim())
+          ])
+        ]),
       ]),
 
       m(ButtonsRow)
