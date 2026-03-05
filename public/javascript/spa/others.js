@@ -17,15 +17,34 @@ const Others = {
         ),
 
         m(".panel-content", [
-          m("span", {
-            style: "color:#ffa5a5;font-size:28px;",
-            "data-i18n": "others.warning"
-          }),
-          m("br"),
-          m("br"),
-          m("span", {
-            "data-i18n": "others.desc"
-          })
+          m("span", { "data-i18n": "others.desc" })
+        ])
+      ]),
+
+      // BUTTON
+      m(".panel", [
+        m(".panel-header", m("h1.text-title", "Button")),
+        m(".panel-content", [
+          m("div.iframe.container", [
+            m("a", { href: "https://timmy.nekoweb.org" },
+              m("img", {
+                src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.gif",
+                alt: "timmy website"
+              })
+            ),
+
+            m("textarea",
+              `
+[ Iframe ]
+<a href="https://timmy.nekoweb.org"><img src="https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png"></a>
+
+[ Local ]
+https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png
+
+[ File Garden ]
+https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
+`.trim())
+          ])
         ])
       ]),
 

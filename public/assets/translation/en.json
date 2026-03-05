@@ -53,7 +53,6 @@
   },
   "others": {
     "title": "Others",
-    "warning": "This section is temporary!",
-    "desc": "What you are seeing now was experimental content that was previously intended for use, but now with the new layout and libraries, these elements no longer have a place to go for the time being. So I am using this section temporarily in case anyone needs them, especially my button. <- Ignore this, I am moving it to another location, for the third time. :)"
+    "desc": "What you are seeing now was experimental content that was previously intended for use, but now with the new layout and libraries, these elements no longer have a place to go for the time being. So I am using this section temporarily in case anyone needs them, especially my button. ;)"
   }
 }
