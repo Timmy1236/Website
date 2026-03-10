@@ -27,16 +27,20 @@ cd public && python -m http.server 8000
 - [Images: File Garden](https://filegarden.com/)
 <br><br>
 - - [ **Herramientas** ] 
-- [Mithril - Single Page Application](https://mithril.js.org/)
-- [11ty - Static Site Generator](https://www.11ty.dev/)
-- [Swup - Page Transition Library](https://swup.js.org/)
-- [esbuild - Bundler](https://esbuild.github.io/)
+- [Mithril: Single Page Application](https://mithril.js.org/)
+- [11ty: Static Site Generator](https://www.11ty.dev/)
+- [Swup: Page Transition Library](https://swup.js.org/)
+- [esbuild: Bundler](https://esbuild.github.io/)
 <br><br>
-- - [ **Audios** ]
-- [Background song main](https://pixabay.com/es/music/ambiente-spring-night-is-over-ambient-liminal-darkambient-night-322125/)
-- [Background song 11ty](https://lesfm.net/track/elevator-music/)
+- - [ **Herramientas Externas** ] 
+- [Dither it!](https://ditherit.com/)
+- [Compress or Die](https://compress-or-die.com/)
 <br><br>
-- - [ **Imágenes** ]
+- - [ **Audios/Songs** ]
+- ["Spring night is over"](https://pixabay.com/es/music/ambiente-spring-night-is-over-ambient-liminal-darkambient-night-322125/)
+- ["Elevator Music"](https://lesfm.net/track/elevator-music/)
+<br><br>
+- - [ **Images** ]
 - [Background wallpaper main](https://unsplash.com/es/fotos/el-horizonte-de-la-ciudad-emerge-a-traves-de-la-luz-tenue-de-la-manana-XQJOFs-lZVk)
 - [Banner & others VotV images](https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/)
 
