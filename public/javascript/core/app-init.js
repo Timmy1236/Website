@@ -4,15 +4,6 @@
   * Este script esta pensado para ser usado con ESbuild, no cumple ninguna función aparte de eso.
 */
 
-import Layout from "../components/layout.js";
-
-// SPA
-import Home from "../spa/home.js";
-import About from "../spa/about-me.js";
-import Proyects from "../spa/proyects.js";
-import Others from "../spa/others.js";
-import Configuration from "../spa/configuration.js";
-
 // Scripts
 import "./settings-setup.js";
 import "./settings-loader.js";
@@ -24,6 +15,14 @@ import "../pages/settings.js";
 import "../pages/discord.js";
 import "../ui/trans.js";
 import "../ui/image-overlay.js";
+
+// SPA
+import Layout from "../components/layout.js";
+import Home from "../spa/home.js";
+import About from "../spa/about-me.js";
+import Proyects from "../spa/proyects.js";
+import Others from "../spa/others.js";
+import Configuration from "../spa/configuration.js";
 
 // Mithril
 import m from "mithril";
