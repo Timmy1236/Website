@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "cd public && python -m http.server 8000",
-    "stylelint": "npx stylelint \"**/*.css\"",
+    "style": "npx stylelint \"**/*.css\"",
     "build": "npx @11ty/eleventy",
-    "bundle": "esbuild public/javascript/core/app-init.js --bundle --minify --watch --outfile=public/dist/app.js && esbuild public/javascript/pages/11ty/11ty-init.js --bundle --minify --outfile=public/dist/11ty.js"
+    "bundle": "esbuild public/javascript/core/app-init.js --bundle --minify --outfile=public/dist/app.js && esbuild public/javascript/pages/11ty/11ty-init.js --bundle --minify --outfile=public/dist/11ty.js",
+    "bundle:watch": "esbuild public/javascript/core/app-init.js --bundle --minify --watch --outfile=public/dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,7 @@
   "homepage": "https://github.com/Timmy1236/Website#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "esbuild": "^0.27.3",
+    "esbuild": "^0.27.4",
     "stylelint": "^17.4.0",
     "stylelint-config-standard": "^40.0.0"
   },
