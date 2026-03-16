@@ -21,6 +21,16 @@ npm install
 cd public && python -m http.server 8000
 ```
 
+4. Nota: Todos los cambios que hagas en 11ty o en los scripts de la pagina web no serán visibles en el momento, ya que necesitaras realizar una build primero.
+```bash
+# 11ty:
+npm run build
+
+# esbuild:
+npm run bundle
+npm run bundle:watch # Hacer bundle automáticamente cada vez que guardas cambios nuevos.
+```
+
 ## Créditos
 - - [ **Host** ]
 - [Website: Nekoweb](https://nekoweb.org/)
