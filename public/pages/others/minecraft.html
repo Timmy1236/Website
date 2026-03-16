@@ -18,13 +18,13 @@
       <h1>Full HTML, CSS y JS!</h1>
     </div>
     <div class="menu">
-      <button class="btn-minecraft">Un jugador</button>
-      <button class="btn-minecraft">Multijugador</button>
-      <button class="btn-minecraft">Mods y Texture Packs</button>
+      <button class="btn-minecraft" data-i18n="pages.others.minecraft.singleplayer"> Un jugador</button>
+      <button class="btn-minecraft" data-i18n="pages.others.minecraft.multiplayer">Multijugador</button>
+      <button class="btn-minecraft" data-i18n="pages.others.minecraft.mods">Mods y Texture Packs</button>
     </div>
     <div class="menu-options">
-      <button class="btn-minecraft">Opciones...</button>
-      <button class="btn-minecraft">Cerrar juego</button>
+      <button class="btn-minecraft" data-i18n="pages.others.minecraft.options">Opciones...</button>
+      <button class="btn-minecraft" data-i18n="pages.others.minecraft.close">Cerrar juego</button>
     </div>
   </div>
 
@@ -46,11 +46,11 @@
   </div>
 
   <div class="version-text">
-    <p>Minecraft 1.8</p>
+    <p>Minecraft 1.8.9</p>
   </div>
 
   <div class="copy-text">
-    <p>timmy.nekoweb.org</p>
+    <p>Copyright Mojang AB. Do not distribute!</p>
   </div>
 
   <style>
@@ -59,7 +59,6 @@
       src: url("../../assets/fonts/Minecraftia.woff2") format("woff2");
       font-display: swap;
     }
-
 
     * {
       font-family: 'Minecraftia', sans-serif;
@@ -76,15 +75,15 @@
       width: 900px;
       height: 200px;
       margin-bottom: 80px;
+      image-rendering: pixelated;
     }
 
     .logo-text {
       position: absolute;
       top: 30%;
-      /* Ajusta según sea necesario */
       right: 20%;
       rotate: -15deg;
-      animation: pulse 1s infinite;
+      animation: pulse 0.6s infinite;
     }
 
     .logo-text h1 {
@@ -99,7 +98,7 @@
       }
 
       50% {
-        transform: scale(1.1);
+        transform: scale(1.07);
       }
 
       100% {
@@ -107,7 +106,6 @@
       }
     }
 
-    /* Estilos del contenedor principal */
     .container {
       height: 100vh;
       width: 100%;
@@ -119,7 +117,6 @@
       z-index: 2;
     }
 
-    /* Estilos del menú */
     .menu {
       display: flex;
       flex-direction: column;
@@ -142,17 +139,17 @@
     }
 
     .btn-minecraft {
-      background: url('../../assets/images/others/minecraft/stone.png') center center;
+      background: #999 url('../../assets/images/others/minecraft/btn.png') center center;
       background-size: cover;
       background-repeat: no-repeat;
-
+      image-rendering: pixelated;
       color: rgb(247, 247, 247);
       width: 100%;
       height: 50px;
       padding: 0.7rem 0;
-      margin-bottom: .75rem;
+      margin-bottom: .5rem;
       text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-      font-size: 1rem;
+      font-size: 16px;
       letter-spacing: .025em;
       border: 2px solid rgb(0, 0, 0);
       box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5),
@@ -161,10 +158,12 @@
     }
 
     .btn-minecraft:hover {
-      border: 2px solid rgb(255, 255, 255);
+      background: url('../../assets/images/others/minecraft/btnhover.png') center;
+      background-color: rgba(100, 100, 255, 0.45);
+      text-shadow: 2px 2px #202013CC;
+      color: #FFFFA0;
     }
 
-    /* Estilos del fondo panorámico */
     .panorama {
       width: 100vw;
       height: 100vh;
@@ -220,6 +219,7 @@
     }
   </style>
 
+  <script type="module" src="../../dist/app.js"></script>
   <script>
     const audio = new Audio("../../assets/sounds/others/Minecraft/minecraft_click.mp3");
 
