@@ -7,6 +7,7 @@
     "start": "cd public && python -m http.server 8000",
     "style": "npx stylelint \"**/*.css\"",
     "build": "npx @11ty/eleventy",
+    "build:watch": "npx @11ty/eleventy --watch",
     "bundle": "esbuild public/javascript/core/app-init.js --bundle --minify --outfile=public/dist/app.js && esbuild public/javascript/pages/11ty/11ty-init.js --bundle --minify --outfile=public/dist/11ty.js",
     "bundle:watch": "esbuild public/javascript/core/app-init.js --bundle --minify --watch --outfile=public/dist/app.js"
   },
