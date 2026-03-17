@@ -25,10 +25,11 @@ cd public && python -m http.server 8000
 ```bash
 # 11ty:
 npm run build
+npm run build:watch # Re-ejecuta el comando por ti cuando realizas un cambio.
 
 # esbuild:
 npm run bundle
-npm run bundle:watch # Hacer bundle automáticamente cada vez que guardas cambios nuevos.
+npm run bundle:watch # Re-ejecuta el comando por ti cuando realizas un cambio.
 ```
 
 ## Créditos
