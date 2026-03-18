@@ -1,18 +1,48 @@
 ---
-title: "Update 10: Rediseño por completo de la página"
-date: 2024-08-16
-description: "Ahora no todo se encuentra en el simple index, ahora esta separado por paginas, cada dia estoy mas cerca a una pagina '''profesional''' para mi nivel ;)"
+title: "Uhhh..."
+date: 2025-09-18
+description: "Update 10: Me toco re-codificar gran parte de la pagina nuevamente al cambiar todo a Nekoweb :("
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "medio", "cambios", "arreglos", "eliminaciones"]
 ---
 
-### Información
-- Hice tantos cambios en una solo update que se me hizo imposible intentar guardarlos todos, así que honestamente no se que hice.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Aún tengo cosas que arreglar, el deploy automático que tenia configurado en GitHub Actions no estaba funcionando como yo quería y nada se estaba subiendo, si ves esto, significa que pude arreglarlo.</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Modifique ligeramente el style del changelog para que sea mas legible.</li>
+      <li>Remplace el botón del "No time spent with a cat is wasted" por los buttons que se usan normalmente en nekoweb para hacer promo de otras paginas. Aún sigo viendo como funciona todo eso.</li>
+      <li>Moví varios elementos de la pagina "others" a las otras paginas.</li>
+    </ul>
+  </div>
+</div>
 
-### Añadidos
-- Nuevas páginas, "about-me" y "others".
-- Volví a añadir todo lo que había eliminado anteriormente en la refactorización: el ChatBox, WakaTime, NAV, MP3, iFrames, etc.
-- Nuevo style base para la página, uno con efecto de blur y gradient, con filtros de estática y de lluvia de fondo. También ahora hay una foto en el fondo y no un simple background-color... ¡tecnología!
-- Changelog, ahora puedes ver la documentación de cambios que hice de la página desde este sector, ya no es necesario ver los commits de mi repositorio para ver qué cambio hice de forma desordenada y no documentada. Ahora puedes verlos de forma desordenada y no documentada desde acá!
+<div class="changelog-card fix">
+  <h3>Arreglos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Varios links dejaron de funcionar en el cambio de github pages a nekoweb, se supone que la mayoría debería de llevarte a las paginas correctas.</li>
+      <li> Intente arreglar la mayoría de paddings y margins que no estaban bien aplicados. No lo testé por ahora en mobiles. </li>
+      <li>Arregle el mini changelog del home, por alguna razón no paraba de mostrar "TEXT" en vez de los cambios reales. </li>
+    </ul>
+  </div>
+</div>
+
+<div class="changelog-card del">
+  <h3>Eliminaciones</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Elimine la sección de flash games, no se si están permitido ese tipo de contenido en nekoweb, lo quites por las dudas.</li>
+    </ul>
+  </div>
+</div>

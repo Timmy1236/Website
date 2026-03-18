@@ -1,36 +1,61 @@
 ---
-title: "Recode 1: Layout nuevo"
-date: 2025-12-26
-description: "Después de mucho tiempo estando mejorando el sitio y aprendiendo nuevas tecnológicas y técnicas en el desarrollo de software en web, creo que tengo las bolas suficientes de finalmente hacer un salto y re-codificar prácticamente toda mi pagina desde '0', por ahora solo hice un re-diseño completo del estilo de la pagina a uno mas 'grid' en vez de ponerlo todo vertical."
+title: "Directorios"
+date: 2026-02-20
+description: "Update 15: Esta update prácticamente no agrega contenido nuevo, simplemente re organizando todos los archivos y directorios para que tenga una estructura mas limpia y arreglando y comprimiendo ciertas cositas en las paginas que se añadieron de forma bruta"
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
 ---
 
-# Información
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>No muchas cosas nuevas, simplemente re organizando todos los archivos internos de la pagina.</li>
+    </ul>
+  </div>
+</div>
 
-La pagina ahora funciona con un nuevo layout mas al estilo de un grid, en vez de encontrarse todo el contenido en vertical, ahora el banner se encuentra en la parte superior de los 2 paneles, el primer panel siendo el nav que ahora es vertical y esta a la izquierda y el segundo panel de contenido, que es el único que cambia dependiendo de la pagina que te encuentres. Esto lo estoy haciendo porque en la siguiente update del Recode, pienso cambiar todo el sistema de como funciona mi pagina a uno estilo "SPA" (Single-page application) ;)
+<div class="changelog-card new">
+  <h3>Añadidos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>No-Good angel button.</li>
+      <li>Nuevo efectos de sonidos para los botones del nav.</li>
+      <li>Tooltips, aún no se donde usarlos en la página, pero hay tooltips.</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Re hice de vuelta la pagina 404 ya que no había hecho un cambio en ella ya prácticamente un año y me estaba dando un tic.</li>
+      <li>La pagina ya no se encuentra en /website/ sino que ahora es /public/, esto es para que quede mas claro en github que lo único que se publicara sera lo que este adentro de esa carpeta y que src solamente sirve para guardar los markdowns y base del content.</li>
+      <li>Las paginas generadas con 11ty se encontraran ahora en la carpeta content en vez de 'generated' para que no se confunda con una carpeta temporal.</li>
+      <li>Varios archivos multimedia estaban mal organizados o inclusos fuera de sus categorías adecuadas, debería de estar todo ordenado, espero que ninguna pagina haya perdido por una ruta no actualizada :).</li>
+      <li>Mayoría de scripts y CSS fueron documentados y estilizados con stylelint para mantener una limpieza en los códigos, pero esta pensado hacer eso mas profundamente en las siguientes actualizaciones.</li>
+      <li>Se cambiaron las músicas de la pagina principal y las generadas por 11ty por unas músicas sin copyright, en futuras actualizaciones tengo pensado crear una pagina de créditos para creditar a los compositores!</li>
+      <li>Cambie el favicon por uno que hice en 30 segundos en libresprite. wow, horrible.</li>
+    </ul>
+  </div>
+</div>
 
-### Añadidos
-- pursuer.
-- Nuevo layout enfocado a ser mas horizontal. Alado ahora se encuentra pursuer.
-- Nuevos sonidos especiales al hacer click en la pagina, y sonidos únicos dependiendo del objeto que estes clickeando, por ejemplo: el pursuer.
-- pursuer.
+<div class="changelog-card fix">
+  <h3>Arreglos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Settings setup no estaba haciendo su trabajo, me olvide de llamar su función.</li>
+    </ul>
+  </div>
+</div>
 
----
-
-### Cambios
-- Minis cambios y arreglos generales en el about me.
-
----
-
-### Arreglos
-- Después de un año entero, finalmente pude arreglar el tema sobre de la música y animaciones siendo cortadas al instante cuando cambias de pagina, ahora con el nuevo sistema esto ya no debería pasar nunca mas :3
-- El script encargado de gestionar las configuraciones debería de funcionar correctamente, anteriormente había un 50/50 de que dejara de funcionar, literalmente.
-
----
-
-### Eliminaciones
-- Removí por completo temporalmente la sección "Others", puede ser que lo agregue después en un futuro o que finalmente encuentra un mejor lugar en donde ponerlos.
-- Eliminé completamente los proyectos que se encontraban en la sección del about-me, tengo pensado en darles una sección especifica para ellos.
+<div class="changelog-card del">
+  <h3>Eliminaciones</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Varias imágenes y audios que ya no se estaban usando en la página.</li>
+    </ul>
+  </div>
+</div>

@@ -1,36 +1,60 @@
 ---
-title: "Update 14: Styles"
-date: 2025-11-08
-description: "¿Sabes que es lo mas importante? ¡La presentación!"
+title: "Pulir"
+date: 2026-02-03
+description: "Update 14: Arreglando, añadiendo y cambiando cosas que estaban medio mal con el anterior recode. Este debería de ser el ultimo recode que haga."
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
 ---
 
-# Información
-Rehíce gran parte del código general de la pagina web antes de comenzar de hacer un nuevo layout, el código era tan terrible que si hacia un cambio se rompía todo.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Con todos estos nuevos cambios que he hecho, no todos salieron lo mejor posible ('' •᷄ ᴗ •᷅ ). Esta update esta enfocado en arreglar las mayorías de cosas que se rompieron con el recode anterior.</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card new">
+  <h3>Añadidos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Generador de RSS automático, ahora todos los changelogs y blogs deberían de crearse al momento de hacer una build de la pagina, esto solucionara cualquier tipo de error que tenia antes con mi feed que no se actualizaba bien.</li>
+    </ul>
+  </div>
+</div>
 
-### Añadidos
-- Ahora la pagina cuenta con un sitemap, tengo pensado en añadir mas paginas o continuar insertando mas links pero esta vez mas en el sitemap antes que dejarlo todo compactado en el nav, por ahora no tiene muchas cosas.
-- Nuevas opciones en la sección de settings, ahora hay todo un sistema de themes que se aplica en el style general de la pagina.
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Cambio de host de imagen del botón de nyani58.</li>
+      <li>Un CSS mas "limpio", elimine la mayoría de efectos, hice las sombras y los fondos transparentes mas opacos, agregue mas padding para juntar el contenido en el medio, quite la mayoría de los bordes redondos, etc. </li>
+      <li>Los botones ahora son mas 'clickys' :3, tienen una animación re-hecha completamente nueva y ahora tienen un efecto especial cuando son clickeados.</li>
+      <li>Nuevo fondo animado y reproductor mp3 para todas las paginas generados con 11ty, también ahora se usa swup.js, para que tenga una animación de transición cada vez que cambies de pagina y que el navegador no se vea obligado a recargar de vuelta cada vez que te muevas entre paginas.</li>
+      <li>Re-escrito de vuelta todos los textos y actualizado los json para el i18n.</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card fix">
+  <h3>Arreglos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Inconsistencias en el CSS, había muchos divs que le faltaban clases importantes y otras que aunque se veían iguales, si cambiabas de theme se rompían o no se actualizaba con las nuevas variables, etc.</li>
+      <li>Unos scripts se ejecutaban varias veces y se duplicaban generando problemas de rendimiento dependiendo de la cantidad de veces que te cambiabas de paginas en el home, esto ya no debería de pasar y ahora cada script se ejecuta por separado dependiendo de la pagina, i18n debería de ejecutar una vez cada vez que entres una pagina nueva por precaución.</li>
+    </ul>
+  </div>
+</div>
 
-### Cambios
-- Remplace el theme del changelog por uno simple me gusta abusar mucho el CSS pero puede ser imposible intentar leer textos, así que estos tipos de paginas que tendrán mayormente textos, ahora cuentan con un style único y simple.
-- Rehíce por completo el about-me, junte la sección de mi perfil y la de discord haciendo que ahora el pfp y username que tenia antes, se actualicen a tiempo real dependiendo de las stats de mi perfil, también mostrara si estoy conectado o no al momento que entres.
-- Modifique elements.css para que el site box sea mas simple y lindo que el anterior teniendo toda una imagen borrosa.
+<div class="changelog-card del">
+  <h3>Eliminaciones</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>pursuer</li>
+    </ul>
+    <img src="https://i.pinimg.com/736x/14/7d/be/147dbe99a775ed1c0d98dba85649f5a1.jpg" alt="NOOOOOOOOOOO" width="200"/>
+  </div>
+</div>
 
----
-
-### Arreglos
-- Re ajuste el icono del mouse personalizado porque resulta que estaba un poco offset y quedaba raro donde había que clickear
-- Arregle un montón de strings del i18n y añadiendo le mas soporte a otros strings que no se traducían, aún hay otros varios mas que pude identificar pero no tengo tiempo para arreglarlos en esta actualización. 
-- Arregle algunas paginas de los mini-easter eggs que estaban en el about me, como el de minecraft o el del half life 2 que no tenían correctamente bien ubicados las direcciones de los fonts, haciendo que usaran la genérica del arial y rompiendo varios elementos del css.
-
----
-
-### Eliminaciones
-- Elimine completamente la sección "Flash Archive" en others por ahora.
-- Elimine un montón de archivos que no se usaban mas en la pagina para ahorrar algo de tamaño y simplificar los directorios del repositorio.

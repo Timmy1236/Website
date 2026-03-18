@@ -1,11 +1,17 @@
 ---
-title: "Update 9: Añadiendo de vuelta lo eliminado"
-date: 2024-07-09
-description: "ignora la update de 'simplificado' bruh."
+title: "¡Nekoweb!"
+date: 2025-08-18
+description: "Update? 9: Oh! Ya tenia una pagina creada en este sitio antiguamente porque seguía a Dimden desde hace tiempo, pero honestamente nunca se me paso la idea de pasar mi pagina de GitHub a Nekoweb."
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "IMPORTANTE!"]
 ---
 
-### Añadidos
-- Agregue de vuelta el nav, pero ahora esta solamente con la etiqueta div, esto funcionara bien?
-- Volví añadir de vuelta el MP3, pero ahora es un audio que se reproduce en el fondo cuando detecta un click hecho en la pagina y se pausara si el usuario dejar de darle focus.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Después de un 1 año usando GitHub pages para hostear mi pagina, decidí cambiarme a Nekoweb! Ya tenia una cuenta en ese hosting ya que seguía y miraba todas las creaciones que hacia Dimden desde Twitter, pero nunca se me había ocurrido la idea de mudarme, así que decidí moverme a Nekoweb y abandonar a github pague después de tanto tiempo, wassup!</li>
+    </ul>
+  </div>
+</div>

@@ -10,7 +10,30 @@ Aquí puedes ver todos los cambios que le he hecho a la pagina, por ejemplo cosa
 
 ---
 {% for post in collections.changelog | reverse %}
-- [{{ post.data.title }}]({{ post.url | url }})  _({{ post.date | readableDate }})_ <br>
-{{ post.data.description }}
-<br>
+
+<div class="post-card">
+
+  <a class="post-card-title" href="{{ post.url | url }}">
+    {{ post.data.title }}
+  </a>
+
+  <div class="post-card-date">
+    {{ post.date | readableDate }}
+  </div>
+
+  {%- if post.data.tags %}
+    <div class="post-tags">
+      {%- for tag in post.data.tags %}
+        {%- if tag != "all" %}
+          <span class="post-tag">{{ tag }}</span>
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  {%- endif %}
+
+  <p class="post-card-desc">
+    {{ post.data.description }}
+  </p>
+</div>
+
 {% endfor %}

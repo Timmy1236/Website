@@ -1,10 +1,17 @@
 ---
-title: "Update 4: Marquee eliminado"
-date: 2023-09-29
-description: "Firefox tiene terribles problemas intentando renderizar ese tag, pones el mouse sobre encima y todo el texto se rompe, tristemente tendré que quitarlo."
+title: "Halloween!1!"
+date: 2023-10-03
+description: "Update 4: Cambie los colores de la pagina para una estética de halloween... ¿Tendré que hacerlo todo manualmente cada fecha?"
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "pequeño"]
 ---
 
-### Eliminaciones
-- Decidí quitar el tag html "marquee" porque estaba fallando terriblemente en firefox, cuando saquen una update que lo parchen, puede ser que lo añada de vuelta, o no, quien sabe.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>¡Feliz halloween para todos! He cambiado los colores de la pagina a uno mas 'naranjas' para darle un temático, también ahora hay emojis en los costados de los paneles relacionado con halloween. No se hicieron cambios significativos a la pagina, solo un nuevo estilo temporal!</li>
+    </ul>
+  </div>
+</div>

@@ -1,13 +1,27 @@
 ---
-title: "Update 8: Refactorización"
-date: 2024-05-27
-description: "Mágicamente, resulta que tener todos los archivos de tu pagina en el mismo raíz puede ser un problema serio mientras vas avanzando y añadiendo nuevas cosas, ¿quien coño lo diría?"
+title: "Optimización"
+date: 2025-04-14
+description: "Update 8: Lo se, lo se, todo el mundo odia .webp, todo el mundo se burla de .webp, pero para mi, ¡Genuinamente!, me gusta. :P"
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "pequeño", "cambios"]
 ---
 
-### Cambios
-- Todo el código HTML y CSS escrito de vuelta desde cero.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>De una forma u otra, el tamaño total de la pagina web fue reducido completamente hasta la mitad, no se como hice eso.</li>
+    </ul>
+  </div>
+</div>
 
-### Eliminaciones
-- Ahora cada archivo del directorio de la web se encuentra en carpetas para que este mas organizado y limpio la raíz, esto puede romper ciertas cosas que me olvide de actualizar las direcciones.
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>La mayoria de imagenes fueron comprimidos en .webp y reducido gran parte los tamaños que eran sobre exagerados comparado con el tamaño reales de sus div's.</li>
+      <li>Varios scripts y archivos css fueron reducidos gran parte borrando ciertas clases y funciones que ya no usaban mas.</li>
+    </ul>
+  </div>
+</div>

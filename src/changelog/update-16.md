@@ -1,27 +1,50 @@
 ---
-title: "Recode 2: Mithril.js y 11ty"
-date: 2026-01-17
-description: "Con la ayuda del nuevo diseño de mi pagina, tendiendo el contenido que cambia entre ellas en una sola parte, me permite realizar un cambio de paginas de forma 'smooth' sin la necesidad de re-cargar enteramente todo el código HTML cada vez que el usuario clickea un botón el NAV! Esto lo pude hacer gracias a Mithril.js. También, he empezado a usar 11ty, un generador de paginas estáticas, en vez de escribir otra vez todos los HTML's para cada changelog, blog, sitemap, etc. Ahora puedo usar solamente un html base y escribir cada articulo desde un simple markdown!"
+title: "Uhhh... 2.0"
+date: 2026-02-24
+description: "Update 16: Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit."
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
 ---
 
-# Información
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit.</li>
+    </ul>
+  </div>
+</div>
 
-Nuevo año, nuevo yo, literalmente. Desde que me pase a NekoWeb me he enfocado en aprender mas como funciona el desarrollo en el frontend, deje un poco de lado mis otros proyectos a dedicarme completamente en investigar como usar un generador de sitios estático. En esta update trae: [mithril.js](https://mithril.js.org/) y [11ty](https://www.11ty.dev/), describí como funcionan de forma poca detallada en la sección de añadidos. Recomiendo mucho visitar sus paginas para ver el potencial máximo que tienen, hablo en serio.
+<div class="changelog-card new">
+  <h3>Añadidos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Otra vez, por octava vez, agregue de vuelta la pagina "Others" que lo usare principalmente para guardar el link de mi button porque ya esta pasando que intentan agregarme en "vecinos" pero como soy un vago de mierda siempre me olvido poner un sitio el link de mi button :3</li>
+      <li>PURSUER (ahora cambia de imagen cada vez que cambias de pagina)</li>
+      <li>Tooltips para los botones sociales del about me, también, otro botón mas con mi correo electrónico por si alguien no quiere hablar por discord.</li>
+      <li>"spacing-lines", en vez de usar 'br' varias veces seguidas para hacer un espacio, puedes ver como se forma un espacio en ella con una linea fea.</li>
+      <li>Rss ahora tiene 2 versiones separadas, uno para los blogs y el otro para el changelog, para evitar el tremendo spam que hice en el feed de nekoweb, voy a poner por default el de blogs, pero aun seguirá existiendo el feed general por si quieres agregar a tu cliente rss.</li>
+      <li>Por si alguien quiere clonar esta pagina web, ahora puede encender rápidamente un servidor en python con el comando "npm run start"</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>El nav ahora usa "spacing-lines" en vez de títulos para cada sección.</li>
+      <li>El readme del repositorio esta refactorizado con una sección de capturas, créditos, instalación, etc. Recomiendo muchísimo visitar mi repositorio, siempre habrá contenido mas nuevo comparado a lo publicado en nekoweb.</li>
+    </ul>
+  </div>
+</div>
 
-### Añadidos
-- 'Mithril.js' Ahora la pagina en vez de correr simplemente en HTML estático, ahora todo se basa en un simple index.html que usa mithril.js como DOM virtual, básicamente cuando te cambias de pagina, en vez de recargar completamente un HTML entero, incluso cuando gran parte sea simplemente un copia y pega, ahora solamente cambiara el contenido de ella, sin necesidad de gastar red al pedo, incluso esto debería ser mas rápido, al instante ya cargas todas mis paginas en el script y al clickear un botón, pum, cambio al instante!
-- '11ty' El sitemap, blog, changelog, y posiblemente mas paginas que haga en algún futuro, tampoco serán simplemente copias y pegas del mismo HTML pero con diferente textos, ahora todo se genera al instante gracias a 11ty, un generador de paginas estáticos, simplemente creo un HTML como base y listo, después solamente si quiero crear algo nuevo, como un sitemap, hago un markdown y pongo solamente lo que quiero ver que se vea en ella, una lista con varios links, un titulo h1, y nada mas, 11ty hace todo el trabajo, recomendado!
-
----
-
-### Cambios
-- Acabo de otra vez re-formar los directorios, ahora los scripts se encuentran organizados por categorías y todas las herramientas de 11ty y generadores se encuentran separados del deploy, básicamente nekoweb solamente hosteara lo visible mientras que todas mis herramientas y bases se encuentran afuera guardadas para futuras updates, esto debería de ayudar en no subir tanto el peso con node modules y toda esas mierdas.
-
----
-
-### Arreglos
-- Minis fixes en algunos scripts que he encontrado al estar organizándolos, no son nada de importancia.
+<div class="changelog-card fix">
+  <h3>Arreglos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Link erróneo del repositorio de mi github</li>
+    </ul>
+  </div>
+</div>

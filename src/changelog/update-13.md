@@ -1,29 +1,45 @@
 ---
-title: "Update 13: Uhhh..."
-date: 2025-09-18
-description: "Me toco re-codificar gran parte de la pagina nuevamente al cambiar todo a Nekoweb, resulta que también, ¡MÁGICAMENTE!, escribir todo de forma hecho mierda, puede romperse al mínimo cambio que hagas, incluyendo cambio de host."
+title: "Mithril.js y 11ty"
+date: 2026-01-17
+description: "Update 13: Con la ayuda del nuevo diseño de mi pagina, tendiendo el contenido que cambia entre ellas en una sola parte, me permite realizar un cambio de paginas de forma 'smooth' sin la necesidad de re-cargar enteramente todo el código HTML cada vez que el usuario clickea un botón el NAV! Esto lo pude hacer gracias a Mithril.js. También, he empezado a usar 11ty, un generador de paginas estáticas, en vez de escribir otra vez todos los HTML's para cada changelog, blog, sitemap, etc. Ahora puedo usar solamente un html base y escribir cada articulo desde un simple markdown!"
 layout: layouts/base.html
 back: /content/changelog/index.html
+tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos"]
 ---
 
-### Información
-Aún sigo teniendo cosas que tengo que arreglar, el deploy automático que tenia configurado en GitHub Actions no estaba funcionando como yo quería y nada se estaba subiendo, si ves esto, significa que pude arreglarlo.
+<div class="changelog-card info">
+  <h3>Información</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Nuevo año, nuevo yo, literalmente. Desde que me pase a NekoWeb me he enfocado en aprender mas como funciona el desarrollo en el frontend, deje un poco de lado mis otros proyectos a dedicarme completamente en investigar como usar un generador de sitios estático. En esta update trae: [mithril.js](https://mithril.js.org/) y [11ty](https://www.11ty.dev/), describí como funcionan de forma poca detallada en la sección de añadidos. Recomiendo mucho visitar sus paginas para ver el potencial máximo que tienen, hablo en serio.</li>
+    </ul>
+  </div>
+</div>
 
----
+<div class="changelog-card new">
+  <h3>Añadidos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>'Mithril.js' Ahora la pagina en vez de correr simplemente en HTML estático, ahora todo se basa en un simple index.html que usa mithril.js como DOM virtual, básicamente cuando te cambias de pagina, en vez de recargar completamente un HTML entero, incluso cuando gran parte sea simplemente un copia y pega, ahora solamente cambiara el contenido de ella, sin necesidad de gastar red al pedo, incluso esto debería ser mas rápido, al instante ya cargas todas mis paginas en el script y al clickear un botón, pum, cambio al instante!</li>
+      <li>'11ty' El sitemap, blog, changelog, y posiblemente mas paginas que haga en algún futuro, tampoco serán simplemente copias y pegas del mismo HTML pero con diferente textos, ahora todo se genera al instante gracias a 11ty, un generador de paginas estáticos, simplemente creo un HTML como base y listo, después solamente si quiero crear algo nuevo, como un sitemap, hago un markdown y pongo solamente lo que quiero ver que se vea en ella, una lista con varios links, un titulo h1, y nada mas, 11ty hace todo el trabajo, recomendado!</li>
+    </ul>
+  </div>
+</div>
 
-### Cambios
-- Modifique ligeramente el style del changelog para que sea mas legible.
-- Remplace el botón del "No time spent with a cat is wasted" por los buttons que se usan normalmente en nekoweb para hacer promo de otras paginas. Aún sigo viendo como funciona todo eso.
-- Moví varios elementos de la pagina "others" a las otras paginas.
+<div class="changelog-card change">
+  <h3>Cambios</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Acabo de otra vez re-formar los directorios, ahora los scripts se encuentran organizados por categorías y todas las herramientas de 11ty y generadores se encuentran separados del deploy, básicamente nekoweb solamente hosteara lo visible mientras que todas mis herramientas y bases se encuentran afuera guardadas para futuras updates, esto debería de ayudar en no subir tanto el peso con node modules y toda esas mierdas.</li>
+    </ul>
+  </div>
+</div>
 
----
-
-### Arreglos
-- Varios links dejaron de funcionar en el cambio de github pages a nekoweb, se supone que la mayoría debería de llevarte a las paginas correctas.
-- Intente arreglar la mayoría de paddings y margins que no estaban bien aplicados. No lo testé por ahora en mobiles. 
-- Arregle el mini changelog del home, por alguna razón no paraba de mostrar "TEXT" en vez de los cambios reales. 
-
----
-
-### Eliminaciones
-- Desactive temporalmente el "Flash Archive".
+<div class="changelog-card fix">
+  <h3>Arreglos</h3>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Minis fixes en algunos scripts que he encontrado al estar organizándolos, no son nada de importancia.</li>
+    </ul>
+  </div>
+</div>
