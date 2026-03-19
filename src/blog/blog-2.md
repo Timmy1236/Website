@@ -1,9 +1,10 @@
 ---
-title: "Microblog 1: GitHub"
+title: "El GitHub"
 date: 2026-02-20
 description: "Si quieres ver lo horrible que es el código de esta pagina y la cantidad innecesaria de scripts que tienes, ahora puedes hacerlo perfectamente desde GitHub."
 layout: layouts/base.html
 back: /content/blog/index.html
+tags: ["microblog"]
 ---
 
 # GitHub

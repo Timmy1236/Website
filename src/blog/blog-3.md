@@ -1,18 +1,23 @@
 ---
-title: "Blog 2: Minecraft legacy edition"
+title: "Minecraft legacy edition"
 date: 2026-02-28
 description: "¿Huh? ¿A que te refieres que lekearon el código fuente completo de Minecraft legacy edition? ¿Se podrá jugar de vuelta en PC?"
 layout: layouts/base.html
 back: /content/blog/index.html
+tags: ["blog", "largo"]
 ---
 
 *¿Qué?* Resulta ser que alguien [lekeo el codigo fuente completo de "Minecraft Legacy Edition"](https://xcancel.com/i/status/2027862579226247278), una version especial desarrollada por **4J Studios** para dar soporte a las consolas de septima generacion que no podrían ejecutar Minecraft java, ya que las consolas nunca fueron diseñados originalmente para correr la maquina virtual de java, obligando a que se reconstruyera Minecraft desde cero pero esta vez en C++.
+
+<br>
 
 ## Legacy ≠ Bedrock 
 
 Entonces... ¿Que le paso a esta versión? Tristemente fue abandonada en 2019 ya que Microsoft quería impulsar la version "Bedrock edition" otra version de Minecraft hecha desde cero que corre también en C++. Pero esta vez diseñado para ser multi-plataforma, haces una version, corre en los demás dispositivos. Esto es un punto clave ya que las "Legacy edition" están compiladas de forma diferente para cada sistema operativo, la version de xbox360 no podría correr en la ps3, y viceversa, esto también mataba completamente la idea de un modo multijugador entre plataformas.
 
 ... También había otro problema... Nunca recibimos un port para PC, aunque suene estúpido la idea de tener un port en PC teniendo en cuenta que existe literalmente Minecraft Java con su control de versiones excelente que te permite volver a versiones antiguas y una "alterativa(?" con el mismo Bedrock. Las 2 versiones tenían una *"esencia"* diferente, no por el hecho obvio que una esta estancada a una época diferente cuando Microsoft no intentaba meter cambios agresivos arruinando la experiencia ***EJEM...***, sino que contaba varias características y funciones notorias que armaban la diferencia.
+
+<br>
 
 ## "Esencia"
 
@@ -22,10 +27,13 @@ Mientras que **Minecraft Bedrock** no cuenta con ninguna de estas funciones, no 
 
 Posiblemente sea una estúpida ceguera nostálgica que siento por Legacy, pero siento que realmente había una gran diferencia entre **Mojang** y **4J** de como diseñaron Minecraft. Uno lo diseño para expandir lo máximo el aspecto sandbox para permitir historias increíbles, mientras que el otro maximizaba con lo tenia para traer la mayor jugabilidad. No tengo ninguna preferencia entre las 3 versiones, Java, Bedrock o Legacy, pero me gustaría tener Legacy de vuelta en pc, tener a los 3.
 
+<br>
+
 # Jugar Legacy en PC?
 
 Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso mismo... ¿Que tiene que ver todo con todo esto? *pues...* Que ***teóricamente*** al tener el código fuente, se podría compilar perfectamente una version Legacy que corra de forma **NATIVA** en PC. Ya no sera necesario de usar emuladores o un modpack gigantesco en Java para traer de vuelta todas esas funciones. Podríamos tener ese port que nunca llegamos a tener... La pregunta viene ahora... *¿Se puede hacer eso?*... nose. Había que probar ya que tenemos el código, ¿no?
 
+<br>
 
 ## A probar pue.
 
@@ -87,6 +95,7 @@ FINALMENTE, PUEDO, JUGAR, LEGACY, NADA, ESTA, FALLANDO, ¿FUNCIONA?. Si te soy h
 
 <img src="https://file.garden/aSqYsBZqpx5ZY3su/website/blog/Captura%20de%20pantalla%202026-03-01%20082912.png" style="max-width: 900px;  margin: auto;  display: flex;.">
 
+<br>
 
 # Conclusion
 
