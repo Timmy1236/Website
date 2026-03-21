@@ -1,13 +1,15 @@
 
 {
   "blog": {
-    "title": "Blog 2: Minecraft legacy edition",
+    "title": "Minecraft legacy edition",
     "url": "/blog/blog-3/",
-    "date": "Sat, 28 Feb 2026 00:00:00 GMT"
+    "date": "Sat, 28 Feb 2026 00:00:00 GMT",
+    "description": "¿Huh? ¿A que te refieres que lekearon el código fuente completo de Minecraft legacy edition? ¿Se podrá jugar de vuelta en PC?"
   },
   "changelog": {
-    "title": "Update 18: esbuild",
-    "url": "/changelog/update-20/",
-    "date": "Sun, 01 Mar 2026 00:00:00 GMT"
+    "title": "esbuild",
+    "url": "/changelog/update-17/",
+    "date": "Sun, 01 Mar 2026 00:00:00 GMT",
+    "description": "Update 17: Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update."
   }
 }
