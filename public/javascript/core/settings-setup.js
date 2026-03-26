@@ -10,6 +10,8 @@ export const SETTINGS_MAP = {
   staticEffect: "static-effect",
   vignetteEffect: "vignette-effect",
 
+  theme: "theme-select",
+
   backgroundMusic: "background-music-toggle",
   mouseClicks: "mouse-click-toggle",
 
@@ -34,7 +36,7 @@ export function initDefaultSettings() {
   localStorage.setItem("readableFont", "false");
 
   // Theme
-  localStorage.setItem("theme", "simple");
+  localStorage.setItem("theme", "simple-purple");
 
   // Flag de inicialización y forzamos un reload.
   localStorage.setItem("settingsInitialized", "true");
