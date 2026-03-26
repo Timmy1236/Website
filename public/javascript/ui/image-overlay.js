@@ -1,6 +1,5 @@
 let imageOverlayInitialized = false;
 
-/* exported initImageOverlay */
 export function initImageOverlay() {
   if (imageOverlayInitialized) return;
   imageOverlayInitialized = true;
