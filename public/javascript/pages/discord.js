@@ -27,7 +27,7 @@ export async function loadDiscordProfile(userId) {
     const statusElement = document.getElementById("discord-status-text");
     if (!statusElement) return;
 
-    statusElement.textContent = "⚠️ Error al obtener el estado.";
+    statusElement.textContent = "Error!";
     statusElement.style.color = "#ff6666";
   }
 }
@@ -46,10 +46,10 @@ function renderDiscordProfile(data) {
 
   // Estado
   const statusMap = {
-    online: { text: "🟢 Online", color: "#43b581" },
-    idle: { text: "🌙 Idle", color: "#faa61a" },
-    dnd: { text: "🔴 No molestar", color: "#f04747" },
-    offline: { text: "⚫ Offline", color: "#747f8d" }
+    online: { text: "Online", color: "#43b581" },
+    idle: { text: "AFK", color: "#faa61a" },
+    dnd: { text: "No molestar", color: "#f04747" },
+    offline: { text: "Offline", color: "#747f8d" }
   };
 
   const current = statusMap[status] || statusMap.offline;
