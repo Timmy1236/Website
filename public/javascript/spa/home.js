@@ -1,6 +1,5 @@
 import m from "mithril";
-import ButtonsRow from "../components/buttons_row.js";
-import { getLatest } from "../pages/home/get-latest.js";
+import { getLatest, getLastCommit } from "../pages/home/get-latest.js";
 
 const Home = {
   latest: null,
@@ -15,13 +14,25 @@ const Home = {
       this.latest = data;
       m.redraw();
     });
+
+    getLastCommit().then(data => {
+      console.log(data[0])
+      m.redraw();
+    });
+
   },
 
   view: function () {
     return m(".content-column", [
-
       m(".panel", [
-        m(".panel-header", m("h1.text-title", { "data-i18n": "home.welcome.title" })),
+        m(".panel-header", [
+          m("h1.text-title", { "data-i18n": "home.welcome.title" }),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ]),
         m(".panel-content", [
           m("div", { "data-i18n": "[html]home.welcome.text" }),
           m("div", {
@@ -33,22 +44,50 @@ const Home = {
         ])
       ]),
 
-      m(".panel", [
-        m(".panel-header", m("h1.text-title", { "data-i18n": "home.entries.title" })),
-        m(".panel-content", [
-          this.latest ? m("div", [
-            m("div", [
-              m("a.link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title)
-            ]),
-            m("div", [
-              m("a.link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title)
-            ])
-          ])
-            : m("p", "Cargando...")
-        ])
-      ]),
+      m(".panel-grid-2", {
+        style: "--panel-col-1:1fr; --panel-col-2:1fr;"
+      }, [
 
-      m(ButtonsRow)
+        m(".panel", [ // Changelog
+          m(".panel-header",
+            m("h1.text-title", { "data-i18n": "home.entries.title" }),
+
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+              m("button.panel-button", { "data-panel-action": "close" }, "X")
+            ])
+          ),
+          m(".panel-content", [
+            this.latest ? m("div", [
+              m(".card", [
+                m("a.card-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                m("p.card-content", this.latest.changelog.description)
+              ])
+            ])
+              : m("p", "Cargando...")
+          ])
+        ]),
+
+        m(".panel", [ // Blog
+          m(".panel-header",
+            m("h1.text-title", { "data-i18n": "home.entries.title" }),
+
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+              m("button.panel-button", { "data-panel-action": "close" }, "X")
+            ])
+          ),
+          m(".panel-content", [
+            this.latest ? m("div", [
+              m(".card", [
+                m("a.card-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                m("p.card-content", this.latest.blog.description)
+              ]),
+            ])
+              : m("p", "Cargando...")
+          ])
+        ]),
+      ]),
     ])
   }
 };
