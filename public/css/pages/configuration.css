@@ -1,6 +1,11 @@
 /*
   bro
 */
+
+.settings-group {
+  margin-bottom: 20px;
+}
+
 .option label {
   padding-left: 10px;
 }
@@ -26,4 +31,9 @@ select {
 
 select:open {
   background-color: #000;
+}
+
+.configuration-buttons {
+  display: flex;
+  gap: 10px;
 }
