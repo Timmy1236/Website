@@ -1,17 +1,17 @@
 import m from "mithril";
-import { confirmSettings, restartSettings } from "../pages/settings.js";
+import { loadSettings, confirmSettings, restartSettings } from "../pages/settings-ui.js";
 import { changeLanguage } from "../core/i18n.js"
 import TabPanel from "../components/tab-panel.js";
 
 const ConfigurationPage = {
   oncreate() {
     window.refreshI18n?.();
-    window.loadSettings?.();
+    loadSettings();
   },
 
   onupdate() {
     window.refreshI18n?.();
-    window.loadSettings?.();
+    loadSettings();
   },
 
   view() {
@@ -22,22 +22,19 @@ const ConfigurationPage = {
         tabs: [
           {
             label: "Visual",
-            content: () => m(".settings-group", [
-              m("h2.group-title", { "data-i18n": "settings.sections.visual-effects" }),
+            content: () => m("div", [
+              m(".settings-group", [
+                m("h2.group-title", { "data-i18n": "settings.sections.visual-effects" }),
 
-              m(".option", [
-                m("input", { type: "checkbox", id: "rain-effect" }),
-                m("label", { for: "rain-effect", "data-i18n": "settings.options.rainEffects" })
-              ]),
+                m(".option", [
+                  m("input", { type: "checkbox", id: "static-effect" }),
+                  m("label", { for: "static-effect", "data-i18n": "settings.options.staticEffects" })
+                ]),
 
-              m(".option", [
-                m("input", { type: "checkbox", id: "static-effect" }),
-                m("label", { for: "static-effect", "data-i18n": "settings.options.staticEffects" })
-              ]),
-
-              m(".option", [
-                m("input", { type: "checkbox", id: "vignette-effect" }),
-                m("label", { for: "vignette-effect", "data-i18n": "settings.options.vignetteEffects" })
+                m(".option", [
+                  m("input", { type: "checkbox", id: "vignette-effect" }),
+                  m("label", { for: "vignette-effect", "data-i18n": "settings.options.vignetteEffects" })
+                ]),
               ]),
 
               m(".settings-group", [
