@@ -1,81 +1,84 @@
 /*
-  i18n.js
-  -------
-  - Maneja el sistema multilenguaje de la página.
-  * Gran parte del código lo saque de otra página y realmente no se muy bien lo que hace :P
-  * Solamente hice unos cambios y comentarios para me sea fácil de entenderlo.
+ * i18n.js
+ * -------
+ * Maneja el sistema multilenguaje de la página.
+ * Gran parte del código lo saque de otra página y realmente no se muy bien lo que hace :P
 */
 
 class I18n {
   constructor() {
     this.currentLang = this.getSavedLanguage() || this.getBrowserLanguage();
     this.translations = {};
-    this.loadTranslations();
+    this.ready = this.loadTranslations();
   }
 
-  // Manejo de idioma guardado
+  /**
+   * Obtiene cual es el lenguaje guardado en el navegador del usuario.
+   * @returns {string}
+   */
   getSavedLanguage() {
     try {
       return localStorage.getItem('preferred-language');
     } catch (e) {
-      console.warn("localStorage no disponible:", e);
+      console.warn("i18n.js> Error en LocalStorage? ", e);
       return null;
     }
   }
 
+  /**
+   * Guarda el lenguaje dado en LocalStorage.
+   * @param {*} lang - Lenguaje: 'es' o 'en'
+   */
   saveLanguage(lang) {
     try {
+      this.currentLang = lang;
       localStorage.setItem('preferred-language', lang);
     } catch (e) {
-      console.warn("No se pudo guardar en localStorage:", e);
+      console.warn("i18n.js> Error en LocalStorage? ", e);
     }
   }
 
-  // Detectar idioma navegador
+  /**
+   * Obtiene el lenguaje del navegador del usuario.
+   * @returns {string}
+   */
   getBrowserLanguage() {
     const browserLang = navigator.language || navigator.userLanguage;
     return browserLang.startsWith('es') ? 'es' : 'en';
   }
 
-  // Cargar traducciones
+  /**
+   * Carga los datos de los archivos de traducciones y fuerza una traducción a la pagina actual.
+   */
   async loadTranslations() {
     try {
-      const response = await fetch(`./assets/translation/${this.currentLang}.json`);
-      this.translations[this.currentLang] = await response.json();
+      const response = await fetch(`/assets/translation/${this.currentLang}.json`);
+      const json = await response.json();
+
+      this.translations[this.currentLang] = json;
       this.translatePage();
     } catch (error) {
-      console.error("Error loading translations:", error);
+      console.error("[i18n] load error", error);
     }
   }
 
-  // Cambiar idioma
+  /**
+   * Cambia el lenguaje.
+   * @param {*} lang 
+   */
   async changeLanguage(lang) {
-    this.currentLang = lang;
     this.saveLanguage(lang);
-
-    // Vuelve a cargar el JSON del idioma elegido
-    try {
-      const response = await fetch(`./assets/translation/${lang}.json`);
-      this.translations[lang] = await response.json();
-    } catch (error) {
-      console.error("Error cargando idioma:", error);
-      return;
-    }
-
-    this.translatePage();
-
-    // Evento personalizado para notificar cambio
-    document.dispatchEvent(new CustomEvent("languageChanged", {
-      detail: { language: lang }
-    }));
+    await this.loadTranslations();
   }
 
-
-  // Traducir toda la página
+  /**
+   * Traduce todo el contenido de la pagina que contenga '[data-i18n]'.
+   */
   translatePage() {
     console.log("i18n.js> Ejecutando translatePage.")
 
     const elements = document.querySelectorAll('[data-i18n]');
+
     elements.forEach(element => {
       let key = element.getAttribute('data-i18n');
       let isHtml = false;
@@ -104,7 +107,11 @@ class I18n {
     document.documentElement.lang = this.currentLang;
   }
 
-  // Obtener traducción específica
+  /**
+   * Obtén la traducción de una key.
+   * @param {*} key 
+   * @returns 
+   */
   getTranslation(key) {
     const keys = key.split('.');
     let translation = this.translations[this.currentLang];
@@ -115,18 +122,24 @@ class I18n {
 
     return translation;
   }
-
-  getCurrentLanguage() {
-    return this.currentLang;
-  }
 }
 
-const i18n = new I18n();
-
+/**
+ * Guarda el lenguaje en LocalStorage.
+ * @param {*} lang - El lenguaje: 'es' o 'en'
+ */
 export function changeLanguage(lang) {
   i18n.changeLanguage(lang);
 }
 
-window.refreshI18n = function () {
+/**
+ * Traduce el contenido de la pagina.
+ * @see {@link i18n.translatePage}
+ */
+export function refreshi18n() {
   i18n.translatePage();
-};
+}
+
+const i18n = new I18n();
+
+export const i18nReady = i18n.ready;
