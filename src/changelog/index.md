@@ -8,7 +8,7 @@ layout: layouts/base.html
 
 Aquí puedes ver todos los cambios que le he hecho a la pagina, por ejemplo cosas nuevas que he añadido, modificada, arregladas o eliminadas, al principio puede no tener una buena documentación ya que no pensaba hacer esto un proyecto importante si te soy sincero.
 
----
+<br>
 {% for post in collections.changelog | reverse %}
 
 <div class="post-card">
@@ -35,5 +35,4 @@ Aquí puedes ver todos los cambios que le he hecho a la pagina, por ejemplo cosa
     {{ post.data.description }}
   </p>
 </div>
-
 {% endfor %}

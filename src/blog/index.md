@@ -8,7 +8,7 @@ layout: layouts/base.html
 
 **¡Blog's y microblog's de cualquier tema!** Sin ningún tipo de temática o tema en concreto, informática, juegos, multimedia, etc. Mientras mas byte's sean gastados en este blog, mas inestable se vuelve el código de este sitio, ¡esa es la gracia!
 
----
+<br>
 {% for post in collections.blog | reverse %}
 
 <div class="post-card">
