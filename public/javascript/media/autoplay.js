@@ -4,11 +4,11 @@
   - Comienza la reproducción de la música del fondo cuando el usuario interactúa con la pagina, si el usuario cambia de tab o no esta enfocado en la pagina, detendrá la música.
 */
 
-var volume = 0.5;
+var volume = 0.25;
 const canIPlay = (localStorage.getItem("backgroundMusic") === "true") ? true : false;
 
 document.addEventListener("DOMContentLoaded", function () {
-  const audio = new Audio(`./assets/sounds/music/night.ogg`);
+  const audio = new Audio(`./assets/sounds/music/Grace-FM.mp3`);
 
   document.body.addEventListener('click', function () {
     if (!canIPlay) return;
