@@ -13,7 +13,12 @@ const Home = {
 
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", { "data-i18n": "about-me.projects.title" })
+          m("h1.text-title", { "data-i18n": "projects.title" }),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
         ),
 
         m(".projects-list", [
@@ -41,22 +46,18 @@ const Home = {
 
             m(".project-body", [
               m("p.project-description", {
-                "data-i18n": "about-me.projects.projectsList.website.description"
+                "data-i18n": "projects.projectsList.website.description"
               })
             ]),
 
             m(".project-gallery", [
               m(".image-preview", [
-                m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/website-2024.png", alt: "2024" }),
-                m("p.image-text", "2024")
-              ]),
-              m(".image-preview", [
                 m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/website-2025.png", alt: "2025" }),
-                m("p.image-text", "2025")
+                m("p.image-text", "2025 - v1.0")
               ]),
               m(".image-preview", [
                 m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/website-2026.png", alt: "2026" }),
-                m("p.image-text", "2026")
+                m("p.image-text", "2026 - v2.0 BETA")
               ]),
             ]),
 

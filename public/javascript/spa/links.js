@@ -12,6 +12,11 @@ const Others = {
       m(".panel",
         m(".panel-header", [
           m("h1", { "data-i18n": "neighbors.title" }),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
         ]),
         m(".panel-content", [
           m(".neighbors", [
@@ -57,7 +62,14 @@ const Others = {
 
       // BUTTON
       m(".panel", [
-        m(".panel-header", m("h1.text-title", "Button")),
+        m(".panel-header",
+          m("h1.text-title", "Button"),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ),
         m(".panel-content", [
           m("div.iframe.container", [
             m(".neighbors", [
@@ -81,29 +93,15 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
         ])
       ]),
 
-      /* TV TIME - Esto sera para mas tarde, muhahaha〈•ˇ‸ˇ•〉Ψ
-      m(".panel", [
-        m(".panel-header",
-          m("h1.text-title", "TV TIME")
-        ),
-        m(".panel-content", [
-          m("div.iframe.container", [
-            m("iframe", {
-              src: "/pages/tv-time.html",
-              width: "300",
-              height: "314",
-              frameborder: "0"
-            }),
-            m("textarea", `<iframe src="https://timmy.nekoweb.org/pages/tv-time" width="300" height="314" frameborder="0"></iframe>`.trim())
-          ])
-        ])
-      ]),
-      */
-
       // Créditos
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", "Créditos")
+          m("h1.text-title", "Créditos"),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
         ),
         m(".panel-content", [
 
@@ -151,7 +149,12 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
       // WebTiles
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", "iFrame: WebTiles")
+          m("h1.text-title", "iFrame: WebTiles"),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
         ),
         m(".panel-content", [
           m("div.iframe.container", [
@@ -166,6 +169,29 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
           ])
         ]),
       ]),
+
+      m(".panel", [
+        m(".panel-header",
+          m("h1.text-title", "TV TIME (SUPER W.I.P)"),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ),
+        m(".panel-content", [
+          m("div.iframe.container", [
+            m("iframe", {
+              src: "/pages/tv-time.html",
+              width: "300",
+              height: "314",
+              frameborder: "0"
+            }),
+            m("textarea", `<iframe src="https://timmy.nekoweb.org/pages/tv-time" width="300" height="314" frameborder="0"></iframe>`.trim())
+          ])
+        ])
+      ]),
+
     ])
 };
 
