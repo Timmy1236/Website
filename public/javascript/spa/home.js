@@ -17,7 +17,6 @@ const Home = {
 
     getLastCommit().then(data => {
       this.latestCommit = data[0];
-      console.log(data[0])
       m.redraw();
     });
 
@@ -102,7 +101,7 @@ const Home = {
         m(".panel-content", [
           this.latestCommit ? m("div", [
             m(".card", [
-              m("a.card-title link", { href: "content/" + this.latestCommit.url }, this.latestCommit.sha),
+              m("a.card-title link", { href: this.latestCommit.html_url }, this.latestCommit.sha),
               m("p.card-content", this.latestCommit.commit.message)
             ])
           ]) : m("p", "Cargando...")
