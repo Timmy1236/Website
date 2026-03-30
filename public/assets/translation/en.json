@@ -1,18 +1,38 @@
 {
+  "sidebar": {
+    "navigation": {
+      "title": "Navigation",
+      "buttons": {
+        "home": "Home",
+        "aboutMe": "About me",
+        "proyects": "Projects",
+        "links": "Links",
+        "configuration": "Settings"
+      }
+    }
+  },
   "home": {
     "welcome": {
       "title": "Welcome!",
-      "text": "<p>Thank you for visiting my digital dumpster. Right now there isn’t much I can show you since it will always be in an infinite development stage and will expand and improve over time. I had planned to leave any type of content that I like or that I have developed myself, but since there’s nothing for now, just click the nav buttons to see the crap I’ve made elsewhere. The home, what you are seeing, will never have anything. Ignore it. <br><br>If you want, you can come back again in the future to see what new things I’ve added. Remember to use <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\">control + f5</a> to get the latest version of the page. ヾ(•ω•`)o<br><br></p>"
+      "text": "<p>Thanks for visiting my digital dumpster. Right now there is not much I can show you since it will always be in an infinite development stage and will keep expanding and improving over time. I planned to leave any kind of content that I like or that I have developed myself, but since there is nothing for now, just keep clicking the nav buttons to see what stuff I have done elsewhere. The home, what you are seeing, will never have anything. Ignore it. <br><br>If you want, you can come back again sometime in the future to see what I have added, remember to use <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\">control + f5</a> to get the latest version of the page. ヾ(•ω•`)o<br><br></p>"
     },
     "entries": {
-      "title": "Last entries"
+      "blog": {
+        "title": "Latest Blog (W.I.P)"
+      },
+      "changelog": {
+        "title": "Latest Changelog (W.I.P)"
+      },
+      "commit": {
+        "title": "Latest Commit (W.I.P)"
+      }
     }
   },
   "about-me": {
     "aboutMe": {
       "title": "About me",
       "startDescription": "I hate writing this.",
-      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">How do people introduce themselves without feeling weird?</a> <p>Hey! I'm Timmy(1236), an introverted fullstack software developer who doesn't like talking in person. Even though my only hobbies are programming, gaming, and 3D design, I’ve always been interested in creating high <span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >quality</span> digital art, but I never had the talent for that kind of thing. So all my creativity has always been limited to just a few lines of code, although that doesn’t mean I’m not a creative person. In fact, I like the idea of creating any type of solution to fix a problem that no one has ever had in their life. Including this very website, to store records of my projects that are in development and will never see the light of day. ;)</p> </span>",
+      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">How do people introduce themselves without feeling weird?</a> <p>Hey! I am Timmy(1236), I am 20 years old and I am from Uruguay!, I self proclaim myself as a 'backend software developer', although in reality I am just an introvert whose only hobbies are programming, playing games and designing things in 3D. You know, just another generic person. I have always been interested in creating that 'high quality digital art', but I was never really good at being creative. So all my creativity has always been limited to just a few lines of code, what you are seeing right now is an attempt to actually create something, thanks for visiting, I mean it.</p> </span>",
       "fact": {
         "programming": "● Languages: ",
         "softwares": "● Softwares: ",
@@ -20,15 +40,21 @@
         "series": "● Series:"
       }
     },
-    "projects": {
-      "title": "Projects",
-      "projectsList": {
-        "website": {
-          "description": "My personal website hosted on Nekoweb, it will be my main site where I will keep all types of projects or blogs about me updated. If you see this text in the first place, that means you are already viewing my page!"
-        },
-        "WIP": {
-          "description": "All the other projects were removed since I want to move this entire section to a separate page, only my website remains in case someone wants to see the source code."
-        }
+    "tech-stack": {
+      "title": "Tech stack"
+    },
+    "interest": {
+      "tite": "Interests :)"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "projectsList": {
+      "website": {
+        "description": "My personal website hosted on Nekoweb, it will be my main site where I will keep all kinds of projects or blogs I make updated. If you see this text first, that means you are already viewing my page!"
+      },
+      "WIP": {
+        "description": "All other projects were removed because I want to move this whole section to a separate page, only my website remains in case someone wants to see the source code."
       }
     }
   },
@@ -42,7 +68,6 @@
       "languages": "Languages"
     },
     "options": {
-      "rainEffects": "Rain",
       "staticEffects": "Static",
       "backgroundMusic": "Background music",
       "ignoreLandingPage": "Ignore landing page",
@@ -53,6 +78,27 @@
   },
   "others": {
     "title": "Others",
-    "desc": "What you are seeing now was experimental content that was previously intended for use, but now with the new layout and libraries, these elements no longer have a place to go for the time being. So I am using this section temporarily in case anyone needs them, especially my button. ;)"
+    "desc": "What you are seeing now were experimental contents that were planned to be used before, but now with the new layout and libraries, these elements do not have a place to be used for now. So I am using this section temporarily in case someone needs them, especially my button. ;)"
+  },
+  "neighbors": {
+    "title": "Neighbors"
+  },
+  "pages": {
+    "others": {
+      "half-life": {
+        "newGame": "NEW GAME",
+        "loadGame": "LOAD GAME",
+        "achievements": "ACHIEVEMENTS",
+        "options": "OPTIONS",
+        "quit": "QUIT GAME"
+      },
+      "minecraft": {
+        "singleplayer": "Singleplayer",
+        "multiplayer": "Multiplayer",
+        "mods": "Mods and Texture Packs",
+        "options": "Options...",
+        "close": "Close game"
+      }
+    }
   }
 }

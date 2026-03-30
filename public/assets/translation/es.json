@@ -1,18 +1,38 @@
 {
+  "sidebar": {
+    "navigation": {
+      "title": "Navegación",
+      "buttons": {
+        "home": "Inicio",
+        "aboutMe": "Sobre mi",
+        "proyects": "Proyectos",
+        "links": "Links",
+        "configuration": "Configuración"
+      }
+    }
+  },
   "home": {
     "welcome": {
       "title": "Bienvenido!",
       "text": "<p>Gracias por visitar a mi basurero digital. Ahora mismo no hay mucho que te pueda enseñar ya que siempre se va encontrar en una etapa de desarrollo infinita y se ira expandiendo y mejorando con el paso del tiempo. Tenia planeado en dejar cualquier tipo de contenido que me guste o que yo mismo he desarrollado, pero como no hay nada por ahora, simplemente ve clickeando los botones del nav para ver que mierdas he hecho en otros lados. El home, lo que estas viendo, nunca va tener nada. Ignóralo. <br><br>Si quieres, puedes volver nuevanmente en algun futuro para ver lo nuevo que he añadido, recuerda utilizar <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\">control + f5</a> para obtener la ultima version de la pagina. ヾ(•ω•`)o<br><br></p>"
     },
     "entries": {
-      "title": "Ultimas entradas"
+      "blog": {
+        "title": "Ultimo Blog (W.I.P)"
+      },
+      "changelog": {
+        "title": "Ultimo Changelog (W.I.P)"
+      },
+      "commit": {
+        "title": "Ultimo Commit (W.I.P)"
+      }
     }
   },
   "about-me": {
     "aboutMe": {
       "title": "Sobre mi",
       "startDescription": "Odio escribir esto.",
-      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?</a> <p>¡Hey! Soy Timmy(1236), un desarrollador de software fullstack introvertido que no le gusta hablar en persona. Aunque mis únicos hobbys sea programar, jugar y diseñar en 3D, siempre estuve interesado en crear arte digital <span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >de  alta  calidad</span>, pero nunca se me dio la mano para ese tipo de cosas. Así que toda mi creatividad siempre fue limitada a simplemente unas líneas de códigos, eso no quita que no sea una persona creativa, incluso, me gusta la idea de crear cualquier tipo de solución para arreglar un problema que nunca nadie ha tenido en su vida. Incluyendo esta misma pagina web, para guardar los registros de mis proyectos que se encuentran en desarrollo y que nunca llegaran ver la luz del sol. ;)</p> </span>",
+      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?</a> <p>¡Hey! Soy Timmy(1236) tengo 20 años y soy de Uruguay!, me auto proclamo como 'desarrollador de software backend', aunque en realidad simplemente soy un introvertido que sus únicos hobbys sean simplemente programar, jugar y diseñar cosas en 3D. Ya sabes, una simple persona genérica mas del montón. Siempre estuve interesado en crear en ese arte digital '<span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >de  alta  calidad</span>', pero nunca se me dio la mano en ser creativo. Así que toda mi creatividad siempre fue limitada a simplemente unas líneas de códigos, lo que estas viendo ahora mismo es un intento de realmente crear algo, gracias por visitarlo, te hablo en serio.</p> </span>",
       "fact": {
         "programming": "● Lenguajes: ",
         "softwares": "● Softwares: ",
@@ -20,15 +40,21 @@
         "series": "● Series:"
       }
     },
-    "projects": {
-      "title": "Proyectos",
-      "projectsList": {
-        "website": {
-          "description": "Mi sitio web personal hosteado en Nekoweb, sera mi sitio principal donde mantendré actualizado todos los tipos de proyectos o blogs que haga sobre mi. Si ves este texto en primer lugar, eso significa que ya estas viendo mi pagina!"
-        },
-        "WIP": {
-          "description": "Todos los demás proyectos fueron removidos ya que quiero mover toda esta sección a una pagina por separado, solamente esta mi pagina web por si alguien quiere ver el código fuente."
-        }
+    "tech-stack": {
+      "title": "Tech stack"
+    },
+    "interest": {
+      "tite": "Aficiones :)"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "projectsList": {
+      "website": {
+        "description": "Mi sitio web personal hosteado en Nekoweb, sera mi sitio principal donde mantendré actualizado todos los tipos de proyectos o blogs que haga sobre mi. Si ves este texto en primer lugar, eso significa que ya estas viendo mi pagina!"
+      },
+      "WIP": {
+        "description": "Todos los demás proyectos fueron removidos ya que quiero mover toda esta sección a una pagina por separado, solamente esta mi pagina web por si alguien quiere ver el código fuente."
       }
     }
   },
@@ -42,7 +68,6 @@
       "languages": "Lenguajes"
     },
     "options": {
-      "rainEffects": "Lluvia",
       "staticEffects": "Estática",
       "backgroundMusic": "Música de fondo",
       "ignoreLandingPage": "Ignorar la pagina de bienvenida",
@@ -54,5 +79,26 @@
   "others": {
     "title": "Otros",
     "desc": "Lo que estás viendo ahora, eran contenidos experimentales que se tenia pensado usar anteriormente, pero ahora con el nuevo layout y librerias, estos elementos ya no tienen un lugar donde ponerlos por ahora. Así que estoy usando esta sección temporal por si alguien los necesita, especialmente mi button. ;)"
+  },
+  "neighbors": {
+    "title": "Vecinos"
+  },
+  "pages": {
+    "others": {
+      "half-life": {
+        "newGame": "NUEVA PARTIDA",
+        "loadGame": "CARGAR PARTIDA",
+        "achievements": "LOGROS",
+        "options": "OPCIONES",
+        "quit": "ABANDONAR PARTIDA"
+      },
+      "minecraft": {
+        "singleplayer": "Un jugador",
+        "multiplayer": "Multijugador",
+        "mods": "Mods y Pack de Texturas",
+        "options": "Opciones...",
+        "close": "Cerrar juego"
+      }
+    }
   }
 }
