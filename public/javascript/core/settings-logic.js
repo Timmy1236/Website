@@ -22,6 +22,8 @@ export const SETTINGS_MAP = {
   readableFont: "readable-font"
 };
 
+const SETTINGS_VERSION = "1";
+
 // === Carga el efecto de ruido/estática ===
 function loadNoiseEffect() {
   const noiseCSS = document.createElement('link');
@@ -61,10 +63,28 @@ function checkIfFirstTime() {
 }
 
 /**
+ * Checkeamos si el navegador del usuario tiene guardado una variable "settingsVersion" la misma version que tiene el script settings-logic, en caso que no lo tenga, forzamos un initDefaultSettings por las dudas, solamente actualiza la version de settings cuando se hacen cambios grandes y que puede romperse completamente.
+ * @see {@link initDefaultSettings}
+ * @see {@link SETTINGS_VERSION}
+ */
+function migrateSettings() {
+  const savedVersion = localStorage.getItem("settingsVersion");
+  console.log("settings-logic.js> Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION)
+
+  if (savedVersion === SETTINGS_VERSION) return;
+
+  console.error("settings-logic.js> ¡Las versiones no coinciden, se requiere forzadamente realizar una restauración por defecto en los settings para evitar posibles bugs criticos!")
+
+  initDefaultSettings();
+  localStorage.setItem("settingsVersion", SETTINGS_VERSION);
+}
+
+/**
  * Carga y aplica todas las configuraciones, se ejecuta cuando la pagina termina de cargar.
  */
 export function initializeSettings() {
-  checkIfFirstTime();
+  migrateSettings();
+  checkIfFirstTime(); // NOTE: Tendremos que revisar esto ahora, con el nuevo sistema de migrateSettings esto podría haber quedado obsoleto perfectamente.
 
   const enabledStaticEffect = localStorage.getItem("staticEffect") === "true";
   const enabledReadableFont = localStorage.getItem("readableFont") === "true";
@@ -84,6 +104,8 @@ export function initializeSettings() {
  * Sobrescribe las configuraciones guardadas en el navegador por las del default.
  */
 export function initDefaultSettings() {
+  console.warn("settings-logic.js> Se acaba de reiniciar por defecto todos las configuraciones realizadas en la pagina web. Se requiere de una recarga de la pagina para aplicar los nuevos cambios.")
+
   localStorage.setItem("staticEffect", "true");
   localStorage.setItem("vignetteEffect", "true");
   localStorage.setItem("backgroundMusic", "false");
