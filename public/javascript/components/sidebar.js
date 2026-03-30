@@ -2,8 +2,13 @@ import m from "mithril";
 import { spaNavigate } from "../ui/trans.js";
 import { buttonSounds } from "../media/mouse-click.js";
 
-function navBtn(label, path) {
-  return m("button.sidebar-buttons", { "data-i18n": label, onclick: () => spaNavigate(path), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") });
+function navBtn(label, path, tooltip) {
+  if (!tooltip) {
+    return m("button.sidebar-buttons", { "data-i18n": label, onclick: () => spaNavigate(path), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") });
+  } else {
+    return m("button.sidebar-buttons", { "data-i18n": label, "data-tooltip": tooltip, onclick: () => spaNavigate(path), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") });
+  }
+
 }
 
 function externalBtn(label, url, tooltip) {
@@ -31,8 +36,8 @@ export default {
         m(".panel-content", [
           m(".sidebar-links-container", [
             navBtn("sidebar.navigation.buttons.home", "/home"),
-            navBtn("sidebar.navigation.buttons.aboutMe", "/about"),
-            navBtn("sidebar.navigation.buttons.proyects", "/proyects"),
+            navBtn("sidebar.navigation.buttons.aboutMe", "/about", "Work in Progress!"),
+            navBtn("sidebar.navigation.buttons.proyects", "/proyects", "Work in Progress!"),
             navBtn("sidebar.navigation.buttons.links", "/links"),
             navBtn("sidebar.navigation.buttons.configuration", "/configuration"),
           ]),
