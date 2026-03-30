@@ -50,7 +50,7 @@ const Home = {
 
         m(".panel", [ // Changelog
           m(".panel-header",
-            m("h1.text-title", { "data-i18n": "home.entries.title" }),
+            m("h1.text-title", { "data-i18n": "home.entries.changelog.title" }),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -70,7 +70,7 @@ const Home = {
 
         m(".panel", [ // Blog
           m(".panel-header",
-            m("h1.text-title", { "data-i18n": "home.entries.title" }),
+            m("h1.text-title", { "data-i18n": "home.entries.blog.title" }),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -91,7 +91,7 @@ const Home = {
 
       m(".panel", [
         m(".panel-header", [
-          m("h1.text-title", { "data-i18n": "home.welcome.title" }),
+          m("h1.text-title", { "data-i18n": "home.entries.commit.title" }),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
