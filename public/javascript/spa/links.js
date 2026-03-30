@@ -1,9 +1,9 @@
 import m from "mithril";
+import { refreshi18n } from "../core/i18n";
 
 const Others = {
   oncreate() {
-    window.refreshI18n?.();
-    window.initDefaultSettings?.();
+    refreshi18n();
   },
 
   view: () =>

@@ -1,10 +1,10 @@
 import m from "mithril";
 import { initImageOverlay } from "../ui/image-overlay.js";
-import ButtonsRow from "../components/buttons_row.js";
+import { refreshi18n } from "../core/i18n.js";
 
 const Home = {
   oncreate() {
-    window.refreshI18n?.();
+    refreshi18n();
     initImageOverlay();
   },
 
@@ -69,8 +69,6 @@ const Home = {
           ])
         ])
       ]),
-
-      m(ButtonsRow)
     ])
 };
 

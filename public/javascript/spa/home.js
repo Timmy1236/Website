@@ -1,12 +1,12 @@
 import m from "mithril";
 import { getLatest, getLastCommit } from "../pages/home/get-latest.js";
+import { refreshi18n } from "../core/i18n.js";
 
 const Home = {
   latest: null,
 
   oncreate() {
-    window.refreshI18n?.();
-    window.initDefaultSettings?.();
+    refreshi18n();
   },
 
   oninit: function () {
@@ -16,6 +16,7 @@ const Home = {
     });
 
     getLastCommit().then(data => {
+      this.latestCommit = data[0];
       console.log(data[0])
       m.redraw();
     });
@@ -87,6 +88,25 @@ const Home = {
               : m("p", "Cargando...")
           ])
         ]),
+      ]),
+
+      m(".panel", [
+        m(".panel-header", [
+          m("h1.text-title", { "data-i18n": "home.welcome.title" }),
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ]),
+        m(".panel-content", [
+          this.latestCommit ? m("div", [
+            m(".card", [
+              m("a.card-title link", { href: "content/" + this.latestCommit.url }, this.latestCommit.sha),
+              m("p.card-content", this.latestCommit.commit.message)
+            ])
+          ]) : m("p", "Cargando...")
+        ])
       ]),
     ])
   }

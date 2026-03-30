@@ -1,16 +1,16 @@
 import m from "mithril";
 import { loadSettings, confirmSettings, restartSettings } from "../pages/settings-ui.js";
-import { changeLanguage } from "../core/i18n.js"
+import { changeLanguage, refreshi18n } from "../core/i18n.js"
 import TabPanel from "../components/tab-panel.js";
 
 const ConfigurationPage = {
   oncreate() {
-    window.refreshI18n?.();
+    refreshi18n();
     loadSettings();
   },
 
   onupdate() {
-    window.refreshI18n?.();
+    refreshi18n();
     loadSettings();
   },
 
