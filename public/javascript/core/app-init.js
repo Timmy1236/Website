@@ -1,36 +1,43 @@
-/*
-  app-init.js
-  -----------
-  * Este script esta pensado para ser usado con ESbuild, no cumple ninguna función aparte de eso.
-*/
+import m from "mithril";
 
-// Scripts
-import "./settings-setup.js";
-import "./settings-loader.js";
-import "./i18n.js";
+// Core
+import "./settings-logic.js";
+import { i18nReady } from "./i18n.js";
+// Media
 import "../media/autoplay.js";
 import "../media/mouse-click.js";
 import "../media/sidebar-image.js";
-import "../pages/settings.js";
+// Pages
+import "../pages/settings-ui.js";
 import "../pages/discord.js";
+// UI
 import "../ui/trans.js";
 import "../ui/image-overlay.js";
+import "../ui/tooltip.js";
+import "../ui/panel-buttons.js"
 
 // SPA
 import Layout from "../components/layout.js";
 import Home from "../spa/home.js";
 import About from "../spa/about-me.js";
 import Proyects from "../spa/proyects.js";
-import Others from "../spa/others.js";
+import Links from "../spa/links.js";
 import Configuration from "../spa/configuration.js";
 
-// Mithril
-import m from "mithril";
+async function startApp() {
+  await i18nReady;
 
-m.route(document.getElementById("app"), "/home", {
-  "/home": { render: () => m(Layout, m(Home)) },
-  "/about": { render: () => m(Layout, m(About)) },
-  "/proyects": { render: () => m(Layout, m(Proyects)) },
-  "/others": { render: () => m(Layout, m(Others)) },
-  "/configuration": { render: () => m(Layout, m(Configuration)) }
-});
+  if (document.getElementById("app")) {
+    m.route(document.getElementById("app"), "/home", {
+      "/home": { render: () => m(Layout, m(Home)) },
+      "/about": { render: () => m(Layout, m(About)) },
+      "/proyects": { render: () => m(Layout, m(Proyects)) },
+      "/links": { render: () => m(Layout, m(Links)) },
+      "/configuration": { render: () => m(Layout, m(Configuration)) }
+    });
+  } else {
+    console.warn("Hey, estas cargando app.js en una pagina HTML que no cuenta con un div 'app', solo haz esto si quieres cargar ciertos scripts.")
+  }
+}
+
+startApp();
