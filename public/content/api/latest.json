@@ -7,9 +7,9 @@
     "description": "¿Huh? ¿A que te refieres que lekearon el código fuente completo de Minecraft legacy edition? ¿Se podrá jugar de vuelta en PC?"
   },
   "changelog": {
-    "title": "esbuild",
-    "url": "/changelog/update-17/",
-    "date": "Sun, 01 Mar 2026 00:00:00 GMT",
-    "description": "Update 17: Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update."
+    "title": "Recode",
+    "url": "/changelog/update-18/",
+    "date": "Mon, 30 Mar 2026 00:00:00 GMT",
+    "description": "Esta update es tan grande que primero necesito testear si realmente funciona las demás cosas, después escribo un changelog completo."
   }
 }
