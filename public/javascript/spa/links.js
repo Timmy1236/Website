@@ -96,7 +96,7 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
       // Créditos
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", "Créditos"),
+          m("h1.text-title", { "data-i18n": "links.credits.title" }),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -133,8 +133,7 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
 
           m("h3", "Audios/Canciones"),
           m("ul", [
-            m("li", [m("a.link", { href: "https://pixabay.com/es/music/ambiente-spring-night-is-over-ambient-liminal-darkambient-night-322125/", target: "_blank" }, `"Spring night is over"`)]),
-            m("li", [m("a.link", { href: "https://lesfm.net/track/elevator-music/", target: "_blank" }, `"Elevator Music"`)]),
+            m("li", [m("a.link", { href: "https://www.youtube.com/watch?v=M-DAQh5HPjo", target: "_blank" }, `"Grace FM"`)])
           ]),
 
           m(".spacing-line", { style: "--spacing-margin: 10px;" }),
@@ -165,7 +164,10 @@ https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/timmy_button.png
               frameborder: "0"
             }),
 
-            m("textarea", `<iframe src="https://webtiles.kicya.net/e/timmy.nekoweb.org" width="250" height="270" frameborder="0"></iframe>`.trim())
+            m("textarea", `<iframe src="https://webtiles.kicya.net/e/timmy.nekoweb.org" width="250" height="270" frameborder="0"></iframe>
+
+https://timmy.nekoweb.org/pages/others/tile/`
+              .trim())
           ])
         ]),
       ]),

@@ -76,9 +76,10 @@
       "readableFont": "Fuente legible (W.I.P)"
     }
   },
-  "others": {
-    "title": "Otros",
-    "desc": "Lo que estás viendo ahora, eran contenidos experimentales que se tenia pensado usar anteriormente, pero ahora con el nuevo layout y librerias, estos elementos ya no tienen un lugar donde ponerlos por ahora. Así que estoy usando esta sección temporal por si alguien los necesita, especialmente mi button. ;)"
+  "links": {
+    "credits": {
+      "title": "Créditos"
+    }
   },
   "neighbors": {
     "title": "Vecinos"

@@ -76,9 +76,10 @@
       "readableFont": "Readable font (W.I.P)"
     }
   },
-  "others": {
-    "title": "Others",
-    "desc": "What you are seeing now were experimental contents that were planned to be used before, but now with the new layout and libraries, these elements do not have a place to be used for now. So I am using this section temporarily in case someone needs them, especially my button. ;)"
+  "links": {
+    "credits": {
+      "title": "Credits"
+    }
   },
   "neighbors": {
     "title": "Neighbors"
