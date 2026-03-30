@@ -4,7 +4,7 @@ layout: layouts/base.html
 back: ../../
 ---
 
-## Navigation
+# Navigation
 
 - [Home](/)
 - [About me](/#!/about)
@@ -12,24 +12,24 @@ back: ../../
 - [Proyects](/#!/proyects)
 - [Configuration](/#!/configuration)
 
----
+<br><br>
 
-## Pages
+# Pages
 
-- [Sitemap](/content/sitemap/index.html)
-- [Blog (Spanish)](/content/blog/)
-- [Changelog (Spanish)](/content/changelog/)
+- [Sitemap <- Tamos aca.](/content/sitemap/index.html)
+- [Blog](/content/blog/)
+- [Changelog](/content/changelog/)
 
----
+<br><br>
 
-## Others
+# Others
 
 - [Follow](https://nekoweb.org/follow/timmy.nekoweb.org/)
 - [RSS](/content/rss/feed.xml)
 - - [Feed](/content/rss/feed.xml) | [Blog](/content/rss/blog.xml) | [Changelog](/content/rss/changelog.xml)
 
----
+<br><br>
 
-## Archive
+# Archive
 
 - [2025](../../pages/archive/2025/OLD-home.html)
