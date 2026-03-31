@@ -73,7 +73,7 @@ function migrateSettings() {
 
   if (savedVersion === SETTINGS_VERSION) return;
 
-  console.error("settings-logic.js> ¡Las versiones no coinciden, se requiere forzadamente realizar una restauración por defecto en los settings para evitar posibles bugs criticos!")
+  console.warn("settings-logic.js> ¡Las versiones no coinciden, se requiere forzadamente realizar una restauración por defecto en los settings para evitar posibles bugs criticos!")
 
   initDefaultSettings();
   localStorage.setItem("settingsVersion", SETTINGS_VERSION);
