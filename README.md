@@ -25,11 +25,11 @@ cd public && python -m http.server 8000
 ```bash
 # 11ty:
 npm run build
-npm run build:watch # Re-ejecuta el comando por ti cuando realizas un cambio.
+npm run build:watch # Re-ejecuta el comando cuando haces un cambio.
 
 # esbuild:
 npm run bundle
-npm run bundle:watch # Re-ejecuta el comando por ti cuando realizas un cambio.
+npm run bundle:watch # Re-ejecuta el comando cuando haces un cambio.
 ```
 
 ## Créditos
@@ -40,19 +40,17 @@ npm run bundle:watch # Re-ejecuta el comando por ti cuando realizas un cambio.
 - - [ **Herramientas** ] 
 - [Mithril: Single Page Application](https://mithril.js.org/)
 - [11ty: Static Site Generator](https://www.11ty.dev/)
-- [Swup: Page Transition Library](https://swup.js.org/)
 - [esbuild: Bundler](https://esbuild.github.io/)
 <br><br>
 - - [ **Herramientas Externas** ] 
 - [Dither it!](https://ditherit.com/)
 - [Compress or Die](https://compress-or-die.com/)
+- [Ezgif](https://ezgif.com/)
 <br><br>
 - - [ **Audios/Songs** ]
-- ["Spring night is over"](https://pixabay.com/es/music/ambiente-spring-night-is-over-ambient-liminal-darkambient-night-322125/)
-- ["Elevator Music"](https://lesfm.net/track/elevator-music/)
+- ["Grace FM"](https://www.youtube.com/watch?v=M-DAQh5HPjo)
 <br><br>
 - - [ **Images** ]
-- [Background wallpaper main](https://unsplash.com/es/fotos/el-horizonte-de-la-ciudad-emerge-a-traves-de-la-luz-tenue-de-la-manana-XQJOFs-lZVk)
 - [Banner & others VotV images](https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/)
 
 ## Licencia
