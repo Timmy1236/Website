@@ -1,22 +1,25 @@
 /*
-  autoplay.js
-  -----------
-  - Comienza la reproducción de la música del fondo cuando el usuario interactúa con la pagina, si el usuario cambia de tab o no esta enfocado en la pagina, detendrá la música.
+* autoplay.js
+* -----------
+* Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
 */
 
 var volume = 0.25;
-const canIPlay = (localStorage.getItem("backgroundMusic") === "true") ? true : false;
+const musicEnabled = localStorage.getItem("backgroundMusic") === "true";
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (!musicEnabled) return;
+
   const audio = new Audio(`./assets/sounds/music/Grace-FM.mp3`);
 
   document.body.addEventListener('click', function () {
-    if (!canIPlay) return;
     audio.volume = volume;
     audio.play();
   });
 
-  // Manejar el estado del audio según el focus de la ventana
+  /**
+   * Maneja el estado del audio según si la ventana de la pagina web esta siendo enfocada o no.
+   */
   function handleAudioState() {
     if (document.hasFocus() && !audio.muted && canIPlay) {
       if (audio.paused) {
