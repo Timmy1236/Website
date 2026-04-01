@@ -41,6 +41,8 @@ const AboutMePage = {
               // STATUS
               m("p.profile-status#discord-status-text", "Status: Loading..."),
 
+              m("p.profile-activity#discord-activity-text", "Status: Loading..."),
+
               // SOCIAL ICONS
               m(".profile-socials", [
                 m("button.icon-button", {
