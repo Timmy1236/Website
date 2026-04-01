@@ -39,7 +39,8 @@ const Home = {
             style: "width:100%;display:flex;justify-content:center"
           }, m("img#nom-nom", {
             src: "./assets/images/pages/home/tree.gif",
-            style: "margin-top:10px"
+            style: "margin-top:10px",
+            alt: "Gif tree eating apple"
           }))
         ])
       ]),
