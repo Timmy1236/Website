@@ -34,7 +34,6 @@ document.addEventListener("click", (e) => {
  */
 export function initPanel() {
   document.querySelectorAll(".panel[data-default='closed']").forEach(panel => {
-    console.log(panel)
     const content = panel.querySelector(".panel-content");
     const btn = panel.querySelector("[data-panel-action='minimize']");
 

@@ -75,7 +75,7 @@ class I18n {
    * Traduce todo el contenido de la pagina que contenga '[data-i18n]'.
    */
   translatePage() {
-    console.log("i18n.js> Ejecutando translatePage.")
+    console.log("%ci18n.js>" + "%c Ejecutando: " + "%ctranslatePage()", "color: #87F3A9; background: #282A35;", "color: white", "color: cyan")
 
     const elements = document.querySelectorAll('[data-i18n]');
 

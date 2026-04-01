@@ -69,7 +69,7 @@ function checkIfFirstTime() {
  */
 function migrateSettings() {
   const savedVersion = localStorage.getItem("settingsVersion");
-  console.log("settings-logic.js> Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION)
+  console.log("%csettings-logic.js>" + "%c Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION, "color: #87F3A9; background: #282A35;", "color: white")
 
   if (savedVersion === SETTINGS_VERSION) return;
 
