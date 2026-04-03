@@ -34,7 +34,7 @@
 
   /* Button animation */
   --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
-  --button-hover-transform: scale(1.065);
+  --button-hover-transform: scale(1.035);
   --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
   --button-active-transform: translateY(4px);
 
@@ -81,6 +81,11 @@ h2 {
   color: var(--accent-color);
   font-family: "VT323", monospace;
   border-bottom: 3px dotted var(--foreground);
+}
+
+::selection {
+  background: #505050;
+  color: #fff;
 }
 
 .link {
@@ -383,6 +388,13 @@ ul {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
 }
 
+.sidebar-buttons img {
+  width: 16px;
+  margin-right: 5px;
+  image-rendering: pixelated;
+  filter: drop-shadow(var(--text-shadow));
+}
+
 #sidebar-image {
   filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 50%));
   pointer-events: none;
@@ -466,9 +478,9 @@ ul {
 
 .button:active,
 .sidebar-buttons:active {
-  transform: var(--button-active-transform);
   box-shadow: none;
   border: var(--button-border-hover);
+  transform: var(--button-active-transform);
 }
 
 .buttons-list {
@@ -520,6 +532,7 @@ ul {
   background-color: var(--foreground);
   padding: 0 7px 5px;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725);
+  border: 2px dashed var(--background);
 }
 
 .card:hover {
@@ -589,4 +602,78 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   place-items: center center;
+}
+
+
+
+
+
+/* ==== TEMP = ACHIEVEMENTS | SUPER EXPERIMENTAL, LIMPIAR ESTO DESPUES, PLZ. ==== */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px;
+  border: 2px solid rgb(0 0 0 / 40%);
+  background: rgb(0 0 0 / 10%);
+  opacity: 0.5;
+}
+
+.achievement-card.unlocked {
+  opacity: 1;
+  border-color: var(--accent-color);
+}
+
+.achievement-icon {
+  font-size: 32px;
+  color: gold;
+}
+
+.achievement-date {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+
+/* ==== ACHIEVEMENT TOAST ==== */
+.achievement-toast {
+  position: fixed;
+  bottom: 20px;
+  right: -320px;
+  width: 280px;
+  background: #282a36;
+  border: 3px solid #433f55;
+  color: white;
+  padding: 10px 14px;
+  z-index: 9999;
+  transition: right 0.35s ease-in-out;
+  font-family: "VT323";
+  text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
+}
+
+.achievement-toast.visible {
+  right: 20px;
+}
+
+.achievement-toast.hiding {
+  right: -320px;
+}
+
+.toast-name {
+  margin: 0;
+  font-size: 24px;
+  color: gold;
+  margin-bottom: 5px;
+}
+
+.toast-desc {
+  margin: 0;
+  font-size: 20px;
 }
