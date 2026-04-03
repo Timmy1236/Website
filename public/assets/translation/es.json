@@ -7,8 +7,7 @@
         "aboutMe": "Sobre mi",
         "proyects": "Proyectos",
         "links": "Links",
-        "configuration": "Configuración",
-        "follow": "Seguir"
+        "configuration": "Configuración"
       }
     },
     "data": {
@@ -17,6 +16,14 @@
         "sitemap": "Sitemap",
         "blog": "Blog",
         "changelog": "Changelog"
+      }
+    },
+    "nekoweb": {
+      "title": "Nekoweb",
+      "buttons": {
+        "visits": "Visitas: ",
+        "followers": "Seguidores: ",
+        "follow": "Seguirme"
       }
     }
   },

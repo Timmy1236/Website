@@ -9,6 +9,22 @@
         "links": "Links",
         "configuration": "Settings"
       }
+    },
+    "data": {
+      "title": "Data",
+      "buttons": {
+        "sitemap": "Sitemap",
+        "blog": "Blog",
+        "changelog": "Changelog"
+      }
+    },
+    "nekoweb": {
+      "title": "Nekoweb",
+      "buttons": {
+        "visits": "Visitors: ",
+        "followers": "Followers: ",
+        "follow": "Follow me"
+      }
     }
   },
   "home": {
