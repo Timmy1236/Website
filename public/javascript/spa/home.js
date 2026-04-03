@@ -4,6 +4,7 @@ import { refreshi18n } from "../core/i18n.js";
 
 const Home = {
   latest: null,
+  latestCommit: null,
 
   oncreate() {
     refreshi18n();
@@ -19,7 +20,6 @@ const Home = {
       this.latestCommit = data[0];
       m.redraw();
     });
-
   },
 
   view: function () {
