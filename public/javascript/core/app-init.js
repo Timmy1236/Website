@@ -23,6 +23,7 @@ import About from "../spa/about-me.js";
 import Proyects from "../spa/proyects.js";
 import Links from "../spa/links.js";
 import Configuration from "../spa/configuration.js";
+import Achievements from "../spa/achievements.js";
 
 async function startApp() {
   await i18nReady;
@@ -33,6 +34,7 @@ async function startApp() {
       "/about": { render: () => m(Layout, m(About)) },
       "/proyects": { render: () => m(Layout, m(Proyects)) },
       "/links": { render: () => m(Layout, m(Links)) },
+      "/achievements": { render: () => m(Layout, m(Achievements)) },
       "/configuration": { render: () => m(Layout, m(Configuration)) }
     });
   } else {
