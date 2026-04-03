@@ -82,7 +82,9 @@ export default {
           ])
         ]),
         m(".panel-content", [
-          m("div", "<!--# views -->")
+          m("div", [
+            m.trust("<!--#views -->")
+          ])
         ])
       ]),
     ]),
