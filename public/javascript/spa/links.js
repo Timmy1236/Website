@@ -32,6 +32,9 @@ const Others = {
             m("a", { href: "https://nogood-angel.nekoweb.org/home", "data-tooltip": "No-Good Angel Website!" },
               m("img", { src: "https://nogood-angel.neocities.org/images/graphics/button_nogood-angel.png", alt: "nogood-angel website" })
             ),
+            m("a", { href: "https://someones-insane.nekoweb.org/", "data-tooltip": "Someones-Insane Website!" },
+              m("img", { src: "https://someones-insane.nekoweb.org/images/imapettyasshole_button.gif", alt: "Someones-Insane Website!" })
+            ),
             m("a", { href: "https://xyzko.nekoweb.org/", "data-tooltip": "xyzko Website!" },
               m("img", { src: "/assets/images/buttons/no-button.png", alt: "xyzko website" })
             ),
