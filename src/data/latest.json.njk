@@ -7,13 +7,13 @@ eleventyExcludeFromCollections: true
   "blog": {
     "title": "{{ collections.blog[0].data.title }}",
     "url": "{{ collections.blog[0].url }}",
-    "date": "{{ collections.blog[0].date | rssDate }}",
+    "date": "{{ collections.blog[0].date | readableDate }}",
     "description": "{{ collections.blog[0].data.description }}"
   },
   "changelog": {
     "title": "{{ collections.changelog[0].data.title }}",
     "url": "{{ collections.changelog[0].url }}",
-    "date": "{{ collections.changelog[0].date | rssDate }}",
+    "date": "{{ collections.changelog[0].date | readableDate }}",
     "description": "{{ collections.changelog[0].data.description }}"
   }
 }

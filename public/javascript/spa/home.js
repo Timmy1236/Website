@@ -6,6 +6,9 @@ const Home = {
   latest: null,
   latestCommit: null,
 
+  commitSHA: null,
+  commitDate: null,
+
   oncreate() {
     refreshi18n();
   },
@@ -18,6 +21,8 @@ const Home = {
 
     getLastCommit().then(data => {
       this.latestCommit = data[0];
+      this.commitSHA = String(data[0].sha).slice(0, 7)
+      this.commitDate = new Date(data[0].commit.committer.date).toLocaleDateString();
       m.redraw();
     });
   },
@@ -49,7 +54,8 @@ const Home = {
         style: "--panel-col-1:1fr; --panel-col-2:1fr;"
       }, [
 
-        m(".panel", [ // Changelog
+        // ==== CHANGELOG ====
+        m(".panel", [
           m(".panel-header",
             m("h1.text-title", { "data-i18n": "home.entries.changelog.title" }),
 
@@ -62,6 +68,7 @@ const Home = {
             this.latest ? m("div", [
               m(".card", [
                 m("a.card-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                m("p.card-date", this.latest.changelog.date),
                 m("p.card-content", this.latest.changelog.description)
               ])
             ])
@@ -69,7 +76,8 @@ const Home = {
           ])
         ]),
 
-        m(".panel", [ // Blog
+        // ==== BLOG ====
+        m(".panel", [
           m(".panel-header",
             m("h1.text-title", { "data-i18n": "home.entries.blog.title" }),
 
@@ -82,6 +90,7 @@ const Home = {
             this.latest ? m("div", [
               m(".card", [
                 m("a.card-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                m("p.card-date", this.latest.blog.date),
                 m("p.card-content", this.latest.blog.description)
               ]),
             ])
@@ -90,6 +99,7 @@ const Home = {
         ]),
       ]),
 
+      // ==== COMMIT ====
       m(".panel", [
         m(".panel-header", [
           m("h1.text-title", { "data-i18n": "home.entries.commit.title" }),
@@ -102,7 +112,8 @@ const Home = {
         m(".panel-content", [
           this.latestCommit ? m("div", [
             m(".card", [
-              m("a.card-title link", { href: this.latestCommit.html_url }, this.latestCommit.sha),
+              m("a.card-title link", { href: this.latestCommit.html_url }, this.commitSHA),
+              m("p.card-date", this.commitDate),
               m("p.card-content", this.latestCommit.commit.message)
             ])
           ]) : m("p", "Cargando...")

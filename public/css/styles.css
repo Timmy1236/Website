@@ -535,18 +535,18 @@ ul {
   border: 2px dashed var(--background);
 }
 
-.card:hover {
-  transform: translateY(-2px) translateX(-1px);
-  box-shadow: var(--panel-shadows);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725);
-}
-
 .card.space {
   margin-bottom: 10px;
 }
 
 .card-content {
   margin-top: 10px;
+}
+
+.card-date {
+  opacity: 0.8;
+  font-size: 20px;
+  font-style: italic;
 }
 
 /* ==== CARD ==== */
@@ -654,7 +654,7 @@ ul {
   padding: 10px 14px;
   z-index: 9999;
   transition: right 0.35s ease-in-out;
-  font-family: "VT323";
+  font-family: "VT323", monospace;
   text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
 }
 

@@ -27,11 +27,7 @@ module.exports = function (eleventyConfig) {
 
   // Convertir fechas en fechas legibles para las entradas en changelog y blogs
   eleventyConfig.addFilter("readableDate", date => {
-    return new Date(date).toLocaleDateString("es-ES", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
+    return new Date(date).toLocaleDateString();
   });
 
   return {

@@ -3,13 +3,13 @@
   "blog": {
     "title": "Minecraft legacy edition",
     "url": "/blog/blog-3/",
-    "date": "Sat, 28 Feb 2026 00:00:00 GMT",
+    "date": "27/2/2026",
     "description": "¿Huh? ¿A que te refieres que lekearon el código fuente completo de Minecraft legacy edition? ¿Se podrá jugar de vuelta en PC?"
   },
   "changelog": {
     "title": "Recode",
     "url": "/changelog/update-18/",
-    "date": "Mon, 30 Mar 2026 00:00:00 GMT",
+    "date": "29/3/2026",
     "description": "Esta update es tan grande que primero necesito testear si realmente funciona las demás cosas, después escribo un changelog completo."
   }
 }
