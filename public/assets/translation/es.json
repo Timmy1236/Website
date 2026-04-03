@@ -7,7 +7,16 @@
         "aboutMe": "Sobre mi",
         "proyects": "Proyectos",
         "links": "Links",
-        "configuration": "Configuración"
+        "configuration": "Configuración",
+        "follow": "Seguir"
+      }
+    },
+    "data": {
+      "title": "Data",
+      "buttons": {
+        "sitemap": "Sitemap",
+        "blog": "Blog",
+        "changelog": "Changelog"
       }
     }
   },

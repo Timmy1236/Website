@@ -2,21 +2,31 @@ import m from "mithril";
 import { spaNavigate } from "../ui/trans.js";
 import { buttonSounds } from "../media/mouse-click.js";
 
-function navBtn(label, path, tooltip) {
-  if (!tooltip) {
-    return m("button.sidebar-buttons", { "data-i18n": label, onclick: () => spaNavigate(path), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") });
-  } else {
-    return m("button.sidebar-buttons", { "data-i18n": label, "data-tooltip": tooltip, onclick: () => spaNavigate(path), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") });
-  }
+/**
+ * Crea un botón que permite navegar en la pagina web.
+ * @param {string} label 
+ * @param {boolean} external 
+ * @param {string} path 
+ * @param {string} tooltip 
+ * @param {string} img 
+ * @returns 
+ */
+function navBtn(label, external, path, tooltip, img) {
+  const attrs = {
+    onclick: () => external ? externalNavigate(path) : spaNavigate(path),
+    onmousedown: () => buttonSounds("click"),
+    onmouseup: () => buttonSounds("released"),
+    onmouseover: () => buttonSounds("hover")
+  };
 
-}
+  if (tooltip) attrs["data-tooltip"] = tooltip;
 
-function externalBtn(label, url, tooltip) {
-  if (!tooltip) {
-    return m("button.sidebar-buttons", { onclick: () => externalNavigate(url), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") }, label);
-  } else {
-    return m("button.sidebar-buttons", { "data-i18n": label, "data-tooltip": tooltip, onclick: () => externalNavigate(url), onmousedown: () => buttonSounds("click"), onmouseup: () => buttonSounds("released"), onmouseover: () => buttonSounds("hover") }, label);
-  }
+  return m("button.sidebar-buttons", attrs, [
+    m("img", {
+      src: img ? `/assets/images/icons/utils/${img}.svg` : `/assets/images/icons/utils/no-icon.svg`
+    }),
+    m("span", { "data-i18n": label })
+  ]);
 }
 
 function externalNavigate(url) {
@@ -26,6 +36,8 @@ function externalNavigate(url) {
 export default {
   view: () =>
     m("div.sidebar", [
+
+      // Main Navigation
       m(".panel.nav-content", [
         m(".panel-header", [
           m("h1", { "data-i18n": "sidebar.navigation.title" }),
@@ -35,39 +47,43 @@ export default {
         ]),
         m(".panel-content", [
           m(".sidebar-links-container", [
-            navBtn("sidebar.navigation.buttons.home", "/home"),
-            navBtn("sidebar.navigation.buttons.aboutMe", "/about", "Work in Progress!"),
-            navBtn("sidebar.navigation.buttons.proyects", "/proyects", "Work in Progress!"),
-            navBtn("sidebar.navigation.buttons.links", "/links"),
-            navBtn("sidebar.navigation.buttons.configuration", "/configuration"),
+            navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
+            navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
+            navBtn("sidebar.navigation.buttons.proyects", false, "/proyects", "Work in Progress!", null),
+            navBtn("sidebar.navigation.buttons.links", false, "/links", null, null),
+            navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
           ]),
+        ]),
+      ]),
 
-          m(".spacing-line sidebar"),
-
-          m(".sidebar-links-container", [
-            externalBtn("Sitemap", "./content/sitemap/index.html"),
-            externalBtn("Blog", "./content/blog/index.html", "Only in Spanish!"),
-            externalBtn("Changelog", "./content/changelog/index.html", "Only in Spanish!"),
-          ]),
-
-          m(".spacing-line sidebar"),
-
-          m(".sidebar-links-container", [
-            externalBtn("Follow", "https://nekoweb.org/follow/timmy.nekoweb.org/"),
-            externalBtn("RSS", "./content/rss/feed.xml"),
+      // 'Data' subsite navigation
+      m(".panel.nav-content", [
+        m(".panel-header", [
+          m("h1", { "data-i18n": "sidebar.data.title" }),
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
           ])
         ]),
+        m(".panel-content", [
+          m(".sidebar-links-container", [
+            navBtn("sidebar.data.buttons.sitemap", true, "/content/sitemap/index.html", "Only in Spanish!", "doc"),
+            navBtn("sidebar.data.buttons.blog", true, "/content/blog/index.html", "Only in Spanish!", "doc-text"),
+            navBtn("sidebar.data.buttons.changelog", true, "/content/changelog/index.html", "Only in Spanish!", "doc-changelog"),
+          ]),
+        ]),
       ]),
 
-      /* NOTE: Esta mierda esta muy mal, se necesita unas mejoritas antes de ponerlo.
-      m(".panel", [
+      // Nekoweb Data Panel
+      m(".panel.nav-content", [
         m(".panel-header", [
-          m("h1", "Random")
+          m("h1", { "data-i18n": "sidebar.navigation.nekoweb" }),
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+          ])
         ]),
         m(".panel-content", [
-          m("img#sidebar-image", { style: "width:100%" }),
+          m("div", "<!--# views -->")
         ])
       ]),
-      */
-    ])
+    ]),
 };
