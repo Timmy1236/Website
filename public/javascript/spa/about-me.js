@@ -29,10 +29,7 @@ const AboutMePage = {
 
               // AVATAR
               m(".profile-avatar#discord-avatar-container",
-                m("img#discord-avatar", {
-                  src: "../assets/images/others/loading.gif",
-                  alt: "Profile picture"
-                })
+                m("img#discord-avatar", { src: "../assets/images/others/loading.gif", alt: "Profile picture" })
               ),
 
               // USERNAME
@@ -40,27 +37,14 @@ const AboutMePage = {
 
               // STATUS
               m("p.profile-status#discord-status-text", "Status: Loading..."),
-
               m("p.profile-activity#discord-activity-text", "Status: Loading..."),
 
               // SOCIAL ICONS
               m(".profile-socials", [
-                m("button.icon-button", {
-                  onclick: () => window.open("https://github.com/Timmy1236", "_blank"),
-                  "data-tooltip": "github.com/Timmy1236"
-                }, m("img", { src: "./assets/images/icons/github.svg" })),
-                m("button.icon-button", {
-                  onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"),
-                  "data-tooltip": "@timmy1236"
-                }, m("img", { src: "./assets/images/icons/discord.svg" })),
-                m("button.icon-button", {
-                  onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"),
-                  "data-tooltip": "STEAM_0:1:96376877"
-                }, m("img", { src: "./assets/images/icons/steam.svg" })),
-                m("button.icon-button", {
-                  onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank"),
-                  "data-tooltip": "timmy.1236@outlook.com"
-                }, m("img", { src: "./assets/images/icons/mail.svg" }))
+                m("button.icon-button", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.svg" })),
+                m("button.icon-button", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, m("img", { src: "./assets/images/icons/socials/discord.svg" })),
+                m("button.icon-button", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"), "data-tooltip": "STEAM_0:1:96376877" }, m("img", { src: "./assets/images/icons/socials/steam.svg" })),
+                m("button.icon-button", { onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank"), "data-tooltip": "timmy.1236@outlook.com" }, m("img", { src: "./assets/images/icons/socials/mail.svg" }))
               ])
             ])
           ])
