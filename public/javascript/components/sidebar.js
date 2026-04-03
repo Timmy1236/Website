@@ -36,7 +36,10 @@ function externalNavigate(url) {
 function getNekoStat(type) {
   const el = document.getElementById('nekoweb-stats');
   if (el) {
-    return el.getAttribute(`data-${type}`);
+    let count = el.getAttribute(`data-${type}`);
+    if (count == "<!--# views -->") count = "0,000"
+    if (count == "<!--# followers -->") count = "00"
+    return count;
   }
   return "...";
 }
@@ -82,17 +85,19 @@ export default {
       ]),
 
       // Nekoweb Data Panel
+      // NOTE: SUUUUUPER WIP, ESTO NECESITA MAS DESARROLLO.
       m(".panel.nav-content", [
         m(".panel-header", [
-          m("h1", { "data-i18n": "sidebar.navigation.nekoweb" }),
+          m("h1", { "data-i18n": "sidebar.nekoweb.title" }),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
           ])
         ]),
         m(".panel-content", [
           m("div.stats-container", [
-            m("p", [m("p", "Views: "), getNekoStat('views')]),
-            m("p", [m("p", "Followers: "), getNekoStat('followers')])
+            m("p", [m("span", { "data-i18n": "sidebar.nekoweb.buttons.visits", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, getNekoStat('views'))]),
+            m("p", { style: "margin-bottom:10px;" }, [m("span", { "data-i18n": "sidebar.nekoweb.buttons.followers", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, getNekoStat('followers'))]),
+            navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "outlink"),
           ])
         ])
       ]),
