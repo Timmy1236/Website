@@ -23,7 +23,10 @@ function navBtn(label, external, path, tooltip, img) {
 
   return m("button.sidebar-buttons", attrs, [
     m("img", {
-      src: img ? `/assets/images/icons/utils/${img}.svg` : `/assets/images/icons/utils/no-icon.svg`
+      src: img ? `/assets/images/icons/utils/${img}.svg` : `/assets/images/icons/utils/no-icon.svg`,
+      alt: img ? img : "question mark",
+      width: "16px",
+      height: "16px"
     }),
     m("span", { "data-i18n": label })
   ]);
