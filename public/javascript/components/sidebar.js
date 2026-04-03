@@ -33,6 +33,14 @@ function externalNavigate(url) {
   setTimeout(() => { window.location.href = url; }, 150); // Un mini delay extra :3
 }
 
+function getNekoStat(type) {
+  const el = document.getElementById('nekoweb-stats');
+  if (el) {
+    return el.getAttribute(`data-${type}`);
+  }
+  return "...";
+}
+
 export default {
   view: () =>
     m("div.sidebar", [
@@ -82,8 +90,9 @@ export default {
           ])
         ]),
         m(".panel-content", [
-          m("div", [
-            m.trust("<!--#views -->")
+          m("div.stats-container", [
+            m("p", [m("p", "Views: "), getNekoStat('views')]),
+            m("p", [m("p", "Followers: "), getNekoStat('followers')])
           ])
         ])
       ]),
