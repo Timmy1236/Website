@@ -21,37 +21,12 @@ npm install
 cd public && python -m http.server 8000
 ```
 
-4. Nota: Todos los cambios que hagas en 11ty o en los scripts de la pagina web no serán visibles en el momento, ya que necesitaras realizar una build primero.
+4. Nota: La mayoría de cambios que hagas en la pagina web puede ser que no se vean a tiempo real ya que primero necesitas hacer una build de ciertas cosas.
 ```bash
-# 11ty:
-npm run build
-npm run build:watch # Re-ejecuta el comando cuando haces un cambio.
+npm run build # Ejecuta esbuild y eleventy una vez
 
-# esbuild:
-npm run bundle
-npm run bundle:watch # Re-ejecuta el comando cuando haces un cambio.
+npm run dev # Ejecuta esbuild y eleventy cada vez que guardas un cambio.
 ```
-
-## Créditos
-- - [ **Host** ]
-- [Website: Nekoweb](https://nekoweb.org/)
-- [Images: File Garden](https://filegarden.com/)
-<br><br>
-- - [ **Herramientas** ] 
-- [Mithril: Single Page Application](https://mithril.js.org/)
-- [11ty: Static Site Generator](https://www.11ty.dev/)
-- [esbuild: Bundler](https://esbuild.github.io/)
-<br><br>
-- - [ **Herramientas Externas** ] 
-- [Dither it!](https://ditherit.com/)
-- [Compress or Die](https://compress-or-die.com/)
-- [Ezgif](https://ezgif.com/)
-<br><br>
-- - [ **Audios/Songs** ]
-- ["Grace FM"](https://www.youtube.com/watch?v=M-DAQh5HPjo)
-<br><br>
-- - [ **Images** ]
-- [Banner & others VotV images](https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/)
 
 ## Licencia
 Todo el código de la pagina web esta debajo de la licencia "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
