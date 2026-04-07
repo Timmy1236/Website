@@ -42,11 +42,18 @@ const Home = {
           m("div", { "data-i18n": "[html]home.welcome.text" }),
           m("div", {
             style: "width:100%;display:flex;justify-content:center"
-          }, m("img#nom-nom", {
-            src: "./assets/images/pages/home/tree.gif",
-            style: "margin-top:10px",
-            alt: "Gif tree eating apple"
-          }))
+          },
+            m("img#slugcat", {
+              src: "./assets/images/pages/home/rw-hunter.png",
+              style: "margin-right:10px;transform: scale(-1, 1);",
+              alt: "Slugcat hunter"
+            }),
+
+            m("img#slugcat", {
+              src: "./assets/images/pages/home/rw-survivor.png",
+              style: "margin-left:10px;",
+              alt: "Slugcat survivor"
+            }))
         ])
       ]),
 

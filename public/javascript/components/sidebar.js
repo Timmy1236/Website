@@ -1,6 +1,5 @@
 import m from "mithril";
 import { spaNavigate } from "../ui/trans.js";
-import { buttonSounds } from "../media/mouse-click.js";
 
 /**
  * Crea un botón que permite navegar en la pagina web.
@@ -14,16 +13,13 @@ import { buttonSounds } from "../media/mouse-click.js";
 function navBtn(label, external, path, tooltip, img) {
   const attrs = {
     onclick: () => external ? externalNavigate(path) : spaNavigate(path),
-    onmousedown: () => buttonSounds("click"),
-    onmouseup: () => buttonSounds("released"),
-    onmouseover: () => buttonSounds("hover")
   };
 
   if (tooltip) attrs["data-tooltip"] = tooltip;
 
   return m("button.sidebar-buttons", attrs, [
     m("img", {
-      src: img ? `/assets/images/icons/utils/${img}.svg` : `/assets/images/icons/utils/no-icon.svg`,
+      src: img ? `/assets/images/icons/utils/${img}.png` : `/assets/images/icons/utils/no-icon.png`,
       alt: img ? img : "question mark",
       width: "16px",
       height: "16px"
