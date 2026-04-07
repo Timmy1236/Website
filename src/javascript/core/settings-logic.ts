@@ -26,19 +26,11 @@ const SETTINGS_VERSION = "1";
 
 // === Carga el efecto de ruido/estática ===
 function loadNoiseEffect() {
-  const noiseCSS = document.createElement('link');
-  noiseCSS.rel = 'stylesheet';
-  noiseCSS.href = './css/effects/noise.css';
-  noiseCSS.id = 'noise-css';
-  document.head.appendChild(noiseCSS);
-
-  noiseCSS.onload = function () {
-    const bgDiv = document.createElement('div');
-    bgDiv.className = 'bg';
-    bgDiv.id = 'background';
-    document.body.prepend(bgDiv);
-  };
-}
+  const bgDiv = document.createElement('div');
+  bgDiv.className = 'bg';
+  bgDiv.id = 'background';
+  document.body.prepend(bgDiv);
+};
 
 /**
  * Añade los atributos de 'theme' y 'color' al documento sacados del LocalStorage.

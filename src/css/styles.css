@@ -4,7 +4,7 @@
 
 /* Themes */
 @import url("themes/colors.css");
-
+@import url("effects/noise.css");
 
 /* ==== [ VARIABLES ] ==== */
 :root {
