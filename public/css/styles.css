@@ -45,7 +45,7 @@
 /* ==== [ TIPOGRAFÍA ] === */
 @font-face {
   font-family: "VT323";
-  src: url("../assets/fonts/VT323.woff2") format("woff2");
+  src: url("/assets/fonts/VT323.woff2") format("woff2");
   font-display: swap;
 }
 

@@ -20,14 +20,14 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("../assets/images/banners/purple.png");
+  --banner-image: url("/assets/images/banners/purple.png");
 
   /* Mouse */
-  --normal-mouse-image: url("../assets/images/mouse/purple-normal.png");
-  --hover-mouse-image: url("../assets/images/mouse/purple-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/purple-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
 
   /* Background */
-  --background-image: url("../assets/images/patrones/purple.png");
+  --background-image: url("/assets/images/patrones/purple.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -56,14 +56,14 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("../assets/images/banners/blue.png");
+  --banner-image: url("/assets/images/banners/blue.png");
 
   /* Mouse */
-  --normal-mouse-image: url("../assets/images/mouse/blue-normal.png");
-  --hover-mouse-image: url("../assets/images/mouse/blue-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/blue-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/blue-hover.png");
 
   /* Background */
-  --background-image: url("../assets/images/patrones/blue.png");
+  --background-image: url("/assets/images/patrones/blue.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -92,14 +92,14 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("../assets/images/banners/green.png");
+  --banner-image: url("/assets/images/banners/green.png");
 
   /* Mouse */
-  --normal-mouse-image: url("../assets/images/mouse/purple-normal.png");
-  --hover-mouse-image: url("../assets/images/mouse/purple-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/purple-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
 
   /* Background */
-  --background-image: url("../assets/images/patrones/green.png");
+  --background-image: url("/assets/images/patrones/green.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -128,14 +128,14 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("../assets/images/banners/nocolor.png");
+  --banner-image: url("/assets/images/banners/nocolor.png");
 
   /* Mouse */
-  --normal-mouse-image: url("../assets/images/mouse/nocolor-normal.png");
-  --hover-mouse-image: url("../assets/images/mouse/nocolor-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --background-image: url("../assets/images/patrones/dark.png");
+  --background-image: url("/assets/images/patrones/dark.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -164,14 +164,14 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("../assets/images/banners/nocolor.png");
+  --banner-image: url("/assets/images/banners/nocolor.png");
 
   /* Mouse */
-  --normal-mouse-image: url("../assets/images/mouse/nocolor-normal.png");
-  --hover-mouse-image: url("../assets/images/mouse/nocolor-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --background-image: url("../assets/images/patrones/red.png");
+  --background-image: url("/assets/images/patrones/red.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
