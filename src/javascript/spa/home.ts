@@ -1,25 +1,36 @@
 import m from "mithril";
-import { getLatest, getLastCommit } from "../pages/home/get-latest.js";
+import { getLatest, getLastCommit } from "../pages/home/get-latest.ts";
 import { refreshi18n } from "../core/i18n.js";
 
-const Home = {
-  latest: null,
-  latestCommit: null,
+export interface Latest {
+  blog: Log;
+  changelog: Log;
+}
 
-  commitSHA: null,
-  commitDate: null,
+export interface Log {
+  title: string;
+  url: string;
+  date: string;
+  description: string;
+}
+
+const Home = {
+  latest: null as Latest | null,
+  latestCommit: null as any,
+  commitSHA: null as string | null,
+  commitDate: null as string | null,
 
   oncreate() {
     refreshi18n();
   },
 
   oninit: function () {
-    getLatest().then(data => {
+    getLatest().then((data: Latest) => {
       this.latest = data;
       m.redraw();
     });
 
-    getLastCommit().then(data => {
+    getLastCommit().then((data: any[]) => {
       this.latestCommit = data[0];
       this.commitSHA = String(data[0].sha).slice(0, 7)
       this.commitDate = new Date(data[0].commit.committer.date).toLocaleDateString();

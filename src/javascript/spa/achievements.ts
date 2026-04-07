@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getAchievementsList } from "../core/achievements-logic.js";
+import { getAchievementsList } from "../core/achievements-logic.ts";
 import { refreshi18n } from "../core/i18n.js";
 
 const AchievementsPage = {
@@ -22,7 +22,7 @@ const AchievementsPage = {
 
         m(".panel-content", [
           m(".achievements-list",
-            list.map(achievement =>
+            list.map((achievement: any) =>
               m(".achievement-card", {
                 // Agregamos clase "unlocked" si está desbloqueado
                 class: achievement.unlocked ? "unlocked" : ""

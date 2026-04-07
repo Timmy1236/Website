@@ -10,8 +10,8 @@ import { spaNavigate } from "../ui/trans.js";
  * @param {string} img 
  * @returns 
  */
-function navBtn(label, external, path, tooltip, img) {
-  const attrs = {
+function navBtn(label: string, external: boolean, path: string, tooltip: string | null, img: string | null) {
+  const attrs: Record<string, any> = {
     onclick: () => external ? externalNavigate(path) : spaNavigate(path),
   };
 
@@ -28,11 +28,11 @@ function navBtn(label, external, path, tooltip, img) {
   ]);
 }
 
-function externalNavigate(url) {
+function externalNavigate(url: string) {
   setTimeout(() => { window.location.href = url; }, 150); // Un mini delay extra :3
 }
 
-function getNekoStat(type) {
+function getNekoStat(type: string) {
   const el = document.getElementById('nekoweb-stats');
   if (el) {
     let count = el.getAttribute(`data-${type}`);

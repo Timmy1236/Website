@@ -2,34 +2,33 @@ import m from "mithril";
 
 // Core
 import "./settings-logic.ts";
-import { i18nReady } from "./i18n.js";
+import { i18nReady } from "./i18n.ts";
 // Media
-import "../media/autoplay.js";
-import "../media/mouse-click.js";
-import "../media/sidebar-image.js";
+import "../media/autoplay.ts";
+import "../media/mouse-click.ts"; // NOTE: Recordatorio urgente para una mejor revision, hice terrible el porteo.
 // Pages
-import "../pages/settings-ui.js";
-import "../pages/discord.js";
+import "../pages/settings-ui.ts";
+import "../pages/discord.ts";
 // UI
-import "../ui/trans.js";
-import "../ui/image-overlay.js";
-import "../ui/tooltip.js";
-import "../ui/panel-buttons.js"
+import "../ui/trans.ts";
+import "../ui/image-overlay.ts";
+import "../ui/tooltip.ts";
+import "../ui/panel-buttons.ts"
 
 // SPA
-import Layout from "../components/layout.js";
-import Home from "../spa/home.js";
-import About from "../spa/about-me.js";
-import Proyects from "../spa/proyects.js";
-import Links from "../spa/links.js";
-import Configuration from "../spa/configuration.js";
-import Achievements from "../spa/achievements.js";
+import Layout from "../components/layout.ts";
+import Home from "../spa/home.ts";
+import About from "../spa/about-me.ts";
+import Proyects from "../spa/proyects.ts";
+import Links from "../spa/links.ts";
+import Configuration from "../spa/configuration.ts";
+import Achievements from "../spa/achievements.ts";
 
 async function startApp() {
   await i18nReady;
 
   if (document.getElementById("app")) {
-    m.route(document.getElementById("app"), "/home", {
+    m.route(document.getElementById("app")!, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
       "/about": { render: () => m(Layout, m(About)) },
       "/proyects": { render: () => m(Layout, m(Proyects)) },

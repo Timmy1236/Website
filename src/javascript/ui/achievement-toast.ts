@@ -6,10 +6,8 @@
 
 /**
  * Muestra el toast con el nombre y descripción del logro.
- * @param {string} name
- * @param {string} description
  */
-export function showAchievementToast(name, description) {
+export function showAchievementToast(name: string, description: string) {
   var achievementAudio = new Audio('/assets/sounds/sfx/achievement.mp3');
 
   const toast = document.createElement("div");

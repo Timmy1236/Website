@@ -1,9 +1,11 @@
 /*
- * i18n.js
+ * i18n.ts
  * -------
  * Maneja el sistema multilenguaje de la página.
  * Gran parte del código lo saque de otra página y realmente no se muy bien lo que hace :P
 */
+
+type lang = "es" | "en";
 
 class I18n {
   currentLang: string;
@@ -18,7 +20,6 @@ class I18n {
 
   /**
    * Obtiene cual es el lenguaje guardado en el navegador del usuario.
-   * @returns {string}
    */
   getSavedLanguage() {
     try {
@@ -31,9 +32,8 @@ class I18n {
 
   /**
    * Guarda el lenguaje dado en LocalStorage.
-   * @param {*} lang - Lenguaje: 'es' o 'en'
    */
-  saveLanguage(lang: string) {
+  saveLanguage(lang: lang) {
     try {
       this.currentLang = lang;
       localStorage.setItem('preferred-language', lang);
@@ -44,9 +44,8 @@ class I18n {
 
   /**
    * Obtiene el lenguaje del navegador del usuario.
-   * @returns {string}
    */
-  getBrowserLanguage() {
+  getBrowserLanguage(): string {
     const browserLang = navigator.language; // NOTE: navigator.language puede devolver null.
     return browserLang.startsWith('es') ? 'es' : 'en';
   }
@@ -68,9 +67,8 @@ class I18n {
 
   /**
    * Cambia el lenguaje.
-   * @param {*} lang 
    */
-  async changeLanguage(lang) {
+  async changeLanguage(lang: lang) {
     this.saveLanguage(lang);
     await this.loadTranslations();
   }
@@ -87,36 +85,34 @@ class I18n {
       let key = element.getAttribute('data-i18n');
       let isHtml = false;
 
-      if (key.startsWith('[html]')) {
+      if (key?.startsWith('[html]')) {
         isHtml = true;
         key = key.replace('[html]', '');
       }
 
-      const translation = this.getTranslation(key);
-
-      if (translation) {
-        const attr = element.getAttribute('data-i18n-attr');
-        if (attr) {
-          element.setAttribute(attr, translation);
-        } else {
-          if (isHtml) {
-            element.innerHTML = translation;
+      if (key !== null) {
+        const translation = this.getTranslation(key);
+        if (translation) {
+          const attr = element.getAttribute('data-i18n-attr');
+          if (attr) {
+            element.setAttribute(attr, translation);
           } else {
-            element.textContent = translation;
+            if (isHtml) {
+              element.innerHTML = translation;
+            } else {
+              element.textContent = translation;
+            }
           }
         }
       }
     });
-
     document.documentElement.lang = this.currentLang;
   }
 
   /**
    * Obtén la traducción de una key.
-   * @param {*} key 
-   * @returns 
    */
-  getTranslation(key) {
+  getTranslation(key: string): string {
     const keys = key.split('.');
     let translation = this.translations[this.currentLang];
 
@@ -130,11 +126,11 @@ class I18n {
 
 /**
  * Guarda el lenguaje en LocalStorage.
- * @param {*} lang - El lenguaje: 'es' o 'en'
  */
-export function changeLanguage(lang) {
+export function changeLanguage(lang: lang) {
   i18n.changeLanguage(lang);
 }
+
 
 /**
  * Traduce el contenido de la pagina.

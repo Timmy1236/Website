@@ -1,5 +1,5 @@
 import m from "mithril";
-import { loadSettings, confirmSettings, restartSettings } from "../pages/settings-ui.js";
+import { loadSettings, confirmSettings, restartSettings } from "../pages/settings-ui.ts";
 import { changeLanguage, refreshi18n } from "../core/i18n.js"
 import TabPanel from "../components/tab-panel.js";
 

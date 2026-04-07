@@ -5,7 +5,7 @@
  * Guarda en LocalStorage cuáles están desbloqueados.
 */
 
-import { showAchievementToast } from "../ui/achievement-toast.js";
+import { showAchievementToast } from "../ui/achievement-toast.ts";
 
 // === DEFINICIÓN DE LOGROS ===
 // "id"          → clave única.
@@ -42,7 +42,7 @@ function getSavedAchievements() {
  * Guarda el objeto de logros en LocalStorage.
  * @param {Object} data
  */
-function saveAchievements(data) {
+function saveAchievements(data: Object) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (e) {
@@ -55,7 +55,7 @@ function saveAchievements(data) {
  * Si ya estaba desbloqueado, no hace nada.
  * @param {string} id - El ID del logro (ej: "explorer_404")
  */
-export function unlockAchievement(id) {
+export function unlockAchievement(id: string) {
   const achievement = ACHIEVEMENTS.find(a => a.id === id); // find() devuelve el objeto o undefined
   if (!achievement) {
     console.warn(`achievements-logic.js> El logro "${id}" no existe.`);
@@ -84,7 +84,7 @@ export function unlockAchievement(id) {
  * @param {string} id
  * @returns {boolean}
  */
-export function isUnlocked(id) {
+export function isUnlocked(id: string) {
   const saved = getSavedAchievements();
   return saved[id]?.unlocked === true;
 }

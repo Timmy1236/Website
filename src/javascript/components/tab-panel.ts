@@ -3,11 +3,11 @@ import m from "mithril";
 const TabPanel = {
   activeTab: 0,
 
-  oninit(vnode) {
+  oninit(vnode: any) {
     this.activeTab = vnode.attrs.defaultTab || 0;
   },
 
-  view(vnode) {
+  view(vnode: any) {
     const tabs = vnode.attrs.tabs || [];
 
     return m(".panel tabs", [
@@ -24,7 +24,7 @@ const TabPanel = {
 
       // TABS BAR
       m(".panel-tabs",
-        tabs.map((tab, index) =>
+        tabs.map((tab: any, index: any) =>
           m("button.panel-tab", {
             class: this.activeTab === index ? "active" : "",
             onclick: () => {

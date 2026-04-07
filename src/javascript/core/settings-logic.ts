@@ -1,5 +1,5 @@
 /*
- * settings-logic.js
+ * settings-logic.ts
  * -----------------
  * Encargado de la lógica de settings, establecer, cargar y modificar datos en LocalStorage.
 */

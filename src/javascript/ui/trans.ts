@@ -1,7 +1,8 @@
 import m from "mithril";
+
 let isTransitioning = false;
 
-export function spaNavigate(path) {
+export function spaNavigate(path: string) {
   if (isTransitioning) return;
 
   const mainColumn = document.querySelector(".content-column");

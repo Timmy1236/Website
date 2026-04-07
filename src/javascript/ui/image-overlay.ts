@@ -4,8 +4,10 @@ export function initImageOverlay() {
   if (imageOverlayInitialized) return;
   imageOverlayInitialized = true;
 
-  document.addEventListener("click", function (e) {
-    const container = e.target.closest(".image-preview");
+  document.addEventListener("click", function (event) {
+    if (event.target === null) return;
+    if (!(event.target instanceof HTMLElement)) return
+    const container = event.target.closest(".image-preview");
     if (!container) return;
 
     const img = container.querySelector("img");
@@ -15,7 +17,7 @@ export function initImageOverlay() {
   });
 }
 
-function createImageOverlay(src, alt = "") {
+function createImageOverlay(src: string, alt = "") {
   const overlay = document.createElement("div");
   overlay.className = "image-overlay";
 
@@ -32,7 +34,7 @@ function createImageOverlay(src, alt = "") {
   });
 
   // Cerrar botón
-  overlay.querySelector(".close-btn").addEventListener("click", () => {
+  overlay.querySelector(".close-btn")!.addEventListener("click", () => {
     overlay.remove();
   });
 

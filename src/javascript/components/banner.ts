@@ -1,8 +1,6 @@
 import m from "mithril";
 
-const text = "timmy.nekoweb.com";
-
-console.log("Hola mundo!")
+const text: string = "timmy.nekoweb.com";
 
 export default {
   view: () =>

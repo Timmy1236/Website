@@ -9,18 +9,15 @@ import { SETTINGS_MAP, initDefaultSettings } from "../core/settings-logic.js";
 export function loadSettings() {
   for (const [key, id] of Object.entries(SETTINGS_MAP)) {
     const el = document.getElementById(id);
+
     if (!el) continue;
 
-    if (id === "theme-select") continue;
-
-    el.checked = localStorage.getItem(key) === "true";
-  }
-
-  // Si "el" es theme:
-  const themeSelect = document.getElementById("theme-select");
-  if (themeSelect) {
-    const savedTheme = localStorage.getItem("theme");
-    themeSelect.value = savedTheme;
+    if (el instanceof HTMLInputElement) {
+      el.checked = localStorage.getItem(key) === "true";
+    } else if (el instanceof HTMLSelectElement) {
+      const savedTheme = localStorage.getItem("theme") ?? "simple-purple";
+      el.value = savedTheme;
+    }
   }
 }
 
@@ -29,18 +26,13 @@ export function confirmSettings() {
     const el = document.getElementById(id);
     if (!el) continue;
 
-    if (id === "theme-select") continue;
-
-    localStorage.setItem(key, el.checked);
+    if (el instanceof HTMLInputElement) {
+      localStorage.setItem(key, el.checked ? "true" : "false");
+    } else if (el instanceof HTMLSelectElement) {
+      const value = el.value;
+      localStorage.setItem("theme", value);
+    }
   }
-
-  // Si "el" es theme:
-  const themeSelect = document.getElementById("theme-select");
-  if (themeSelect) {
-    const value = themeSelect.value;
-    localStorage.setItem("theme", value);
-  }
-
   location.reload();
 }
 

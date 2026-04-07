@@ -1,10 +1,10 @@
 import m from "mithril";
-import banner from "./banner.js";
-import sidebar from "./sidebar.js";
+import banner from "./banner.ts";
+import sidebar from "./sidebar.ts";
 import { getSetting } from "../core/settings-logic.js";
 
 export default {
-  view(vnode) {
+  view(vnode: any) {
     return m("div.layout", [
       getSetting("vignetteEffect") && m("div.vignette", { id: "vignette" }),
       m(".container", [

@@ -5,9 +5,13 @@
  * También encargado en automáticamente mimetizar ciertos paneles que tengan: { "data-default": "closed" }
 */
 
-document.addEventListener("click", (e) => {
-  const btn = e.target.closest("[data-panel-action]");
+document.addEventListener("click", (event) => {
+  if (event.target === null) return;
+  if (!(event.target instanceof HTMLElement)) return
+
+  const btn = event.target.closest("[data-panel-action]");
   if (!btn) return;
+  if (!(btn instanceof HTMLElement)) return
 
   const panel = btn.closest(".panel");
   if (!panel) return;

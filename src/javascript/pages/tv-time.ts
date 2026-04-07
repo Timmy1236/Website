@@ -4,7 +4,7 @@
   * ... tv(?
 */
 
-const images = [
+const images: string[] = [
   "../assets/images/iframe/Jesus-free-ps2.gif",
   "../assets/images/iframe/matematico.webp",
   "../assets/images/iframe/maxwell.webp",
@@ -12,7 +12,7 @@ const images = [
   "../assets/images/iframe/jumbo.gif"
 ];
 
-const static = "../assets/images/iframe/static.gif";
+const staticGif: string = "../assets/images/iframe/static.gif";
 
 async function changeBackground() {
   const randomIndex = Math.floor(Math.random() * images.length);
