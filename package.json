@@ -4,15 +4,17 @@
   "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\"",
-    "build": "npm run eleventy && npm run js && npm run css",
+    "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
+    "build": "npm run eleventy && npm run js && npm run css && npm run css:pages",
     "stylelint": "npx stylelint \"**/*.css\"",
     "eleventy": "npx @11ty/eleventy",
     "eleventy:watch": "npx @11ty/eleventy --watch",
     "js": "esbuild src/javascript/core/app-init.ts --bundle --minify --outfile=public/dist/app.js",
     "js:watch": "esbuild src/javascript/core/app-init.ts --bundle --minify --watch --outfile=public/dist/app.js",
     "css": "esbuild src/css/styles.css --bundle --minify --external:/assets/* --outfile=public/dist/styles.css",
-    "css:watch": "esbuild src/css/styles.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/styles.css"
+    "css:watch": "esbuild src/css/styles.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/styles.css",
+    "css:pages": "esbuild src/css/pages.css --bundle --minify --outfile=public/dist/pages.css",
+    "css:pages:watch": "esbuild src/css/pages.css --bundle --minify --watch  --outfile=public/dist/pages.css"
   },
   "repository": {
     "type": "git",
