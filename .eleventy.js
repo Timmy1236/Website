@@ -1,8 +1,8 @@
 module.exports = function (eleventyConfig) {
   // Combinamos todo las entradas del blog y changelog en uno solo para el feed
   eleventyConfig.addCollection("combinedFeed", (collection) => {
-    const blog = collection.getFilteredByGlob("src/blog/blog-*.md");
-    const changelog = collection.getFilteredByGlob("src/changelog/update-*.md");
+    const blog = collection.getFilteredByGlob("src/eleventy/blog/blog-*.md");
+    const changelog = collection.getFilteredByGlob("src/eleventy/changelog/update-*.md");
 
     const combined = [...blog, ...changelog];
 
@@ -17,12 +17,12 @@ module.exports = function (eleventyConfig) {
 
   // * Changelog
   eleventyConfig.addCollection("changelog", collection =>
-    collection.getFilteredByGlob("src/changelog/update-*.md").sort((a, b) => b.date - a.date)
+    collection.getFilteredByGlob("src/eleventy/changelog/update-*.md").sort((a, b) => b.date - a.date)
   );
 
   // * Blog
   eleventyConfig.addCollection("blog", collection =>
-    collection.getFilteredByGlob("src/blog/blog-*.md").sort((a, b) => b.date - a.date)
+    collection.getFilteredByGlob("src/eleventy/blog/blog-*.md").sort((a, b) => b.date - a.date)
   );
 
   // Convertir fechas en fechas legibles para las entradas en changelog y blogs
@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
   return {
     pathPrefix: "/content/",
     dir: {
-      input: "src",
+      input: "src/eleventy/",
       output: "public/content",
       includes: "_includes"
     }

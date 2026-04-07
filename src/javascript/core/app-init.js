@@ -1,7 +1,7 @@
 import m from "mithril";
 
 // Core
-import "./settings-logic.js";
+import "./settings-logic.ts";
 import { i18nReady } from "./i18n.js";
 // Media
 import "../media/autoplay.js";

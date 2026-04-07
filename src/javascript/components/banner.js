@@ -2,6 +2,8 @@ import m from "mithril";
 
 const text = "timmy.nekoweb.com";
 
+console.log("Hola mundo!")
+
 export default {
   view: () =>
     m(".banner-panel",

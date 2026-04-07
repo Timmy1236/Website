@@ -9,10 +9,10 @@
     "stylelint": "npx stylelint \"**/*.css\"",
     "eleventy": "npx @11ty/eleventy",
     "eleventy:watch": "npx @11ty/eleventy --watch",
-    "js": "esbuild public/javascript/core/app-init.js --bundle --minify --outfile=public/dist/app.js",
-    "js:watch": "esbuild public/javascript/core/app-init.js --bundle --minify --watch --outfile=public/dist/app.js",
-    "css": "esbuild public/css/styles.css --bundle --minify --external:/assets/* --outfile=public/dist/styles.css",
-    "css:watch": "esbuild public/css/styles.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/styles.css"
+    "js": "esbuild src/javascript/core/app-init.js --bundle --minify --outfile=public/dist/app.js",
+    "js:watch": "esbuild src/javascript/core/app-init.js --bundle --minify --watch --outfile=public/dist/app.js",
+    "css": "esbuild src/css/styles.css --bundle --minify --external:/assets/* --outfile=public/dist/styles.css",
+    "css:watch": "esbuild src/css/styles.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/styles.css"
   },
   "repository": {
     "type": "git",

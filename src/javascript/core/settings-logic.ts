@@ -120,7 +120,7 @@ export function initDefaultSettings() {
  * @param {keyof SETTINGS_MAP} settingKey - La clave de la configuración (ej: 'staticEffect', 'vignetteEffect').
  * @returns {boolean}
  */
-export function getSetting(settings) {
+export function getSetting(settings: string): boolean {
   const setting = localStorage.getItem(settings) === "true";
   return setting
 }

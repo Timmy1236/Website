@@ -6,6 +6,10 @@
 */
 
 class I18n {
+  currentLang: string;
+  translations: Record<string, any>;
+  ready: Promise<void>;
+
   constructor() {
     this.currentLang = this.getSavedLanguage() || this.getBrowserLanguage();
     this.translations = {};
@@ -29,7 +33,7 @@ class I18n {
    * Guarda el lenguaje dado en LocalStorage.
    * @param {*} lang - Lenguaje: 'es' o 'en'
    */
-  saveLanguage(lang) {
+  saveLanguage(lang: string) {
     try {
       this.currentLang = lang;
       localStorage.setItem('preferred-language', lang);
@@ -43,7 +47,7 @@ class I18n {
    * @returns {string}
    */
   getBrowserLanguage() {
-    const browserLang = navigator.language || navigator.userLanguage;
+    const browserLang = navigator.language; // NOTE: navigator.language puede devolver null.
     return browserLang.startsWith('es') ? 'es' : 'en';
   }
 
