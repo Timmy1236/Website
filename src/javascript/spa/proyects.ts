@@ -63,7 +63,7 @@ const Home = {
 
             m(".proyects-buttons", [
               m("button.button", { onclick: () => window.open("https://github.com/Timmy1236/Website", "_blank") }, [
-                m("img", { src: "./assets/images/icons/github.svg", alt: "GitFront" }),
+                m("img", { src: "./assets/images/icons/socials/github.png", alt: "GitHub" }),
                 "GitHub"
               ])
             ])
