@@ -199,14 +199,19 @@ ul {
 .panel-button {
   background-color: var(--background);
   border: none;
-  padding: 2px 6px;
+  padding: 10px;
   color: white;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
+}
+
+.panel-button:hover {
+  background-color: #ffffff25;
 }
 
 .panel-content {

@@ -42,8 +42,7 @@ const ConfigurationPage = {
 
                 m(".option", [
                   m("select#theme-select", [
-                    m("option", { value: "default" }, "[DETAILS] - Green (BROKEN)"),
-                    m("option", { value: "simple-purple" }, "[FLAT] - Purple (DEFAULT)"),
+                    m("option", { value: "simple-purple" }, "[FLAT] - Purple"),
                     m("option", { value: "simple-dark" }, "[FLAT] - Dark"),
                     m("option", { value: "simple-red" }, "[FLAT] - Red"),
                     m("option", { value: "simple-green" }, "[FLAT] - Green"),
