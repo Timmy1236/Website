@@ -5,7 +5,7 @@ import "./settings-logic.ts";
 import { i18nReady } from "./i18n.ts";
 // Media
 import "../media/autoplay.ts";
-import "../media/mouse-click.ts"; // NOTE: Recordatorio urgente para una mejor revision, hice terrible el porteo.
+import "../media/mouse-click.ts";
 // Pages
 import "../pages/settings-ui.ts";
 import "../pages/discord.ts";
