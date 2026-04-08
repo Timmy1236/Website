@@ -59,8 +59,8 @@ export default {
           m(".sidebar-links-container", [
             navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
             navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
-            navBtn("sidebar.navigation.buttons.proyects", false, "/proyects", "Work in Progress!", null),
-            navBtn("sidebar.navigation.buttons.links", false, "/links", null, null),
+            navBtn("sidebar.navigation.buttons.proyects", false, "/proyects", "Work in Progress!", "proyect"),
+            navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
             navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
           ]),
         ]),
