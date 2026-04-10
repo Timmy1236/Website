@@ -11,14 +11,19 @@ const musicEnabled: boolean = localStorage.getItem("backgroundMusic") === "true"
 document.addEventListener("DOMContentLoaded", function () {
   if (!musicEnabled) return;
 
-  const audio = new Audio(`./assets/sounds/music/Grace-FM.mp3`);
+  const audio = new Audio(`./assets/sounds/music/Store-Track.ogg`);
+  audio.volume = volume;
 
   document.body.addEventListener('click', function () {
     playing = true;
-
-    audio.volume = volume;
     audio.play();
   });
+
+  // Loop cuando termina el audio.
+  audio.addEventListener('ended', function () {
+    audio.currentTime = 0;
+    audio.play();
+  }, false);
 
   function handleAudioState() {
     if (document.hasFocus() && !audio.muted && playing) {
