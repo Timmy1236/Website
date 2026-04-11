@@ -22,14 +22,14 @@ back: ../../
 
 <br><br>
 
-# Others
+# Outlink
 
-- [Follow](https://nekoweb.org/follow/timmy.nekoweb.org/)
-- [RSS](/content/rss/feed.xml)
-- - [Feed](/content/rss/feed.xml) | [Blog](/content/rss/blog.xml) | [Changelog](/content/rss/changelog.xml)
+- [Follow on nekoweb](https://nekoweb.org/follow/timmy.nekoweb.org/)
 
 <br><br>
 
-# Archive
+# RSS
 
-- [2025](../../pages/archive/2025/OLD-home.html)
+- [Feed (Blog + Changelog)](/content/rss/feed.xml)
+- [Blog](/content/rss/blog.xml)
+- [Changelog](/content/rss/changelog.xml)
