@@ -4,9 +4,9 @@ description: Historial de cambios y actualizaciones del sitio
 layout: layouts/base.html
 ---
 
-# Historial de actualizaciones
+<h1 class="text-header">Historial de actualizaciones</h1>
 
-Aquí puedes ver todos los cambios que le he hecho a la pagina, por ejemplo cosas nuevas que he añadido, modificada, arregladas o eliminadas, al principio puede no tener una buena documentación ya que no pensaba hacer esto un proyecto importante si te soy sincero.
+El historial de todas las funciones agregadas, modificas, eliminadas o arregladas que fueron realizadas en esta pagina web con el paso del tiempo. Se documentan de una forma fácil de entender, pero puedes ver la lista real y completa de todos los cambios desde los commits hechos en el repositorio: <a href="https://github.com/Timmy1236/Website/commits/main/">github.com/Timmy1236/Website/commits</a>.
 
 <br>
 {% for post in collections.changelog | reverse %}

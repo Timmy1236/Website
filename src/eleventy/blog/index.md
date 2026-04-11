@@ -4,9 +4,9 @@ description: Historial de cambios y actualizaciones del sitio
 layout: layouts/base.html
 ---
 
-# Blog
+<h1 class="text-header">Blog</h1>
 
-**¡Blog's y microblog's de cualquier tema!** Sin ningún tipo de temática o tema en concreto, informática, juegos, multimedia, etc. Mientras mas byte's sean gastados en este blog, mas inestable se vuelve el código de este sitio, ¡esa es la gracia!
+**¡Blogs y MicroBlogs de cualquier tema!** Sin ningún tipo de temática o tema en concreto, informática, juegos, multimedia, etc. Mientras mas byte's sean gastados en este blog, mas inestable se vuelve el código de este sitio. ¡Esa es la gracia!
 
 <br>
 {% for post in collections.blog | reverse %}
