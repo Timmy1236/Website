@@ -1,14 +1,14 @@
 ---
-title: "Directorios"
+title: "2.0.0.alpha.4 - Directorios"
 date: 2026-02-20
-description: "Update 15: Esta update prácticamente no agrega contenido nuevo, simplemente re organizando todos los archivos y directorios para que tenga una estructura mas limpia y arreglando y comprimiendo ciertas cositas en las paginas que se añadieron de forma bruta"
+description: "Esta update prácticamente no agrega contenido nuevo, simplemente re organizando todos los archivos y directorios para que tenga una estructura mas limpia y arreglando y comprimiendo ciertas cositas en las paginas que se añadieron de forma bruta"
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
+tags: ["2.0.alpha", "grande"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
       <li>No muchas cosas nuevas, simplemente re organizando todos los archivos internos de la pagina.</li>
@@ -17,7 +17,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>No-Good angel button.</li>
@@ -28,7 +28,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Re hice de vuelta la pagina 404 ya que no había hecho un cambio en ella ya prácticamente un año y me estaba dando un tic.</li>
@@ -43,7 +43,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Settings setup no estaba haciendo su trabajo, me olvide de llamar su función.</li>
@@ -52,7 +52,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card del">
-  <h3>Eliminaciones</h3>
+  <h1>Eliminaciones</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Varias imágenes y audios que ya no se estaban usando en la página.</li>

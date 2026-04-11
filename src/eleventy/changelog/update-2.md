@@ -1,14 +1,14 @@
 ---
-title: "Rediseño"
+title: "1.1.0 - Rediseño"
 date: 2023-08-20
-description: "Update 2: Nuevo diseño, fue mala idea tener los paneles ordenados de forma vertical en vez de horizontal."
+description: "Nuevo diseño, fue mala idea tener los paneles ordenados de forma vertical en vez de horizontal."
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "pequeño", "añadidos"]
+tags: ["1.1", "pequeño"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Los paneles ahora se encuentran ordenados de forma vertical, hice esto ya que en futuras actualizaciones tengo pensado agregar un chingo de contenido y tenerlos de forma horizontal haría que la pagina se estira de forma infinita a la derecha. Seria un estilo único pero terrible.</li>
@@ -17,7 +17,7 @@ tags: ["pre-release", "pequeño", "añadidos"]
 </div>
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Nuevo iFrame: "ChatBox".</li>

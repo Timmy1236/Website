@@ -16,7 +16,12 @@ html {
   background-color: var(--background);
 }
 
-a, p, h1, h2, h3, span {
+li {
+ margin: 5px 0 10px 18px;
+ font-size: 20px;
+}
+
+a, p, h1, h2, h3, span, ul li {
   text-shadow: 1px 2px rgb(0 0 0 / 25%);
   line-height: 1.25;
 }
@@ -53,11 +58,6 @@ p {
   font-size: 1.4em;
 }
 
-li {
- margin: 5px 0 5px 15px;
- font-size: 20px;
-}
-
 .container {
   background-color: var(--background);
   margin: 10px auto;
@@ -69,53 +69,53 @@ li {
 }
 
 
+/* ==== [ HEAD ] === */
 
-/* ==== [ HEADER ] === */
-
-.header {
+.head {
   width: 100%;
   border-bottom: 1px solid var(--accent);
   padding-bottom: 5px;
 }
 
-.header-title {
+.head-title {
   text-align: center;
 }
 
-.header-title h1 {
+.head-title h1 {
   color: white;
   font-size: 3em;
   margin-bottom: 10px;
 }
 
-.header-links {
+.head-links {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.header-links a {
+.head-links a {
   color: var(--accent);
   text-decoration: none;
   font-size: 24px;
 }
 
-/* ==== [ HEADER ] === */
+/* ==== [ HEAD ] === */
 
 
 
 /* ==== [ CONTENT ] === */
+.text-header {
+  width: 100%;
+  border-bottom: 3px dotted var(--foreground);
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
 
 .content {
   margin: 10px 0;
   flex: 1;
   color: var(--text);
   flex-wrap: wrap;
-}
-
-.content h1 {
-  display: inline-block;
-  margin-bottom: 3px;
 }
 
 /* ==== [ CONTENT ] === */
@@ -131,6 +131,8 @@ li {
 
 .footer-content {
   margin: 10px 0;
+  opacity: 0.8;
+  font-size: 12px;
 }
 
 /* ==== [ FOOTER ] === */
@@ -187,3 +189,59 @@ li {
 }
 
 /* ==== [ POSTS-CARDS ] === */
+
+
+/* ==== [ CHANGELOG] ==== */
+#tag-2\.0 {
+  color: black;
+  background-color: var(--accent);
+}
+
+.changelog-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.changelog-card.info li::marker {
+color: #87c8f3;
+}
+
+.changelog-card.info h1{
+color: #87c8f3;
+border-bottom: 2px dashed #87c8f3;
+}
+
+.changelog-card.new li::marker {
+color: #87F3A9;
+}
+
+.changelog-card.new h1{
+color: #87F3A9;
+border-bottom: 2px dashed #87F3A9;
+}
+
+.changelog-card.change li::marker {
+color: #f3cd87;
+}
+
+.changelog-card.change h1{
+color: #f3cd87;
+border-bottom: 2px dashed #f3cd87;
+}
+
+.changelog-card.fix li::marker {
+color: #da87f3;
+}
+
+.changelog-card.fix h1{
+color: #da87f3;
+border-bottom: 2px dashed #da87f3;
+}
+
+.changelog-card.del li::marker {
+color: #f38787;
+}
+
+.changelog-card.del h1{
+color: #f38787;
+border-bottom: 2px dashed #f38787;
+}

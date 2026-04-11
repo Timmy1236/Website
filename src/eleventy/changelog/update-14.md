@@ -1,14 +1,14 @@
 ---
-title: "Pulir"
+title: "2.0.0.alpha.3 - Pulir"
 date: 2026-02-03
-description: "Update 14: Arreglando, añadiendo y cambiando cosas que estaban medio mal con el anterior recode. Este debería de ser el ultimo recode que haga."
+description: "Arreglando, añadiendo y cambiando cosas que estaban medio mal con el anterior recode. Este debería de ser el ultimo recode que haga."
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
+tags: ["2.0.alpha", "grande"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Con todos estos nuevos cambios que he hecho, no todos salieron lo mejor posible ('' •᷄ ᴗ •᷅ ). Esta update esta enfocado en arreglar las mayorías de cosas que se rompieron con el recode anterior.</li>
@@ -17,7 +17,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Generador de RSS automático, ahora todos los changelogs y blogs deberían de crearse al momento de hacer una build de la pagina, esto solucionara cualquier tipo de error que tenia antes con mi feed que no se actualizaba bien.</li>
@@ -26,7 +26,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Cambio de host de imagen del botón de nyani58.</li>
@@ -39,7 +39,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Inconsistencias en el CSS, había muchos divs que le faltaban clases importantes y otras que aunque se veían iguales, si cambiabas de theme se rompían o no se actualizaba con las nuevas variables, etc.</li>
@@ -49,7 +49,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card del">
-  <h3>Eliminaciones</h3>
+  <h1>Eliminaciones</h1>
   <div class="changelog-card-content">
     <ul>
       <li>pursuer</li>

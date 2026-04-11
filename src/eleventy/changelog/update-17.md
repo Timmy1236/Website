@@ -1,14 +1,14 @@
 ---
-title: "esbuild"
+title: "2.0.0.rc.2 - esbuild"
 date: 2026-03-01
-description: "Update 17: Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update."
+description: "Ya no es necesario usar nunca mas UNPKG cuando puedes simplemente tenerlo de forma local... Espero que no haya roto nada con esta update."
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
+tags: ["2.0.rc", "grande"]
 ---
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>esbuild, este software debería de ayudarme a optimizar y compilar todos mis scripts y dependencias que los cargaba en el index.html en un simple .js, de forma conjunta y minificado para que consuma el mínimo espacio posible permitiendo también que cargue lo mas rápido posible.</li>
@@ -22,7 +22,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Stylelint actualizado, 17.3.0 > 17.4.0</li>
@@ -35,7 +35,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Links rotos en el sitemap después de la ultima actualización que los separo en 3 partes, ahora los 3 se encuentran en el mismo sitemap, mientras que el rss del sidebar lleve al general.</li>
@@ -47,7 +47,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card del">
-  <h3>Eliminaciones</h3>
+  <h1>Eliminaciones</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Varias imágenes y videos fueron borrados al no estar planeado a ser utilizados de vuelta, se archivo un banner animado que usaba anteriormente en mi antiguo layout.</li>

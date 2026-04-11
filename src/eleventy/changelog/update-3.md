@@ -1,26 +1,17 @@
 ---
-title: "Error 404 Personalizado"
-date: 2023-08-22
-description: "Update 3: Ni sabia que podrías personalizar el error 404 con simplemente poniendo un 404.html, voy a probarlo y seguramente olvidarlo para siempre."
+title: "1.1.1 - Halloween!1!"
+date: 2023-10-03
+description: "Cambie los colores de la pagina para una estética de halloween... ¿Tendré que hacerlo todo manualmente cada fecha?"
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "pequeño", "añadidos", "arreglos"]
+tags: ["1.1", "pequeño"]
 ---
 
-<div class="changelog-card new">
-  <h3>Añadidos</h3>
+<div class="changelog-card info">
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Eso mismo, una pagina de error 404 personalizado, espero no olvidarme en un futuro y no hacerle ningún cambio por años.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="changelog-card fix">
-  <h3>Arreglos</h3>
-  <div class="changelog-card-content">
-    <ul>
-      <li>Varios arreglos de links que usaban un path super sensible que se podria romper en cualquier momento si se realizabas cambios de archivos, por eso mismo ahora hay una pagina personalizada para el error 404 :)</li>
+      <li>¡Feliz halloween para todos! He cambiado los colores de la pagina a uno mas 'naranjas' para darle un temático, también ahora hay emojis en los costados de los paneles relacionado con halloween. No se hicieron cambios significativos a la pagina, solo un nuevo estilo temporal!</li>
     </ul>
   </div>
 </div>

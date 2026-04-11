@@ -1,20 +1,28 @@
 ---
-title: "Refactorización"
-date: 2024-05-27
-description: "Update 6: Mágicamente, resulta que tener todos los archivos de tu pagina en el mismo raíz puede ser un problema serio mientras vas avanzando y añadiendo nuevas cosas, ¿quien coño lo diría?"
+title: "1.3.0 - Separaciones entre paginas!"
+date: 2024-08-16
+description: "Ahora con el nuevo nav que fue agregado en la anterior update, esto me permitirá ahora tener varios paneles de diferentes categorias, separados esta vez por paginas en vez de forma bruta en una misma pagina, tenologi!!! coputer!!!"
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "mediano", "cambios"]
+tags: ["1.3", "mediano"]
 ---
 
-<div class="changelog-card change">
-  <h3>Cambios</h3>
+<div class="changelog-card info">
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Varios códigos HTML y CSS fueron re-escritos de vuelta desde cero.</li>
-      <li>La mayoría de archivos, scripts, etc. Se encuentran en diferentes carpetas de forma organizadas, no hace ningún cambio visual a la pagina, pero esto es para mejorar en las futuras actualizaciones y tener el proyecto de una forma u otra mas limpia.</li>
-      <li>El control de MP3 fue eliminado completamente, pero la lógica sigue funcionando de fondo, ahora la pagina detecta si estas visualizándolo o no, en caso que no Estes viendo, la música se detendrá automáticamente para no ser una molestia en segundo plano.</li>
-      <li>Re hice de vuelta el nav pero ahora es un div con varias clases css personalizadas??? No se si esto sea lo correcto, no se mucho sobre desarrollo web, espero no estar cagandola con eso.</li>
+      <li>Hice tantos cambios en una solo update que se me hizo imposible intentar registrarlo todos, así que honestamente no se todos los cambios que he realizado, pero son muchos, te prometo.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="changelog-card new">
+  <h1>Añadidos</h1>
+  <div class="changelog-card-content">
+    <ul>
+      <li>Nuevas páginas: "About me" y "Others"</li>
+      <li>Re hice completamente de nuevo el estilo principal de la pagina, con un fondo con una imagen, paneles con efecto de sombras y gradientes, ya no es simple como antes que era todo con un solo gradiente.</li>
+      <li>Changelog! Ahora todos los cambios que he realizado en la misma pagina, son posible de verlos en la misma pagina!!!! WAOOO, tristemente no tenia esto en mente y varios cambios que he hecho no fueron registrados correctamente y se perdió un montón de historial, no waooo.</li>
     </ul>
   </div>
 </div>

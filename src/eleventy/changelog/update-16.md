@@ -1,14 +1,14 @@
 ---
-title: "Uhhh... 2.0"
+title: "2.0.0.rc.1 - Uhhh... 2.0"
 date: 2026-02-24
-description: "Update 16: Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit."
+description: "Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit."
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
+tags: ["2.0.rc", "grande"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit.</li>
@@ -17,7 +17,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Otra vez, por octava vez, agregue de vuelta la pagina "Others" que lo usare principalmente para guardar el link de mi button porque ya esta pasando que intentan agregarme en "vecinos" pero como soy un vago de mierda siempre me olvido poner un sitio el link de mi button :3</li>
@@ -31,7 +31,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
       <li>El nav ahora usa "spacing-lines" en vez de títulos para cada sección.</li>
@@ -41,7 +41,7 @@ tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminacion
 </div>
 
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
       <li>Link erróneo del repositorio de mi github</li>

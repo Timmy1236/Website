@@ -1,17 +1,17 @@
 ---
-title: "Halloween!1!"
-date: 2023-10-03
-description: "Update 4: Cambie los colores de la pagina para una estética de halloween... ¿Tendré que hacerlo todo manualmente cada fecha?"
+title: "1.1.2 - Navidad!..."
+date: 2023-11-28
+description: "Cambie los colores-... Okey, esto esta siendo un problema muy rápido, necesito una mejor manera de hacer esto."
 layout: layouts/base.html
-back: /content/changelog/index.html
-tags: ["pre-release", "pequeño"]
+back: content/changelog/index.html
+tags: ["1.1", "pequeño"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>¡Feliz halloween para todos! He cambiado los colores de la pagina a uno mas 'naranjas' para darle un temático, también ahora hay emojis en los costados de los paneles relacionado con halloween. No se hicieron cambios significativos a la pagina, solo un nuevo estilo temporal!</li>
+      <li>¡Feliz navidad para todos! acabo de hacer exactamente los mismos cambios que hice para halloween pero ahora respetando a la temática de navidad, te prometo que en un futuro no hare mas esta mierda y de una manera u otra lo integro sin la necesidad de cambiar todo manualmente.</li>
     </ul>
   </div>
 </div>

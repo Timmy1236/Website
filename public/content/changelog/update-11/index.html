@@ -5,17 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/assets/images/favicon/pages.png">
-  <title>Styles - Timmy</title>
+  <title>2.0.0.alpha.1 - Layout nuevo - Timmy</title>
   <link rel="stylesheet" href="/dist/pages.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="header">
-      <div class="header-title">
+    <div class="head">
+      <div class="head-title">
         <h1>timmy.nekoweb</h1>
       </div>
-      <div class="header-links">
+      <div class="head-links">
         <a href="/content/sitemap/index.html">sitemap</a>
         <a href="/content/blog/index.html">blog</a>
         <a href="/content/changelog/index.html">changelog</a>
@@ -24,48 +24,47 @@
 
     <div class="content">
       <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Rehíce gran parte del código general de la pagina web antes de comenzar de hacer un nuevo layout, el código era tan terrible que si hacia un cambio se rompía todo. Esto ya debería de estar solucionado</li>
+      <li>La pagina ahora funciona con un nuevo layout mas al estilo de un grid, en vez de encontrarse todo el contenido en vertical, ahora el banner se encuentra en la parte superior de los 2 paneles, el primer panel siendo el nav que ahora es vertical y esta a la izquierda y el segundo panel de contenido, que es el único que cambia dependiendo de la pagina que te encuentres. Esto lo estoy haciendo porque en la siguiente update del Recode, pienso cambiar todo el sistema de como funciona mi pagina a uno estilo "SPA" (Single-page application) ;)</li>
     </ul>
   </div>
 </div>
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Ahora la pagina cuenta con un sitemap, tengo pensado en añadir mas paginas o continuar insertando mas links pero esta vez mas en el sitemap antes que dejarlo todo compactado en el nav, por ahora no tiene muchas cosas.</li>
-      <li>Nuevas opciones en la sección de settings, ahora hay todo un sistema de themes que se aplica en el style general de la pagina.</li>
+      <li>pursuer.</li>
+      <li>Nuevo layout enfocado a ser mas horizontal. Alado ahora se encuentra pursuer.</li>
+      <li>Nuevos sonidos especiales al hacer click en la pagina, y sonidos únicos dependiendo del objeto que estes clickeando, por ejemplo: el pursuer.</li>
+      <li>pursuer.</li>
     </ul>
   </div>
 </div>
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Remplace el theme del changelog por uno simple me gusta abusar mucho el CSS pero puede ser imposible intentar leer textos, así que estos tipos de paginas que tendrán mayormente textos, ahora cuentan con un style único y simple.</li>
-      <li>Rehíce por completo el about-me, junte la sección de mi perfil y la de discord haciendo que ahora el pfp y username que tenia antes, se actualicen a tiempo real dependiendo de las stats de mi perfil, también mostrara si estoy conectado o no al momento que entres.</li>
-      <li>Modifique elements.css para que el site box sea mas simple y lindo que el anterior teniendo toda una imagen borrosa.</li>
+      <li>Minis cambios y arreglos generales en el about me.</li>
     </ul>
   </div>
 </div>
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Re ajuste el icono del mouse personalizado porque resulta que estaba un poco offset y quedaba raro donde había que clickear.</li>
-      <li>Arregle un montón de strings del i18n y añadiendo le mas soporte a otros strings que no se traducían, aún hay otros varios mas que pude identificar pero no tengo tiempo para arreglarlos en esta actualización. </li>
-      <li>Arregle algunas paginas de los mini-easter eggs que estaban en el about me, como el de minecraft o el del half life 2 que no tenían correctamente bien ubicados las direcciones de los fonts, haciendo que usaran la genérica del arial y rompiendo varios elementos del css.</li>
+      <li>Después de un año entero, finalmente pude arreglar el tema sobre de la música y animaciones siendo cortadas al instante cuando cambias de pagina, ahora con el nuevo sistema esto ya no debería pasar nunca mas :3</li>
+      <li>El script encargado de gestionar las configuraciones debería de funcionar correctamente, anteriormente había un 50/50 de que dejara de funcionar, literalmente.</li>
     </ul>
   </div>
 </div>
 <div class="changelog-card del">
-  <h3>Eliminaciones</h3>
+  <h1>Eliminaciones</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Elimine completamente la sección "Flash Archive" en others por ahora.</li>
-      <li>Elimine un montón de archivos que no se usaban mas en la pagina para ahorrar algo de tamaño y simplificar los directorios del repositorio.</li>
+      <li>Removí por completo temporalmente la sección "Others", puede ser que lo agregue después en un futuro o que finalmente encuentra un mejor lugar en donde ponerlos.</li>
+      <li>Eliminé completamente los proyectos que se encontraban en la sección del about-me, tengo pensado en darles una sección especifica para ellos.</li>
     </ul>
   </div>
 </div>
@@ -73,10 +72,10 @@
 
     <div class="footer">
       <div class="footer-content">
-        <p>⚠️ ¡NO ME IGNORES! Estas viendo actualmente una version "beta" de Pages, esta sección de mi website
-          esta dedicada y optimizada para la lectura, sin efectos ni scripts de fondos que puedan molestar, pero
-          aún no termine de pasar todo, así que gran parte de la pagina estará rota por ahora, se solucionaran hasta las
-          siguientes updates.
+        <p>
+          Pagina hecha con: <a href="https://www.11ty.dev/">11ty</a> <br>
+          Todo el contenido está bajo la licencia: <a rel="license"
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">CC BY-NC-SA 4.0</a>
         </p>
       </div>
     </div>

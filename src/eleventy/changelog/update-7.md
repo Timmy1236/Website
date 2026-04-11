@@ -1,28 +1,27 @@
 ---
-title: "Separaciones entre paginas!"
-date: 2024-08-16
-description: "Update 7: Ahora con el nuevo nav que fue agregado en la anterior update, esto me permitirá ahora tener varios paneles de diferentes categorias, separados esta vez por paginas en vez de forma bruta en una misma pagina, tenologi!!! coputer!!!"
+title: "1.3.1 - Optimización"
+date: 2025-04-14
+description: "Lo se, lo se, todo el mundo odia .webp, todo el mundo se burla de .webp, pero para mi, ¡Genuinamente!, me gusta. :P"
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "mediano", "añadidos"]
+tags: ["1.3", "pequeño"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Hice tantos cambios en una solo update que se me hizo imposible intentar registrarlo todos, así que honestamente no se todos los cambios que he realizado, pero son muchos, te prometo.</li>
+      <li>De una forma u otra, el tamaño total de la pagina web fue reducido completamente hasta la mitad, no se como hice eso.</li>
     </ul>
   </div>
 </div>
 
-<div class="changelog-card new">
-  <h3>Añadidos</h3>
+<div class="changelog-card change">
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Nuevas páginas: "About me" y "Others"</li>
-      <li>Re hice completamente de nuevo el estilo principal de la pagina, con un fondo con una imagen, paneles con efecto de sombras y gradientes, ya no es simple como antes que era todo con un solo gradiente.</li>
-      <li>Changelog! Ahora todos los cambios que he realizado en la misma pagina, son posible de verlos en la misma pagina!!!! WAOOO, tristemente no tenia esto en mente y varios cambios que he hecho no fueron registrados correctamente y se perdió un montón de historial, no waooo.</li>
+      <li>La mayoria de imagenes fueron comprimidos en .webp y reducido gran parte los tamaños que eran sobre exagerados comparado con el tamaño reales de sus div's.</li>
+      <li>Varios scripts y archivos css fueron reducidos gran parte borrando ciertas clases y funciones que ya no usaban mas.</li>
     </ul>
   </div>
 </div>

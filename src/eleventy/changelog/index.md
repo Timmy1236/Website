@@ -25,7 +25,7 @@ Aquí puedes ver todos los cambios que le he hecho a la pagina, por ejemplo cosa
     <div class="post-tags">
       {%- for tag in post.data.tags %}
         {%- if tag != "all" %}
-          <span class="post-tag">{{ tag }}</span>
+          <span class="post-tag" id=tag-{{ tag }} >{{ tag }}</span>
         {%- endif %}
       {%- endfor %}
     </div>

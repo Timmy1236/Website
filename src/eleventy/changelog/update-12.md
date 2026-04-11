@@ -1,58 +1,45 @@
 ---
-title: "Layout nuevo"
-date: 2025-12-26
-description: "Update 12: Después de mucho tiempo estando mejorando el sitio y aprendiendo nuevas tecnológicas y técnicas en el desarrollo de software en web, creo que tengo las bolas suficientes de finalmente hacer un salto y re-codificar prácticamente toda mi pagina desde '0', por ahora solo hice un re-diseño completo del estilo de la pagina a uno mas 'grid' en vez de ponerlo todo vertical."
+title: "2.0.0.alpha.2 - Mithril.js y 11ty"
+date: 2026-01-17
+description: "Con la ayuda del nuevo diseño de mi pagina, tendiendo el contenido que cambia entre ellas en una sola parte, me permite realizar un cambio de paginas de forma 'smooth' sin la necesidad de re-cargar enteramente todo el código HTML cada vez que el usuario clickea un botón el NAV! Esto lo pude hacer gracias a Mithril.js. También, he empezado a usar 11ty, un generador de paginas estáticas, en vez de escribir otra vez todos los HTML's para cada changelog, blog, sitemap, etc. Ahora puedo usar solamente un html base y escribir cada articulo desde un simple markdown!"
 layout: layouts/base.html
 back: /content/changelog/index.html
-tags: ["pre-release", "grande", "añadidos", "cambios", "arreglos", "eliminaciones"]
+tags: ["2.0.alpha", "grande"]
 ---
 
 <div class="changelog-card info">
-  <h3>Información</h3>
+  <h1>Información</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>La pagina ahora funciona con un nuevo layout mas al estilo de un grid, en vez de encontrarse todo el contenido en vertical, ahora el banner se encuentra en la parte superior de los 2 paneles, el primer panel siendo el nav que ahora es vertical y esta a la izquierda y el segundo panel de contenido, que es el único que cambia dependiendo de la pagina que te encuentres. Esto lo estoy haciendo porque en la siguiente update del Recode, pienso cambiar todo el sistema de como funciona mi pagina a uno estilo "SPA" (Single-page application) ;)</li>
+      <li>Nuevo año, nuevo yo, literalmente. Desde que me pase a NekoWeb me he enfocado en aprender mas como funciona el desarrollo en el frontend, deje un poco de lado mis otros proyectos a dedicarme completamente en investigar como usar un generador de sitios estático. En esta update trae: [mithril.js](https://mithril.js.org/) y [11ty](https://www.11ty.dev/), describí como funcionan de forma poca detallada en la sección de añadidos. Recomiendo mucho visitar sus paginas para ver el potencial máximo que tienen, hablo en serio.</li>
     </ul>
   </div>
 </div>
 
 <div class="changelog-card new">
-  <h3>Añadidos</h3>
+  <h1>Añadidos</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>pursuer.</li>
-      <li>Nuevo layout enfocado a ser mas horizontal. Alado ahora se encuentra pursuer.</li>
-      <li>Nuevos sonidos especiales al hacer click en la pagina, y sonidos únicos dependiendo del objeto que estes clickeando, por ejemplo: el pursuer.</li>
-      <li>pursuer.</li>
+      <li>'Mithril.js' Ahora la pagina en vez de correr simplemente en HTML estático, ahora todo se basa en un simple index.html que usa mithril.js como DOM virtual, básicamente cuando te cambias de pagina, en vez de recargar completamente un HTML entero, incluso cuando gran parte sea simplemente un copia y pega, ahora solamente cambiara el contenido de ella, sin necesidad de gastar red al pedo, incluso esto debería ser mas rápido, al instante ya cargas todas mis paginas en el script y al clickear un botón, pum, cambio al instante!</li>
+      <li>'11ty' El sitemap, blog, changelog, y posiblemente mas paginas que haga en algún futuro, tampoco serán simplemente copias y pegas del mismo HTML pero con diferente textos, ahora todo se genera al instante gracias a 11ty, un generador de paginas estáticos, simplemente creo un HTML como base y listo, después solamente si quiero crear algo nuevo, como un sitemap, hago un markdown y pongo solamente lo que quiero ver que se vea en ella, una lista con varios links, un titulo h1, y nada mas, 11ty hace todo el trabajo, recomendado!</li>
     </ul>
   </div>
 </div>
 
 <div class="changelog-card change">
-  <h3>Cambios</h3>
+  <h1>Cambios</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Minis cambios y arreglos generales en el about me.</li>
+      <li>Acabo de otra vez re-formar los directorios, ahora los scripts se encuentran organizados por categorías y todas las herramientas de 11ty y generadores se encuentran separados del deploy, básicamente nekoweb solamente hosteara lo visible mientras que todas mis herramientas y bases se encuentran afuera guardadas para futuras updates, esto debería de ayudar en no subir tanto el peso con node modules y toda esas mierdas.</li>
     </ul>
   </div>
 </div>
 
 <div class="changelog-card fix">
-  <h3>Arreglos</h3>
+  <h1>Arreglos</h1>
   <div class="changelog-card-content">
     <ul>
-      <li>Después de un año entero, finalmente pude arreglar el tema sobre de la música y animaciones siendo cortadas al instante cuando cambias de pagina, ahora con el nuevo sistema esto ya no debería pasar nunca mas :3</li>
-      <li>El script encargado de gestionar las configuraciones debería de funcionar correctamente, anteriormente había un 50/50 de que dejara de funcionar, literalmente.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="changelog-card del">
-  <h3>Eliminaciones</h3>
-  <div class="changelog-card-content">
-    <ul>
-      <li>Removí por completo temporalmente la sección "Others", puede ser que lo agregue después en un futuro o que finalmente encuentra un mejor lugar en donde ponerlos.</li>
-      <li>Eliminé completamente los proyectos que se encontraban en la sección del about-me, tengo pensado en darles una sección especifica para ellos.</li>
+      <li>Minis fixes en algunos scripts que he encontrado al estar organizándolos, no son nada de importancia.</li>
     </ul>
   </div>
 </div>
