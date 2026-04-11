@@ -57,8 +57,8 @@ const Home = {
                   m("p.image-text", "2025 - v1.0")
                 ]),
                 m(".image-preview", [
-                  m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/website-2026.png", alt: "2026" }),
-                  m("p.image-text", "2026 - v2.0 BETA")
+                  m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/Website-2.0.0.png", alt: "2026" }),
+                  m("p.image-text", "2026 - v2.0")
                 ]),
               ]),
 
