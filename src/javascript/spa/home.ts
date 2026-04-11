@@ -42,7 +42,7 @@ const Home = {
     return m(".content-column", [
       m(".panel", [
         m(".panel-header", [
-          m("h1.text-title", { "data-i18n": "home.welcome.title" }),
+          m("p.text-title", { "data-i18n": "home.welcome.title" }),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -75,7 +75,7 @@ const Home = {
         // ==== CHANGELOG ====
         m(".panel", [
           m(".panel-header",
-            m("h1.text-title", { "data-i18n": "home.entries.changelog.title" }),
+            m("p.text-title", { "data-i18n": "home.entries.changelog.title" }),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -97,7 +97,7 @@ const Home = {
         // ==== BLOG ====
         m(".panel", [
           m(".panel-header",
-            m("h1.text-title", { "data-i18n": "home.entries.blog.title" }),
+            m("p.text-title", { "data-i18n": "home.entries.blog.title" }),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -120,7 +120,7 @@ const Home = {
       // ==== COMMIT ====
       m(".panel", [
         m(".panel-header", [
-          m("h1.text-title", { "data-i18n": "home.entries.commit.title" }),
+          m("p.text-title", { "data-i18n": "home.entries.commit.title" }),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),

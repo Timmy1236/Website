@@ -229,10 +229,8 @@ ul {
   justify-content: space-between;
 }
 
-.panel-header.center {
-  justify-content: center;
-  text-align: center;
-  padding: 0;
+.panel-header p {
+  color: var(--accent-color);
 }
 
 .panel-controls {

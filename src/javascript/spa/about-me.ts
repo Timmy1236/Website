@@ -16,7 +16,7 @@ const AboutMePage = {
       m(".panel-grid-2", { style: "--panel-col-1:300px; --panel-col-2:1fr;" }, [
         m(".panel", [
           m(".panel-header",
-            m("h1.text-title", "Profile"),
+            m("p.text-title", "Profile"),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -33,7 +33,7 @@ const AboutMePage = {
               ),
 
               // USERNAME
-              m("h1.profile-username", "Timmy1236"),
+              m("p.profile-username", "Timmy1236"),
 
               // STATUS
               m("p.profile-status#discord-status-text", "Status: Loading..."),
@@ -53,7 +53,7 @@ const AboutMePage = {
         m(".panel", [
 
           m(".panel-header",
-            m("h1.text-title", { "data-i18n": "about-me.aboutMe.title" }, "About Me"),
+            m("p.text-title", { "data-i18n": "about-me.aboutMe.title" }, "About Me"),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -70,7 +70,7 @@ const AboutMePage = {
 
       m(".panel", { "data-default": "closed" }, [
         m(".panel-header",
-          m("h1.text-title", "Tech stack"),
+          m("p.text-title", "Tech stack"),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -118,7 +118,7 @@ const AboutMePage = {
 
       m(".panel", { "data-default": "closed" }, [
         m(".panel-header",
-          m("h1.text-title", "Interests"),
+          m("p.text-title", "Interests"),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),

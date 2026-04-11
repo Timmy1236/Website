@@ -13,7 +13,7 @@ const Home = {
 
       m(".panel", [
         m(".panel-header",
-          m("h1.text-title", { "data-i18n": "projects.title" }),
+          m("p.text-title", { "data-i18n": "projects.title" }),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),

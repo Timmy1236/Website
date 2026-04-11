@@ -13,7 +13,7 @@ const AchievementsPage = {
     return m(".content-column", [
       m(".panel", [
         m(".panel-header", [
-          m("h1.text-title", "Logros"),
+          m("p.text-title", "Logros"),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
             m("button.panel-button", { "data-panel-action": "close" }, "X")

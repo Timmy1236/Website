@@ -50,7 +50,7 @@ export default {
       // Main Navigation
       m(".panel.nav-content", [
         m(".panel-header", [
-          m("h1", { "data-i18n": "sidebar.navigation.title" }),
+          m("p", { "data-i18n": "sidebar.navigation.title" }),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
           ])
@@ -69,7 +69,7 @@ export default {
       // 'Data' subsite navigation
       m(".panel.nav-content", [
         m(".panel-header", [
-          m("h1", { "data-i18n": "sidebar.data.title" }),
+          m("p", { "data-i18n": "sidebar.data.title" }),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
           ])
@@ -87,7 +87,7 @@ export default {
       // NOTE: SUUUUUPER WIP, ESTO NECESITA MAS DESARROLLO.
       m(".panel.nav-content", [
         m(".panel-header", [
-          m("h1", { "data-i18n": "sidebar.nekoweb.title" }),
+          m("p", { "data-i18n": "sidebar.nekoweb.title" }),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
           ])
