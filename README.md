@@ -1,31 +1,33 @@
-# Timmy's Digital Dumpster
-> Una simple pagina web personal hosteada en Nekoweb.
+<div align="center">
+  <img width="100%" src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/website-banner.gif" alt="Timmy nekoweb banner">
+</div>
 
-## Screenshot
-<p align="middle">
-  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/default.webp" width="400"/>
-  <img src="https://file.garden/aSqYsBZqpx5ZY3su/github/website/11ty.webp" width="400"/> 
-</p>
+## Screenshots
+
+Main Website               |  11ty Website
+:-------------------------:|:-------------------------:
+![main](https://file.garden/aSqYsBZqpx5ZY3su/github/website/main.webp)  |  ![11ty](https://file.garden/aSqYsBZqpx5ZY3su/github/website/11ty.png)
 
 ## Instalación
 1. Clona el repositorio.
 ```bash
 git clone https://github.com/Timmy1236/Website.git
 ```
+
 2. Instala todas las dependencias de node.js
 ```bash
 npm install
 ```
-3. Enciende un servidor para visualizar la pagina, puedes usar la extension: [live server para vscode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), o también puedes usar Python.
+
+3. Compila el codigo fuente de la página.
 ```bash
-cd public && python -m http.server 8000
+npm run build   # Compila la página una vez.
+npm run dev     # Compila la página por cada vez que realizas un cambio y lo guardas.
 ```
 
-4. Nota: La mayoría de cambios que hagas en la pagina web puede ser que no se vean a tiempo real ya que primero necesitas hacer una build de ciertas cosas.
+3. Enciende un servidor para visualizar la pagina. Puedes usar la extension: [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) de vscode, o también puedes usar Python.
 ```bash
-npm run build # Ejecuta esbuild y eleventy una vez
-
-npm run dev # Ejecuta esbuild y eleventy cada vez que guardas un cambio.
+cd public && python -m http.server 8000
 ```
 
 ## Licencia
