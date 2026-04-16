@@ -394,14 +394,17 @@ ul {
   align-self: stretch;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+
 .content-column {
   transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.725);
   opacity: 1;
   transform: translateY(0);
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-size);
 }
 
 .layout-content:not(:has(.sidebar)) .content-column {
@@ -432,7 +435,11 @@ ul {
   font-size: clamp(1rem, 1.50vw, 1.50rem);
   color: var(--main-text);
   text-shadow: var(--text-shadow);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 100ms;
+}
+
+.sidebar-buttons.active {
+  background-color: var(--foreground);
 }
 
 .sidebar-buttons img {
