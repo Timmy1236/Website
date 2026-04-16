@@ -5,7 +5,7 @@ import "./settings-logic.ts";
 import { i18nReady } from "./i18n.ts";
 // Media
 import "../media/autoplay.ts";
-import "../media/mouse-click.ts";
+import "../media/sound-effects.ts";
 // Pages
 import "../pages/settings-ui.ts";
 import "../pages/discord.ts";

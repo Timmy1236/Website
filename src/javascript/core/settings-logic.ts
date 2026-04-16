@@ -18,7 +18,7 @@ export const SETTINGS_MAP = {
   vignetteEffect: "vignette-effect",
   theme: "theme-select",
   backgroundMusic: "background-music-toggle",
-  mouseClicks: "mouse-click-toggle",
+  soundsEffects: "sound-effects-toggle",
   readableFont: "readable-font"
 };
 
@@ -101,7 +101,7 @@ export function initDefaultSettings() {
   localStorage.setItem("staticEffect", "true");
   localStorage.setItem("vignetteEffect", "true");
   localStorage.setItem("backgroundMusic", "false");
-  localStorage.setItem("mouseClicks", "true");
+  localStorage.setItem("soundEffect", "true");
   localStorage.setItem("readableFont", "false");
   localStorage.setItem("theme", "simple-purple");
   localStorage.setItem("settingsInitialized", "true");

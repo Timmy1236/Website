@@ -62,8 +62,8 @@ const ConfigurationPage = {
               ]),
 
               m(".option", [
-                m("input", { type: "checkbox", id: "mouse-click-toggle" }),
-                m("label", { for: "mouse-click-toggle", "data-i18n": "settings.options.mouseClicks" })
+                m("input", { type: "checkbox", id: "sound-effects-toggle" }),
+                m("label", { for: "sound-effects-toggle", "data-i18n": "settings.options.soundEffects" })
               ])
             ]),
           },
