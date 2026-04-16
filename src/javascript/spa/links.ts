@@ -6,9 +6,8 @@ const Others = {
     refreshi18n();
   },
 
-  view: () =>
-    m(".content-column", [
-
+  view: function () {
+    return m(".content", [
       m(".panel",
         m(".panel-header", [
           m("p", { "data-i18n": "neighbors.title" }),
@@ -187,8 +186,8 @@ https://timmy.nekoweb.org/pages/others/tile/`
           ])
         ])
       ]),
-
     ])
+  }
 };
 
 export default Others;

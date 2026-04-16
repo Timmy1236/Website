@@ -7,10 +7,10 @@ const AchievementsPage = {
     refreshi18n();
   },
 
-  view() {
+  view: function () {
     const list = getAchievementsList();
 
-    return m(".content-column", [
+    return m(".content", [
       m(".panel", [
         m(".panel-header", [
           m("p.text-title", "Logros"),

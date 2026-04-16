@@ -39,7 +39,7 @@ const Home = {
   },
 
   view: function () {
-    return m(".content-column", [
+    return m(".content", [
       m(".panel", [
         m(".panel-header", [
           m("p.text-title", { "data-i18n": "home.welcome.title" }),

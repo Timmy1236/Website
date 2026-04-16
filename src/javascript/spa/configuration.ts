@@ -14,9 +14,8 @@ const ConfigurationPage = {
     loadSettings();
   },
 
-  view() {
-    return m(".content-column", [
-
+  view: function () {
+    return m(".content", [
       m(TabPanel, {
         title: { "data-i18n": "settings.title" },
         tabs: [

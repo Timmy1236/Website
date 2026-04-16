@@ -10,9 +10,8 @@ const AboutMePage = {
     initPanel();
   },
 
-  view() {
-    return m(".content-column", [
-
+  view: function () {
+    return m(".content", [
       m(".panel-grid-2", { style: "--panel-col-1:300px; --panel-col-2:1fr;" }, [
         m(".panel", [
           m(".panel-header",

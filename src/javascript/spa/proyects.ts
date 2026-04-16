@@ -8,9 +8,8 @@ const Home = {
     initImageOverlay();
   },
 
-  view: () =>
-    m(".content-column", [
-
+  view: function () {
+    return m(".content", [
       m(".panel", [
         m(".panel-header",
           m("p.text-title", { "data-i18n": "projects.title" }),
@@ -73,6 +72,7 @@ const Home = {
         ])
       ]),
     ])
+  }
 };
 
 export default Home;
