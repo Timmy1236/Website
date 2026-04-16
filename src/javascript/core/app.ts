@@ -10,7 +10,6 @@ import "../media/sound-effects.ts";
 import "../pages/settings-ui.ts";
 import "../pages/discord.ts";
 // UI
-import "../ui/trans.ts";
 import "../ui/image-overlay.ts";
 import "../ui/tooltip.ts";
 import "../ui/panel-buttons.ts"
