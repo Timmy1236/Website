@@ -14,7 +14,7 @@ const TabPanel = {
 
       // HEADER
       m(".panel-header", [
-        m("h1.text-title", vnode.attrs.title || "Tabs"),
+        m("p.text-title", vnode.attrs.title || "Tabs"),
 
         m(".panel-controls", [
           m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
