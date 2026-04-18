@@ -3,26 +3,26 @@
  * -----------------
  * Encargado de la lógica de settings, establecer, cargar y modificar datos en LocalStorage.
 */
+const SETTINGS_VERSION = "2";
 
-/**
- * @typedef {Object} Settings
- * @property {string} staticEffect    - Selector para el efecto estático.
- * @property {string} vignetteEffect  - Selector para el efecto de viñeta.
- * @property {string} theme           - Selector del selector de temas.
- * @property {string} backgroundMusic - Switch para la música de fondo.
- * @property {string} mouseClicks     - Switch para sonidos de clicks.
- * @property {string} readableFont    - Switch para fuente legible.
- */
-export const SETTINGS_MAP = {
-  staticEffect: "static-effect",
-  vignetteEffect: "vignette-effect",
-  theme: "theme-select",
-  backgroundMusic: "background-music-toggle",
-  soundsEffects: "sound-effects-toggle",
-  readableFont: "readable-font"
+export type SettingKey = | "staticEffect" | "vignetteEffect" | "backgroundMusic" | "soundsEffects" | "readableFont" | "theme";
+export const SETTING_KEYS: SettingKey[] = [
+  "staticEffect",
+  "vignetteEffect",
+  "backgroundMusic",
+  "soundsEffects",
+  "readableFont",
+  "theme",
+];
+
+export const DEFAULT_SETTINGS: Record<SettingKey, string> = {
+  staticEffect: "true",
+  vignetteEffect: "true",
+  backgroundMusic: "false",
+  soundsEffects: "true",
+  readableFont: "false",
+  theme: "simple-purple",
 };
-
-const SETTINGS_VERSION = "1";
 
 // === Carga el efecto de ruido/estática ===
 function loadNoiseEffect() {
@@ -36,7 +36,7 @@ function loadNoiseEffect() {
  * Añade los atributos de 'theme' y 'color' al documento sacados del LocalStorage.
  */
 function loadTheme() {
-  const theme = localStorage.getItem("theme") || "simple-purple";
+  const theme = getMapSetting("theme") || "simple-purple";
   const themeArray = theme.split("-")
 
   document.documentElement.setAttribute("data-theme", themeArray[0]);
@@ -44,24 +44,13 @@ function loadTheme() {
 }
 
 /**
- * Checkea si 'settingsInitialized' es falso o null, en caso que lo sea, se forzara ejecutar la función 'initDefaultSettings'.
- * @see {@link initDefaultSettings}
- */
-function checkIfFirstTime() {
-  if (localStorage.getItem("settingsInitialized") !== "true") {
-    initDefaultSettings()
-    window.location.reload();
-  }
-}
-
-/**
  * Checkeamos si el navegador del usuario tiene guardado una variable "settingsVersion" la misma version que tiene el script settings-logic, en caso que no lo tenga, forzamos un initDefaultSettings por las dudas, solamente actualiza la version de settings cuando se hacen cambios grandes y que puede romperse completamente.
  * @see {@link initDefaultSettings}
  * @see {@link SETTINGS_VERSION}
  */
-function migrateSettings() {
+function checkVersion() {
   const savedVersion = localStorage.getItem("settingsVersion");
-  console.log("%csettings-logic.js>" + "%c Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION, "color: #87F3A9; background: #282A35;", "color: white")
+  console.log("%csettings-logic" + "%c Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION, "color: #87F3A9; background: #282A35;", "color: white")
 
   if (savedVersion === SETTINGS_VERSION) return;
 
@@ -75,11 +64,10 @@ function migrateSettings() {
  * Carga y aplica todas las configuraciones, se ejecuta cuando la pagina termina de cargar.
  */
 export function initializeSettings() {
-  migrateSettings();
-  checkIfFirstTime(); // NOTE: Tendremos que revisar esto ahora, con el nuevo sistema de migrateSettings esto podría haber quedado obsoleto perfectamente.
+  checkVersion();
 
-  const enabledStaticEffect = localStorage.getItem("staticEffect") === "true";
-  const enabledReadableFont = localStorage.getItem("readableFont") === "true";
+  const enabledStaticEffect = getMapSetting("staticEffect") === "true";
+  const enabledReadableFont = getMapSetting("readableFont") === "true";
 
   loadTheme();
 
@@ -96,25 +84,38 @@ export function initializeSettings() {
  * Sobrescribe las configuraciones guardadas en el navegador por las del default.
  */
 export function initDefaultSettings() {
-  console.warn("settings-logic.js> Se acaba de reiniciar por defecto todos las configuraciones realizadas en la pagina web. Se requiere de una recarga de la pagina para aplicar los nuevos cambios.")
+  const defaultSettingsMap = new Map<SettingKey, string>(
+    Object.entries(DEFAULT_SETTINGS) as [SettingKey, string][]
+  );
 
-  localStorage.setItem("staticEffect", "true");
-  localStorage.setItem("vignetteEffect", "true");
-  localStorage.setItem("backgroundMusic", "false");
-  localStorage.setItem("soundEffect", "true");
-  localStorage.setItem("readableFont", "false");
-  localStorage.setItem("theme", "simple-purple");
-  localStorage.setItem("settingsInitialized", "true");
+  saveSetting("settingsVersion", SETTINGS_VERSION);
+  saveSetting("settings", JSON.stringify(Array.from(defaultSettingsMap.entries())));
+
+  console.warn("settings-logic %cSe reiniciaron las configuraciones por defecto. Recargá la página.", "color: #87F3A9; background: #282A35;");
 }
 
-/**
- * Devuelve un booleano basado en una configuración guardada.
- * @param {keyof SETTINGS_MAP} settingKey - La clave de la configuración (ej: 'staticEffect', 'vignetteEffect').
- * @returns {boolean}
- */
-export function getSetting(settings: string): boolean {
-  const setting = localStorage.getItem(settings) === "true";
-  return setting
+// Guarda un Map en el LocalStorage, se guarda como un JSON stringificado.
+export function saveMapSettings(map: Map<SettingKey, string>): void {
+  localStorage.setItem("settings", JSON.stringify(Array.from(map.entries())));
+}
+
+// Obtener una setting del MapSettings usando una key.
+export function getMapSetting(key: SettingKey): string | null {
+  const settingsString = localStorage.getItem("settings");
+  if (!settingsString) return null;
+
+  const settingsMap = new Map<string, string>(JSON.parse(settingsString));
+  return settingsMap.get(key) || null;
+}
+
+// Obtener una simple setting.
+export function getSetting(key: string): string | null {
+  return localStorage.getItem(key);
+}
+
+// Guardar una simple setting.
+export function saveSetting(key: string, value: string): void {
+  localStorage.setItem(key, value);
 }
 
 document.addEventListener('DOMContentLoaded', initializeSettings);

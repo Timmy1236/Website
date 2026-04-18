@@ -4,9 +4,11 @@
 * Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
 */
 
+import { getMapSetting } from "../core/settings-logic";
+
 let volume: number = 0.25;
 let playing: boolean = false;
-const musicEnabled: boolean = localStorage.getItem("backgroundMusic") === "true";
+const musicEnabled: boolean = getMapSetting("backgroundMusic") === "true";
 
 document.addEventListener("DOMContentLoaded", function () {
   if (!musicEnabled) return;

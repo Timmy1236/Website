@@ -4,13 +4,15 @@
  * Maneja la lógica de los efectos de sonidos.
 */
 
+import { getMapSetting } from "../core/settings-logic";
+
 interface SoundConfig {
   audio: HTMLAudioElement;
   rate: Array<2>;
   volume: number;
 }
 const audioCtx = new AudioContext();
-const canPlaySounds: boolean = localStorage.getItem("soundsEffects") === "true";
+const canPlaySounds: boolean = getMapSetting("soundsEffects") === "true";
 let clickSoundCooldown: boolean = true;
 let userInteracted: boolean = false;
 
