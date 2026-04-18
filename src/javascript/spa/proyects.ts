@@ -21,8 +21,7 @@ const Home = {
         ),
 
         m(".projects-list", [
-
-          // PROJECT
+          // WebSite project
           m(".panel-content", [
 
             m(".card", [
@@ -37,16 +36,16 @@ const Home = {
                 m(".project-meta", [
                   m("h2.project-title", "Timmy's digital dumpster"),
                   m(".project-tags", [
-                    m("span.tag", "mithril.js"),
-                    m("span.tag", "11ty"),
-                    m("span.tag", "esbuild")
+                    m("span.project-tag", "typescript"),
+                    m("span.project-tag", "mithril.js"),
+                    m("span.project-tag", "11ty")
                   ])
                 ])
               ]),
 
               m(".project-body", [
                 m("p.project-description", {
-                  "data-i18n": "projects.projectsList.website.description"
+                  "data-i18n": "projects.list.website.description"
                 })
               ]),
 
@@ -63,6 +62,47 @@ const Home = {
 
               m(".proyects-links", [
                 m("a.link-icon", { href: "https://github.com/Timmy1236/Website", target: "_blank" }, [
+                  m("img", { src: "/assets/images/icons/socials/github.png" }),
+                  m("span", "GitHub")
+                ])
+              ])
+            ]),
+
+            m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+
+            // Leafy project
+            m(".card", [
+              m(".project-header", [
+                m(".project-icon",
+                  m("img", {
+                    src: "./assets/images/icons/leafy.webp",
+                    alt: "Leafy icon"
+                  })
+                ),
+
+                m(".project-meta", [
+                  m("h2.project-title", "Leafy"),
+                  m(".project-tags", [
+                    m("span.project-tag", "typescript"),
+                    m("span.project-tag", "discord.js")
+                  ])
+                ])
+              ]),
+
+              m(".project-body", [
+                m("p.project-description", {
+                  "data-i18n": "projects.list.leafy.description"
+                })
+              ]),
+
+              m(".project-gallery", [
+                m(".image-preview", [
+                  m("img", { src: "/assets/images/others/placeholder.png", alt: "Placeholder" })
+                ])
+              ]),
+
+              m(".proyects-links", [
+                m("a.link-icon", { href: "https://github.com/Timmy1236/Leafy", target: "_blank" }, [
                   m("img", { src: "/assets/images/icons/socials/github.png" }),
                   m("span", "GitHub")
                 ])

@@ -32,12 +32,11 @@
   flex-wrap: wrap;
 }
 
-.tag {
-  font-size: 13px;
+.project-tag {
+  font-size: 16px;
   padding: 4px 10px;
-  border-radius: 20px;
-  background-color: rgb(255 255 255 / 8%);
-  color: #ccc;
+  background-color: var(--background);
+  color: #fff;
 }
 
 .project-body {

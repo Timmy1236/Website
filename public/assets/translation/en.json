@@ -64,13 +64,13 @@
     }
   },
   "projects": {
-    "title": "Projects",
-    "projectsList": {
+    "title": "Proyectos",
+    "list": {
       "website": {
         "description": "My personal website hosted on Nekoweb, it will be my main site where I will keep all kinds of projects or blogs I make updated. If you see this text first, that means you are already viewing my page!"
       },
-      "WIP": {
-        "description": "All other projects were removed because I want to move this whole section to a separate page, only my website remains in case someone wants to see the source code."
+      "leafy": {
+        "description": "Just a simple Discord bot. Nothing more, just that simple. You don't need any external services or a complicated setup."
       }
     }
   },

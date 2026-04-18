@@ -65,12 +65,12 @@
   },
   "projects": {
     "title": "Proyectos",
-    "projectsList": {
+    "list": {
       "website": {
         "description": "Mi sitio web personal hosteado en Nekoweb, sera mi sitio principal donde mantendré actualizado todos los tipos de proyectos o blogs que haga sobre mi. Si ves este texto en primer lugar, eso significa que ya estas viendo mi pagina!"
       },
-      "WIP": {
-        "description": "Todos los demás proyectos fueron removidos ya que quiero mover toda esta sección a una pagina por separado, solamente esta mi pagina web por si alguien quiere ver el código fuente."
+      "leafy": {
+        "description": "Un simple bot para discord, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
       }
     }
   },
