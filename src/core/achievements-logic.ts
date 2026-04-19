@@ -5,7 +5,7 @@
  * Guarda en LocalStorage cuáles están desbloqueados.
 */
 
-import { showAchievementToast } from "../ui/achievement-toast.ts";
+import { showAchievementToast } from "../ui/achievement-toast";
 
 // === DEFINICIÓN DE LOGROS ===
 // "id"          → clave única.

@@ -7,6 +7,9 @@
     "noEmit": true
   },
   "include": [
-    "src/javascript/**/*"
+    "src/**/*",
+    "src/core",
+    "src/spa",
+    "src/ui"
   ]
 }
