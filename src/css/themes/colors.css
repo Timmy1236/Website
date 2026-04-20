@@ -164,7 +164,7 @@
   --spacing-line-color: var(--foreground);
 
   /* Banner */
-  --banner-image: url("/assets/images/banners/nocolor.png");
+  --banner-image: url("/assets/images/banners/red.png");
 
   /* Mouse */
   --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
