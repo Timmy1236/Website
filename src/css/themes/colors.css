@@ -95,8 +95,8 @@
   --banner-image: url("/assets/images/banners/green.png");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/purple-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/green-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/green-hover.png");
 
   /* Background */
   --background-image: url("/assets/images/backgrounds/green.png");
@@ -167,8 +167,8 @@
   --banner-image: url("/assets/images/banners/red.png");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
+  --normal-mouse-image: url("/assets/images/mouse/red-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/red-hover.png");
 
   /* Background */
   --background-image: url("/assets/images/backgrounds/red.png");
