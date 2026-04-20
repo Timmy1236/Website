@@ -27,7 +27,7 @@
   --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
 
   /* Background */
-  --background-image: url("/assets/images/patrones/purple.png");
+  --background-image: url("/assets/images/backgrounds/purple.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -63,7 +63,7 @@
   --hover-mouse-image: url("/assets/images/mouse/blue-hover.png");
 
   /* Background */
-  --background-image: url("/assets/images/patrones/blue.png");
+  --background-image: url("/assets/images/backgrounds/blue.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -99,7 +99,7 @@
   --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
 
   /* Background */
-  --background-image: url("/assets/images/patrones/green.png");
+  --background-image: url("/assets/images/backgrounds/green.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -135,7 +135,7 @@
   --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --background-image: url("/assets/images/patrones/dark.png");
+  --background-image: url("/assets/images/backgrounds/dark.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
@@ -171,7 +171,7 @@
   --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --background-image: url("/assets/images/patrones/red.png");
+  --background-image: url("/assets/images/backgrounds/red.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
   --background-animation: scroll-background 30s linear infinite;
