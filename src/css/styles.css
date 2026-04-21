@@ -700,15 +700,15 @@ ul {
 
 
 
-/* ==== ACHIEVEMENT TOAST ==== */
-.achievement-toast {
-  position: fixed;
+/* ==== TOAST (NOTIFICATIONS) ==== */
+.toast {
+  position: relative;
+  right: -350px;
   bottom: 20px;
-  right: -320px;
   width: 280px;
-  background: #282a36;
-  border: 3px solid #433f55;
-  color: white;
+  background: var(--background);
+  border: 3px solid var(--foreground);
+  box-shadow: var(--panel-shadows);
   padding: 10px 14px;
   z-index: 9999;
   transition: right 0.35s ease-in-out;
@@ -716,22 +716,56 @@ ul {
   text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
 }
 
-.achievement-toast.visible {
-  right: 20px;
-}
-
-.achievement-toast.hiding {
-  right: -320px;
-}
-
 .toast-name {
   margin: 0;
   font-size: 24px;
-  color: gold;
   margin-bottom: 5px;
 }
 
 .toast-desc {
   margin: 0;
   font-size: 20px;
+}
+
+#toast-info {
+  border: 3px solid #8B9DEE;
+}
+
+#toast-achievement{
+  border: 3px solid #EEDC8B;
+}
+
+#toast-info .toast-name::before  {
+  content: "ⓘ ";
+}
+
+#toast-achievement .toast-name::before  {
+  content: "★ ";
+}
+
+#toast-info .toast-name  {
+  color: #8B9DEE;
+}
+
+#toast-achievement .toast-name  {
+  color: #EEDC8B;
+}
+
+.toast.visible {
+  right: 0;
+}
+
+.toast.hiding {
+  right: -320px;
+}
+
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  z-index: 9999;
+  pointer-events: none;
 }
