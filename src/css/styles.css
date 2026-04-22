@@ -1,9 +1,7 @@
 @import url("./pages/proyects.css");
 @import url("./pages/about-me.css");
 @import url("./pages/configuration.css");
-
-/* Themes */
-@import url("themes/colors.css");
+@import url("themes.css");
 @import url("effects/noise.css");
 
 /* ==== [ TIPOGRAFÍA ] === */

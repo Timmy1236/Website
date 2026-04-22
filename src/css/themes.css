@@ -1,3 +1,25 @@
+/* ==== SIMPLE ==== */
+[data-theme="simple"] {
+  --sidebar-width: 200px;
+  --max-page-width: 1800px;
+  --gap-size: 8px;
+  --panel-padding: 0;
+  --panel-background-drop: 0;
+  --panel-inside-shadow: none;
+  --panel-shadows: rgb(0 0 0 / 50%) 3px 3px 1px;
+  --panel-header-margin: 0px;
+  --panel-header-padding: 0 5px 0 5px;
+  --panel-header-text-size: 24px;
+  --panel-content-padding: 6.5px 8px;
+  --title-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
+  --text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
+  --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
+  --button-hover-transform: scale(1.035);
+  --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
+  --button-active-transform: translateY(4px);
+  --banner-border: 0px solid;
+}
+
 [data-color="purple"] {
   /* Text */
   --main-text: #fff;
@@ -15,6 +37,7 @@
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
+  --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Spacing line */
   --spacing-line-color: var(--foreground);
@@ -30,7 +53,9 @@
   --background-image: url("/assets/images/backgrounds/purple.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
-  --background-animation: scroll-background 30s linear infinite;
+  --bg-offset-x: 200px;
+  --bg-offset-y: 200px;
+  --background-animation: scroll-background 6s linear infinite;
   --background-color: #191a22;
 }
 
@@ -51,6 +76,7 @@
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
+  --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Spacing line */
   --spacing-line-color: var(--foreground);
@@ -66,7 +92,9 @@
   --background-image: url("/assets/images/backgrounds/blue.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
-  --background-animation: scroll-background 30s linear infinite;
+  --bg-offset-x: 200px;
+  --bg-offset-y: 200px;
+  --background-animation: scroll-background 6s linear infinite;
   --background-color: #191a22;
 }
 
@@ -87,6 +115,7 @@
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
+  --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Spacing line */
   --spacing-line-color: var(--foreground);
@@ -102,7 +131,9 @@
   --background-image: url("/assets/images/backgrounds/green.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
-  --background-animation: scroll-background 30s linear infinite;
+  --bg-offset-x: 200px;
+  --bg-offset-y: 200px;
+  --background-animation: scroll-background 6s linear infinite;
   --background-color: #191a22;
 }
 
@@ -123,6 +154,7 @@
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
+  --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Spacing line */
   --spacing-line-color: var(--foreground);
@@ -138,7 +170,9 @@
   --background-image: url("/assets/images/backgrounds/dark.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
-  --background-animation: scroll-background 30s linear infinite;
+  --bg-offset-x: 200px;
+  --bg-offset-y: 200px;
+  --background-animation: scroll-background 6s linear infinite;
   --background-color: #191a22;
 }
 
@@ -159,6 +193,7 @@
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
+  --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Spacing line */
   --spacing-line-color: var(--foreground);
@@ -174,6 +209,83 @@
   --background-image: url("/assets/images/backgrounds/red.png");
   --background-repeat: repeat;
   --background-size: 200px 200px;
-  --background-animation: scroll-background 30s linear infinite;
+  --bg-offset-x: 200px;
+  --bg-offset-y: 200px;
+  --background-animation: scroll-background 6s linear infinite;
   --background-color: #191a22;
+}
+
+
+
+/* ==== OMORI ==== */
+[data-theme="omori"] {
+  --sidebar-width: 200px;
+  --max-page-width: 1800px;
+  --gap-size: 10px;
+  --panel-padding: 5px;
+  --panel-background-drop: 0;
+  --panel-inside-shadow: none;
+  --panel-shadows: rgb(0 0 0 / 50%) 3px 3px 1px;
+  --panel-header-margin: 0px;
+  --panel-header-padding: 0 5px 0 5px;
+  --panel-header-text-size: 24px;
+  --panel-content-padding: 6.5px 8px;
+  --title-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
+  --text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
+  --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
+  --button-hover-transform: scale(1.035);
+  --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
+  --button-active-transform: translateY(4px);
+  --banner-border: 2px solid #FBFBFB;
+}
+
+[data-color="darkspace"] {
+  /* Text */
+  --main-text: #FBFBFB;
+  --accent-color: #FBFBFB;
+
+  /* Colors */
+  --background: #111;
+  --foreground: #111;
+
+  /* Panel */
+  --panel-pading: 10px;
+  --panel-color: var(--background);
+  --panel-border: 2px solid var(--main-text);
+  --panel-border-top: 2px solid var(--main-text);
+  --panel-header-background-color: var(--foreground);
+
+  /* Button */
+  --button-color-hover: var(--foreground);
+  --button-border-hover: 2px solid var(--main-text);
+  --button-border: 2px solid #fbfbfb85;
+
+  /* Spacing line */
+  --spacing-line-color: var(--foreground);
+
+  /* Banner */
+  --banner-image: url("/assets/images/banners/omori-darkspace.gif");
+
+  /* Mouse */
+  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
+  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
+
+  /* Background */
+  --background-image: url("/assets/images/backgrounds/omori.jpg");
+  --background-repeat: repeat;
+  --background-size: 1361px 779px;
+  --bg-offset-x: 1361px;
+  --bg-offset-y: 779px;
+  --background-animation: scroll-background 25s linear infinite;
+  --background-color: #191a22;
+}
+
+@keyframes scroll-background {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: var(--bg-offset-x) var(--bg-offset-y);
+  }
 }
