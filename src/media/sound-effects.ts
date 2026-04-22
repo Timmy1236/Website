@@ -118,6 +118,7 @@ function _audioLogic() {
   let releaseBuffer: AudioBuffer;
   _loadSound('/assets/sounds/sfx/mouse/button-release.mp3').then(buffer => { releaseBuffer = buffer; });
 
+  // ==== Mouse ====
   document.addEventListener('mouseover', (event: MouseEvent) => {
     if (!(event.target instanceof HTMLElement)) return;
 
@@ -143,6 +144,15 @@ function _audioLogic() {
     if (!button || button.contains(event.relatedTarget as Node)) return;
 
     _playBuffer(releaseBuffer, 0.5);
+  });
+
+  // ==== Otros buffers =====
+  let keyBuffer: AudioBuffer;
+  _loadSound('/assets/sounds/sfx/key.mp3').then(buffer => { keyBuffer = buffer; });
+
+  // ==== Keyboard ====
+  document.addEventListener('keydown', (event: KeyboardEvent) => {
+    _playBuffer(keyBuffer, 0.5, 0.9 + Math.random() * 0.5);
   });
 }
 
