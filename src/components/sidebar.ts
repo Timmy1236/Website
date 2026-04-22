@@ -40,6 +40,8 @@ function _externalNavigate(url: string) {
 }
 
 // NOTE: SSI Nekoweb no se actualiza al instante cuando entras a la pagina?? Solamente cuando actualizas la pagina???? Aww man :(
+// NOTE2: Creo que el SSI si se actualiza con el tiempo, pero cuenta con un delay extremadamente largo.
+// TODO: Investigar esto mas al fondo... - The Mysterious Fucking Detective.
 function _getNekoStat(type: string) {
   const el = document.getElementById('nekoweb-stats');
   if (el) {
@@ -69,12 +71,13 @@ export default {
             navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
             navBtn("sidebar.navigation.buttons.proyects", false, "/proyects", "Work in Progress!", "proyect"),
             navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
+            navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", null, "achievement"),
             navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
           ]),
         ]),
       ]),
 
-      // 'Data' subsite navigation
+      // 'Data' sub-site navigation
       m(".panel.nav-content", [
         m(".panel-header", [
           m("p", { "data-i18n": "sidebar.data.title" }),

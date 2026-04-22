@@ -1,32 +1,46 @@
 /*
- * achievements-logic.js
- * ----------------------
- * Maneja la lógica de logros de la página.
- * Guarda en LocalStorage cuáles están desbloqueados.
+ * achievements-logic.ts
+ * ---------------------
+ * Maneja la lógica de los logros que son guardados en LocalStorage.
+ * Pero no esencialmente se encarga en ser el trigger para desbloquear cada logro.
 */
+import { showToast } from "../ui/toast";
 
-import { showAchievementToast } from "../ui/achievement-toast";
-
-// === DEFINICIÓN DE LOGROS ===
-// "id"          → clave única.
-// "name"        → nombre visible
-// "description" → descripción del logro
-// "secret"      → si es true, no se muestra la descripción hasta desbloquearlo
+/**
+ * id            → Clave única.
+ * "name"        → Nombre visible en la lista.
+ * "description" → Descripción del logro.
+ * "secret"      → Si es true, el nombre y descripción se ocultaran en la lista.
+ * notify        → Si debería o no de mostrar una notification al ser desbloqueado.
+ */
 export const ACHIEVEMENTS = [
   {
-    id: "explorer_404",
-    name: "¿A dónde vas?",
-    description: "Llegaste a la página 404.",
-    secret: false
+    id: "welcome",
+    name: "Bienvenido",
+    description: "¿Es tu primera vez aquí?",
+    secret: false,
+    notify: false
+  },
+  {
+    id: "oyasumi",
+    name: "Oyasumi",
+    description: "Buenas noches.",
+    secret: true,
+    notify: true
+  },
+  {
+    id: "404",
+    name: "Eh?",
+    description: "Llegaste a la página 404, había un link roto?",
+    secret: false,
+    notify: true
   },
 ];
 
 const STORAGE_KEY = "achievements";
 
 /**
- * Devuelve el objeto completo de logros guardado en LocalStorage.
- * Si no hay nada guardado, devuelve un objeto vacío.
- * @returns {Object}
+ * Devuelve un JSON del LocalStorage.
  */
 function getSavedAchievements() {
   try {
@@ -39,77 +53,54 @@ function getSavedAchievements() {
 }
 
 /**
- * Guarda el objeto de logros en LocalStorage.
- * @param {Object} data
+ * Guarda el JSON en LocalStorage.
  */
 function saveAchievements(data: Object) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (e) {
-    console.warn("achievements-logic.js> Error guardando en LocalStorage:", e);
+    console.error("achievements-logic.js> Error guardando en LocalStorage:", e);
   }
 }
 
 /**
- * Desbloquea un logro por su ID.
- * Si ya estaba desbloqueado, no hace nada.
- * @param {string} id - El ID del logro (ej: "explorer_404")
+ * Desbloquea un logro por su id, primero verifica que ya no fue desbloqueado antes y después muestra una notificación si el logro lo desea con sus datos.
  */
 export function unlockAchievement(id: string) {
-  const achievement = ACHIEVEMENTS.find(a => a.id === id); // find() devuelve el objeto o undefined
-  if (!achievement) {
-    console.warn(`achievements-logic.js> El logro "${id}" no existe.`);
-    return;
-  }
+  const achievement = ACHIEVEMENTS.find(a => a.id === id);
+
+  // Si el logro no existe, ignoramos, si existe pero ya esta desbloqueado, ignoramos.
+  if (!achievement) return console.warn(`%cachievements logic%c Logro: "${id}", no existe!`, "color: #FFD700; background: #282A35;", "color: white");
+  if (isUnlocked(id)) return;
 
   const saved = getSavedAchievements();
-  if (saved[id]?.unlocked) return;
-
-  saved[id] = {
-    unlocked: true,
-    date: new Date().toLocaleDateString("es-ES")
-  };
-
+  saved[id] = { unlocked: true };
   saveAchievements(saved);
 
-  // Mostramos el toast. Si es secreto, no revelamos la descripción todavía.
-  const desc = achievement.secret ? "Logro secreto desbloqueado." : achievement.description;
-  showAchievementToast(achievement.name, desc);
+  if (achievement.notify) {
+    showToast(achievement.name, "achievement", achievement.description);
+  }
 
-  console.log(`%cachievements-logic.js>%c Logro desbloqueado: "${id}"`, "color: #FFD700; background: #282A35;", "color: white");
+  console.log(`%cachievements logic%c Logro desbloqueado: "${id}"`, "color: #FFD700; background: #282A35;", "color: white");
 }
 
 /**
- * Verifica si un logro está desbloqueado.
- * @param {string} id
- * @returns {boolean}
+ * Devuelve un booleano correspondiendo si el logro esta desbloqueado o no.
  */
-export function isUnlocked(id: string) {
+export function isUnlocked(id: string): boolean {
   const saved = getSavedAchievements();
   return saved[id]?.unlocked === true;
 }
 
 /**
- * Devuelve la lista completa de logros, combinando la definición
- * con el estado guardado en LocalStorage.
- *
- * Cada logro en la lista tiene:
- *   - Todo lo de ACHIEVEMENTS (id, name, description, secret)
- *   - unlocked: boolean
- *   - date: string o null
- *
- * @returns {Array}
+ * Devuelve la lista completa de todos los logros en un map
  */
 export function getAchievementsList() {
   const saved = getSavedAchievements();
 
-  return ACHIEVEMENTS.map(achievement => {
-    const savedData = saved[achievement.id];
-
-    return {
-      ...achievement,
-      unlocked: savedData?.unlocked ?? false,
-      date: savedData?.date ?? null
-    };
-  });
+  return ACHIEVEMENTS.map(achievement => ({
+    ...achievement,
+    unlocked: saved[achievement.id]?.unlocked ?? false,
+    date: saved[achievement.id]?.date ?? null
+  }));
 }

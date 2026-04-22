@@ -2,6 +2,7 @@ import m from "mithril";
 import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } from "../pages/settings-ui.ts";
 import { changeLanguage, refreshi18n } from "../core/i18n.js"
 import TabPanel from "../components/tab-panel.js";
+import { isUnlocked } from "../core/achievements-logic.ts";
 
 const ConfigurationPage = {
   oncreate() {
@@ -56,6 +57,7 @@ const ConfigurationPage = {
                     m("option", { value: "simple-red" }, "[FLAT] - Red"),
                     m("option", { value: "simple-green" }, "[FLAT] - Green"),
                     m("option", { value: "simple-blue" }, "[FLAT] - Blue"),
+                    isUnlocked("oyasumi") ? m("option", { value: "omori-darkspace" }, "[FLAT] - OMORI") : null
                   ])
                 ])
               ]),

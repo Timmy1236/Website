@@ -13,7 +13,7 @@ const AchievementsPage = {
     return m(".content", [
       m(".panel", [
         m(".panel-header", [
-          m("p.text-title", "Logros"),
+          m("p.text-title", "Logros (SUPER W.I.P)"),
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
             m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -23,25 +23,11 @@ const AchievementsPage = {
         m(".panel-content", [
           m(".achievements-list",
             list.map((achievement: any) =>
-              m(".achievement-card", {
-                // Agregamos clase "unlocked" si está desbloqueado
-                class: achievement.unlocked ? "unlocked" : ""
-              }, [
+              m(".achievement-card", { class: achievement.unlocked ? "unlocked" : "" }, [
                 m(".achievement-icon", achievement.unlocked ? "★" : "☆"),
-
                 m(".achievement-info", [
-                  m("h2.achievement-name",
-                    // Si es secreto y no está desbloqueado, ocultamos el nombre
-                    achievement.secret && !achievement.unlocked ? "???" : achievement.name
-                  ),
-                  m("p.achievement-desc",
-                    achievement.secret && !achievement.unlocked
-                      ? "Logro secreto. Sigue explorando..."
-                      : achievement.description
-                  ),
-                  achievement.unlocked && achievement.date
-                    ? m("p.achievement-date", `Desbloqueado: ${achievement.date}`)
-                    : null
+                  m("h2.achievement-name", achievement.secret && !achievement.unlocked ? "Logro secreto." : achievement.name),
+                  m("p.achievement-desc", achievement.secret && !achievement.unlocked ? "¿?¿?¿?¿?¿?¿?¿?" : achievement.description)
                 ])
               ])
             )

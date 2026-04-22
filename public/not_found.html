@@ -2,16 +2,15 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
+  <title>ERROR 404 - Timmy</title>
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon.png" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" href="./favicon.png">
-  <title>404 - Timmy</title>
-
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/dist/styles.css">
 </head>
 
 <body>
+  <div id="toast-container"></div>
   <div class="bg"></div>
   <div class="contenedor">
     <a id="title">ERROR 404</a>
@@ -73,10 +72,9 @@
       padding: 3px 8px 0 8px;
     }
   </style>
-
+  <script type="module" src="/dist/app.js"></script>
   <script type="module">
-    import { unlockAchievement } from "/javascript/core/achievements-logic.js";
-    unlockAchievement("explorer_404");
+    window.onPage404();
   </script>
 </body>
 

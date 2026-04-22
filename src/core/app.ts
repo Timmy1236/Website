@@ -1,4 +1,5 @@
 import m from "mithril";
+import { onFirstVisit } from "./achievements-trigger.ts";
 
 // Core
 import "./settings-logic.ts";
@@ -27,6 +28,7 @@ async function startApp() {
   await i18nReady;
 
   if (document.getElementById("app")) {
+    onFirstVisit();
     m.route(document.getElementById("app")!, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
       "/about": { render: () => m(Layout, m(About)) },

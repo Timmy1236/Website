@@ -6,42 +6,6 @@
 @import url("themes/colors.css");
 @import url("effects/noise.css");
 
-/* ==== [ VARIABLES ] ==== */
-:root {
-  /* Layout */
-  --sidebar-width: 200px;
-  --max-page-width: 1800px;
-  --gap-size: 8px;
-
-  /* Panels */
-  --panel-padding: 0;
-  --panel-background-drop: 0;
-  --panel-inside-shadow: none;
-  --panel-border-top: 0;
-  --panel-shadows: rgb(0 0 0 / 50%) 3px 3px 1px;
-  
-  /* Panel header */
-  --panel-header-margin: 0px;
-  --panel-header-padding: 0 5px 0 5px;
-  --panel-header-text-size: 24px;
-
-  /* Panel content */
-  --panel-content-padding: 6.5px 8px;
-
-  /* Title */
-  --title-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
-  --text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
-
-  /* Button animation */
-  --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
-  --button-hover-transform: scale(1.035);
-  --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
-  --button-active-transform: translateY(4px);
-
-  /* Banner */
-  --banner-border: 0px solid;
-}
-
 /* ==== [ TIPOGRAFÍA ] === */
 @font-face {
   font-family: "VT323";
@@ -429,7 +393,7 @@ ul {
   display: inline-flex;
   width: 100%;
   align-items: center;
-  border: 2px rgb(0 0 0 / 40%) solid;
+  border: var(--button-border);
   background-color: rgb(0 0 0 / 10%);
   padding: 2px 0 2px 6px;
   font-size: clamp(1rem, 1.50vw, 1.50rem);
@@ -617,16 +581,6 @@ ul {
   }
 }
 
-@keyframes scroll-background {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 1000px 1000px;
-  }
-}
-
 @keyframes wave {
   0%, 100% {
     transform: translateY(0);
@@ -685,12 +639,12 @@ ul {
 
 .achievement-card.unlocked {
   opacity: 1;
-  border-color: var(--accent-color);
+  border-color: #EEDC8B;
 }
 
 .achievement-icon {
   font-size: 32px;
-  color: gold;
+  color: #EEDC8B;
 }
 
 .achievement-date {
