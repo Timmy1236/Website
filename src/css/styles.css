@@ -654,12 +654,15 @@ ul {
 
 /* ==== TOAST (NOTIFICATIONS) ==== */
 .toast {
+  --toast-color: #8B9DEE;
+  --toast-icon: "ⓘ ";
+
   position: relative;
-  right: -350px;
+  right: -390px;
   bottom: 20px;
-  width: 280px;
+  width: 340px;
   background: var(--background);
-  border: 3px solid var(--foreground);
+  border: 3px solid var(--toast-color);
   box-shadow: var(--panel-shadows);
   padding: 10px 14px;
   z-index: 9999;
@@ -668,39 +671,34 @@ ul {
   text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
 }
 
+.toast[data-type="achievement"] {
+  --toast-color: #EEDC8B;
+  --toast-icon: "★ ";
+}
+
+.toast[data-type="error"] {
+  --toast-color: #F55;
+  --toast-icon: "⚠ ";
+}
+
+.toast[data-type="affirmative"] {
+  --toast-color: #55ff96;
+  --toast-icon: "✔ ";
+}
+
 .toast-name {
   margin: 0;
   font-size: 24px;
-  margin-bottom: 5px;
+  vertical-align: center;
+  color: var(--toast-color);
+}
+
+.toast-name::before {
+  content: var(--toast-icon);
 }
 
 .toast-desc {
-  margin: 0;
-  font-size: 20px;
-}
-
-#toast-info {
-  border: 3px solid #8B9DEE;
-}
-
-#toast-achievement{
-  border: 3px solid #EEDC8B;
-}
-
-#toast-info .toast-name::before  {
-  content: "ⓘ ";
-}
-
-#toast-achievement .toast-name::before  {
-  content: "★ ";
-}
-
-#toast-info .toast-name  {
-  color: #8B9DEE;
-}
-
-#toast-achievement .toast-name  {
-  color: #EEDC8B;
+  font-size: 22px;
 }
 
 .toast.visible {
@@ -708,7 +706,7 @@ ul {
 }
 
 .toast.hiding {
-  right: -320px;
+  right: -390px;
 }
 
 #toast-container {
