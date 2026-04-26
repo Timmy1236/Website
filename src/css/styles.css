@@ -354,12 +354,14 @@ ul {
   flex-direction: column;
   gap: var(--gap-size);
   align-self: stretch;
+  flex-shrink: 0;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: var(--gap-size);
+  min-width: 0;
 }
 
 .content-column {
@@ -367,6 +369,8 @@ ul {
   opacity: 1;
   transform: translateY(0);
   flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .layout-content:not(:has(.sidebar)) .content-column {
