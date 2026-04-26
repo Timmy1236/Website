@@ -96,10 +96,15 @@
   "links": {
     "credits": {
       "title": "Créditos (W.I.P)"
+    },
+    "buttonWall": {
+      "title": "Muro de Botones",
+      "list": {
+        "neighbors": "Nekoweb Vecinos",
+        "likes": "Sitios Geniales",
+        "myButton": "Yo"
+      }
     }
-  },
-  "neighbors": {
-    "title": "Vecinos"
   },
   "pages": {
     "others": {

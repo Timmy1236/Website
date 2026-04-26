@@ -428,18 +428,16 @@ ul {
   justify-content: center;
   gap: 15px;
   padding: 10px 0 0; 
-  image-rendering: crisp-edges;
-  
+  flex-wrap: wrap;
 }
 
 .neighbors a {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725);
-  z-index: 1;
-  
 }
 
 .neighbors a:hover {
-  transform: translateY(-3px) scale(1.15);
+  z-index: 99999;
+  transform: translateY(-3px) scale(1.25);
   filter: drop-shadow(0 3px 2px rgb(0 0 0 / 25%));
 }
 
@@ -718,4 +716,63 @@ ul {
   gap: 10px;
   z-index: 9999;
   pointer-events: none;
+}
+
+
+/* ==== Button Overlay ==== */
+#button-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: rgb(0 0 0 / 40%);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+ 
+#button-overlay.visible {
+  opacity: 1;
+}
+
+#button-overlay .panel {
+  width: 480px;
+  pointer-events: none;
+}
+ 
+#button-overlay .panel-header p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+ 
+#button-overlay .button-screenshot {
+  position: relative;
+  width: 100%;
+  padding-top: 62.5%;
+  overflow: hidden;
+}
+ 
+#button-overlay .button-screenshot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+#button-overlay .button-text {
+  margin-top: 10px;
+  color: var(--main-text);
+  font-size: 22px;
+  white-space: wrap;
+  overflow: hidden;
+}
 }

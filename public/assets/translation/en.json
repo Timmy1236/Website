@@ -96,10 +96,15 @@
   "links": {
     "credits": {
       "title": "Credits (W.I.P)"
+    },
+    "buttonWall": {
+      "title": "Button Wall",
+      "list": {
+        "neighbors": "Nekoweb Neighbors",
+        "likes": "Cool Websites",
+        "myButton": "Me"
+      }
     }
-  },
-  "neighbors": {
-    "title": "Neighbors"
   },
   "pages": {
     "others": {
