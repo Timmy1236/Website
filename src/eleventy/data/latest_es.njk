@@ -1,0 +1,19 @@
+---
+permalink: /api/latest_es.json
+eleventyExcludeFromCollections: true
+---
+
+{
+  "blog": {
+    "title": "{{ collections.blog_es[0].data.title }}",
+    "url": "{{ collections.blog_es[0].url }}",
+    "date": "{{ collections.blog_es[0].date | readableDate }}",
+    "description": "{{ collections.blog_es[0].data.description }}"
+  },
+  "changelog": {
+    "title": "{{ collections.changelog_es[0].data.title }}",
+    "url": "{{ collections.changelog_es[0].url }}",
+    "date": "{{ collections.changelog_es[0].date | readableDate }}",
+    "description": "{{ collections.changelog_es[0].data.description }}"
+  }
+}

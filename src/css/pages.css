@@ -4,6 +4,7 @@
   --foreground: #756e92;
   --text: #fff;
   --accent: #87F3A9;
+  --accent2: #68b982d5;
 }
 
 * {
@@ -85,18 +86,39 @@ p {
   color: white;
   font-size: 3em;
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .head-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .head-links a {
-  color: var(--accent);
+  color: var(--accent2);
   text-decoration: none;
   font-size: 24px;
+}
+
+.head-links a.active {
+  color: var(--accent) !important
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  padding: 0 5px;
+  color: #6C6687;
 }
 
 /* ==== [ HEAD ] === */

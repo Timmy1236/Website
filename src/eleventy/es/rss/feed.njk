@@ -1,0 +1,24 @@
+---
+permalink: es/rss/feed.xml
+eleventyExcludeFromCollections: true
+---
+
+<rss version="2.0">
+<script src="https://www.rss.style/js/rss-style.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+<channel>
+  <title>Timmy Feed - Español</title>
+  <link>https://timmy.nekoweb.org/content/es/</link>
+  <description>Actualizaciones del blog y changelog en español</description>
+  <language>es-es</language>
+
+  {% for post in collections.combinedFeed_es %}
+  <item>
+    <title>{{ post.data.title }}</title>
+    <link>https://timmy.nekoweb.org/content{{ post.url }}</link>
+    <guid>https://timmy.nekoweb.org/content{{ post.url }}</guid>
+    <pubDate>{{ post.date | rssDate }}</pubDate>
+    <description>{{ post.data.description }}</description>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

@@ -1,4 +1,5 @@
 import m from "mithril";
+import { getSetting } from "../core/settings-logic";
 
 let isTransitioning: boolean = false;
 let currentPath: string = "/home";
@@ -33,6 +34,22 @@ function _navigate(path: string) {
     m.route.set(path);
     requestAnimationFrame(() => { mainColumn.classList.remove("exit"); isTransitioning = false; });
   }, 350);
+}
+
+function _dataButtons() {
+  const local = getSetting("preferred-language") || "en";
+
+  if (local === "es") {
+    return [
+      navBtn("sidebar.data.buttons.blog", true, "/content/es/blog/index.html", null, "doc-text"),
+      navBtn("sidebar.data.buttons.changelog", true, "/content/es/changelog/index.html", null, "doc-changelog"),
+    ];
+  } else {
+    return [
+      navBtn("sidebar.data.buttons.blog", true, "/content/en/blog/index.html", null, "doc-text"),
+      navBtn("sidebar.data.buttons.changelog", true, "/content/en/changelog/index.html", null, "doc-changelog"),
+    ];
+  }
 }
 
 function _externalNavigate(url: string) {
@@ -87,9 +104,7 @@ export default {
         ]),
         m(".panel-content", [
           m(".sidebar-links-container", [
-            navBtn("sidebar.data.buttons.sitemap", true, "/content/sitemap/index.html", "Only in Spanish!", "doc"),
-            navBtn("sidebar.data.buttons.blog", true, "/content/blog/index.html", "Only in Spanish!", "doc-text"),
-            navBtn("sidebar.data.buttons.changelog", true, "/content/changelog/index.html", "Only in Spanish!", "doc-changelog"),
+            ..._dataButtons()
           ]),
         ]),
       ]),
