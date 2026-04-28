@@ -2,6 +2,7 @@ import m from "mithril";
 import { loadDiscordProfile } from "../pages/discord.js";
 import { initPanel } from "../ui/panel-buttons.js";
 import { refreshi18n } from "../core/i18n.js";
+import { sendForm } from "../pages/form.ts";
 
 const AboutMePage = {
   oncreate() {
@@ -66,6 +67,35 @@ const AboutMePage = {
         ])
 
       ]),
+
+      m(".panel", [
+          m(".panel-header",
+            m("p.text-title", "Form"),
+
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+              m("button.panel-button", { "data-panel-action": "close" }, "X")
+            ])
+          ),
+
+        m(".panel-content", [
+          m(".contact", [
+            m("p", "Contact"),
+            m("input#contact", { type: "text", placeholder: "A way i can contact you (optional)" }),
+          ]),
+
+          m("br"),
+
+          m(".message", [
+            m("p", "Message"),
+            m("textarea.message-form#message"),
+          ]),
+
+          m("br"),
+
+          m("button.button", { onclick: sendForm }, "Enviar")
+          ])
+        ]),
 
       m(".panel", { "data-default": "closed" }, [
         m(".panel-header",
