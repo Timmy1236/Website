@@ -1,0 +1,11 @@
+.spacing-line {
+  display: flex;
+  margin: var(--spacing-margin) 0;
+  width: 100%;
+  padding: 1px;
+  background: var(--spacing-line-color)
+}
+
+.spacing-line.sidebar {
+  margin: 10px 0;
+}

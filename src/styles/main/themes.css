@@ -8,7 +8,7 @@
   --panel-inside-shadow: none;
   --panel-shadows: rgb(0 0 0 / 50%) 3px 3px 1px;
   --panel-header-margin: 0px;
-  --panel-header-padding: 0 5px 0 5px;
+  --panel-header-padding: 0 2px 0 4px;
   --panel-header-text-size: 24px;
   --panel-content-padding: 6.5px 8px;
   --title-shadow: 3px 2px 1px rgb(0 0 0 / 30%);

@@ -118,7 +118,7 @@ const Others = {
         ]),
         m(".panel-content", [
           m("h2", { "data-i18n": "links.buttonWall.list.neighbors" }),
-          m(".neighbors",
+          m(".website-buttons",
             neighborSites.map((site) =>
               m("a", {
                 href: site.href,
@@ -132,7 +132,7 @@ const Others = {
           ),
 
           m("h2", { "data-i18n": "links.buttonWall.list.likes" }),
-          m(".neighbors",
+          m(".website-buttons",
             likesSite.map((site) =>
               m("a", {
                 href: site.href,
@@ -146,7 +146,7 @@ const Others = {
           ),
 
           m("h2", { "data-i18n": "links.buttonWall.list.myButton" }),
-          m(".neighbors",
+          m(".website-buttons",
             m("a", {
               onmouseenter: (e: MouseEvent) =>
                 showButtonOverlay(MyButton, e.currentTarget as HTMLElement),

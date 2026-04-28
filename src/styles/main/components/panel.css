@@ -1,0 +1,111 @@
+.panel {
+  background-color: var(--panel-color);
+  padding: var(--panel-padding);
+  border: var(--panel-border);
+  border-top: var(--panel-border-top);
+  box-shadow: var(--panel-shadows);
+  backdrop-filter: blur(var(--panel-background-drop));
+}
+
+.panel-header {
+  background-color: var(--panel-header-background-color);
+  padding: var(--panel-header-padding);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--panel-header-margin);
+  justify-content: space-between;
+}
+
+.panel-header p {
+  color: var(--accent-color);
+}
+
+.panel-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.panel-button {
+  background-color: var(--background);
+  border: none;
+  padding: 10px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.panel-button:hover {
+  background-color: #ffffff25;
+}
+
+.panel-content {
+  max-height: 1000px;
+  overflow: hidden auto;
+  padding: var(--panel-content-padding);
+}
+
+.panel-content.collapsed {
+  display: none;
+}
+
+.panel-content.tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+
+/* ====[ PANEL GRID ]==== */
+.panel-grid-2 {
+  display: grid;
+  grid-template-columns: var(--panel-col-1, 1fr) var(--panel-col-2, 1fr);
+  gap: var(--gap-size);
+  align-items: stretch;
+}
+
+.panel-grid-2:has(> .panel:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.panel-grid-2>.panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-grid-2>.panel .panel-content {
+  flex: 1;
+}
+
+
+/* ==== [ PANEL TABS ] ==== */
+.panel-tabs {
+  display: flex;
+}
+
+.panel-tab {
+  padding: 1px 8px;
+  cursor: pointer;
+  background: var(--foreground);
+  color: var(--text-color);
+  opacity: 0.45;
+  transition: 0.2s;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  border: 0 solid transparent;
+}
+
+.panel-tab:hover {
+  opacity: 1;
+}
+
+.panel-tab.active {
+  opacity: 1;
+  background-color: var(--foreground);
+}

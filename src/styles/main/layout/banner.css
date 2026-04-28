@@ -1,0 +1,40 @@
+.banner-panel {
+  width: 100%;
+  margin: 0 0 var(--gap-size);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0;
+  border: var(--banner-border);
+  box-shadow: var(--panel-shadows);
+  background-color: var(--panel-color);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  content: var(--banner-image);
+}
+
+.banner-title {
+  position: absolute;
+  top: 125px;
+  left: 10px;
+  color: white;
+  font-size: 56px;
+  text-shadow: 3px 2px 1px rgb(0 0 0 / 50%);
+}
+
+.wave-text span {
+  display: inline-block;
+  font-size: 4rem;
+  animation: wave 2s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}

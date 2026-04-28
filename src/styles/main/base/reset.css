@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 110%;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--main-text);
+  font-family: "VT323", monospace;
+  text-shadow: var(--text-shadow);
+  background-image: var(--background-image);
+  background-repeat: var(--background-repeat);
+  background-size: var(--background-size);
+  animation: var(--background-animation), fade-in 1s ease forwards;
+  background-attachment: fixed;
+  background-position: bottom;
+  cursor: var(--normal-mouse-image), auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, label, a, span  {
+  font-size: clamp(1rem, 1.75vw + 0.25rem, 1.60rem);
+  color: var(--main-text)
+}
+
+button, a:hover {
+  cursor: var(--hover-mouse-image), pointer;
+}
+
+.readable-font * {
+  font-family: monospace !important;
+  line-height: 150%;
+  font-size: 20px;
+}
+
+h1 {
+  font-weight: normal;
+  color: var(--accent-color);
+  font-family: "VT323", sans-serif;
+  text-shadow: var(--text-shadow);
+  font-size: var(--panel-header-text-size);
+}
+
+h2 {
+  font-weight: normal;
+  color: var(--accent-color);
+  font-family: "VT323", monospace;
+  border-bottom: 3px dotted var(--foreground);
+}
+
+::selection {
+  background: var(--foreground);
+  color: #fff;
+}
+
+input {
+  max-width: 500px;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: white;
+  border: 2px rgb(0 0 0 / 40%) solid;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 16px;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+  max-width: 500px;
+  max-height: 300px;
+  min-width: 200px;
+  min-height: 100px;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: white;
+  border: 2px rgb(0 0 0 / 40%) solid;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 16px;
+}
+
+ul {
+  padding: 0 0 0 14px;
+}

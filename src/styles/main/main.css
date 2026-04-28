@@ -1,0 +1,53 @@
+/* Imports Effects */
+@import url("./effects/noise.css");
+@import url("./effects/vignette.css");
+@import url("./effects/animations.css");
+
+/* Imports Components */
+@import url("./components/panel.css");
+@import url("./components/buttons.css");
+@import url("./components/toast.css");
+@import url("./components/link.css");
+@import url("./components/tooltip.css");
+@import url("./components/spacing-line.css");
+@import url("./components/card.css");
+
+/* Imports Layout */
+@import url("./layout/layout.css");
+@import url("./layout/banner.css");
+
+/* Imports Pages */
+@import url("./pages/links.css");
+@import url("./pages/proyects.css");
+@import url("./pages/about-me.css");
+@import url("./pages/configuration.css");
+@import url("./pages/achievements.css");
+
+/* Imports Base */
+@import url("./base/reset.css");
+
+/* Imports */
+@import url("themes.css");
+
+/* ==== [ TIPOGRAFÍA ] === */
+@font-face {
+  font-family: "VT323";
+  src: url("/assets/fonts/VT323.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+.message-form {
+  max-width: 500px;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  white-space: pre-wrap;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 0;
+  color: white;
+  border: 2px rgb(0 0 0 / 40%) solid;
+  background-color: rgb(0 0 0 / 10%);
+  font-size: 16px;
+}

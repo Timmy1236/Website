@@ -37,3 +37,11 @@ select:open {
   display: flex;
   gap: 10px;
 }
+
+.buttons-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}

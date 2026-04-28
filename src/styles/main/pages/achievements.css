@@ -1,0 +1,30 @@
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px;
+  border: 2px solid rgb(0 0 0 / 40%);
+  background: rgb(0 0 0 / 10%);
+  opacity: 0.5;
+}
+
+.achievement-card.unlocked {
+  opacity: 1;
+  border-color: #EEDC8B;
+}
+
+.achievement-icon {
+  font-size: 32px;
+  color: #EEDC8B;
+}
+
+.achievement-date {
+  font-size: 14px;
+  opacity: 0.7;
+}
