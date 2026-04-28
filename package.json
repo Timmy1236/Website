@@ -41,7 +41,7 @@
     "@types/mithril": "^2.2.8",
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
-    "stylelint": "^17.9.0",
+    "stylelint": "^17.9.1",
     "stylelint-config-standard": "^40.0.0"
   },
   "dependencies": {
