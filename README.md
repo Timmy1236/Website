@@ -25,7 +25,7 @@ npm run build   # Compila la página una vez.
 npm run dev     # Compila la página por cada vez que realizas un cambio y lo guardas.
 ```
 
-3. Enciende un servidor para visualizar la pagina. Puedes usar la extension: [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) de vscode, o también puedes usar Python.
+4. Enciende un servidor para visualizar la pagina. Puedes usar la extension: [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) de vscode, o también puedes usar Python.
 ```bash
 cd public && python -m http.server 8000
 ```
