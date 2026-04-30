@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgb(25 25 25);
-  border: 2px solid rgb(55 55 55);
+  background: var(--background);
+  border: 2px solid var(--foreground);
   color: white;
   padding: 6px 10px;
   white-space: nowrap;
