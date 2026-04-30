@@ -4,7 +4,7 @@
  * Este si se encarga de triggear cada logro :P
 */
 import { showToast } from "../ui/toast.js";
-import { unlockAchievement } from "./achievements-logic.js";
+import { unlockAchievement } from "../core/achievements-logic.js";
 
 let typedWord = "";
 
@@ -12,6 +12,7 @@ document.addEventListener('keydown', (event) => {
   const key = event.key.toLowerCase();
   typedWord += key;
 
+  // El máximo de registro son 10 caracteres, esto para evitar que se vaya guardando cada tecla pulsada.
   if (typedWord.length > 10) {
     typedWord = typedWord.slice(-10);
   }

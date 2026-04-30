@@ -1,4 +1,4 @@
-import { getSetting } from "../../core/settings-logic";
+import { getSetting } from "../../shared/core/settings-logic";
 
 export async function getLatest() {
   try {

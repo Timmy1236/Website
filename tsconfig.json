@@ -7,9 +7,6 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*",
-    "src/core",
-    "src/spa",
-    "src/ui"
+    "src/app/**/*",
   ]
 }

@@ -1,6 +1,6 @@
 import m from "mithril";
-import { getAchievementsList } from "../core/achievements-logic.ts";
-import { refreshi18n } from "../core/i18n.js";
+import { getAchievementsList } from "../../shared/core/achievements-logic.ts";
+import { refreshi18n } from "../../shared/core/i18n.js";
 
 const AchievementsPage = {
   oncreate() {

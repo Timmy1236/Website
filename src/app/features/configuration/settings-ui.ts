@@ -3,8 +3,8 @@
   --------------
   - Es el que controla el UI y guardar las configuraciones en el LocalStorage
 */
-import { SETTING_KEYS, SettingKey } from "../core/settings-logic.js";
-import { initDefaultSettings, saveMapSettings, getMapSetting } from "../core/settings-logic.js";
+import { SETTING_KEYS, SettingKey } from "../../shared/core/settings-logic.js";
+import { initDefaultSettings, saveMapSettings, getMapSetting } from "../../shared/core/settings-logic.js";
 export let settingsMap = new Map<SettingKey, string>();
 let initialized = false;
 

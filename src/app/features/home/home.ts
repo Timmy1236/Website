@@ -1,6 +1,6 @@
 import m from "mithril";
-import { getLatest, getLastCommit } from "../pages/home/get-latest.ts";
-import { refreshi18n } from "../core/i18n.js";
+import { getLatest, getLastCommit } from "./latest.ts";
+import { refreshi18n } from "../../shared/core/i18n.js";
 
 export interface Latest {
   blog: Log;

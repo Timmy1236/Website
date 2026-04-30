@@ -1,8 +1,8 @@
 import m from "mithril";
-import { initImageOverlay } from "../ui/image-overlay.js";
-import { refreshi18n } from "../core/i18n.js";
+import { initImageOverlay } from "../../shared/ui/image-overlay.js";
+import { refreshi18n } from "../../shared/core/i18n.js";
 
-const Home = {
+const Project = {
   oncreate() {
     refreshi18n();
     initImageOverlay();
@@ -115,4 +115,4 @@ const Home = {
   }
 };
 
-export default Home;
+export default Project;

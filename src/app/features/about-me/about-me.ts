@@ -1,8 +1,8 @@
 import m from "mithril";
-import { loadDiscordProfile } from "../pages/discord.js";
-import { initPanel } from "../ui/panel-buttons.js";
-import { refreshi18n } from "../core/i18n.js";
-import { sendForm } from "../pages/form.ts";
+import { loadDiscordProfile } from "./discord.js";
+import { initPanel } from "../../shared/ui/panel-buttons.js";
+import { refreshi18n } from "../../shared/core/i18n.js";
+import { sendForm } from "../../shared/handlers/form.js";
 
 const AboutMePage = {
   oncreate() {
@@ -69,14 +69,14 @@ const AboutMePage = {
       ]),
 
       m(".panel", [
-          m(".panel-header",
-            m("p.text-title", "Form"),
+        m(".panel-header",
+          m("p.text-title", "Form"),
 
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-              m("button.panel-button", { "data-panel-action": "close" }, "X")
-            ])
-          ),
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ),
 
         m(".panel-content", [
           m(".contact", [
@@ -94,8 +94,8 @@ const AboutMePage = {
           m("br"),
 
           m("button.button", { onclick: sendForm }, "Enviar")
-          ])
-        ]),
+        ])
+      ]),
 
       m(".panel", { "data-default": "closed" }, [
         m(".panel-header",

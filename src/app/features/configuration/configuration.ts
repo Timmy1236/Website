@@ -1,8 +1,8 @@
 import m from "mithril";
-import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } from "../pages/settings-ui.ts";
-import { changeLanguage, refreshi18n } from "../core/i18n.js"
-import TabPanel from "../components/tab-panel.js";
-import { isUnlocked } from "../core/achievements-logic.ts";
+import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } from "./settings-ui.ts";
+import { changeLanguage, refreshi18n } from "../../shared/core/i18n.js"
+import TabPanel from "../../shared/components/tab-panel.ts";
+import { isUnlocked } from "../../shared/core/achievements-logic.ts";
 
 const ConfigurationPage = {
   oncreate() {
