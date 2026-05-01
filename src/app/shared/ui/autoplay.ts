@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!musicEnabled) return;
   const audio = new Audio();
 
+  audio.addEventListener('ended', function () {
+    _playSong();
+  }, false);
+
   /**
    * Reproduce una canción aleatoria de un array con un toast mostrando que canción se reproduce, si termina el audio, hace un loop.
    */
@@ -29,10 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
     showToast("Playing...", "info", songName ? songName : "No name?", false)
-
-    audio.addEventListener('ended', function () {
-      _playSong();
-    }, false);
   }
 
   document.body.addEventListener('click', function () {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       playing = true;
       _playSong();
     }
-  });
+  }, { once: true });
 
   /**
    * En caso que el usuario ignore la pagina, pausaremos la música para que no reproduzca en segundo plano y sea molesto, si vuelve, reproducimos de vuelta.
