@@ -3,30 +3,48 @@
 * -----------
 * Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
 */
-
 import { getMapSetting } from "../core/settings-logic";
+import { showToast } from "./toast";
 
-let volume: number = 0.25;
 let playing: boolean = false;
+
 const musicEnabled: boolean = getMapSetting("backgroundMusic") === "true";
+const songsArray: string[] = ["./assets/sounds/music/Store_Track_1.ogg", "./assets/sounds/music/Simpsons_Hotline.ogg"]
+const volume: number = 0.25
 
 document.addEventListener("DOMContentLoaded", function () {
   if (!musicEnabled) return;
+  const audio = new Audio();
 
-  const audio = new Audio(`./assets/sounds/music/Store-Track.ogg`);
-  audio.volume = volume;
+  /**
+   * Reproduce una canción aleatoria de un array con un toast mostrando que canción se reproduce, si termina el audio, hace un loop.
+   */
+  function _playSong(): void {
+    var songSrc = songsArray[Math.floor(Math.random() * songsArray.length)];
+    if (!songSrc) return;
+
+    audio.src = songSrc;
+    audio.volume = volume;
+    audio.play();
+
+    const songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
+    showToast("Playing...", "info", songName ? songName : "No name?", false)
+
+    audio.addEventListener('ended', function () {
+      _playSong();
+    }, false);
+  }
 
   document.body.addEventListener('click', function () {
-    playing = true;
-    audio.play();
+    if (playing === false) {
+      playing = true;
+      _playSong();
+    }
   });
 
-  // Loop cuando termina el audio.
-  audio.addEventListener('ended', function () {
-    audio.currentTime = 0;
-    audio.play();
-  }, false);
-
+  /**
+   * En caso que el usuario ignore la pagina, pausaremos la música para que no reproduzca en segundo plano y sea molesto, si vuelve, reproducimos de vuelta.
+   */
   function handleAudioState() {
     if (document.hasFocus() && !audio.muted && playing) {
       if (audio.paused) {
