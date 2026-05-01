@@ -7,6 +7,7 @@ import { getMapSetting } from "../core/settings-logic";
 import { showToast } from "./toast";
 
 let playing: boolean = false;
+let lastSong: string;
 
 const musicEnabled: boolean = getMapSetting("backgroundMusic") === "true";
 const songsArray: string[] = ["./assets/sounds/music/Store_Track_1.ogg", "./assets/sounds/music/Simpsons_Hotline.ogg"]
@@ -24,15 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
    * Reproduce una canción aleatoria de un array con un toast mostrando que canción se reproduce, si termina el audio, hace un loop.
    */
   function _playSong(): void {
-    var songSrc = songsArray[Math.floor(Math.random() * songsArray.length)];
+    var songSrc: string = songsArray[Math.floor(Math.random() * songsArray.length)];
     if (!songSrc) return;
 
     audio.src = songSrc;
     audio.volume = volume;
     audio.play();
 
-    const songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
-    showToast("Playing...", "info", songName ? songName : "No name?", false)
+    if (lastSong !== songSrc) {
+      const songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
+      showToast("Playing...", "info", songName ? songName : "No name?", false)
+    }
+
+    lastSong = songSrc;
   }
 
   document.body.addEventListener('click', function () {
