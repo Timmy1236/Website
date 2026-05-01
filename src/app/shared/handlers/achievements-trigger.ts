@@ -22,7 +22,7 @@ document.addEventListener('keydown', (event) => {
     onSecretInput("oyasumi");
     typedWord = "";
   } else if (typedWord.includes("totest")) {
-    showToast("Test", "info", "Esto es una prueba de las notificaciones toast.");
+    showToast("Test", "info", "Esto es una prueba de las notificaciones toast.", true);
     typedWord = "";
   }
 });

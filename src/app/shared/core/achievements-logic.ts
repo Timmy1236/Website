@@ -78,7 +78,7 @@ export function unlockAchievement(id: string) {
   saveAchievements(saved);
 
   if (achievement.notify) {
-    showToast(achievement.name, "achievement", achievement.description);
+    showToast(achievement.name, "achievement", achievement.description, true);
   }
 
   console.log(`%cachievements logic%c Logro desbloqueado: "${id}"`, "color: #FFD700; background: #282A35;", "color: white");

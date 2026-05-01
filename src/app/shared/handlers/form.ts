@@ -14,9 +14,9 @@ export async function sendForm() {
   const contact = contactElement.value;
   const message = messageElement.value;
 
-  if (!message) return showToast("Error", "error", "You can't send a empty message.");
-  if (message.length == 1) return showToast("Error", "error", "cmon dawg, the message can't be literally a 1 single character.");
-  if (message.length > 1000) return showToast("Error", "error", "Message to long. Max: 1000 Characters.");
+  if (!message) return showToast("Error", "error", "You can't send a empty message.", true);
+  if (message.length == 1) return showToast("Error", "error", "cmon dawg, the message can't be literally a 1 single character.", true);
+  if (message.length > 1000) return showToast("Error", "error", "Message to long. Max: 1000 Characters.", true);
 
   const response = await fetch("https://shy-haze-c01a.timmy1236.workers.dev", {
     method: "POST",
@@ -27,10 +27,10 @@ export async function sendForm() {
   const data = await response.json();
 
   if (!response.ok) {
-    showToast("Error", "error", data.error)
+    showToast("Error", "error", data.error, true)
     return;
   } else {
-    showToast("Enviado", "affirmative", "Message sended!")
+    showToast("Enviado", "affirmative", "Message sended!", true)
     contactElement.value = "";
     messageElement.value = "";
   }

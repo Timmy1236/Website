@@ -7,7 +7,7 @@ type toastType = "info" | "achievement" | "error" | "affirmative"
 const achievementAudio = new Audio('/assets/sounds/sfx/achievement.mp3');
 const stack = document.getElementById("toast-container");
 
-export function showToast(name: string, type: toastType, description: string) {
+export function showToast(name: string, type: toastType, description: string, playSound: boolean) {
   if (!stack) {
     return console.error("%ctoast%c Error, toast-container no encontrado?", "color: #ff4040; background: #282A35;", "color: white");
   }
@@ -22,10 +22,12 @@ export function showToast(name: string, type: toastType, description: string) {
 
   stack.appendChild(toast);
 
-  if (!achievementAudio.paused) {
-    achievementAudio.currentTime = 0;
-  } else {
-    achievementAudio.play();
+  if (playSound) {
+    if (!achievementAudio.paused) {
+      achievementAudio.currentTime = 0;
+    } else {
+      achievementAudio.play();
+    }
   }
 
   setTimeout(() => toast.classList.add("visible"), 50);
