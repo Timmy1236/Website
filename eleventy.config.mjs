@@ -1,8 +1,8 @@
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   const locales = ["es", "en"];
 
   // Globales
-  // ========
+  // --------
   eleventyConfig.addGlobalData("locales", locales);
 
   eleventyConfig.addGlobalData("eleventyComputed", {
@@ -16,34 +16,19 @@ module.exports = function (eleventyConfig) {
   });
 
 
-  // Collection combinado (Para el RSS)
-  // ==================================
-  eleventyConfig.addCollection("combinedFeed", (collection) => {
-    const blog = collection.getFilteredByGlob("src/eleventy/*/blog/*.md")
-      .filter(item => item.data.title !== "Blog");
-    const changelog = collection.getFilteredByGlob("src/eleventy/*/changelog/*.md")
-      .filter(item => item.data.title !== "Changelog");
-
-    const combined = [...blog, ...changelog];
-
-    combined.sort((a, b) => b.date - a.date);
-
-    return combined;
-  });
-
+  // Collection combinado
+  // --------------------
+  // Combinado - Español
   eleventyConfig.addCollection("combinedFeed_es", (collection) => {
-    const blog = collection.getFilteredByGlob("src/eleventy/es/blog/*.md")
-      .filter(item => item.data.title !== "Blog");
-    const changelog = collection.getFilteredByGlob("src/eleventy/es/changelog/*.md")
-      .filter(item => item.data.title !== "Changelog");
-
+    const blog = collection.getFilteredByGlob("src/eleventy/es/blog/*.md").filter(item => item.data.title !== "Blog");
+    const changelog = collection.getFilteredByGlob("src/eleventy/es/changelog/*.md").filter(item => item.data.title !== "Changelog");
     const combined = [...blog, ...changelog];
 
     combined.sort((a, b) => b.date - a.date);
 
     return combined;
   });
-
+  // Combinado - Ingles
   eleventyConfig.addCollection("combinedFeed_en", (collection) => {
     const blog = collection.getFilteredByGlob("src/eleventy/en/blog/*.md").filter(item => item.data.title !== "Blog");
     const changelog = collection.getFilteredByGlob("src/eleventy/en/changelog/*.md").filter(item => item.data.title !== "Changelog");
@@ -56,45 +41,45 @@ module.exports = function (eleventyConfig) {
 
 
   // Collections generales.
-  // ======================
+  // ----------------------
   eleventyConfig.addCollection("blog", collection =>
     collection
       .getFilteredByGlob("src/eleventy/*/blog/*.md")
-      .filter(item => item.data.title !== "Blog") // Ignoramos el index.
+      .filter(item => item.data.title !== "Blog")
       .sort((a, b) => b.date - a.date)
   );
-
   eleventyConfig.addCollection("changelog", collection =>
     collection
       .getFilteredByGlob("src/eleventy/*/changelog/*.md")
-      .filter(item => item.data.title !== "Changelog") // Ignoramos el index.
+      .filter(item => item.data.title !== "Changelog")
       .sort((a, b) => b.date - a.date)
   );
 
 
   // Collections separado por idiomas
-  // ================================
+  // --------------------------------
+  // Blog - Español
   eleventyConfig.addCollection("blog_es", collection =>
     collection
       .getFilteredByGlob("src/eleventy/es/blog/*.md")
       .filter(item => item.data.title !== "Blog")
       .sort((a, b) => b.date - a.date)
   );
-
+  // Blog - Ingles
   eleventyConfig.addCollection("blog_en", collection =>
     collection
       .getFilteredByGlob("src/eleventy/en/blog/*.md")
       .filter(item => item.data.title !== "Blog")
       .sort((a, b) => b.date - a.date)
   );
-
+  // Changelog - Español
   eleventyConfig.addCollection("changelog_es", collection =>
     collection
       .getFilteredByGlob("src/eleventy/es/changelog/*.md")
       .filter(item => item.data.title !== "Changelog")
       .sort((a, b) => b.date - a.date)
   );
-
+  // Changelog - Ingles
   eleventyConfig.addCollection("changelog_en", collection =>
     collection.getFilteredByGlob("src/eleventy/en/changelog/*.md")
       .filter(item => item.data.title !== "Changelog")
@@ -103,7 +88,7 @@ module.exports = function (eleventyConfig) {
 
 
   // Filtros
-  // =======
+  // -------
   eleventyConfig.addFilter("rssDate", date => {
     return new Date(date).toUTCString();
   });
