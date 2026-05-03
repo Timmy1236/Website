@@ -2,26 +2,52 @@ import m from "mithril";
 import { getLatest, getLastCommit } from "./latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
 
-export interface Latest {
-  blog: Log;
-  changelog: Log;
-}
-
-export interface Log {
+interface Entry {
   title: string;
   url: string;
   date: string;
   description: string;
 }
 
+interface Latest {
+  blog: Entry;
+  changelog: Entry;
+}
+
+// Api Github Json to Typescript
+export interface Root {
+  sha: string
+  node_id: string
+  commit: Commit
+  url: string
+  html_url: string
+  comments_url: string
+  committer: Committer
+}
+
+export interface Commit {
+  committer: Committer
+  message: string
+  url: string
+  comment_count: number
+}
+
+export interface Committer {
+  name: string
+  email: string
+  date: string
+}
+
+
 const Home = {
   latest: null as Latest | null,
-  latestCommit: null as any,
+  latestCommit: null as Root | null,
   commitSHA: null as string | null,
   commitDate: null as string | null,
 
   oncreate() {
     refreshi18n();
+    applyBBCode();
   },
 
   oninit: function () {
@@ -30,11 +56,16 @@ const Home = {
       m.redraw();
     });
 
-    getLastCommit().then((data: any[]) => {
-      this.latestCommit = data[0];
-      this.commitSHA = String(data[0].sha).slice(0, 7)
-      this.commitDate = new Date(data[0].commit.committer.date).toLocaleDateString();
-      m.redraw();
+    getLastCommit().then((data: Root[]) => {
+      if (data && data.length > 0) {
+        const lastCommit = data[0];
+
+        this.latestCommit = lastCommit;
+        this.commitSHA = String(lastCommit.sha).slice(0, 7);
+        this.commitDate = new Date(lastCommit.commit.committer.date).toLocaleDateString();
+
+        m.redraw();
+      }
     });
   },
 

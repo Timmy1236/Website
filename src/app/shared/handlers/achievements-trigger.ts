@@ -40,4 +40,5 @@ export function onSecretInput(value: string) {
 }
 
 // NOTE: Habrá que exportar ciertas cosas de forma global para que puedan ser usable en html... creo.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).onPage404 = onPage404;

@@ -8,13 +8,12 @@ import { getMapSetting } from "../core/settings-logic";
 
 interface SoundConfig {
   audio: HTMLAudioElement;
-  rate: Array<2>;
+  rate: number[];
   volume: number;
 }
 const audioCtx = new AudioContext();
 const canPlaySounds: boolean = getMapSetting("soundsEffects") === "true";
-let clickSoundCooldown: boolean = true;
-let userInteracted: boolean = false;
+let userInteracted = false;
 
 /**
  * Activa la lógica cuando el usuario interactúa con la pagina y este activado los efectos de sonidos.
@@ -42,7 +41,7 @@ function _audioLogic() {
     slugcat: createAudio("meow")
   };
 
-  const soundConfig: any = {
+  const soundConfig: Record<string, SoundConfig> = {
     "slugcat": { audio: SFX.slugcat, rate: [0.9, 1.2], volume: 0.75 }
   };
 
@@ -92,7 +91,6 @@ function _audioLogic() {
     if (event.target instanceof HTMLElement) {
       SFX.click.volume = 0.65;
       SFX.click.play();
-      if (!clickSoundCooldown) return;
 
       const cfg = soundConfig[event.target.id];
 
@@ -151,7 +149,7 @@ function _audioLogic() {
   _loadSound('/assets/sounds/sfx/key.mp3').then(buffer => { keyBuffer = buffer; });
 
   // ==== Keyboard ====
-  document.addEventListener('keydown', (event: KeyboardEvent) => {
+  document.addEventListener('keydown', () => {
     _playBuffer(keyBuffer, 0.5, 0.9 + Math.random() * 0.5);
   });
 }

@@ -1,12 +1,12 @@
 import m from "mithril";
 import { getSetting } from "../core/settings-logic";
 
-let isTransitioning: boolean = false;
-let currentPath: string = "/home";
+let isTransitioning = false;
+let currentPath = "/home";
 
 function navBtn(label: string, external: boolean, path: string, tooltip: string | null, img: string | null) {
   const isActive = currentPath === path;
-  const attrs: Record<string, any> = { onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
+  const attrs: m.Attributes = { onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
 
   if (tooltip) attrs["data-tooltip"] = tooltip;
 

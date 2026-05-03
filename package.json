@@ -30,18 +30,22 @@
       "url": "https://github.com/Timmy1236/Website/blob/main/LICENSE"
     }
   ],
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Timmy1236/Website/issues"
   },
   "homepage": "https://github.com/Timmy1236/Website#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
+    "@eslint/js": "^10.0.1",
     "@types/mithril": "^2.2.8",
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
+    "eslint": "^10.3.0",
     "stylelint": "^17.9.1",
-    "stylelint-config-standard": "^40.0.0"
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
   },
   "dependencies": {
     "mithril": "^2.3.8"

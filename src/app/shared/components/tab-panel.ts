@@ -1,46 +1,61 @@
 import m from "mithril";
 
-const TabPanel = {
-  activeTab: 0,
+interface Tab {
+  label: string;
+  content: () => m.Children;
+}
 
-  oninit(vnode: any) {
-    this.activeTab = vnode.attrs.defaultTab || 0;
-  },
+interface TabPanelAttrs {
+  title: string | m.Attributes;
+  defaultTab?: number;
+  tabs: Tab[];
+  outTab?: m.Children;
+}
 
-  view(vnode: any) {
-    const tabs = vnode.attrs.tabs || [];
+const TabPanel: m.ClosureComponent<TabPanelAttrs> = () => {
+  let activeTab = 0;
 
-    return m(".panel tabs", [
+  return {
+    oninit(vnode: m.Vnode<TabPanelAttrs>) {
+      activeTab = vnode.attrs.defaultTab || 0;
+    },
 
-      // HEADER
-      m(".panel-header", [
-        m("p.text-title", vnode.attrs.title || "Tabs"),
+    view(vnode: m.Vnode<TabPanelAttrs>) {
+      const { tabs = [], title, outTab } = vnode.attrs;
 
-        m(".panel-controls", [
-          m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-          m("button.panel-button", { "data-panel-action": "close" }, "X")
+      return m(".panel.tabs", [
+
+        // HEADER
+        m(".panel-header", [
+          typeof title === "string"
+            ? m("p.text-title", title)
+            : m("p.text-title", title, "Tabs"), // El tercer param es el fallback
+
+          m(".panel-controls", [
+            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "close" }, "X")
+          ])
+        ]),
+
+
+        // TABS BAR
+        m(".panel-tabs",
+          tabs.map((tab, index) =>
+            m("button.panel-tab", {
+              class: activeTab === index ? "active" : "",
+              onclick: () => { activeTab = index; }
+            }, tab.label)
+          )
+        ),
+
+        // CONTENT
+        m(".panel-content.tabs", [
+          tabs[activeTab]?.content?.(),
+          outTab || null
         ])
-      ]),
-
-      // TABS BAR
-      m(".panel-tabs",
-        tabs.map((tab: any, index: any) =>
-          m("button.panel-tab", {
-            class: this.activeTab === index ? "active" : "",
-            onclick: () => {
-              this.activeTab = index;
-            }
-          }, tab.label)
-        )
-      ),
-
-      // CONTENT
-      m(".panel-content tabs", [
-        tabs[this.activeTab]?.content?.(),
-        vnode.attrs.outTab || null
-      ])
-    ]);
-  }
+      ]);
+    }
+  };
 };
 
 export default TabPanel;

@@ -5,7 +5,7 @@
 */
 import { SETTING_KEYS, SettingKey } from "../../shared/core/settings-logic.js";
 import { initDefaultSettings, saveMapSettings, getMapSetting } from "../../shared/core/settings-logic.js";
-export let settingsMap = new Map<SettingKey, string>();
+export const settingsMap = new Map<SettingKey, string>();
 let initialized = false;
 
 export function initMapFromStorage() {

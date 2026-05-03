@@ -4,7 +4,7 @@ import sidebar from "./sidebar.ts";
 import { getMapSetting } from "../core/settings-logic.js";
 
 export default {
-  view(vnode: any) {
+  view(vnode: m.Vnode) {
     return m("div.layout", [
       getMapSetting("vignetteEffect") === "true" && m("div.vignette", { id: "vignette" }),
       m(".container", [

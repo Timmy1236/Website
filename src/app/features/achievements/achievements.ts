@@ -2,6 +2,14 @@ import m from "mithril";
 import { getAchievementsList } from "../../shared/core/achievements-logic.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
 
+interface achievement {
+  id: string;
+  name: string;
+  description: string;
+  secret: boolean;
+  unlocked: boolean;
+}
+
 const AchievementsPage = {
   oncreate() {
     refreshi18n();
@@ -22,7 +30,7 @@ const AchievementsPage = {
 
         m(".panel-content", [
           m(".achievements-list",
-            list.map((achievement: any) =>
+            list.map((achievement: achievement) =>
               m(".achievement-card", { class: achievement.unlocked ? "unlocked" : "" }, [
                 m(".achievement-icon", achievement.unlocked ? "★" : "☆"),
                 m(".achievement-info", [

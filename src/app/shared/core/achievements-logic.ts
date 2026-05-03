@@ -55,7 +55,7 @@ function getSavedAchievements() {
 /**
  * Guarda el JSON en LocalStorage.
  */
-function saveAchievements(data: Object) {
+function saveAchievements(data: object) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch (e) {

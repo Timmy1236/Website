@@ -33,8 +33,10 @@ function createImageOverlay(src: string, alt = "") {
     }
   });
 
+  const closeButton = overlay.querySelector(".close-btn");
+
   // Cerrar botón
-  overlay.querySelector(".close-btn")!.addEventListener("click", () => {
+  closeButton?.addEventListener("click", () => {
     overlay.remove();
   });
 

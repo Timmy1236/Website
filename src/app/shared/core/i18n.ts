@@ -9,6 +9,7 @@ type lang = "es" | "en";
 
 class I18n {
   currentLang: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   translations: Record<string, any>;
   ready: Promise<void>;
 

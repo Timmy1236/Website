@@ -1,6 +1,6 @@
 import m from "mithril";
 
-const text: string = "timmy.nekoweb.com";
+const text = "timmy.nekoweb.com";
 
 export default {
   view: () =>
