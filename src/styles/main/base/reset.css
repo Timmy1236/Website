@@ -6,6 +6,11 @@
 
 html {
   scrollbar-width: none;
+  scrollbar-color: var(--foreground) transparent; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 body {
