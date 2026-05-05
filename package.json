@@ -9,7 +9,7 @@
     "eleventy": "npx @11ty/eleventy",
     "eleventy:watch": "npx @11ty/eleventy --watch",
     "js": "esbuild src/app/app.ts --bundle --minify --outfile=public/dist/main/app.js",
-    "js:watch": "esbuild src/app/app.ts --bundle --minify --watch --outfile=public/dist/main/app.js",
+    "js:watch": "esbuild src/app/app.ts --bundle --minify --watch --sourcemap --outfile=public/dist/main/app.js",
     "css": "esbuild src/styles/main/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:watch": "esbuild src/styles/main/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:pages": "esbuild src/styles/data/main.css --bundle --minify --outfile=public/dist/pages.css",
@@ -42,10 +42,10 @@
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
     "eslint": "^10.3.0",
-    "stylelint": "^17.9.1",
+    "stylelint": "^17.10.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.1"
+    "typescript-eslint": "^8.59.2"
   },
   "dependencies": {
     "mithril": "^2.3.8"
