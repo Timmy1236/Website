@@ -145,7 +145,8 @@ const AboutMePage = {
         )
       ]),
 
-      m(".panel", { "data-default": "closed" }, [
+      // Interest
+      m(".panel", {}, [
         m(".panel-header",
           m("p.text-title", "Interests"),
 
@@ -156,50 +157,81 @@ const AboutMePage = {
         ),
 
         m(".panel-content",
-          m(".tags-inline space", [
-            m("p.tags-title", "Juegos:"),
-            m(".tags-grid", [
-              m(".tag", { style: "--tag:#CEA064" }, [m("p.", "Minecraft")]),
-              m(".tag", { style: "--tag:#6096C2" }, [m("p.", "Hytale")]),
-              m(".tag", { style: "--tag:#68d468" }, [m("p.", "Terraria")]),
-              m(".tag", { style: "--tag:#618dcf" }, [m("p.", "Warframe")]),
-              m(".tag", { style: "--tag:#e67979" }, [m("p.", "Roblox")]),
-              m(".tag", { style: "--tag:#cea064" }, [m("p.", "Half-Life")]),
-              m(".tag", { style: "--tag:#b3b3b3" }, [m("p.", "SCP")]),
-              m(".tag", { style: "--tag:#82ac5d" }, [m("p.", "GTA")]),
-              m(".tag", { style: "--tag:#bd3e44" }, [m("p.", "RDR 2")]),
-              m(".tag", { style: "--tag:#626294" }, [m("p.", "VotV")]),
-            ])
+          m("p", "Juegos"),
+          m(".scroll-container", [
+            // Voices of the Void
+            m("a", { href: "https://mrdrnose.itch.io/votv", "data-tooltip": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/votv.webp" }),
+            ]),
+            // Minecraft
+            m("a", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip": "Minceraft" }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/minecraft.webp" }),
+            ]),
+            // Hytale
+            m("a", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-" }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/hytale.webp" }),
+            ]),
+            // Terraria
+            m("a", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(" }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/terraria.webp" }),
+            ]),
+            // Warframe
+            m("a", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no existe otro juego que llegue al mismo nivel." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/warframe.webp" }),
+            ]),
+            // Roblox
+            m("a", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip": "cada dia tengo menos ganas de seguir en esta mierda." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/roblox.webp" }),
+            ]),
+            // Half Life
+            m("a", { href: "https://www.half-life.com/en/home/", "data-tooltip": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)" }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/hl2.webp" }),
+            ]),
+            // Team Fortress 2
+            m("a", { href: "https://www.teamfortress.com/", "data-tooltip": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo muriendo de la misma manera como siempre, contra un spy siendo medic." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/tf.webp" }),
+            ]),
+            // Portal 1
+            m("a", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle..." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/portal1.webp" }),
+            ]),
+            // Portal 2
+            m("a", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle... ¡Esta vez con un amigo!" }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/portal2.webp" }),
+            ]),
+            // SCP
+            m("a", { href: "https://scp-wiki.wikidot.com/", "data-tooltip": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/scp.webp" }),
+            ]),
+            // GTA V
+            m("a", { href: "https://google.com", "data-tooltip": "Cayo Perico." }, [
+              m("img", { src: "/assets/images/pages/about/covers/games/gtav.webp" }),
+            ]),
           ]),
 
-          m(".tags-inline", [
-            m("p.tags-title", "Series:"),
-            m(".tags-grid", [
-              m(".tag", { style: "--tag:#d8946d" }, [m("p.", "Tres Acordes")]),
-              m(".tag", { style: "--tag:#ffeb7c" }, [m("p.", "Smiling Friends")]),
-
-              m(".tag", { style: "--tag:#ff6467" }, [
-                m("span", [
-                  m("span", { style: "color:#ff6467" }, "D"),
-                  m("span", { style: "color:#62a9ff" }, "i"),
-                  m("span", { style: "color:#fffea6" }, "g"),
-                  m("span", { style: "color:#ff6467" }, "i"),
-                  m("span", { style: "color:#62a9ff" }, "t"),
-                  m("span", { style: "color:#ff6467" }, "a"),
-                  m("span", { style: "color:#fffea6" }, "l "),  // NOTE: Okey?
-                  m("span", { style: "color:#ff6467" }, "C"),
-                  m("span", { style: "color:#fffea6" }, "i"),
-                  m("span", { style: "color:#62a9ff" }, "r"),
-                  m("span", { style: "color:#ff6467" }, "c"),
-                  m("span", { style: "color:#fffea6" }, "u"),
-                  m("span", { style: "color:#62a9ff" }, "s")
-                ])
-              ]),
-
-              m(".tag", { style: "--tag:#919960" }, [m("p.", "Salad Fingers")]),
-              m(".tag", { style: "--tag:#bd3e44" }, [m("p.", "Madness Combat")]),
-            ])
-          ])
+          m("p", "Series"),
+          m(".scroll-container", [
+            // Tres acordes
+            m("a", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
+              m("img", { src: "/assets/images/pages/about/covers/series/tres-acordes.webp" }),
+            ]),
+            // Smiling Friends
+            m("a", { href: "https://www.imdb.com/es/title/tt12074628/" }, [
+              m("img", { src: "/assets/images/pages/about/covers/series/smiling-friends.webp" }),
+            ]),
+            // The Amazing Digital Circus
+            m("a", { href: "https://www.imdb.com/es/title/tt27610198/" }, [
+              m("img", { src: "/assets/images/pages/about/covers/series/tadc.webp" }),
+            ]),
+            // Salad Fingers
+            m("a", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
+              m("img", { src: "/assets/images/pages/about/covers/series/salad-fingers.webp" }),
+            ]),
+            // Madness Combat
+            m("a", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
+              m("img", { src: "/assets/images/pages/about/covers/series/madness-combat.webp" }),
+            ]),
+          ]),
         )
       ]),
     ]);
