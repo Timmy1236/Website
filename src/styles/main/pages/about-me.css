@@ -20,50 +20,6 @@
   margin-top: -10px;
 }
 
-.tags-inline {
-  display: flex;
-  align-items: center;
-}
-
-.tags-inline.space {
-  margin-bottom: 10px;
-}
-
-.tags-title {
-  margin-right: 10px;
-}
-
-.tags-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-    overflow-x: auto;
-    white-space: wrap;
-}
-
-.tag {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 3px 8px;
-  border: 2px solid var(--tag);
-  background: rgb(0 0 0 / 20%);
-  font-size: 18px;
-  border-radius: 0;
-  color: var(--tag);
-}
-
-.tag p, .tag span, .tag a {
-  color: var(--tag);
-  font-size: 20px;
-}
-
-.tag img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-}
-
 .profile-vertical {
   display: flex;
   flex-direction: column;
@@ -119,4 +75,44 @@
 .content-column {
   display: flex;
   flex-direction: column;
+}
+
+.scroll-container {
+  display: flex;
+  overflow:auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-container .cover:not(:last-child) {
+  margin-right: 15px;
+}
+
+.cover img {
+  width:  100px;
+  height: 150px;
+  box-shadow: var(--panel-shadow);
+  object-fit: cover;
+}
+
+.cover img:hover {
+  transform: scale(1.1);
+}
+
+.tag {
+  display: flex;
+  padding: 3px 6px;
+  background: rgb(0 0 0 / 10%);
+  border: 2px solid rgb(0 0 0 / 40%);
+}
+
+.tag img {
+  width: 22px;
+  margin-right: 7px;
+  pointer-events: none;
+}
+
+.tag:not(:last-child) {
+  margin-right: 10px;
 }

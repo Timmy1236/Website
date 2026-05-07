@@ -2,7 +2,6 @@ import m from "mithril";
 import { loadDiscordProfile } from "./discord.js";
 import { initPanel } from "../../shared/ui/panel-buttons.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
-import { sendForm } from "../../shared/handlers/form.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 
 const AboutMePage = {
@@ -53,7 +52,6 @@ const AboutMePage = {
         ]),
 
         m(".panel", [
-
           m(".panel-header",
             m("p.text-title", { "data-i18n": "about-me.aboutMe.title" }, "About Me"),
 
@@ -72,35 +70,6 @@ const AboutMePage = {
 
       m(".panel", [
         m(".panel-header",
-          m("p.text-title", "Form"),
-
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-            m("button.panel-button", { "data-panel-action": "close" }, "X")
-          ])
-        ),
-
-        m(".panel-content", [
-          m(".contact", [
-            m("p", "Contact"),
-            m("input#contact", { type: "text", placeholder: "A way i can contact you (optional)" }),
-          ]),
-
-          m("br"),
-
-          m(".message", [
-            m("p", "Message"),
-            m("textarea.message-form#message"),
-          ]),
-
-          m("br"),
-
-          m("button.button", { onclick: sendForm }, "Enviar")
-        ])
-      ]),
-
-      m(".panel", { "data-default": "closed" }, [
-        m(".panel-header",
           m("p.text-title", "Tech stack"),
 
           m(".panel-controls", [
@@ -109,40 +78,34 @@ const AboutMePage = {
           ])
         ),
         m(".panel-content",
-          m(".tags-inline space", [
-            m("p.tags-title", "Lenguajes:"),
-            m(".tags-grid", [
-              m(".tag", { style: "--tag:#e7ff7f" }, [m("p.", "JavaScript")]),
-              m(".tag", { style: "--tag:#ffc271" }, [m("p.", "HTML")]),
-              m(".tag", { style: "--tag:#83ceff" }, [m("p.", "CSS")]),
-              m(".tag", { style: "--tag:#d47afd" }, [m("p.", "C#")]),
-              m(".tag", { style: "--tag:#69aedb" }, [m("p.", "Python")]),
-              m(".tag", { style: "--tag:#2f6d96" }, [m("p.", "GDScript")]),
-              m(".tag", { style: "--tag:#6a6abd" }, [m("p.", "Lua")]),
-            ])
+          m("p", "Lenguajes"),
+          m(".scroll-container", [
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/typescript.svg" }), m("a", { href: "https://www.typescriptlang.org/" }, "TypeScript")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/csharp.svg" }), m("a", { href: "https://dotnet.microsoft.com/es-es/languages/csharp" }, "C#")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" }, "GDScript")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/python.svg" }), m("a", { href: "https://www.python.org/" }, "Python")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/lua.svg" }), m("a", { href: "https://www.lua.org/" }, "Lua")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/javascript.svg" }), m("a", { href: "https://developer.mozilla.org/es/docs/Web/JavaScript" }, "JavaScript")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/html.svg" }), m("a", { href: "https://dev.w3.org/html5/spec-LC/" }, "HTML")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/css.svg" }), m("a", { href: "https://www.w3.org/Style/CSS/Overview.en.html" }, "CSS")]),
           ]),
 
-          m(".tags-inline space", [
-            m("p.tags-title", "Infra: "),
-            m(".tags-grid", [
-              m(".tag", { style: "--tag:#ee0000" }, [m("a.", { href: "https://redhatofficial.github.io/" }, "Red Hat")]),
-              m(".tag", { style: "--tag:#d70a53" }, [m("a.", { href: "https://www.debian.org/" }, "Linux (Debian)")]),
-              m(".tag", { style: "--tag:#80e288" }, [m("p.", "MongoDB")]),
-              m(".tag", { style: "--tag:#4bb7ff" }, [m("p.", "MySQL")]),
-              m(".tag", { style: "--tag:#c3745c" }, [m("p.", "MariaDB")]),
-              m(".tag", { style: "--tag:#5c7fc3" }, [m("p.", "SQlite")]),
-            ])
+          m("p", "Infra"),
+          m(".scroll-container", [
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/redhat.svg" }), m("a", { href: "https://redhatofficial.github.io/" }, "Red Hat")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/debian.svg" }), m("a", { href: "https://www.debian.org/" }, "Debian")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/mysql.svg" }), m("a", { href: "https://www.mysql.com/" }, "MySQL")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/mariadb.svg" }), m("a", { href: "https://mariadb.org/" }, "MariaDB")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/sqlite.svg" }), m("a", { href: "https://sqlite.org/" }, "SQLite")]),
           ]),
 
-          m(".tags-inline", [
-            m("p.tags-title", "Softwares:"),
-            m(".tags-grid", [
-              m(".tag", { style: "--tag:#478cbf" }, [m("a.", { href: "https://github.com/godotengine/godot" }, "Godot")]),
-              m(".tag", { style: "--tag:#e4ab6e" }, [m("a.", { href: "https://github.com/blender/blender" }, "Blender")]),
-              m(".tag", { style: "--tag:#6bafdb" }, [m("a.", { href: "https://github.com/OpenShot/openshot-qt" }, "OpenShot")]),
-              m(".tag", { style: "--tag:#4cadf3" }, [m("a.", { href: "https://github.com/kde/krita" }, "Krita")]),
-              m(".tag", { style: "--tag:#ffffff" }, [m("a.", { href: "https://github.com/aseprite/aseprite" }, "Aseprite")]),
-            ])
+          m("p", "Softwares"),
+          m(".scroll-container", [
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://github.com/godotengine/godot" }, "Godot")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/blender.svg" }), m("a", { href: "https://github.com/blender/blender" }, "Blender")]),
+            m(".tag", [m("a", { href: "https://github.com/OpenShot/openshot-qt" }, "OpenShot")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/krita.svg" }), m("a", { href: "https://github.com/kde/krita" }, "Krita")]),
+            m(".tag", [m("img", { src: "/assets/images/pages/about/icons/aseprite.svg" }), m("a", { href: "https://github.com/aseprite/aseprite" }, "Aseprite")]),
           ])
         )
       ]),
@@ -151,7 +114,6 @@ const AboutMePage = {
       m(".panel", {}, [
         m(".panel-header",
           m("p.text-title", "Interests"),
-
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
             m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -162,51 +124,51 @@ const AboutMePage = {
           m("p", "Juegos"),
           m(".scroll-container", [
             // Voices of the Void
-            m("a", { href: "https://mrdrnose.itch.io/votv", "data-tooltip": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo." }, [
+            m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/votv.webp" }),
             ]),
             // Minecraft
-            m("a", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip": "Minceraft" }, [
+            m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip": "Minceraft" }, [
               m("img", { src: "/assets/images/pages/about/covers/games/minecraft.webp" }),
             ]),
             // Hytale
-            m("a", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-" }, [
+            m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-" }, [
               m("img", { src: "/assets/images/pages/about/covers/games/hytale.webp" }),
             ]),
             // Terraria
-            m("a", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(" }, [
+            m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(" }, [
               m("img", { src: "/assets/images/pages/about/covers/games/terraria.webp" }),
             ]),
             // Warframe
-            m("a", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no existe otro juego que llegue al mismo nivel." }, [
+            m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no existe otro juego que llegue al mismo nivel." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/warframe.webp" }),
             ]),
             // Roblox
-            m("a", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip": "cada dia tengo menos ganas de seguir en esta mierda." }, [
+            m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip": "cada dia tengo menos ganas de seguir en esta mierda." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/roblox.webp" }),
             ]),
             // Half Life
-            m("a", { href: "https://www.half-life.com/en/home/", "data-tooltip": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)" }, [
+            m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)" }, [
               m("img", { src: "/assets/images/pages/about/covers/games/hl2.webp" }),
             ]),
             // Team Fortress 2
-            m("a", { href: "https://www.teamfortress.com/", "data-tooltip": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo muriendo de la misma manera como siempre, contra un spy siendo medic." }, [
+            m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo muriendo de la misma manera como siempre, contra un spy siendo medic." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/tf.webp" }),
             ]),
             // Portal 1
-            m("a", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle..." }, [
+            m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle..." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/portal1.webp" }),
             ]),
             // Portal 2
-            m("a", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle... ¡Esta vez con un amigo!" }, [
+            m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle... ¡Esta vez con un amigo!" }, [
               m("img", { src: "/assets/images/pages/about/covers/games/portal2.webp" }),
             ]),
             // SCP
-            m("a", { href: "https://scp-wiki.wikidot.com/", "data-tooltip": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte." }, [
+            m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/scp.webp" }),
             ]),
             // GTA V
-            m("a", { href: "https://google.com", "data-tooltip": "Cayo Perico." }, [
+            m("a.cover", { href: "https://google.com", "data-tooltip": "Cayo Perico." }, [
               m("img", { src: "/assets/images/pages/about/covers/games/gtav.webp" }),
             ]),
           ]),
@@ -214,23 +176,23 @@ const AboutMePage = {
           m("p", "Series"),
           m(".scroll-container", [
             // Tres acordes
-            m("a", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
               m("img", { src: "/assets/images/pages/about/covers/series/tres-acordes.webp" }),
             ]),
             // Smiling Friends
-            m("a", { href: "https://www.imdb.com/es/title/tt12074628/" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt12074628/" }, [
               m("img", { src: "/assets/images/pages/about/covers/series/smiling-friends.webp" }),
             ]),
             // The Amazing Digital Circus
-            m("a", { href: "https://www.imdb.com/es/title/tt27610198/" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt27610198/" }, [
               m("img", { src: "/assets/images/pages/about/covers/series/tadc.webp" }),
             ]),
             // Salad Fingers
-            m("a", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
               m("img", { src: "/assets/images/pages/about/covers/series/salad-fingers.webp" }),
             ]),
             // Madness Combat
-            m("a", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
               m("img", { src: "/assets/images/pages/about/covers/series/madness-combat.webp" }),
             ]),
           ]),
