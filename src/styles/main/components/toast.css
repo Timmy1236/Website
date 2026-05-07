@@ -8,7 +8,7 @@
   width: 340px;
   background: var(--background);
   border: 3px solid var(--toast-color);
-  box-shadow: var(--panel-shadows);
+  box-shadow: var(--panel-shadow);
   padding: 10px 14px;
   z-index: 9999;
   transition: right 0.35s ease-in-out;

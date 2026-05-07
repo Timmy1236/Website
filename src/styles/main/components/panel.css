@@ -3,7 +3,7 @@
   padding: var(--panel-padding);
   border: var(--panel-border);
   border-top: var(--panel-border-top);
-  box-shadow: var(--panel-shadows);
+  box-shadow: var(--panel-shadow);
   backdrop-filter: blur(var(--panel-background-drop));
 }
 

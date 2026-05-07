@@ -10,7 +10,7 @@
   overflow: hidden;
   border-radius: 0;
   border: var(--banner-border);
-  box-shadow: var(--panel-shadows);
+  box-shadow: var(--panel-shadow);
   background-color: var(--panel-color);
 }
 
