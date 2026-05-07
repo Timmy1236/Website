@@ -3,6 +3,7 @@ import { loadDiscordProfile } from "./discord.js";
 import { initPanel } from "../../shared/ui/panel-buttons.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
+import { applyBBCode } from "../../shared/ui/bbcode.js";
 
 const AboutMePage = {
   oncreate() {
@@ -10,6 +11,7 @@ const AboutMePage = {
     refreshi18n();
     loadDiscordProfile("375889010419171328");
     initPanel();
+    applyBBCode();
   },
 
   view: function () {
@@ -62,7 +64,7 @@ const AboutMePage = {
           ),
 
           m(".panel-content", [
-            m("span", { "data-i18n": "[html]about-me.aboutMe.description" })
+            m("p", { "data-i18n": "about-me.aboutMe.description", "data-bbcode": true })
           ])
         ])
 

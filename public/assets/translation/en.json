@@ -4,11 +4,11 @@
       "title": "Navigation",
       "buttons": {
         "home": "Home",
-        "aboutMe": "About me",
+        "aboutMe": "About Me",
         "projects": "Projects",
         "links": "Links",
         "achievements": "Achievements",
-        "configuration": "Settings"
+        "configuration": "Configuration"
       }
     },
     "data": {
@@ -22,86 +22,79 @@
     "nekoweb": {
       "title": "Nekoweb",
       "buttons": {
-        "visits": "Visitors: ",
+        "visits": "Visits: ",
         "followers": "Followers: ",
-        "follow": "Follow me"
+        "follow": "Follow Me"
       }
     }
   },
   "home": {
     "welcome": {
       "title": "Welcome!",
-      "text": "<p>Thanks for visiting my digital dumpster. Right now there is not much I can show you since it will always be in an infinite development stage and will keep expanding and improving over time. I planned to leave any kind of content that I like or that I have developed myself, but since there is nothing for now, just keep clicking the nav buttons to see what stuff I have done elsewhere. The home, what you are seeing, will never have anything. Ignore it. <br><br>If you want, you can come back again sometime in the future to see what I have added, remember to use <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\">control + f5</a> to get the latest version of the page. ヾ(•ω•`)o<br><br></p>"
+      "text": ":wave: [rainbow]¡Welcom[i]eEeEe!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you are in the [u]Home[/u] page and there won't be anything special besides the latest entries and highlighted news, better browse around the site if you find something, if there even is anything. Remember to come back sometime in the future and always, always, [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
     },
     "entries": {
       "blog": {
-        "title": "Latest Blog (W.I.P)"
+        "title": "Latest Blog"
       },
       "changelog": {
-        "title": "Latest Changelog (W.I.P)"
+        "title": "Latest Changelog"
       },
       "commit": {
-        "title": "Latest Commit (W.I.P)"
+        "title": "Latest Commit"
       }
     }
   },
   "about-me": {
     "aboutMe": {
-      "title": "About me",
-      "startDescription": "I hate writing this.",
-      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">How do people introduce themselves without feeling weird?</a> <p>Hey! I am Timmy(1236), I am 20 years old and I am from Uruguay!, I self proclaim myself as a 'backend software developer', although in reality I am just an introvert whose only hobbies are programming, playing games and designing things in 3D. You know, just another generic person. I have always been interested in creating that 'high quality digital art', but I was never really good at being creative. So all my creativity has always been limited to just a few lines of code, what you are seeing right now is an attempt to actually create something, thanks for visiting, I mean it.</p> </span>",
-      "fact": {
-        "programming": "● Languages: ",
-        "softwares": "● Softwares: ",
-        "favorite-games": "● Games: ",
-        "series": "● Series:"
-      }
+      "title": "About Me",
+      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old dude living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm simply just another random [u][tooltip=Backend Software Developer... NEEEEERD]programmer[/tooltip][/u]. My hobbies are basically anything related to technology. Gaming, shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really deep enough into it to the point of having my own 24/7 server because of money reasons, but I would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I was always interested in [i]Art[/i], drawing and turning my creativity into something physical, but I never had the talent for those kinds of things, so I stayed with my computer typing letters until something magical appears."
     },
     "tech-stack": {
-      "title": "Tech stack"
+      "title": "Tech Stack"
     },
     "interest": {
       "tite": "Interests :)"
     }
   },
   "projects": {
-    "title": "Proyectos",
+    "title": "Projects",
     "list": {
       "website": {
-        "description": "My personal website hosted on Nekoweb, it will be my main site where I will keep all kinds of projects or blogs I make updated. If you see this text first, that means you are already viewing my page!"
+        "description": "My personal website hosted on Nekoweb, it will be my little corner of the internet where I'll keep every kind of project I've made or I'm currently developing. What you're seeing right now is one of the biggest public projects I have!"
       },
       "leafy": {
-        "description": "Just a simple Discord bot. Nothing more, just that simple. You don't need any external services or a complicated setup."
+        "description": "A simple Discord bot made with discord.js, nothing more, simple as that. You don't need external services or a complicated setup."
       }
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Configuration",
     "sections": {
-      "visual-effects": "Visual effects",
+      "visual-effects": "Visual Effects",
       "audio": "Audio",
       "others": "Others",
-      "themes": "Themes (W.I.P)",
+      "themes": "Themes",
       "languages": "Languages"
     },
     "options": {
       "staticEffects": "Static",
-      "backgroundMusic": "Background music",
-      "ignoreLandingPage": "Ignore landing page",
+      "backgroundMusic": "Background Music",
+      "ignoreLandingPage": "Ignore Landing Page",
       "vignetteEffects": "Vignette",
-      "soundsEffects": "Sounds Effects",
-      "readableFont": "Readable font"
+      "soundsEffects": "Sound Effects",
+      "readableFont": "Readable Font"
     }
   },
   "links": {
     "credits": {
-      "title": "Credits (W.I.P)"
+      "title": "Credits"
     },
     "buttonWall": {
       "title": "Button Wall",
       "list": {
         "neighbors": "Nekoweb Neighbors",
-        "likes": "Cool Websites",
+        "likes": "Cool Sites",
         "myButton": "Me"
       }
     }
@@ -120,7 +113,7 @@
         "multiplayer": "Multiplayer",
         "mods": "Mods and Texture Packs",
         "options": "Options...",
-        "close": "Close game"
+        "close": "Quit Game"
       }
     }
   }

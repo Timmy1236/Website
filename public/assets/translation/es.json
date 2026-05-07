@@ -31,31 +31,24 @@
   "home": {
     "welcome": {
       "title": "Bienvenido!",
-      "text": "<p>Gracias por visitar a mi basurero digital. Ahora mismo no hay mucho que te pueda enseñar ya que siempre se va encontrar en una etapa de desarrollo infinita y se ira expandiendo y mejorando con el paso del tiempo. Tenia planeado en dejar cualquier tipo de contenido que me guste o que yo mismo he desarrollado, pero como no hay nada por ahora, simplemente ve clickeando los botones del nav para ver que mierdas he hecho en otros lados. El home, lo que estas viendo, nunca va tener nada. Ignóralo. <br><br>Si quieres, puedes volver nuevanmente en algun futuro para ver lo nuevo que he añadido, recuerda utilizar <a href=\"https://www.debugbar.com/difference-between-f5-and-shift-f5/\" class=\"link\">control + f5</a> para obtener la ultima version de la pagina. ヾ(•ω•`)o<br><br></p>"
+      "text": ":wave: [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
     },
     "entries": {
       "blog": {
-        "title": "Ultimo Blog (W.I.P)"
+        "title": "Ultimo Blog"
       },
       "changelog": {
-        "title": "Ultimo Changelog (W.I.P)"
+        "title": "Ultimo Changelog"
       },
       "commit": {
-        "title": "Ultimo Commit (W.I.P)"
+        "title": "Ultimo Commit"
       }
     }
   },
   "about-me": {
     "aboutMe": {
       "title": "Sobre mi",
-      "startDescription": "Odio escribir esto.",
-      "description": "<span> <a href=\"./assets/videos/about-me/3-fun-things-about-yourself.mp4\" style=\"color: gray; font-style: italic; margin-right: 4px;\">¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?</a> <p>¡Hey! Soy Timmy(1236) tengo 20 años y soy de Uruguay!, me auto proclamo como 'desarrollador de software backend', aunque en realidad simplemente soy un introvertido que sus únicos hobbys sean simplemente programar, jugar y diseñar cosas en 3D. Ya sabes, una simple persona genérica mas del montón. Siempre estuve interesado en crear en ese arte digital '<span style=\"font-family: 'Times New Roman'; font-size: 20px; font-style: italic;\" >de  alta  calidad</span>', pero nunca se me dio la mano en ser creativo. Así que toda mi creatividad siempre fue limitada a simplemente unas líneas de códigos, lo que estas viendo ahora mismo es un intento de realmente crear algo, gracias por visitarlo, te hablo en serio.</p> </span>",
-      "fact": {
-        "programming": "● Lenguajes: ",
-        "softwares": "● Softwares: ",
-        "favorite-games": "● Juegos: ",
-        "series": "● Series:"
-      }
+      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, [u][tooltip=No estoy realmente tan metido en eso hasta el punto de tener mi propio server 24/7 por temas económicos, pero lo haría si pudiera. Por ahora es todo en mi propio PC personal.]homelabbing(?)[/tooltip][/u]. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
     },
     "tech-stack": {
       "title": "Tech stack"
@@ -68,10 +61,10 @@
     "title": "Proyectos",
     "list": {
       "website": {
-        "description": "Mi sitio web personal hosteado en Nekoweb, sera mi sitio principal donde mantendré actualizado todos los tipos de proyectos o blogs que haga sobre mi. Si ves este texto en primer lugar, eso significa que ya estas viendo mi pagina!"
+        "description": "Mi sitio web personal hosteado en Nekoweb, sera mi rincon del internet donde guardare todo tipo de proyecto que he hecho o estoy desarrollando actualmente, lo que estas viendo ahora mismo es uno de mis proyectos publico mas grandes que tengo!"
       },
       "leafy": {
-        "description": "Un simple bot para discord, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
+        "description": "Un simple bot para discord hecho en discord.js, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
       }
     }
   },
@@ -81,7 +74,7 @@
       "visual-effects": "Efectos visuales",
       "audio": "Audio",
       "others": "Otros",
-      "themes": "Temas (W.I.P)",
+      "themes": "Temas",
       "languages": "Lenguajes"
     },
     "options": {
@@ -95,7 +88,7 @@
   },
   "links": {
     "credits": {
-      "title": "Créditos (W.I.P)"
+      "title": "Créditos"
     },
     "buttonWall": {
       "title": "Muro de Botones",

@@ -1,6 +1,7 @@
 import m from "mithril";
 import { getLatest, getLastCommit } from "./latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
+import { applyBBCode } from "../../shared/ui/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 interface Entry {
@@ -82,22 +83,12 @@ const Home = {
             m("button.panel-button", { "data-panel-action": "close" }, "X")
           ])
         ]),
-        m(".panel-content", [
-          m("div", { "data-i18n": "[html]home.welcome.text" }),
-          m("div", {
-            style: "width:100%;display:flex;justify-content:center"
-          },
-            m("img#slugcat", {
-              src: "./assets/images/pages/home/rw-hunter.png",
-              style: "margin-right:10px;transform: scale(-1, 1);",
-              alt: "Slugcat hunter"
-            }),
 
-            m("img#slugcat", {
-              src: "./assets/images/pages/home/rw-survivor.png",
-              style: "margin-left:10px;",
-              alt: "Slugcat survivor"
-            }))
+        m(".panel-content", [
+          m("div", { style: "display: flex;" }, [
+            m("p", { "data-i18n": "home.welcome.text", "data-bbcode": true }),
+            m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px" })
+          ]),
         ])
       ]),
 
