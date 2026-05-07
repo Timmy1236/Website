@@ -11,6 +11,7 @@
 @import url("./components/tooltip.css");
 @import url("./components/spacing-line.css");
 @import url("./components/card.css");
+@import url("./components/bbcode.css");
 
 /* Imports Layout */
 @import url("./layout/layout.css");
