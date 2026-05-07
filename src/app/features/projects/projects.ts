@@ -1,9 +1,11 @@
 import m from "mithril";
 import { initImageOverlay } from "../../shared/ui/image-overlay.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
+import { setCurrentPath } from "../../shared/core/html-meta.js";
 
 const Project = {
   oncreate() {
+    setCurrentPath(m.route);
     refreshi18n();
     initImageOverlay();
   },

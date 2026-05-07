@@ -3,9 +3,11 @@ import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } fro
 import { changeLanguage, refreshi18n } from "../../shared/core/i18n.js"
 import TabPanel from "../../shared/components/tab-panel.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
+import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 const ConfigurationPage = {
   oncreate() {
+    setCurrentPath(m.route);
     initMapFromStorage();
     refreshi18n();
     m.redraw();

@@ -1,6 +1,7 @@
 import m from "mithril";
 import { getLatest, getLastCommit } from "./latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
+import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 interface Entry {
   title: string;
@@ -46,6 +47,7 @@ const Home = {
   commitDate: null as string | null,
 
   oncreate() {
+    setCurrentPath(m.route);
     refreshi18n();
     applyBBCode();
   },

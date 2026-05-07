@@ -3,9 +3,11 @@ import { loadDiscordProfile } from "./discord.js";
 import { initPanel } from "../../shared/ui/panel-buttons.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { sendForm } from "../../shared/handlers/form.js";
+import { setCurrentPath } from "../../shared/core/html-meta.js";
 
 const AboutMePage = {
   oncreate() {
+    setCurrentPath(m.route);
     refreshi18n();
     loadDiscordProfile("375889010419171328");
     initPanel();

@@ -1,6 +1,7 @@
 import m from "mithril";
 import { getAchievementsList } from "../../shared/core/achievements-logic.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
+import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 interface achievement {
   id: string;
@@ -12,6 +13,7 @@ interface achievement {
 
 const AchievementsPage = {
   oncreate() {
+    setCurrentPath(m.route);
     refreshi18n();
   },
 

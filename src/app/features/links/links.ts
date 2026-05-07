@@ -2,6 +2,7 @@ import m from "mithril";
 import { refreshi18n } from "../../shared/core/i18n.ts";
 import { showButtonOverlay, hideButtonOverlay, type ButtonSite } from "../../shared/ui/button-overlay.ts";
 import { showToast } from "../../shared/ui/toast.ts";
+import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 // NOTE: Esto a lo mejor tendríamos que moverlo a otro sitio, no es necesariamente lógica en UI pero tener una lista de todos los botones va ser realmente molesto con el tiempo.
 const neighborSites: ButtonSite[] = [
@@ -103,6 +104,7 @@ const MyButton: ButtonSite = {
 
 const Others = {
   oncreate() {
+    setCurrentPath(m.route);
     refreshi18n();
   },
 
