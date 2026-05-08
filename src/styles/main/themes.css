@@ -6,7 +6,7 @@
   --panel-padding: 0;
   --panel-background-drop: 0;
   --panel-inside-shadow: none;
-  --panel-shadow: rgb(0 0 0 / 50%) 3px 3px 0px;
+  --panel-shadow: rgb(0 0 0 / 25%) 3px 3px 0px;
   --panel-header-margin: 0px;
   --panel-header-padding: 0 2px 0 4px;
   --panel-header-text-size: 24px;
@@ -32,6 +32,10 @@
   --panel-color: var(--background);
   --panel-border: 4px solid var(--foreground);
   --panel-header-background-color: var(--foreground);
+
+  /* Panel Light */
+  --panel-light: #55526b;
+  --panel-dark: #1b1c24;
 
   /* Button */
   --button-color-hover: var(--foreground);
@@ -72,6 +76,10 @@
   --panel-border: 4px solid var(--foreground);
   --panel-header-background-color: var(--foreground);
 
+  /* Panel Light */
+  --panel-light: #4e93bf;
+  --panel-dark: #1d425d;
+
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
@@ -110,6 +118,10 @@
   --panel-color: var(--background);
   --panel-border: 4px solid var(--foreground);
   --panel-header-background-color: var(--foreground);
+
+  /* Panel Light */
+  --panel-light: #56b287;
+  --panel-dark: #163828;
 
   /* Button */
   --button-color-hover: var(--foreground);
@@ -150,6 +162,10 @@
   --panel-border: 4px solid var(--foreground);
   --panel-header-background-color: var(--foreground);
 
+  /* Panel Light */
+  --panel-light: #444;
+  --panel-dark: #111;
+
   /* Button */
   --button-color-hover: var(--foreground);
   --button-border-hover: 2px solid var(--foreground);
@@ -188,6 +204,10 @@
   --panel-color: var(--background);
   --panel-border: 4px solid var(--foreground);
   --panel-header-background-color: var(--foreground);
+
+  /* Panel Light */
+  --panel-light: #d84a55;
+  --panel-dark: #3b0000;
 
   /* Button */
   --button-color-hover: var(--foreground);
@@ -252,6 +272,10 @@
   --panel-border: 2px solid var(--main-text);
   --panel-border-top: 2px solid var(--main-text);
   --panel-header-background-color: var(--foreground);
+
+  /* Panel Light */
+  --panel-light: #fff;
+  --panel-dark: #000;
 
   /* Button */
   --button-color-hover: var(--foreground);

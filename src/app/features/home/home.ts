@@ -74,21 +74,23 @@ const Home = {
 
   view: function () {
     return m(".content", [
-      m(".panel", [
-        m(".panel-header", [
-          m("p.text-title", { "data-i18n": "home.welcome.title" }),
+      m(".panel-frame", [
+        m(".panel", [
+          m(".panel-header", [
+            m("p.text-title", { "data-i18n": "home.welcome.title" }),
 
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-            m("button.panel-button", { "data-panel-action": "close" }, "X")
-          ])
-        ]),
-
-        m(".panel-content", [
-          m("div", { style: "display: flex;" }, [
-            m("p", { "data-i18n": "home.welcome.text", "data-bbcode": true }),
-            m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px" })
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+              m("button.panel-button", { "data-panel-action": "close" }, "X")
+            ])
           ]),
+
+          m(".panel-content", [
+            m("div", { style: "display: flex;" }, [
+              m("p", { "data-i18n": "home.welcome.text", "data-bbcode": true }),
+              m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px" })
+            ]),
+          ])
         ])
       ]),
 
@@ -97,68 +99,74 @@ const Home = {
       }, [
 
         // ==== CHANGELOG ====
-        m(".panel", [
-          m(".panel-header",
-            m("p.text-title", { "data-i18n": "home.entries.changelog.title" }),
+        m(".panel-frame", [
+          m(".panel", [
+            m(".panel-header",
+              m("p.text-title", { "data-i18n": "home.entries.changelog.title" }),
 
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-              m("button.panel-button", { "data-panel-action": "close" }, "X")
-            ])
-          ),
-          m(".panel-content", [
-            this.latest ? m("div", [
-              m(".card", [
-                m("a.card-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
-                m("p.card-date", this.latest.changelog.date),
-                m("p.card-content", this.latest.changelog.description)
+              m(".panel-controls", [
+                m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+                m("button.panel-button", { "data-panel-action": "close" }, "X")
               ])
+            ),
+            m(".panel-content", [
+              this.latest ? m("div", [
+                m(".card", [
+                  m("a.card-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                  m("p.card-date", this.latest.changelog.date),
+                  m("p.card-content", this.latest.changelog.description)
+                ])
+              ])
+                : m("p", "Cargando...")
             ])
-              : m("p", "Cargando...")
           ])
         ]),
 
         // ==== BLOG ====
+        m(".panel-frame", [
+          m(".panel", [
+            m(".panel-header",
+              m("p.text-title", { "data-i18n": "home.entries.blog.title" }),
+
+              m(".panel-controls", [
+                m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+                m("button.panel-button", { "data-panel-action": "close" }, "X")
+              ])
+            ),
+            m(".panel-content", [
+              this.latest ? m("div", [
+                m(".card", [
+                  m("a.card-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                  m("p.card-date", this.latest.blog.date),
+                  m("p.card-content", this.latest.blog.description)
+                ]),
+              ])
+                : m("p", "Cargando...")
+            ])
+          ]),
+        ])
+      ]),
+
+      // ==== COMMIT ====
+      m(".panel-frame", [
         m(".panel", [
-          m(".panel-header",
-            m("p.text-title", { "data-i18n": "home.entries.blog.title" }),
+          m(".panel-header", [
+            m("p.text-title", { "data-i18n": "home.entries.commit.title" }),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
             ])
-          ),
+          ]),
           m(".panel-content", [
-            this.latest ? m("div", [
+            this.latestCommit ? m("div", [
               m(".card", [
-                m("a.card-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
-                m("p.card-date", this.latest.blog.date),
-                m("p.card-content", this.latest.blog.description)
-              ]),
-            ])
-              : m("p", "Cargando...")
+                m("a.card-title link", { href: this.latestCommit.html_url }, this.commitSHA),
+                m("p.card-date", this.commitDate),
+                m("p.card-content", this.latestCommit.commit.message)
+              ])
+            ]) : m("p", "Cargando...")
           ])
-        ]),
-      ]),
-
-      // ==== COMMIT ====
-      m(".panel", [
-        m(".panel-header", [
-          m("p.text-title", { "data-i18n": "home.entries.commit.title" }),
-
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-            m("button.panel-button", { "data-panel-action": "close" }, "X")
-          ])
-        ]),
-        m(".panel-content", [
-          this.latestCommit ? m("div", [
-            m(".card", [
-              m("a.card-title link", { href: this.latestCommit.html_url }, this.commitSHA),
-              m("p.card-date", this.commitDate),
-              m("p.card-content", this.latestCommit.commit.message)
-            ])
-          ]) : m("p", "Cargando...")
         ])
       ]),
     ])

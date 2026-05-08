@@ -1,3 +1,11 @@
+.panel-frame {
+  border-top: 2px solid var(--panel-light);
+  border-left: 2px solid var(--panel-light);
+  border-right: 2px solid var(--panel-dark);
+  border-bottom: 2px solid var(--panel-dark);
+  box-shadow: var(--panel-shadow);
+}
+
 .panel {
   background-color: var(--panel-color);
   padding: var(--panel-padding);
@@ -26,10 +34,10 @@
 }
 
 .panel-button {
-  background-color: var(--background);
+  background-color: var(--foreground);
   border: none;
   padding: 10px;
-  color: white;
+  color: var(--accent-color);
   width: 20px;
   height: 20px;
   box-sizing: border-box;
@@ -37,6 +45,7 @@
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  text-shadow: var(--text-shadow);
 }
 
 .panel-button:hover {

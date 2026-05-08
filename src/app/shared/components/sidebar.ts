@@ -75,56 +75,62 @@ export default {
     m("div.sidebar", [
 
       // Main Navigation
-      m(".panel.nav-content", [
-        m(".panel-header", [
-          m("p", { "data-i18n": "sidebar.navigation.title" }),
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
-          ])
-        ]),
-        m(".panel-content", [
-          m(".sidebar-links-container", [
-            navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
-            navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
-            navBtn("sidebar.navigation.buttons.projects", false, "/projects", "Work in Progress!", "proyect"),
-            navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
-            navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", null, "achievement"),
-            navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
+      m(".panel-frame", [
+        m(".panel.nav-content", [
+          m(".panel-header", [
+            m("p", { "data-i18n": "sidebar.navigation.title" }),
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+            ])
           ]),
-        ]),
+          m(".panel-content", [
+            m(".sidebar-links-container", [
+              navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
+              navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
+              navBtn("sidebar.navigation.buttons.projects", false, "/projects", "Work in Progress!", "proyect"),
+              navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
+              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", null, "achievement"),
+              navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
+            ]),
+          ]),
+        ])
       ]),
 
       // 'Data' sub-site navigation
-      m(".panel.nav-content", [
-        m(".panel-header", [
-          m("p", { "data-i18n": "sidebar.data.title" }),
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
-          ])
-        ]),
-        m(".panel-content", [
-          m(".sidebar-links-container", [
-            ..._dataButtons()
+      m(".panel-frame", [
+        m(".panel.nav-content", [
+          m(".panel-header", [
+            m("p", { "data-i18n": "sidebar.data.title" }),
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+            ])
           ]),
-        ]),
+          m(".panel-content", [
+            m(".sidebar-links-container", [
+              ..._dataButtons()
+            ]),
+          ]),
+        ])
       ]),
 
       // Nekoweb Data Panel
       // NOTE: SUUUUUPER WIP, ESTO NECESITA MAS DESARROLLO.
-      m(".panel.nav-content", [
-        m(".panel-header", [
-          m("p", { "data-i18n": "sidebar.nekoweb.title" }),
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+      m(".panel-frame", [
+        m(".panel.nav-content", [
+          m(".panel-header", [
+            m("p", { "data-i18n": "sidebar.nekoweb.title" }),
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+            ])
+          ]),
+          m(".panel-content", [
+            m("div.stats-container", [
+              m("p", [m("span", { "data-i18n": "sidebar.nekoweb.buttons.visits", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('views'))]),
+              m("p", { style: "margin-bottom:10px;" }, [m("span", { "data-i18n": "sidebar.nekoweb.buttons.followers", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('followers'))]),
+              navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "follow"),
+            ])
           ])
         ]),
-        m(".panel-content", [
-          m("div.stats-container", [
-            m("p", [m("span", { "data-i18n": "sidebar.nekoweb.buttons.visits", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('views'))]),
-            m("p", { style: "margin-bottom:10px;" }, [m("span", { "data-i18n": "sidebar.nekoweb.buttons.followers", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('followers'))]),
-            navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "follow"),
-          ])
-        ])
-      ]),
+      ])
     ]),
 };
