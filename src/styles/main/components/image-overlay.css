@@ -1,0 +1,30 @@
+.image-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+.image-overlay img {
+  border: 4px var(--foreground) solid;
+  max-width: 90%;
+  box-shadow: var(--panel-shadow);
+}
+
+.image-overlay .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  padding: 4px 7px; 
+  color: white;
+  background-color: var(--foreground);
+  cursor: pointer;
+    box-shadow: var(--panel-shadow);
+}
