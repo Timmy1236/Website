@@ -1,5 +1,5 @@
 import m from "mithril";
-import { initImageOverlay } from "../../shared/ui/image-overlay.js";
+import { createImageOverlay } from "../../shared/ui/image-overlay.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 
@@ -7,11 +7,11 @@ const Project = {
   oncreate() {
     setCurrentPath(m.route);
     refreshi18n();
-    initImageOverlay();
   },
 
   view: function () {
     return m(".content", [
+
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header",
@@ -22,94 +22,86 @@ const Project = {
               m("button.panel-button", { "data-panel-action": "close" }, "X")
             ])
           ),
+          // WebSite project
+          m(".panel-content", [
 
-          m(".projects-list", [
-            // WebSite project
-            m(".panel-content", [
+            m(".project-header", [
+              m(".project-icon",
+                m("img", {
+                  src: "./assets/images/favicon/pages.png",
+                  alt: "Website icon"
+                })
+              ),
 
-              m(".card", [
-                m(".project-header", [
-                  m(".project-icon",
-                    m("img", {
-                      src: "./assets/images/favicon/pages.png",
-                      alt: "Website icon"
-                    })
-                  ),
+              m("h1.project-title", "Timmy's digital dumpster")
+            ]),
 
-                  m(".project-meta", [
-                    m("h2.project-title", "Timmy's digital dumpster"),
-                    m(".project-tags", [
-                      m("span.project-tag", "typescript"),
-                      m("span.project-tag", "mithril.js"),
-                      m("span.project-tag", "11ty")
-                    ])
-                  ])
-                ]),
+            m(".project-body", [
+              m("p.project-description", {
+                "data-i18n": "projects.list.website.description"
+              })
+            ]),
 
-                m(".project-body", [
-                  m("p.project-description", {
-                    "data-i18n": "projects.list.website.description"
-                  })
-                ]),
-
-                m(".project-gallery", [
-                  m(".image-preview", [
-                    m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/website-2025.png", alt: "2025" }),
-                    m("p.image-text", "2025 - v1.0")
-                  ]),
-                  m(".image-preview", [
-                    m("img", { src: "https://file.garden/aSqYsBZqpx5ZY3su/media/img/nekoweb/screenshots/Website-2.0.0.png", alt: "2026" }),
-                    m("p.image-text", "2026 - v2.0")
-                  ]),
-                ]),
-
-                m(".proyects-links", [
-                  m("a.link-icon", { href: "https://github.com/Timmy1236/Website", target: "_blank" }, [
-                    m("img", { src: "/assets/images/icons/socials/github.png" }),
-                    m("span", "GitHub")
-                  ])
-                ])
+            m(".project-gallery", [
+              m(".image-preview", [
+                m("img", {
+                  onclick: () => { createImageOverlay("/assets/images/pages/projects/website/1.0.0.png") }, src: "/assets/images/pages/projects/website/preview_1.0.0.webp", alt: "2025"
+                }),
+                m("p.image-text", "2025 Oct - v1.0")
               ]),
+              m(".image-preview", [
+                m("img", {
+                  onclick: () => { createImageOverlay("/assets/images/pages/projects/website/2.0.0.png") }, src: "/assets/images/pages/projects/website/preview_2.0.0.webp", alt: "2025"
+                }),
+                m("p.image-text", "2026 Apr - v2.0")
+              ])
+            ]),
 
-              m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+            m(".projects-links", [
+              m("a.link-icon", { href: "https://github.com/Timmy1236/Website", target: "_blank" }, [
+                m("img", { src: "/assets/images/icons/socials/github.png" }),
+                m("span", "GitHub")
+              ])
+            ]),
+          ]),
+        ])
+      ]),
 
-              // Leafy project
-              m(".card", [
-                m(".project-header", [
-                  m(".project-icon",
-                    m("img", {
-                      src: "./assets/images/icons/leafy.webp",
-                      alt: "Leafy icon"
-                    })
-                  ),
 
-                  m(".project-meta", [
-                    m("h2.project-title", "Leafy"),
-                    m(".project-tags", [
-                      m("span.project-tag", "typescript"),
-                      m("span.project-tag", "discord.js")
-                    ])
-                  ])
-                ]),
+      m(".panel-frame", [
+        m(".panel", [
+          m(".panel-header",
+            m("p.text-title", { "data-i18n": "projects.title" }),
 
-                m(".project-body", [
-                  m("p.project-description", {
-                    "data-i18n": "projects.list.leafy.description"
-                  })
-                ]),
+            m(".panel-controls", [
+              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+              m("button.panel-button", { "data-panel-action": "close" }, "X")
+            ])
+          ),
+          // WebSite project
+          m(".panel-content", [
 
-                m(".project-gallery", [
-                  m(".image-preview", [
-                    m("img", { src: "/assets/images/others/placeholder.png", alt: "Placeholder" })
-                  ])
-                ]),
+            m(".project-header", [
+              m(".project-icon",
+                m("img", {
+                  src: "./assets/images/icons/leafy.webp",
+                  alt: "Leafy icon"
+                })
+              ),
 
-                m(".proyects-links", [
-                  m("a.link-icon", { href: "https://github.com/Timmy1236/Leafy", target: "_blank" }, [
-                    m("img", { src: "/assets/images/icons/socials/github.png" }),
-                    m("span", "GitHub")
-                  ])
-                ])
+              m("h1.project-title", "Leafy"),
+            ]),
+
+            m(".project-body", [
+              m("p.project-description", {
+                "data-i18n": "projects.list.leafy.description"
+              })
+            ]),
+
+            m(".projects-links", [
+              m("a.link-icon", { href: "https://github.com/Timmy1236/Leafy", target: "_blank" }, [
+                m("img", { src: "/assets/images/icons/socials/github.png" }),
+                m("span", "GitHub")
               ])
             ])
           ])
