@@ -44,10 +44,7 @@ const Home = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header", [
-            m(".panel-title", { style: "display:flex;align-items:center;" }, [
-              m("img.panel-icon", { src: "/assets/images/icons/utils/icon.png" }),
-              m("p.text-title", { "data-i18n": "home.welcome.title" }),
-            ]),
+            m("p.text-title", { "data-i18n": "home.welcome.title" }),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
