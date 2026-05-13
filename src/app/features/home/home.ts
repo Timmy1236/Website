@@ -81,7 +81,7 @@ const Home = {
                 m("p.entry-date", this.latest.changelog.date),
                 m("p.entry-content", this.latest.changelog.description),
                 m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-                m("img.entry-image", { onclick: () => { createImageOverlay("https://file.garden/aSqYsBZqpx5ZY3su/Documento.png") }, src: this.latest.changelog.preview }),
+                m("img.entry-image", { src: this.latest.changelog.preview }),
               ])
                 : m("p", "Cargando...")
             ])
