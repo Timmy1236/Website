@@ -1,0 +1,74 @@
+---
+permalink: ../sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://timmy.nekoweb.org/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>{{ buildTime }}</lastmod>
+  </url>
+  <url>
+    <loc>https://timmy.nekoweb.org/#!/home</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>{{ buildTime }}</lastmod>
+  </url>
+  <url>
+    <loc>https://timmy.nekoweb.org/#!/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>{{ buildTime }}</lastmod>
+  </url>
+  <url>
+    <loc>https://timmy.nekoweb.org/#!/links</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>{{ buildTime }}</lastmod>
+  </url>
+  <url>
+    <loc>https://timmy.nekoweb.org/#!/projects</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>{{ buildTime }}</lastmod>
+  </url>
+
+  {% for post in collections.blog_es %}
+  <url>
+    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>{{ post.data.date | XMLDate }}</lastmod>
+  </url>
+  {% endfor %}
+
+  {% for post in collections.blog_en %}
+  <url>
+    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>{{ post.data.date | XMLDate }}</lastmod>
+  </url>
+  {% endfor %}
+
+  {% for post in collections.changelog_es %}
+  <url>
+    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>{{ post.data.date | XMLDate }}</lastmod>
+  </url>
+  {% endfor %}
+
+  {% for post in collections.changelog_en %}
+  <url>
+    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>{{ post.data.date | XMLDate }}</lastmod>
+  </url>
+  {% endfor %}
+
+</urlset>

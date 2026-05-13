@@ -15,6 +15,10 @@ export default async function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addGlobalData('buildTime', () => {
+    return new Date().toISOString().split('T')[0];;
+  });
+
 
   // Collection combinado
   // --------------------
@@ -96,6 +100,10 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", date => {
     return new Date(date).toLocaleDateString();
   });
+
+  eleventyConfig.addFilter("XMLDate", date => {
+    return new Date(date).toISOString().split('T')[0];
+  })
 
   return {
     pathPrefix: "/content/",
