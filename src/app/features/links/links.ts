@@ -26,7 +26,7 @@ const neighborSites: ButtonSite[] = [
   },
   {
     href: "https://nogood-angel.nekoweb.org/",
-    btnSrc: "https://nogood-angel.nekoweb.org/graphics/buttons/nogood-angel.png",
+    btnSrc: "https://nogood-angel.moe/images/graphics/buttons/button2.png",
     screenshotSrc: "/assets/images/pages/links/previews/nogoodangel.webp",
     text: "Cada vez que entro a nekoweb, veo esta misma pagina siempre estando primero en la categoría 'ultimas updates'. ¿Como? ¿Como alguien puede sacar tantas updates? ¿Como alguien le da la cabeza para eso?",
   },
@@ -41,12 +41,6 @@ const neighborSites: ButtonSite[] = [
     btnSrc: "https://yefreitor.com/img/button.png",
     screenshotSrc: "/assets/images/pages/links/previews/yefreitor.webp",
     text: "Hay un maldito botón para fumarte un porro en el inicio. ¿Que mas necesitas?"
-  },
-  {
-    href: "https://bweh.dhyotteh.com/",
-    btnSrc: "/assets/images/buttons/no-button.png",
-    screenshotSrc: "/assets/images/pages/links/previews/bweh.webp",
-    text: "Joder, y yo pensando que estaba haciendo la pagina mas interactiva y me sale este con la mejor mierda del mundo D:",
   },
   {
     href: "https://jovidmtp.nekoweb.org/",
@@ -78,7 +72,21 @@ const neighborSites: ButtonSite[] = [
     screenshotSrc: "/assets/images/pages/links/previews/amoeba.webp",
     text: "No, la captura no esta mal. La pagina cargo correctamente. Así es el landing page. Me quede como un minuto mirando la pantalla esperando que algo pasara, y tenia que clickear el titulo para continuar. :)"
   },
+  {
+    href: "https://reduxflakes.nekoweb.org/",
+    btnSrc: "https://reduxflakes.nekoweb.org/img/hcl6TIROJn-88.webp",
+    screenshotSrc: "/assets/images/pages/links/previews/reduxflakes.webp",
+    text: null
+  },
+  {
+    href: "https://lucksiyo.xyz/",
+    btnSrc: "https://lucksiyo.xyz/resources/button_v1.jpg",
+    screenshotSrc: "/assets/images/pages/links/previews/lucksiyo.webp",
+    text: "Esto tiene una mejor sensación de fluidez comparado a lo que yo mismo estoy haciendo"
+  },
 ];
+
+//
 
 const likesSite: ButtonSite[] = [
   {

@@ -109,7 +109,18 @@ function _updateClipPath() {
  * Retorna código HTML ya construido para el overlay con los datos que trae el botón.
  */
 function _buildOverlay(site: ButtonSite): string {
-  return `
+
+  if (site.text) {
+    return `
+  <div style="display:flex;gap:10px;">
+    <div class="panel">
+      <div class="panel-header">
+        <p>Nota</p>
+      </div>
+      <div class="panel-content">
+        <p class="button-text">${site.text ? site.text : ""}</p>
+      </div>
+    </div>
     <div class="panel">
       <div class="panel-header">
         <p>${site.href.slice(8, -1)}</p>
@@ -118,8 +129,23 @@ function _buildOverlay(site: ButtonSite): string {
         <div class="button-screenshot">
           <img src="${site.screenshotSrc}" alt="Screenshot de ${site.href}">
         </div>
-        <p class="button-text">${site.text ? site.text : ""}</p>
       </div>
     </div>
+  </div>
   `;
+  } else {
+    return `
+    <div class="panel">
+      <div class="panel-header">
+        <p>${site.href.slice(8, -1)}</p>
+      </div>
+      <div class="panel-content">
+        <div class="button-screenshot">
+          <img src="${site.screenshotSrc}" alt="Screenshot de ${site.href}">
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
+  }
 }
