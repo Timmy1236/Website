@@ -8,12 +8,14 @@ eleventyExcludeFromCollections: true
     "title": "{{ collections.blog_es[0].data.title }}",
     "url": "{{ collections.blog_es[0].url }}",
     "date": "{{ collections.blog_es[0].date | readableDate }}",
-    "description": "{{ collections.blog_es[0].data.description }}"
+    "description": "{{ collections.blog_es[0].data.description }}",
+    "preview": "{{ collections.blog_es[0].data.preview }}"
   },
   "changelog": {
     "title": "{{ collections.changelog_es[0].data.title }}",
     "url": "{{ collections.changelog_es[0].url }}",
     "date": "{{ collections.changelog_es[0].date | readableDate }}",
-    "description": "{{ collections.changelog_es[0].data.description }}"
+    "description": "{{ collections.changelog_es[0].data.description }}",
+    "preview": "{{ collections.changelog_es[0].data.preview }}"
   }
 }

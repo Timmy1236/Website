@@ -3,43 +3,9 @@ import { getLatest, getLastCommit } from "./latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { applyBBCode } from "../../shared/ui/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-
-interface Entry {
-  title: string;
-  url: string;
-  date: string;
-  description: string;
-}
-
-interface Latest {
-  blog: Entry;
-  changelog: Entry;
-}
-
-// Api Github Json to Typescript
-export interface Root {
-  sha: string
-  node_id: string
-  commit: Commit
-  url: string
-  html_url: string
-  comments_url: string
-  committer: Committer
-}
-
-export interface Commit {
-  committer: Committer
-  message: string
-  url: string
-  comment_count: number
-}
-
-export interface Committer {
-  name: string
-  email: string
-  date: string
-}
-
+import { createImageOverlay } from "../../shared/ui/image-overlay.ts";
+import type { Latest } from "./entries.d.ts";
+import type { Root } from "./github.d.ts"
 
 const Home = {
   latest: null as Latest | null,
@@ -56,6 +22,7 @@ const Home = {
   oninit: function () {
     getLatest().then((data: Latest) => {
       this.latest = data;
+
       m.redraw();
     });
 
@@ -77,8 +44,10 @@ const Home = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header", [
-            m("p.text-title", { "data-i18n": "home.welcome.title" }),
-
+            m(".panel-title", { style: "display:flex;align-items:center;" }, [
+              m("img.panel-icon", { src: "/assets/images/icons/utils/icon.png" }),
+              m("p.text-title", { "data-i18n": "home.welcome.title" }),
+            ]),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -88,7 +57,7 @@ const Home = {
           m(".panel-content", [
             m("div", { style: "display: flex;" }, [
               m("p", { "data-i18n": "home.welcome.text", "data-bbcode": true }),
-              m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px" })
+              m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;" })
             ]),
           ])
         ])
@@ -111,11 +80,11 @@ const Home = {
             ),
             m(".panel-content", [
               this.latest ? m("div", [
-                m(".card", [
-                  m("a.card-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
-                  m("p.card-date", this.latest.changelog.date),
-                  m("p.card-content", this.latest.changelog.description)
-                ])
+                m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                m("p.entry-date", this.latest.changelog.date),
+                m("p.entry-content", this.latest.changelog.description),
+                m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+                m("img.entry-image", { onclick: () => { createImageOverlay("https://file.garden/aSqYsBZqpx5ZY3su/Documento.png") }, src: this.latest.changelog.preview }),
               ])
                 : m("p", "Cargando...")
             ])
@@ -132,14 +101,15 @@ const Home = {
                 m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
                 m("button.panel-button", { "data-panel-action": "close" }, "X")
               ])
-            ),
+            )
+            ,
             m(".panel-content", [
               this.latest ? m("div", [
-                m(".card", [
-                  m("a.card-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
-                  m("p.card-date", this.latest.blog.date),
-                  m("p.card-content", this.latest.blog.description)
-                ]),
+                m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                m("p.entry-date", this.latest.blog.date),
+                m("p.entry-content", this.latest.blog.description),
+                m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+                m("img.entry-image", { src: this.latest.blog.preview }),
               ])
                 : m("p", "Cargando...")
             ])
@@ -160,12 +130,11 @@ const Home = {
           ]),
           m(".panel-content", [
             this.latestCommit ? m("div", [
-              m(".card", [
-                m("a.card-title link", { href: this.latestCommit.html_url }, this.commitSHA),
-                m("p.card-date", this.commitDate),
-                m("p.card-content", this.latestCommit.commit.message)
-              ])
-            ]) : m("p", "Cargando...")
+              m("a.entry-title link", { href: this.latestCommit.html_url }, this.commitSHA),
+              m("p.entry-date", this.commitDate),
+              m("p.entry-content", this.latestCommit.commit.message)
+            ])
+              : m("p", "Cargando...")
           ])
         ])
       ]),

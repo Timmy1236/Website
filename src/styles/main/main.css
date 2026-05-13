@@ -10,7 +10,6 @@
 @import url("./components/link.css");
 @import url("./components/tooltip.css");
 @import url("./components/spacing-line.css");
-@import url("./components/card.css");
 @import url("./components/bbcode.css");
 @import url("./components/image-overlay.css");
 
@@ -19,6 +18,7 @@
 @import url("./layout/banner.css");
 
 /* Imports Pages */
+@import url("./pages/home.css");
 @import url("./pages/links.css");
 @import url("./pages/projects.css");
 @import url("./pages/about-me.css");

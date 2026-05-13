@@ -1,0 +1,11 @@
+.entry-date {
+  opacity: 0.8;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.entry-image {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}

@@ -4,6 +4,7 @@ date: 2026-02-28
 locale: "es"
 description: "¿Huh? ¿A que te refieres que lekearon el código fuente completo de Minecraft legacy edition? ¿Se podrá jugar de vuelta en PC?"
 layout: layouts/base.html
+preview: "https://file.garden/aSqYsBZqpx5ZY3su/s.jpg"
 back: /content/es/blog/index.html
 tags: ["blog", "largo"]
 ---
