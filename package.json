@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
     "build": "npm run eleventy && npm run js && npm run css && npm run css:pages",
+    "eslint": "npx eslint .",
     "stylelint": "npx stylelint \"**/*.css\"",
     "eleventy": "npx @11ty/eleventy",
     "eleventy:watch": "npx @11ty/eleventy --watch",
