@@ -11,9 +11,9 @@ export default {
           m("p.banner-title",
             m(".wave-text",
               text.split("").map((char, i) =>
-                m("span", {
-                  style: { "--i": i }
-                }, char)
+                m("span.wave-container", { style: { "--i": i } },
+                  m("span.wave-text-letter", char)
+                )
               )
             )
           )
