@@ -19,6 +19,8 @@ import Projects from "./features/projects/projects.ts";
 import Links from "./features/links/links.ts";
 import Configuration from "./features/configuration/configuration.ts";
 import Achievements from "./features/achievements/achievements.ts";
+import GuestbookPage from "./features/guestbook/guestbook.ts";
+import ContactPage from "./features/contact/contact.ts"
 
 async function startApp() {
   await i18nReady;
@@ -32,7 +34,9 @@ async function startApp() {
       "/projects": { render: () => m(Layout, m(Projects)) },
       "/links": { render: () => m(Layout, m(Links)) },
       "/achievements": { render: () => m(Layout, m(Achievements)) },
-      "/configuration": { render: () => m(Layout, m(Configuration)) }
+      "/configuration": { render: () => m(Layout, m(Configuration)) },
+      "/guestbook": { render: () => m(Layout, m(GuestbookPage)) },
+      "/contact": { render: () => m(Layout, m(ContactPage)) }
     });
   } else {
     console.warn("Hey, estas cargando app.js en una pagina HTML que no cuenta con un div 'app', solo haz esto si quieres cargar ciertos scripts.")

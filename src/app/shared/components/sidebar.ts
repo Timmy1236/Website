@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getSetting } from "../core/settings-logic";
+import { getSetting, getMapSetting } from "../core/settings-logic";
 
 let isTransitioning = false;
 let currentPath = "/home";
@@ -70,6 +70,20 @@ function _getNekoStat(type: string) {
   return "...";
 }
 
+function _experimental() {
+  const exp = getMapSetting("showExperimental");
+
+  if (exp === "true") {
+    return [
+      navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "(SUPER W.I.P)", "achievement"),
+      navBtn("sidebar.navigation.buttons.guestbook", false, "/guestbook", "(SUPER W.I.P)", "email"),
+      navBtn("sidebar.navigation.buttons.contact", false, "/contact", "(SUPER W.I.P)", "email")
+    ]
+  } else {
+    return [];
+  }
+}
+
 export default {
   view: () =>
     m("div.sidebar", [
@@ -86,11 +100,11 @@ export default {
           m(".panel-content", [
             m(".sidebar-links-container", [
               navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
-              navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", "Work in Progress!", "user"),
-              navBtn("sidebar.navigation.buttons.projects", false, "/projects", "Work in Progress!", "proyect"),
+              navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", null, "user"),
+              navBtn("sidebar.navigation.buttons.projects", false, "/projects", null, "proyect"),
               navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
-              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", null, "achievement"),
               navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
+              ..._experimental()
             ]),
           ]),
         ])

@@ -8,7 +8,9 @@
         "projects": "Projects",
         "links": "Links",
         "achievements": "Achievements",
-        "configuration": "Configuration"
+        "configuration": "Configuration",
+        "guestbook": "Guestbook",
+        "contact": "Contact"
       }
     },
     "data": {
@@ -83,7 +85,8 @@
       "ignoreLandingPage": "Ignore Landing Page",
       "vignetteEffects": "Vignette",
       "soundsEffects": "Sound Effects",
-      "readableFont": "Readable Font"
+      "readableFont": "Readable Font",
+      "showExperimental": "Show experimental pages."
     }
   },
   "links": {
