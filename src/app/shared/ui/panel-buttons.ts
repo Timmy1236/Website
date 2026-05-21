@@ -6,42 +6,57 @@
 */
 
 document.addEventListener("click", (event) => {
-  if (event.target === null) return;
-  if (!(event.target instanceof HTMLElement)) return
+  if (!(event.target instanceof HTMLElement)) return;
 
   const btn = event.target.closest("[data-panel-action]");
-  if (!btn) return;
-  if (!(btn instanceof HTMLElement)) return
+  if (!(btn instanceof HTMLElement)) return;
 
   const panel = btn.closest(".panel");
-  if (!panel) return;
+  if (!(panel instanceof HTMLElement)) return;
 
+  const frame = panel.closest(".panel-frame");
   const action = btn.dataset.panelAction;
 
   if (action === "minimize") {
     const content = panel.querySelector(".panel-content");
-    if (!content) return;
+    if (!(content instanceof HTMLElement)) return;
 
     content.classList.toggle("collapsed");
 
     const isCollapsed = content.classList.contains("collapsed");
+
+    frame?.classList.toggle("collapsed", isCollapsed);
     btn.textContent = isCollapsed ? "▲" : "▼";
   }
 
   if (action === "close") {
-    panel.remove();
+    const target = frame || panel;
+    const grid = target.closest(".panel-grid-2");
+
+    target.remove();
+
+    if (grid instanceof HTMLElement && grid.children.length === 0) {
+      grid.remove();
+    }
   }
 });
 
-/**
- * Añade funcionalidades a los botones de los paneles.
- */
 export function initPanel() {
   document.querySelectorAll(".panel[data-default='closed']").forEach(panel => {
+    if (!(panel instanceof HTMLElement)) return;
+
     const content = panel.querySelector(".panel-content");
     const btn = panel.querySelector("[data-panel-action='minimize']");
+    const frame = panel.closest(".panel-frame");
 
-    if (content) content.classList.add("collapsed");
-    if (btn) btn.textContent = "▲";
+    if (content instanceof HTMLElement) {
+      content.classList.add("collapsed");
+    }
+
+    frame?.classList.add("collapsed");
+
+    if (btn instanceof HTMLElement) {
+      btn.textContent = "▲";
+    }
   });
 }
