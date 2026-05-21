@@ -5,7 +5,7 @@
 */
 const SETTINGS_VERSION = "2";
 
-export type SettingKey = | "staticEffect" | "vignetteEffect" | "backgroundMusic" | "soundsEffects" | "readableFont" | "theme";
+export type SettingKey = | "staticEffect" | "vignetteEffect" | "backgroundMusic" | "soundsEffects" | "readableFont" | "theme" | "showExperimental";
 export const SETTING_KEYS: SettingKey[] = [
   "staticEffect",
   "vignetteEffect",
@@ -13,6 +13,7 @@ export const SETTING_KEYS: SettingKey[] = [
   "soundsEffects",
   "readableFont",
   "theme",
+  "showExperimental"
 ];
 
 export const DEFAULT_SETTINGS: Record<SettingKey, string> = {
@@ -22,6 +23,7 @@ export const DEFAULT_SETTINGS: Record<SettingKey, string> = {
   soundsEffects: "true",
   readableFont: "false",
   theme: "simple-purple",
+  showExperimental: "false"
 };
 
 // === Carga el efecto de ruido/estática ===
