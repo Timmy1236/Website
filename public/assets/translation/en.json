@@ -101,23 +101,5 @@
         "myButton": "Me"
       }
     }
-  },
-  "pages": {
-    "others": {
-      "half-life": {
-        "newGame": "NEW GAME",
-        "loadGame": "LOAD GAME",
-        "achievements": "ACHIEVEMENTS",
-        "options": "OPTIONS",
-        "quit": "QUIT GAME"
-      },
-      "minecraft": {
-        "singleplayer": "Singleplayer",
-        "multiplayer": "Multiplayer",
-        "mods": "Mods and Texture Packs",
-        "options": "Options...",
-        "close": "Quit Game"
-      }
-    }
   }
 }
