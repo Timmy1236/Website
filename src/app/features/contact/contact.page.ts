@@ -1,7 +1,7 @@
 import m from "mithril";
 import { refreshi18n } from "../../shared/core/i18n.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import { sendForm, contactState } from "./form.ts";
+import { sendForm, contactState } from "./contact.api.ts";
 
 const Others = {
   oncreate() {

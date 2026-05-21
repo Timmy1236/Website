@@ -1,9 +1,9 @@
 import m from "mithril";
-import { getLatest } from "./latest.ts";
+import { getLatest } from "./home.latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { applyBBCode } from "../../shared/ui/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import type { Latest } from "./entries.d.ts";
+import type { Latest } from "./entries";
 
 const Home = {
   latest: null as Latest | null,
@@ -60,13 +60,18 @@ const Home = {
               ])
             ),
             m(".panel-content", [
-              this.latest ? m("div", [
-                m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
-                m("p.entry-date", this.latest.changelog.date),
-                m("p.entry-content", this.latest.changelog.description),
-                m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-                m("img.entry-image", { src: this.latest.changelog.preview }),
-              ])
+              this.latest ?
+                m("div", { style: "display:flex;flex-direction:column;justify-content:space-between;height:100%" }, [
+                  m("div", [
+                    m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                    m("p.entry-date", this.latest.changelog.date),
+                    m("p.entry-content", this.latest.changelog.description),
+                  ]),
+                  m("div", [
+                    m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+                    m("img.entry-image", { src: this.latest.changelog.preview }),
+                  ])
+                ])
                 : m("p", "Cargando...")
             ])
           ])

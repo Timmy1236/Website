@@ -1,5 +1,5 @@
 import m from "mithril";
-import { loadDiscordProfile } from "./discord.js";
+import { loadDiscordProfile } from "./about-me.discord.js";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { applyBBCode } from "../../shared/ui/bbcode.js";
