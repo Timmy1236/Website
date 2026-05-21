@@ -1,15 +1,12 @@
 import m from "mithril";
-import { getLatest, getLastCommit } from "./latest.ts";
+import { getLatest } from "./latest.ts";
 import { refreshi18n } from "../../shared/core/i18n.js";
 import { applyBBCode } from "../../shared/ui/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import { createImageOverlay } from "../../shared/ui/image-overlay.ts";
 import type { Latest } from "./entries.d.ts";
-import type { Root } from "./github.d.ts"
 
 const Home = {
   latest: null as Latest | null,
-  latestCommit: null as Root | null,
   commitSHA: null as string | null,
   commitDate: null as string | null,
 
@@ -22,20 +19,7 @@ const Home = {
   oninit: function () {
     getLatest().then((data: Latest) => {
       this.latest = data;
-
       m.redraw();
-    });
-
-    getLastCommit().then((data: Root[]) => {
-      if (data && data.length > 0) {
-        const lastCommit = data[0];
-
-        this.latestCommit = lastCommit;
-        this.commitSHA = String(lastCommit.sha).slice(0, 7);
-        this.commitDate = new Date(lastCommit.commit.committer.date).toLocaleDateString();
-
-        m.redraw();
-      }
     });
   },
 
@@ -112,29 +96,7 @@ const Home = {
             ])
           ]),
         ])
-      ]),
-
-      // ==== COMMIT ====
-      m(".panel-frame", [
-        m(".panel", [
-          m(".panel-header", [
-            m("p.text-title", { "data-i18n": "home.entries.commit.title" }),
-
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-              m("button.panel-button", { "data-panel-action": "close" }, "X")
-            ])
-          ]),
-          m(".panel-content", [
-            this.latestCommit ? m("div", [
-              m("a.entry-title link", { href: this.latestCommit.html_url }, this.commitSHA),
-              m("p.entry-date", this.commitDate),
-              m("p.entry-content", this.latestCommit.commit.message)
-            ])
-              : m("p", "Cargando...")
-          ])
-        ])
-      ]),
+      ])
     ])
   }
 };
