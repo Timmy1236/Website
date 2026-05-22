@@ -126,7 +126,7 @@
   color: var(--text-color);
   opacity: 0.45;
   transition: 0.2s;
-  font-family: "VT323", monospace;
+  font-family: Pixel, monospace;
   font-size: 20px;
   border: 0 solid transparent;
 }

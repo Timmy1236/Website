@@ -12,7 +12,7 @@
   padding: 10px 14px;
   z-index: 9999;
   transition: right 0.35s ease-in-out;
-  font-family: "VT323", monospace;
+  font-family: Pixel, monospace;
   text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
 }
 

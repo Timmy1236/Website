@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Pixel;
+  src: url("/assets/fonts/pixel.woff2") format("woff2");
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +23,7 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--main-text);
-  font-family: "VT323", monospace;
+  font-family: Pixel, monospace;
   text-shadow: var(--text-shadow);
   background-image: var(--background-image);
   background-repeat: var(--background-repeat);
@@ -34,15 +40,29 @@ a {
 
 p, label, a, span  {
   font-size: clamp(1rem, 1.75vw + 0.25rem, 1.60rem);
-  color: var(--main-text)
+  color: var(--main-text);
+  letter-spacing: -0.3px;
 }
 
 button, a:hover {
   cursor: var(--hover-mouse-image), pointer;
 }
 
+select {
+  padding: 4px 8px;
+  font-family: Pixel, monospace;
+  font-size: 22px;
+  background-color: rgb(0 0 0 / 10%);
+  color: #fff;
+  border: 2px rgb(0 0 0 / 40%) solid;
+}
+
+select:open {
+  background-color: var(--background-color);
+}
+
 .readable-font * {
-  font-family: monospace !important;
+  font-family: Arial, Helvetica, sans-serif !important;
   line-height: 150%;
   font-size: 20px;
 }
@@ -50,7 +70,7 @@ button, a:hover {
 h1 {
   font-weight: normal;
   color: var(--accent-color);
-  font-family: "VT323", sans-serif;
+  font-family: Pixel, sans-serif;
   text-shadow: var(--text-shadow);
   font-size: var(--panel-header-text-size);
 }
@@ -58,7 +78,7 @@ h1 {
 h2 {
   font-weight: normal;
   color: var(--accent-color);
-  font-family: "VT323", monospace;
+  font-family: Pixel, monospace;
   border-bottom: 3px dotted var(--foreground);
 }
 
