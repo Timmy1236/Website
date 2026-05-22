@@ -42,11 +42,11 @@
     "@types/mithril": "^2.2.8",
     "concurrently": "^9.2.1",
     "esbuild": "^0.28.0",
-    "eslint": "^10.3.0",
-    "stylelint": "^17.11.0",
+    "eslint": "^10.4.0",
+    "stylelint": "^17.12.0",
     "stylelint-config-standard": "^40.0.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.3"
+    "typescript-eslint": "^8.59.4"
   },
   "dependencies": {
     "mithril": "^2.3.8"

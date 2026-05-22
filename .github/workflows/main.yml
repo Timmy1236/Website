@@ -9,22 +9,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout (Clone)
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Instalando PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Instalando NODE
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 'lts'
+          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Instalando Dependencias
+        run: pnpm install --frozen-lockfile
 
-      - name: Build site
-        run: npm run build
+      - name: Compilando Sitio
+        run: pnpm build
 
-      - name: Deploy to Nekoweb
+      - name: Deploy en Nekoweb
         uses: indiefellas/deploy2nekoweb@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
