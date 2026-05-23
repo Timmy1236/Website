@@ -16,13 +16,13 @@ git clone https://github.com/Timmy1236/Website.git
 
 2. Instala todas las dependencias de node.js
 ```bash
-npm install
+pnpm install
 ```
 
 3. Compila el codigo fuente de la página.
 ```bash
-npm run build   # Compila la página una vez.
-npm run dev     # Compila la página por cada vez que realizas un cambio y lo guardas.
+pnpm build   # Compila la página una vez.
+pnpm dev     # Compila la página por cada cambio realizado.
 ```
 
 4. Enciende un servidor para visualizar la pagina. Puedes usar la extension: [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) de vscode, o también puedes usar Python.
