@@ -13,7 +13,9 @@ const translation: Record<string, Record<string, string>> = {
     "/projects": "Proyectos",
     "/links": "Links",
     "/achievements": "Logros",
-    "/configuration": "Configuración"
+    "/configuration": "Configuración",
+    "/guestbook": "Guestbook",
+    "/contact": "Contacto"
   },
   en: {
     "/home": "Home",
@@ -21,17 +23,18 @@ const translation: Record<string, Record<string, string>> = {
     "/projects": "Project",
     "/links": "Links",
     "/achievements": "Achievements",
-    "/configuration": "Configuration"
+    "/configuration": "Configuration",
+    "/guestbook": "Guestbook",
+    "/contact": "Contact"
   },
 }
 
 export function setCurrentPath(path: m.Route) {
   const current = path.get();
-  _setTitle(current)
+  _setTitle(current);
 }
 
 function _setTitle(path: string) {
   const local = getSetting("preferred-language") || "en";
-
   document.title = translation[local][path] + " - Timmy";
 }
