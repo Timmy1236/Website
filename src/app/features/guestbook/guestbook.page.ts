@@ -95,7 +95,7 @@ const GuestbookPage = {
               m("label", { for: "gb-link", style: "display: block; margin-bottom: 4px;" }, "Link (opcional)"),
               m("input", {
                 id: "gb-link",
-                type: "url",
+                type: "text",
                 placeholder: "https://?????.nekoweb.org",
                 maxlength: 100,
                 value: form.link,

@@ -1,9 +1,9 @@
-/* Imports Effects */
+/* Effects */
 @import url("./effects/noise.css");
 @import url("./effects/vignette.css");
 @import url("./effects/animations.css");
 
-/* Imports Components */
+/* Components */
 @import url("./components/panel.css");
 @import url("./components/buttons.css");
 @import url("./components/toast.css");
@@ -13,11 +13,11 @@
 @import url("./components/bbcode.css");
 @import url("./components/image-overlay.css");
 
-/* Imports Layout */
+/* Layout */
 @import url("./layout/layout.css");
 @import url("./layout/banner.css");
 
-/* Imports Pages */
+/* Pages */
 @import url("./pages/home.css");
 @import url("./pages/links.css");
 @import url("./pages/projects.css");
@@ -25,24 +25,6 @@
 @import url("./pages/configuration.css");
 @import url("./pages/achievements.css");
 
-/* Imports Base */
+/* Imports Generales */
 @import url("./base/reset.css");
-
-/* Imports */
 @import url("themes.css");
-
-/* Temporal */
-.message-form {
-  max-width: 500px;
-  width: 100%;
-  resize: none;
-  overflow: hidden;
-  white-space: pre-wrap;
-  padding: 5px;
-  box-sizing: border-box;
-  border-radius: 0;
-  color: white;
-  border: 2px rgb(0 0 0 / 40%) solid;
-  background-color: rgb(0 0 0 / 10%);
-  font-size: 16px;
-}
