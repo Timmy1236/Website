@@ -2,9 +2,10 @@
 title: "Minecraft legacy edition"
 date: 2026-02-28
 locale: "en"
-description: "Huh? What do you mean the full source code of Minecraft legacy edition got leaked? Will it be possible to play it again on PC?"
+description: "¿What do you mean the full source code of Minecraft legacy edition got leaked? ¿Will it be possible to play it on PC?"
 layout: layouts/base.html
 back: /content/en/blog/index.html
+preview: "https://file.garden/aSqYsBZqpx5ZY3su/website/previews/blog/Minecraft.webp"
 tags: ["blog", "long"]
 ---
 
