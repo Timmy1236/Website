@@ -1,16 +1,16 @@
 import m from "mithril";
 
-// Shared
+// Globals
 import { i18nReady } from "./shared/core/i18n.ts";
 import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
-import "./shared/core/settings-logic.ts";
-import Layout from "./shared/components/layout.ts";
-import "./shared/ui/autoplay.ts";
-import "./shared/ui/sound-effects.ts";
+import { initializeSettings } from "./shared/core/settings-logic.ts";
+import { initializeAutoplay } from "./shared/ui/autoplay.ts";
+import { initializeSoundsEffects } from "./shared/ui/sound-effects.ts";
 import "./shared/ui/tooltip.ts";
 import "./shared/ui/panel-buttons.ts"
 
 // Pages
+import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
 import About from "./features/about-me/about-me.page.ts";
 import Projects from "./features/projects/projects.page.ts";
@@ -21,7 +21,11 @@ import GuestbookPage from "./features/guestbook/guestbook.page.ts";
 import ContactPage from "./features/contact/contact.page.ts"
 
 async function startApp() {
+  initializeSettings();
+  initializeSoundsEffects();
+  initializeAutoplay();
   await i18nReady;
+
   const root = document.getElementById("app")
 
   if (root) {
@@ -37,7 +41,7 @@ async function startApp() {
       "/contact": { render: () => m(Layout, m(ContactPage)) }
     });
   } else {
-    console.warn("Hey, estas cargando app.js en una pagina HTML que no cuenta con un div 'app', solo haz esto si quieres cargar ciertos scripts.")
+    console.error("Dude, estas cargando el script app.js en un HTML que no deberías.")
   }
 }
 

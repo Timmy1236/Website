@@ -119,5 +119,3 @@ export function getSetting(key: string): string | null {
 export function saveSetting(key: string, value: string): void {
   localStorage.setItem(key, value);
 }
-
-document.addEventListener('DOMContentLoaded', initializeSettings);

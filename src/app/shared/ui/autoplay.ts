@@ -13,7 +13,7 @@ const musicEnabled: boolean = getMapSetting("backgroundMusic") === "true";
 const songsArray: string[] = ["./assets/sounds/music/Store_Track_1.ogg", "./assets/sounds/music/Simpsons_Hotline.ogg"]
 const volume = 0.25
 
-document.addEventListener("DOMContentLoaded", function () {
+export function initializeAutoplay() {
   if (!musicEnabled) return;
   const audio = new Audio();
 
@@ -65,4 +65,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('blur', handleAudioState);
   window.addEventListener('focus', handleAudioState);
-});
+};

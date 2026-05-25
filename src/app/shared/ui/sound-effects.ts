@@ -13,26 +13,24 @@ interface SoundConfig {
 }
 const audioCtx = new AudioContext();
 const canPlaySounds: boolean = getMapSetting("soundsEffects") === "true";
-let userInteracted = false;
 
 /**
  * Activa la lógica cuando el usuario interactúa con la pagina y este activado los efectos de sonidos.
  */
-function _unlockAudio() {
-  console.log("%csound-effects" + "%c Usuario interactuó con la pagina!", "color: #87F3A9; background: #282A35;", "color: white")
-  userInteracted = true;
-  if (canPlaySounds) {
-    console.log("%csound-effects" + "%c Activando AudioContext.", "color: #87F3A9; background: #282A35;", "color: white")
-    audioCtx.resume();
-    _audioLogic()
-  } else {
-    console.log("%csound-effects" + "%c Los sonidos están desactivados por el usuario. :(", "color: #87F3A9; background: #282A35;", "color: white")
-  }
+export function initializeSoundsEffects() {
+  document.addEventListener("click", function () {
+    if (canPlaySounds) {
+      console.log("%csound-effects" + "%c Activando AudioContext.", "color: #87F3A9; background: #282A35;", "color: white");
+      audioCtx.resume();
+      _audioLogic();
+    } else {
+      console.log("%csound-effects" + "%c Los sonidos están desactivados por el usuario. :(", "color: #87F3A9; background: #282A35;", "color: white");
+    }
+
+  }, { once: true });
 }
 
 function _audioLogic() {
-  if (!userInteracted) return;
-
   const createAudio = (path: string) => new Audio(`./assets/sounds/sfx/mouse/${path}.mp3`);
 
   const SFX = {
@@ -153,5 +151,3 @@ function _audioLogic() {
     _playBuffer(keyBuffer, 0.5, 0.9 + Math.random() * 0.5);
   });
 }
-
-document.addEventListener("click", _unlockAudio, { once: true })
