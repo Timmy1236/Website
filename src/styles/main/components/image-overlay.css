@@ -10,7 +10,7 @@
 }
 
 .image-overlay img {
-  border: 4px var(--foreground) solid;
+  border: 4px var(--color-foreground) solid;
   max-width: 90%;
   box-shadow: var(--panel-shadow);
 }
@@ -24,7 +24,7 @@
   border: none;
   padding: 4px 7px; 
   color: white;
-  background-color: var(--foreground);
+  background-color: var(--color-foreground);
   cursor: pointer;
     box-shadow: var(--panel-shadow);
 }

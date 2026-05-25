@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --background: #282a36;
-  --foreground: #756e92;
+  --color-background: #282a36;
+  --color-foreground: #756e92;
   --text: #fff;
   --accent: #87F3A9;
   --accent2: #68b982d5;
@@ -14,7 +14,7 @@
 
 html {
   font-family: monospace;
-  background-color: var(--background);
+  background-color: var(--color-background);
 }
 
 li {
@@ -60,7 +60,7 @@ p {
 }
 
 .container {
-  background-color: var(--background);
+  background-color: var(--color-background);
   margin: 10px auto;
   width: 90%;
   max-width: 900px;
@@ -128,7 +128,7 @@ p {
 /* ==== [ CONTENT ] === */
 .text-header {
   width: 100%;
-  border-bottom: 3px dotted var(--foreground);
+  border-bottom: 3px dotted var(--color-foreground);
   padding-bottom: 3px;
   margin-bottom: 8px;
 }
@@ -165,13 +165,13 @@ p {
 
 .post-card {
   padding: 3px 8px;
-  border-bottom: 2px dotted var(--foreground);
-  border-left: 2px dotted var(--foreground);
-  border-right: 2px dotted var(--foreground);
+  border-bottom: 2px dotted var(--color-foreground);
+  border-left: 2px dotted var(--color-foreground);
+  border-right: 2px dotted var(--color-foreground);
 }
 
 .post-card:first-of-type {
-  border-top: 2px dotted var(--foreground);
+  border-top: 2px dotted var(--color-foreground);
 }
 
 .post-card:hover {

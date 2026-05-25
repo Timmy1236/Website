@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--background);
-  border: 2px solid var(--foreground);
+  background: var(--color-background);
+  border: 2px solid var(--color-foreground);
   color: white;
   padding: 6px 10px;
   pointer-events: none;

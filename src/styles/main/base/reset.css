@@ -12,7 +12,7 @@
 
 html {
   scrollbar-width: none;
-  scrollbar-color: var(--foreground) transparent; 
+  scrollbar-color: var(--color-foreground) transparent; 
 }
 
 ::-webkit-scrollbar-track {
@@ -21,14 +21,14 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--main-text);
+  background-color: var(--color-background-color);
+  color: var(--color-text);
   font-family: Pixel, monospace;
   text-shadow: var(--text-shadow);
-  background-image: var(--background-image);
-  background-repeat: var(--background-repeat);
-  background-size: var(--background-size);
-  animation: var(--background-animation), fade-in 1s ease forwards;
+  background-image: var(--color-background-image);
+  background-repeat: var(--color-background-repeat);
+  background-size: var(--color-background-size);
+  animation: var(--color-background-animation), fade-in 1s ease forwards;
   background-attachment: fixed;
   background-position: bottom;
   cursor: var(--normal-mouse-image), auto;
@@ -40,7 +40,7 @@ a {
 
 p, label, a, span  {
   font-size: clamp(1rem, 1.75vw + 0.25rem, 1.60rem);
-  color: var(--main-text);
+  color: var(--color-text);
   letter-spacing: -0.3px;
 }
 
@@ -58,7 +58,7 @@ select {
 }
 
 select:open {
-  background-color: var(--background-color);
+  background-color: var(--color-background-color);
 }
 
 .readable-font * {
@@ -69,7 +69,7 @@ select:open {
 
 h1 {
   font-weight: normal;
-  color: var(--accent-color);
+  color: var(--color-accent);
   font-family: Pixel, sans-serif;
   text-shadow: var(--text-shadow);
   font-size: var(--panel-header-text-size);
@@ -77,13 +77,13 @@ h1 {
 
 h2 {
   font-weight: normal;
-  color: var(--accent-color);
+  color: var(--color-accent);
   font-family: Pixel, monospace;
-  border-bottom: 3px dotted var(--foreground);
+  border-bottom: 3px dotted var(--color-foreground);
 }
 
 ::selection {
-  background: var(--foreground);
+  background: var(--color-foreground);
   color: #fff;
 }
 
