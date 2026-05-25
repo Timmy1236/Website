@@ -84,16 +84,16 @@ const Others = {
             m(".tree-section", [
               m("p.heading.tree-header", "Hosting"),
               m(".tree-list", [
-                m(".tree-item", m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "Website: Nekoweb")),
-                m(".tree-item", m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "Images: File Garden")),
+                m(".tree-item", m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "NekoWeb")),
+                m(".tree-item", m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "File Garden")),
               ]),
             ]),
             m(".tree-section", [
               m("p.heading.tree-header", "Librerías"),
               m(".tree-list", [
-                m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril: Single Page Application")),
-                m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "11ty: Static Site Generator")),
-                m(".tree-item", m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "esbuild: TypeScript & CSS Bundler")),
+                m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril.js")),
+                m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "Eleventy (11ty)")),
+                m(".tree-item", m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "ESBuild")),
               ]),
             ]),
             m(".tree-section", [
@@ -107,14 +107,15 @@ const Others = {
             m(".tree-section", [
               m("p.heading.tree-header", "Audios & Canciones"),
               m(".tree-list", [
-                m(".tree-item", m("a.link", { href: "https://germfood.bandcamp.com/album/night-of-the-consumers-ost", target: "_blank" }, `"Store Track 1: Main website background song"`)),
-                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Half-Life 2 (Source) sounds effects`)),
+                m(".tree-item", m("a.link", { href: "https://germfood.bandcamp.com/album/night-of-the-consumers-ost", target: "_blank" }, `"Store Track 1"`)),
+                m(".tree-item", m("a.link", { href: "https://downloads.khinsider.com/game-soundtracks/album/the-simpsons-hit-run-ps2/1-29%2520Phonebooth.mp3", target: "_blank" }, `"Phonebooth"`)),
+                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Half-Life 2 (Source Engine)`)),
               ]),
             ]),
             m(".tree-section", [
               m("p.heading.tree-header", "Imágenes"),
               m(".tree-list", [
-                m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Banner & others VotV images")),
+                m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Voices of the Void screenshots")),
               ]),
             ]),
           ])

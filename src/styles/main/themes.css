@@ -23,6 +23,8 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #97ffcf;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #282a36;
   --color-foreground: #433f55;
 
@@ -64,6 +66,8 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #81c3d7;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #2f6690;
   --color-foreground: #3a7ca5;
 
@@ -105,6 +109,8 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #d8f3dc;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #2d6a4f;
   --color-foreground: #40916c;
 
@@ -146,6 +152,8 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #fff;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #202020;
   --color-foreground: #2c2c2c;
 
@@ -187,6 +195,8 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #fdf0d5;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #780000;
   --color-foreground: #C1121F;
 
@@ -251,6 +261,8 @@
   /* Colors */
   --color-text: #FBFBFB;
   --color-accent: #FBFBFB;
+  --color-link: #C0BBFF;
+  --color-link-hover: #8b83ff;
   --color-background: #111;
   --color-foreground: #111;
 
