@@ -81,34 +81,41 @@ const Others = {
             ])
           ),
           m(".panel-content", [
-            m("p.heading", "[ Hosting ]"),
-            m("ul", [
-              m("li", [m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "Website: Nekoweb")]),
-              m("li", [m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "Images: File Garden")]),
+            m(".tree-section", [
+              m("p.heading.tree-header", "Hosting"),
+              m(".tree-list", [
+                m(".tree-item", m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "Website: Nekoweb")),
+                m(".tree-item", m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "Images: File Garden")),
+              ]),
             ]),
-            m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-            m("p.heading", "[ Librerías ]"),
-            m("ul", [
-              m("li", [m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril: Single Page Application")]),
-              m("li", [m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "11ty: Static Site Generator")]),
-              m("li", [m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "esbuild: TypeScript & CSS Bundler")]),
+            m(".tree-section", [
+              m("p.heading.tree-header", "Librerías"),
+              m(".tree-list", [
+                m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril: Single Page Application")),
+                m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "11ty: Static Site Generator")),
+                m(".tree-item", m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "esbuild: TypeScript & CSS Bundler")),
+              ]),
             ]),
-            m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-            m("p.heading", "[ Herramientas Externas ]"),
-            m("ul", [
-              m("li", [m("a.link", { href: "https://ditherit.com/", target: "_blank" }, "Dither it!")]),
-              m("li", [m("a.link", { href: "https://compress-or-die.com/", target: "_blank" }, "Compress or Die")]),
-              m("li", [m("a.link", { href: "https://ezgif.com/", target: "_blank" }, "Ezgif")]),
+            m(".tree-section", [
+              m("p.heading.tree-header", "Herramientas Externas"),
+              m(".tree-list", [
+                m(".tree-item", m("a.link", { href: "https://ditherit.com/", target: "_blank" }, "Dither it!")),
+                m(".tree-item", m("a.link", { href: "https://compress-or-die.com/", target: "_blank" }, "Compress or Die")),
+                m(".tree-item", m("a.link", { href: "https://ezgif.com/", target: "_blank" }, "Ezgif")),
+              ]),
             ]),
-            m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-            m("p.heading", "[ Audios & Canciones ]"),
-            m("ul", [
-              m("li", [m("a.link", { href: "https://germfood.bandcamp.com/album/night-of-the-consumers-ost", target: "_blank" }, `"Store Track 1: Main website background song"`)])
+            m(".tree-section", [
+              m("p.heading.tree-header", "Audios & Canciones"),
+              m(".tree-list", [
+                m(".tree-item", m("a.link", { href: "https://germfood.bandcamp.com/album/night-of-the-consumers-ost", target: "_blank" }, `"Store Track 1: Main website background song"`)),
+                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Half-Life 2 (Source) sounds effects`)),
+              ]),
             ]),
-            m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-            m("p.heading", "[ Imágenes ]"),
-            m("ul", [
-              m("li", [m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Banner & others VotV images")]),
+            m(".tree-section", [
+              m("p.heading.tree-header", "Imágenes"),
+              m(".tree-list", [
+                m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Banner & others VotV images")),
+              ]),
             ]),
           ])
         ])
