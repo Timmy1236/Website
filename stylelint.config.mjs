@@ -1,8 +1,16 @@
 /** @type {import("stylelint").Config} */
 export default {
+  "plugins": ["stylelint-no-unsupported-browser-features"],
+  "rules": {
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "browsers": [">0.3%, defaults and fully supports es6-module and baseline widely available"],
+      }
+    ]
+  },
   "extends": ["stylelint-config-standard"],
-  "ignoreFiles": ["./public/pages/archive/2025/*.css",
-    "./public/pages/others/tile/*.css",
-    "./public/elements.css",
-    "./public/dist/*.css"]
+  "ignoreFiles": ["public/dist/**/*.css",
+    "public/elements.css"
+  ]
 };

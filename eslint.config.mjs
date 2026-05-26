@@ -3,6 +3,7 @@
 import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
+import compat from "eslint-plugin-compat";
 
 export default defineConfig(
   {
@@ -19,4 +20,5 @@ export default defineConfig(
       },
     },
   },
+  compat.configs["flat/recommended"]
 );
