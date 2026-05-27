@@ -2,21 +2,139 @@
 <html lang="en">
 
 <head>
-  <title>Timmy's Digital Dumpster</title>
+  <title>Index - Timmy</title>
   <link rel="icon" type="image/png" href="/assets/images/favicon/favicon.png">
   <meta charset="utf-8">
   <meta name="description" content="Timmy1236's digital dumpster">
-  <meta name="keywords" content="Timmy1236, Personal site, Indie, Indie Web, NekoWeb, JS, HTML, CSS">
+  <meta name="keywords" content="Timmy, Timmy1236, Personal site, Indie, Indie Web, Nekoweb, JS, HTML, CSS">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="google-site-verification" content="NmnMhNffBUACr3hgwn8Cklhng3108OzShYojU4JVTO8">
-  <link rel="stylesheet" href="/dist/main/styles.css">
 </head>
 
 <body>
-  <div id="app"></div>
-  <div id="nekoweb-stats" style="display: none" data-views="<!--# views -->" data-updates="<!--# updates -->" data-followers="<!--# followers -->"></div>
-  <div id="toast-container"></div>
-  <script type="module" src="/dist/main/app.js"></script>
+  <style type="text/css">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0F0F0F;
+      color: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    table {
+      table-layout: fixed;
+      width: 750px;
+    }
+
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .tg td {
+      background-color: #282A36;
+      border-width: 0;
+      font-size: 16px;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .tg th {
+      background-color: #433F55;
+      border-width: 0;
+      font-size: 18px;
+      font-weight: bold;
+      overflow: hidden;
+      padding: 10px 5px;
+      word-break: normal;
+    }
+
+    .title {
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .content {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .tg p {
+      margin-top: 5px;
+    }
+  </style>
+
+  <div style="width: 750px;">
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="title">English</th>
+          <th class="title">Español</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="content">¡Hey! Thanks for visiting, but there are a few things you should know about this site
+            before you continue.</td>
+          <td class="content">¡Hey! Gracias por visitar, pero necesitas saber estos puntos claves de la pagina antes que
+            puedas
+            continuar.</td>
+        </tr>
+        <tr>
+          <td class="content">
+            <p>-You will need a <span style="font-weight:bold">modern </span>browser that supports
+              ES6-Modules.</p>
+            <p>- Music and sounds may start playing when you click the website.</p>
+            <p>- Images and colors may change or move rapidly.</p>
+            <p>- This site is designed and optimized for viewing only on PC.</p>
+            <p>- Profanity.</p>
+            <p>- Really poor translations from Spanish to English, sometimes with the help of DeepL.</p>
+          </td>
+          <td class="content">
+            <p>- Necesitaras un navegador <span style="font-weight:bold">moderno </span>que soporte:
+              ES6-Modules.</p>
+            <p>- Puede haber música y sonidos que comenzaran a reproducirse cuando clickes.</p>
+            <p>- Puede haber imágenes y colores que cambien o se mueven de forma rápida.</p>
+            <p>- Solamente esta diseñado y optimizado para ser visto en PC.</p>
+            <p>- Lenguaje obsceno.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="margin-top: 5px;">
+        <p style="margin-bottom: 5px;">JavaScript: <span id="js" style="color: #ff9797;">False !!</span></p>
+        <p>ES6-Modules: <span id="es" style="color: #ff9797;">False !!</span></p>
+      </div>
+
+      <div>
+        <a href="main.html" style="color: #97FFCF;">Okey! -></a>
+      </div>
+    </div>
+  </div>
 </body>
+
+<!-- Checkeo si el navegador soporta scripts. -->
+<script>
+  var e = document.getElementById('js');
+  e.innerText = 'True';
+  e.style.color = "#97FFCF"; 
+</script>
+
+<!-- Checkeo si el navegador soporta scripts tipo módulos. -->
+<script type="module">
+  var e = document.getElementById('es')
+  e.innerText = 'True';
+  e.style.color = "#97FFCF"; 
+</script>
 
 </html>
