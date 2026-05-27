@@ -1,8 +1,8 @@
 .panel-frame {
-  border-top: 2px solid var(--panel-light);
-  border-left: 2px solid var(--panel-light);
-  border-right: 2px solid var(--panel-dark);
-  border-bottom: 2px solid var(--panel-dark);
+  border-top: var(--panel-frame-border) solid var(--panel-frame-light);
+  border-left: var(--panel-frame-border) solid var(--panel-frame-light);
+  border-right: var(--panel-frame-border) solid var(--panel-frame-dark);
+  border-bottom: var(--panel-frame-border) solid var(--panel-frame-dark);
   box-shadow: var(--panel-shadow);
 }
 
