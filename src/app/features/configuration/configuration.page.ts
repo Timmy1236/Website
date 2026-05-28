@@ -114,18 +114,6 @@ const ConfigurationPage = {
                       m("button.button", { onclick: () => changeLanguage("en"), }, "English")
                     ])
                   ])
-                ]),
-
-                m(".settings-group", [
-                  m("h2.group-title", { "data-i18n": "settings.sections.others" }),
-
-                  m(".option", [
-                    m("input", {
-                      type: "checkbox", id: "showExperimental", checked: settingsMap.get("showExperimental") === "true",
-                      onchange: (e: Event) => { settingsMap.set("showExperimental", (e.target as HTMLInputElement).checked ? "true" : "false") }
-                    }),
-                    m("label", { for: "", "data-i18n": "settings.options.showExperimental" })
-                  ])
                 ])
               ])
             }
