@@ -4,7 +4,7 @@
       "title": "Navigation",
       "buttons": {
         "home": "Home",
-        "aboutMe": "About Me",
+        "webmaster": "Webmaster",
         "projects": "Projects",
         "links": "Links",
         "achievements": "Achievements",
@@ -47,8 +47,8 @@
       }
     }
   },
-  "about-me": {
-    "aboutMe": {
+  "webmaster": {
+    "about-me": {
       "title": "About Me",
       "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old dude living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm simply just another random [u][tooltip=Backend Software Developer... NEEEEERD]programmer[/tooltip][/u]. My hobbies are basically anything related to technology. Gaming, shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really deep enough into it to the point of having my own 24/7 server because of money reasons, but I would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I was always interested in [i]Art[/i], drawing and turning my creativity into something physical, but I never had the talent for those kinds of things, so I stayed with my computer typing letters until something magical appears."
     },

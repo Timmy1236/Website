@@ -9,7 +9,7 @@ import { getSetting } from "./settings-logic";
 const translation: Record<string, Record<string, string>> = {
   es: {
     "/home": "Inicio",
-    "/about": "Sobre Mi",
+    "/webmaster": "Webmaster",
     "/projects": "Proyectos",
     "/links": "Links",
     "/achievements": "Logros",
@@ -19,7 +19,7 @@ const translation: Record<string, Record<string, string>> = {
   },
   en: {
     "/home": "Home",
-    "/about": "About Me",
+    "/webmaster": "Webmaster",
     "/projects": "Project",
     "/links": "Links",
     "/achievements": "Achievements",

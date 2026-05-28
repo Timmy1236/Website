@@ -12,13 +12,12 @@ import "./shared/ui/panel-buttons.ts"
 // Pages
 import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
-import About from "./features/about-me/about-me.page.ts";
+import Webmaster from "./features/webmaster/webmaster.page.ts";
 import Projects from "./features/projects/projects.page.ts";
 import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 import GuestbookPage from "./features/guestbook/guestbook.page.ts";
-import ContactPage from "./features/contact/contact.page.ts"
 
 async function startApp() {
   initializeSettings();
@@ -32,13 +31,12 @@ async function startApp() {
     onFirstVisit();
     m.route(root, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
-      "/about": { render: () => m(Layout, m(About)) },
+      "/webmaster": { render: () => m(Layout, m(Webmaster)) },
       "/projects": { render: () => m(Layout, m(Projects)) },
       "/links": { render: () => m(Layout, m(Links)) },
       "/achievements": { render: () => m(Layout, m(Achievements)) },
       "/configuration": { render: () => m(Layout, m(Configuration)) },
-      "/guestbook": { render: () => m(Layout, m(GuestbookPage)) },
-      "/contact": { render: () => m(Layout, m(ContactPage)) }
+      "/guestbook": { render: () => m(Layout, m(GuestbookPage)) }
     });
   } else {
     console.error("Dude, estas cargando el script app.js en un HTML que no deberías.")

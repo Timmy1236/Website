@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getSetting, getMapSetting } from "../core/settings-logic";
+import { getSetting } from "../core/settings-logic";
 
 let isTransitioning = false;
 let currentPath = "/home";
@@ -56,9 +56,6 @@ function _externalNavigate(url: string) {
   setTimeout(() => { window.location.href = url; }, 150); // Un mini delay extra :3
 }
 
-// NOTE: SSI Nekoweb no se actualiza al instante cuando entras a la pagina?? Solamente cuando actualizas la pagina???? Aww man :(
-// NOTE2: Creo que el SSI si se actualiza con el tiempo, pero cuenta con un delay extremadamente largo.
-// TODO: Investigar esto mas al fondo... - The Mysterious Fucking Detective.
 function _getNekoStat(type: string) {
   const el = document.getElementById('nekoweb-stats');
   if (el) {
@@ -68,20 +65,6 @@ function _getNekoStat(type: string) {
     return count;
   }
   return "...";
-}
-
-function _experimental() {
-  const exp = getMapSetting("showExperimental");
-
-  if (exp === "true") {
-    return [
-      navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "(SUPER W.I.P)", "achievement"),
-      navBtn("sidebar.navigation.buttons.guestbook", false, "/guestbook", "(SUPER W.I.P)", "email"),
-      navBtn("sidebar.navigation.buttons.contact", false, "/contact", "(SUPER W.I.P)", "email")
-    ]
-  } else {
-    return [];
-  }
 }
 
 export default {
@@ -100,13 +83,14 @@ export default {
           m(".panel-content", [
             m(".sidebar-links-container", [
               navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
-              navBtn("sidebar.navigation.buttons.aboutMe", false, "/about", null, "user"),
+              navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", null, "user"),
               navBtn("sidebar.navigation.buttons.projects", false, "/projects", null, "proyect"),
               navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
-              navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings"),
-              ..._experimental()
-            ]),
-          ]),
+              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "(SUPER W.I.P)", "achievement"),
+              navBtn("sidebar.navigation.buttons.guestbook", false, "/guestbook", "(SUPER W.I.P)", "email"),
+              navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings")
+            ])
+          ])
         ])
       ]),
 
@@ -122,8 +106,8 @@ export default {
           m(".panel-content", [
             m(".sidebar-links-container", [
               ..._dataButtons()
-            ]),
-          ]),
+            ])
+          ])
         ])
       ]),
 
@@ -144,7 +128,7 @@ export default {
               navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "follow"),
             ])
           ])
-        ]),
+        ])
       ])
-    ]),
+    ])
 };
