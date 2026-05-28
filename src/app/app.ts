@@ -20,6 +20,8 @@ import Achievements from "./features/achievements/achievements.page.ts";
 import GuestbookPage from "./features/guestbook/guestbook.page.ts";
 
 async function startApp() {
+  document.documentElement.classList.add("app-loaded");
+
   initializeSettings();
   initializeSoundsEffects();
   initializeAutoplay();
