@@ -110,9 +110,7 @@ class I18n {
     document.documentElement.lang = this.currentLang;
   }
 
-  /**
-   * Obtén la traducción de una key.
-   */
+
   getTranslation(key: string): string {
     const keys = key.split('.');
     let translation = this.translations[this.currentLang];
@@ -123,6 +121,13 @@ class I18n {
 
     return translation;
   }
+}
+
+/**
+ * Obtén la traducción de una key.
+ */
+export function getTranslation(key: string): string | null {
+  return i18n.getTranslation(key) ?? null;
 }
 
 /**
