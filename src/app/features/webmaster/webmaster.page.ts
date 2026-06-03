@@ -131,51 +131,51 @@ const webmasterPage = {
             m("p", "Juegos"),
             m(".scroll-container", [
               // Voices of the Void
-              m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo." }, [
+              m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/votv.webp" }),
               ]),
               // Minecraft
-              m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip": "Minceraft" }, [
+              m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.minecraft" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/minecraft.webp" }),
               ]),
               // Hytale
-              m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-" }, [
+              m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hytale" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/hytale.webp" }),
               ]),
               // Terraria
-              m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(" }, [
+              m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.terraria" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/terraria.webp" }),
               ]),
               // Warframe
-              m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no existe otro juego que llegue al mismo nivel." }, [
+              m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.warframe" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/warframe.webp" }),
               ]),
               // Roblox
-              m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip": "cada dia tengo menos ganas de seguir en esta mierda." }, [
+              m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/roblox.webp" }),
               ]),
               // Half Life
-              m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)" }, [
+              m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/hl2.webp" }),
               ]),
               // Team Fortress 2
-              m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo muriendo de la misma manera como siempre, contra un spy siendo medic." }, [
+              m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.tf" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/tf.webp" }),
               ]),
               // Portal 1
-              m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle..." }, [
+              m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal1" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/portal1.webp" }),
               ]),
               // Portal 2
-              m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip": "Tardas 5 minutos intentando resolver un puzzle... ¡Esta vez con un amigo!" }, [
+              m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal2" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/portal2.webp" }),
               ]),
               // SCP
-              m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte." }, [
+              m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.scp" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/scp.webp" }),
               ]),
               // GTA V
-              m("a.cover", { href: "https://google.com", "data-tooltip": "Cayo Perico." }, [
+              m("a.cover", { href: "https://google.com", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.gta" }, [
                 m("img", { src: "/assets/images/pages/about/covers/games/gtav.webp" }),
               ]),
             ]),

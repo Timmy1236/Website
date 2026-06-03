@@ -98,6 +98,23 @@
         "neighbors": "Nekoweb Vecinos",
         "likes": "Sitios Geniales",
         "myButton": "Yo"
+  "tooltip": {
+    "pages": {
+      "webmaster": {
+        "interests": {
+          "votv": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo.",
+          "minecraft": "Minceraft",
+          "hytale": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-",
+          "terraria": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(",
+          "warframe": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no creo que existe actualmente uno que le llegue al mismo nivel.",
+          "roblox": "cada dia tengo menos ganas de seguir en esta mierda.",
+          "hl": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)",
+          "tf": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo jugando de forma horrible.",
+          "portal1": "Tardas 20 minutos quieto mirando al puzzle como resolverlo...",
+          "portal2": "Tardas 20 minutos quieto mirando al puzzle como resolverlo... ¡Esta vez con un amigo!",
+          "scp": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte.",
+          "gta": "Cayo Perico."
+        }
       }
     }
   }
