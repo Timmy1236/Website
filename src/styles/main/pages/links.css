@@ -65,7 +65,6 @@
 }
  
 #button-overlay .button-text {
-  margin-top: 10px;
   color: var(--color-text);
   font-size: 22px;
   white-space: wrap;
