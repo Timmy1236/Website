@@ -55,10 +55,7 @@ const Others = {
             m("h2", { "data-i18n": "links.buttonWall.list.myButton" }),
             m(".website-buttons",
               m("a", {
-                onmouseenter: (e: MouseEvent) =>
-                  showButtonOverlay(MyButton, e.currentTarget as HTMLElement),
-                onmouseleave: () => hideButtonOverlay(),
-                "data-tooltip": "Copy to Clipboard!"
+                onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: () => hideButtonOverlay()
               },
                 m("img", {
                   src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",

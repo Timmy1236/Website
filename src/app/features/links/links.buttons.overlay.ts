@@ -3,6 +3,8 @@
  * -----------------
  * Crea un overlay con blur cuando un botón de links está en hover.
 */
+import { getTranslation } from "../../shared/core/i18n";
+
 let rafId: number | null = null;
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
@@ -109,8 +111,9 @@ function _updateClipPath() {
  * Retorna código HTML ya construido para el overlay con los datos que trae el botón.
  */
 function _buildOverlay(site: ButtonSite): string {
+  const text = (site.text ? getTranslation(site.text) : null) ?? site.text;
 
-  if (site.text) {
+  if (text) {
     return `
   <div style="display:flex;gap:10px;">
     <div class="panel">
@@ -118,7 +121,7 @@ function _buildOverlay(site: ButtonSite): string {
         <p>Nota</p>
       </div>
       <div class="panel-content">
-        <p class="button-text">${site.text ? site.text : ""}</p>
+        <p class="button-text">${text ? text : ""}</p>
       </div>
     </div>
     <div class="panel">
