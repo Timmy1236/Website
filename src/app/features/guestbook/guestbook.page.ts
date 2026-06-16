@@ -1,5 +1,4 @@
 import m from "mithril";
-import { refreshi18n } from "../../shared/core/i18n.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { guestbookState, loadEntries, submitEntry, type GuestbookEntry } from "./guestbook.api.ts";
 
@@ -58,7 +57,6 @@ function EntryCard(entry: GuestbookEntry) {
 const GuestbookPage = {
   oncreate() {
     setCurrentPath(m.route);
-    refreshi18n();
     loadEntries();
   },
 

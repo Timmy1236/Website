@@ -6,7 +6,7 @@ interface Tab {
 }
 
 interface TabPanelAttrs {
-  title: string | m.Attributes;
+  title: string;
   defaultTab?: number;
   tabs: Tab[];
   outTab?: m.Children;

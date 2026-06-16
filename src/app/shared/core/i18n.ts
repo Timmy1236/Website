@@ -1,151 +1,64 @@
 /*
  * i18n.ts
  * -------
- * Maneja el sistema multilenguaje de la página.
- * Gran parte del código lo saque de otra página y realmente no se muy bien lo que hace :P
-*/
+ * Sistema multilenguaje i18n. Los strings traducidos son guardados en un JSON y este mismo script puede devolverlos si le das la key indicada.
+ */
+type Lang = "es" | "en"; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
 
-type lang = "es" | "en";
+let currentLang: Lang = _getSavedLanguage() ?? _getBrowserLanguage();
+const translations: Record<string, any> = {};
 
-class I18n {
-  currentLang: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  translations: Record<string, any>;
-  ready: Promise<void>;
-
-  constructor() {
-    this.currentLang = this.getSavedLanguage() || this.getBrowserLanguage();
-    this.translations = {};
-    this.ready = this.loadTranslations();
+function _getSavedLanguage(): Lang | null {
+  try {
+    const saved = localStorage.getItem('preferred-language');
+    return (saved === 'es' || saved === 'en') ? saved : null; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
+  } catch (e) {
+    console.warn("i18n> Error en LocalStorage: ", e);
+    return null;
   }
+}
 
-  /**
-   * Obtiene cual es el lenguaje guardado en el navegador del usuario.
-   */
-  getSavedLanguage() {
-    try {
-      return localStorage.getItem('preferred-language');
-    } catch (e) {
-      console.warn("i18n.js> Error en LocalStorage? ", e);
-      return null;
-    }
-  }
+function _getBrowserLanguage(): Lang {
+  const browserLang = navigator.language || '';
+  return browserLang.startsWith('es') ? 'es' : 'en';
+}
 
-  /**
-   * Guarda el lenguaje dado en LocalStorage.
-   */
-  saveLanguage(lang: lang) {
-    try {
-      this.currentLang = lang;
-      localStorage.setItem('preferred-language', lang);
-    } catch (e) {
-      console.warn("i18n.js> Error en LocalStorage? ", e);
-    }
-  }
+async function _loadTranslations(): Promise<void> {
+  try {
+    const response = await fetch(`/assets/translation/${currentLang}.json`);
+    const json = await response.json();
 
-  /**
-   * Obtiene el lenguaje del navegador del usuario.
-   */
-  getBrowserLanguage(): string {
-    const browserLang = navigator.language; // NOTE: navigator.language puede devolver null.
-    return browserLang.startsWith('es') ? 'es' : 'en';
-  }
-
-  /**
-   * Carga los datos de los archivos de traducciones y fuerza una traducción a la pagina actual.
-   */
-  async loadTranslations() {
-    try {
-      const response = await fetch(`/assets/translation/${this.currentLang}.json`);
-      const json = await response.json();
-
-      this.translations[this.currentLang] = json;
-      this.translatePage();
-    } catch (error) {
-      console.error("[i18n] load error", error);
-    }
-  }
-
-  /**
-   * Cambia el lenguaje.
-   */
-  async changeLanguage(lang: lang) {
-    this.saveLanguage(lang);
-    await this.loadTranslations();
-  }
-
-  /**
-   * Traduce todo el contenido de la pagina que contenga '[data-i18n]'.
-   */
-  translatePage() {
-    console.log("%ci18n.js>" + "%c Ejecutando: " + "%ctranslatePage()", "color: #87F3A9; background: #282A35;", "color: white", "color: cyan")
-
-    const elements = document.querySelectorAll('[data-i18n]');
-
-    elements.forEach(element => {
-      let key = element.getAttribute('data-i18n');
-      let isHtml = false;
-
-      if (key?.startsWith('[html]')) {
-        isHtml = true;
-        key = key.replace('[html]', '');
-      }
-
-      if (key !== null) {
-        const translation = this.getTranslation(key);
-        if (translation) {
-          const attr = element.getAttribute('data-i18n-attr');
-          if (attr) {
-            element.setAttribute(attr, translation);
-          } else {
-            if (isHtml) {
-              element.innerHTML = translation;
-            } else {
-              element.textContent = translation;
-            }
-          }
-        }
-      }
-    });
-    document.documentElement.lang = this.currentLang;
-  }
-
-
-  getTranslation(key: string): string {
-    const keys = key.split('.');
-    let translation = this.translations[this.currentLang];
-
-    for (const k of keys) {
-      translation = translation?.[k];
-    }
-
-    return translation;
+    translations[currentLang] = json;
+  } catch (error) {
+    console.error("[i18n] Error al cargar traducciones:", error);
   }
 }
 
 /**
- * Obtén la traducción de una key.
+ * Devuelve un string dependiendo de la key para i18n y del lenguaje actual de la sesión.
  */
-export function getTranslation(key: string): string | null {
-  return i18n.getTranslation(key) ?? null;
+export function getTranslation(key: string): string {
+  const keys = key.split('.');
+  let translation = translations[currentLang];
+
+  for (const k of keys) {
+    translation = translation?.[k];
+  }
+
+  return translation ?? console.error("Key no encontrada: " + keys);
 }
 
 /**
- * Guarda el lenguaje en LocalStorage.
+ * Guarda el nuevo lenguaje dado en el localStorage.
  */
-export function changeLanguage(lang: lang) {
-  i18n.changeLanguage(lang);
+export async function changeLanguage(lang: Lang): Promise<void> {
+  try {
+    currentLang = lang;
+    localStorage.setItem('preferred-language', lang);
+  } catch (e) {
+    console.warn("i18n> Error en LocalStorage: ", e);
+  }
 }
 
-
-/**
- * Traduce el contenido de la pagina.
- * @see {@link i18n.translatePage}
- */
-export function refreshi18n() {
-  i18n.translatePage();
-}
-
-const i18n = new I18n();
-
-export const i18nReady = i18n.ready;
+// Inicializamos la promesa de carga para que otros archivos puedan saber cuándo terminó
+export const i18nReady = _loadTranslations();

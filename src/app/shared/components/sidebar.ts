@@ -1,5 +1,6 @@
 import m from "mithril";
 import { getSetting } from "../core/settings-logic";
+import { getTranslation } from "../core/i18n";
 
 let isTransitioning = false;
 let currentPath = "/home";
@@ -16,7 +17,7 @@ function navBtn(label: string, external: boolean, path: string, tooltip: string 
       alt: img ? img : "question mark",
       width: "16px", height: "16px"
     }),
-    m("span", { "data-i18n": label })
+    m("span", getTranslation(label))
   ]);
 }
 
@@ -75,7 +76,7 @@ export default {
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", { "data-i18n": "sidebar.navigation.title" }),
+            m("p", getTranslation("sidebar.navigation.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
             ])
@@ -98,7 +99,7 @@ export default {
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", { "data-i18n": "sidebar.data.title" }),
+            m("p", getTranslation("sidebar.data.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
             ])
@@ -116,15 +117,15 @@ export default {
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", { "data-i18n": "sidebar.nekoweb.title" }),
+            m("p", getTranslation("sidebar.nekoweb.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
             ])
           ]),
           m(".panel-content", [
             m("div.stats-container", [
-              m("p", [m("span", { "data-i18n": "sidebar.nekoweb.buttons.visits", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('views'))]),
-              m("p", { style: "margin-bottom:10px;" }, [m("span", { "data-i18n": "sidebar.nekoweb.buttons.followers", style: "font-size: 24px;" }), m("span", { style: "font-size: 24px;" }, _getNekoStat('followers'))]),
+              m("p", [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.visits")), m("span", { style: "font-size: 24px;" }, _getNekoStat('views'))]),
+              m("p", { style: "margin-bottom:10px;" }, [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.followers")), m("span", { style: "font-size: 24px;" }, _getNekoStat('followers'))]),
               navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "follow"),
             ])
           ])

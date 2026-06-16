@@ -1,6 +1,6 @@
 import m from "mithril";
 import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } from "./configuration.ui.ts";
-import { changeLanguage, refreshi18n } from "../../shared/core/i18n.js"
+import { changeLanguage, getTranslation } from "../../shared/core/i18n.js"
 import TabPanel from "../../shared/components/tab-panel.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
@@ -9,31 +9,26 @@ const ConfigurationPage = {
   oncreate() {
     setCurrentPath(m.route);
     initMapFromStorage();
-    refreshi18n();
     m.redraw();
-  },
-
-  onupdate() {
-    refreshi18n();
   },
 
   view: function () {
     return m(".content", [
       m(".panel-frame", [
         m(TabPanel, {
-          title: { "data-i18n": "settings.title" },
+          title: getTranslation("settings.title"),
           tabs: [
             {
               label: "Visual",
               content: () => m("div", [
                 m(".settings-group", [
-                  m("h2.group-title", { "data-i18n": "settings.sections.visual-effects" }),
+                  m("h2.group-title", getTranslation("settings.sections.visual-effects")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "static-effect", checked: settingsMap.get("staticEffect") === "true",
                       onchange: (e: Event) => { settingsMap.set("staticEffect", (e.target as HTMLInputElement).checked ? "true" : "false") }
                     }),
-                    m("label", { for: "static-effect", "data-i18n": "settings.options.staticEffects" })
+                    m("label", { for: "static-effect" }, getTranslation("settings.options.staticEffects"))
                   ]),
 
                   m(".option", [
@@ -41,12 +36,12 @@ const ConfigurationPage = {
                       type: "checkbox", id: "vignette-effect", checked: settingsMap.get("vignetteEffect") === "true",
                       onchange: (e: Event) => { settingsMap.set("vignetteEffect", (e.target as HTMLInputElement).checked ? "true" : "false") }
                     }),
-                    m("label", { for: "vignette-effect", "data-i18n": "settings.options.vignetteEffects" })
+                    m("label", { for: "vignette-effect" }, getTranslation("settings.options.vignetteEffects"))
                   ]),
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title", { "data-i18n": "settings.sections.themes" }),
+                  m("h2.group-title", getTranslation("settings.sections.themes")),
 
                   m(".option", [
                     m("select#theme-select", {
@@ -69,14 +64,14 @@ const ConfigurationPage = {
             {
               label: "Audio",
               content: () => m(".settings-group", [
-                m("h2.group-title", { "data-i18n": "settings.sections.audio" }),
+                m("h2.group-title", getTranslation("settings.sections.audio")),
 
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "background-music-toggle", checked: settingsMap.get("backgroundMusic") === "true",
                     onchange: (e: Event) => { settingsMap.set("backgroundMusic", (e.target as HTMLInputElement).checked ? "true" : "false") }
                   }),
-                  m("label", { for: "background-music-toggle", "data-i18n": "settings.options.backgroundMusic" })
+                  m("label", { for: "background-music-toggle" }, getTranslation("settings.options.backgroundMusic"))
                 ]),
 
                 m(".option", [
@@ -84,21 +79,21 @@ const ConfigurationPage = {
                     type: "checkbox", id: "sound-effects-toggle", checked: settingsMap.get("soundsEffects") === "true",
                     onchange: (e: Event) => { settingsMap.set("soundsEffects", (e.target as HTMLInputElement).checked ? "true" : "false") }
                   }),
-                  m("label", { for: "sound-effects-toggle", "data-i18n": "settings.options.soundsEffects" })
+                  m("label", { for: "sound-effects-toggle" }, getTranslation("settings.options.soundsEffects"))
                 ])
               ]),
             },
             {
               label: "Accesibilidad",
               content: () => m(".settings-group", [
-                m("h2.group-title", { "data-i18n": "settings.sections.others" }),
+                m("h2.group-title", getTranslation("settings.sections.others")),
 
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "readable-font", checked: settingsMap.get("readableFont") === "true",
                     onchange: (e: Event) => { settingsMap.set("readableFont", (e.target as HTMLInputElement).checked ? "true" : "false") }
                   }),
-                  m("label", { for: "readable-font", "data-i18n": "settings.options.readableFont" })
+                  m("label", { for: "readable-font" }, getTranslation("settings.options.readableFont"))
                 ])
               ]),
             },
@@ -106,7 +101,7 @@ const ConfigurationPage = {
               label: "Otros",
               content: () => m("div", [
                 m(".settings-group", [
-                  m("h2.group-title", { "data-i18n": "settings.sections.languages" }),
+                  m("h2.group-title", getTranslation("settings.sections.languages")),
 
                   m(".option", [
                     m(".buttons-list", [

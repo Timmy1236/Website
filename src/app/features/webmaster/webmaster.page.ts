@@ -1,14 +1,13 @@
 import m from "mithril";
 import { loadDiscordProfile } from "./webmaster.discord.js";
-import { refreshi18n } from "../../shared/core/i18n.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { applyBBCode } from "../../shared/ui/bbcode.js";
 import { sendForm, contactState } from "./webmaster.contact.ts";
+import { getTranslation } from "../../shared/core/i18n.ts";
 
 const webmasterPage = {
   oncreate() {
     setCurrentPath(m.route);
-    refreshi18n();
     loadDiscordProfile("375889010419171328");
     applyBBCode();
   },
@@ -57,7 +56,7 @@ const webmasterPage = {
         m(".panel-frame", [
           m(".panel", [
             m(".panel-header",
-              m("p.text-title", { "data-i18n": "webmaster.about-me.title" }, "About Me"),
+              m("p.text-title", getTranslation("webmaster.about-me.title")),
 
               m(".panel-controls", [
                 m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -66,7 +65,7 @@ const webmasterPage = {
             ),
 
             m(".panel-content", [
-              m("p", { "data-i18n": "webmaster.about-me.description", "data-bbcode": true })
+              m("p", { "data-bbcode": true }, getTranslation("webmaster.about-me.description"))
             ])
           ])
         ])

@@ -1,14 +1,13 @@
 import m from "mithril";
-import { refreshi18n } from "../../shared/core/i18n.ts";
 import { showButtonOverlay, hideButtonOverlay } from "./links.buttons.overlay.ts";
 import { neighborSites, likesSite, MyButton } from "./links.buttons.list.ts";
 import { showToast } from "../../shared/ui/toast.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
+import { getTranslation } from "../../shared/core/i18n.ts";
 
 const Others = {
   oncreate() {
     setCurrentPath(m.route);
-    refreshi18n();
   },
 
   view: function () {
@@ -16,7 +15,7 @@ const Others = {
       m(".panel-frame", [
         m(".panel",
           m(".panel-header", [
-            m("p", { "data-i18n": "links.buttonWall.title" }),
+            m("p", getTranslation("links.buttonWall.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -24,7 +23,7 @@ const Others = {
           ]),
 
           m(".panel-content", [
-            m("h2", { "data-i18n": "links.buttonWall.list.neighbors" }),
+            m("h2", getTranslation("links.buttonWall.list.neighbors")),
             m(".website-buttons",
               neighborSites.map((site) =>
                 m("a", {
@@ -38,7 +37,7 @@ const Others = {
               )
             ),
 
-            m("h2", { "data-i18n": "links.buttonWall.list.likes" }),
+            m("h2", getTranslation("links.buttonWall.list.likes")),
             m(".website-buttons",
               likesSite.map((site) =>
                 m("a", {
@@ -52,7 +51,7 @@ const Others = {
               )
             ),
 
-            m("h2", { "data-i18n": "links.buttonWall.list.myButton" }),
+            m("h2", getTranslation("links.buttonWall.list.myButton")),
             m(".website-buttons",
               m("a", {
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: () => hideButtonOverlay()
@@ -71,7 +70,7 @@ const Others = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header",
-            m("p.text-title", { "data-i18n": "links.credits.title" }),
+            m("p.text-title", getTranslation("links.credits.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")

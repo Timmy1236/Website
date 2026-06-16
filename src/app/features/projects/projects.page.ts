@@ -1,12 +1,11 @@
 import m from "mithril";
 import { createImageOverlay } from "../../shared/ui/image-overlay.js";
-import { refreshi18n } from "../../shared/core/i18n.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
+import { getTranslation } from "../../shared/core/i18n.js";
 
 const Project = {
   oncreate() {
     setCurrentPath(m.route);
-    refreshi18n();
   },
 
   view: function () {
@@ -15,7 +14,7 @@ const Project = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header",
-            m("p.text-title", { "data-i18n": "projects.title" }),
+            m("p.text-title", getTranslation("projects.title")),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -37,9 +36,7 @@ const Project = {
             ]),
 
             m(".project-body", [
-              m("p.project-description", {
-                "data-i18n": "projects.list.website.description"
-              })
+              m("p.project-description", getTranslation("projects.list.website.description"))
             ]),
 
             m(".project-gallery", [
@@ -71,7 +68,7 @@ const Project = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header",
-            m("p.text-title", { "data-i18n": "projects.title" }),
+            m("p.text-title", getTranslation("projects.title")),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -93,9 +90,7 @@ const Project = {
             ]),
 
             m(".project-body", [
-              m("p.project-description", {
-                "data-i18n": "projects.list.leafy.description"
-              })
+              m("p.project-description", getTranslation("projects.list.leafy.description"))
             ]),
 
             m(".projects-links", [
