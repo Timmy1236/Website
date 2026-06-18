@@ -10,10 +10,10 @@ let hideTimer: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
 
 export interface ButtonSite {
-  href: string;
-  btnSrc: string;
-  screenshotSrc: string;
-  text: string | null;
+  url: string;
+  button: string;
+  preview: string;
+  note?: string;
 }
 
 const overlay = document.createElement("div");
@@ -111,9 +111,9 @@ function _updateClipPath() {
  * Retorna código HTML ya construido para el overlay con los datos que trae el botón.
  */
 function _buildOverlay(site: ButtonSite): string {
-  const text = (site.text ? getTranslation(site.text) : null) ?? site.text;
+  const note = (site.note ? getTranslation(site.note) : null) ?? site.note;
 
-  if (text) {
+  if (note) {
     return `
   <div style="display:flex;gap:10px;">
     <div class="panel">
@@ -121,16 +121,16 @@ function _buildOverlay(site: ButtonSite): string {
         <p>Nota</p>
       </div>
       <div class="panel-content">
-        <p class="button-text">${text ? text : ""}</p>
+        <p class="button-note">${note ? note : ""}</p>
       </div>
     </div>
     <div class="panel">
       <div class="panel-header">
-        <p>${site.href.slice(8, -1)}</p>
+        <p>${site.url.slice(8, -1)}</p>
       </div>
       <div class="panel-content">
         <div class="button-screenshot">
-          <img src="${site.screenshotSrc}" alt="Screenshot de ${site.href}">
+          <img src="${site.preview}" alt="Screenshot de ${site.url}">
         </div>
       </div>
     </div>
@@ -140,11 +140,11 @@ function _buildOverlay(site: ButtonSite): string {
     return `
     <div class="panel">
       <div class="panel-header">
-        <p>${site.href.slice(8, -1)}</p>
+        <p>${site.url.slice(8, -1)}</p>
       </div>
       <div class="panel-content">
         <div class="button-screenshot">
-          <img src="${site.screenshotSrc}" alt="Screenshot de ${site.href}">
+          <img src="${site.preview}" alt="Screenshot de ${site.url}">
         </div>
       </div>
     </div>

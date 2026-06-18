@@ -27,12 +27,12 @@ const Others = {
             m(".website-buttons",
               neighborSites.map((site) =>
                 m("a", {
-                  href: site.href,
+                  href: site.url,
                   onmouseenter: (e: MouseEvent) =>
                     showButtonOverlay(site, e.currentTarget as HTMLElement),
                   onmouseleave: () => hideButtonOverlay(),
                 },
-                  m("img", { src: site.btnSrc, alt: site.href })
+                  m("img", { src: site.button, alt: site.url })
                 )
               )
             ),
@@ -41,12 +41,12 @@ const Others = {
             m(".website-buttons",
               likesSite.map((site) =>
                 m("a", {
-                  href: site.href,
+                  href: site.url,
                   onmouseenter: (e: MouseEvent) =>
                     showButtonOverlay(site, e.currentTarget as HTMLElement),
                   onmouseleave: () => hideButtonOverlay(),
                 },
-                  m("img", { src: site.btnSrc, alt: site.href })
+                  m("img", { src: site.button, alt: site.url })
                 )
               )
             ),
