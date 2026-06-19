@@ -1,0 +1,232 @@
+.profile-panel-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-username {
+  font-size: 40px;
+  color: #81eea3;
+}
+
+.profile-status {
+  font-size: 24px;
+  padding-left: 3px;
+}
+
+.profile-section {
+  margin-top: 15px;
+}
+
+.profile-section-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.discord-activity {
+  display: flex;
+  gap: 12px;
+  min-height: 72px;
+}
+
+.discord-activity-icon {
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+  border: 2px solid rgb(0 0 0 / 40%);
+}
+
+.discord-activity-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discord-activity-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#activity-name {
+  font-size: 26px;
+}
+
+#activity-details,
+#activity-state {
+  font-size: 14px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border: 2px solid rgb(0 0 0 / 40%);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.profile-activity {
+  font-size: 18px;
+}
+
+.profile-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgb(0 0 0 / 10%);
+  border: 2px solid rgb(0 0 0 / 40%);
+  transition: var(--button-transition);
+}
+
+.icon-button:hover {
+  background: var(--button-color-hover);
+  border: var(--button-border-hover);
+  transform: var(--button-hover-transform);
+  box-shadow: var(--button-hover-shadow);
+}
+
+.icon-button img {
+  width: 25px;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollers */
+.scroll-tag-container {
+  display: flex;
+  overflow:auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-tag-container .cover:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Contenedor principal */
+.scroll-cover-container {
+  display: flex;
+  overflow:auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+  padding: 25px 15px; 
+  perspective: 1000px;
+}
+
+.scroll-cover-container .cover:not(:last-child) {
+  margin-right: 15px;
+}
+/* Scrollers */
+
+/* Envoltorio del juego (el enlace .cover) */
+.cover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-style: preserve-3d;
+}
+
+/* Imagen del cover (Estilo Steam Grid) */
+.cover-image {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  transition: box-shadow 0.4s ease;
+  display: block;
+}
+
+/* Capa para el efecto de iluminación (Glow) */
+.cover::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+/* --- ESTADO HOVER (Efecto Steam) --- */
+
+
+.cover:hover .cover-image {
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.8);
+}
+
+.cover:hover {
+  transform: scale(1.1) rotateX(5deg);
+  z-index: 10;
+}
+
+.cover:hover::after {
+  opacity: 1;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
+}
+
+/* --- El Sticker Independiente --- */
+.cover-sticker {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 12;
+  filter: drop-shadow(0 0 3px black);
+  image-rendering: pixelated;
+}
+
+.tag {
+  display: flex;
+  padding: 3px 6px;
+  background: rgb(0 0 0 / 10%);
+  border: 2px solid rgb(0 0 0 / 40%);
+}
+
+.tag img {
+  width: 22px;
+  margin-right: 7px;
+  pointer-events: none;
+}
+
+.tag:not(:last-child) {
+  margin-right: 10px;
+}

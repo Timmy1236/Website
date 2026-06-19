@@ -14,12 +14,11 @@ const webmasterPage = {
 
   view: function () {
     return m(".content", [
-      m(".panel-grid-2", { style: "--panel-col-1:300px; --panel-col-2:1fr;" }, [
+      m(".panel-grid-2", { style: "--panel-col-1:315px; --panel-col-2:1fr;" }, [
         m(".panel-frame", [
           m(".panel", [
             m(".panel-header",
               m("p.text-title", "Profile"),
-
               m(".panel-controls", [
                 m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
                 m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -27,21 +26,41 @@ const webmasterPage = {
             ),
 
             m(".panel-content.profile-panel-content", [
-              m(".profile-vertical", [
 
-                // AVATAR
-                m(".profile-avatar#discord-avatar-container",
-                  m("img#discord-avatar", { src: "../assets/images/others/loading.gif", alt: "Profile picture" })
+              m(".profile-header", [
+
+                m(".profile-avatar",
+                  m("img#pfp", {
+                    src: "/assets/images/others/loading.gif"
+                  })
                 ),
 
-                // USERNAME
-                m("p.profile-username", "Timmy1236"),
+                m(".profile-info", [
+                  m("p.profile-username", "Timmy1236"),
+                  m("p.profile-status#status", "Loading...")
+                ])
 
-                // STATUS
-                m("p.profile-status#discord-status-text", "Status: Loading..."),
-                m("p.profile-activity#discord-activity-text", "Status: Loading..."),
+              ]),
 
-                // SOCIAL ICONS
+              m(".profile-section", [
+                m("p.profile-section-title", "Activity"),
+
+                m(".discord-activity#activity", [
+                  m(".discord-activity-icon",
+                    m("img#activity-image")
+                  ),
+
+                  m(".discord-activity-info", [
+                    m("p#activity-name"),
+                    m("p#activity-details"),
+                    m("p#activity-state")
+                  ])
+                ])
+              ]),
+
+              m(".profile-section", [
+                m("p.profile-section-title", "Socials"),
+
                 m(".profile-socials", [
                   m("button.icon-button", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.png" })),
                   m("button.icon-button", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, m("img", { src: "./assets/images/icons/socials/discord.png" })),
@@ -83,7 +102,7 @@ const webmasterPage = {
           ),
           m(".panel-content",
             m("p", "Lenguajes"),
-            m(".scroll-container", [
+            m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/typescript.svg" }), m("a", { href: "https://www.typescriptlang.org/" }, "TypeScript")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/csharp.svg" }), m("a", { href: "https://dotnet.microsoft.com/es-es/languages/csharp" }, "C#")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" }, "GDScript")]),
@@ -95,7 +114,7 @@ const webmasterPage = {
             ]),
 
             m("p", "Infra"),
-            m(".scroll-container", [
+            m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/redhat.svg" }), m("a", { href: "https://redhatofficial.github.io/" }, "Red Hat")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/debian.svg" }), m("a", { href: "https://www.debian.org/" }, "Debian")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/mysql.svg" }), m("a", { href: "https://www.mysql.com/" }, "MySQL")]),
@@ -104,7 +123,7 @@ const webmasterPage = {
             ]),
 
             m("p", "Softwares"),
-            m(".scroll-container", [
+            m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://github.com/godotengine/godot" }, "Godot")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/blender.svg" }), m("a", { href: "https://github.com/blender/blender" }, "Blender")]),
               m(".tag", [m("a", { href: "https://github.com/OpenShot/openshot-qt" }, "OpenShot")]),
@@ -128,130 +147,81 @@ const webmasterPage = {
 
           m(".panel-content",
             m("p", "Juegos"),
-            m(".scroll-container", [
+            m(".scroll-cover-container", [
               // Voices of the Void
               m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/votv.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/votv.webp" })
               ]),
               // Minecraft
               m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.minecraft" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/minecraft.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/minecraft.webp" }),
               ]),
               // Hytale
               m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hytale" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/hytale.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/hytale.webp" }),
               ]),
               // Terraria
               m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.terraria" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/terraria.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/terraria.webp" }),
               ]),
               // Warframe
               m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.warframe" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/warframe.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/warframe.webp" }),
               ]),
               // Roblox
               m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/roblox.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/roblox.webp" }),
               ]),
               // Half Life
               m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/hl2.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/hl2.webp" }),
               ]),
               // Team Fortress 2
               m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.tf" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/tf.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/tf.webp" }),
               ]),
               // Portal 1
               m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal1" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/portal1.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/portal1.webp" }),
               ]),
               // Portal 2
               m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal2" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/portal2.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/portal2.webp" }),
               ]),
               // SCP
               m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.scp" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/scp.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/scp.webp" }),
               ]),
               // GTA V
               m("a.cover", { href: "https://google.com", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.gta" }, [
-                m("img", { src: "/assets/images/pages/about/covers/games/gtav.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/games/gtav.webp" }),
               ]),
             ]),
 
             m("p", "Series"),
-            m(".scroll-container", [
+            m(".scroll-cover-container", [
               // Tres acordes
               m("a.cover", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
-                m("img", { src: "/assets/images/pages/about/covers/series/tres-acordes.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/series/tres-acordes.webp" }),
               ]),
               // Smiling Friends
               m("a.cover", { href: "https://www.imdb.com/es/title/tt12074628/" }, [
-                m("img", { src: "/assets/images/pages/about/covers/series/smiling-friends.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/series/smiling-friends.webp" }),
               ]),
               // The Amazing Digital Circus
               m("a.cover", { href: "https://www.imdb.com/es/title/tt27610198/" }, [
-                m("img", { src: "/assets/images/pages/about/covers/series/tadc.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/series/tadc.webp" }),
               ]),
               // Salad Fingers
               m("a.cover", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
-                m("img", { src: "/assets/images/pages/about/covers/series/salad-fingers.webp" }),
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/series/salad-fingers.webp" }),
               ]),
               // Madness Combat
               m("a.cover", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
-                m("img", { src: "/assets/images/pages/about/covers/series/madness-combat.webp" }),
-              ]),
-            ]),
-          )
-        ])
-      ]),
-
-      m(".panel-frame", [
-        m(".panel", [
-          m(".panel-header", [
-            m("p.text-title", "Form"),
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
-              m("button.panel-button", { "data-panel-action": "close" }, "X")
+                m("img.cover-image", { src: "/assets/images/pages/about/covers/series/madness-combat.webp" }),
+              ])
             ])
-          ]),
-
-          m(".panel-content", [
-
-            m(".contact", { style: "margin-bottom: 8px;" }, [
-              m("label", { for: "contact", style: "display: block; margin-bottom: 4px;" }, "Contacto (opcional)"),
-              m("input#contact", {
-                type: "text",
-                placeholder: "Una dirección o red donde pueda comunicar contigo.",
-                value: contactState.form.contact,
-                maxlength: 100,
-                oninput: (e: Event) => {
-                  contactState.form.contact = (e.target as HTMLInputElement).value;
-                }
-              }),
-            ]),
-
-            m(".message", { style: "margin-bottom: 12px;" }, [
-              m("label", { for: "message", style: "display: block; margin-bottom: 4px;" }, "Mensaje"),
-              m("textarea.message-form#message", {
-                value: contactState.form.message,
-                maxlength: 500,
-                oninput: (e: Event) => {
-                  contactState.form.message = (e.target as HTMLTextAreaElement).value;
-                }
-              }),
-
-              m("p", {
-                style: "font-size: 14px; opacity: 0.6; margin-top: 2px; text-align: right;"
-              }, `${contactState.form.message.length} / 500`),
-            ]),
-
-            m("button.button", {
-              disabled: contactState.submitting,
-              style: contactState.submitting ? "opacity: 0.5;" : "",
-              onclick: sendForm
-            }, contactState.submitting ? "Enviando..." : "Enviar")
-          ])
+          )
         ])
       ])
     ])
