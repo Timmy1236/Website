@@ -84,13 +84,13 @@ export const likesSite: ButtonSite[] = [
     url: "https://jbc.lol/",
     button: "https://jbc.lol/imgs/buttons/jbtn.png",
     preview: "/assets/images/pages/links/previews/jbc.webp",
-    note: "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
+    note: "links.buttonWall.notes.jbc",
   },
   {
     url: "https://moosyu.nekoweb.org/",
     button: "https://moosyu.github.io/assets/buttons/moosyu.png",
     preview: "/assets/images/pages/links/previews/moosyu.webp",
-    note: "Me robe el código del form de esta misma pagina y el owner no lo sabe :youtube_emoji_biting_nails:",
+    note: "links.buttonWall.notes.moosyu",
   },
 ];
 
@@ -98,5 +98,5 @@ export const MyButton: ButtonSite = {
   url: "https://timmy.nekoweb.org/",
   button: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
   preview: "/assets/images/pages/links/previews/timmy.webp",
-  note: "... Ese soy yo.",
+  note: "links.buttonWall.notes.timmy",
 }
