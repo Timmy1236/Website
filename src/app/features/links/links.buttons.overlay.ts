@@ -7,6 +7,7 @@ import { getTranslation } from "../../shared/core/i18n";
 
 let rafId: number | null = null;
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
+let safetyTimeout: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
 
 export interface ButtonSite {
@@ -20,12 +21,42 @@ const overlay = document.createElement("div");
 overlay.id = "button-overlay";
 document.body.appendChild(overlay);
 
+/**
+ * Limpia completamente el overlay. Debe llamarse cuando se cambia de página.
+ */
+export function cleanupButtonOverlay(): void {
+  if (rafId !== null) {
+    cancelAnimationFrame(rafId);
+    rafId = null;
+  }
+
+  if (hideTimer !== null) {
+    clearTimeout(hideTimer);
+    hideTimer = null;
+  }
+
+  if (safetyTimeout !== null) {
+    clearTimeout(safetyTimeout);
+    safetyTimeout = null;
+  }
+
+  overlay.classList.remove("visible");
+  overlay.style.clipPath = "none";
+  overlay.innerHTML = "";
+  currentTarget = null;
+}
+
 export function showButtonOverlay(site: ButtonSite, el: HTMLElement): void {
   currentTarget = el;
 
   if (hideTimer !== null) {
     clearTimeout(hideTimer);
     hideTimer = null;
+  }
+
+  if (safetyTimeout !== null) {
+    clearTimeout(safetyTimeout);
+    safetyTimeout = null;
   }
 
   overlay.innerHTML = _buildOverlay(site);
@@ -35,6 +66,15 @@ export function showButtonOverlay(site: ButtonSite, el: HTMLElement): void {
   requestAnimationFrame(() => {
     overlay.classList.add("visible");
   });
+
+  // Timeout de seguridad: si el overlay se queda visible por mucho tiempo sin actividad,
+  // probablemente hay un bug y deberíamos limpiarlo automáticamente.
+  safetyTimeout = setTimeout(() => {
+    if (overlay.classList.contains("visible")) {
+      console.warn("[ButtonOverlay] Safety timeout triggered - cleaning up stale overlay");
+      hideButtonOverlay();
+    }
+  }, 8000);
 }
 
 /**
@@ -47,6 +87,12 @@ function startTracking() {
   const start = performance.now();
 
   const loop = () => {
+    // Validar que el overlay aún es visible y el target existe
+    if (!overlay.classList.contains("visible") || !currentTarget || !document.contains(currentTarget)) {
+      rafId = null;
+      return;
+    }
+
     _updateClipPath();
 
     if (performance.now() - start < duration) {
@@ -67,6 +113,11 @@ export function hideButtonOverlay(): void {
     rafId = null;
   }
 
+  if (safetyTimeout !== null) {
+    clearTimeout(safetyTimeout);
+    safetyTimeout = null;
+  }
+
   overlay.style.clipPath = "none";
   currentTarget = null;
 
@@ -78,9 +129,17 @@ export function hideButtonOverlay(): void {
 
 /**
  * mano, no se, magia negra, yo que se?
+ * Ahora con validación para evitar referencias a elementos que ya no existen.
  */
 function _updateClipPath() {
   if (!currentTarget) return;
+
+  // Validar que el elemento aún existe en el DOM
+  if (!document.contains(currentTarget)) {
+    console.warn("[ButtonOverlay] Target element no longer exists in DOM - hiding overlay");
+    hideButtonOverlay();
+    return;
+  }
 
   const rect = currentTarget.getBoundingClientRect();
 
