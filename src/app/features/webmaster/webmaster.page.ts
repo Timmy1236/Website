@@ -2,7 +2,6 @@ import m from "mithril";
 import { loadDiscordProfile } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { applyBBCode } from "../../shared/ui/bbcode.js";
-import { sendForm, contactState } from "./webmaster.contact.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 
 const webmasterPage = {
@@ -47,7 +46,9 @@ const webmasterPage = {
 
                 m(".discord-activity#activity", [
                   m(".discord-activity-icon",
-                    m("img#activity-image")
+                    m("img#activity-image", {
+                      src: "/assets/images/others/loading.gif"
+                    })
                   ),
 
                   m(".discord-activity-info", [

@@ -136,7 +136,7 @@ const Others = {
                 height: "270",
                 frameborder: "0"
               }),
-              m("textarea", `<iframe src="https://webtiles.kicya.net/e/timmy.nekoweb.org" width="250" height="270" frameborder="0"></iframe>\n\nhttps://timmy.nekoweb.org/pages/others/tile/`.trim())
+              m("textarea", `<iframe src="https://webtiles.kicya.net/e/timmy.nekoweb.org" width="250" height="270" frameborder="0"></iframe>`.trim())
             ])
           ])
         ])
