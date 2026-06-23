@@ -18,7 +18,8 @@
     "css": "esbuild src/styles/main/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:watch": "esbuild src/styles/main/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:pages": "esbuild src/styles/data/main.css --bundle --minify --outfile=public/dist/pages.css",
-    "css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch  --outfile=public/dist/pages.css"
+    "css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch  --outfile=public/dist/pages.css",
+    "purgecss": "node scripts/purgecss-report.mjs"
   },
   "repository": {
     "type": "git",
@@ -48,11 +49,12 @@
     "esbuild": "^0.28.1",
     "eslint": "^10.5.0",
     "eslint-plugin-compat": "^7.0.2",
+    "purgecss": "^8.0.0",
     "stylelint": "^17.13.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-no-unsupported-browser-features": "^8.1.1",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.1"
+    "typescript-eslint": "^8.62.0"
   },
   "dependencies": {
     "mithril": "^2.3.8"
