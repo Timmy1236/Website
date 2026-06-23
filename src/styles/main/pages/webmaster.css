@@ -127,6 +127,62 @@
   flex-direction: column;
 }
 
+
+/* Covers */
+.cover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-style: preserve-3d;
+}
+
+.cover-image {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  transition: box-shadow 0.4s ease;
+  display: block;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,rgb(0 0 0 / 0%) 0%, rgb(255 255 255 / 39%) 100%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.cover:hover .cover-image {
+  box-shadow: 0 1px 15px rgb(0 0 0 / 80%);
+}
+
+.cover:hover {
+  transform: scale(1.1) rotateX(5deg);
+  z-index: 10;
+} 
+
+.cover:hover::after {
+  opacity: 1;
+  background: linear-gradient(0deg,rgb(0 0 0 / 0%) 0%, rgb(255 255 255 / 39%) 100%);
+}
+
+.cover-sticker {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 12;
+  filter: drop-shadow(0 0 3px black);
+  image-rendering: pixelated;
+}
+/* Covers */
+
+
 /* Scrollers */
 .scroll-tag-container {
   display: flex;
@@ -140,7 +196,6 @@
   margin-right: 15px;
 }
 
-/* Contenedor principal */
 .scroll-cover-container {
   display: flex;
   overflow:auto;
@@ -155,64 +210,6 @@
 }
 /* Scrollers */
 
-/* Envoltorio del juego (el enlace .cover) */
-.cover {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  transform-style: preserve-3d;
-}
-
-/* Imagen del cover (Estilo Steam Grid) */
-.cover-image {
-  width: 100px;
-  height: 150px;
-  object-fit: cover;
-  transition: box-shadow 0.4s ease;
-  display: block;
-}
-
-/* Capa para el efecto de iluminación (Glow) */
-.cover::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
-  opacity: 0;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  transition: opacity 0.3s ease, background 0.3s ease;
-}
-
-/* --- ESTADO HOVER (Efecto Steam) --- */
-
-
-.cover:hover .cover-image {
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.8);
-}
-
-.cover:hover {
-  transform: scale(1.1) rotateX(5deg);
-  z-index: 10;
-}
-
-.cover:hover::after {
-  opacity: 1;
-  background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
-}
-
-/* --- El Sticker Independiente --- */
-.cover-sticker {
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  z-index: 12;
-  filter: drop-shadow(0 0 3px black);
-  image-rendering: pixelated;
-}
 
 .tag {
   display: flex;
