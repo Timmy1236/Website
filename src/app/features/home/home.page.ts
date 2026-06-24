@@ -1,7 +1,7 @@
 import m from "mithril";
 import { getLatest } from "./home.latest.ts";
 import { getTranslation } from "../../shared/core/i18n.js";
-import { applyBBCode } from "../../shared/utils/bbcode.ts";
+import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import type { Latest } from "./entries";
 
@@ -10,7 +10,6 @@ const Home = {
 
   oncreate() {
     setCurrentPath(m.route);
-    applyBBCode();
   },
 
   oninit: function () {
@@ -34,7 +33,7 @@ const Home = {
 
           m(".panel-content", [
             m("div", { style: "display: flex;" }, [
-              m("p", { "data-bbcode": true }, getTranslation("home.welcome.text")),
+              m("p", m.trust(parseBBCode(getTranslation("home.welcome.text")))),
               m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;" })
             ]),
           ])

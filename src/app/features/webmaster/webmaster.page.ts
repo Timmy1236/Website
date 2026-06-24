@@ -1,14 +1,13 @@
 import m from "mithril";
 import { loadDiscordProfile } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
-import { applyBBCode } from "../../shared/utils/bbcode.js";
+import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
 
 const webmasterPage = {
   oncreate() {
     setCurrentPath(m.route);
     loadDiscordProfile("375889010419171328");
-    applyBBCode();
   },
 
   view: function () {
@@ -85,7 +84,7 @@ const webmasterPage = {
             ),
 
             m(".panel-content", [
-              m("p", { "data-bbcode": true }, getTranslation("webmaster.about-me.description"))
+              m("p", m.trust(parseBBCode(getTranslation("webmaster.about-me.description"))))
             ])
           ])
         ])

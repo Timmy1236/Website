@@ -57,31 +57,18 @@ const BBCODE_RULES: { pattern: RegExp; replace: string | ReplaceFn }[] = [
   },
 ];
 
-function _parse(html: string): string {
-  let result = html;
+export function parseBBCode(text: string): string {
+  let result = text;
 
   for (const rule of BBCODE_RULES) {
     result = result.replace(rule.pattern, rule.replace as string);
   }
 
-  result = result.replace(/:(\w+):/g, (_match: string, name: string) => {
+  result = result.replace(/:(\w+):/g, (_match, name) => {
     const filename = EMOJI_MAP[name];
     if (!filename) return _match;
     return `<img class="emoji" src="/assets/images/emojis/${filename}" alt=":${name}:" title=":${name}:">`;
   });
 
   return result;
-}
-
-/**
- * Busca los elementos de la pagina con la data:"bbcode" y modifica el innerHTML para agregar modificaciones o emojis.
- */
-export function applyBBCode(): void {
-  //console.log("%cbbcode>%c Ejecutando: %capplyBBCode()", "color: #f3d087; background: #282A35;", "color: white", "color: cyan");
-
-  const elements = document.querySelectorAll("[data-bbcode]");
-
-  elements.forEach((element) => {
-    element.innerHTML = _parse(element.innerHTML);
-  });
 }
