@@ -6,6 +6,7 @@
 type Lang = "es" | "en"; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
 
 let currentLang: Lang = _getSavedLanguage() ?? _getBrowserLanguage();
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translations: Record<string, any> = {};
 
 function _getSavedLanguage(): Lang | null {
