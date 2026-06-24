@@ -1,10 +1,8 @@
 /* 
- * panel-buttons.js
- * ----------------
+ * panel buttons
+ * -------------
  * Encargado de manejar la lógica de los botones de los paneles, minimizar o cerrar paneles.
- * También encargado en automáticamente mimetizar ciertos paneles que tengan: { "data-default": "closed" }
 */
-
 document.addEventListener("click", (event) => {
   if (!(event.target instanceof HTMLElement)) return;
 
@@ -40,23 +38,3 @@ document.addEventListener("click", (event) => {
     }
   }
 });
-
-export function initPanel() {
-  document.querySelectorAll(".panel[data-default='closed']").forEach(panel => {
-    if (!(panel instanceof HTMLElement)) return;
-
-    const content = panel.querySelector(".panel-content");
-    const btn = panel.querySelector("[data-panel-action='minimize']");
-    const frame = panel.closest(".panel-frame");
-
-    if (content instanceof HTMLElement) {
-      content.classList.add("collapsed");
-    }
-
-    frame?.classList.add("collapsed");
-
-    if (btn instanceof HTMLElement) {
-      btn.textContent = "▲";
-    }
-  });
-}
