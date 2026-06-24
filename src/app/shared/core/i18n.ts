@@ -55,6 +55,7 @@ export async function changeLanguage(lang: Lang): Promise<void> {
   try {
     currentLang = lang;
     localStorage.setItem('preferred-language', lang);
+    window.location.reload();
   } catch (e) {
     console.warn("i18n> Error en LocalStorage: ", e);
   }
