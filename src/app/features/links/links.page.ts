@@ -1,7 +1,7 @@
 import m from "mithril";
 import { showButtonOverlay, hideButtonOverlay } from "./links.buttons.overlay.ts";
 import { neighborSites, likesSite, MyButton } from "./links.buttons.list.ts";
-import { showToast } from "../../shared/ui/toast.ts";
+import { showToast } from "../../shared/components/toast.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 

@@ -3,8 +3,8 @@
 * -----------
 * Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
 */
-import { getMapSetting } from "../core/settings-logic";
-import { showToast } from "./toast";
+import { getMapSetting } from "./settings-logic";
+import { showToast } from "../components/toast";
 
 let playing = false;
 let lastSong: string;

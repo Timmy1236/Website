@@ -4,7 +4,7 @@
  * Lógica para enviar y cargar entradas a través de Cloudflare Workers.
 */
 import m from "mithril";
-import { showToast } from "../../shared/ui/toast.ts";
+import { showToast } from "../../shared/components/toast.ts";
 
 const WORKER_URL = "https://guestbook-worker.timmy1236.workers.dev";
 

@@ -1,7 +1,7 @@
 import m from "mithril";
 import { getLatest } from "./home.latest.ts";
 import { getTranslation } from "../../shared/core/i18n.js";
-import { applyBBCode } from "../../shared/ui/bbcode.ts";
+import { applyBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import type { Latest } from "./entries";
 

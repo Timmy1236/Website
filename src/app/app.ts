@@ -4,10 +4,10 @@ import m from "mithril";
 import { i18nReady } from "./shared/core/i18n.ts";
 import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
 import { initializeSettings } from "./shared/core/settings-logic.ts";
-import { initializeAutoplay } from "./shared/ui/autoplay.ts";
-import { initializeSoundsEffects } from "./shared/ui/sound-effects.ts";
-import "./shared/ui/tooltip.ts";
-import "./shared/ui/panel-buttons.ts"
+import { initializeAutoplay } from "./shared/core/autoplay.ts";
+import { initializeSoundsEffects } from "./shared/core/sound-effects.ts";
+import "./shared/components/tooltip.ts";
+import "./shared/components/panel-buttons.ts"
 
 // Pages
 import Layout from "./shared/components/layout.ts";

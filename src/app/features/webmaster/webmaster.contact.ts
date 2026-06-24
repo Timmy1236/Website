@@ -4,7 +4,7 @@
  * Lógica para enviar el mensaje rápido a través de Cloudflare Workers.
  */
 import m from "mithril";
-import { showToast } from "../../shared/ui/toast";
+import { showToast } from "../../shared/components/toast";
 
 const WORKER_URL = "https://shy-haze-c01a.timmy1236.workers.dev";
 

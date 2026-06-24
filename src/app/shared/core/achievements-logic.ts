@@ -4,7 +4,7 @@
  * Maneja la lógica de los logros que son guardados en LocalStorage.
  * Pero no esencialmente se encarga en ser el trigger para desbloquear cada logro.
 */
-import { showToast } from "../ui/toast";
+import { showToast } from "../components/toast";
 
 /**
  * id            → Clave única.

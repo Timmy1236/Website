@@ -1,7 +1,7 @@
 import m from "mithril";
 import { loadDiscordProfile } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
-import { applyBBCode } from "../../shared/ui/bbcode.js";
+import { applyBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
 
 const webmasterPage = {

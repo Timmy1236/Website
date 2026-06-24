@@ -1,5 +1,5 @@
 import m from "mithril";
-import { createImageOverlay } from "../../shared/ui/image-overlay.js";
+import { createImageOverlay } from "../../shared/components/image-overlay.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { getTranslation } from "../../shared/core/i18n.js";
 

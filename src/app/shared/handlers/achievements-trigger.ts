@@ -3,7 +3,7 @@
  * -----------------------
  * Este si se encarga de triggear cada logro :P
 */
-import { showToast } from "../ui/toast.js";
+import { showToast } from "../components/toast.js";
 import { unlockAchievement } from "../core/achievements-logic.js";
 
 let typedWord = "";
