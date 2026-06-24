@@ -33,7 +33,7 @@
   "home": {
     "welcome": {
       "title": "Welcome!",
-      "text": ":wave: [rainbow]¡Welcom[i]eEeEe!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you are in the [u]Home[/u] page and there won't be anything special besides the latest entries and highlighted news, better browse around the site if you find something, if there even is anything. Remember to come back sometime in the future and always, always, [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
+      "text": ":wave: [rainbow]Welco[i]oOoOo!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
     },
     "entries": {
       "blog": {
@@ -50,7 +50,7 @@
   "webmaster": {
     "about-me": {
       "title": "About Me",
-      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old dude living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm simply just another random [u][tooltip=Backend Software Developer... NEEEEERD]programmer[/tooltip][/u]. My hobbies are basically anything related to technology. Gaming, shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really deep enough into it to the point of having my own 24/7 server because of money reasons, but I would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I was always interested in [i]Art[/i], drawing and turning my creativity into something physical, but I never had the talent for those kinds of things, so I stayed with my computer typing letters until something magical appears."
+      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really into it enough to run my own 24/7 server due to financial reasons, but I definitely would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
     },
     "tech-stack": {
       "title": "Tech Stack"
@@ -63,10 +63,10 @@
     "title": "Projects",
     "list": {
       "website": {
-        "description": "My personal website hosted on Nekoweb, it will be my little corner of the internet where I'll keep every kind of project I've made or I'm currently developing. What you're seeing right now is one of the biggest public projects I have!"
+        "description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!"
       },
       "leafy": {
-        "description": "A simple Discord bot made with discord.js, nothing more, simple as that. You don't need external services or a complicated setup."
+        "description": "A simple Discord bot made with discord.js, that's it. Nice and simple. No external services or complicated setup required."
       }
     }
   },
@@ -82,7 +82,7 @@
     "options": {
       "staticEffects": "Static",
       "backgroundMusic": "Background Music",
-      "ignoreLandingPage": "Ignore Landing Page",
+      "ignoreLandingPage": "Skip Landing Page",
       "vignetteEffects": "Vignette",
       "soundsEffects": "Sound Effects",
       "readableFont": "Readable Font"
@@ -98,6 +98,42 @@
         "neighbors": "Nekoweb Neighbors",
         "likes": "Cool Sites",
         "myButton": "Me"
+      },
+      "notes": {
+        "chantu": "The first person I met on Nekoweb who also happened to speak Spanish. If it wasn't for Chantu, I probably would've stayed on GitHub Pages because of how intimidating this whole site looked. Super friendly!",
+        "slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
+        "nyani58": "WHERE THE HELL AM I???",
+        "nogood-angel": "Every time I visit Nekoweb, I see this same site sitting at the top of the 'latest updates' category. How? How can someone release so many updates? How do they even come up with all that stuff?",
+        "someones-insane": "I don't know why... but the homepage image reminds me way too much of old Flash point-and-click horror games where the clickable objects looked ridiculously different from everything else. I kinda wish it was an actual Flash game running in Ruffle.",
+        "yefreitor": "There's a button to smoke a joint right on the homepage. What more do you need?",
+        "jovidmtp": "Poor soul, making a website that's compatible with ancient browsers! Meanwhile mine requires the latest version of Chrome and even then it probably won't load correctly!",
+        "cbz": "Sad to see YouPlock shutting down soon. It was silly, but it had potential considering how complicated something like that must've been to build. Wishing the best for future projects.",
+        "ellen": "A list of hard-to-obtain badges? I like that idea. I should add more Roblox stuff to my site.",
+        "amoeba": "No, the screenshot isn't broken. The page loaded correctly. That's just how the landing page looks. I spent like a minute staring at the screen waiting for something to happen before realizing I had to click the title to continue. :)",
+        "lucksiyo": "This feels way smoother than what I'm currently trying to build myself.",
+        "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
+        "moosyu": "I stole the code for my form directly from this website and the owner doesn't know it :youtube_emoji_biting_nails:",
+        "timmy": "... That's me."
+      }
+    }
+  },
+  "tooltip": {
+    "pages": {
+      "webmaster": {
+        "interests": {
+          "votv": "A simulator where you spend an hour at your desk trying to get a signal only for it to fail and force you to do everything all over again.",
+          "minecraft": "Minceraft",
+          "hytale": "It's like Minecraft, except it isn't because it's like Terraria, except it isn't because-",
+          "terraria": "It's way too good. But starting a new world always feels painfully slow :(",
+          "warframe": "Ironically one of the most F2P-friendly games ever made. I don't think there's currently another one that reaches the same level.",
+          "roblox": "every day I feel less motivated to keep playing this crap.",
+          "hl": "One of Valve's greatest franchises... Shame we'll never see a third installment :)",
+          "tf": "I have 1,000 hours in Team Fortress 2! ... I still play terribly.",
+          "portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
+          "portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
+          "scp": "Ignoring the fact that the game is built on an absurdly old and niche engine filled with bugs and fatal crashes, it's the only game that genuinely makes me feel scared. Every new area has a chance of SCP-173 camping around a corner waiting to kill you.",
+          "gta": "Cayo Perico."
+        }
       }
     }
   }
