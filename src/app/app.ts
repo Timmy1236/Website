@@ -17,7 +17,6 @@ import Projects from "./features/projects/projects.page.ts";
 import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
-import GuestbookPage from "./features/guestbook/guestbook.page.ts";
 
 async function startApp() {
   document.documentElement.classList.add("app-loaded");
@@ -37,8 +36,7 @@ async function startApp() {
       "/projects": { render: () => m(Layout, m(Projects)) },
       "/links": { render: () => m(Layout, m(Links)) },
       "/achievements": { render: () => m(Layout, m(Achievements)) },
-      "/configuration": { render: () => m(Layout, m(Configuration)) },
-      "/guestbook": { render: () => m(Layout, m(GuestbookPage)) }
+      "/configuration": { render: () => m(Layout, m(Configuration)) }
     });
   } else {
     console.error("Dude, estas cargando el script app.js en un HTML que no deberías.")

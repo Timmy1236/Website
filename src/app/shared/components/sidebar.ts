@@ -90,7 +90,6 @@ export default {
               navBtn("sidebar.navigation.buttons.projects", false, "/projects", null, "proyect"),
               navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
               navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "(SUPER W.I.P)", "achievement"),
-              navBtn("sidebar.navigation.buttons.guestbook", false, "/guestbook", "(SUPER W.I.P)", "email"),
               navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings")
             ])
           ])
