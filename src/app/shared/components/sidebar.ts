@@ -6,11 +6,9 @@ import { cleanupButtonOverlay } from "../../../app/features/links/links.buttons.
 let isTransitioning = false;
 let currentPath = "/home";
 
-function navBtn(label: string, external: boolean, path: string, tooltip: string | null, img: string | null) {
+function navBtn(label: string, external: boolean, path: string, img: string | null) {
   const isActive = currentPath === path;
   const attrs: m.Attributes = { onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
-
-  if (tooltip) attrs["data-tooltip"] = tooltip;
 
   return m("button.sidebar-buttons", attrs, [
     m("img", {
@@ -44,13 +42,13 @@ function _dataButtons() {
 
   if (local === "es") {
     return [
-      navBtn("sidebar.data.buttons.blog", true, "/content/es/blog/index.html", null, "doc-text"),
-      navBtn("sidebar.data.buttons.changelog", true, "/content/es/changelog/index.html", null, "doc-changelog"),
+      navBtn("sidebar.data.buttons.blog", true, "/content/es/blog/index.html", "doc-text"),
+      navBtn("sidebar.data.buttons.changelog", true, "/content/es/changelog/index.html", "doc-changelog"),
     ];
   } else {
     return [
-      navBtn("sidebar.data.buttons.blog", true, "/content/en/blog/index.html", null, "doc-text"),
-      navBtn("sidebar.data.buttons.changelog", true, "/content/en/changelog/index.html", null, "doc-changelog"),
+      navBtn("sidebar.data.buttons.blog", true, "/content/en/blog/index.html", "doc-text"),
+      navBtn("sidebar.data.buttons.changelog", true, "/content/en/changelog/index.html", "doc-changelog"),
     ];
   }
 }
@@ -85,12 +83,12 @@ export default {
           ]),
           m(".panel-content", [
             m(".sidebar-links-container", [
-              navBtn("sidebar.navigation.buttons.home", false, "/home", null, "home"),
-              navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", null, "user"),
-              navBtn("sidebar.navigation.buttons.projects", false, "/projects", null, "proyect"),
-              navBtn("sidebar.navigation.buttons.links", false, "/links", null, "link"),
-              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "(SUPER W.I.P)", "achievement"),
-              navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", null, "settings")
+              navBtn("sidebar.navigation.buttons.home", false, "/home", "home"),
+              navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", "user"),
+              navBtn("sidebar.navigation.buttons.projects", false, "/projects", "proyect"),
+              navBtn("sidebar.navigation.buttons.links", false, "/links", "link"),
+              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "achievement"),
+              navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", "settings")
             ])
           ])
         ])
@@ -127,7 +125,7 @@ export default {
             m("div.stats-container", [
               m("p", [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.visits")), m("span", { style: "font-size: 24px;" }, _getNekoStat('views'))]),
               m("p", { style: "margin-bottom:10px;" }, [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.followers")), m("span", { style: "font-size: 24px;" }, _getNekoStat('followers'))]),
-              navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", null, "follow"),
+              navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", "follow"),
             ])
           ])
         ])
