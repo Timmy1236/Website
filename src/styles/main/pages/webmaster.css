@@ -82,18 +82,6 @@
   height: 100%;
 }
 
-.profile-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 6px;
-}
-
-.profile-activity {
-  font-size: 18px;
-}
-
 .profile-socials {
   display: flex;
   gap: 12px;

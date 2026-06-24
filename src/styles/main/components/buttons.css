@@ -63,14 +63,3 @@
   image-rendering: pixelated;
   filter: drop-shadow(var(--text-shadow));
 }
-
-#sidebar-image {
-  filter: drop-shadow(2px 2px 3px rgb(0 0 0 / 50%));
-  pointer-events: none;
-  transition: opacity 0.6s ease;
-  opacity: 1;
-}
-
-#sidebar-image.fade-out {
-  opacity: 0;
-}
