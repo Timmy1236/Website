@@ -46,7 +46,11 @@ export function getTranslation(key: string): string {
     translation = translation?.[k];
   }
 
-  return translation ?? console.error("Key no encontrada: " + keys);
+  if (!translation) {
+    console.error("Key no encontrada: " + keys);
+  }
+
+  return translation ?? "⚑ KEY.NO.ENCONTRADA ⚑";
 }
 
 /**
