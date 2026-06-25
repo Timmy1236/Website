@@ -136,5 +136,8 @@
         }
       }
     }
+  },
+  "others": {
+    "resetSettings": "¿Estas seguro que quieres reiniciar la configuración por defecto?"
   }
 }

@@ -5,6 +5,7 @@
 */
 import { SETTING_KEYS, SettingKey } from "../../shared/core/settings-logic.js";
 import { initDefaultSettings, saveMapSettings, getMapSetting } from "../../shared/core/settings-logic.js";
+import { getTranslation } from "../../shared/core/i18n.js";
 export const settingsMap = new Map<SettingKey, string>();
 
 export function initMapFromStorage() {
@@ -19,7 +20,7 @@ export function confirmSettings() {
 }
 
 export function restartSettings() {
-  if (confirm("Are you sure you want to reset the settings?") == true) {
+  if (confirm(getTranslation("others.resetSettings")) == true) {
     initDefaultSettings();
     window.location.reload();
   }
