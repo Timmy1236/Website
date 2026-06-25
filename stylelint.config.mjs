@@ -8,6 +8,8 @@ export default {
       true,
       {
         "browsers": [">0.3%, defaults and fully supports es6-module and baseline widely available"],
+        "ignorePartialSupport": true,
+        "ignore": ["font-smooth"]
       }
     ]
   },
