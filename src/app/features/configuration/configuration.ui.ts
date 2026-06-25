@@ -6,16 +6,11 @@
 import { SETTING_KEYS, SettingKey } from "../../shared/core/settings-logic.js";
 import { initDefaultSettings, saveMapSettings, getMapSetting } from "../../shared/core/settings-logic.js";
 export const settingsMap = new Map<SettingKey, string>();
-let initialized = false;
 
 export function initMapFromStorage() {
-  if (initialized) return;
-
   for (const key of SETTING_KEYS) {
     settingsMap.set(key, getMapSetting(key) ?? "false");
   }
-
-  initialized = true;
 }
 
 export function confirmSettings() {
