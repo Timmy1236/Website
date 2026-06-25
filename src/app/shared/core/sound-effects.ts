@@ -1,6 +1,6 @@
 /*
- * sound-effects.ts
- * ----------------
+ * Sound Effects
+ * -------------
  * Maneja la lógica de los efectos de sonidos.
 */
 
@@ -82,30 +82,6 @@ function _audioLogic() {
     }
   }
 
-  // ==== Eventos del mouse general ====
-  // Click presionado
-  document.body.addEventListener("mousedown", (event) => {
-    if (event.target === null) return;
-    if (event.target instanceof HTMLElement) {
-      SFX.click.volume = 0.65;
-      SFX.click.play();
-
-      const cfg = soundConfig[event.target.id];
-
-      if (cfg) {
-        _playConfiguredSound(cfg);
-      }
-    }
-  });
-
-  // Click suelto
-  document.body.addEventListener("mouseup", () => {
-    SFX.clickUp.volume = 0.65;
-    SFX.clickUp.play();
-  });
-  // ==== Eventos del mouse general ====
-
-
   // ==== Buffers de los botones====
   let hoverBuffer: AudioBuffer;
   _loadSound('/assets/sounds/sfx/mouse/button-hover.mp3').then(buffer => { hoverBuffer = buffer; });
@@ -116,30 +92,47 @@ function _audioLogic() {
 
   // ==== Mouse ====
   document.addEventListener('mouseover', (event: MouseEvent) => {
-    if (!(event.target instanceof HTMLElement)) return;
-
-    const button = event.target.closest('button');
-    if (!button || button.contains(event.relatedTarget as Node)) return;
-
-    _playBuffer(hoverBuffer, 0.5);
+    if (event.target instanceof HTMLElement) {
+      const button = event.target.closest('button');
+      if (button) {
+        const relatedTarget = event.relatedTarget as HTMLElement | null;
+        if (relatedTarget && button.contains(relatedTarget)) return;
+        _playBuffer(hoverBuffer, 0.65);
+      }
+    }
   });
 
   document.addEventListener('mousedown', (event: MouseEvent) => {
-    if (!(event.target instanceof HTMLElement)) return;
+    SFX.click.volume = 0.65;
+    SFX.click.play();
 
-    const button = event.target.closest('button');
-    if (!button || button.contains(event.relatedTarget as Node)) return;
+    if (event.target instanceof HTMLElement) {
+      const button = event.target.closest('button');
+      if (button) {
+        const relatedTarget = event.relatedTarget as HTMLElement | null;
+        if (relatedTarget && button.contains(relatedTarget)) return;
+        _playBuffer(clickBuffer, 0.4);
+      }
 
-    _playBuffer(clickBuffer, 0.5);
+      const cfg = soundConfig[event.target.id];
+      if (cfg) {
+        _playConfiguredSound(cfg);
+      }
+    }
   });
 
   document.addEventListener('mouseup', (event: MouseEvent) => {
-    if (!(event.target instanceof HTMLElement)) return;
+    SFX.clickUp.volume = 0.65;
+    SFX.clickUp.play();
 
-    const button = event.target.closest('button');
-    if (!button || button.contains(event.relatedTarget as Node)) return;
-
-    _playBuffer(releaseBuffer, 0.5);
+    if (event.target instanceof HTMLElement) {
+      const button = event.target.closest('button');
+      if (button) {
+        const relatedTarget = event.relatedTarget as HTMLElement | null;
+        if (relatedTarget && button.contains(relatedTarget)) return;
+        _playBuffer(releaseBuffer, 0.4);
+      }
+    }
   });
 
   // ==== Otros buffers =====
