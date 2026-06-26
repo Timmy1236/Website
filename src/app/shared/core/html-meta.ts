@@ -1,7 +1,7 @@
 /*
- * html-meta.ts
- * ------------
- * Modifica varios elementos meta y otros del HTML principal para que coincida con la app.
+ * HTML Meta
+ * ---------
+ * Encargado de modificar varios valores meta del HTML dependiendo de la pagina y configuración de la app.
 */
 import m from "mithril";
 import { getSetting } from "./settings-logic";
@@ -31,10 +31,8 @@ const translation: Record<string, Record<string, string>> = {
 
 export function setCurrentPath(path: m.Route) {
   const current = path.get();
-  _setTitle(current);
-}
-
-function _setTitle(path: string) {
   const local = getSetting("preferred-language") || "en";
-  document.title = translation[local][path] + " - Timmy";
+
+  document.title = (translation[local][current] ?? "Website") + " - Timmy";
+  document.documentElement.lang = local;
 }
