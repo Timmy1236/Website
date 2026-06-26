@@ -1,13 +1,12 @@
 /*
- * button-overlay.ts
- * -----------------
- * Crea un overlay con blur cuando un botón de links está en hover.
+ * Button overlay
+ * --------------
+ * Crea un overlay con blur cuando un botón de links se encuentre en hover.
 */
 import { getTranslation } from "../../shared/core/i18n";
 
 let rafId: number | null = null;
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
-let safetyTimeout: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
 
 export interface ButtonSite {
@@ -22,7 +21,7 @@ overlay.id = "button-overlay";
 document.body.appendChild(overlay);
 
 /**
- * Limpia completamente el overlay. Debe llamarse cuando se cambia de página.
+ * Limpia completamente el overlay.
  */
 export function cleanupButtonOverlay(): void {
   if (rafId !== null) {
@@ -35,14 +34,10 @@ export function cleanupButtonOverlay(): void {
     hideTimer = null;
   }
 
-  if (safetyTimeout !== null) {
-    clearTimeout(safetyTimeout);
-    safetyTimeout = null;
-  }
-
   overlay.classList.remove("visible");
   overlay.style.clipPath = "none";
   overlay.innerHTML = "";
+
   currentTarget = null;
 }
 
@@ -54,52 +49,39 @@ export function showButtonOverlay(site: ButtonSite, el: HTMLElement): void {
     hideTimer = null;
   }
 
-  if (safetyTimeout !== null) {
-    clearTimeout(safetyTimeout);
-    safetyTimeout = null;
-  }
-
-  overlay.innerHTML = _buildOverlay(site);
+  overlay.innerHTML = "";
+  overlay.appendChild(_renderOverlayContent(site));
 
   startTracking();
 
   requestAnimationFrame(() => {
     overlay.classList.add("visible");
   });
-
-  // Timeout de seguridad: si el overlay se queda visible por mucho tiempo sin actividad,
-  // probablemente hay un bug y deberíamos limpiarlo automáticamente.
-  safetyTimeout = setTimeout(() => {
-    if (overlay.classList.contains("visible")) {
-      console.warn("[ButtonOverlay] Safety timeout triggered - cleaning up stale overlay");
-      hideButtonOverlay();
-    }
-  }, 8000);
 }
 
 /**
- * Actualiza la posición clip path para que este igual al botón que esta en hover.
+ * Actualiza continuamente el clip-path mientras el overlay esté visible, para evitar que el botón sufra del blur.
  */
 function startTracking() {
-  if (rafId !== null) cancelAnimationFrame(rafId);
-
-  const duration = 500;
-  const start = performance.now();
+  if (rafId !== null)
+    cancelAnimationFrame(rafId);
 
   const loop = () => {
-    // Validar que el overlay aún es visible y el target existe
-    if (!overlay.classList.contains("visible") || !currentTarget || !document.contains(currentTarget)) {
+
+    if (!currentTarget) {
       rafId = null;
+      return;
+    }
+
+    // Si por algún motivo nunca llegó el mouseleave.
+    if (!currentTarget.matches(":hover")) {
+      hideButtonOverlay();
       return;
     }
 
     _updateClipPath();
 
-    if (performance.now() - start < duration) {
-      rafId = requestAnimationFrame(loop);
-    } else {
-      rafId = null;
-    }
+    rafId = requestAnimationFrame(loop);
   };
 
   rafId = requestAnimationFrame(loop);
@@ -113,11 +95,6 @@ export function hideButtonOverlay(): void {
     rafId = null;
   }
 
-  if (safetyTimeout !== null) {
-    clearTimeout(safetyTimeout);
-    safetyTimeout = null;
-  }
-
   overlay.style.clipPath = "none";
   currentTarget = null;
 
@@ -127,87 +104,51 @@ export function hideButtonOverlay(): void {
   }, 300);
 }
 
-/**
- * mano, no se, magia negra, yo que se?
- * Ahora con validación para evitar referencias a elementos que ya no existen.
- */
 function _updateClipPath() {
   if (!currentTarget) return;
 
-  // Validar que el elemento aún existe en el DOM
-  if (!document.contains(currentTarget)) {
-    console.warn("[ButtonOverlay] Target element no longer exists in DOM - hiding overlay");
-    hideButtonOverlay();
-    return;
-  }
-
   const rect = currentTarget.getBoundingClientRect();
-
-  const top = rect.top;
-  const left = rect.left;
-  const right = rect.right;
-  const bottom = rect.bottom - 8; // Hack estupido, por alguna razón hay un padding debajo de los botones y la única solución es restarle 8 pixeles.
-
-  // Genuinamente ya no se que hace esta mierda.
-  overlay.style.clipPath = `
-    polygon(
-      0% 0%,
-      100% 0%,
-      100% 100%,
-      0% 100%,
-
-      0% ${top}px,
-      ${left}px ${top}px,
-      ${left}px ${bottom}px,
-      ${right}px ${bottom}px,
-      ${right}px ${top}px,
-      0% ${top}px
-    )
-  `;
+  overlay.style.clipPath = `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% ${rect.top}px, ${rect.left}px ${rect.top}px, ${rect.left}px ${rect.bottom - 8}px, ${rect.right}px ${rect.bottom - 8}px, ${rect.right}px ${rect.top}px, 0% ${rect.top}px)`;
 }
 
 /**
- * Retorna código HTML ya construido para el overlay con los datos que trae el botón.
+ * Crea la estructura interna del overlay.
  */
-function _buildOverlay(site: ButtonSite): string {
-  const note = (site.note ? getTranslation(site.note) : null) ?? site.note;
+function _renderOverlayContent(site: ButtonSite): DocumentFragment {
+  const fragment = document.createDocumentFragment();
+
+  const noteTranslation = site.note ? getTranslation(site.note) : null;
+  const note = noteTranslation ?? site.note;
+  const formattedUrl = new URL(site.url);
+
+  const container = document.createElement("div");
+  if (note) {
+    container.style.display = "flex";
+    container.style.gap = "10px";
+  }
 
   if (note) {
-    return `
-  <div style="display:flex;gap:10px;">
-    <div class="panel">
-      <div class="panel-header">
-        <p>Nota</p>
-      </div>
-      <div class="panel-content">
-        <p class="button-note">${note ? note : ""}</p>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-header">
-        <p>${site.url.slice(8, -1)}</p>
-      </div>
-      <div class="panel-content">
-        <div class="button-screenshot">
-          <img src="${site.preview}" alt="Screenshot de ${site.url}">
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
-  } else {
-    return `
-    <div class="panel">
-      <div class="panel-header">
-        <p>${site.url.slice(8, -1)}</p>
-      </div>
-      <div class="panel-content">
-        <div class="button-screenshot">
-          <img src="${site.preview}" alt="Screenshot de ${site.url}">
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
+    const notePanel = document.createElement("div");
+    notePanel.className = "panel";
+    notePanel.innerHTML = `
+      <div class="panel-header"><p>Nota</p></div>
+      <div class="panel-content"><p class="button-note">${note}</p></div>
+    `;
+    container.appendChild(notePanel);
   }
+
+  const previewPanel = document.createElement("div");
+  previewPanel.className = "panel";
+  previewPanel.innerHTML = `
+    <div class="panel-header"><p>${formattedUrl.hostname}</p></div>
+    <div class="panel-content">
+      <div class="button-screenshot">
+        <img src="${site.preview}" alt="Screenshot de ${site.url}">
+      </div>
+    </div>
+  `;
+  container.appendChild(previewPanel);
+
+  fragment.appendChild(container);
+  return fragment;
 }
