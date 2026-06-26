@@ -1,6 +1,6 @@
 /*
- * toast.ts
- * --------
+ * Toast
+ * -----
  * Muestra un toast (notificación) en la pagina por un tiempo y después desaparece.
 */
 type toastType = "info" | "achievement" | "error" | "affirmative"
@@ -14,12 +14,17 @@ export function showToast(name: string, type: toastType, description: string, pl
 
   const toast = document.createElement("div");
   toast.className = "toast";
-  toast.innerHTML = `
-    <p class="toast-name">${name}</p>
-    <p class="toast-desc">${description}</p>
-  `;
   toast.dataset.type = type;
 
+  const toastName = document.createElement("p");
+  toastName.className = "toast-name";
+  toastName.textContent = name;
+
+  const toastDesc = document.createElement("p");
+  toastDesc.className = "toast-desc";
+  toastDesc.textContent = description;
+
+  toast.append(toastName, toastDesc);
   stack.appendChild(toast);
 
   if (playSound) {
