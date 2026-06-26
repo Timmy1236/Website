@@ -1,17 +1,11 @@
 import { getSetting } from "../../shared/core/settings-logic";
 
 export async function getLatest() {
-  try {
-    const local = getSetting("preferred-language") || "en";
+  const local = getSetting("preferred-language") || "en";
+  const url = local === "es" ? "/content/api/latest_es.json" : "/content/api/latest_en.json";
 
-    if (local === "en") {
-      const response = await fetch("/content/api/latest_en.json");
-      return await response.json();
-    } else if (local === "es") {
-      const response = await fetch("/content/api/latest_es.json");
-      return await response.json();
-    }
-  } catch (e) {
-    console.error("get-latest.js> Error al intentar obtener los últimos blogs y changelogs: ", e);
-  }
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+  return await response.json();
 }

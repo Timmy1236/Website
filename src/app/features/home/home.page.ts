@@ -7,16 +7,22 @@ import type { Latest } from "./entries";
 
 const Home = {
   latest: null as Latest | null,
+  error: false,
 
   oncreate() {
     setCurrentPath(m.route);
   },
 
   oninit: function () {
-    getLatest().then((data: Latest) => {
-      this.latest = data;
-      m.redraw();
-    });
+    getLatest()
+      .then((data: Latest) => {
+        this.latest = data;
+        m.redraw();
+      })
+      .catch(() => {
+        this.error = true;
+        m.redraw();
+      });
   },
 
   view: function () {
@@ -56,19 +62,20 @@ const Home = {
               ])
             ),
             m(".panel-content", [
-              this.latest ?
-                m("div", { style: "display:flex;flex-direction:column;justify-content:space-between;height:100%" }, [
-                  m("div", [
-                    m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
-                    m("p.entry-date", this.latest.changelog.date),
-                    m("p.entry-content", this.latest.changelog.description),
-                  ]),
-                  m("div", [
-                    m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-                    m("img.entry-image", { src: this.latest.changelog.preview }),
+              this.error ? m("p", "Error")
+                : this.latest ?
+                  m("div", { style: "display:flex;flex-direction:column;justify-content:space-between;height:100%" }, [
+                    m("div", [
+                      m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                      m("p.entry-date", this.latest.changelog.date),
+                      m("p.entry-content", this.latest.changelog.description),
+                    ]),
+                    m("div", [
+                      m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+                      m("img.entry-image", { src: this.latest.changelog.preview }),
+                    ])
                   ])
-                ])
-                : m("p", "Cargando...")
+                  : m("p", "Cargando...")
             ])
           ])
         ]),
@@ -86,14 +93,16 @@ const Home = {
             )
             ,
             m(".panel-content", [
-              this.latest ? m("div", [
-                m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
-                m("p.entry-date", this.latest.blog.date),
-                m("p.entry-content", this.latest.blog.description),
-                m(".spacing-line", { style: "--spacing-margin: 10px;" }),
-                m("img.entry-image", { src: this.latest.blog.preview }),
-              ])
-                : m("p", "Cargando...")
+              this.error ? m("p", "Error")
+                : this.latest ?
+                  m("div", [
+                    m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                    m("p.entry-date", this.latest.blog.date),
+                    m("p.entry-content", this.latest.blog.description),
+                    m(".spacing-line", { style: "--spacing-margin: 10px;" }),
+                    m("img.entry-image", { src: this.latest.blog.preview }),
+                  ])
+                  : m("p", "Cargando...")
             ])
           ]),
         ])
