@@ -47,7 +47,7 @@
     "@types/mithril": "^2.2.8",
     "concurrently": "^10.0.3",
     "esbuild": "^0.28.1",
-    "eslint": "^10.5.0",
+    "eslint": "^10.6.0",
     "eslint-plugin-compat": "^7.0.2",
     "purgecss": "^8.0.0",
     "stylelint": "^17.14.0",
