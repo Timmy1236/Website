@@ -65,13 +65,3 @@
   text-align: center;
   background-color: rgb(0 0 0 / 40%);
 }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
