@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
-    "build": "pnpm eleventy && pnpm js && pnpm css && pnpm css:pages",
+    "build": "concurrently \"npm:eleventy\" \"npm:js\" \"npm:css\" \"npm:css:pages\"",
     "lint": "pnpm eslint && pnpm stylelint",
     "eslint": "pnpm exec eslint .",
     "stylelint": "pnpm exec stylelint \"**/*.css\"",
