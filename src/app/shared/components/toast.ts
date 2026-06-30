@@ -3,11 +3,13 @@
  * -----
  * Muestra un toast (notificación) en la pagina por un tiempo y después desaparece.
 */
+
 type toastType = "info" | "achievement" | "error" | "affirmative"
 const achievementAudio = new Audio('/assets/sounds/sfx/achievement.mp3');
 const stack = document.getElementById("toast-container");
+import { getTranslation } from "../core/i18n";
 
-export function showToast(name: string, type: toastType, description: string, playSound: boolean) {
+export function showToast(type: toastType, playSound: boolean, name: string, nameIsi18n: boolean, desc: string, descIsi18n: boolean) {
   if (!stack) {
     return console.error("%ctoast%c Error, toast-container no encontrado?", "color: #ff4040; background: #282A35;", "color: white");
   }
@@ -18,11 +20,11 @@ export function showToast(name: string, type: toastType, description: string, pl
 
   const toastName = document.createElement("p");
   toastName.className = "toast-name";
-  toastName.textContent = name;
+  toastName.textContent = nameIsi18n ? getTranslation(name) : name;
 
   const toastDesc = document.createElement("p");
   toastDesc.className = "toast-desc";
-  toastDesc.textContent = description;
+  toastDesc.textContent = descIsi18n ? getTranslation(desc) : desc;
 
   toast.append(toastName, toastDesc);
   stack.appendChild(toast);

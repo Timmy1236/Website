@@ -139,5 +139,9 @@
   },
   "others": {
     "resetSettings": "¿Estas seguro que quieres reiniciar la configuración por defecto?"
+  },
+  "toast": {
+    "player": "Reproduciendo...",
+    "timmyButton": "Link del botón copiado!"
   }
 }

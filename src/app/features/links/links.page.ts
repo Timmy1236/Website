@@ -58,7 +58,7 @@ const Others = {
               },
                 m("img", {
                   src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
-                  onclick: () => { navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png"); showToast("Info", "info", "Link copied!", true) },
+                  onclick: () => { navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png"); showToast("info", true, "Button!", false, "toast.timmyButton", true) },
                 })
               ),
             ),

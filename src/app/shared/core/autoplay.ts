@@ -34,8 +34,10 @@ export function initializeAutoplay() {
     audio.play();
 
     if (lastSong !== songSrc) {
-      const songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
-      showToast("Playing...", "info", songName ? songName : "No name?", false)
+      let songName = songSrc.split('/').pop()?.slice(0, -4).replace(/_/g, " ")
+      if (!songName) songName = "null";
+
+      showToast("info", false, "toast.player", true, songName, false)
     }
 
     lastSong = songSrc;
