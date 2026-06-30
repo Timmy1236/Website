@@ -1,20 +1,21 @@
 /*
-* autoplay.ts
-* -----------
-* Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
+  autoplay.ts
+  -----------
+  - Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
 */
-import { getMapSetting } from "./settings-logic";
 import { showToast } from "../components/toast";
+import { getSettings } from "../core/settings-logic";
 
 let playing = false;
 let lastSong: string;
 
-const musicEnabled: boolean = getMapSetting("backgroundMusic") === "true";
 const songsArray: string[] = ["./assets/sounds/music/Store_Track_1.ogg", "./assets/sounds/music/Simpsons_Hotline.ogg"]
 const volume = 0.25
 
 export function initializeAutoplay() {
-  if (!musicEnabled) return;
+  const { backgroundMusic } = getSettings();
+  if (!backgroundMusic) return;
+
   const audio = new Audio();
 
   audio.addEventListener('ended', function () {

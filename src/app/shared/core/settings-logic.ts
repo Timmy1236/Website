@@ -1,119 +1,107 @@
 /*
- * settings-logic.ts
- * -----------------
- * Encargado de la lógica de settings, establecer, cargar y modificar datos en LocalStorage.
+  settings-logic.ts
+  -----------------
+  - Encargado de la lógica de settings: establecer, cargar y modificar datos en LocalStorage.
 */
-const SETTINGS_VERSION = "2";
+const SETTINGS_VERSION = "3";
 
-export type SettingKey = | "staticEffect" | "vignetteEffect" | "backgroundMusic" | "soundsEffects" | "readableFont" | "theme";
-export const SETTING_KEYS: SettingKey[] = [
-  "staticEffect",
-  "vignetteEffect",
-  "backgroundMusic",
-  "soundsEffects",
-  "readableFont",
-  "theme"
-];
+export interface Settings {
+  staticEffect: boolean;
+  vignetteEffect: boolean;
+  backgroundMusic: boolean;
+  soundsEffects: boolean;
+  readableFont: boolean;
+  theme: string;
+}
 
-export const DEFAULT_SETTINGS: Record<SettingKey, string> = {
-  staticEffect: "true",
-  vignetteEffect: "true",
-  backgroundMusic: "false",
-  soundsEffects: "true",
-  readableFont: "false",
+export const DEFAULT_SETTINGS: Settings = {
+  staticEffect: true,
+  vignetteEffect: true,
+  backgroundMusic: false,
+  soundsEffects: true,
+  readableFont: false,
   theme: "simple-purple"
 };
 
-// === Carga el efecto de ruido/estática ===
-function loadNoiseEffect() {
+let currentSettings: Settings = { ...DEFAULT_SETTINGS };
+
+function _loadNoiseEffect() {
   const bgDiv = document.createElement('div');
   bgDiv.className = 'bg';
   bgDiv.id = 'background';
   document.body.prepend(bgDiv);
-};
-
-/**
- * Añade los atributos de 'theme' y 'color' al documento sacados del LocalStorage.
- */
-function loadTheme() {
-  const theme = getMapSetting("theme") || "simple-purple";
-  const themeArray = theme.split("-")
-
-  document.documentElement.setAttribute("data-theme", themeArray[0]);
-  document.documentElement.setAttribute("data-color", themeArray[1]);
 }
 
 /**
- * Checkeamos si el navegador del usuario tiene guardado una variable "settingsVersion" la misma version que tiene el script settings-logic, en caso que no lo tenga, forzamos un initDefaultSettings por las dudas, solamente actualiza la version de settings cuando se hacen cambios grandes y que puede romperse completamente.
- * @see {@link initDefaultSettings}
- * @see {@link SETTINGS_VERSION}
+ * Añade los atributos de 'theme' y 'color' al documento, usando lo que haya en currentSettings.
  */
-function checkVersion() {
+function _loadTheme() {
+  const [theme, color] = currentSettings.theme.split("-");
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-color", color);
+}
+
+/**
+ * Lee el objeto de settings guardado en LocalStorage y lo devuelve. En caso que este faltando
+ * un ajuste, se le agregara la default para llenar.
+ */
+function _loadFromStorage(): Settings {
+  const raw = localStorage.getItem("settings");
+  if (!raw) return { ...DEFAULT_SETTINGS };
+
+  return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
+}
+
+/**
+ * Checkeamos si el navegador del usuario tiene guardada la misma versión de settings que esta en la pagina.
+ */
+function _checkVersion(): boolean {
   const savedVersion = localStorage.getItem("settingsVersion");
-  console.log("%csettings-logic" + "%c Realizando un checkeo de versiones...\nVersion settings del usuario: " + savedVersion + "\nVersion settings de la pagina: " + SETTINGS_VERSION, "color: #87F3A9; background: #282A35;", "color: white")
 
-  if (savedVersion === SETTINGS_VERSION) return;
-
-  console.warn("settings-logic.js> ¡Las versiones no coinciden, se requiere forzadamente realizar una restauración por defecto en los settings para evitar posibles bugs criticos!")
-
-  initDefaultSettings();
-  localStorage.setItem("settingsVersion", SETTINGS_VERSION);
+  if (savedVersion === SETTINGS_VERSION) {
+    return false;
+  } else {
+    initDefaultSettings();
+    localStorage.setItem("settingsVersion", SETTINGS_VERSION);
+    return true;
+  }
 }
 
 /**
- * Carga y aplica todas las configuraciones, se ejecuta cuando la pagina termina de cargar.
+ * Carga y aplica todas las configuraciones. Se ejecuta una sola vez cuando la pagina arranca.
  */
 export function initializeSettings() {
-  checkVersion();
+  const outdated = _checkVersion();
+  if (outdated) initDefaultSettings();
 
-  const enabledStaticEffect = getMapSetting("staticEffect") === "true";
-  const enabledReadableFont = getMapSetting("readableFont") === "true";
+  currentSettings = _loadFromStorage();
 
-  loadTheme();
-
-  if (enabledStaticEffect) {
-    loadNoiseEffect();
-  }
-
-  if (enabledReadableFont) {
-    document.documentElement.classList.add("readable-font");
-  }
+  _loadTheme();
+  if (currentSettings.staticEffect) _loadNoiseEffect();
+  if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
 }
 
 /**
- * Sobrescribe las configuraciones guardadas en el navegador por las del default.
+ * Sobrescribe las configuraciones guardadas por las del default, tanto en memoria como en LocalStorage.
  */
 export function initDefaultSettings() {
-  const defaultSettingsMap = new Map<SettingKey, string>(
-    Object.entries(DEFAULT_SETTINGS) as [SettingKey, string][]
-  );
-
-  saveSetting("settingsVersion", SETTINGS_VERSION);
-  saveSetting("settings", JSON.stringify(Array.from(defaultSettingsMap.entries())));
-
-  console.warn("settings-logic %cSe reiniciaron las configuraciones por defecto. Recargá la página.", "color: #87F3A9; background: #282A35;");
+  localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
+  window.location.reload();
 }
 
-// Guarda un Map en el LocalStorage, se guarda como un JSON stringificado.
-export function saveMapSettings(map: Map<SettingKey, string>): void {
-  localStorage.setItem("settings", JSON.stringify(Array.from(map.entries())));
+export function saveSettings(newSettings: Settings) {
+  currentSettings = { ...newSettings };
+  localStorage.setItem("settings", JSON.stringify(currentSettings));
 }
 
-// Obtener una setting del MapSettings usando una key.
-export function getMapSetting(key: SettingKey): string | null {
-  const settingsString = localStorage.getItem("settings");
-  if (!settingsString) return null;
-
-  const settingsMap = new Map<string, string>(JSON.parse(settingsString));
-  return settingsMap.get(key) || null;
+export function getSettings(): Settings {
+  return { ...currentSettings };
 }
 
-// Obtener una simple setting.
 export function getSetting(key: string): string | null {
   return localStorage.getItem(key);
 }
 
-// Guardar una simple setting.
 export function saveSetting(key: string, value: string): void {
   localStorage.setItem(key, value);
 }

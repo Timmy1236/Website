@@ -3,23 +3,23 @@
  * -------------
  * Maneja la lógica de los efectos de sonidos.
 */
-
-import { getMapSetting } from "../core/settings-logic";
+import { getSettings } from "../core/settings-logic";
+const audioCtx = new AudioContext();
 
 interface SoundConfig {
   audio: HTMLAudioElement;
   rate: number[];
   volume: number;
 }
-const audioCtx = new AudioContext();
-const canPlaySounds: boolean = getMapSetting("soundsEffects") === "true";
 
 /**
  * Activa la lógica cuando el usuario interactúa con la pagina y este activado los efectos de sonidos.
  */
 export function initializeSoundsEffects() {
+  const { soundsEffects } = getSettings();
+
   document.addEventListener("click", function () {
-    if (canPlaySounds) {
+    if (soundsEffects) {
       console.log("%csound-effects" + "%c Activando AudioContext.", "color: #87F3A9; background: #282A35;", "color: white");
       audioCtx.resume();
       _audioLogic();

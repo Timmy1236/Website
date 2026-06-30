@@ -1,5 +1,5 @@
 import m from "mithril";
-import { confirmSettings, restartSettings, settingsMap, initMapFromStorage } from "./configuration.ui.ts";
+import { confirmSettings, restartSettings, draft, refreshDraftFromStorage } from "./configuration.ui.ts";
 import { changeLanguage, getTranslation } from "../../shared/core/i18n.js"
 import TabPanel from "../../shared/components/tab-panel.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
@@ -8,7 +8,7 @@ import { setCurrentPath } from "../../shared/core/html-meta.ts";
 const ConfigurationPage = {
   oncreate() {
     setCurrentPath(m.route);
-    initMapFromStorage();
+    refreshDraftFromStorage();
     m.redraw();
   },
 
@@ -25,16 +25,16 @@ const ConfigurationPage = {
                   m("h2.group-title", getTranslation("settings.sections.visual-effects")),
                   m(".option", [
                     m("input", {
-                      type: "checkbox", id: "static-effect", checked: settingsMap.get("staticEffect") === "true",
-                      onchange: (e: Event) => { settingsMap.set("staticEffect", (e.target as HTMLInputElement).checked ? "true" : "false") }
+                      type: "checkbox", id: "static-effect", checked: draft.staticEffect,
+                      onchange: (e: Event) => { draft.staticEffect = (e.target as HTMLInputElement).checked; }
                     }),
                     m("label", { for: "static-effect" }, getTranslation("settings.options.staticEffects"))
                   ]),
 
                   m(".option", [
                     m("input", {
-                      type: "checkbox", id: "vignette-effect", checked: settingsMap.get("vignetteEffect") === "true",
-                      onchange: (e: Event) => { settingsMap.set("vignetteEffect", (e.target as HTMLInputElement).checked ? "true" : "false") }
+                      type: "checkbox", id: "vignette-effect", checked: draft.vignetteEffect,
+                      onchange: (e: Event) => { draft.vignetteEffect = (e.target as HTMLInputElement).checked; }
                     }),
                     m("label", { for: "vignette-effect" }, getTranslation("settings.options.vignetteEffects"))
                   ]),
@@ -45,9 +45,9 @@ const ConfigurationPage = {
 
                   m(".option", [
                     m("select#theme-select", {
-                      value: settingsMap.get("theme") || "simple-purple",
+                      value: draft.theme,
                       onchange: (e: Event) => {
-                        settingsMap.set("theme", (e.target as HTMLSelectElement).value);
+                        draft.theme = (e.target as HTMLSelectElement).value;
                       }
                     }, [
                       m("option", { value: "simple-purple" }, "[FLAT] - Purple"),
@@ -68,16 +68,16 @@ const ConfigurationPage = {
 
                 m(".option", [
                   m("input", {
-                    type: "checkbox", id: "background-music-toggle", checked: settingsMap.get("backgroundMusic") === "true",
-                    onchange: (e: Event) => { settingsMap.set("backgroundMusic", (e.target as HTMLInputElement).checked ? "true" : "false") }
+                    type: "checkbox", id: "background-music-toggle", checked: draft.backgroundMusic,
+                    onchange: (e: Event) => { draft.backgroundMusic = (e.target as HTMLInputElement).checked; }
                   }),
                   m("label", { for: "background-music-toggle" }, getTranslation("settings.options.backgroundMusic"))
                 ]),
 
                 m(".option", [
                   m("input", {
-                    type: "checkbox", id: "sound-effects-toggle", checked: settingsMap.get("soundsEffects") === "true",
-                    onchange: (e: Event) => { settingsMap.set("soundsEffects", (e.target as HTMLInputElement).checked ? "true" : "false") }
+                    type: "checkbox", id: "sound-effects-toggle", checked: draft.soundsEffects,
+                    onchange: (e: Event) => { draft.soundsEffects = (e.target as HTMLInputElement).checked; }
                   }),
                   m("label", { for: "sound-effects-toggle" }, getTranslation("settings.options.soundsEffects"))
                 ])
@@ -90,8 +90,8 @@ const ConfigurationPage = {
 
                 m(".option", [
                   m("input", {
-                    type: "checkbox", id: "readable-font", checked: settingsMap.get("readableFont") === "true",
-                    onchange: (e: Event) => { settingsMap.set("readableFont", (e.target as HTMLInputElement).checked ? "true" : "false") }
+                    type: "checkbox", id: "readable-font", checked: draft.readableFont,
+                    onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
                   }),
                   m("label", { for: "readable-font" }, getTranslation("settings.options.readableFont"))
                 ])

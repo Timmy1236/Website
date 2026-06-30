@@ -1,27 +1,25 @@
 /*
-  settings-ui.ts
-  --------------
-  - Es el que controla el UI y guardar las configuraciones en el LocalStorage
+  configuration.ui.ts
+  --------------------
+  - Controla el UI de la pagina configuration, eso mismo.
 */
-import { SETTING_KEYS, SettingKey } from "../../shared/core/settings-logic.js";
-import { initDefaultSettings, saveMapSettings, getMapSetting } from "../../shared/core/settings-logic.js";
+import { initDefaultSettings, saveSettings, getSettings, DEFAULT_SETTINGS } from "../../shared/core/settings-logic.js";
+import type { Settings } from "../../shared/core/settings-logic.js";
 import { getTranslation } from "../../shared/core/i18n.js";
-export const settingsMap = new Map<SettingKey, string>();
 
-export function initMapFromStorage() {
-  for (const key of SETTING_KEYS) {
-    settingsMap.set(key, getMapSetting(key) ?? "false");
-  }
+export const draft: Settings = { ...DEFAULT_SETTINGS };
+
+export function refreshDraftFromStorage() {
+  Object.assign(draft, getSettings());
 }
 
 export function confirmSettings() {
-  saveMapSettings(settingsMap);
+  saveSettings(draft);
   location.reload();
 }
 
 export function restartSettings() {
   if (confirm(getTranslation("others.resetSettings")) == true) {
     initDefaultSettings();
-    window.location.reload();
   }
 }
