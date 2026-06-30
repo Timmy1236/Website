@@ -72,7 +72,7 @@ function _checkVersion(): boolean {
  */
 export function initializeSettings() {
   const outdated = _checkVersion();
-  if (outdated) initDefaultSettings();
+  if (outdated) return; // NOTE: Esto habría que verlo mejor.
 
   currentSettings = _loadFromStorage();
 
