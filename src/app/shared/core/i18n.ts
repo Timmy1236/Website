@@ -8,6 +8,7 @@ type Lang = "es" | "en"; // NOTE: Esto necesita un retoquesito en algún futuro.
 let currentLang: Lang = _getSavedLanguage() ?? _getBrowserLanguage();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translations: Record<string, any> = {};
+let loaded = false;
 
 function _getSavedLanguage(): Lang | null {
   try {
@@ -30,6 +31,7 @@ async function _loadTranslations(): Promise<void> {
     const json = await response.json();
 
     translations[currentLang] = json;
+    loaded = true;
   } catch (error) {
     console.error("[i18n] Error al cargar traducciones:", error);
   }
@@ -39,6 +41,8 @@ async function _loadTranslations(): Promise<void> {
  * Devuelve un string dependiendo de la key para i18n y del lenguaje actual de la sesión.
  */
 export function getTranslation(key: string): string {
+  if (!loaded) return "⚑ i18n ERROR ⚑";
+
   const keys = key.split('.');
   let translation = translations[currentLang];
 
