@@ -22,7 +22,7 @@ export async function loadDiscordProfile(userId: string) {
 
   } catch (error) {
     console.error(error);
-    const statusElement = document.getElementById("discord-status-text");
+    const statusElement = document.getElementById("status");
 
     if (!statusElement) return;
 
