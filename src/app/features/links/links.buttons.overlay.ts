@@ -127,26 +127,56 @@ function _renderOverlayContent(site: ButtonSite): DocumentFragment {
     container.style.gap = "10px";
   }
 
+  // NOTE: No hay manera que por simplemente intentar limpiar innerHTML haya terminado con 300 mil tipos de "createElement" diferentes, fuck.
+  // --- PANEL DE LA NOTA ---
   if (note) {
     const notePanel = document.createElement("div");
     notePanel.className = "panel";
-    notePanel.innerHTML = `
-      <div class="panel-header"><p>Nota</p></div>
-      <div class="panel-content"><p class="button-note">${note}</p></div>
-    `;
+
+    const noteHeader = document.createElement("div");
+    noteHeader.className = "panel-header";
+
+    const noteHeaderText = document.createElement("p");
+    noteHeaderText.textContent = "Nota";
+    noteHeader.appendChild(noteHeaderText);
+
+    const noteContent = document.createElement("div");
+    noteContent.className = "panel-content";
+
+    const noteText = document.createElement("p");
+    noteText.className = "button-note";
+    noteText.textContent = note;
+    noteContent.appendChild(noteText);
+
+    notePanel.append(noteHeader, noteContent);
     container.appendChild(notePanel);
   }
 
+  // --- PANEL DE LA PREVIEW ---
   const previewPanel = document.createElement("div");
   previewPanel.className = "panel";
-  previewPanel.innerHTML = `
-    <div class="panel-header"><p>${formattedUrl.hostname}</p></div>
-    <div class="panel-content">
-      <div class="button-screenshot">
-        <img src="${site.preview}" alt="Screenshot de ${site.url}">
-      </div>
-    </div>
-  `;
+
+  const previewHeader = document.createElement("div");
+  previewHeader.className = "panel-header";
+
+  const previewHeaderText = document.createElement("p");
+  previewHeaderText.textContent = formattedUrl.hostname;
+  previewHeader.appendChild(previewHeaderText);
+
+  const previewContent = document.createElement("div");
+  previewContent.className = "panel-content";
+
+  const screenshotWrapper = document.createElement("div");
+  screenshotWrapper.className = "button-screenshot";
+
+  const img = document.createElement("img");
+  img.src = site.preview;
+  img.alt = `Screenshot de ${site.url}`;
+
+  screenshotWrapper.appendChild(img);
+  previewContent.appendChild(screenshotWrapper);
+
+  previewPanel.append(previewHeader, previewContent);
   container.appendChild(previewPanel);
 
   fragment.appendChild(container);
