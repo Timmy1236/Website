@@ -6,8 +6,10 @@
     ">0.3%, defaults and fully supports es6-module and baseline widely available"
   ],
   "scripts": {
-    "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
+    "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true })\"",
+    "prebuild": "pnpm clean",
     "build": "concurrently \"npm:eleventy\" \"npm:js\" \"npm:css\" \"npm:css:pages\"",
+    "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
     "lint": "pnpm eslint && pnpm stylelint",
     "eslint": "pnpm exec eslint .",
     "stylelint": "pnpm exec stylelint \"**/*.css\"",
@@ -19,7 +21,8 @@
     "css:watch": "esbuild src/styles/main/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:pages": "esbuild src/styles/data/main.css --bundle --minify --outfile=public/dist/pages.css",
     "css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch  --outfile=public/dist/pages.css",
-    "purgecss": "node scripts/purgecss-report.mjs"
+    "purgecss": "node scripts/purgecss-report.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
