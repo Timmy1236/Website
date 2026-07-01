@@ -1,27 +1,30 @@
 export function createImageOverlay(src: string, alt = "") {
   const overlay = document.createElement("div");
-
   overlay.className = "image-overlay";
-  overlay.innerHTML = `
-    <button class="close-btn" aria-label="Cerrar">✕</button>
-    <img src="${src}" alt="${alt}">
-  `;
 
-  // Cerrar al clickear afuera
+  const closeButton = document.createElement("button");
+  closeButton.className = "close-btn";
+  closeButton.setAttribute("aria-label", "Cerrar");
+  closeButton.textContent = "✕";
+
+  closeButton.addEventListener("click", () => {
+    overlay.remove();
+  });
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+
+  overlay.append(closeButton, img);
+
+  // Cerrar al clickear afuera (en el fondo del overlay)
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
       overlay.remove();
     }
   });
 
-  const closeButton = overlay.querySelector(".close-btn");
-
-  // Cerrar botón
-  closeButton?.addEventListener("click", () => {
-    overlay.remove();
-  });
-
-  // Cerrar con ESC
+  // Cerrar con la tecla ESC
   document.addEventListener("keydown", function escClose(e) {
     if (e.key === "Escape") {
       overlay.remove();
