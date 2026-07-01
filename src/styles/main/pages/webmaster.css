@@ -110,12 +110,6 @@
   width: 25px;
 }
 
-.content-column {
-  display: flex;
-  flex-direction: column;
-}
-
-
 /* Covers */
 .cover {
   position: relative;
