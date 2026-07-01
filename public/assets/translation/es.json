@@ -48,15 +48,23 @@
     }
   },
   "webmaster": {
+    "profile-title": "Perfil",
+    "activity-title": "Actividad",
+    "socials-title": "Redes sociales",
     "about-me": {
       "title": "Sobre mi",
       "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, [u][tooltip=No estoy realmente tan metido en eso hasta el punto de tener mi propio server 24/7 por temas económicos, pero lo haría si pudiera. Por ahora es todo en mi propio PC personal.]homelabbing(?)[/tooltip][/u]. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
     },
     "tech-stack": {
-      "title": "Tech stack"
+      "title": "Tech stack",
+      "languages": "Lenguajes",
+      "infra": "Infra",
+      "software": "Softwares"
     },
     "interest": {
-      "tite": "Aficiones :)"
+      "title": "Aficiones",
+      "games": "Juegos",
+      "series": "Series"
     }
   },
   "projects": {

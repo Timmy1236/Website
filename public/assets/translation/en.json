@@ -53,11 +53,19 @@
       "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really into it enough to run my own 24/7 server due to financial reasons, but I definitely would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
     },
     "tech-stack": {
-      "title": "Tech Stack"
+      "title": "Tech Stack",
+      "languages": "Languages",
+      "infra": "Infra",
+      "software": "Softwares"
     },
     "interest": {
-      "tite": "Interests :)"
-    }
+      "title": "Interest",
+      "games": "Games",
+      "series": "Series"
+    },
+    "profile-title": "Profile",
+    "socials-title": "Social networks",
+    "activity-title": "Activity"
   },
   "projects": {
     "title": "Projects",

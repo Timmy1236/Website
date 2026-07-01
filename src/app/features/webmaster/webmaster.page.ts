@@ -16,7 +16,7 @@ const webmasterPage = {
         m(".panel-frame", [
           m(".panel", [
             m(".panel-header",
-              m("p.text-title", "Profile"),
+              m("p.text-title", getTranslation("webmaster.profile-title")),
               m(".panel-controls", [
                 m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
                 m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -41,7 +41,7 @@ const webmasterPage = {
               ]),
 
               m(".profile-section", [
-                m("p.profile-section-title", "Activity"),
+                m("p.profile-section-title", getTranslation("webmaster.activity-title")),
 
                 m(".discord-activity#activity", [
                   m(".discord-activity-icon",
@@ -59,7 +59,7 @@ const webmasterPage = {
               ]),
 
               m(".profile-section", [
-                m("p.profile-section-title", "Socials"),
+                m("p.profile-section-title", getTranslation("webmaster.socials-title")),
 
                 m(".profile-socials", [
                   m("button.icon-button", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.png" })),
@@ -93,7 +93,7 @@ const webmasterPage = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header",
-            m("p.text-title", "Tech stack"),
+            m("p.text-title", getTranslation("webmaster.tech-stack.title")),
 
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
@@ -101,7 +101,7 @@ const webmasterPage = {
             ])
           ),
           m(".panel-content",
-            m("p", "Lenguajes"),
+            m("p", getTranslation("webmaster.tech-stack.languages")),
             m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/typescript.svg" }), m("a", { href: "https://www.typescriptlang.org/" }, "TypeScript")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/csharp.svg" }), m("a", { href: "https://dotnet.microsoft.com/es-es/languages/csharp" }, "C#")]),
@@ -113,7 +113,7 @@ const webmasterPage = {
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/css.svg" }), m("a", { href: "https://www.w3.org/Style/CSS/Overview.en.html" }, "CSS")]),
             ]),
 
-            m("p", "Infra"),
+            m("p", getTranslation("webmaster.tech-stack.infra")),
             m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/redhat.svg" }), m("a", { href: "https://redhatofficial.github.io/" }, "Red Hat")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/debian.svg" }), m("a", { href: "https://www.debian.org/" }, "Debian")]),
@@ -122,7 +122,7 @@ const webmasterPage = {
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/sqlite.svg" }), m("a", { href: "https://sqlite.org/" }, "SQLite")]),
             ]),
 
-            m("p", "Softwares"),
+            m("p", getTranslation("webmaster.tech-stack.software")),
             m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://github.com/godotengine/godot" }, "Godot")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/blender.svg" }), m("a", { href: "https://github.com/blender/blender" }, "Blender")]),
@@ -138,7 +138,7 @@ const webmasterPage = {
       m(".panel-frame", [
         m(".panel", {}, [
           m(".panel-header",
-            m("p.text-title", "Interests"),
+            m("p.text-title", getTranslation("webmaster.interest.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -146,7 +146,7 @@ const webmasterPage = {
           ),
 
           m(".panel-content",
-            m("p", "Juegos"),
+            m("p", getTranslation("webmaster.interest.games")),
             m(".scroll-cover-container", [
               // Voices of the Void
               m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
@@ -198,7 +198,7 @@ const webmasterPage = {
               ]),
             ]),
 
-            m("p", "Series"),
+            m("p", getTranslation("webmaster.interest.series")),
             m(".scroll-cover-container", [
               // Tres acordes
               m("a.cover", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
