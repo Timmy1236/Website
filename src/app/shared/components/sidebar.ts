@@ -4,10 +4,10 @@ import { getTranslation } from "../core/i18n";
 import { cleanupButtonOverlay } from "../../../app/features/links/links.buttons.overlay";
 
 let isTransitioning = false;
-let currentPath = "/home";
+let currentPath: string;
 
 function navBtn(label: string, external: boolean, path: string, img: string | null) {
-  const isActive = currentPath === path;
+  const isActive = (currentPath ? currentPath : m.route.get()) === path;
   const attrs: m.Attributes = { onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
 
   return m("button.sidebar-buttons", attrs, [
