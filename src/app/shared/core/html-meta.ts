@@ -1,8 +1,3 @@
-/*
- * HTML Meta
- * ---------
- * Encargado de modificar varios valores meta del HTML dependiendo de la pagina y configuración de la app.
-*/
 import m from "mithril";
 import { getSetting } from "./settings-logic";
 

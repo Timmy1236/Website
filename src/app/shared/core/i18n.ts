@@ -1,8 +1,3 @@
-/*
- * i18n.ts
- * -------
- * Sistema multilenguaje i18n. Los strings traducidos son guardados en un JSON y este mismo script puede devolverlos si le das la key indicada.
- */
 type Lang = "es" | "en"; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
 
 let currentLang: Lang = _getSavedLanguage() ?? _getBrowserLanguage();

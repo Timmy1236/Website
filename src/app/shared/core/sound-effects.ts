@@ -1,8 +1,3 @@
-/*
- * Sound Effects
- * -------------
- * Maneja la lógica de los efectos de sonidos.
-*/
 import { getSettings } from "../core/settings-logic";
 const audioCtx = new AudioContext();
 

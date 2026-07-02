@@ -1,9 +1,3 @@
-/*
- * Toast
- * -----
- * Muestra un toast (notificación) en la pagina por un tiempo y después desaparece.
-*/
-
 type toastType = "info" | "achievement" | "error" | "affirmative"
 const achievementAudio = new Audio('/assets/sounds/sfx/achievement.mp3');
 const stack = document.getElementById("toast-container");

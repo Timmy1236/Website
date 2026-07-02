@@ -1,8 +1,3 @@
-/*
- * Button overlay
- * --------------
- * Crea un overlay con blur cuando un botón de links se encuentre en hover.
-*/
 import { getTranslation } from "../../shared/core/i18n";
 
 let rafId: number | null = null;

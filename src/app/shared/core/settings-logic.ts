@@ -1,8 +1,3 @@
-/*
-  settings-logic.ts
-  -----------------
-  - Encargado de la lógica de settings: establecer, cargar y modificar datos en LocalStorage.
-*/
 const SETTINGS_VERSION = "3";
 
 export interface Settings {

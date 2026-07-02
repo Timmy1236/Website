@@ -1,10 +1,3 @@
-/*
- * bbcode.ts
- * ---------
- * Parsea BBCode ([b], [i], [spoiler], etc.) y emojis (:smile:) de un texto a elementos HTML con CSS.
- * https://en.wikipedia.org/wiki/BBCode
-*/
-
 const EMOJI_MAP: Record<string, string> = {
   wave: "wave.gif",
 };

@@ -1,8 +1,3 @@
-/*
-  autoplay.ts
-  -----------
-  - Gestiona la lógica de la música de la pagina, en caso que la pagina se encuentre no enfocada, segundo plano, detendrá la música.
-*/
 import { showToast } from "../components/toast";
 import { getSettings } from "../core/settings-logic";
 

@@ -1,8 +1,3 @@
-/* 
- * panel buttons
- * -------------
- * Encargado de manejar la lógica de los botones de los paneles, minimizar o cerrar paneles.
-*/
 document.addEventListener("click", (event) => {
   if (!(event.target instanceof HTMLElement)) return;
 

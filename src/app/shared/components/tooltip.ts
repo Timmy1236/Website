@@ -1,7 +1,3 @@
-/* 
-  tooltip.ts
-  ----------
-*/
 import { getTranslation } from "../core/i18n.js";
 
 const tooltip = document.createElement("div");

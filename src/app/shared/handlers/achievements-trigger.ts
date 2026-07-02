@@ -1,9 +1,3 @@
-/*
-  achievements-trigger.ts
-  -----------------------
-  - Encargado de triggear cada logro :P
-  - También lee inputs de teclas para buscar si con una frase secreta.
-*/
 import { showToast } from "../components/toast.js";
 import { unlockAchievement } from "../core/achievements-logic.js";
 
