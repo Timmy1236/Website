@@ -1,4 +1,5 @@
 import { showToast } from "../components/toast";
+import { cLog } from "./clog";
 
 /**
  * id            → Clave única.
@@ -60,22 +61,25 @@ function saveAchievements(data: object) {
 /**
  * Desbloquea un logro por su id, primero verifica que ya no fue desbloqueado antes y después muestra una notificación si el logro lo desea con sus datos.
  */
-export function unlockAchievement(id: string) {
+export function unlockAchievement(id: string): void {
   const achievement = ACHIEVEMENTS.find(a => a.id === id);
 
-  // Si el logro no existe, ignoramos, si existe pero ya esta desbloqueado, ignoramos.
-  if (!achievement) return console.warn(`%cachievements logic%c Logro: "${id}", no existe!`, "color: #FFD700; background: #282A35;", "color: white");
-  if (isUnlocked(id)) return;
+  if (!achievement) {
+    cLog("ADVERTENCIA", "Achievements Logic", `Logro: '${id}' no existe?`);
+    return;
+  }
+
+  if (isUnlocked(id)) {
+    cLog("INFO", "Achievements Logic", `Logro: '${id}' ya esta desbloqueado.`);
+    return;
+  }
 
   const saved = getSavedAchievements();
   saved[id] = { unlocked: true };
   saveAchievements(saved);
 
-  if (achievement.notify) {
-    showToast("achievement", false, achievement.name, false, achievement.description, false);
-  }
-
-  console.log(`%cachievements logic%c Logro desbloqueado: "${id}"`, "color: #FFD700; background: #282A35;", "color: white");
+  if (achievement.notify) showToast("achievement", false, achievement.name, false, achievement.description, false);
+  cLog("INFO", "Achievements Logic", `Logro: '${id}' desbloqueado!`);
 }
 
 /**

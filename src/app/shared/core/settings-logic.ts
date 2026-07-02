@@ -1,3 +1,4 @@
+import { cLog } from "./clog";
 const SETTINGS_VERSION = "3";
 
 export interface Settings {
@@ -53,9 +54,14 @@ function _loadFromStorage(): Settings {
 function _checkVersion(): boolean {
   const savedVersion = localStorage.getItem("settingsVersion");
 
+  cLog("DEBUG", "Settings Logic", `Version de settings local: ${savedVersion}v`);
+  cLog("DEBUG", "Settings Logic", `Version de settings Nekoweb: ${SETTINGS_VERSION}v`);
+
   if (savedVersion === SETTINGS_VERSION) {
+    cLog("INFO", "Settings Logic", `Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.`)
     return false;
   } else {
+    cLog("ADVERTENCIA", "Settings Logic", `Las versiones no coinciden, es necesario reiniciar para estar actualizado.`)
     initDefaultSettings();
     localStorage.setItem("settingsVersion", SETTINGS_VERSION);
     return true;
@@ -66,10 +72,14 @@ function _checkVersion(): boolean {
  * Carga y aplica todas las configuraciones. Se ejecuta una sola vez cuando la pagina arranca.
  */
 export function initializeSettings() {
+  cLog("INFO", "Settings Logic", "Inicializando settings.")
+
   const outdated = _checkVersion();
   if (outdated) return; // NOTE: Esto habría que verlo mejor.
 
   currentSettings = _loadFromStorage();
+
+  cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings))
 
   _loadTheme();
   if (currentSettings.staticEffect) _loadNoiseEffect();

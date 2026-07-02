@@ -1,15 +1,14 @@
+import { cLog } from "../../shared/core/clog";
 import type { LanyardResponse, Data, Activity } from "./discord";
 
 export async function loadDiscordProfile(userId: string) {
-  console.log("%cdiscord.js>" + "%c Ejecutando: " + "%cloadDiscordProfile()", "color: #87F3A9; background: #282A35;", "color: white", "color: cyan");
-
   if (window.discordProfileCache) {
-    console.log("%cdiscord.js>" + "%c Ya hay datos en la cache.", "color: #87F3A9; background: #282A35;", "color: white");
+    cLog("INFO", "Discord", "Ya hay datos de mi perfil en la cache, no es necesario pedir nada.");
     return renderDiscordProfile(window.discordProfileCache);
   }
 
   try {
-    console.log("%cdiscord.js>" + "%c Obteniendo datos nuevos.", "color: #87F3A9; background: #282A35;", "color: white");
+    cLog("INFO", "Discord", "Obteniendo datos nuevos de mi perfil desde la API de Lanyard.");
 
     const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
     const json: LanyardResponse = await response.json();

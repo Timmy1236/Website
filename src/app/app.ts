@@ -1,4 +1,5 @@
 import m from "mithril";
+import { cLog } from "./shared/core/clog.ts";
 
 // Globals
 import { i18nReady } from "./shared/core/i18n.ts";
@@ -7,7 +8,7 @@ import { initializeSettings } from "./shared/core/settings-logic.ts";
 import { initializeAutoplay } from "./shared/core/autoplay.ts";
 import { initializeSoundsEffects } from "./shared/core/sound-effects.ts";
 import "./shared/components/tooltip.ts";
-import "./shared/components/panel-buttons.ts"
+import "./shared/components/panel-buttons.ts";
 
 // Pages
 import Layout from "./shared/components/layout.ts";
@@ -19,17 +20,17 @@ import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 
 async function startApp() {
-  document.documentElement.classList.add("app-loaded");
-
+  console.time("Tiempo de carga");
   initializeSettings();
   initializeSoundsEffects();
   initializeAutoplay();
   await i18nReady;
 
-  const root = document.getElementById("app")
-
+  document.documentElement.classList.add("app-loaded");
+  const root = document.getElementById("app");
   if (root) {
     onFirstVisit();
+
     m.route(root, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
       "/webmaster": { render: () => m(Layout, m(Webmaster)) },
@@ -38,8 +39,11 @@ async function startApp() {
       "/achievements": { render: () => m(Layout, m(Achievements)) },
       "/configuration": { render: () => m(Layout, m(Configuration)) }
     });
+
+    console.timeEnd("Tiempo de carga");
+    cLog("INFO", "App", "Pagina cargada correctamente. ฅ ≽^•⩊•^≼ ฅ");
   } else {
-    console.error("Dude, estas cargando el script app.js en un HTML que no deberías.")
+    cLog("ERROR", "App", "Dude. Estas cargando el script de la app en un HTML que no deberías.");
   }
 }
 

@@ -1,4 +1,5 @@
 import { getSettings } from "../core/settings-logic";
+import { cLog } from "./clog";
 const audioCtx = new AudioContext();
 
 interface SoundConfig {
@@ -12,16 +13,12 @@ interface SoundConfig {
  */
 export function initializeSoundsEffects() {
   const { soundsEffects } = getSettings();
+  if (!soundsEffects) return;
 
   document.addEventListener("click", function () {
-    if (soundsEffects) {
-      console.log("%csound-effects" + "%c Activando AudioContext.", "color: #87F3A9; background: #282A35;", "color: white");
-      audioCtx.resume();
-      _audioLogic();
-    } else {
-      console.log("%csound-effects" + "%c Los sonidos están desactivados por el usuario. :(", "color: #87F3A9; background: #282A35;", "color: white");
-    }
-
+    cLog("INFO", "Sound Effects", `Click detectado, activando: 'AudioContext'.`)
+    audioCtx.resume();
+    _audioLogic();
   }, { once: true });
 }
 
