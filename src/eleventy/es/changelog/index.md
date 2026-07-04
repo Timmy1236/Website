@@ -1,27 +1,17 @@
 ---
 title: Changelog
-description: Historial de cambios y actualizaciones del sitio
+description: Historial actualizaciones del sitio web
 layout: layouts/base.html
 locale: "es"
 ---
 
-<h1 class="text-header">Historial de actualizaciones</h1>
+Acá encontraras todos los registros de las actualizaciones que tuvo el sitio web. Podrás ver mas detalles de los cambios que haga en el repositorio publico: <a href="https://github.com/Timmy1236/Website/commits/main/">github.com/Timmy1236/Website</a>.
 
-El historial de todas las funciones agregadas, modificas, eliminadas o arregladas que fueron realizadas en esta pagina web con el paso del tiempo. Se documentan de una forma fácil de entender, pero puedes ver la lista real y completa de todos los cambios desde los commits hechos en el repositorio: <a href="https://github.com/Timmy1236/Website/commits/main/">github.com/Timmy1236/Website/commits</a>.
-
-<br>
+<div class="post-list">
 {% for post in collections.changelog_es | reverse %}
-
-<div class="post-card">
-
-  <a class="post-card-title" href="{{ post.url | url }}">
-    {{ post.data.title }}
-  </a>
-
-  <div class="post-card-date">{{ post.data.date | readableDate }}</div>
-
-  <p class="post-card-description">{{ post.data.description }}</p>
-
-</div>
-
+  <div class="post-card">
+    <span class="post-card-title"><a class="post-card-link" href="{{ post.url | url }}"> {{ post.data.title }} </a> <span class="post-card-date">{{ post.data.date | readableDate }}</span></span>
+    <p class="post-card-description">{{ post.data.description }}</p>
+  </div>
 {% endfor %}
+</div>

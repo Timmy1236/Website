@@ -5,23 +5,13 @@ description: Blogs and Microblogs about any topic
 layout: layouts/base.html
 ---
 
-<h1 class="text-header">Blog</h1>
+Blogs, Microblogs, Posts, etc. Whatever you want to call them, this is really just a place for whatever pops into my head that I'd like to save and share publicly.
 
-**Blogs and Microblogs on any topic!** With no specific theme or topic, computers, games, multimedia, etc. The more bytes spent on this blog, the more unstable the code of this site becomes. That's the fun part!
-
-<br>
+<div class="post-list">
 {% for post in collections.blog_en | reverse %}
-
-<div class="post-card">
-
-  <a class="post-card-title" href="{{ post.url | url }}">
-    {{ post.data.title }}
-  </a>
-
-  <div class="post-card-date">{{ post.data.date | readableDate }}</div>
-
-  <p class="post-card-description">{{ post.data.description }}</p>
-
-</div>
-
+  <div class="post-card">
+    <span class="post-card-title"><a class="post-card-link" href="{{ post.url | url }}"> {{ post.data.title }} </a> <span class="post-card-date">{{ post.data.date | readableDate }}</span></span>
+    <p class="post-card-description">{{ post.data.description }}</p>
+  </div>
 {% endfor %}
+</div>

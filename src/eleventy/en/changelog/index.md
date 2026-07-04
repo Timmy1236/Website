@@ -5,23 +5,13 @@ layout: layouts/base.html
 locale: "en"
 ---
 
-<h1 class="text-header">Update History</h1>
+Here you'll find a complete history of all the updates made to the website. You can view more details about the changes I make in the public repository: <a href="https://github.com/Timmy1236/Website/commits/main/">github.com/Timmy1236/Website</a>.
 
-A history of all features added, modified, removed or fixed that were made to this website over time. They are documented in an easy to understand way, but you can see the real and complete list of all changes from the commits made in the repository: <a href="https://github.com/Timmy1236/Website/commits/main/">github.com/Timmy1236/Website/commits</a>.
-
-<br>
+<div class="post-list">
 {% for post in collections.changelog_en | reverse %}
-
-<div class="post-card">
-
-  <a class="post-card-title" href="{{ post.url | url }}">
-    {{ post.data.title }}
-  </a>
-
-  <div class="post-card-date">{{ post.data.date | readableDate }}</div>
-
-  <p class="post-card-description">{{ post.data.description }}</p>
-
-</div>
-
+  <div class="post-card">
+    <span class="post-card-title"><a class="post-card-link" href="{{ post.url | url }}"> {{ post.data.title }} </a> <span class="post-card-date">{{ post.data.date | readableDate }}</span></span>
+    <p class="post-card-description">{{ post.data.description }}</p>
+  </div>
 {% endfor %}
+</div>
