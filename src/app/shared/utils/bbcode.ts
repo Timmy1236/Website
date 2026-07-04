@@ -4,39 +4,47 @@ const EMOJI_MAP: Record<string, string> = {
 
 type ReplaceFn = (match: string, ...groups: string[]) => string;
 
+/**
+ * [b]texto[/b]                 |   Texto en negrita.
+ * [i]texto[/i]                 |   Texto en italic.
+ * [u]texto[/u]                 |   Texto con underline.
+ * [color=red]texto[/color]     |   Texto en color usando CSS.
+ * [url=...]texto[/url]         |   Texto hipervínculo.
+ * [rainbow]texto[/rainbow]     |   Texto con efecto de arcoíris.
+ * [br][/br]                    |   Nueva linea de texto.
+ * [opacity]texto[/opacity]     |   Texto con opacidad.
+ * [tooltip=...]texto[/tooltip] |   Texto con tooltip.
+ */
 const BBCODE_RULES: { pattern: RegExp; replace: string | ReplaceFn }[] = [
   {
-    // [b]texto[/b] — Texto en negrita.
-    pattern: /\[b\](.*?)\[\/b\]/gis, replace: "<span class='bb-bold'>$1</span>"
+    pattern: /\[b\](.*?)\[\/b\]/gis,
+    replace: "<span class='bb-bold'>$1</span>"
   },
   {
-    // [i]texto[/i] — Texto en italic.
-    pattern: /\[i\](.*?)\[\/i\]/gis, replace: "<span class='bb-italic'>$1</span>"
+    pattern: /\[i\](.*?)\[\/i\]/gis,
+    replace: "<span class='bb-italic'>$1</span>"
   },
   {
-    // [u]texto[/u] — Texto con underline.
-    pattern: /\[u\](.*?)\[\/u\]/gis, replace: "<span class='bb-underline'>$1</span>"
+    pattern: /\[u\](.*?)\[\/u\]/gis,
+    replace: "<span class='bb-underline'>$1</span>"
   },
   {
-    // [color=red]texto[/color] — Da color al texto (CSS: #fff o white)
     pattern: /\[color=([a-zA-Z#0-9]+)\](.*?)\[\/color\]/gis,
     replace: (_match: string, color: string, content: string) => `<span class='bb-color' style='color:${color}'>${content}</span>`,
   },
   {
-    // [url=...]texto[/url] - Texto hipervínculo.
     pattern: /\[url=([^\]]+)\](.*?)\[\/url\]/gis,
     replace: (_match: string, href: string, content: string) => `<a class='bb-link link' href='${href}' target='_blank' rel='noopener noreferrer'>${content}</a>`,
   },
   {
-    // [rainbow]texto[/rainbow] — Texto con efecto de arcoíris.
-    pattern: /\[rainbow\](.*?)\[\/rainbow\]/gis, replace: "<span class='rainbow-text'>$1</span>"
+    pattern: /\[rainbow\](.*?)\[\/rainbow\]/gis,
+    replace: "<span class='rainbow-text'>$1</span>"
   },
   {
-    // [br][/br] — Nueva linea
-    pattern: /\[br\]\[\/br\]/gis, replace: "<br/>"
+    pattern: /\[br\]\[\/br\]/gis,
+    replace: "<br/>"
   },
   {
-    // [opacity]texto[/opacity] — Texto con opacidad.
     pattern: /\[opacity=([0-9]|[1-9][0-9]|100)\](.*?)\[\/opacity\]/gis,
     replace: (_match, opacity, content) => {
       const alpha = parseFloat(opacity) / 100;
@@ -44,7 +52,6 @@ const BBCODE_RULES: { pattern: RegExp; replace: string | ReplaceFn }[] = [
     },
   },
   {
-    // [tooltip=...]texto[/tooltip] - Texto con tooltip que se vuelve visible cuando el texto esta en hover.
     pattern: /\[tooltip=([^\]]+)\]([\s\S]*?)\[\/tooltip\]/gi,
     replace: (_match: string, text: string, content: string) => `<span data-tooltip='${text}' >${content}</span>`,
   },
