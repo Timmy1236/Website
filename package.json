@@ -2,9 +2,7 @@
   "name": "timmys-digital-dumpster",
   "version": "1.0.0",
   "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
-  "browserslist": [
-    ">0.3%, defaults and fully supports es6-module and baseline widely available"
-  ],
+  "browserslist": [ ">0.3%, defaults and fully supports es6-module and baseline widely available" ],
   "scripts": {
     "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true })\"",
     "prebuild": "pnpm clean",
@@ -19,8 +17,8 @@
     "js:watch": "esbuild src/app/app.ts --bundle --minify --format=esm --watch --sourcemap --outfile=public/dist/main/app.js",
     "css": "esbuild src/styles/main/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
     "css:watch": "esbuild src/styles/main/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
-    "css:pages": "esbuild src/styles/data/main.css --bundle --minify --outfile=public/dist/pages.css",
-    "css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch  --outfile=public/dist/pages.css",
+    "css:pages": "esbuild src/styles/data/main.css --bundle --minify --external:/assets/* --outfile=public/dist/pages.css",
+    "css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch --external:/assets/*  --outfile=public/dist/pages.css",
     "purgecss": "node scripts/purgecss-report.mjs",
     "typecheck": "tsc --noEmit"
   },
