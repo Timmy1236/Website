@@ -71,7 +71,6 @@ const Home = {
                       m("p.entry-content", this.latest.changelog.description),
                     ]),
                     m("div", [
-                      m(".spacing-line", { style: "--spacing-margin: 10px;" }),
                       m("img.entry-image", { src: this.latest.changelog.preview }),
                     ])
                   ])
@@ -99,7 +98,6 @@ const Home = {
                     m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
                     m("p.entry-date", this.latest.blog.date),
                     m("p.entry-content", this.latest.blog.description),
-                    m(".spacing-line", { style: "--spacing-margin: 10px;" }),
                     m("img.entry-image", { src: this.latest.blog.preview }),
                   ])
                   : m("p", "Cargando...")
