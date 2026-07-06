@@ -5,7 +5,6 @@
   --gap-size: 8px;
   --panel-padding: 0;
   --panel-background-drop: 0;
-  --panel-inside-shadow: none;
   --panel-shadow: rgb(0 0 0 / 25%) 3px 3px 0px;
   --panel-header-margin: 0px;
   --panel-header-padding: 0 2px 0 4px;
@@ -233,7 +232,6 @@
   --gap-size: 10px;
   --panel-padding: 5px;
   --panel-background-drop: 0;
-  --panel-inside-shadow: none;
   --panel-shadow: rgb(0 0 0 / 50%) 3px 3px 1px;
   --panel-header-margin: 0px;
   --panel-header-padding: 0 5px 0 5px;

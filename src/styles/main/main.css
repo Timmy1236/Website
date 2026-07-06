@@ -1,16 +1,6 @@
-/* Effects */
-@import url("./effects/noise.css");
-@import url("./effects/vignette.css");
-@import url("./effects/animations.css");
-
-/* Components */
-@import url("./components/panel.css");
-@import url("./components/buttons.css");
-@import url("./components/toast.css");
-@import url("./components/link.css");
-@import url("./components/tooltip.css");
-@import url("./components/bbcode.css");
-@import url("./components/image-overlay.css");
+/* Base */
+@import url("./base/reset.css");
+@import url("./base/themes.css");
 
 /* Layout */
 @import url("./layout/layout.css");
@@ -24,9 +14,19 @@
 @import url("./pages/configuration.css");
 @import url("./pages/achievements.css");
 
-/* Imports Generales */
-@import url("./base/reset.css");
-@import url("themes.css");
+/* Effects */
+@import url("./effects/noise.css");
+@import url("./effects/vignette.css");
+@import url("./effects/animations.css");
+
+/* Components */
+@import url("./components/panel.css");
+@import url("./components/buttons.css");
+@import url("./components/toast.css");
+@import url("./components/link.css");
+@import url("./components/tooltip.css");
+@import url("./components/bbcode.css");
+@import url("./components/image-overlay.css");
 
 /* Warning si falla la carga de la pagina. (debe de estar en el main.css evitando import por compatibilidad) */
 .warning {
