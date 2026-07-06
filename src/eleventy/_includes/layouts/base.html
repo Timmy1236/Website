@@ -20,14 +20,14 @@
         {% if back %}
 
         {% if locale == 'es' %}
-        <a href={{back}}>&lt; volver</a>
+        <a href={{back}} class="active">&lt; volver</a>
         {% else %}
-        <a href={{back}}>&lt; return</a>
+        <a href={{back}} class="active">&lt; return</a>
         {% endif %}
 
         {% else %}
         <div class="nav">
-          <a href="../../../">main</a>
+          <a href="/main.html">main</a>
           <p class="separator">|</p>
           <a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif
             %}>blog</a>
