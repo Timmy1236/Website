@@ -1,4 +1,8 @@
 {
+  "404": {
+    "description": "...How did you get here in the first place?",
+    "title": "ERROR 404"
+  },
   "sidebar": {
     "navigation": {
       "title": "Navigation",

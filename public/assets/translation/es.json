@@ -125,6 +125,10 @@
       }
     }
   },
+  "404": {
+    "title": "ERROR 404",
+    "description": "... ¿Como has llegado aquí en primer lugar?"
+  },
   "tooltip": {
     "pages": {
       "webmaster": {

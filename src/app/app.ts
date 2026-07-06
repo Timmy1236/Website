@@ -18,6 +18,7 @@ import Projects from "./features/projects/projects.page.ts";
 import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
+import Page404 from "./features/404/404.page.ts";
 
 async function startApp() {
   console.time("Tiempo de carga");
@@ -37,7 +38,8 @@ async function startApp() {
       "/projects": { render: () => m(Layout, m(Projects)) },
       "/links": { render: () => m(Layout, m(Links)) },
       "/achievements": { render: () => m(Layout, m(Achievements)) },
-      "/configuration": { render: () => m(Layout, m(Configuration)) }
+      "/configuration": { render: () => m(Layout, m(Configuration)) },
+      "/:404": { render: () => m(Layout, m(Page404)) }
     });
 
     console.timeEnd("Tiempo de carga");
