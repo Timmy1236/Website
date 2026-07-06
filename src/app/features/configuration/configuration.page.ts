@@ -19,7 +19,7 @@ const ConfigurationPage = {
           title: getTranslation("settings.title"),
           tabs: [
             {
-              label: "Visual",
+              label: getTranslation("settings.list.visual"),
               content: () => m("div", [
                 m(".settings-group", [
                   m("h2.group-title", getTranslation("settings.sections.visual-effects")),
@@ -62,7 +62,7 @@ const ConfigurationPage = {
               ]),
             },
             {
-              label: "Audio",
+              label: getTranslation("settings.list.audio"),
               content: () => m(".settings-group", [
                 m("h2.group-title", getTranslation("settings.sections.audio")),
 
@@ -84,7 +84,7 @@ const ConfigurationPage = {
               ]),
             },
             {
-              label: "Accesibilidad",
+              label: getTranslation("settings.list.accessibility"),
               content: () => m(".settings-group", [
                 m("h2.group-title", getTranslation("settings.sections.others")),
 
@@ -98,7 +98,7 @@ const ConfigurationPage = {
               ]),
             },
             {
-              label: "Otros",
+              label: getTranslation("settings.list.others"),
               content: () => m("div", [
                 m(".settings-group", [
                   m("h2.group-title", getTranslation("settings.sections.languages")),
@@ -114,8 +114,8 @@ const ConfigurationPage = {
             }
           ],
           outTab: m(".configuration-buttons", [
-            m("button.button", { onclick: () => confirmSettings() }, "Confirmar"),
-            m("button.button", { onclick: () => restartSettings() }, "Default Config")
+            m("button.button", { onclick: () => confirmSettings() }, getTranslation("settings.buttons.confirm")),
+            m("button.button", { onclick: () => restartSettings() }, getTranslation("settings.buttons.reset"))
           ])
         })
       ])

@@ -98,6 +98,16 @@
       "vignetteEffects": "Vignette",
       "soundsEffects": "Sound Effects",
       "readableFont": "Readable Font"
+    },
+    "buttons": {
+      "confirm": "Confirm",
+      "reset": "Reset settings"
+    },
+    "list": {
+      "accessibility": "Accessibility",
+      "audio": "Audio",
+      "others": "Others",
+      "visual": "Visual"
     }
   },
   "links": {

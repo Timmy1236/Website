@@ -80,6 +80,12 @@
   },
   "settings": {
     "title": "Configuración",
+    "list": {
+      "visual": "Visual",
+      "audio": "Audio",
+      "accessibility": "Accesibilidad",
+      "others": "Otros"
+    },
     "sections": {
       "visual-effects": "Efectos visuales",
       "audio": "Audio",
@@ -94,6 +100,10 @@
       "vignetteEffects": "Viñeta",
       "soundsEffects": "Efectos de sonidos",
       "readableFont": "Fuente legible"
+    },
+    "buttons": {
+      "confirm": "Confirmar",
+      "reset": "Reiniciar configuración"
     }
   },
   "links": {
