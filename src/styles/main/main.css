@@ -27,6 +27,7 @@
 @import url("./components/tooltip.css");
 @import url("./components/bbcode.css");
 @import url("./components/image-overlay.css");
+@import url("./components/tree.css");
 
 /* Warning si falla la carga de la pagina. (debe de estar en el main.css evitando import por compatibilidad) */
 .warning {
