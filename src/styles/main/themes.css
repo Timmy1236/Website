@@ -272,7 +272,7 @@
   --color-foreground: #111;
 
   /* Panel */
-  --panel-pading: 10px;
+  --panel-padding: 5px;
   --panel-color: var(--color-background);
   --panel-border: 2px solid var(--color-text);
   --panel-border-top: 2px solid var(--color-text);
