@@ -13,8 +13,6 @@ a[target="_blank"]::after {
   box-sizing: border-box;
   margin: 0;
   line-height: 110%;
-  -webkit-font-smoothing: none;
-  font-smooth: never;
 }
 
 html {
@@ -87,11 +85,6 @@ h2 {
   color: var(--color-accent);
   font-family: Pixel, monospace;
   border-bottom: 3px dotted var(--color-foreground);
-}
-
-::selection {
-  background: var(--color-foreground);
-  color: #fff;
 }
 
 input[type="text"] {
