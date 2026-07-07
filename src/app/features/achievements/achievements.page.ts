@@ -1,6 +1,7 @@
 import m from "mithril";
 import { getAchievementsList } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
+import { getTranslation } from "../../shared/core/i18n.ts";
 
 interface achievement {
   id: string;
@@ -22,7 +23,7 @@ const AchievementsPage = {
       m(".panel-frame", [
         m(".panel", [
           m(".panel-header", [
-            m("p.text-title", "Logros (SUPER W.I.P)"),
+            m("p.text-title", getTranslation("achievements.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")
@@ -35,8 +36,16 @@ const AchievementsPage = {
                 m(".achievement-card", { class: achievement.unlocked ? "unlocked" : "" }, [
                   m(".achievement-icon", achievement.unlocked ? "★" : "☆"),
                   m(".achievement-info", [
-                    m("h2.achievement-name", achievement.secret && !achievement.unlocked ? "Logro secreto." : achievement.name),
-                    m("p.achievement-desc", achievement.secret && !achievement.unlocked ? "¿?¿?¿?¿?¿?¿?¿?" : achievement.description)
+                    m("h2.achievement-name",
+                      achievement.secret && !achievement.unlocked
+                        ? getTranslation("achievements.secretName")
+                        : getTranslation(achievement.name)
+                    ),
+                    m("p.achievement-desc",
+                      achievement.secret && !achievement.unlocked
+                        ? getTranslation("achievements.secretDescription")
+                        : getTranslation(achievement.description)
+                    )
                   ])
                 ])
               )

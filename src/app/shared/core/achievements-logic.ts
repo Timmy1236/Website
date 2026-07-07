@@ -3,30 +3,30 @@ import { cLog } from "./clog";
 
 /**
  * id            → Clave única.
- * "name"        → Nombre visible en la lista.
- * "description" → Descripción del logro.
- * "secret"      → Si es true, el nombre y descripción se ocultaran en la lista.
+ * name          → Nombre visible en la lista.
+ * description   → Descripción del logro.
+ * secret"       → Si es true, el nombre y descripción se ocultaran en la lista.
  * notify        → Si debería o no de mostrar una notification al ser desbloqueado.
  */
 export const ACHIEVEMENTS = [
   {
     id: "welcome",
-    name: "Bienvenido",
-    description: "¿Es tu primera vez aquí?",
+    name: "achievements.list.welcome.name",
+    description: "achievements.list.welcome.desc",
     secret: false,
     notify: false
   },
   {
     id: "oyasumi",
-    name: "Oyasumi",
-    description: "Buenas noches.",
+    name: "achievements.list.oyasumi.name",
+    description: "achievements.list.oyasumi.desc",
     secret: true,
     notify: true
   },
   {
     id: "404",
-    name: "Eh?",
-    description: "Llegaste a la página 404, había un link roto?",
+    name: "achievements.list.404.name",
+    description: "achievements.list.404.desc",
     secret: false,
     notify: true
   },
@@ -78,7 +78,7 @@ export function unlockAchievement(id: string): void {
   saved[id] = { unlocked: true };
   saveAchievements(saved);
 
-  if (achievement.notify) showToast("achievement", false, achievement.name, false, achievement.description, true);
+  if (achievement.notify) showToast("achievement", true, achievement.name, false, achievement.description, true);
   cLog("INFO", "Achievements Logic", `Logro: '${id}' desbloqueado!`);
 }
 
@@ -98,7 +98,6 @@ export function getAchievementsList() {
 
   return ACHIEVEMENTS.map(achievement => ({
     ...achievement,
-    unlocked: saved[achievement.id]?.unlocked ?? false,
-    date: saved[achievement.id]?.date ?? null
+    unlocked: saved[achievement.id]?.unlocked ?? false
   }));
 }

@@ -165,5 +165,20 @@
   "toast": {
     "player": "Playing...",
     "timmyButton": "Copied button link!"
+  },
+  "achievements": {
+    "list": {
+      "404": {
+        "desc": "How did you get here?",
+        "name": "Error 404"
+      },
+      "welcome": {
+        "desc": "Of all the pages you could have gone to, and you decide on this one. Because?",
+        "name": "Welcome"
+      }
+    },
+    "title": "Achievements",
+    "secretDescription": "Shhh...",
+    "secretName": "Secret achievement"
   }
 }

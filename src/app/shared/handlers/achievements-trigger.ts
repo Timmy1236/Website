@@ -1,11 +1,9 @@
-import { showToast } from "../components/toast.js";
 import { unlockAchievement } from "../core/achievements-logic.js";
 
 let typedWord = "";
 
 const SECRET_WORDS: Record<string, () => void> = { // Secret!!!! Shhhh!!!!
-  "omori": () => { onSecretInput("oyasumi"); },
-  "totest": () => { showToast("info", true, "Test", false, "Toast test", false); },
+  "omori": () => { onSecretInput("oyasumi"); }
 };
 
 document.addEventListener('keydown', (event) => {

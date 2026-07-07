@@ -165,5 +165,20 @@
   "toast": {
     "player": "Reproduciendo...",
     "timmyButton": "Link del botón copiado!"
+  },
+  "achievements": {
+    "title": "Logros",
+    "list": {
+      "welcome": {
+        "name": "Bienvenido",
+        "desc": "De todas las paginas que podrías haber ido, y decides por esta. ¿Por que?"
+      },
+      "404": {
+        "name": "Error 404",
+        "desc": "¿Como llegastes hasta acá?"
+      }
+    },
+    "secretName": "Logro secreto",
+    "secretDescription": "Shhh..."
   }
 }
