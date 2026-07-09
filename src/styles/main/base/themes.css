@@ -288,12 +288,15 @@
   --color-background-color: #191a22;
 }
 
-@keyframes scroll-background {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: var(--bg-offset-x) var(--bg-offset-y);
-  }
+.theme-bg {
+  position: fixed;
+  inset: calc(var(--bg-offset-y) * -1) calc(var(--bg-offset-x) * -1);
+  background-color: var(--color-background-color);
+  background-image: var(--color-background-image);
+  background-repeat: var(--color-background-repeat);
+  background-size: var(--color-background-size);
+  background-position: bottom;
+  animation: var(--color-background-animation);
+  z-index: -2;
+  pointer-events: none;
 }

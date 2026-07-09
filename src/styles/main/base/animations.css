@@ -21,3 +21,13 @@
     opacity: 1;
   }
 }
+
+@keyframes scroll-background {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(var(--bg-offset-x), var(--bg-offset-y));
+  }
+}

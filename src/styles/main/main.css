@@ -1,6 +1,7 @@
 /* Base */
 @import url("./base/reset.css");
 @import url("./base/themes.css");
+@import url("./base/animations.css");
 
 /* Layout */
 @import url("./layout/layout.css");
@@ -17,7 +18,6 @@
 /* Effects */
 @import url("./effects/noise.css");
 @import url("./effects/vignette.css");
-@import url("./effects/animations.css");
 
 /* Components */
 @import url("./components/panel.css");

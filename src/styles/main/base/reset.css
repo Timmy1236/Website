@@ -30,12 +30,7 @@ body {
   color: var(--color-text);
   font-family: Pixel, monospace;
   text-shadow: var(--text-shadow);
-  background-image: var(--color-background-image);
-  background-repeat: var(--color-background-repeat);
-  background-size: var(--color-background-size);
-  animation: var(--color-background-animation), fade-in 1s ease forwards;
-  background-attachment: fixed;
-  background-position: bottom;
+  animation: fade-in 1s ease forwards;
   cursor: var(--normal-mouse-image), auto;
 }
 
