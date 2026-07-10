@@ -6,8 +6,7 @@ let playing = false;
 let lastSong: string;
 
 const songsArray: string[] = [
-  "./assets/sounds/music/Store_Track_1.ogg",
-  "./assets/sounds/music/Simpsons_Hotline.ogg"
+  "./assets/sounds/music/Lack_of_Color-That_tenderness.ogg"
 ];
 const volume = 0.25;
 

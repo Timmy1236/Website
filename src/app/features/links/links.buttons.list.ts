@@ -92,6 +92,12 @@ export const likesSite: ButtonSite[] = [
     preview: "/assets/images/pages/links/previews/moosyu.webp",
     note: "links.buttonWall.notes.moosyu",
   },
+  {
+    url: "https://loyaltyfreakmusic.com/",
+    button: "https://loyaltyfreakmusic.com/wp-content/uploads/2024/12/LFM_bouton.gif",
+    preview: "/assets/images/pages/links/previews/loyaltyfreakmusic.webp",
+    note: "links.buttonWall.notes.loyaltyfreakmusic",
+  },
 ];
 
 export const MyButton: ButtonSite = {
