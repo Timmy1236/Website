@@ -10,3 +10,11 @@
   aspect-ratio: 2 / 1;
   pointer-events: none;
 }
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+}

@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.3 - Pulir"
+title: "2.0.0-alpha.3 - Pulir"
 date: 2026-02-03
 locale: "es"
 description: "Arreglando, añadiendo y cambiando cosas que estaban medio mal con el anterior recode. Este debería de ser el ultimo recode que haga."

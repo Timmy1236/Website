@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.1 - Layout nuevo"
+title: "2.0.0-alpha.1 - Layout nuevo"
 date: 2025-12-26
 locale: "es"
 description: "Después de mucho tiempo estando mejorando el sitio y aprendiendo nuevas tecnológicas y técnicas en el desarrollo de software en web, creo que tengo las bolas suficientes de finalmente hacer un salto y re-codificar prácticamente toda mi pagina desde '0'."

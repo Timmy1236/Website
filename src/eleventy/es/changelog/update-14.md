@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.4 - Directorios"
+title: "2.0.0-alpha.4 - Directorios"
 date: 2026-02-20
 locale: "es"
 description: "Esta update prácticamente no agrega contenido nuevo, simplemente re organizando todos los archivos y directorios para que tenga una estructura mas limpia y arreglando y comprimiendo ciertas cositas en las paginas que se añadieron de forma bruta"

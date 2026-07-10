@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.rc.1 - Uhhh... 2.0"
+title: "2.0.0-alpha.5 - Uhhh... 2.0"
 date: 2026-02-24
 locale: "es"
 description: "Se me están agotando las ideas para los títulos de los changelogs, si la proxima no se me ocurre nada, voy a poner el maldito SHA del ultimo commit."

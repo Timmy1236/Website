@@ -1,5 +1,5 @@
 ---
-title: "v2.1.0 - PAIN"
+title: "2.1.0 - PAIN"
 date: 2026-05-25
 locale: "en"
 description: "PAINNNN, THE ONLY THING I CAN FEEL IN MY OWN BODY IS THE PAIN OF THE ABYSS, PAINNNNNNNN"

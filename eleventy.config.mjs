@@ -105,6 +105,13 @@ export default async function (eleventyConfig) {
     return new Date(date).toISOString().split('T')[0];
   })
 
+
+  // Copiar carpeta media a la carpeta de salida
+  // -------------------------------------------
+  eleventyConfig.addPassthroughCopy({
+    "src/eleventy/media": "media"
+  });
+
   return {
     pathPrefix: "/content/",
     dir: {

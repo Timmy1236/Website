@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.2 - Mithril.js and 11ty"
+title: "2.0.0-alpha.2 - Mithril.js and 11ty"
 date: 2026-01-17
 locale: "en"
 description: "With the help of the new design of my page, having the changing content in a single place allows me to switch pages in a smooth way without needing to reload the entire HTML every time the user clicks a NAV button! I was able to do this thanks to Mithril.js. Also, I have started using 11ty, a static site generator, instead of writing all the HTML again for each changelog, blog, sitemap, etc. Now I can use a single base html and write each article from a simple markdown!"

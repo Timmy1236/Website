@@ -5,6 +5,23 @@ import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import type { Latest } from "./entries";
 
+function renderPreview(src: string) {
+  const extension = src.split(".").pop()?.toLowerCase();
+
+  if (extension === "mp4") {
+    return m("video.entry-image", {
+      src,
+      muted: true,
+      loop: true,
+      autoplay: true,
+      playsinline: true,
+      preload: "metadata"
+    });
+  }
+
+  return m("img.entry-image", { src });
+}
+
 const Home = {
   latest: null as Latest | null,
   error: false,
@@ -64,14 +81,14 @@ const Home = {
             m(".panel-content", [
               this.error ? m("p", "Error")
                 : this.latest ?
-                  m("div", { style: "display:flex;flex-direction:column;justify-content:space-between;height:100%" }, [
+                  m("div.entry-content", [
                     m("div", [
                       m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
                       m("p.entry-date", this.latest.changelog.date),
-                      m("p.entry-content", this.latest.changelog.description),
+                      m("p", this.latest.changelog.description),
                     ]),
                     m("div", [
-                      m("img.entry-image", { src: this.latest.changelog.preview }),
+                      renderPreview(this.latest.changelog.preview)
                     ])
                   ])
                   : m("p", "Cargando...")
@@ -89,21 +106,24 @@ const Home = {
                 m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
                 m("button.panel-button", { "data-panel-action": "close" }, "X")
               ])
-            )
-            ,
+            ),
             m(".panel-content", [
               this.error ? m("p", "Error")
                 : this.latest ?
-                  m("div", [
-                    m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
-                    m("p.entry-date", this.latest.blog.date),
-                    m("p.entry-content", this.latest.blog.description),
-                    m("img.entry-image", { src: this.latest.blog.preview }),
+                  m("div.entry-content", [
+                    m("div", [
+                      m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                      m("p.entry-date", this.latest.blog.date),
+                      m("p", this.latest.blog.description),
+                    ]),
+                    m("div", [
+                      renderPreview(this.latest.blog.preview)
+                    ])
                   ])
                   : m("p", "Cargando...")
             ])
-          ]),
-        ])
+          ])
+        ]),
       ])
     ])
   }

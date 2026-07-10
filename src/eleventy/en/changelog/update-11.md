@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.1 - New layout"
+title: "2.0.0-alpha.1 - New layout"
 date: 2025-12-26
 locale: "en"
 description: "After a long time improving the site and learning new technologies and techniques in web software development, I think I have enough guts to finally make a jump and recode practically my entire page from '0'."

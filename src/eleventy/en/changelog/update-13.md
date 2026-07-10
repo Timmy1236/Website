@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.alpha.3 - Polish"
+title: "2.0.0-alpha.3 - Polish"
 date: 2026-02-03
 locale: "en"
 description: "Fixing, adding and changing things that were somewhat wrong with the previous recode. This should be the last recode I do."

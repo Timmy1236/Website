@@ -1,5 +1,5 @@
 ---
-title: "2.0.0.rc.2 - esbuild"
+title: "2.0.0-alpha.6 - esbuild"
 date: 2026-03-01
 locale: "en"
 description: "It is no longer necessary to use UNPKG ever again when you can simply have everything locally... I hope I did not break anything with this update."
