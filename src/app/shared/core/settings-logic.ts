@@ -70,12 +70,14 @@ function _checkVersion(): boolean {
 
 /**
  * Carga y aplica todas las configuraciones. Se ejecuta una sola vez cuando la pagina arranca.
+ * @returns `true` si todo se inicializo correctamente.
+ * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
  */
-export function initializeSettings() {
+export function initializeSettings(): boolean {
   cLog("INFO", "Settings Logic", "Inicializando settings.")
 
   const outdated = _checkVersion();
-  if (outdated) return; // NOTE: Esto habría que verlo mejor.
+  if (outdated) return false;
 
   currentSettings = _loadFromStorage();
 
@@ -84,6 +86,8 @@ export function initializeSettings() {
   _loadTheme();
   if (currentSettings.staticEffect) _loadNoiseEffect();
   if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
+
+  return true;
 }
 
 /**

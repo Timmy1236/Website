@@ -20,16 +20,47 @@ import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 import Page404 from "./features/404/404.page.ts";
 
+
+function _showFatalError(error: unknown) {
+  const warningBox = document.querySelector(".warning");
+  if (!warningBox) return;
+
+  const message = error instanceof Error ? error.message : String(error);
+
+  const errorText = document.createElement("p");
+  errorText.className = "warning-text";
+  errorText.textContent = `ERROR: ${message}`;
+
+  warningBox.appendChild(errorText);
+}
+
 async function startApp() {
   console.time("Tiempo de carga");
-  initializeSettings();
-  initializeSoundsEffects();
-  initializeAutoplay();
-  await i18nReady;
 
-  document.documentElement.classList.add("app-loaded");
-  const root = document.getElementById("app");
-  if (root) {
+  try {
+    cLog("INFO", "App", "Paso 1/4: Cargando settings...");
+    const settingsOk = initializeSettings();
+
+    if (!settingsOk) {
+      cLog("ADVERTENCIA", "App", "Version de settings desactualizada, esperando reload...");
+      return;
+    }
+
+    cLog("INFO", "App", "Paso 2/4: Cargando efectos de sonido y autoplay...");
+    initializeSoundsEffects();
+    initializeAutoplay();
+
+    cLog("INFO", "App", "Paso 3/4: Esperando traducciones (i18n)...");
+    await i18nReady;
+
+    cLog("INFO", "App", "Paso 4/4: Montando rutas...");
+    document.documentElement.classList.add("app-loaded");
+    const root = document.getElementById("app");
+
+    if (!root) {
+      throw new Error("No se encontró el elemento #app en el HTML.");
+    }
+
     onFirstVisit();
 
     m.route(root, "/home", {
@@ -44,8 +75,10 @@ async function startApp() {
 
     console.timeEnd("Tiempo de carga");
     cLog("INFO", "App", "Pagina cargada correctamente. ฅ ≽^•⩊•^≼ ฅ");
-  } else {
-    cLog("ERROR", "App", "Dude. Estas cargando el script de la app en un HTML que no deberías.");
+
+  } catch (error) {
+    cLog("ERROR", "App", `Fallo cargando la app: ${error}`);
+    _showFatalError(error);
   }
 }
 
