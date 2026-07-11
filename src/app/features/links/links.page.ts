@@ -103,9 +103,8 @@ const Others = {
             m(".tree-section", [
               m("p.heading.tree-header", "Audios & Canciones"),
               m(".tree-list", [
-                m(".tree-item", m("a.link", { href: "https://germfood.bandcamp.com/album/night-of-the-consumers-ost", target: "_blank" }, `"Store Track 1"`)),
-                m(".tree-item", m("a.link", { href: "https://downloads.khinsider.com/game-soundtracks/album/the-simpsons-hit-run-ps2/1-29%2520Phonebooth.mp3", target: "_blank" }, `"Phonebooth"`)),
-                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Half-Life 2 (Source Engine)`)),
+                m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw", target: "_blank" }, `Lack of Color - That tenderness`)),
+                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Source Engine sounds`)),
               ]),
             ]),
             m(".tree-section", [
