@@ -37,25 +37,6 @@ const webmasterPage = {
                   m("p.profile-username", "Timmy1236"),
                   m("p.profile-status#status", "Loading...")
                 ])
-
-              ]),
-
-              m(".profile-section", [
-                m("p.profile-section-title", getTranslation("webmaster.activity-title")),
-
-                m(".discord-activity#activity", [
-                  m(".discord-activity-icon",
-                    m("img#activity-image", {
-                      src: "/assets/images/others/loading.gif"
-                    })
-                  ),
-
-                  m(".discord-activity-info", [
-                    m("p#activity-name"),
-                    m("p#activity-details"),
-                    m("p#activity-state")
-                  ])
-                ])
               ]),
 
               m(".profile-section", [
@@ -126,7 +107,6 @@ const webmasterPage = {
             m(".scroll-tag-container", [
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/godotengine.svg" }), m("a", { href: "https://github.com/godotengine/godot" }, "Godot")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/blender.svg" }), m("a", { href: "https://github.com/blender/blender" }, "Blender")]),
-              m(".tag", [m("a", { href: "https://github.com/OpenShot/openshot-qt" }, "OpenShot")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/krita.svg" }), m("a", { href: "https://github.com/kde/krita" }, "Krita")]),
               m(".tag", [m("img", { src: "/assets/images/pages/about/icons/aseprite.svg" }), m("a", { href: "https://github.com/aseprite/aseprite" }, "Aseprite")]),
             ])

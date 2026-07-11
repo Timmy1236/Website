@@ -11,29 +11,7 @@ export interface LanyardResponse {
 
 export interface Data {
   discord_user: DiscordUser;
-  activities: Activity[];
   discord_status: string;
-}
-
-export interface ActivityAssets {
-  large_image?: string;
-  large_text?: string;
-  small_image?: string;
-  small_text?: string;
-}
-
-export interface Activity {
-  application_id: string;
-  buttons: string[];
-  created_at: number;
-  details: string;
-  id: string;
-  name: string;
-  platform: string;
-  session_id: string;
-  state: string;
-  type: number;
-  assets?: ActivityAssets;
 }
 
 export interface DiscordUser {

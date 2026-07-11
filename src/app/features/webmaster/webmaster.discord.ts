@@ -1,5 +1,5 @@
 import { cLog } from "../../shared/core/clog";
-import type { LanyardResponse, Data, Activity } from "./discord";
+import type { LanyardResponse, Data } from "./discord";
 
 export async function loadDiscordProfile(userId: string) {
   if (window.discordProfileCache) {
@@ -17,10 +17,11 @@ export async function loadDiscordProfile(userId: string) {
 
     const data = json.data;
     window.discordProfileCache = data;
-    renderDiscordProfile(data);
 
+    renderDiscordProfile(data);
   } catch (error) {
     console.error(error);
+
     const statusElement = document.getElementById("status");
 
     if (!statusElement) return;
@@ -30,21 +31,9 @@ export async function loadDiscordProfile(userId: string) {
   }
 }
 
-function getActivityImage(activity: Activity): string | null {
-  const image = activity.assets?.large_image;
-  if (!image) return null;
-  if (image.startsWith("mp:external")) return null;
-  return `https://cdn.discordapp.com/app-assets/${activity.application_id}/${image}.png`;
-}
-
 function renderDiscordProfile(data: Data) {
   const avatarImg = document.getElementById("pfp") as HTMLImageElement;
   const statusElement = document.getElementById("status") as HTMLParagraphElement;
-  const activityContainer = document.getElementById("activity") as HTMLElement;
-  const activityImage = document.getElementById("activity-image") as HTMLImageElement;
-  const activityName = document.getElementById("activity-name") as HTMLParagraphElement;
-  const activityDetails = document.getElementById("activity-details") as HTMLParagraphElement;
-  const activityState = document.getElementById("activity-state") as HTMLParagraphElement;
 
   if (!avatarImg || !statusElement) return;
 
@@ -66,31 +55,4 @@ function renderDiscordProfile(data: Data) {
 
   statusElement.textContent = current.text;
   statusElement.style.color = current.color;
-
-  const activity =
-    data.activities.find(a => a.type === 0 && a.application_id) ||
-    data.activities.find(a => a.type === 1 && a.application_id) ||
-    data.activities.find(a => a.type === 2 && a.application_id) ||
-    data.activities.find(a => a.type === 3 && a.application_id) ||
-    data.activities.find(a => a.application_id && a.type !== 4);
-
-  if (!activity) {
-    if (activityContainer) activityContainer.style.display = "none";
-    return;
-  }
-
-  if (activityContainer) activityContainer.style.display = "";
-
-  activityName.textContent = activity.name ?? "";
-  activityDetails.textContent = activity.details ?? "";
-  activityState.textContent = activity.state ?? "";
-
-  const imageUrl = getActivityImage(activity);
-
-  if (imageUrl) {
-    activityImage.src = imageUrl;
-    activityImage.style.display = "";
-  } else {
-    activityImage.style.display = "none";
-  }
 }

@@ -26,49 +26,12 @@
   padding-left: 3px;
 }
 
-.profile-section {
-  margin-top: 15px;
-}
-
 .profile-section-title {
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.discord-activity {
-  display: flex;
-  gap: 12px;
-  min-height: 72px;
-}
-
-.discord-activity-icon {
-  width: 90px;
-  height: 90px;
-  flex-shrink: 0;
-  border: 2px solid rgb(0 0 0 / 40%);
-}
-
-.discord-activity-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.discord-activity-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#activity-name {
-  font-size: 26px;
-}
-
-#activity-details,
-#activity-state {
-  font-size: 14px;
+  text-align: center;
 }
 
 .profile-avatar {
