@@ -2,6 +2,7 @@ import m from "mithril";
 import { getAchievementsList } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
+import { showToast } from "../../shared/components/toast.ts";
 
 interface achievement {
   id: string;
@@ -14,6 +15,7 @@ interface achievement {
 const AchievementsPage = {
   oncreate() {
     setCurrentPath(m.route);
+    showToast("info", true, "W.I.P", false, "EXPERIMENTAL", false);
   },
 
   view: function () {
