@@ -11,10 +11,10 @@ export interface Settings {
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  staticEffect: true,
-  vignetteEffect: true,
+  staticEffect: false,
+  vignetteEffect: false,
   backgroundMusic: false,
-  soundsEffects: true,
+  soundsEffects: false,
   readableFont: false,
   theme: "simple-purple"
 };

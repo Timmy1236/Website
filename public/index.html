@@ -67,12 +67,24 @@
       vertical-align: top;
     }
 
+    .content-top {
+      border-bottom: 4px solid #433F55 !important;
+    }
+
     .tg p {
-      margin-top: 5px;
+      margin-top: 10px;
+    }
+
+    .container {
+      width: 750px;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      gap: 20px;
     }
   </style>
 
-  <div style="width: 750px;">
+  <div class="container">
     <table class="tg">
       <thead>
         <tr>
@@ -82,59 +94,36 @@
       </thead>
       <tbody>
         <tr>
-          <td class="content">¡Hey! Thanks for visiting, but there are a few things you should know about this site
+          <td class="content-top">¡Hey! Thanks for visiting, but there are a few things you should know about this site
             before you continue.</td>
-          <td class="content">¡Hey! Gracias por visitar, pero necesitas saber estos puntos claves de la pagina antes que
+          <td class="content-top">¡Hey! Gracias por visitar, pero necesitas saber estos puntos claves de la pagina antes
+            que
             puedas
             continuar.</td>
         </tr>
         <tr>
           <td class="content">
-            <p>-You will need a <span style="font-weight:bold">modern </span>browser that supports
-              ES6-Modules.</p>
-            <p>- Music and sounds may start playing when you click the website.</p>
-            <p>- Images and colors may change or move rapidly.</p>
-            <p>- This site is designed and optimized for viewing only on PC.</p>
+            <p>- You will need a modern browser that supports JavaScript y ES6-Modules.</p>
+            <p>- This page features sound effects and images that can play automatically, most* are disabled by
+              default and can be
+              configured on the 'Configuration' page.</p>
+            <p>- It is designed and optimized for viewing on a PC only, using a phone is not recommended.</p>
             <p>- Profanity.</p>
             <p>- Really poor translations from Spanish to English, sometimes with the help of DeepL.</p>
           </td>
           <td class="content">
-            <p>- Necesitaras un navegador <span style="font-weight:bold">moderno </span>que soporte:
-              ES6-Modules.</p>
-            <p>- Puede haber música y sonidos que comenzaran a reproducirse cuando clickes.</p>
-            <p>- Puede haber imágenes y colores que cambien o se mueven de forma rápida.</p>
-            <p>- Solamente esta diseñado y optimizado para ser visto en PC.</p>
+            <p>- Necesitaras un navegador moderno que soporte: JavaScript y ES6-Modules.</p>
+            <p>- Esta pagina cuenta con efectos de sonido e imágenes que se pueden reproducir por si solas, la mayoría*
+              están desactivados por defecto y son configurable en la pagina: 'Configuración'.</p>
+            <p>- Solamente esta diseñado y optimizado para ser visto desde una PC, no es recomendable usar teléfono.</p>
             <p>- Lenguaje obsceno.</p>
           </td>
         </tr>
       </tbody>
     </table>
-
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="margin-top: 5px;">
-        <p style="margin-bottom: 5px;">JavaScript: <span id="js" style="color: #ff9797;">False !!</span></p>
-        <p>ES6-Modules: <span id="es" style="color: #ff9797;">False !!</span></p>
-      </div>
-
-      <div>
-        <a href="main.html" style="color: #97FFCF;">Okey! -></a>
-      </div>
-    </div>
+    <a href="main.html" style="color: #97FFCF;">OK -&gt;</a>
+    <a href="https://nekoweb.org/" style="color: #ff9797;">&lt;- HELL NAH</a>
   </div>
 </body>
-
-<!-- Checkeo si el navegador soporta scripts. -->
-<script>
-  var e = document.getElementById('js');
-  e.innerText = 'True';
-  e.style.color = "#97FFCF"; 
-</script>
-
-<!-- Checkeo si el navegador soporta scripts tipo módulos. -->
-<script type="module">
-  var e = document.getElementById('es')
-  e.innerText = 'True';
-  e.style.color = "#97FFCF"; 
-</script>
 
 </html>
