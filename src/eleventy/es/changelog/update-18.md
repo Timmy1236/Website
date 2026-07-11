@@ -1,13 +1,18 @@
 ---
 title: "2.1.0 - PAIN"
-date: 2026-05-25
+date: 2026-07-11
 locale: "es"
-description: "DOLOOOR, LO ÚNICO QUE SOY CAPAZ DE SENTIR EN MI PROPIO CUERPO ES EL DOLOR DEL ABISMO, DOLOOOOOOOOR."
+description: "DOLOOOR, LO ÚNICO QUE SOY CAPAZ DE SENTIR EN MI PROPIO CUERPO ES EL DOLOR. ESTA ACTUALIZACIÓN ES UNA MIERDA. OTRA VEZ RECODE. RECODE 2.0"
 layout: layouts/base.html
 back: /content/es/changelog/index.html
 preview: "/content/media/images/changelog/2.1.0/preview.mp4"
 tags: ["2.1", "grande"]
 ---
+
+<div class="changelog-card info">
+  <h1>Info</h1>
+  <p>Si estas viendo este texto es por 2 cosas importantes. 1. La actualización no esta lista, simplemente lo subí a Nekoweb para hacer un test online, así que es posiblemente que haya nuevos cambios en algún futuro cuando salga de forma estable. 2. Estoy testeando un changelog generado de forma automática a base de el historial de commits del repositorio. Así que no va ser explicativo como los anteriores, pero ahora la lista tendrá 100% todos los cambios que he realizado.</p>
+</div>
 
 <div class="changelog-card new">
   <h1>Añadidos</h1>
@@ -70,6 +75,20 @@ tags: ["2.1", "grande"]
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/1664ecdde87800b29a4204eb87e156bafdf88e51">1664ecd</a> feat(i18n): debug caso de error al intentar obtener traduccion cuando ni siquiera cargo correctamente</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/56c2339b20e637cf0de6fb4f4c7b80aada3dde94">56c2339</a> feat(sidebar): obteniendo correctamente la ruta de la pagina actual cuando inicie</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/bb27e444654c47ac4f2156e5b12cf1e19d86b608">bb27e44</a> feat(webmaster.page): remplazando strings hardcoded por i18n</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/ad71fd1f0eac16c10faca2eb4f3e8903eb743b22">ad71fd1</a> feat(links.button.overlay): pasando mas innerHTML a createElement</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/394974b6df0f6a1117eb87dfa7e805f4149e71ab">394974b</a> feat(image-overlay): lo mismo que antes, portenado innerHTML a createElement</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/9144627525b218723d1828126f14679ca6819f8f">9144627</a> feat: nueva fuente de texto</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/ca522a0b87593bf311877590366671140c952969">ca522a0</a> feat(bbcode): mejorando comentarios</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/1f9849670f5db27876bb9e97c7f7d8086c820d7d">1f98496</a> feat(404): pagina fallback de error 404 para mithril.js</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/222559e0783e6da887dc8c4b3b787b585add28b4">222559e</a> feat(configuration.page): agregando mas soporte al i18n</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/1bf6b4178407bf58554289330b1d526349eb52d8">1bf6b41</a> feat(achievements): soporte i18n</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/c88228e45669b1587be5fc831846828870126e1d">c88228e</a> feat: theme-bg, en vez de pintar infitamente el fondo del body html, se hara en un div por separado para aprovechar la gpu</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/0dce35e7663b52a0aea2752f88c917994fe28541">0dce35e</a> feat: remplazo de música</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/b45d75332fa8ddc89ae7139096a7a08eef0d6bc8">b45d753</a> feat(app): mejor carga de la app, evitando que cargara la pagina completa incluso cuando hay que configurar algo antes</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/7e6b6d03e6ab0824906d9a955f2286cd617be10d">7e6b6d0</a> feat: nuevo sitebox</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/37f748c138a232f5e50f0512cb45b0c443f09440">37f748c</a> feat(links): actualizando algunas paginas para tener la ultima screenshot y agregandos otras que me olvide</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/b6f8e888d40447fce88ecadfa14842328c79aff9">b6f8e88</a> feat: changelog-commits generator para eleventy</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/683ab39df562d1b30f1234e5b2b0050464e20d14">683ab39</a> feat(index): simplificando advertencia y settings</li>
     </ul>
   </div>
 </div>
@@ -102,6 +121,15 @@ tags: ["2.1", "grande"]
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/e5735a7680f4db3008478782560711130e458684">e5735a7</a> fix(i18n): getTranslation capaz de devolver undefined en vez de unicamente string</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/a6e492f9bd5b256913c14a0138be7f5b2b3c0601">a6e492f</a> fix(settings-logic): ejecutando initDefaultSettings() 2 veces seguidas</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/0eec36a620a5bfe289a2228c0ef42a18fcd10d39">0eec36a</a> fix(discord): intentando obtener una id incorrecta</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/04c2207a444bca302c7e66fab65439884333d99b">04c2207</a> fix(package): me olvide de agregar el external assets para blog y changelog</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/9131e7c84ae0a3dda34405a93cb2d92e7574f3c0">9131e7c</a> fix(themes): typo en --panel-padding</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/a5fb2c81e926d6e0069f5871fb4651e0fcf1c07a">a5fb2c8</a> fix: link llevandote al landpage pero no al main correctamente y el volver estando con el style de desactivado</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/1afe45b89cf7c3ffc0c14c5b0f75c880cc47d355">1afe45b</a> fix: cambio de orden de carga de archivos css para evitar errores futuros</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/de16cb7adc0d2182670660556aaaf5b45489ed54">de16cb7</a> fix(reset): removiendo propiedades no estandars</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/2e999c75c007c3d4f2de50e7c4c582fdc4766d12">2e999c7</a> fix(meta): description que desaparecio en algun momento que no recuerdo</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/748ed33474cead5edfab0ca4f993dd38f0028ee6">748ed33</a> fix(links): fuuck me olvide de creditar la música</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/ac13f3779e02d9018f4666ac1723480f0e406147">ac13f37</a> fix(toast): no checkeando tambien si el config soundsEffect era true o false</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/fde8a6bdce249f1007c26f555942cf4fa9dc4e99">fde8a6b</a> fix: typos</li>
     </ul>
   </div>
 </div>
@@ -143,6 +171,11 @@ tags: ["2.1", "grande"]
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/7d46ba35528268a046caa869067efd50f6736cf7">7d46ba3</a> style(project): borrando keyframe fade-in que estaba por ahi</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/80b11f154c079ebaec8fc9ca87e17653c39d4e22">80b11f1</a> refactor(settings): nuevo sistema completo para manejar los datos de settings en localstorage</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/74e3434b51d9328217795120fc1b7773eb6ab6c5">74e3434</a> style(webmaster): borrando clase .content-column que se colo</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/92dc6d182ccb3334170b04909297a4bfa6785baa">92dc6d1</a> refactor: changelog y blog style y html</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/b842162238c8fb2cf02dc6e3e4ad04447e92785d">b842162</a> style: separando tree de link</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/6af8cca5b45cc7e2c3a68c4a80d4a0153bb1d5a9">6af8cca</a> style(link): nuevo estilo de hover y soporte de multilinea</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/0570c9fc9860becccb7a70d412ec015b629d95f7">0570c9f</a> refactor(warning): simplificando texto y añadiendo correo para avisar</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/6f04c7524c07cc2b7eb9cabb2a9315ccf54056be">6f04c75</a> refactor(eleventy): arreglando varias faltas de estilo css, añadiendo imagenes locales y mejoras en home</li>
     </ul>
   </div>
 </div>
@@ -184,6 +217,14 @@ tags: ["2.1", "grande"]
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/b45f22f53dbd3b440ca4e22fc97a359b7272c118">b45f22f</a> deps: typescript-eslint actualizado</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/bc4d8f81267ea289d3227c7b0396e9fd5cb5df8b">bc4d8f8</a> build: ahora corre usando concurrently</li>
       <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/4f132bacb50b89b747e510e29b2b8f60daeb7d71">4f132ba</a> build: realizando limpieza antes de hacer una build y typecheck con tsc</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/16bf68780362c9506320b7aa97fd56e0686d0c20">16bf687</a> del: removiendo los comentarios de introducción de los scripts, la mayoría eran vagos</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/5feb684f81626a6caa9d2bd7072306e62bc26059">5feb684</a> feat(): clog, script para realizar console.log mas lindos :3</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/649b98af216669182bd4b138a69f63bbf54a0d8c">649b98a</a> del: borrando fuente de texto super antigua sin uso</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/62367a9728d5769ae718217f66092eede8c3eb20">62367a9</a> del: spacing-line, ya no son necesarios</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/e4d2c69b3c3f372f0b8d916a87da7d23a35634f6">e4d2c69</a> deps: typescript actualizado</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/3bbdba63bd9f8cec7f98a2b0f757d4f262befe76">3bbdba6</a> deps: typescript actualizado</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/78cd665d59a7f0c809b2aa9062eb75f34a7ddb28">78cd665</a> pursuer</li>
+      <li><a class="git-hash" href="https://github.com/Timmy1236/Website/commit/8dacf501fcf9ccb19e4f7e6e1797b59a2834c5b1">8dacf50</a> del(discord): activity</li>
     </ul>
   </div>
 </div>
