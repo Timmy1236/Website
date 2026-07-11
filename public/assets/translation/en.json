@@ -37,7 +37,7 @@
   "home": {
     "welcome": {
       "title": "Welcome!",
-      "text": ":wave: [rainbow]Welco[i]oOoOo!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
+      "text": ":wave: [rainbow]Welco[i]oOoMeEee!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
     },
     "entries": {
       "blog": {
@@ -54,7 +54,7 @@
   "webmaster": {
     "about-me": {
       "title": "About Me",
-      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, [u][tooltip=Im not really into it enough to run my own 24/7 server due to financial reasons, but I definitely would if I could. For now everything runs on my personal PC.]homelabbing(?)[/tooltip][/u]. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
+      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, homelabbing. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
     },
     "tech-stack": {
       "title": "Tech Stack",
@@ -150,7 +150,7 @@
           "terraria": "It's way too good. But starting a new world always feels painfully slow :(",
           "warframe": "Ironically one of the most F2P-friendly games ever made. I don't think there's currently another one that reaches the same level.",
           "roblox": "every day I feel less motivated to keep playing this crap.",
-          "hl": "One of Valve's greatest franchises... Shame we'll never see a third installment :)",
+          "hl": "One of Valve's greatest franchises... Shame we'll never see a third one :)",
           "tf": "I have 1,000 hours in Team Fortress 2! ... I still play terribly.",
           "portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
           "portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
