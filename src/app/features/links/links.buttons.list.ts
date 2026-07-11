@@ -23,37 +23,31 @@ export const neighborSites: ButtonSite[] = [
     url: "https://nogood-angel.nekoweb.org/",
     button: "https://nogood-angel.moe/images/graphics/buttons/button2.webp",
     preview: "/assets/images/pages/links/previews/nogoodangel.webp",
-    note: "links.buttonWall.notes.nogood-angel",
   },
   {
     url: "https://someones-insane.nekoweb.org/",
     button: "https://someones-insane.nekoweb.org/images/imapettyasshole_button.gif",
     preview: "/assets/images/pages/links/previews/someonesInsane.webp",
-    note: "links.buttonWall.notes.someones-insane",
   },
   {
     url: "https://yefreitor.com/",
     button: "https://yefreitor.com/img/button.png",
     preview: "/assets/images/pages/links/previews/yefreitor.webp",
-    note: "links.buttonWall.notes.yefreitor",
   },
   {
     url: "https://jovidmtp.nekoweb.org/",
     button: "/assets/images/buttons/no-button.png",
     preview: "/assets/images/pages/links/previews/jovidmtp.webp",
-    note: "links.buttonWall.notes.jovidmtp",
   },
   {
     url: "https://cbz.nekoweb.org/",
     button: "/assets/images/buttons/no-button.png",
     preview: "/assets/images/pages/links/previews/cbz.webp",
-    note: "links.buttonWall.notes.cbz",
   },
   {
     url: "https://ellen.nekoweb.org/",
     button: "https://ellen.nekoweb.org/Images/oc%20headshot%20style.png",
     preview: "/assets/images/pages/links/previews/ellen.webp",
-    note: "links.buttonWall.notes.ellen",
   },
   {
     url: "https://ramon.nekoweb.org/",
@@ -64,7 +58,6 @@ export const neighborSites: ButtonSite[] = [
     url: "https://amoeba.nekoweb.org/",
     button: "/assets/images/buttons/no-button.png",
     preview: "/assets/images/pages/links/previews/amoeba.webp",
-    note: "links.buttonWall.notes.amoeba",
   },
   {
     url: "https://reduxflakes.nekoweb.org/",
@@ -75,7 +68,16 @@ export const neighborSites: ButtonSite[] = [
     url: "https://lucksiyo.xyz/",
     button: "https://lucksiyo.xyz/resources/button_v1.jpg",
     preview: "/assets/images/pages/links/previews/lucksiyo.webp",
-    note: "links.buttonWall.notes.lucksiyo",
+  },
+  {
+    url: "https://hyacintho.nekoweb.org/",
+    button: "/assets/images/buttons/no-button.png",
+    preview: "/assets/images/pages/links/previews/hyacintho.webp",
+  },
+  {
+    url: "https://recalls.zone/",
+    button: "/assets/images/buttons/no-button.png",
+    preview: "/assets/images/pages/links/previews/recalls.webp",
   },
 ];
 
