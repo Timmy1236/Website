@@ -2,12 +2,12 @@ import { cLog } from "./clog";
 const SETTINGS_VERSION = "3";
 
 export interface Settings {
-  staticEffect: boolean;
-  vignetteEffect: boolean;
-  backgroundMusic: boolean;
-  soundsEffects: boolean;
-  readableFont: boolean;
-  theme: string;
+  staticEffect: boolean
+  vignetteEffect: boolean
+  backgroundMusic: boolean
+  soundsEffects: boolean
+  readableFont: boolean
+  theme: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -22,9 +22,9 @@ export const DEFAULT_SETTINGS: Settings = {
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
 
 function _loadNoiseEffect() {
-  const bgDiv = document.createElement('div');
-  bgDiv.className = 'bg';
-  bgDiv.id = 'background';
+  const bgDiv = document.createElement("div");
+  bgDiv.className = "bg";
+  bgDiv.id = "background";
   document.body.prepend(bgDiv);
 }
 
@@ -58,10 +58,11 @@ function _checkVersion(): boolean {
   cLog("DEBUG", "Settings Logic", `Version de settings Nekoweb: ${SETTINGS_VERSION}v`);
 
   if (savedVersion === SETTINGS_VERSION) {
-    cLog("INFO", "Settings Logic", `Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.`)
+    cLog("INFO", "Settings Logic", "Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.");
     return false;
-  } else {
-    cLog("ADVERTENCIA", "Settings Logic", `Las versiones no coinciden, es necesario reiniciar para estar actualizado.`)
+  }
+  else {
+    cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado.");
     initDefaultSettings();
     localStorage.setItem("settingsVersion", SETTINGS_VERSION);
     return true;
@@ -74,14 +75,14 @@ function _checkVersion(): boolean {
  * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
  */
 export function initializeSettings(): boolean {
-  cLog("INFO", "Settings Logic", "Inicializando settings.")
+  cLog("INFO", "Settings Logic", "Inicializando settings.");
 
   const outdated = _checkVersion();
   if (outdated) return false;
 
   currentSettings = _loadFromStorage();
 
-  cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings))
+  cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
 
   _loadTheme();
   if (currentSettings.staticEffect) _loadNoiseEffect();
