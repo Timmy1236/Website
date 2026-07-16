@@ -88,7 +88,7 @@ const Others = {
               m("p.heading.tree-header", "Librerías"),
               m(".tree-list", [
                 m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril.js")),
-                m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "Eleventy (11ty)")),
+                m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "Eleventy")),
                 m(".tree-item", m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "ESBuild")),
               ]),
             ]),
@@ -104,13 +104,14 @@ const Others = {
               m("p.heading.tree-header", "Audios & Canciones"),
               m(".tree-list", [
                 m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw", target: "_blank" }, `Lack of Color - That tenderness`)),
-                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Source Engine sounds`)),
+                m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, `Source Engine`)),
               ]),
             ]),
             m(".tree-section", [
               m("p.heading.tree-header", "Imágenes"),
               m(".tree-list", [
                 m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Voices of the Void screenshots")),
+                m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki", target: "_blank" }, "Die of Death screenshots"))
               ]),
             ]),
           ])
