@@ -1,5 +1,5 @@
 import m from "mithril";
-import { loadDiscordProfile } from "./webmaster.discord.js";
+import { loadStatus } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
@@ -7,7 +7,6 @@ import { getTranslation } from "../../shared/core/i18n.ts";
 const webmasterPage = {
 	oncreate() {
 		setCurrentPath(m.route);
-		loadDiscordProfile("375889010419171328");
 	},
 
 	view: function () {
@@ -24,18 +23,15 @@ const webmasterPage = {
 						),
 
 						m(".panel-content.profile-panel-content", [
-
 							m(".profile-header", [
 
 								m(".profile-avatar",
-									m("img#pfp", {
-										src: "/assets/images/others/loading.gif"
-									})
+									m("img", { src: "/assets/images/pages/webmaster/pfp.webp" })
 								),
 
 								m(".profile-info", [
 									m("p.profile-username", "Timmy1236"),
-									m("p.profile-status#status", "Loading...")
+									m("a.profile-status#status", { "data-tooltip-i18n": "tooltip.pages.webmaster.profile.status", "onclick": loadStatus }, "Status")
 								])
 							]),
 

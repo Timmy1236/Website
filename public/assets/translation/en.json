@@ -1,185 +1,194 @@
 {
-  "404": {
-    "description": "...How did you get here in the first place?",
-    "title": "ERROR 404"
-  },
-  "sidebar": {
-    "navigation": {
-      "title": "Navigation",
-      "buttons": {
-        "home": "Home",
-        "webmaster": "Webmaster",
-        "projects": "Projects",
-        "links": "Links",
-        "achievements": "Achievements",
-        "configuration": "Configuration",
-        "guestbook": "Guestbook",
-        "contact": "Contact"
-      }
-    },
-    "data": {
-      "title": "Data",
-      "buttons": {
-        "sitemap": "Sitemap",
-        "blog": "Blog",
-        "changelog": "Changelog"
-      }
-    },
-    "nekoweb": {
-      "title": "Nekoweb",
-      "buttons": {
-        "visits": "Visits: ",
-        "followers": "Followers: ",
-        "follow": "Follow Me"
-      }
-    }
-  },
-  "home": {
-    "welcome": {
-      "title": "Welcome!",
-      "text": ":wave: [rainbow]Welco[i]oOoMeEee!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
-    },
-    "entries": {
-      "blog": {
-        "title": "Latest Blog"
-      },
-      "changelog": {
-        "title": "Latest Changelog"
-      },
-      "commit": {
-        "title": "Latest Commit"
-      }
-    }
-  },
-  "webmaster": {
-    "about-me": {
-      "title": "About Me",
-      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, homelabbing. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
-    },
-    "tech-stack": {
-      "title": "Tech Stack",
-      "languages": "Languages",
-      "infra": "Infra",
-      "software": "Softwares"
-    },
-    "interest": {
-      "title": "Interest",
-      "games": "Games",
-      "series": "Series"
-    },
-    "profile-title": "Profile",
-    "socials-title": "Social networks",
-    "activity-title": "Activity"
-  },
-  "projects": {
-    "title": "Projects",
-    "list": {
-      "website": {
-        "description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!"
-      },
-      "leafy": {
-        "description": "A simple Discord bot made with discord.js, that's it. Nice and simple. No external services or complicated setup required."
-      }
-    }
-  },
-  "settings": {
-    "title": "Configuration",
-    "sections": {
-      "visual-effects": "Visual Effects",
-      "audio": "Audio",
-      "others": "Others",
-      "themes": "Themes",
-      "languages": "Languages"
-    },
-    "options": {
-      "staticEffects": "Static",
-      "backgroundMusic": "Background Music",
-      "ignoreLandingPage": "Skip Landing Page",
-      "vignetteEffects": "Vignette",
-      "soundsEffects": "Sound Effects",
-      "readableFont": "Readable Font"
-    },
-    "buttons": {
-      "confirm": "Confirm",
-      "reset": "Reset settings"
-    },
-    "list": {
-      "accessibility": "Accessibility",
-      "audio": "Audio",
-      "others": "Others",
-      "visual": "Visual"
-    }
-  },
-  "links": {
-    "credits": {
-      "title": "Credits"
-    },
-    "buttonWall": {
-      "title": "Button Wall (Outdated)",
-      "list": {
-        "neighbors": "Nekoweb Neighbors",
-        "likes": "Cool Sites",
-        "myButton": "Me"
-      },
-      "notes": {
-        "chantu": "The first person I met on Nekoweb who also happened to speak Spanish. If it wasn't for Chantu, I probably would've stayed on GitHub Pages because of how intimidating this whole site looked. Super friendly!",
-        "slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
-        "nyani58": "WHERE THE HELL AM I???",
-        "nogood-angel": "Every time I visit Nekoweb, I see this same site sitting at the top of the 'latest updates' category. How? How can someone release so many updates? How do they even come up with all that stuff?",
-        "someones-insane": "I don't know why... but the homepage image reminds me way too much of old Flash point-and-click horror games where the clickable objects looked ridiculously different from everything else. I kinda wish it was an actual Flash game running in Ruffle.",
-        "yefreitor": "There's a button to smoke a joint right on the homepage. What more do you need?",
-        "jovidmtp": "Poor soul, making a website that's compatible with ancient browsers! Meanwhile mine requires the latest version of Chrome and even then it probably won't load correctly!",
-        "cbz": "Sad to see YouPlock shutting down soon. It was silly, but it had potential considering how complicated something like that must've been to build. Wishing the best for future projects.",
-        "ellen": "A list of hard-to-obtain badges? I like that idea. I should add more Roblox stuff to my site.",
-        "amoeba": "No, the screenshot isn't broken. The page loaded correctly. That's just how the landing page looks. I spent like a minute staring at the screen waiting for something to happen before realizing I had to click the title to continue. :)",
-        "lucksiyo": "This feels way smoother than what I'm currently trying to build myself.",
-        "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
-        "moosyu": "I stole the code for my form directly from this website and the owner doesn't know it :youtube_emoji_biting_nails:",
-        "timmy": "... That's me.",
-        "loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site."
-      }
-    }
-  },
-  "tooltip": {
-    "pages": {
-      "webmaster": {
-        "interests": {
-          "votv": "A simulator where you spend an hour at your desk trying to get a signal only for it to fail and force you to do everything all over again.",
-          "minecraft": "Minceraft",
-          "hytale": "It's like Minecraft, except it isn't because it's like Terraria, except it isn't because-",
-          "terraria": "It's way too good. But starting a new world always feels painfully slow :(",
-          "warframe": "Ironically one of the most F2P-friendly games ever made. I don't think there's currently another one that reaches the same level.",
-          "roblox": "every day I feel less motivated to keep playing this crap.",
-          "hl": "One of Valve's greatest franchises... Shame we'll never see a third one :)",
-          "tf": "I have 1,000 hours in Team Fortress 2! ... I still play terribly.",
-          "portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
-          "portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
-          "scp": "Ignoring the fact that the game is built on an absurdly old and niche engine filled with bugs and fatal crashes, it's the only game that genuinely makes me feel scared. Every new area has a chance of SCP-173 camping around a corner waiting to kill you.",
-          "gta": "Cayo Perico."
-        }
-      }
-    }
-  },
-  "others": {
-    "resetSettings": "Are you sure you want to reset the default configuration?"
-  },
-  "toast": {
-    "player": "Playing...",
-    "timmyButton": "Copied button link!"
-  },
-  "achievements": {
-    "list": {
-      "404": {
-        "desc": "How did you get here?",
-        "name": "Error 404"
-      },
-      "welcome": {
-        "desc": "Of all the pages you could have gone to, and you decide on this one. Because?",
-        "name": "Welcome"
-      }
-    },
-    "title": "Achievements",
-    "secretDescription": "Shhh...",
-    "secretName": "Secret achievement"
-  }
+	"404": {
+		"description": "...How did you get here in the first place?",
+		"title": "ERROR 404"
+	},
+	"sidebar": {
+		"navigation": {
+			"title": "Navigation",
+			"buttons": {
+				"home": "Home",
+				"webmaster": "Webmaster",
+				"projects": "Projects",
+				"links": "Links",
+				"achievements": "Achievements",
+				"configuration": "Configuration",
+				"guestbook": "Guestbook",
+				"contact": "Contact"
+			}
+		},
+		"data": {
+			"title": "Data",
+			"buttons": {
+				"sitemap": "Sitemap",
+				"blog": "Blog",
+				"changelog": "Changelog"
+			}
+		},
+		"nekoweb": {
+			"title": "Nekoweb",
+			"buttons": {
+				"visits": "Visits: ",
+				"followers": "Followers: ",
+				"follow": "Follow Me"
+			}
+		}
+	},
+	"home": {
+		"welcome": {
+			"title": "Welcome!",
+			"text": ":wave: [rainbow]Welco[i]oOoMeEee!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
+		},
+		"entries": {
+			"blog": {
+				"title": "Latest Blog"
+			},
+			"changelog": {
+				"title": "Latest Changelog"
+			},
+			"commit": {
+				"title": "Latest Commit"
+			}
+		}
+	},
+	"webmaster": {
+		"about-me": {
+			"title": "About Me",
+			"description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, homelabbing. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
+		},
+		"tech-stack": {
+			"title": "Tech Stack",
+			"languages": "Languages",
+			"infra": "Infra",
+			"software": "Softwares"
+		},
+		"interest": {
+			"title": "Interest",
+			"games": "Games",
+			"series": "Series"
+		},
+		"profile-title": "Profile",
+		"socials-title": "Social networks",
+		"activity-title": "Activity",
+		"toasts": {
+			"status": {
+				"desc": "Wait at least more than a minute to get my status back.",
+				"title": "Stop."
+			}
+		}
+	},
+	"projects": {
+		"title": "Projects",
+		"list": {
+			"website": {
+				"description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!"
+			},
+			"leafy": {
+				"description": "A simple Discord bot made with discord.js, that's it. Nice and simple. No external services or complicated setup required."
+			}
+		}
+	},
+	"settings": {
+		"title": "Configuration",
+		"sections": {
+			"visual-effects": "Visual Effects",
+			"audio": "Audio",
+			"others": "Others",
+			"themes": "Themes",
+			"languages": "Languages"
+		},
+		"options": {
+			"staticEffects": "Static",
+			"backgroundMusic": "Background Music",
+			"ignoreLandingPage": "Skip Landing Page",
+			"vignetteEffects": "Vignette",
+			"soundsEffects": "Sound Effects",
+			"readableFont": "Readable Font"
+		},
+		"buttons": {
+			"confirm": "Confirm",
+			"reset": "Reset settings"
+		},
+		"list": {
+			"accessibility": "Accessibility",
+			"audio": "Audio",
+			"others": "Others",
+			"visual": "Visual"
+		}
+	},
+	"links": {
+		"credits": {
+			"title": "Credits"
+		},
+		"buttonWall": {
+			"title": "Button Wall (Outdated)",
+			"list": {
+				"neighbors": "Nekoweb Neighbors",
+				"likes": "Cool Sites",
+				"myButton": "Me"
+			},
+			"notes": {
+				"chantu": "The first person I met on Nekoweb who also happened to speak Spanish. If it wasn't for Chantu, I probably would've stayed on GitHub Pages because of how intimidating this whole site looked. Super friendly!",
+				"slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
+				"nyani58": "WHERE THE HELL AM I???",
+				"nogood-angel": "Every time I visit Nekoweb, I see this same site sitting at the top of the 'latest updates' category. How? How can someone release so many updates? How do they even come up with all that stuff?",
+				"someones-insane": "I don't know why... but the homepage image reminds me way too much of old Flash point-and-click horror games where the clickable objects looked ridiculously different from everything else. I kinda wish it was an actual Flash game running in Ruffle.",
+				"yefreitor": "There's a button to smoke a joint right on the homepage. What more do you need?",
+				"jovidmtp": "Poor soul, making a website that's compatible with ancient browsers! Meanwhile mine requires the latest version of Chrome and even then it probably won't load correctly!",
+				"cbz": "Sad to see YouPlock shutting down soon. It was silly, but it had potential considering how complicated something like that must've been to build. Wishing the best for future projects.",
+				"ellen": "A list of hard-to-obtain badges? I like that idea. I should add more Roblox stuff to my site.",
+				"amoeba": "No, the screenshot isn't broken. The page loaded correctly. That's just how the landing page looks. I spent like a minute staring at the screen waiting for something to happen before realizing I had to click the title to continue. :)",
+				"lucksiyo": "This feels way smoother than what I'm currently trying to build myself.",
+				"jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
+				"moosyu": "I stole the code for my form directly from this website and the owner doesn't know it :youtube_emoji_biting_nails:",
+				"timmy": "... That's me.",
+				"loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site."
+			}
+		}
+	},
+	"tooltip": {
+		"pages": {
+			"webmaster": {
+				"interests": {
+					"votv": "A simulator where you spend an hour at your desk trying to get a signal only for it to fail and force you to do everything all over again.",
+					"minecraft": "Minceraft",
+					"hytale": "It's like Minecraft, except it isn't because it's like Terraria, except it isn't because-",
+					"terraria": "It's way too good. But starting a new world always feels painfully slow :(",
+					"warframe": "Ironically one of the most F2P-friendly games ever made. I don't think there's currently another one that reaches the same level.",
+					"roblox": "every day I feel less motivated to keep playing this crap.",
+					"hl": "One of Valve's greatest franchises... Shame we'll never see a third one :)",
+					"tf": "I have 1,000 hours in Team Fortress 2! ... I still play terribly.",
+					"portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
+					"portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
+					"scp": "Ignoring the fact that the game is built on an absurdly old and niche engine filled with bugs and fatal crashes, it's the only game that genuinely makes me feel scared. Every new area has a chance of SCP-173 camping around a corner waiting to kill you.",
+					"gta": "Cayo Perico."
+				},
+				"profile": {
+					"status": "Click to find out if I am connected right now on Discord or not."
+				}
+			}
+		}
+	},
+	"others": {
+		"resetSettings": "Are you sure you want to reset the default configuration?"
+	},
+	"toast": {
+		"player": "Playing...",
+		"timmyButton": "Copied button link!"
+	},
+	"achievements": {
+		"list": {
+			"404": {
+				"desc": "How did you get here?",
+				"name": "Error 404"
+			},
+			"welcome": {
+				"desc": "Of all the pages you could have gone to, and you decide on this one. Because?",
+				"name": "Welcome"
+			}
+		},
+		"title": "Achievements",
+		"secretDescription": "Shhh...",
+		"secretName": "Secret achievement"
+	}
 }

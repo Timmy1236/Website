@@ -1,47 +1,50 @@
+import { showToast } from "../../shared/components/toast";
 import { cLog } from "../../shared/core/clog";
-import type { LanyardResponse, Data } from "./discord";
 
-export async function loadDiscordProfile(userId: string) {
-	if (window.discordProfileCache) {
-		cLog("INFO", "Discord", "Ya hay datos de mi perfil en la cache, no es necesario pedir nada.");
-		return renderDiscordProfile(window.discordProfileCache);
+export interface LanyardResponse {
+	data: Data
+	success: boolean
+}
+
+export interface Data {
+	discord_status: string
+}
+
+const userID = "375889010419171328";
+
+let lastCheckTime = new Date();
+let time: Date;
+let fristCheck: boolean;
+
+export async function loadStatus() {
+	time = new Date();
+	const lastCheck = ((time.getTime() - lastCheckTime.getTime()) / 60000); // En minutos
+
+	if ((lastCheck >= 1) || fristCheck !== true) {
+		fristCheck = true;
+		lastCheckTime = new Date();
+
+		cLog("INFO", "Discord", "Obteniendo status de Discord.");
+		_getStatus();
 	}
-
-	try {
-		cLog("INFO", "Discord", "Obteniendo datos nuevos de mi perfil desde la API de Lanyard.");
-
-		const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
-		const json: LanyardResponse = await response.json();
-
-		if (!json.success) throw new Error("No se pudo obtener la información del usuario.");
-
-		const data = json.data;
-		window.discordProfileCache = data;
-
-		renderDiscordProfile(data);
-	}
-	catch (error) {
-		console.error(error);
-
-		const statusElement = document.getElementById("status");
-
-		if (!statusElement) return;
-
-		statusElement.textContent = "Error!";
-		statusElement.style.color = "#ff6666";
+	else {
+		cLog("INFO", "Discord", "Intento de obtener el status de Discord cuando no paso mas de un minuto.");
+		showToast("info", true, "webmaster.toasts.status.title", true, "webmaster.toasts.status.desc", true);
 	}
 }
 
-function renderDiscordProfile(data: Data) {
-	const avatarImg = document.getElementById("pfp") as HTMLImageElement;
+async function _getStatus() {
 	const statusElement = document.getElementById("status") as HTMLParagraphElement;
+	if (!statusElement) return;
+	statusElement.textContent = "...";
 
-	if (!avatarImg || !statusElement) return;
+	const response = await fetch(`https://api.lanyard.rest/v1/users/${userID}`);
+	const json: LanyardResponse = await response.json();
 
-	const user = data.discord_user;
+	if (!json.success) throw new Error("No se pudo obtener la información del usuario.");
+
+	const data = json.data;
 	const status = data.discord_status;
-
-	avatarImg.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
 
 	type Status = "online" | "idle" | "dnd" | "offline";
 
