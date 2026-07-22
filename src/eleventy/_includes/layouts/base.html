@@ -2,85 +2,85 @@
 <html lang="{{ locale | default: 'es' }}">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/assets/images/favicon/pages.png">
-  <title>{{ title }} - Timmy</title>
-  <link rel="stylesheet" href="/dist/pages.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/assets/images/favicon/pages.png">
+	<title>{{ title }} - Timmy</title>
+	<link rel="stylesheet" href="/dist/pages.css">
 </head>
 
 <body>
-  <a id="top"></a>
-  <div class="container">
-    <div class="head">
-      <div class="head-title">
-        <h1>{{ title }}</h1>
-      </div>
-      <div class="head-links">
-        {% if back %}
+	<a id="top"></a>
+	<div class="container">
+		<div class="head">
+			<div class="head-title">
+				<h1>{{ title }}</h1>
+			</div>
+			<div class="head-links">
+				{% if back %}
 
-        {% if locale == 'es' %}
-        <a href={{back}} class="active">&lt; volver</a>
-        {% else %}
-        <a href={{back}} class="active">&lt; return</a>
-        {% endif %}
+				{% if locale == 'es' %}
+				<a href={{back}} class="active">&lt; volver</a>
+				{% else %}
+				<a href={{back}} class="active">&lt; return</a>
+				{% endif %}
 
-        {% else %}
-        <div class="nav">
-          <a href="/main.html">main</a>
-          <p class="separator">|</p>
-          <a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif
-            %}>blog</a>
-          <p class="separator">|</p>
-          <a href="/content/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %}
-            class="active" {% endif %}>changelog</a>
-        </div>
+				{% else %}
+				<div class="nav">
+					<a href="/main.html">main</a>
+					<p class="separator">|</p>
+					<a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif
+						%}>blog</a>
+					<p class="separator">|</p>
+					<a href="/content/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %}
+						class="active" {% endif %}>changelog</a>
+				</div>
 
-        {% endif %}
+				{% endif %}
 
-        <div class="language-switcher">
-          {% if locale == 'es' %}
-          <a class="active">es</a>
-          <p class="separator">|</p>
-          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
-          <a href="{{ currentUrl | replace: '/es/', '/en/' }}">en</a>
-          {% else %}
-          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
-          <a href="{{ currentUrl | replace: '/en/', '/es/' }}">es</a>
-          <p class="separator">|</p>
-          <a class="active">en</a>
-          {% endif %}
-        </div>
+				<div class="language-switcher">
+					{% if locale == 'es' %}
+					<a class="active">es</a>
+					<p class="separator">|</p>
+					{%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
+					<a href="{{ currentUrl | replace: '/es/', '/en/' }}">en</a>
+					{% else %}
+					{%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
+					<a href="{{ currentUrl | replace: '/en/', '/es/' }}">es</a>
+					<p class="separator">|</p>
+					<a class="active">en</a>
+					{% endif %}
+				</div>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="content">
-      {{ content }}
-    </div>
+		<div class="content">
+			{{ content }}
+		</div>
 
-    <div class="footer">
-      <div class="footer-content">
-        <p>
-          {% if locale == 'es' %}
-          RSS: <a href="/content/es/rss/feed.xml">Feed</a>, <a href="/content/es/rss/blog.xml">Blog</a>, <a
-            href="/content/es/rss/changelog.xml">Changelog</a>
-          <br>
-          Pagina hecha con: <a href="https://www.11ty.dev/">11ty</a>
-          <br>
-          <a href="#top" class="boton-subir">Volver arriba</a>
-          {% else %}
-          RSS: <a href="/content/en/rss/feed.xml">Feed</a>, <a href="/content/en/rss/blog.xml">Blog</a>, <a
-            href="/content/en/rss/changelog.xml">Changelog</a>
-          <br>
-          Page made with: <a href="https://www.11ty.dev/">11ty</a>
-          <br>
-          <a href="#top" class="boton-subir">Back to up</a> <br>
-          {% endif %}
-        </p>
-      </div>
-    </div>
-  </div>
+		<div class="footer">
+			<div class="footer-content">
+				<p>
+					{% if locale == 'es' %}
+					RSS: <a href="/content/es/rss/feed.xml">Feed</a>, <a href="/content/es/rss/blog.xml">Blog</a>, <a
+						href="/content/es/rss/changelog.xml">Changelog</a>
+					<br>
+					Pagina hecha con: <a href="https://www.11ty.dev/">11ty</a>
+					<br>
+					<a href="#top" class="boton-subir">Volver arriba</a>
+					{% else %}
+					RSS: <a href="/content/en/rss/feed.xml">Feed</a>, <a href="/content/en/rss/blog.xml">Blog</a>, <a
+						href="/content/en/rss/changelog.xml">Changelog</a>
+					<br>
+					Page made with: <a href="https://www.11ty.dev/">11ty</a>
+					<br>
+					<a href="#top" class="boton-subir">Back to up</a> <br>
+					{% endif %}
+				</p>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
