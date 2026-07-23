@@ -18,12 +18,13 @@ const mithrilExtractor = (content) => {
 
 export default {
 	content: [
-		"src/app/**/*.{ts,js}",
-		"src/eleventy/**/*.{html,njk,md,json}",
+		"src/main/app/**/*.{ts,js}",
+		"src/library/eleventy/**/*.{html,njk,md,json}",
 		"public/{index,main,not_found}.html"
 	],
 	css: [
-		"src/styles/main/**/*.css"
+		"src/main/css/**/*.css",
+		"src/library/css/**/*.css"
 	],
 	rejected: true,
 	defaultExtractor: mithrilExtractor,

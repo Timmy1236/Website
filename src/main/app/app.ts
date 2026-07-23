@@ -20,6 +20,8 @@ import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 import Page404 from "./features/404/404.page.ts";
 
+document.documentElement.classList.add("app-loaded");
+
 function _showFatalError(error: unknown) {
 	const warningBox = document.querySelector(".warning");
 	if (!warningBox) return;
@@ -53,7 +55,6 @@ async function startApp() {
 		await i18nReady;
 
 		cLog("INFO", "App", "Paso 4/4: Montando rutas...");
-		document.documentElement.classList.add("app-loaded");
 		const root = document.getElementById("app");
 
 		if (!root) {

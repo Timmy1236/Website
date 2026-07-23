@@ -79,6 +79,44 @@ section > * + * {
   gap: 2.5rem;
 }
 
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-input {
+  padding: 8px 10px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-foreground);
+  color: var(--text);
+  border-radius: 6px;
+}
+
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-filter-btn {
+  background: none;
+  border: 1px solid var(--color-foreground);
+  color: var(--text);
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.tag-filter-btn.active {
+  opacity: 1;
+  background-color: var(--accent2);
+  border-color: var(--accent);
+}
+
 /* === [ HEAD ] === */
 .head {
   width: 100%;
@@ -183,14 +221,19 @@ section > * + * {
 /* === [ POSTS-CARDS ] === */
 .post-list {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .post-card {
   padding: 8px;
-  border-bottom: 2px dotted var(--color-foreground);
-  border-left: 2px dotted var(--color-foreground);
-  border-right: 2px dotted var(--color-foreground);
+  border: 2px dotted var(--color-foreground);
   transition: background-color 0.1s;
+}
+
+.post-card:hover {
+  background-color: #373444;
 }
 
 .post-card:first-of-type {
@@ -200,11 +243,6 @@ section > * + * {
 
 .post-card:last-child { 
   border-radius: 0 0 10px 10px;
-}
-
-.post-card:hover {
-  transition: background-color 0.1s;
-  background-color: #373444;
 }
 
 .post-card-title {

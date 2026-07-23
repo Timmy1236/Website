@@ -14,12 +14,12 @@
 		"stylelint": "pnpm exec stylelint \"**/*.css\"",
 		"eleventy": "pnpm exec eleventy",
 		"eleventy:watch": "pnpm exec eleventy --watch",
-		"js": "esbuild src/app/app.ts --bundle --minify --format=esm --outfile=public/dist/main/app.js",
-		"js:watch": "esbuild src/app/app.ts --bundle --minify --format=esm --watch --sourcemap --outfile=public/dist/main/app.js",
-		"css": "esbuild src/styles/main/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
-		"css:watch": "esbuild src/styles/main/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
-		"css:pages": "esbuild src/styles/data/main.css --bundle --minify --external:/assets/* --outfile=public/dist/pages.css",
-		"css:pages:watch": "esbuild src/styles/data/main.css --bundle --minify --watch --external:/assets/*  --outfile=public/dist/pages.css",
+		"js": "esbuild src/main/app/app.ts --bundle --minify --format=esm --outfile=public/dist/main/app.js",
+		"js:watch": "esbuild src/main/app/app.ts --bundle --minify --format=esm --watch --sourcemap --outfile=public/dist/main/app.js",
+		"css": "esbuild src/main/css/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
+		"css:watch": "esbuild src/main/css/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
+		"css:pages": "esbuild src/library/css/main.css --bundle --minify --external:/assets/* --outfile=public/dist/pages.css",
+		"css:pages:watch": "esbuild src/library/css/main.css --bundle --minify --watch --external:/assets/*  --outfile=public/dist/pages.css",
 		"purgecss": "node scripts/purgecss-report.mjs",
 		"typecheck": "tsc --noEmit"
 	},
@@ -53,11 +53,11 @@
 		"eslint": "^10.7.0",
 		"eslint-plugin-compat": "^7.0.2",
 		"purgecss": "^8.0.0",
-		"stylelint": "^17.14.0",
+		"stylelint": "^17.14.1",
 		"stylelint-config-standard": "^40.0.0",
 		"stylelint-no-unsupported-browser-features": "^8.1.1",
-		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.64.0"
+		"typescript": "6.0.3",
+		"typescript-eslint": "^8.65.0"
 	},
 	"dependencies": {
 		"mithril": "^2.3.8"

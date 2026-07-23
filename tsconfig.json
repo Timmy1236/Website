@@ -7,6 +7,7 @@
     "noEmit": true
   },
   "include": [
-    "src/app/**/*",
+    "src/main/**/*",
+    "src/library/**/*"
   ]
 }
