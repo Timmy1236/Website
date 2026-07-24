@@ -4,7 +4,7 @@ date: 2026-02-28
 locale: "es"
 description: "¿A que te refieres que lekearon el código fuente de Minecraft legacy edition? ¿Se podrá compilar para PC?"
 layout: layouts/base.html
-preview: "/content/media/images/blog/minecraft/preview.webp"
+preview: "/content/assets/images/blog/minecraft/preview.webp"
 back: /content/es/blog/index.html
 tags: ["blog", "largo"]
 ---
@@ -53,7 +53,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 1: Descargar el código fuente que supuestamente fue subido a [Gofile](https://gofile.io/d/RRf1hv) ezzz.
 
-<img src="/content/media/images/blog/minecraft/1.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/1.webp" class="post-image">
 
 </section>
 
@@ -64,7 +64,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 3 (Problema 2): Al buscar el instalador de visual studio 2012 en las versiones anteriores en Microsoft, resulta que esa version ya no esta disponible al publico por el fin de soporte, haciendo que no sea una version disponible 'legalmente', ahora me toca buscar de terceros un instalador, genial.
 
-<img src="/content/media/images/blog/minecraft/2.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/2.webp" class="post-image">
 
 </section>
 
@@ -74,7 +74,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 5: Después de perder una hora de mi vida en buscar un IDE que ya ni tiene soporte, finalmente pude abrir el proyecto .sln de Legacy, y me encontré con la sorpresa de que había una carpeta que no había visto y un target a una plataforma que tenían el mismo nombre, "**Windows64**", ... ¿Eso significa que se puede compilar para Windows? Quien sabe, a probar supongo... "***warning MSB3785: No SDKs were found. SDKReference items will not be resolved. If your application requires these references there may be compilation errors.***", me hizo recordar a "***Abandon all hope, all ye who enter***", así que decidir ignorarlo y continuar con mi aventura.
 
-<img src="/content/media/images/blog/minecraft/3.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/3.webp" class="post-image">
 
 </section>
 
@@ -83,7 +83,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 6 (Problema 4): ... ¿Funciono? ¿¿Nada mas era simplemente hacer eso?? ¿¿¿¿Puedo volver a jugar Legacy???? En vez de seguirme haciendo preguntas, decidí continuar... Oh vaya! Intento clickear el botón, intento presionar el enter, pero nada pasa. Necesitas un control para poder jugarlo, quien lo diría, ni me lo había pensado, necesitas un control para jugar algo de consola, muy genio de mi parte. Me toco sacar un control genérico que no uso hace años porque deje usarlos cuando me cambie a PC. De todas formas no recibe mi inputs porque supongo que estaría esperando unos de Xbox360 en especifico, ni eso me sirvió.
 
-<img src="/content/media/images/blog/minecraft/4.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/4.webp" class="post-image">
 
 </section>
 
@@ -92,7 +92,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 7: Como mi control enviaba señales genéricas que Legacy no captaba, me toco sacar la clásica que siempre se usa para estas ocasiones. **X360CE**, dicho software que su pagina principal ahora cuenta con una historia medieval generada con inteligencia artificial, que lindo, supongo. No se que tiene que ver una cosa con la otra. gracias.
 
-<img src="/content/media/images/blog/minecraft/5.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/5.webp" class="post-image">
 
 </section>
 
@@ -101,7 +101,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 8 (Problema 5): ¡Oh! ¡No! Espera... No esta funcionando, la clásica me esta fallando. Por alguna extraña razón que no comprendo, x360ce se esta quejando que no tengo instalado Visual C++ 2015-2019, cuando es algo que si o si ya debería de tenerlo instalado. No... De hecho, LO TENGO INSTALADO, AHÍ MISMO LO PUTAS DICE, **¿¡PORQUE ESTAS FALLANDO!?**
 
-<img src="/content/media/images/blog/minecraft/6.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/6.webp" class="post-image">
 
 </section>
 
@@ -110,7 +110,7 @@ Volviendo lo que estaba hablando, el leak del código fuente de Legacy, si, eso 
 
 9: Revisando el GitHub de x360ce, resulta que todos están teniendo el mismo problema, hace tiempo que no recibe una buena update que ya ni siquiera es capaz de checkear correctamente las versiones, me toco instalar version fixeada por [Glitchtest51](https://github.com/x360ce/x360ce/pull/1576), supongo que la pagina ya ni cumple el proposito de darte el software, sino que una historia medieval hecho con IA.
 
-<img src="/content/media/images/blog/minecraft/7.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/7.webp" class="post-image">
 
 </section>
 
@@ -120,7 +120,7 @@ Paso 10 (Problema 6): La version fixeada corre ahora mismo sin problemas ya que 
 
 FINALMENTE, PUEDO, JUGAR, LEGACY, NADA, ESTA, FALLANDO, ¿FUNCIONA?. Si te soy honesto, me esperaba que después de gastar 2 horas y media de mi vida solucionando problema tras problema, pense que iba a llegar en nada, pero extrañamente funciona tan bien que al correr de forma nativa sin la necesidad de la emulación, es super estable y apenas consume 300mb de ram in-game, solamente hay pequeños fallos como la interfaz un poco rota y que las partidas guardadas no funcionan al menos que actives en el debug: "Load/Write Saves From Local Folder Mode" y ya estaría, para ser una version diseñada exclusivamente para consolas, no trajo demasiado problemas para compilarlo en PC, posiblemente incluso la mayoría de cosas lo hizo la misma 4J para testealro, pero como nunca la idea fue de publicarlo en PC, nunca llego ver a la luz. 
 
-<img src="/content/media/images/blog/minecraft/8.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/8.webp" class="post-image">
 
 </section>
 

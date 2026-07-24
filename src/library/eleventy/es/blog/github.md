@@ -16,7 +16,7 @@ tags: ["microblog"]
 
 ... yeah, eso mismo, nada mas. Solo vine a avisar que ahora este sitio web cuenta con un repositorio publico en el mismo GitHub en: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare), ya esta, gudbay!
 
-<img src="/content/media/images/blog/github/cat.gif" class="post-image">
+<img src="/content/assets/images/blog/github/cat.gif" class="post-image">
 
 </section>
 

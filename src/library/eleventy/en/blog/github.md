@@ -16,7 +16,7 @@ tags: ["blog"]
 
 ... yeah, that's it, nothing else. I just came to let you know that this website now has a public repository on GitHub at: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare). That's it, bye!
 
-<img src="/content/media/images/blog/github/cat.gif" class="post-image">
+<img src="/content/assets/images/blog/github/cat.gif" class="post-image">
 
 </section>
 

@@ -5,7 +5,7 @@ locale: "en"
 description: "¿What do you mean the full source code of Minecraft legacy edition got leaked? ¿Will it be possible to play it on PC?"
 layout: layouts/base.html
 back: /content/en/blog/index.html
-preview: "/content/media/images/blog/minecraft/preview.webp"
+preview: "/content/assets/images/blog/minecraft/preview.webp"
 tags: ["blog", "long"]
 ---
 
@@ -53,7 +53,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 1: Download the source code that was supposedly uploaded to [Gofile](https://gofile.io/d/RRf1hv) easy.
 
-<img src="/content/media/images/blog/minecraft/1.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/1.webp" class="post-image">
 
 </section>
 
@@ -64,7 +64,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 3 (Problem 2): When searching for the Visual Studio 2012 installer in older Microsoft versions, it turns out that version is no longer available to the public due to end of support, making it not 'legally' available, now I have to search for a third party installer, great.
 
-<img src="/content/media/images/blog/minecraft/2.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/2.webp" class="post-image">
 
 </section>
 
@@ -75,7 +75,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 5: After wasting an hour of my life looking for an IDE that is no longer supported, I finally managed to open the Legacy .sln project, and I found the surprise that there was a folder I had not seen and a target for a platform that had the same name, "**Windows64**", ... does that mean it can be compiled for Windows? Who knows, might as well try... "***warning MSB3785: No SDKs were found. SDKReference items will not be resolved. If your application requires these references there may be compilation errors.***", it reminded me of "***Abandon all hope, all ye who enter***", so I decided to ignore it and continue my adventure.
 
-<img src="/content/media/images/blog/minecraft/3.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/3.webp" class="post-image">
 
 </section>
 
@@ -84,7 +84,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 6 (Problem 4): ... Did it work? Was it really just doing that?? Can I play Legacy again???? Instead of asking myself more questions, I decided to continue... Oh wow! I try clicking the button, I try pressing enter, but nothing happens. You need a controller to play it, who would have thought, I did not even consider it, you need a controller to play something from consoles, very smart of me. I had to take out a generic controller that I have not used in years because I stopped using them when I switched to PC. Anyway it does not receive my inputs because I guess it expects an Xbox360 one specifically, so that did not help either.
 
-<img src="/content/media/images/blog/minecraft/4.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/4.webp" class="post-image">
 
 </section>
 
@@ -93,7 +93,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 7: Since my controller was sending generic signals that Legacy did not detect, I had to use the classic solution that is always used in these situations. **X360CE**, that software whose main page now has a medieval story generated with artificial intelligence, nice, I guess. I do not know what one thing has to do with the other. thanks.
 
-<img src="/content/media/images/blog/minecraft/5.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/5.webp" class="post-image">
 
 </section>
 
@@ -102,7 +102,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 8 (Problem 5): Oh! No! Wait... it is not working, the classic is failing me. For some strange reason that I do not understand, x360ce is complaining that I do not have Visual C++ 2015-2019 installed, when it is something I should already have installed no matter what. No... actually, I DO HAVE IT INSTALLED, IT FUCKING SAYS IT RIGHT THERE, WHY ARE YOU FAILING!?
 
-<img src="/content/media/images/blog/minecraft/6.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/6.webp" class="post-image">
 
 </section>
 
@@ -111,7 +111,7 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 9: Checking the x360ce GitHub, it turns out everyone is having the same problem, it has not received a proper update in a long time and it cannot even correctly check versions anymore, so I had to install a fixed version by [Glitchtest51](https://github.com/x360ce/x360ce/pull/1576), I guess the page no longer serves the purpose of giving you the software, but a medieval story made with AI.
 
-<img src="/content/media/images/blog/minecraft/7.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/7.webp" class="post-image">
 
 </section>
 
@@ -122,7 +122,7 @@ Step 10 (Problem 6): The fixed version now runs without problems since it no lon
 
 FINALLY, I CAN PLAY LEGACY, NOTHING IS FAILING, DOES IT WORK? If I am honest, I expected that after spending 2 and a half hours of my life solving problem after problem, I thought it would lead to nothing, but strangely it works so well that running natively without emulation, it is super stable and barely uses 300mb of RAM in game, there are only small issues like the interface being a bit broken and that saved games do not work unless you enable in debug: "Load/Write Saves From Local Folder Mode" and that is it, for a version designed exclusively for consoles, it did not bring too many problems to compile it on PC, possibly even most of the work was already done by 4J for testing, but since the idea was never to release it on PC, it never saw the light of day.
 
-<img src="/content/media/images/blog/minecraft/8.webp" class="post-image">
+<img src="/content/assets/images/blog/minecraft/8.webp" class="post-image">
 
 </section>
 

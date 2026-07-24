@@ -101,10 +101,10 @@ export default async function (eleventyConfig) {
 		return new Date(date).toISOString().split("T")[0];
 	});
 
-	// Copiar carpeta media a la carpeta de salida
+	// Copiar carpeta assets a la carpeta de salida
 	// -------------------------------------------
 	eleventyConfig.addPassthroughCopy({
-		"src/library/eleventy/media": "media"
+		"src/library/eleventy/assets": "assets"
 	});
 
 	eleventyConfig.addFilter("uniqueTags", (posts) => {
