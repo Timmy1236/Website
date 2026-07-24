@@ -107,6 +107,9 @@ export default async function (eleventyConfig) {
 		"src/library/eleventy/media": "media"
 	});
 
+	eleventyConfig.addFilter("uniqueTags", (posts) => {
+		const allTags = posts.flatMap(post => post.data.tags || []);
+		return [...new Set(allTags)];
 	});
 
 	return {

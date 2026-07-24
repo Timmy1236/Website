@@ -1,0 +1,42 @@
+---
+title: Blog
+locale: "en"
+description: Blogs and Microblogs about any topic
+layout: layouts/base.html
+---
+
+Blogs, Microblogs, Posts, etc. Whatever you want to call them, this is really just a place for whatever pops into my head that I'd like to save and share publicly.
+
+<div>
+{% set allTags = collections.blog_en | uniqueTags %}
+
+<div class="filter-bar">
+  <input type="text" id="search-input" class="search-input" placeholder="Search...">
+	
+  <div class="tag-filters">
+    <button class="tag-filter-btn active" data-tag="all">All</button>
+    {% for tag in allTags %}
+    <button class="tag-filter-btn" data-tag="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="post-list">
+{% for post in collections.blog_en %}
+  <div class="post-card" data-title="{{ post.data.title | lower }}" data-description="{{ post.data.description | lower }}" data-tags="{{ post.data.tags | join(' ') }}">
+    <span class="post-card-title">
+      <a class="post-card-link" href="{{ post.url | url }}"> {{ post.data.title }} </a>
+      <span class="post-card-date">{{ post.data.date | readableDate }}</span>
+    </span>
+    <p class="post-card-description">{{ post.data.description }}</p>
+    <div class="post-tags">
+      {% for tag in post.data.tags %}
+      <span class="post-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<script src="/content/media/post-filter.js" defer></script>
+</div>
