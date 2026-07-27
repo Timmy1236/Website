@@ -14,7 +14,7 @@ interface achievement {
 
 const AchievementsPage = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "achievement");
 		showToast("info", true, "W.I.P", false, "EXPERIMENTAL", false);
 	},
 

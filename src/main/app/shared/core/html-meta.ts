@@ -24,10 +24,19 @@ const translation: Record<string, Record<string, string>> = {
 	}
 };
 
-export function setCurrentPath(path: m.Route) {
+function changePageIcon(newIconUrl: string) {
+	const favicon = document.getElementById("favicon") as HTMLLinkElement;
+
+	if (favicon) {
+		favicon.href = newIconUrl;
+	}
+}
+
+export function setCurrentPath(path: m.Route, icon: string) {
 	const current = path.get();
 	const local = getSetting("preferred-language") || "en";
 
 	document.title = (translation[local][current] ?? "Website") + " - Timmy";
 	document.documentElement.lang = local;
+	changePageIcon(`/assets/images/icons/utils/${icon}.png`);
 }

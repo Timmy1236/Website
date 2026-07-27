@@ -27,7 +27,7 @@ const Home = {
 	error: false,
 
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "home");
 	},
 
 	oninit: function () {

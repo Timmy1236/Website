@@ -7,7 +7,7 @@ import { getTranslation } from "../../shared/core/i18n.ts";
 
 const Others = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "link");
 	},
 
 	view: function () {

@@ -6,7 +6,7 @@ import { showToast } from "../../shared/components/toast.js";
 
 const Project = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "proyect");
 		showToast("info", true, "W.I.P", false, "EXPERIMENTAL", false);
 	},
 

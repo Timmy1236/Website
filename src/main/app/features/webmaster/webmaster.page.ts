@@ -6,7 +6,7 @@ import { getTranslation } from "../../shared/core/i18n.ts";
 
 const webmasterPage = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "user");
 	},
 
 	view: function () {

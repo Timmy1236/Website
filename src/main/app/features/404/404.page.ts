@@ -6,7 +6,7 @@ import { onPage404 } from "../../shared/handlers/achievements-trigger.ts";
 
 const Page404 = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "no-icon");
 		onPage404();
 	},
 

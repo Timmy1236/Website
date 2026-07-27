@@ -7,7 +7,7 @@ import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
 const ConfigurationPage = {
 	oncreate() {
-		setCurrentPath(m.route);
+		setCurrentPath(m.route, "settings");
 		refreshDraftFromStorage();
 		m.redraw();
 	},
