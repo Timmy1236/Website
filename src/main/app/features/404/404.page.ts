@@ -6,21 +6,21 @@ import { onPage404 } from "../../shared/handlers/achievements-trigger.ts";
 import panel from "../../shared/components/panel.ts";
 
 const Page404 = {
-	oncreate() {
-		setCurrentPath(m.route, "no-icon");
-		onPage404();
-	},
+  oncreate() {
+    setCurrentPath(m.route, "no-icon");
+    onPage404();
+  },
 
-	view: function () {
-		return m(".content", [
-			m(panel, {
-				title: getTranslation("404.title"),
-				content: [
-					m("p", m.trust(parseBBCode(getTranslation("404.description"))))
-				]
-			})
-		]);
-	}
+  view: function () {
+    return m(".content", [
+      m(panel, {
+        title: getTranslation("404.title"),
+        content: [
+          m("p", m.trust(parseBBCode(getTranslation("404.description"))))
+        ]
+      })
+    ]);
+  }
 };
 
 export default Page404;

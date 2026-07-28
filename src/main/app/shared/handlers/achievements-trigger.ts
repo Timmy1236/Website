@@ -3,32 +3,32 @@ import { unlockAchievement } from "../core/achievements-logic.js";
 let typedWord = "";
 
 const SECRET_WORDS: Record<string, () => void> = { // Secret!!!! Shhhh!!!!
-	omori: () => { onSecretInput("oyasumi"); }
+  omori: () => { onSecretInput("oyasumi"); }
 };
 
 document.addEventListener("keydown", (event) => {
-	const key = event.key.toLowerCase();
-	typedWord += key;
+  const key = event.key.toLowerCase();
+  typedWord += key;
 
-	if (typedWord.length > 10) {
-		typedWord = typedWord.slice(-10);
-	}
+  if (typedWord.length > 10) {
+    typedWord = typedWord.slice(-10);
+  }
 
-	const matchedKey = Object.keys(SECRET_WORDS).find(key => typedWord.includes(key));
-	if (matchedKey) {
-		SECRET_WORDS[matchedKey]();
-		typedWord = "";
-	}
+  const matchedKey = Object.keys(SECRET_WORDS).find(key => typedWord.includes(key));
+  if (matchedKey) {
+    SECRET_WORDS[matchedKey]();
+    typedWord = "";
+  }
 });
 
 export function onPage404() {
-	unlockAchievement("404");
+  unlockAchievement("404");
 }
 
 export function onFirstVisit() {
-	unlockAchievement("welcome");
+  unlockAchievement("welcome");
 }
 
 export function onSecretInput(value: string) {
-	unlockAchievement(value);
+  unlockAchievement(value);
 }

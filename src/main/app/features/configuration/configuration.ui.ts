@@ -5,16 +5,16 @@ import { getTranslation } from "../../shared/core/i18n.js";
 export const draft: Settings = { ...DEFAULT_SETTINGS };
 
 export function refreshDraftFromStorage() {
-	Object.assign(draft, getSettings());
+  Object.assign(draft, getSettings());
 }
 
 export function confirmSettings() {
-	saveSettings(draft);
-	location.reload();
+  saveSettings(draft);
+  location.reload();
 }
 
 export function restartSettings() {
-	if (confirm(getTranslation("others.resetSettings")) == true) {
-		initDefaultSettings();
-	}
+  if (confirm(getTranslation("others.resetSettings")) == true) {
+    initDefaultSettings();
+  }
 }

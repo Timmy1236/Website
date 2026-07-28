@@ -2,39 +2,39 @@ import { cLog } from "./clog";
 const SETTINGS_VERSION = "3";
 
 export interface Settings {
-	staticEffect: boolean
-	vignetteEffect: boolean
-	backgroundMusic: boolean
-	soundsEffects: boolean
-	readableFont: boolean
-	theme: string
+  staticEffect: boolean
+  vignetteEffect: boolean
+  backgroundMusic: boolean
+  soundsEffects: boolean
+  readableFont: boolean
+  theme: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-	staticEffect: false,
-	vignetteEffect: false,
-	backgroundMusic: false,
-	soundsEffects: false,
-	readableFont: false,
-	theme: "simple-purple"
+  staticEffect: false,
+  vignetteEffect: false,
+  backgroundMusic: false,
+  soundsEffects: false,
+  readableFont: false,
+  theme: "simple-purple"
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
 
 function _loadNoiseEffect() {
-	const bgDiv = document.createElement("div");
-	bgDiv.className = "bg";
-	bgDiv.id = "background";
-	document.body.prepend(bgDiv);
+  const bgDiv = document.createElement("div");
+  bgDiv.className = "bg";
+  bgDiv.id = "background";
+  document.body.prepend(bgDiv);
 }
 
 /**
  * Añade los atributos de 'theme' y 'color' al documento, usando lo que haya en currentSettings.
  */
 function _loadTheme() {
-	const [theme, color] = currentSettings.theme.split("-");
-	document.documentElement.setAttribute("data-theme", theme);
-	document.documentElement.setAttribute("data-color", color);
+  const [theme, color] = currentSettings.theme.split("-");
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-color", color);
 }
 
 /**
@@ -42,31 +42,31 @@ function _loadTheme() {
  * un ajuste, se le agregara la default para llenar.
  */
 function _loadFromStorage(): Settings {
-	const raw = localStorage.getItem("settings");
-	if (!raw) return { ...DEFAULT_SETTINGS };
+  const raw = localStorage.getItem("settings");
+  if (!raw) return { ...DEFAULT_SETTINGS };
 
-	return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
+  return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
 }
 
 /**
  * Checkeamos si el navegador del usuario tiene guardada la misma versión de settings que esta en la pagina.
  */
 function _checkVersion(): boolean {
-	const savedVersion = localStorage.getItem("settingsVersion");
+  const savedVersion = localStorage.getItem("settingsVersion");
 
-	cLog("DEBUG", "Settings Logic", `Version de settings local: ${savedVersion}v`);
-	cLog("DEBUG", "Settings Logic", `Version de settings Nekoweb: ${SETTINGS_VERSION}v`);
+  cLog("DEBUG", "Settings Logic", `Version de settings local: ${savedVersion}v`);
+  cLog("DEBUG", "Settings Logic", `Version de settings Nekoweb: ${SETTINGS_VERSION}v`);
 
-	if (savedVersion === SETTINGS_VERSION) {
-		cLog("INFO", "Settings Logic", "Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.");
-		return false;
-	}
-	else {
-		cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado.");
-		initDefaultSettings();
-		localStorage.setItem("settingsVersion", SETTINGS_VERSION);
-		return true;
-	}
+  if (savedVersion === SETTINGS_VERSION) {
+    cLog("INFO", "Settings Logic", "Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.");
+    return false;
+  }
+  else {
+    cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado.");
+    initDefaultSettings();
+    localStorage.setItem("settingsVersion", SETTINGS_VERSION);
+    return true;
+  }
 }
 
 /**
@@ -75,43 +75,43 @@ function _checkVersion(): boolean {
  * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
  */
 export function initializeSettings(): boolean {
-	cLog("INFO", "Settings Logic", "Inicializando settings.");
+  cLog("INFO", "Settings Logic", "Inicializando settings.");
 
-	const outdated = _checkVersion();
-	if (outdated) return false;
+  const outdated = _checkVersion();
+  if (outdated) return false;
 
-	currentSettings = _loadFromStorage();
+  currentSettings = _loadFromStorage();
 
-	cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
+  cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
 
-	_loadTheme();
-	if (currentSettings.staticEffect) _loadNoiseEffect();
-	if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
+  _loadTheme();
+  if (currentSettings.staticEffect) _loadNoiseEffect();
+  if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
 
-	return true;
+  return true;
 }
 
 /**
  * Sobrescribe las configuraciones guardadas por las del default, tanto en memoria como en LocalStorage.
  */
 export function initDefaultSettings() {
-	localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
-	window.location.reload();
+  localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
+  window.location.reload();
 }
 
 export function saveSettings(newSettings: Settings) {
-	currentSettings = { ...newSettings };
-	localStorage.setItem("settings", JSON.stringify(currentSettings));
+  currentSettings = { ...newSettings };
+  localStorage.setItem("settings", JSON.stringify(currentSettings));
 }
 
 export function getSettings(): Settings {
-	return { ...currentSettings };
+  return { ...currentSettings };
 }
 
 export function getSetting(key: string): string | null {
-	return localStorage.getItem(key);
+  return localStorage.getItem(key);
 }
 
 export function saveSetting(key: string, value: string): void {
-	localStorage.setItem(key, value);
+  localStorage.setItem(key, value);
 }

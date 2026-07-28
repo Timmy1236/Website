@@ -1,12 +1,12 @@
 export interface Entry {
-	title: string
-	url: string
-	date: string
-	description: string
-	preview: string
+  title: string
+  url: string
+  date: string
+  description: string
+  preview: string
 }
 
 export interface Latest {
-	blog: Entry
-	changelog: Entry
+  blog: Entry
+  changelog: Entry
 }
