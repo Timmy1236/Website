@@ -61,9 +61,10 @@
 }
 
 .panel-content {
-  max-height: 1000px;
   overflow: hidden auto;
   padding: var(--panel-content-padding);
+  display: flex;
+  flex-direction: column;
 }
 
 .panel-content.collapsed {
