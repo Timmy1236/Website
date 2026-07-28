@@ -20,8 +20,7 @@
 		"css:watch": "esbuild src/main/css/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
 		"css:pages": "esbuild src/library/css/main.css --bundle --minify --external:/assets/* --outfile=public/dist/pages.css",
 		"css:pages:watch": "esbuild src/library/css/main.css --bundle --minify --watch --external:/assets/*  --outfile=public/dist/pages.css",
-		"purgecss": "node scripts/purgecss-report.mjs",
-		"typecheck": "tsc --noEmit"
+		"purgecss": "node scripts/purgecss-report.mjs"
 	},
 	"repository": {
 		"type": "git",
@@ -48,15 +47,16 @@
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.10.0",
 		"@types/mithril": "^2.2.8",
-		"concurrently": "^10.0.3",
+		"concurrently": "^10.0.4",
 		"esbuild": "^0.28.1",
-		"eslint": "^10.7.0",
+		"eslint": "^10.8.0",
 		"eslint-plugin-compat": "^7.0.2",
 		"purgecss": "^8.0.0",
 		"stylelint": "^17.14.1",
 		"stylelint-config-standard": "^40.0.0",
 		"stylelint-no-unsupported-browser-features": "^8.1.1",
-		"typescript": "6.0.3",
+		"@typescript/native": "npm:typescript@^7.0.2",
+		"typescript": "npm:@typescript/typescript6@6.0.2",
 		"typescript-eslint": "^8.65.0"
 	},
 	"dependencies": {
