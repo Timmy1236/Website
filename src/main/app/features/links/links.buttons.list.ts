@@ -66,7 +66,7 @@ export const neighborSites: ButtonSite[] = [
   },
   {
     url: "https://lucksiyo.xyz/",
-    button: "https://lucksiyo.xyz/resources/button_v1.jpg",
+    button: "https://lucksiyo.xyz/resources/button.jpg",
     preview: "/assets/images/pages/links/previews/lucksiyo.webp"
   },
   {
