@@ -1,194 +1,194 @@
 {
-	"sidebar": {
-		"navigation": {
-			"title": "Navegación",
-			"buttons": {
-				"home": "Inicio",
-				"webmaster": "Webmaster",
-				"projects": "Proyectos",
-				"links": "Links",
-				"achievements": "Logros",
-				"configuration": "Configuración",
-				"guestbook": "Guestbook",
-				"contact": "Contacto"
-			}
-		},
-		"data": {
-			"title": "Data",
-			"buttons": {
-				"sitemap": "Sitemap",
-				"blog": "Blog",
-				"changelog": "Changelog"
-			}
-		},
-		"nekoweb": {
-			"title": "Nekoweb",
-			"buttons": {
-				"visits": "Visitas: ",
-				"followers": "Seguidores: ",
-				"follow": "Seguirme"
-			}
-		}
-	},
-	"home": {
-		"welcome": {
-			"title": "Bienvenido!",
-			"text": ":wave: [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
-		},
-		"entries": {
-			"blog": {
-				"title": "Ultimo Blog"
-			},
-			"changelog": {
-				"title": "Ultimo Changelog"
-			},
-			"commit": {
-				"title": "Ultimo Commit"
-			}
-		}
-	},
-	"webmaster": {
-		"profile-title": "Perfil",
-		"activity-title": "Actividad",
-		"socials-title": "Redes sociales",
-		"about-me": {
-			"title": "Sobre mi",
-			"description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, homelabbing. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
-		},
-		"tech-stack": {
-			"title": "Tech stack",
-			"languages": "Lenguajes",
-			"infra": "Infra",
-			"software": "Softwares"
-		},
-		"interest": {
-			"title": "Aficiones",
-			"games": "Juegos",
-			"series": "Series"
-		},
-		"toasts": {
-			"status": {
-				"title": "Espera.",
-				"desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
-			}
-		}
-	},
-	"projects": {
-		"title": "Proyectos",
-		"list": {
-			"website": {
-				"description": "Mi sitio web personal hosteado en Nekoweb, sera mi rincon del internet donde guardare todo tipo de proyecto que he hecho o estoy desarrollando actualmente, lo que estas viendo ahora mismo es uno de mis proyectos publico mas grandes que tengo!"
-			},
-			"leafy": {
-				"description": "Un simple bot para discord hecho en discord.js, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
-			}
-		}
-	},
-	"settings": {
-		"title": "Configuración",
-		"list": {
-			"visual": "Visual",
-			"audio": "Audio",
-			"accessibility": "Accesibilidad",
-			"others": "Otros"
-		},
-		"sections": {
-			"visual-effects": "Efectos visuales",
-			"audio": "Audio",
-			"others": "Otros",
-			"themes": "Temas",
-			"languages": "Lenguajes"
-		},
-		"options": {
-			"staticEffects": "Estática",
-			"backgroundMusic": "Música de fondo",
-			"ignoreLandingPage": "Ignorar la pagina de bienvenida",
-			"vignetteEffects": "Viñeta",
-			"soundsEffects": "Efectos de sonidos",
-			"readableFont": "Fuente legible"
-		},
-		"buttons": {
-			"confirm": "Confirmar",
-			"reset": "Reiniciar configuración"
-		}
-	},
-	"links": {
-		"credits": {
-			"title": "Créditos"
-		},
-		"buttonWall": {
-			"title": "Muro de Botones (Desactualizado)",
-			"list": {
-				"neighbors": "Nekoweb Vecinos",
-				"likes": "Sitios Geniales",
-				"myButton": "Yo"
-			},
-			"notes": {
-				"chantu": "La primera persona que conocí en Nekoweb ¡Super friendly!",
-				"slowslushie": "Banner por encima, el sidebar a la izquierda, el contenido a la derecha... El contenido principal a la derecha... ¡Mi pagina es original y no se lo robe a nadie!",
-				"nyani58": "¿¿¿DONDE MIERDA ESTOY???",
-				"nogood-angel": "Cada vez que entro a nekoweb, veo esta misma pagina siempre estando primero en la categoría 'ultimas updates'. ¿Como? ¿Como alguien puede sacar tantas updates? ¿Como alguien le da la cabeza para eso?",
-				"someones-insane": "No se porque... Pero la imagen del inicio me hace recordar demasiado a los juegos de terror hecho en flash de 'Point & Click' donde los objetos clickeables se verían estúpidamente diferente a los demás. Me hubiera gustado que fuera un flash de verdad corriendo en Ruffle",
-				"yefreitor": "Hay un maldito botón para fumarte un porro en el inicio. ¿Que mas necesitas?",
-				"jovidmtp": "Pobre alma, su pagina siendo super compatible con versiones super antiguas para navegadores! ¡Y la mia necesitaras la ultima version posible de Chrome y ni con eso seras capaz de cargarlo sin problemas!",
-				"cbz": "Triste de ver que YouPlock cerrara pronto, era silly pero tenia potencial teniendo en cuneta que se veía algo muy complicado de armar. Espero lo mejor para siguientes proyectos.",
-				"ellen": "¿Una lista de badges difíciles de conseguir? Me gusta esa idea. Debería de poner mas cosas de Roblox en mi sitio.",
-				"amoeba": "No, la captura no esta mal. La pagina cargo correctamente. Así es el landing page. Me quede como un minuto mirando la pantalla esperando que algo pasara, y tenia que clickear el titulo para continuar. :)",
-				"lucksiyo": "Esto tiene una mejor sensación de fluidez comparado a lo que yo mismo estoy haciendo",
-				"jbc": "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
-				"moosyu": "Me robe el código del form de esta misma pagina y el owner no lo sabe :youtube_emoji_biting_nails:",
-				"loyaltyfreakmusic": "Si no fuera por esta página, no hubiera encontrado música sin copyright para mi sitio.",
-				"timmy": "... Ese soy yo."
-			}
-		}
-	},
-	"404": {
-		"title": "ERROR 404",
-		"description": "... ¿Como has llegado aquí en primer lugar?"
-	},
-	"tooltip": {
-		"pages": {
-			"webmaster": {
-				"interests": {
-					"votv": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo.",
-					"minecraft": "Minceraft",
-					"hytale": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-",
-					"terraria": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(",
-					"warframe": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no creo que existe actualmente uno que le llegue al mismo nivel.",
-					"roblox": "cada dia tengo menos ganas de seguir en esta mierda.",
-					"hl": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)",
-					"tf": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo jugando de forma horrible.",
-					"portal1": "Tardas 20 minutos quieto mirando al puzzle como resolverlo...",
-					"portal2": "Tardas 20 minutos quieto mirando al puzzle como resolverlo... ¡Esta vez con un amigo!",
-					"scp": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte.",
-					"gta": "Cayo Perico."
-				},
-				"profile": {
-					"status": "Clickea para saber si me encuentro conectado ahora mismo en Discord o no."
-				}
-			}
-		}
-	},
-	"others": {
-		"resetSettings": "¿Estas seguro que quieres reiniciar la configuración por defecto?"
-	},
-	"toast": {
-		"player": "Reproduciendo...",
-		"timmyButton": "Link del botón copiado!"
-	},
-	"achievements": {
-		"title": "Logros",
-		"list": {
-			"welcome": {
-				"name": "Bienvenido",
-				"desc": "De todas las paginas que podrías haber ido, y decides por esta. ¿Por que?"
-			},
-			"404": {
-				"name": "Error 404",
-				"desc": "¿Como llegastes hasta acá?"
-			}
-		},
-		"secretName": "Logro secreto",
-		"secretDescription": "Shhh..."
-	}
+  "sidebar": {
+    "navigation": {
+      "title": "Navegación",
+      "buttons": {
+        "home": "Inicio",
+        "webmaster": "Webmaster",
+        "projects": "Proyectos",
+        "links": "Links",
+        "achievements": "Logros",
+        "configuration": "Configuración",
+        "guestbook": "Guestbook",
+        "contact": "Contacto"
+      }
+    },
+    "data": {
+      "title": "Data",
+      "buttons": {
+        "sitemap": "Sitemap",
+        "blog": "Blog",
+        "changelog": "Changelog"
+      }
+    },
+    "nekoweb": {
+      "title": "Nekoweb",
+      "buttons": {
+        "visits": "Visitas: ",
+        "followers": "Seguidores: ",
+        "follow": "Seguirme"
+      }
+    }
+  },
+  "home": {
+    "welcome": {
+      "title": "Bienvenido!",
+      "text": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
+    },
+    "entries": {
+      "blog": {
+        "title": "Ultimo Blog"
+      },
+      "changelog": {
+        "title": "Ultimo Changelog"
+      },
+      "commit": {
+        "title": "Ultimo Commit"
+      }
+    }
+  },
+  "webmaster": {
+    "profile-title": "Perfil",
+    "activity-title": "Actividad",
+    "socials-title": "Redes sociales",
+    "about-me": {
+      "title": "Sobre mi",
+      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, homelabbing. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
+    },
+    "tech-stack": {
+      "title": "Tech stack",
+      "languages": "Lenguajes",
+      "infra": "Infra",
+      "software": "Softwares"
+    },
+    "interest": {
+      "title": "Aficiones",
+      "games": "Juegos",
+      "series": "Series"
+    },
+    "toasts": {
+      "status": {
+        "title": "Espera.",
+        "desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "list": {
+      "website": {
+        "description": "Mi sitio web personal hosteado en Nekoweb, sera mi rincon del internet donde guardare todo tipo de proyecto que he hecho o estoy desarrollando actualmente, lo que estas viendo ahora mismo es uno de mis proyectos publico mas grandes que tengo!"
+      },
+      "leafy": {
+        "description": "Un simple bot para discord hecho en discord.js, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
+      }
+    }
+  },
+  "settings": {
+    "title": "Configuración",
+    "list": {
+      "visual": "Visual",
+      "audio": "Audio",
+      "accessibility": "Accesibilidad",
+      "others": "Otros"
+    },
+    "sections": {
+      "visual-effects": "Efectos visuales",
+      "audio": "Audio",
+      "others": "Otros",
+      "themes": "Temas",
+      "languages": "Lenguajes"
+    },
+    "options": {
+      "staticEffects": "Estática",
+      "backgroundMusic": "Música de fondo",
+      "ignoreLandingPage": "Ignorar la pagina de bienvenida",
+      "vignetteEffects": "Viñeta",
+      "soundsEffects": "Efectos de sonidos",
+      "readableFont": "Fuente legible"
+    },
+    "buttons": {
+      "confirm": "Confirmar",
+      "reset": "Reiniciar configuración"
+    }
+  },
+  "links": {
+    "credits": {
+      "title": "Créditos"
+    },
+    "buttonWall": {
+      "title": "Muro de Botones (Desactualizado)",
+      "list": {
+        "neighbors": "Nekoweb Vecinos",
+        "likes": "Sitios Geniales",
+        "myButton": "Yo"
+      },
+      "notes": {
+        "chantu": "La primera persona que conocí en Nekoweb ¡Super friendly!",
+        "slowslushie": "Banner por encima, el sidebar a la izquierda, el contenido a la derecha... El contenido principal a la derecha... ¡Mi pagina es original y no se lo robe a nadie!",
+        "nyani58": "¿¿¿DONDE MIERDA ESTOY???",
+        "nogood-angel": "Cada vez que entro a nekoweb, veo esta misma pagina siempre estando primero en la categoría 'ultimas updates'. ¿Como? ¿Como alguien puede sacar tantas updates? ¿Como alguien le da la cabeza para eso?",
+        "someones-insane": "No se porque... Pero la imagen del inicio me hace recordar demasiado a los juegos de terror hecho en flash de 'Point & Click' donde los objetos clickeables se verían estúpidamente diferente a los demás. Me hubiera gustado que fuera un flash de verdad corriendo en Ruffle",
+        "yefreitor": "Hay un maldito botón para fumarte un porro en el inicio. ¿Que mas necesitas?",
+        "jovidmtp": "Pobre alma, su pagina siendo super compatible con versiones super antiguas para navegadores! ¡Y la mia necesitaras la ultima version posible de Chrome y ni con eso seras capaz de cargarlo sin problemas!",
+        "cbz": "Triste de ver que YouPlock cerrara pronto, era silly pero tenia potencial teniendo en cuneta que se veía algo muy complicado de armar. Espero lo mejor para siguientes proyectos.",
+        "ellen": "¿Una lista de badges difíciles de conseguir? Me gusta esa idea. Debería de poner mas cosas de Roblox en mi sitio.",
+        "amoeba": "No, la captura no esta mal. La pagina cargo correctamente. Así es el landing page. Me quede como un minuto mirando la pantalla esperando que algo pasara, y tenia que clickear el titulo para continuar. :)",
+        "lucksiyo": "Esto tiene una mejor sensación de fluidez comparado a lo que yo mismo estoy haciendo",
+        "jbc": "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
+        "moosyu": "Me robe el código del form de esta misma pagina y el owner no lo sabe :youtube_emoji_biting_nails:",
+        "loyaltyfreakmusic": "Si no fuera por esta página, no hubiera encontrado música sin copyright para mi sitio.",
+        "timmy": "... Ese soy yo."
+      }
+    }
+  },
+  "404": {
+    "title": "ERROR 404",
+    "description": "... ¿Como has llegado aquí en primer lugar?"
+  },
+  "tooltip": {
+    "pages": {
+      "webmaster": {
+        "interests": {
+          "votv": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo.",
+          "minecraft": "Minceraft",
+          "hytale": "Es como un Minecraft, pero no lo es porque es como un Terraria, pero no lo es porque-",
+          "terraria": "Es demasiado bueno. Pero comenzar un mundo nuevo se siente demasiado lento :(",
+          "warframe": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no creo que existe actualmente uno que le llegue al mismo nivel.",
+          "roblox": "cada dia tengo menos ganas de seguir en esta mierda.",
+          "hl": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)",
+          "tf": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo jugando de forma horrible.",
+          "portal1": "Tardas 20 minutos quieto mirando al puzzle como resolverlo...",
+          "portal2": "Tardas 20 minutos quieto mirando al puzzle como resolverlo... ¡Esta vez con un amigo!",
+          "scp": "Ignorando el hecho que el juego este hecho en un motor estúpidamente viejo y de nicho con varios errores y crashes fatales. Es el único juego que realmente me hace sentir que si es de terror, sabiendo que cada zona que pasas puede haber una posibilidad que SCP-173 este ahí campeando en una esquina para matarte.",
+          "gta": "Cayo Perico."
+        },
+        "profile": {
+          "status": "Clickea para saber si me encuentro conectado ahora mismo en Discord o no."
+        }
+      }
+    }
+  },
+  "others": {
+    "resetSettings": "¿Estas seguro que quieres reiniciar la configuración por defecto?"
+  },
+  "toast": {
+    "player": "Reproduciendo...",
+    "timmyButton": "Link del botón copiado!"
+  },
+  "achievements": {
+    "title": "Logros",
+    "list": {
+      "welcome": {
+        "name": "Bienvenido",
+        "desc": "De todas las paginas que podrías haber ido, y decides por esta. ¿Por que?"
+      },
+      "404": {
+        "name": "Error 404",
+        "desc": "¿Como llegastes hasta acá?"
+      }
+    },
+    "secretName": "Logro secreto",
+    "secretDescription": "Shhh..."
+  }
 }

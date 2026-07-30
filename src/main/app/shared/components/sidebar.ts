@@ -8,7 +8,7 @@ let currentPath: string;
 
 function navBtn(label: string, external: boolean, path: string, img: string | null) {
   const isActive = (currentPath ? currentPath : m.route.get()) === path;
-  const attrs: m.Attributes = { onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
+  const attrs: m.Attributes = { "data-sound-release": "buttonRelease", "data-sound-click": "buttonClick", "data-sound-hover": "buttonHover", onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
 
   return m("button.sidebar-buttons", attrs, [
     m("img", {

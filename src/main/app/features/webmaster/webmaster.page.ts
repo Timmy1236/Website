@@ -18,7 +18,7 @@ const webmasterPage = {
           content: m(".profile-panel-content", [
             m(".profile-header", [
               m(".profile-avatar",
-                m("img", { src: "/assets/images/pages/webmaster/pfp.webp" })
+                m("img", { "data-sound-click": "squeak", src: "/assets/images/pages/webmaster/pfp.webp" })
               ),
               m(".profile-info", [
                 m("p.profile-username", "Timmy1236"),

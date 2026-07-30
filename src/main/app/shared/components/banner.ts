@@ -12,7 +12,7 @@ export default {
             m(".wave-text",
               text.split("").map((char, i) =>
                 m("span.wave-container", { style: { "--i": i } },
-                  m("span.wave-text-letter", char)
+                  m("span.wave-text-letter", { "data-sound-hover": "banner" }, char)
                 )
               )
             )

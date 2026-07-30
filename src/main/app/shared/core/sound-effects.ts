@@ -45,13 +45,15 @@ async function _loadSounds() {
     // Genéricos
     _registerSound("click", "/assets/sounds/sfx/mouse/mouse-down.mp3", 0.65),
     _registerSound("clickUp", "/assets/sounds/sfx/mouse/mouse-up.mp3", 0.65),
-    _registerSound("buttonHover", "/assets/sounds/sfx/mouse/button-hover.mp3", 0.4),
-    _registerSound("buttonClick", "/assets/sounds/sfx/mouse/button-click.mp3", 0.4),
-    _registerSound("buttonRelease", "/assets/sounds/sfx/mouse/button-release.mp3", 0.4),
+    _registerSound("buttonHover", "/assets/sounds/sfx/button/button-hover.mp3", 0.5),
+    _registerSound("buttonClick", "/assets/sounds/sfx/button/button-click.mp3", 0.5),
+    _registerSound("buttonRelease", "/assets/sounds/sfx/button/button-release.mp3", 0.5),
     _registerSound("key", "/assets/sounds/sfx/key.mp3", 0.5, [0.9, 1.4]),
 
     // Personalizados
-    _registerSound("banner", "/assets/sounds/sfx/mouse/meow.mp3", 0.5, [0.8, 1.2])
+    _registerSound("banner", "/assets/sounds/sfx/others/banner.mp3", 0.2, [0.7, 1.3]),
+    _registerSound("hi", "/assets/sounds/sfx/others/hi.mp3"),
+    _registerSound("squeak", "/assets/sounds/sfx/others/squeak.mp3")
   ]);
 }
 
