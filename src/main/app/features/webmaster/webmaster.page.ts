@@ -22,16 +22,16 @@ const webmasterPage = {
               ),
               m(".profile-info", [
                 m("p.profile-username", "Timmy1236"),
-                m("a.profile-status#status", { "data-tooltip-i18n": "tooltip.pages.webmaster.profile.status", "onclick": loadStatus }, "Status")
+                m("a.profile-status#status", { "data-tooltip-i18n": "tooltip.pages.webmaster.profile.status", onclick: loadStatus }, "Status")
               ])
             ]),
             m(".profile-section", [
               m("p.profile-section-title", getTranslation("webmaster.socials-title")),
               m(".profile-socials", [
-                m("button.icon-button", { "onclick": () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.png" })),
-                m("button.icon-button", { "onclick": () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, m("img", { src: "./assets/images/icons/socials/discord.png" })),
-                m("button.icon-button", { "onclick": () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"), "data-tooltip": "STEAM_0:1:96376877" }, m("img", { src: "./assets/images/icons/socials/steam.png" })),
-                m("button.icon-button", { "onclick": () => window.open("mailto:timmy.1236@outlook.com", "_blank"), "data-tooltip": "timmy.1236@outlook.com" }, m("img", { src: "./assets/images/icons/socials/mail.png" }))
+                m("button.icon-button", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.png" })),
+                m("button.icon-button", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, m("img", { src: "./assets/images/icons/socials/discord.png" })),
+                m("button.icon-button", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"), "data-tooltip": "STEAM_0:1:96376877" }, m("img", { src: "./assets/images/icons/socials/steam.png" })),
+                m("button.icon-button", { onclick: () => window.open("mailto:timmy.1236@outlook.com", "_blank"), "data-tooltip": "timmy.1236@outlook.com" }, m("img", { src: "./assets/images/icons/socials/mail.png" }))
               ])
             ])
           ])
@@ -79,40 +79,40 @@ const webmasterPage = {
         content: [
           m("p", getTranslation("webmaster.interest.games")),
           m(".scroll-cover-container", [
-            m("a.cover", { "href": "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
+            m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/votv.webp" })
             ]),
-            m("a.cover", { "href": "https://namemc.com/profile/Timmy1236.1", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.minecraft" }, [
+            m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.minecraft" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/minecraft.webp" })
             ]),
-            m("a.cover", { "href": "https://hytl.tools/profile/timmy1236", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hytale" }, [
+            m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hytale" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/hytale.webp" })
             ]),
-            m("a.cover", { "href": "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.terraria" }, [
+            m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.terraria" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/terraria.webp" })
             ]),
-            m("a.cover", { "href": "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.warframe" }, [
+            m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.warframe" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/warframe.webp" })
             ]),
-            m("a.cover", { "href": "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
+            m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/roblox.webp" })
             ]),
-            m("a.cover", { "href": "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
+            m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/hl2.webp" })
             ]),
-            m("a.cover", { "href": "https://www.teamfortress.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.tf" }, [
+            m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.tf" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/tf.webp" })
             ]),
-            m("a.cover", { "href": "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal1" }, [
+            m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal1" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/portal1.webp" })
             ]),
-            m("a.cover", { "href": "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal2" }, [
+            m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal2" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/portal2.webp" })
             ]),
-            m("a.cover", { "href": "https://scp-wiki.wikidot.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.scp" }, [
+            m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.scp" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/scp.webp" })
             ]),
-            m("a.cover", { "href": "https://google.com", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.gta" }, [
+            m("a.cover", { href: "https://google.com", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.gta" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/gtav.webp" })
             ])
           ]),
@@ -130,7 +130,7 @@ const webmasterPage = {
             m("a.cover", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/salad-fingers.webp" })
             ]),
-            m("a.cover", { "href": "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
+            m("a.cover", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
               m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/madness-combat.webp" })
             ])
           ])
