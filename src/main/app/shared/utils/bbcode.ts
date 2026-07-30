@@ -5,15 +5,16 @@ const EMOJI_MAP: Record<string, string> = {
 type ReplaceFn = (match: string, ...groups: string[]) => string;
 
 /**
- * [b]texto[/b]                 |   Texto en negrita.
- * [i]texto[/i]                 |   Texto en italic.
- * [u]texto[/u]                 |   Texto con underline.
- * [color=red]texto[/color]     |   Texto en color usando CSS.
- * [url=...]texto[/url]         |   Texto hipervínculo.
- * [rainbow]texto[/rainbow]     |   Texto con efecto de arcoíris.
- * [br][/br]                    |   Nueva linea de texto.
- * [opacity]texto[/opacity]     |   Texto con opacidad.
- * [tooltip=...]texto[/tooltip] |   Texto con tooltip.
+ * [b]texto[/b]                       | Texto en negrita.
+ * [i]texto[/i]                       | Texto en italic.
+ * [u]texto[/u]                       | Texto con underline.
+ * [color=red]texto[/color]           | Texto en color usando CSS.
+ * [url=...]texto[/url]               | Texto hipervínculo.
+ * [rainbow]texto[/rainbow]           | Texto con efecto de arcoíris.
+ * [br][/br]                          | Nueva linea de texto.
+ * [opacity]texto[/opacity]           | Texto con opacidad.
+ * [tooltip=...]texto[/tooltip]       | Texto con tooltip.
+ * [dataset=key:value]texto[/dataset] | Permite ingresar un dataset y una key custom
  */
 const BBCODE_RULES: { pattern: RegExp, replace: string | ReplaceFn }[] = [
   {
@@ -54,6 +55,11 @@ const BBCODE_RULES: { pattern: RegExp, replace: string | ReplaceFn }[] = [
   {
     pattern: /\[tooltip=([^\]]+)\]([\s\S]*?)\[\/tooltip\]/gi,
     replace: (_match: string, text: string, content: string) => `<span data-tooltip='${text}' >${content}</span>`
+  },
+  {
+    pattern: /\[dataset=([a-zA-Z0-9_-]+):([^\]]+)\](.*?)\[\/dataset\]/gis,
+    replace: (_match: string, key: string, value: string, content: string) =>
+      `<span data-${key}='${value}'>${content}</span>`
   }
 ];
 
