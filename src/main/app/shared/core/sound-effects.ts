@@ -1,138 +1,117 @@
 import { getSettings } from "../core/settings-logic";
 import { cLog } from "./clog";
+
 const audioCtx = new AudioContext();
 
 interface SoundConfig {
-  audio: HTMLAudioElement
-  rate: number[]
+  buffer: AudioBuffer
   volume: number
+  rate: [number, number]
 }
 
-/**
- * Activa la lógica cuando el usuario interactúa con la pagina y este activado los efectos de sonidos.
- */
+const sounds = {} as Record<string, SoundConfig>;
+
 export function initializeSoundsEffects() {
   const { soundsEffects } = getSettings();
   if (!soundsEffects) return;
 
-  document.addEventListener("click", function () {
+  document.addEventListener("click", async () => {
     cLog("INFO", "Sound Effects", "Click detectado, activando: 'AudioContext'.");
-    audioCtx.resume();
+
+    await audioCtx.resume();
+    await _loadSounds();
+
     _audioLogic();
   }, { once: true });
 }
 
+async function _loadBuffer(path: string): Promise<AudioBuffer> {
+  const response = await fetch(path);
+  const arrayBuffer = await response.arrayBuffer();
+
+  return await audioCtx.decodeAudioData(arrayBuffer);
+}
+
+async function _registerSound(id: string, path: string, volume = 1, rate: [number, number] = [1, 1]) {
+  sounds[id] = {
+    buffer: await _loadBuffer(path),
+    volume,
+    rate
+  };
+}
+
+async function _loadSounds() {
+  await Promise.all([
+    // Genéricos
+    _registerSound("click", "/assets/sounds/sfx/mouse/mouse-down.mp3", 0.65),
+    _registerSound("clickUp", "/assets/sounds/sfx/mouse/mouse-up.mp3", 0.65),
+    _registerSound("buttonHover", "/assets/sounds/sfx/mouse/button-hover.mp3", 0.4),
+    _registerSound("buttonClick", "/assets/sounds/sfx/mouse/button-click.mp3", 0.4),
+    _registerSound("buttonRelease", "/assets/sounds/sfx/mouse/button-release.mp3", 0.4),
+    _registerSound("key", "/assets/sounds/sfx/key.mp3", 0.5, [0.9, 1.4]),
+
+    // Personalizados
+    _registerSound("banner", "/assets/sounds/sfx/mouse/meow.mp3", 0.5, [0.8, 1.2])
+  ]);
+}
+
+function _playSound(id: string) {
+  const sound = sounds[id];
+
+  if (!sound || audioCtx.state === "suspended") {
+    return;
+  }
+
+  const source = audioCtx.createBufferSource();
+  const gain = audioCtx.createGain();
+
+  source.buffer = sound.buffer;
+  source.playbackRate.value = Math.random() * (sound.rate[1] - sound.rate[0]) + sound.rate[0];
+
+  gain.gain.value = sound.volume; // gain.gain
+
+  source.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  source.start();
+}
+
 function _audioLogic() {
-  const createAudio = (path: string) => new Audio(`./assets/sounds/sfx/mouse/${path}.mp3`);
-
-  const SFX = {
-    click: createAudio("mouse-down"),
-    clickUp: createAudio("mouse-up"),
-    slugcat: createAudio("meow")
-  };
-
-  const soundConfig: Record<string, SoundConfig> = {
-    slugcat: { audio: SFX.slugcat, rate: [0.9, 1.2], volume: 0.75 }
-  };
-
-  /**
-   * Carga un sonido y devuelve una promesa con el buffer listo
-   */
-  function _loadSound(path: string) {
-    return fetch(path).then(r => r.arrayBuffer()).then(data => audioCtx.decodeAudioData(data));
-  }
-
-  /**
-   * Reproduce un AudioBuffer
-   */
-  function _playBuffer(buffer: AudioBuffer, volume = 1, rate = 1) {
-    if (!buffer) return; // si no hay buffer, no reproducir buffer, JAJAJ
-    if (audioCtx.state === "suspended") return; // Si el usuario no interactuó con la pagina, ignoraremos el buffer, esto evitara el problema que se acumule varios efectos de sonidos.
-
-    const source = audioCtx.createBufferSource();
-    const gainNode = audioCtx.createGain();
-
-    source.buffer = buffer;
-    source.playbackRate.value = rate;
-    source.connect(gainNode);
-
-    gainNode.gain.value = volume;
-    gainNode.connect(audioCtx.destination);
-
-    source.start(0);
-  }
-
-  /**
-   * Reproduce un audio junto con su configuración de rate y volumen
-   */
-  function _playConfiguredSound({ audio, rate, volume }: SoundConfig) {
-    if (audio.paused) {
-      audio.preservesPitch = false;
-      audio.playbackRate = Math.random() * (rate[1] - rate[0]) + rate[0];
-      audio.volume = volume;
-      audio.play();
-    }
-  }
-
-  // ==== Buffers de los botones====
-  let hoverBuffer: AudioBuffer;
-  _loadSound("/assets/sounds/sfx/mouse/button-hover.mp3").then((buffer) => { hoverBuffer = buffer; });
-  let clickBuffer: AudioBuffer;
-  _loadSound("/assets/sounds/sfx/mouse/button-click.mp3").then((buffer) => { clickBuffer = buffer; });
-  let releaseBuffer: AudioBuffer;
-  _loadSound("/assets/sounds/sfx/mouse/button-release.mp3").then((buffer) => { releaseBuffer = buffer; });
-
-  // ==== Mouse ====
+  // === Mouse
   document.addEventListener("mouseover", (event: MouseEvent) => {
     if (event.target instanceof HTMLElement) {
-      const button = event.target.closest("button");
-      if (button) {
-        const relatedTarget = event.relatedTarget as HTMLElement | null;
-        if (relatedTarget && button.contains(relatedTarget)) return;
-        _playBuffer(hoverBuffer, 0.65);
+      const soundKey = event.target.dataset.soundHover;
+      if (soundKey) {
+        _playSound(soundKey);
       }
     }
   });
 
   document.addEventListener("mousedown", (event: MouseEvent) => {
-    SFX.click.volume = 0.65;
-    SFX.click.play();
+    _playSound("click");
 
     if (event.target instanceof HTMLElement) {
-      const button = event.target.closest("button");
-      if (button) {
-        const relatedTarget = event.relatedTarget as HTMLElement | null;
-        if (relatedTarget && button.contains(relatedTarget)) return;
-        _playBuffer(clickBuffer, 0.4);
-      }
-
-      const cfg = soundConfig[event.target.id];
-      if (cfg) {
-        _playConfiguredSound(cfg);
+      const soundKey = event.target.dataset.soundClick;
+      if (soundKey) {
+        _playSound(soundKey);
       }
     }
   });
 
   document.addEventListener("mouseup", (event: MouseEvent) => {
-    SFX.clickUp.volume = 0.65;
-    SFX.clickUp.play();
+    _playSound("clickUp");
 
     if (event.target instanceof HTMLElement) {
-      const button = event.target.closest("button");
-      if (button) {
-        const relatedTarget = event.relatedTarget as HTMLElement | null;
-        if (relatedTarget && button.contains(relatedTarget)) return;
-        _playBuffer(releaseBuffer, 0.4);
+      const soundKey = event.target.dataset.soundRelease;
+      if (soundKey) {
+        _playSound(soundKey);
       }
     }
   });
+  // === Mouse
 
-  // ==== Otros buffers =====
-  let keyBuffer: AudioBuffer;
-  _loadSound("/assets/sounds/sfx/key.mp3").then((buffer) => { keyBuffer = buffer; });
-
-  // ==== Keyboard ====
+  // Teclado
   document.addEventListener("keydown", () => {
-    _playBuffer(keyBuffer, 0.5, 0.9 + Math.random() * 0.5);
+    _playSound("key");
   });
 }
