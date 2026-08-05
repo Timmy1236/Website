@@ -121,28 +121,22 @@
       "title": "Credits"
     },
     "buttonWall": {
-      "title": "Button Wall (Outdated)",
+      "title": "Button Wall",
       "list": {
-        "neighbors": "Nekoweb Neighbors",
-        "likes": "Cool Sites",
-        "myButton": "Me"
+        "neighbors": "Nekoweb Followers",
+        "likes": "Cool Sites!",
+        "myButton": "... Me."
       },
       "notes": {
         "chantu": "The first person I met on Nekoweb who also happened to speak Spanish. If it wasn't for Chantu, I probably would've stayed on GitHub Pages because of how intimidating this whole site looked. Super friendly!",
         "slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
         "nyani58": "WHERE THE HELL AM I???",
-        "nogood-angel": "Every time I visit Nekoweb, I see this same site sitting at the top of the 'latest updates' category. How? How can someone release so many updates? How do they even come up with all that stuff?",
-        "someones-insane": "I don't know why... but the homepage image reminds me way too much of old Flash point-and-click horror games where the clickable objects looked ridiculously different from everything else. I kinda wish it was an actual Flash game running in Ruffle.",
-        "yefreitor": "There's a button to smoke a joint right on the homepage. What more do you need?",
-        "jovidmtp": "Poor soul, making a website that's compatible with ancient browsers! Meanwhile mine requires the latest version of Chrome and even then it probably won't load correctly!",
-        "cbz": "Sad to see YouPlock shutting down soon. It was silly, but it had potential considering how complicated something like that must've been to build. Wishing the best for future projects.",
-        "ellen": "A list of hard-to-obtain badges? I like that idea. I should add more Roblox stuff to my site.",
-        "amoeba": "No, the screenshot isn't broken. The page loaded correctly. That's just how the landing page looks. I spent like a minute staring at the screen waiting for something to happen before realizing I had to click the title to continue. :)",
-        "lucksiyo": "This feels way smoother than what I'm currently trying to build myself.",
         "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
-        "moosyu": "I stole the code for my form directly from this website and the owner doesn't know it :youtube_emoji_biting_nails:",
-        "timmy": "... That's me.",
         "loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site."
+      },
+      "tooltip": {
+        "placeholder": "[ PLACEHOLDER BUTTON ]",
+        "timmy": "Click me to copy the link!"
       }
     }
   },

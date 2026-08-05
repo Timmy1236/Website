@@ -9,6 +9,7 @@ export interface ButtonSite {
   button: string
   preview: string
   note?: string
+  tooltip?: string
 }
 
 const overlay = document.createElement("div");

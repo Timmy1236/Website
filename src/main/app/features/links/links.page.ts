@@ -20,9 +20,9 @@ const Others = {
           m(".website-buttons",
             neighborSites.map(site =>
               m("a", {
+                "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
-                onmouseenter: (e: MouseEvent) =>
-                  showButtonOverlay(site, e.currentTarget as HTMLElement),
+                onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
                 onmouseleave: () => hideButtonOverlay()
               },
               m("img", { src: site.button, alt: site.url })
@@ -34,9 +34,9 @@ const Others = {
           m(".website-buttons",
             likesSite.map(site =>
               m("a", {
+                "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
-                onmouseenter: (e: MouseEvent) =>
-                  showButtonOverlay(site, e.currentTarget as HTMLElement),
+                onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
                 onmouseleave: () => hideButtonOverlay()
               },
               m("img", { src: site.button, alt: site.url })
@@ -47,6 +47,7 @@ const Others = {
           m("h2", getTranslation("links.buttonWall.list.myButton")),
           m(".website-buttons",
             m("a", {
+              "data-tooltip-i18n": MyButton.tooltip ? MyButton.tooltip : null,
               onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: () => hideButtonOverlay()
             },
             m("img", {
