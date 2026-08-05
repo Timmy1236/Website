@@ -53,6 +53,7 @@ const webmasterPage = {
           m(".scroll-tag-container", [
             m(".tag", [m("img", { src: _imgIcon("typescript") }), m("img", { src: _imgIcon("javascript") }), m("a", "TypeScript | Javascript")]),
             m(".tag", [m("img", { src: _imgIcon("css") }), m("a", "CSS")]),
+            m(".tag", [m("img", { src: _imgIcon("openjdk") }), m("a", "Java")]),
             m(".tag", [m("img", { src: _imgIcon("csharp") }), m("a", "C#")]),
             m(".tag", [m("img", { src: _imgIcon("godotengine") }), m("a", "GDScript")]),
             m(".tag", [m("img", { src: _imgIcon("python") }), m("a", "Python")]),
