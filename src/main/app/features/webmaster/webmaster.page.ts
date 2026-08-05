@@ -99,6 +99,9 @@ const webmasterPage = {
             m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
               m("img.cover-image", { src: _CoverGames("roblox") })
             ]),
+            m("a.cover", { href: "https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.isaac" }, [
+              m("img.cover-image", { src: _CoverGames("isaac") })
+            ]),
             m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
               m("img.cover-image", { src: _CoverGames("hl2") })
             ]),
