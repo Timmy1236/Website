@@ -5,6 +5,10 @@ import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import panel from "../../shared/components/panel.ts";
 
+const _imgIcon = (x: string) => `/assets/images/pages/webmaster/icons/${x}.svg`;
+const _CoverGames = (x: string) => `/assets/images/pages/webmaster/covers/games/${x}.webp`;
+const _CoverSeries = (x: string) => `/assets/images/pages/webmaster/covers/series/${x}.webp`;
+
 const webmasterPage = {
   oncreate() {
     setCurrentPath(m.route, "user");
@@ -47,29 +51,27 @@ const webmasterPage = {
         content: [
           m("p", getTranslation("webmaster.tech-stack.languages")),
           m(".scroll-tag-container", [
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/typescript.svg" }), m("a", { href: "https://www.typescriptlang.org/" }, "TypeScript")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/csharp.svg" }), m("a", { href: "https://dotnet.microsoft.com/es-es/languages/csharp" }, "C#")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/godotengine.svg" }), m("a", { href: "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" }, "GDScript")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/python.svg" }), m("a", { href: "https://www.python.org/" }, "Python")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/lua.svg" }), m("a", { href: "https://www.lua.org/" }, "Lua")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/javascript.svg" }), m("a", { href: "https://developer.mozilla.org/es/docs/Web/JavaScript" }, "JavaScript")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/html.svg" }), m("a", { href: "https://dev.w3.org/html5/spec-LC/" }, "HTML")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/css.svg" }), m("a", { href: "https://www.w3.org/Style/CSS/Overview.en.html" }, "CSS")])
+            m(".tag", [m("img", { src: _imgIcon("typescript") }), m("img", { src: _imgIcon("javascript") }), m("a", "TypeScript | Javascript")]),
+            m(".tag", [m("img", { src: _imgIcon("css") }), m("a", "CSS")]),
+            m(".tag", [m("img", { src: _imgIcon("csharp") }), m("a", "C#")]),
+            m(".tag", [m("img", { src: _imgIcon("godotengine") }), m("a", "GDScript")]),
+            m(".tag", [m("img", { src: _imgIcon("python") }), m("a", "Python")]),
+            m(".tag", [m("img", { src: _imgIcon("lua") }), m("a", "Lua")])
           ]),
           m("p", getTranslation("webmaster.tech-stack.infra")),
           m(".scroll-tag-container", [
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/redhat.svg" }), m("a", { href: "https://redhatofficial.github.io/" }, "Red Hat")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/debian.svg" }), m("a", { href: "https://www.debian.org/" }, "Debian")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/mysql.svg" }), m("a", { href: "https://www.mysql.com/" }, "MySQL")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/mariadb.svg" }), m("a", { href: "https://mariadb.org/" }, "MariaDB")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/sqlite.svg" }), m("a", { href: "https://sqlite.org/" }, "SQLite")])
+            m(".tag", [m("img", { src: _imgIcon("redhat") }), m("p", "Red Hat")]),
+            m(".tag", [m("img", { src: _imgIcon("debian") }), m("p", "Debian")]),
+            m(".tag", [m("img", { src: _imgIcon("mysql") }), m("p", "MySQL")]),
+            m(".tag", [m("img", { src: _imgIcon("mariadb") }), m("p", "MariaDB")]),
+            m(".tag", [m("img", { src: _imgIcon("sqlite") }), m("p", "SQLite")])
           ]),
           m("p", getTranslation("webmaster.tech-stack.software")),
           m(".scroll-tag-container", [
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/godotengine.svg" }), m("a", { href: "https://github.com/godotengine/godot", target: "_blank" }, "Godot")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/blender.svg" }), m("a", { href: "https://github.com/blender/blender", target: "_blank" }, "Blender")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/krita.svg" }), m("a", { href: "https://github.com/kde/krita", target: "_blank" }, "Krita")]),
-            m(".tag", [m("img", { src: "/assets/images/pages/webmaster/icons/aseprite.svg" }), m("a", { href: "https://github.com/aseprite/aseprite", target: "_blank" }, "Aseprite")])
+            m(".tag", [m("img", { src: _imgIcon("godotengine") }), m("p", "Godot")]),
+            m(".tag", [m("img", { src: _imgIcon("blender") }), m("p", "Blender")]),
+            m(".tag", [m("img", { src: _imgIcon("krita") }), m("p", "Krita")]),
+            m(".tag", [m("img", { src: _imgIcon("aseprite") }), m("p", "Aseprite")])
           ])
         ]
       }),
@@ -80,58 +82,58 @@ const webmasterPage = {
           m("p", getTranslation("webmaster.interest.games")),
           m(".scroll-cover-container", [
             m("a.cover", { href: "https://mrdrnose.itch.io/votv", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.votv" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/votv.webp" })
+              m("img.cover-image", { src: _CoverGames("votv") })
             ]),
             m("a.cover", { href: "https://namemc.com/profile/Timmy1236.1", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.minecraft" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/minecraft.webp" })
+              m("img.cover-image", { src: _CoverGames("minecraft") })
             ]),
             m("a.cover", { href: "https://hytl.tools/profile/timmy1236", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hytale" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/hytale.webp" })
+              m("img.cover-image", { src: _CoverGames("hytale") })
             ]),
             m("a.cover", { href: "https://store.steampowered.com/app/105600/Terraria/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.terraria" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/terraria.webp" })
+              m("img.cover-image", { src: _CoverGames("terraria") })
             ]),
             m("a.cover", { href: "https://store.steampowered.com/app/230410/Warframe/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.warframe" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/warframe.webp" })
+              m("img.cover-image", { src: _CoverGames("warframe") })
             ]),
             m("a.cover", { href: "https://www.roblox.com/users/89179192/profile", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.roblox" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/roblox.webp" })
+              m("img.cover-image", { src: _CoverGames("roblox") })
             ]),
             m("a.cover", { href: "https://www.half-life.com/en/home/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.hl" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/hl2.webp" })
+              m("img.cover-image", { src: _CoverGames("hl2") })
             ]),
             m("a.cover", { href: "https://www.teamfortress.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.tf" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/tf.webp" })
+              m("img.cover-image", { src: _CoverGames("tf") })
             ]),
             m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal1" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/portal1.webp" })
+              m("img.cover-image", { src: _CoverGames("portal1") })
             ]),
             m("a.cover", { href: "https://www.thinkwithportals.com/index.php", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.portal2" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/portal2.webp" })
+              m("img.cover-image", { src: _CoverGames("portal2") })
             ]),
             m("a.cover", { href: "https://scp-wiki.wikidot.com/", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.scp" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/scp.webp" })
+              m("img.cover-image", { src: _CoverGames("scp") })
             ]),
             m("a.cover", { href: "https://google.com", "data-tooltip-i18n": "tooltip.pages.webmaster.interests.gta" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/games/gtav.webp" })
+              m("img.cover-image", { src: _CoverGames("gtav") })
             ])
           ]),
           m("p", getTranslation("webmaster.interest.series")),
           m(".scroll-cover-container", [
             m("a.cover", { href: "https://www.imdb.com/es/title/tt32792180/" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/tres-acordes.webp" })
+              m("img.cover-image", { src: _CoverSeries("tres-acordes") })
             ]),
             m("a.cover", { href: "https://www.imdb.com/es/title/tt12074628/" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/smiling-friends.webp" })
+              m("img.cover-image", { src: _CoverSeries("smiling-friends") })
             ]),
             m("a.cover", { href: "https://www.imdb.com/es/title/tt27610198/" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/tadc.webp" })
+              m("img.cover-image", { src: _CoverSeries("tadc") })
             ]),
             m("a.cover", { href: "https://www.imdb.com/es/title/tt1830238/" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/salad-fingers.webp" })
+              m("img.cover-image", { src: _CoverSeries("salad-fingers") })
             ]),
             m("a.cover", { href: "https://www.imdb.com/es/title/tt2072604/", "data-tooltip": "Madness Combat" }, [
-              m("img.cover-image", { src: "/assets/images/pages/webmaster/covers/series/madness-combat.webp" })
+              m("img.cover-image", { src: _CoverSeries("madness-combat") })
             ])
           ])
         ]
