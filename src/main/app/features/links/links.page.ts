@@ -116,19 +116,6 @@ const Others = {
           }),
           m("textarea", "<iframe src=\"https://webtiles.kicya.net/e/timmy.nekoweb.org\" width=\"250\" height=\"270\" frameborder=\"0\"></iframe>".trim())
         ])
-      }),
-
-      m(panel, {
-        title: "TV TIME (SUPER W.I.P)",
-        content: m("div.iframe.container", [
-          m("iframe", {
-            src: "/pages/tv-time.html",
-            width: "300",
-            height: "314",
-            frameborder: "0"
-          }),
-          m("textarea", "<iframe src=\"https://timmy.nekoweb.org/pages/tv-time\" width=\"300\" height=\"314\" frameborder=\"0\"></iframe>".trim())
-        ])
       })
     ]);
   }
