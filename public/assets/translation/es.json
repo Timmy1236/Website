@@ -161,6 +161,9 @@
         "profile": {
           "status": "Clickea para saber si me encuentro conectado ahora mismo en Discord o no."
         }
+      },
+      "others": {
+        "follow": "Seguirme"
       }
     }
   },

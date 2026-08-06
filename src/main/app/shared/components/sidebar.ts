@@ -62,17 +62,6 @@ function _externalNavigate(url: string) {
   setTimeout(() => { window.location.href = url; }, 150); // Un mini delay extra :3
 }
 
-function _getNekoStat(type: string) {
-  const el = document.getElementById("nekoweb-stats");
-  if (el) {
-    let count = el.getAttribute(`data-${type}`);
-    if (count == "<!--# views -->") count = "0,000";
-    if (count == "<!--# followers -->") count = "00";
-    return count;
-  }
-  return "...";
-}
-
 export default {
   view: () =>
     m("div.sidebar", [
@@ -111,26 +100,6 @@ export default {
           m(".panel-content", [
             m(".sidebar-links-container", [
               ..._dataButtons()
-            ])
-          ])
-        ])
-      ]),
-
-      // Nekoweb Data Panel
-      // NOTE: SUUUUUPER WIP, ESTO NECESITA MAS DESARROLLO.
-      m(".panel-frame", [
-        m(".panel.nav-content", [
-          m(".panel-header", [
-            m("p", getTranslation("sidebar.nekoweb.title")),
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
-            ])
-          ]),
-          m(".panel-content", [
-            m("div.stats-container", [
-              m("p", [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.visits")), m("span", { style: "font-size: 24px;" }, _getNekoStat("views"))]),
-              m("p", { style: "margin-bottom:10px;" }, [m("span", { style: "font-size: 24px;" }, getTranslation("sidebar.nekoweb.buttons.followers")), m("span", { style: "font-size: 24px;" }, _getNekoStat("followers"))]),
-              navBtn("sidebar.nekoweb.buttons.follow", true, "https://nekoweb.org/follow/timmy.nekoweb.org/", "follow")
             ])
           ])
         ])
