@@ -5,7 +5,7 @@ import { getTranslation } from "../../shared/core/i18n.ts";
 import { showToast } from "../../shared/components/toast.ts";
 import panel from "../../shared/components/panel.ts";
 
-interface achievement {
+interface Achievement {
   id: string
   name: string
   description: string
@@ -26,7 +26,7 @@ const AchievementsPage = {
       m(panel, {
         title: getTranslation("achievements.title"),
         content: m(".achievements-list",
-          list.map((achievement: achievement) =>
+          list.map((achievement: Achievement) =>
             m(".achievement-card", { class: achievement.unlocked ? "unlocked" : "" }, [
               m(".achievement-icon", achievement.unlocked ? "?" : "?"),
               m(".achievement-info", [

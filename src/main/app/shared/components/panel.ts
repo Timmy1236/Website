@@ -1,13 +1,13 @@
 import m from "mithril";
 
-interface panelAttrs {
+interface PanelAttrs {
   title: string
   content?: m.Children
 }
 
-const panel: m.ClosureComponent<panelAttrs> = () => {
+const panel: m.ClosureComponent<PanelAttrs> = () => {
   return {
-    view(vnode: m.Vnode<panelAttrs>) {
+    view(vnode: m.Vnode<PanelAttrs>) {
       const { content, title } = vnode.attrs;
       return m(".panel-frame", [
         m(".panel", [
