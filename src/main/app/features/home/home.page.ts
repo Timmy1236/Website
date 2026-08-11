@@ -3,8 +3,20 @@ import { getLatest } from "./home.latest.ts";
 import { getTranslation } from "../../shared/core/i18n.js";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import type { Latest } from "./entries";
 import panel from "../../shared/components/panel.ts";
+
+export interface Entry {
+  title: string
+  url: string
+  date: string
+  description: string
+  preview: string
+}
+
+export interface Latest {
+  blog: Entry
+  changelog: Entry
+}
 
 function renderPreview(src: string) {
   const extension = src.split(".").pop()?.toLowerCase();
