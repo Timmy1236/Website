@@ -1,5 +1,5 @@
 import m from "mithril";
-import { cLog } from "./shared/core/clog.ts";
+import { cLog } from "./shared/utils/clog.ts";
 
 // Globals
 import { i18nReady } from "./shared/core/i18n.ts";
@@ -7,7 +7,7 @@ import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
 import { initializeSettings } from "./shared/core/settings-logic.ts";
 import { initializeAutoplay } from "./shared/core/autoplay.ts";
 import { initializeSoundsEffects } from "./shared/core/sound-effects.ts";
-import "./shared/components/tooltip.ts";
+import "./shared/handlers/tooltip.ts";
 import "./shared/components/panel-buttons.ts";
 
 // Pages

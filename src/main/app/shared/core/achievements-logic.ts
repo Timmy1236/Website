@@ -1,5 +1,5 @@
 import { showToast } from "../components/toast";
-import { cLog } from "./clog";
+import { cLog } from "../utils/clog";
 
 /**
  * id            → Clave única.

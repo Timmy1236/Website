@@ -1,5 +1,5 @@
 import { showToast } from "../../shared/components/toast";
-import { cLog } from "../../shared/core/clog";
+import { cLog } from "../../shared/utils/clog";
 
 export interface LanyardResponse {
   data: Data

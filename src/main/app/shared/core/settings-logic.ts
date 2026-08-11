@@ -1,4 +1,4 @@
-import { cLog } from "./clog";
+import { cLog } from "../utils/clog";
 const SETTINGS_VERSION = "3";
 
 export interface Settings {
