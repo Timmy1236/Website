@@ -8,7 +8,7 @@ import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig([
   {
-    ignores: ["public/**", "dist/**", "node_modules/**", "scripts/**"]
+    ignores: ["public/**", "node_modules/**"]
   },
   stylistic.configs.recommended,
   js.configs.recommended,

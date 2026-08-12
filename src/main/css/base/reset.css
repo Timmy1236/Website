@@ -16,7 +16,9 @@ a[target="_blank"]::after {
 }
 
 html {
+  /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
   scrollbar-width: none;
+  /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
   scrollbar-color: var(--color-foreground) transparent; 
 }
 

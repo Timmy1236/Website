@@ -1,25 +1,26 @@
 {
-  "name": "timmys-digital-dumpster",
-  "version": "1.0.0",
+  "name": "timmys-dumpster",
+  "version": "2.1.0",
   "description": "Una simple página web que contendrá información básica de mí y de todos los proyectos que haré en algún futuro.",
   "browserslist": [
-    ">0.3%, defaults and fully supports es6-module and baseline widely available"
+    "defaults and fully supports es6-module or baseline widely available, not op_mini all, not kaios > 0, not ucandroid > 0, not qqandroid > 0"
   ],
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1",
   "scripts": {
-    "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true })\"",
+    "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true }); fs.rmSync('public/content', { recursive: true, force: true })\"",
     "prebuild": "pnpm clean",
-    "build": "concurrently \"npm:eleventy\" \"npm:js\" \"npm:css\" \"npm:css:pages\"",
-    "dev": "concurrently \"npm:eleventy:watch\" \"npm:js:watch\" \"npm:css:watch\" \"npm:css:pages:watch\"",
-    "lint": "pnpm eslint",
-    "stylelint": "pnpm exec stylelint \"**/*.css\"",
-    "eleventy": "pnpm exec eleventy",
-    "eleventy:watch": "pnpm exec eleventy --watch",
-    "js": "esbuild src/main/app/app.ts --bundle --minify --format=esm --outfile=public/dist/main/app.js",
-    "js:watch": "esbuild src/main/app/app.ts --bundle --minify --format=esm --watch --sourcemap --outfile=public/dist/main/app.js",
-    "css": "esbuild src/main/css/main.css --bundle --minify --external:/assets/* --outfile=public/dist/main/styles.css",
-    "css:watch": "esbuild src/main/css/main.css --bundle --minify --watch --external:/assets/* --outfile=public/dist/main/styles.css",
-    "css:pages": "esbuild src/library/css/main.css --bundle --minify --external:/assets/* --outfile=public/dist/pages.css",
-    "css:pages:watch": "esbuild src/library/css/main.css --bundle --minify --watch --external:/assets/*  --outfile=public/dist/pages.css",
+    "build": "concurrently \"pnpm:eleventy\" \"pnpm:esbuild\"",
+    "dev": "concurrently \"pnpm:eleventy:watch\" \"pnpm:esbuild:watch\"",
+    "lint": "eslint .",
+    "stylelint": "stylelint \"**/*.css\"",
+    "typecheck": "tsc --noEmit",
+    "eleventy": "eleventy --quiet",
+    "eleventy:watch": "eleventy --quiet --watch",
+    "esbuild": "node scripts/esbuild.mjs build",
+    "esbuild:watch": "node scripts/esbuild.mjs watch",
     "purgecss": "node scripts/purgecss-report.mjs"
   },
   "repository": {
@@ -33,7 +34,7 @@
   "author": "Timmy1236 (https://timmy.nekoweb.org/)",
   "licenses": [
     {
-      "type": "CC BY-NC-SA 4.0",
+      "type": "GPL-3.0-only",
       "url": "https://github.com/Timmy1236/Website/blob/main/LICENSE"
     }
   ],
@@ -47,17 +48,17 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/mithril": "^2.2.8",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "concurrently": "^10.0.4",
-    "esbuild": "^0.28.1",
-    "eslint": "^10.8.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.8.1",
     "eslint-plugin-compat": "^7.0.2",
     "purgecss": "^8.0.0",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-no-unsupported-browser-features": "^8.1.1",
-    "@typescript/native": "npm:typescript@^7.0.2",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "typescript-eslint": "^8.66.0"
+    "typescript-eslint": "^8.67.0"
   },
   "dependencies": {
     "mithril": "^2.3.8"

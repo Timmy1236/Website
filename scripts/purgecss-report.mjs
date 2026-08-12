@@ -21,7 +21,8 @@ for (const result of results) {
 
 if (total === 0) {
   console.log("PurgeCSS: no unused selectors found.");
-} else {
+}
+else {
   console.log(`\nPurgeCSS: ${total} unused selector candidates found.`);
   console.log("Review before deleting; dynamic classes may need safelist.");
 }

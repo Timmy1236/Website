@@ -7,7 +7,6 @@ export default {
     "plugin/no-unsupported-browser-features": [
       true,
       {
-        browsers: [">0.3%, defaults and fully supports es6-module and baseline widely available"],
         ignorePartialSupport: true
       }
     ]

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
@@ -9,7 +10,7 @@ const groups = [
   ["feat", { title: "Añadidos", card: "new", prefixes: ["feat"] }],
   ["fix", { title: "Arreglos", card: "fix", prefixes: ["fix"] }],
   ["change", { title: "Cambios", card: "change", prefixes: ["refactor", "perf", "style"] }],
-  ["other", { title: "Otros", card: "info", prefixes: [] }],
+  ["other", { title: "Otros", card: "info", prefixes: [] }]
 ];
 
 const options = parseArgs(process.argv.slice(2));
@@ -38,7 +39,8 @@ if (options.write) {
   console.log(`Changelog actualizado: ${options.file}`);
   console.log(`Rango: ${range.label}`);
   console.log(`Commits: ${commits.length}`);
-} else {
+}
+else {
   console.log(`<!-- Rango: ${range.label} | Commits: ${commits.length} -->`);
   console.log(html);
 }
@@ -52,7 +54,7 @@ function parseArgs(args) {
     write: false,
     lastTag: false,
     tags: false,
-    help: false,
+    help: false
   };
 
   for (let index = 0; index < args.length; index += 1) {
@@ -83,7 +85,7 @@ function resolveRange({ from, to, since, lastTag }) {
   if (since) {
     return {
       args: [`--since=${since}`],
-      label: `desde ${since} hasta ${to}`,
+      label: `desde ${since} hasta ${to}`
     };
   }
 
@@ -92,20 +94,20 @@ function resolveRange({ from, to, since, lastTag }) {
   if (!start) {
     return {
       args: [],
-      label: `todo el historial hasta ${to}`,
+      label: `todo el historial hasta ${to}`
     };
   }
 
   return {
     args: [`${start}..${to}`],
-    label: `${start}..${to}`,
+    label: `${start}..${to}`
   };
 }
 
 function getLatestTag() {
   const tags = runGit(["tag", "--sort=-creatordate"])
     .split("\n")
-    .map((tag) => tag.trim())
+    .map(tag => tag.trim())
     .filter(Boolean);
 
   if (tags.length === 0) {
@@ -121,7 +123,7 @@ function getCommits(range) {
 
   return raw
     .split("\x1e")
-    .map((entry) => entry.trim())
+    .map(entry => entry.trim())
     .filter(Boolean)
     .map((entry) => {
       const [fullHash, shortHash, subject] = entry.split("\x1f");
@@ -137,14 +139,14 @@ function parseSubject(subject) {
     return {
       prefix: "other",
       scope: undefined,
-      message: subject,
+      message: subject
     };
   }
 
   return {
     prefix: match[1].toLowerCase(),
     scope: match[2],
-    message: match[3],
+    message: match[3]
   };
 }
 
@@ -195,7 +197,7 @@ function writeGeneratedBlock(file, html) {
   if (content.includes(markerStart) && content.includes(markerEnd)) {
     const nextContent = content.replace(
       new RegExp(`${escapeRegExp(markerStart)}[\\s\\S]*?${escapeRegExp(markerEnd)}`),
-      block,
+      block
     );
     writeFileSync(file, nextContent);
     return;
@@ -208,7 +210,8 @@ function writeGeneratedBlock(file, html) {
 function runGit(args) {
   try {
     return execFileSync("git", args, { encoding: "utf8" }).trim();
-  } catch (error) {
+  }
+  catch (error) {
     const detail = error.stderr?.toString().trim() || error.message;
     exitWithError(`Git falló: ${detail}`);
   }
@@ -219,7 +222,7 @@ function escapeHtml(value) {
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
+    .replaceAll("\"", "&quot;");
 }
 
 function escapeRegExp(value) {
