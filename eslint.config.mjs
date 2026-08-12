@@ -33,7 +33,6 @@ export default defineConfig([
       "@stylistic/quote-props": ["error", "as-needed"],
       "@stylistic/indent": ["error", 2],
       "@stylistic/comma-dangle": ["error", "never"],
-      "@stylistic/eol-last": ["error", "never"],
       "@stylistic/no-tabs": "error",
       "@stylistic/max-statements-per-line": ["error", { max: 2 }]
     }
