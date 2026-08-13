@@ -51,13 +51,13 @@ const webmasterPage = {
         content: [
           m("p", getTranslation("webmaster.tech-stack.languages")),
           m(".scroll-tag-container", [
-            m(".tag", [m("img", { src: _imgIcon("typescript") }), m("img", { src: _imgIcon("javascript") }), m("a", "TypeScript | Javascript")]),
-            m(".tag", [m("img", { src: _imgIcon("css") }), m("a", "CSS")]),
-            m(".tag", [m("img", { src: _imgIcon("openjdk") }), m("a", "Java")]),
-            m(".tag", [m("img", { src: _imgIcon("csharp") }), m("a", "C#")]),
-            m(".tag", [m("img", { src: _imgIcon("godotengine") }), m("a", "GDScript")]),
-            m(".tag", [m("img", { src: _imgIcon("python") }), m("a", "Python")]),
-            m(".tag", [m("img", { src: _imgIcon("lua") }), m("a", "Lua")])
+            m(".tag", [m("img", { src: _imgIcon("typescript") }), m("img", { src: _imgIcon("javascript") }), m("p", "TypeScript | JavaScript")]),
+            m(".tag", [m("img", { src: _imgIcon("html") }), m("img", { src: _imgIcon("css") }), m("p", "HTML | CSS")]),
+            m(".tag", [m("img", { src: _imgIcon("openjdk") }), m("p", "Java")]),
+            m(".tag", [m("img", { src: _imgIcon("csharp") }), m("p", "C#")]),
+            m(".tag", [m("img", { src: _imgIcon("godotengine") }), m("p", "GDScript")]),
+            m(".tag", [m("img", { src: _imgIcon("python") }), m("p", "Python")]),
+            m(".tag", [m("img", { src: _imgIcon("lua") }), m("p", "Lua")])
           ]),
           m("p", getTranslation("webmaster.tech-stack.infra")),
           m(".scroll-tag-container", [
