@@ -36,6 +36,10 @@ body {
   cursor: var(--normal-mouse-image), auto;
 }
 
+label {
+  cursor: var(--normal-mouse-image), auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -44,10 +48,6 @@ p, label, a, span  {
   font-size: clamp(1rem, 1.75vw + 0.25rem, 1.60rem);
   color: var(--color-text);
   letter-spacing: -0.3px;
-}
-
-button, a:hover {
-  cursor: var(--hover-mouse-image), pointer;
 }
 
 select {
@@ -61,6 +61,10 @@ select {
 
 select:open {
   background-color: var(--color-background-color);
+}
+
+button:hover, a:hover, input:hover, select:hover {
+  cursor: var(--hover-mouse-image), pointer;
 }
 
 .readable-font * {
