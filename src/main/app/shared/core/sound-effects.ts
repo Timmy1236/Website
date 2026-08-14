@@ -113,7 +113,16 @@ function _audioLogic() {
   // === Mouse
 
   // Teclado
+  let keyDown = false;
+
   document.addEventListener("keydown", () => {
+    if (keyDown) return;
+    keyDown = true;
+
     _playSound("key");
+  });
+
+  document.addEventListener("keyup", () => {
+    keyDown = false;
   });
 }
