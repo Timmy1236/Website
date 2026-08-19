@@ -5,6 +5,34 @@ import TabPanel from "../../shared/components/tab-panel.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 
+const themes = [
+  {
+    value: "simple-purple",
+    image: "/assets/images/pages/configuration/purple.webp",
+    label: "Purple"
+  },
+  {
+    value: "simple-green",
+    image: "/assets/images/pages/configuration/green.webp",
+    label: "Green"
+  },
+  {
+    value: "simple-dark",
+    image: "/assets/images/pages/configuration/dark.webp",
+    label: "Dark"
+  },
+  {
+    value: "omori-darkspace",
+    image: "/assets/images/pages/configuration/omori.webp",
+    label: "Darkspace",
+    unlocked: () => isUnlocked("oyasumi")
+  }
+];
+
+const selectTheme = (e: Event) => {
+  draft.theme = (e.target as HTMLInputElement).value;
+};
+
 const ConfigurationPage = {
   oncreate() {
     setCurrentPath(m.route, "settings");
@@ -43,21 +71,26 @@ const ConfigurationPage = {
                 m(".settings-group", [
                   m("h2.group-title", getTranslation("settings.sections.themes")),
 
-                  m(".option", [
-                    m("select#theme-select", {
-                      value: draft.theme,
-                      onchange: (e: Event) => {
-                        draft.theme = (e.target as HTMLSelectElement).value;
-                      }
-                    }, [
-                      m("option", { value: "simple-purple" }, "[FLAT] - Purple"),
-                      m("option", { value: "simple-dark" }, "[FLAT] - Dark"),
-                      m("option", { value: "simple-red" }, "[FLAT] - Red"),
-                      m("option", { value: "simple-green" }, "[FLAT] - Green"),
-                      m("option", { value: "simple-blue" }, "[FLAT] - Blue"),
-                      isUnlocked("oyasumi") ? m("option", { value: "omori-darkspace" }, "[FLAT] - OMORI") : null
-                    ])
-                  ])
+                  m(".option-list", themes
+                    .filter(theme => !theme.unlocked || theme.unlocked())
+                    .map(theme =>
+                      m("label.option-list-item", [
+                        m("input", {
+                          type: "radio",
+                          name: "theme",
+                          value: theme.value,
+                          checked: draft.theme === theme.value,
+                          onchange: selectTheme
+                        }),
+
+                        m("img.option-list-item-image", {
+                          src: theme.image
+                        }),
+
+                        m("p.option-list-item-text", theme.label)
+                      ])
+                    )
+                  )
                 ])
               ])
             },

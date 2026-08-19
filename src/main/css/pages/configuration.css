@@ -27,3 +27,54 @@
   justify-content: left;
   align-items: center;
 }
+
+.option-list {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
+  overflow: auto hidden;
+  overscroll-behavior-x: contain;
+}
+
+.option-list-item {
+  position: relative;
+  flex: 0 0 260px;
+  height: 90%;
+  border: var(--color-foreground) 2px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-list-item:hover {
+  background-color: var(--color-foreground);
+}
+
+.option-list-item:has(input[type="radio"]:checked) {
+  background-color: var(--color-foreground);
+}
+
+.option-list-item-image {
+  width: 90%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  image-rendering: pixelated;
+}
+
+.option-list-item-text {
+  margin-top: 5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.option-list input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
