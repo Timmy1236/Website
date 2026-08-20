@@ -20,8 +20,7 @@
     "eleventy": "eleventy --quiet",
     "eleventy:watch": "eleventy --quiet --watch",
     "esbuild": "node scripts/esbuild.mjs build",
-    "esbuild:watch": "node scripts/esbuild.mjs watch",
-    "purgecss": "node scripts/purgecss-report.mjs"
+    "esbuild:watch": "node scripts/esbuild.mjs watch"
   },
   "repository": {
     "type": "git",
@@ -53,7 +52,6 @@
     "esbuild": "^0.28.2",
     "eslint": "^10.8.1",
     "eslint-plugin-compat": "^7.0.2",
-    "purgecss": "^8.0.0",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-no-unsupported-browser-features": "^8.1.1",
