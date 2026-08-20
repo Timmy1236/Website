@@ -8,7 +8,7 @@ export default {
     m(".banner-panel",
       m(".panel-frame", [
         m(".banner", [
-          m("img.banner-bg", { alt: "A dithered image taken from the game Voices of the Void" }),
+          m(".banner-bg"),
 
           m("p.banner-title",
             m(".wave-text",

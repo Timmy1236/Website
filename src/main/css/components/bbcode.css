@@ -21,13 +21,3 @@
   -webkit-text-fill-color: transparent;
   animation: rainbow-flow 4s linear infinite;
 }
-
-@keyframes rainbow-flow {
-  from {
-    background-position: 0% 50%;
-  }
-  
-  to {
-    background-position: 200% 50%;
-  }
-}

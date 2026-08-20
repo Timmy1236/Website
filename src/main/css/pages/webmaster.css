@@ -58,28 +58,6 @@
   justify-content: center;
 }
 
-.icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgb(0 0 0 / 10%);
-  border: 2px solid rgb(0 0 0 / 40%);
-  transition: var(--button-transition);
-}
-
-.icon-button:hover {
-  background: var(--button-color-hover);
-  border: var(--button-border-hover);
-  transform: var(--button-hover-transform);
-  box-shadow: var(--button-hover-shadow);
-}
-
-.icon-button img {
-  width: 25px;
-}
-
 /* Covers */
 .cover {
   position: relative;

@@ -50,20 +50,7 @@ p, label, a, span  {
   letter-spacing: -0.3px;
 }
 
-select {
-  padding: 4px 8px;
-  font-family: Pixel, monospace;
-  font-size: 22px;
-  background-color: rgb(0 0 0 / 10%);
-  color: #fff;
-  border: 2px rgb(0 0 0 / 40%) solid;
-}
-
-select:open {
-  background-color: var(--color-background-color);
-}
-
-button:hover, a:hover, input:hover, select:hover {
+button:hover, a:hover, input:hover {
   cursor: var(--hover-mouse-image), pointer;
 }
 

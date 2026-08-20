@@ -10,7 +10,7 @@ function navBtn(label: string, external: boolean, path: string, img: string | nu
   const isActive = (currentPath ? currentPath : m.route.get()) === path;
   const attrs: m.Attributes = { "data-sound-release": "buttonRelease", "data-sound-click": "buttonClick", "data-sound-hover": "buttonHover", onclick: () => external ? _externalNavigate(path) : _navigate(path), class: isActive ? "active" : "" };
 
-  return m("button.sidebar-buttons", attrs, [
+  return m("button.button.button-sidebar", attrs, [
     m("img", {
       src: img ? `/assets/images/icons/utils/${img}.png` : "/assets/images/icons/utils/no-icon.png",
       alt: img ? img : "question mark",
@@ -76,7 +76,7 @@ export default {
             ])
           ]),
           m(".panel-content", [
-            m(".sidebar-links-container", [
+            m(".sidebar-buttons-container", [
               navBtn("sidebar.navigation.buttons.home", false, "/home", "home"),
               navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", "user"),
               navBtn("sidebar.navigation.buttons.projects", false, "/projects", "proyect"),
@@ -98,7 +98,7 @@ export default {
             ])
           ]),
           m(".panel-content", [
-            m(".sidebar-links-container", [
+            m(".sidebar-buttons-container", [
               ..._dataButtons()
             ])
           ])

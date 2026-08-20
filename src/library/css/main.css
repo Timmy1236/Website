@@ -167,28 +167,17 @@ section > * + * {
   padding: 0 5px;
   color: #6C6687;
 }
-
 /* === [ HEAD ] === */
 
 
-
 /* === [ CONTENT ] === */
-.text-header {
-  width: 100%;
-  border-bottom: 3px dotted var(--color-foreground);
-  padding-bottom: 3px;
-  margin-bottom: 8px;
-}
-
 .content {
   margin: 10px 0;
   flex: 1;
   color: var(--text);
   flex-wrap: wrap;
 }
-
 /* === [ CONTENT ] === */
-
 
 
 /* === [ FOOTER ] === */
@@ -207,14 +196,12 @@ section > * + * {
 
 
 /* === [ POSTS ] === */
-
 .post-image {
   max-width: 900px;
   margin: auto;
   margin-top: 10px;
   display: flex;
 }
-
 /* === [ POSTS ] === */
 
 
@@ -280,7 +267,6 @@ section > * + * {
   opacity: 0.8;
 }
 /* === [ POSTS-CARDS ] === */
-
 
 
 /* === [ CHANGELOG] === */

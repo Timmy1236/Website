@@ -1,0 +1,27 @@
+.sidebar {
+  width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.sidebar-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.layout-content {
+  display: flex;
+  gap: var(--gap-size);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.layout-content:not(:has(.sidebar)) .content-column {
+  flex: 1 1 100%;
+  width: 100%;
+}

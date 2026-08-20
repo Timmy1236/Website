@@ -4,8 +4,10 @@
 @import url("./base/animations.css");
 
 /* Layout */
-@import url("./layout/layout.css");
+@import url("./layout/container.css");
+@import url("./layout/content.css");
 @import url("./layout/banner.css");
+@import url("./layout/sidebar.css");
 
 /* Pages */
 @import url("./pages/home.css");

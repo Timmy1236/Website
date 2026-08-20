@@ -11,7 +11,6 @@
   padding: var(--panel-padding);
   border: var(--panel-border);
   border-top: var(--panel-border-top);
-  backdrop-filter: blur(var(--panel-background-drop));
 }
 
 .panel-header {
@@ -26,14 +25,6 @@
 .panel-header p {
   color: var(--color-accent);
   font-size: 24px;
-}
-
-.panel-icon {
-  width:16px;
-  height:16px;
-  margin-right:5px;
-  image-rendering:pixelated;
-  filter:invert(90%)sepia(20%)saturate(709%)hue-rotate(85deg)brightness(100%)contrast(103%)drop-shadow(var(--text-shadow));
 }
 
 .panel-controls {
