@@ -1,10 +1,10 @@
 /* 
-  BACKGROUND ANIMADO
-  Author: Mathieu S.
-  Link: https://codepen.io/iceable
+  "CSS only animated static noise background"
+  Author: Mathieu S. (https://codepen.io/iceable)
+  Link: https://codepen.io/iceable/pen/yLBrZOd
 */
 
-.bg {
+.static {
   position: fixed;
   inset: -50%;
   width: 200%;

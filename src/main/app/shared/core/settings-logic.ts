@@ -21,10 +21,9 @@ export const DEFAULT_SETTINGS: Settings = {
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
 
-function _loadNoiseEffect() {
+function _loadStaticEffect() {
   const bgDiv = document.createElement("div");
-  bgDiv.className = "bg";
-  bgDiv.id = "background";
+  bgDiv.className = "static";
   document.body.prepend(bgDiv);
 }
 
@@ -85,7 +84,7 @@ export function initializeSettings(): boolean {
   cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
 
   _loadTheme();
-  if (currentSettings.staticEffect) _loadNoiseEffect();
+  if (currentSettings.staticEffect) _loadStaticEffect();
   if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
 
   return true;
