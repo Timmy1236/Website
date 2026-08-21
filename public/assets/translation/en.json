@@ -93,24 +93,23 @@
     "sections": {
       "visual-effects": "Visual Effects",
       "audio": "Audio",
-      "others": "Others",
       "themes": "Themes",
-      "languages": "Languages"
+      "languages": "Languages",
+      "text": "Text"
     },
     "options": {
       "staticEffects": "Static",
       "backgroundMusic": "Background Music",
-      "ignoreLandingPage": "Skip Landing Page",
       "vignetteEffects": "Vignette",
       "soundsEffects": "Sound Effects",
-      "readableFont": "Readable Font"
+      "readableFont": "Readable Font",
+      "animatedBg": "animated background"
     },
     "buttons": {
       "confirm": "Confirm",
       "reset": "Reset settings"
     },
     "list": {
-      "accessibility": "Accessibility",
       "audio": "Audio",
       "others": "Others",
       "visual": "Visual"

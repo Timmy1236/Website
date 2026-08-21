@@ -7,6 +7,7 @@ export interface Settings {
   backgroundMusic: boolean
   soundsEffects: boolean
   readableFont: boolean
+  animatedBg: boolean
   theme: string
 }
 
@@ -16,6 +17,7 @@ export const DEFAULT_SETTINGS: Settings = {
   backgroundMusic: false,
   soundsEffects: false,
   readableFont: false,
+  animatedBg: false,
   theme: "simple-purple"
 };
 
@@ -86,6 +88,10 @@ export function initializeSettings(): boolean {
   _loadTheme();
   if (currentSettings.staticEffect) _loadStaticEffect();
   if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
+  if (!currentSettings.animatedBg) {
+    const t = document.querySelector(".theme-bg") as HTMLElement;
+    t.style.animation = "none";
+  }
 
   return true;
 }

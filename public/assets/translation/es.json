@@ -89,23 +89,22 @@
     "list": {
       "visual": "Visual",
       "audio": "Audio",
-      "accessibility": "Accesibilidad",
       "others": "Otros"
     },
     "sections": {
       "visual-effects": "Efectos visuales",
       "audio": "Audio",
-      "others": "Otros",
       "themes": "Temas",
+      "text": "Texto",
       "languages": "Lenguajes"
     },
     "options": {
       "staticEffects": "Estática",
       "backgroundMusic": "Música de fondo",
-      "ignoreLandingPage": "Ignorar la pagina de bienvenida",
       "vignetteEffects": "Viñeta",
       "soundsEffects": "Efectos de sonidos",
-      "readableFont": "Fuente legible"
+      "readableFont": "Fuente legible",
+      "animatedBg": "Fondo animado"
     },
     "buttons": {
       "confirm": "Confirmar",

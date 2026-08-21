@@ -65,6 +65,25 @@ const ConfigurationPage = {
                       onchange: (e: Event) => { draft.vignetteEffect = (e.target as HTMLInputElement).checked; }
                     }),
                     m("label", { for: "vignette-effect" }, getTranslation("settings.options.vignetteEffects"))
+                  ]),
+
+                  m(".option", [
+                    m("input", {
+                      type: "checkbox", id: "animatedBg", checked: draft.animatedBg,
+                      onchange: (e: Event) => { draft.animatedBg = (e.target as HTMLInputElement).checked; }
+                    }),
+                    m("label", { for: "animatedBg" }, getTranslation("settings.options.animatedBg"))
+                  ])
+                ]),
+
+                m(".settings-group", [
+                  m("h2.group-title", getTranslation("settings.sections.text")),
+                  m(".option", [
+                    m("input", {
+                      type: "checkbox", id: "readable-font", checked: draft.readableFont,
+                      onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
+                    }),
+                    m("label", { for: "readable-font" }, getTranslation("settings.options.readableFont"))
                   ])
                 ]),
 
@@ -117,22 +136,8 @@ const ConfigurationPage = {
               ])
             },
             {
-              label: getTranslation("settings.list.accessibility"),
-              content: () => m(".settings-group", [
-                m("h2.group-title", getTranslation("settings.sections.others")),
-
-                m(".option", [
-                  m("input", {
-                    type: "checkbox", id: "readable-font", checked: draft.readableFont,
-                    onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
-                  }),
-                  m("label", { for: "readable-font" }, getTranslation("settings.options.readableFont"))
-                ])
-              ])
-            },
-            {
               label: getTranslation("settings.list.others"),
-              content: () => m("div", [
+              content: () => m(".settings-group", [
                 m(".settings-group", [
                   m("h2.group-title", getTranslation("settings.sections.languages")),
 
