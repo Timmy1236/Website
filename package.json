@@ -8,12 +8,11 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1",
+  "packageManager": "pnpm@11.23.0",
   "scripts": {
     "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true }); fs.rmSync('public/content', { recursive: true, force: true })\"",
-    "prebuild": "pnpm clean",
-    "build": "concurrently \"pnpm:eleventy\" \"pnpm:esbuild\"",
-    "dev": "concurrently \"pnpm:eleventy:watch\" \"pnpm:esbuild:watch\"",
+    "build": "pnpm clean && concurrently \"pnpm:eleventy\" \"pnpm:esbuild\"",
+    "dev": "pnpm clean && concurrently \"pnpm:eleventy:watch\" \"pnpm:esbuild:watch\"",
     "lint": "eslint .",
     "stylelint": "stylelint \"**/*.css\"",
     "typecheck": "tsc --noEmit",
@@ -48,9 +47,9 @@
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/mithril": "^2.2.9",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "concurrently": "^10.0.4",
+    "concurrently": "^10.0.5",
     "esbuild": "^0.28.2",
-    "eslint": "^10.8.1",
+    "eslint": "^10.9.0",
     "eslint-plugin-compat": "^7.0.2",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0",
