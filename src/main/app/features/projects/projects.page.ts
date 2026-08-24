@@ -47,10 +47,7 @@ const Project = {
           ]),
 
           m(".projects-links", [
-            m("a.link-icon", { href: "https://github.com/Timmy1236/Website", target: "_blank" }, [
-              m("img", { src: "/assets/images/icons/socials/github.png" }),
-              m("span", "GitHub")
-            ])
+            m("button.button", { onclick: () => window.open("https://github.com/Timmy1236/Website", "_blank") }, m("img", { src: "./assets/images/icons/socials/github.png" }), "GitHub")
           ])
         ]
       }),
@@ -74,10 +71,7 @@ const Project = {
           ]),
 
           m(".projects-links", [
-            m("a.link-icon", { href: "https://github.com/Timmy1236/Leafy", target: "_blank" }, [
-              m("img", { src: "/assets/images/icons/socials/github.png" }),
-              m("span", "GitHub")
-            ])
+            m("button.button", { onclick: () => window.open("https://github.com/Timmy1236/Leafy", "_blank") }, m("img", { src: "./assets/images/icons/socials/github.png" }), "GitHub")
           ])
         ]
       })
