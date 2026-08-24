@@ -12,7 +12,7 @@ const panel: m.ClosureComponent<PanelAttrs> = () => {
       return m(".panel-frame", [
         m(".panel", [
           m(".panel-header", [
-            m("p.text-title", title),
+            m("p", title),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
               m("button.panel-button", { "data-panel-action": "close" }, "X")

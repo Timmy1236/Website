@@ -28,8 +28,8 @@ const TabPanel: m.ClosureComponent<TabPanelAttrs> = () => {
         // HEADER
         m(".panel-header", [
           typeof title === "string"
-            ? m("p.text-title", title)
-            : m("p.text-title", title, "Tabs"), // El tercer param es el fallback
+            ? m("p", title)
+            : m("p", title, "Tabs"),
 
           m(".panel-controls", [
             m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
