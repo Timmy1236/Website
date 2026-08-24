@@ -2,13 +2,11 @@ import m from "mithril";
 import { createImageOverlay } from "../../shared/components/image-overlay.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { getTranslation } from "../../shared/core/i18n.js";
-import { showToast } from "../../shared/components/toast.js";
 import panel from "../../shared/components/panel.ts";
 
 const Project = {
   oncreate() {
     setCurrentPath(m.route, "proyect");
-    showToast("info", true, "W.I.P", false, "EXPERIMENTAL", false);
   },
 
   view: function () {
