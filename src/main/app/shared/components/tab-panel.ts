@@ -32,7 +32,7 @@ const TabPanel: m.ClosureComponent<TabPanelAttrs> = () => {
             : m("p", title, "Tabs"),
 
           m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "▼"),
+            m("button.panel-button", { "data-panel-action": "minimize" }, "―"),
             m("button.panel-button", { "data-panel-action": "close" }, "X")
           ])
         ]),

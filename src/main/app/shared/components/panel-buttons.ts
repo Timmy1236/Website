@@ -15,11 +15,9 @@ document.addEventListener("click", (event) => {
     if (!(content instanceof HTMLElement)) return;
 
     content.classList.toggle("collapsed");
-
     const isCollapsed = content.classList.contains("collapsed");
 
     frame?.classList.toggle("collapsed", isCollapsed);
-    btn.textContent = isCollapsed ? "▲" : "▼";
   }
 
   if (action === "close") {

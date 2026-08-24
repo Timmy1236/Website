@@ -58,15 +58,15 @@
   flex-direction: column;
 }
 
-.panel-content.collapsed {
-  display: none;
-}
-
 .panel-content.tabs {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-height: 400px;
+}
+
+.panel-content.collapsed {
+  display: none;
 }
 
 
@@ -99,6 +99,10 @@
 
 .panel-frame.collapsed {
   height: auto !important;
+}
+
+.panel-grid-2 > .panel-frame.collapsed {
+  align-self: start;
 }
 
 .panel-frame.collapsed .panel {
