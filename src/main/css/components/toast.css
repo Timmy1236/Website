@@ -7,7 +7,7 @@
   bottom: 20px;
   width: 340px;
   background: var(--color-background);
-  border: 3px solid var(--toast-color);
+  border: 3px solid var(--color-foreground);
   box-shadow: var(--panel-shadow);
   padding: 10px 14px;
   z-index: 9999;
@@ -35,7 +35,7 @@
   margin: 0;
   font-size: 24px;
   vertical-align: center;
-  color: var(--toast-color);
+  color: var(--color-accent);
 }
 
 .toast-name::before {

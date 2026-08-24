@@ -55,6 +55,7 @@
 .profile-socials {
   display: flex;
   gap: 12px;
+  height: 40px;
   justify-content: center;
 }
 

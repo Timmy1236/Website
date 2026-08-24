@@ -23,7 +23,7 @@
 }
 
 .panel-header p {
-  color: var(--color-accent);
+  color: var(--color-text);
   font-size: 24px;
 }
 
@@ -36,7 +36,7 @@
   background-color: var(--color-foreground);
   border: none;
   padding: 10px;
-  color: var(--color-accent);
+  color: var(--color-text);
   width: 20px;
   height: 20px;
   box-sizing: border-box;

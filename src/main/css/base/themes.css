@@ -21,8 +21,7 @@
   /* Colors */
   --color-text: #fff;
   --color-accent: #97ffcf;
-  --color-link: #C0BBFF;
-  --color-link-hover: #8b83ff;
+  --color-accent2: #49ffaa;
   --color-background: #282a36;
   --color-foreground: #433f55;
 
@@ -61,9 +60,8 @@
 [data-color="green"] {
   /* Colors */
   --color-text: #fff;
-  --color-accent: #d8f3dc;
-  --color-link: #C0BBFF;
-  --color-link-hover: #8b83ff;
+  --color-accent: #97ffcf;
+  --color-accent2: #49ffaa;
   --color-background: #2d6a4f;
   --color-foreground: #40916c;
 
@@ -102,9 +100,8 @@
 [data-color="dark"] {
   /* Colors */
   --color-text: #fff;
-  --color-accent: #fff;
-  --color-link: #C0BBFF;
-  --color-link-hover: #8b83ff;
+  --color-accent: #97ffcf;
+  --color-accent2: #49ffaa;
   --color-background: #202020;
   --color-foreground: #2c2c2c;
 
@@ -162,9 +159,8 @@
 [data-color="darkspace"] {
   /* Colors */
   --color-text: #FBFBFB;
-  --color-accent: #FBFBFB;
-  --color-link: #C0BBFF;
-  --color-link-hover: #8b83ff;
+  --color-accent: #97ffcf;
+  --color-accent2: #49ffaa;
   --color-background: #111;
   --color-foreground: #111;
 

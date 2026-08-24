@@ -72,7 +72,7 @@ h2 {
   font-weight: normal;
   color: var(--color-accent);
   font-family: Pixel, monospace;
-  border-bottom: 3px dotted var(--color-foreground);
+  border-bottom: 2px solid var(--color-foreground);
 }
 
 input[type="text"] {
