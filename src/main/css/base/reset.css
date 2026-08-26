@@ -82,8 +82,8 @@ input[type="text"] {
   box-sizing: border-box;
   border-radius: 0;
   color: white;
-  border: 2px rgb(0 0 0 / 40%) solid;
-  background-color: rgb(0 0 0 / 10%);
+  border: 2px rgb(0 0 0 / 60%) solid;
+  background-color: rgb(0 0 0 / 20%);
   font-size: 16px;
 }
 
@@ -94,12 +94,12 @@ textarea {
   max-height: 300px;
   min-width: 200px;
   min-height: 100px;
-  padding: 12px;
+  padding: 5px;
   box-sizing: border-box;
   border-radius: 0;
   color: white;
-  border: 2px rgb(0 0 0 / 40%) solid;
-  background-color: rgb(0 0 0 / 10%);
+  border: 2px rgb(0 0 0 / 60%) solid;
+  background-color: rgb(0 0 0 / 20%);
   font-size: 16px;
 }
 

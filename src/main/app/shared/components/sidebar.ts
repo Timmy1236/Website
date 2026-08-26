@@ -78,8 +78,9 @@ export default {
           m(".panel-content", [
             m(".sidebar-buttons-container", [
               navBtn("sidebar.navigation.buttons.home", false, "/home", "home"),
-              navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", "user"),
               navBtn("sidebar.navigation.buttons.projects", false, "/projects", "proyect"),
+              navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", "user"),
+              navBtn("sidebar.navigation.buttons.contact", false, "/contact", "contact"),
               navBtn("sidebar.navigation.buttons.links", false, "/links", "link"),
               navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "achievement"),
               navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", "settings")

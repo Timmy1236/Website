@@ -84,6 +84,36 @@
       }
     }
   },
+  "contact": {
+    "socials": {
+      "title": "Contacto",
+      "description": "Si quieres comunicarte conmigo de forma directa, solamente cuento con [b]tres opciones[/b] actualmente, una de ellas es usar el formulario de mensajes directos, las otras son...[br][/br][br][/br]",
+      "email": "[b]Por correo[/b]",
+      "discord": "[br][/br][b]Por discord[/b]"
+    },
+    "form": {
+      "title": "Enviar mensaje",
+      "usernameLabel": "Nombre de usuario *",
+      "contactLabel": "Contacto (opcional)",
+      "contactPlaceholder": "Correo, red social o pagina web.",
+      "messageLabel": "Mensaje *",
+      "messagePlaceholder": "Escribe tu mensaje, feedback, enojo, frustración o insultos.",
+      "submit": "Enviar",
+      "sending": "Enviando..."
+    },
+    "toast": {
+      "error": "Error",
+      "messageRequired": "El mensaje no puede estar vacío.",
+      "tooLong": "El mensaje o contacto supera el límite permitido.",
+      "sendFailed": "No se pudo enviar el mensaje.",
+      "connectionFailed": "No se pudo conectar con el servidor.",
+      "sent": "Enviado",
+      "sentDescription": "Tu mensaje fue enviado correctamente."
+    },
+    "tooltip": {
+      "correo": "Clickea para revelar mi correo (es para evitar los bot de spam)"
+    }
+  },
   "settings": {
     "title": "Configuración",
     "list": {

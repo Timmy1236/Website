@@ -14,6 +14,7 @@ import "./shared/components/panel-buttons.ts";
 import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
 import Webmaster from "./features/webmaster/webmaster.page.ts";
+import Contact from "./features/contact/contact.page.ts";
 import Projects from "./features/projects/projects.page.ts";
 import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
@@ -66,6 +67,7 @@ async function startApp() {
     m.route(root, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
       "/webmaster": { render: () => m(Layout, m(Webmaster)) },
+      "/contact": { render: () => m(Layout, m(Contact)) },
       "/projects": { render: () => m(Layout, m(Projects)) },
       "/links": { render: () => m(Layout, m(Links)) },
       "/achievements": { render: () => m(Layout, m(Achievements)) },

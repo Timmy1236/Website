@@ -88,6 +88,36 @@
       }
     }
   },
+  "contact": {
+    "socials": {
+      "title": "Contact",
+      "description": "If you want to contact me directly, I currently have only [b]three options[/b]; one of them is to use the direct message form, and the others are...[br][/br][br][/br]",
+      "discord": "[br][/br][b]By discord[/b]",
+      "email": "[b]By e-mail[/b]"
+    },
+    "form": {
+      "title": "Send a message",
+      "contactLabel": "Contact (optional)",
+      "contactPlaceholder": "Email, Discord, or social network",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write your message...",
+      "submit": "Send",
+      "sending": "Sending...",
+      "usernameLabel": "Username *"
+    },
+    "toast": {
+      "error": "Error",
+      "messageRequired": "The message cannot be empty.",
+      "tooLong": "The message or contact exceeds the allowed limit.",
+      "sendFailed": "The message could not be sent.",
+      "connectionFailed": "Could not connect to the server.",
+      "sent": "Sent",
+      "sentDescription": "Your message was sent successfully."
+    },
+    "tooltip": {
+      "correo": "Click to reveal my email (it's to avoid spam bots)"
+    }
+  },
   "settings": {
     "title": "Configuration",
     "sections": {
