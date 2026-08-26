@@ -33,13 +33,13 @@
   box-shadow: none;
   border: var(--button-border-hover);
   transform: var(--button-active-transform);
+  filter: brightness(1.25);
 }
 
 .button-sidebar {
   width: 100%;
   border: var(--button-border);
   padding: 2px 0 2px 6px;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 100ms;
 }
 
 .button-sidebar img {

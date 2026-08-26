@@ -10,7 +10,7 @@
   --panel-header-text-size: 24px;
   --panel-content-padding: 6.5px 8px;
   --text-shadow: 2px 2px 0px rgb(0 0 0 / 30%);
-  --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
+  --button-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0.3s;
   --button-hover-transform: translateY(-2.5px);
   --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
   --button-active-transform: translateY(1px);
@@ -149,7 +149,7 @@
   --panel-header-text-size: 24px;
   --panel-content-padding: 6.5px 8px;
   --text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
-  --button-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0ms;
+  --button-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0.3s;
   --button-hover-transform: scale(1.035);
   --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
   --button-active-transform: translateY(4px);
