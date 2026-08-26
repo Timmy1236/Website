@@ -6,6 +6,7 @@ public/content
 public/dist
 public/sitemap.xml
 .vscode
+scripts/
 
 ### Node ###
 # Logs
