@@ -17,8 +17,8 @@
         "contact": "Contact"
       }
     },
-    "data": {
-      "title": "Data",
+    "library": {
+      "title": "Library",
       "buttons": {
         "sitemap": "Sitemap",
         "blog": "Blog",

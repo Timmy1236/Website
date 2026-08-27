@@ -41,19 +41,19 @@ function _navigate(path: string) {
   }, 350);
 }
 
-function _dataButtons() {
+function _libraryButtons() {
   const local = getSetting("preferred-language") || "en";
 
   if (local === "es") {
     return [
-      navBtn("sidebar.data.buttons.blog", true, "/content/es/blog/index.html", "doc-text"),
-      navBtn("sidebar.data.buttons.changelog", true, "/content/es/changelog/index.html", "doc-changelog")
+      navBtn("sidebar.library.buttons.blog", true, "/content/es/blog/index.html", "doc-text"),
+      navBtn("sidebar.library.buttons.changelog", true, "/content/es/changelog/index.html", "doc-changelog")
     ];
   }
   else {
     return [
-      navBtn("sidebar.data.buttons.blog", true, "/content/en/blog/index.html", "doc-text"),
-      navBtn("sidebar.data.buttons.changelog", true, "/content/en/changelog/index.html", "doc-changelog")
+      navBtn("sidebar.library.buttons.blog", true, "/content/en/blog/index.html", "doc-text"),
+      navBtn("sidebar.library.buttons.changelog", true, "/content/en/changelog/index.html", "doc-changelog")
     ];
   }
 }
@@ -89,18 +89,18 @@ export default {
         ])
       ]),
 
-      // 'Data' sub-site navigation
+      // 'Library' sub-site navigation
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", getTranslation("sidebar.data.title")),
+            m("p", getTranslation("sidebar.library.title")),
             m(".panel-controls", [
               m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
             ])
           ]),
           m(".panel-content", [
             m(".sidebar-buttons-container", [
-              ..._dataButtons()
+              ..._libraryButtons()
             ])
           ])
         ])

@@ -13,8 +13,8 @@
         "contact": "Contacto"
       }
     },
-    "data": {
-      "title": "Data",
+    "library": {
+      "title": "Librería",
       "buttons": {
         "sitemap": "Sitemap",
         "blog": "Blog",
