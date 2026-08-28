@@ -16,7 +16,7 @@ const audio = new Audio();
  * Inicializa los listeners globales para el Autoplay.
  * Escucha la primera interacción del usuario para arrancar la música si está activada.
  */
-export function initializeAutoplay() {
+export function initAutoplay() {
   const { backgroundMusic } = getSettings();
   if (!backgroundMusic) return;
 

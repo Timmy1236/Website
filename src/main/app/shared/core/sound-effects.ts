@@ -11,7 +11,7 @@ interface SoundConfig {
 
 const sounds = {} as Record<string, SoundConfig>;
 
-export function initializeSoundsEffects() {
+export function initSoundsEffects() {
   const { soundsEffects } = getSettings();
   if (!soundsEffects) return;
 

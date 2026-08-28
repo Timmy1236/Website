@@ -75,7 +75,7 @@ function _checkVersion(): boolean {
  * @returns `true` si todo se inicializo correctamente.
  * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
  */
-export function initializeSettings(): boolean {
+export function initSettings(): boolean {
   cLog("INFO", "Settings Logic", "Inicializando settings.");
 
   const outdated = _checkVersion();

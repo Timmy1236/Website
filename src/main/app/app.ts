@@ -1,14 +1,13 @@
 import m from "mithril";
 import { cLog } from "./shared/utils/clog.ts";
-
-// Globals
 import { i18nReady } from "./shared/core/i18n.ts";
 import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
-import { initializeSettings } from "./shared/core/settings-logic.ts";
-import { initializeAutoplay } from "./shared/core/autoplay.ts";
-import { initializeSoundsEffects } from "./shared/core/sound-effects.ts";
-import "./shared/handlers/tooltip.ts";
-import "./shared/components/panel-buttons.ts";
+
+import { initSettings } from "./shared/core/settings-logic.ts";
+import { initAutoplay } from "./shared/core/autoplay.ts";
+import { initSoundsEffects } from "./shared/core/sound-effects.ts";
+import { initTooltip } from "./shared/handlers/tooltip.ts";
+import { initPanelButtons } from "./shared/components/panel-buttons.ts";
 
 // Pages
 import Layout from "./shared/components/layout.ts";
@@ -41,7 +40,7 @@ async function startApp() {
 
   try {
     cLog("INFO", "App", "Paso 1/4: Cargando settings...");
-    const settingsOk = initializeSettings();
+    const settingsOk = initSettings();
 
     if (!settingsOk) {
       cLog("ADVERTENCIA", "App", "Version de settings desactualizada, esperando reload...");
@@ -49,8 +48,10 @@ async function startApp() {
     }
 
     cLog("INFO", "App", "Paso 2/4: Cargando efectos de sonido y autoplay...");
-    initializeSoundsEffects();
-    initializeAutoplay();
+    initSoundsEffects();
+    initAutoplay();
+    initTooltip();
+    initPanelButtons();
 
     cLog("INFO", "App", "Paso 3/4: Esperando traducciones (i18n)...");
     await i18nReady;
