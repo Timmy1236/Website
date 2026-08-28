@@ -22,19 +22,6 @@ import Page404 from "./features/404/404.page.ts";
 
 document.documentElement.classList.add("app-loaded");
 
-function _showFatalError(error: unknown) {
-  const warningBox = document.querySelector(".warning");
-  if (!warningBox) return;
-
-  const message = error instanceof Error ? error.message : String(error);
-
-  const errorText = document.createElement("p");
-  errorText.className = "warning-text";
-  errorText.textContent = `ERROR: ${message}`;
-
-  warningBox.appendChild(errorText);
-}
-
 async function startApp() {
   console.time("Tiempo de carga");
 
@@ -81,7 +68,6 @@ async function startApp() {
   }
   catch (error) {
     cLog("ERROR", "App", `Fallo cargando la app: ${error}`);
-    _showFatalError(error);
   }
 }
 

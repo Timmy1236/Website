@@ -32,32 +32,7 @@
 @import url("./components/image-overlay.css");
 @import url("./components/tree.css");
 
-/* Warning si falla la carga de la pagina. (debe de estar en el main.css evitando import por compatibilidad) */
-.warning {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: black;
-  z-index: 999999;
-  width: 100%;
-  height: 100%;
-}
-
-.warning-image {
-  pointer-events: none;
-}
-
-.warning-text {
-  margin-top: 20px;
-  color: red;
-  max-width: 500px;
-  font-family: Consolas, sans-serif;
-  font-size: 1rem;
-}
-
-html.app-loaded .warning {
+/* En caso que un navegador no soporte @import (? */
+html.app-loaded .no-js {
   display: none;
 }
