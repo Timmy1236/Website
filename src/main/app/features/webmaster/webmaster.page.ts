@@ -3,6 +3,7 @@ import { loadStatus } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
+import { click } from "../../shared/handlers/profile-clicker.ts";
 import panel from "../../shared/components/panel.ts";
 
 const _imgIcon = (x: string) => `/assets/images/pages/webmaster/icons/${x}.svg`;
@@ -22,7 +23,7 @@ const webmasterPage = {
           content: m(".profile-panel-content", [
             m(".profile-header", [
               m(".profile-avatar",
-                m("img", { "data-sound-click": "squeak", src: "/assets/images/pages/webmaster/pfp.webp" })
+                m("img#pfp", { onclick: () => click(), "data-sound-click": "squeak", src: "/assets/images/pages/webmaster/badware.webp" })
               ),
               m(".profile-info", [
                 m("p.profile-username", "Timmy1236"),
