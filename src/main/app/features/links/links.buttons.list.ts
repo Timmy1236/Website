@@ -54,12 +54,12 @@ export const neighborSites: ButtonSite[] = [
   },
   {
     url: "https://lucksiyo.xyz/",
-    button: "https://lucksiyo.xyz/resources/button.jpg",
+    button: "https://lucksiyo.xyz/resources/button.png",
     preview: _preview("lucksiyo")
   },
   {
     url: "https://calijori.com/",
-    button: "https://file.garden/aQNtCESHqyYXcwhI/buttons/calijori88x31.png",
+    button: "https://file.garden/aQNtCESHqyYXcwhI/mygraphics/calibutton.jpg",
     preview: _preview("calijori")
   },
   {
