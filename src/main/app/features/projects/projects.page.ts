@@ -17,12 +17,11 @@ const Project = {
           m(".project-header", [
             m(".project-icon",
               m("img", {
-                src: "./assets/images/favicon/pages.png",
-                alt: "Website icon"
+                src: "./assets/images/pages/projects/website/icon.webp", alt: "Website icon"
               })
             ),
 
-            m("h1.project-title", "Timmy's digital dumpster")
+            m("h1.project-title", "Timmy's Dumpster")
           ]),
 
           m(".project-body", [
@@ -56,8 +55,7 @@ const Project = {
           m(".project-header", [
             m(".project-icon",
               m("img", {
-                src: "./assets/images/icons/leafy.webp",
-                alt: "Leafy icon"
+                src: "./assets/images/icons/leafy.webp", alt: "Leafy icon"
               })
             ),
 

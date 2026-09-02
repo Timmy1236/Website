@@ -5,8 +5,10 @@
 }
 
 .project-icon img {
-  width: 72px;
+  width: 70px;
   vertical-align: bottom;
+  border: var(--button-border);
+  pointer-events: none;
 }
 
 .project-title {
