@@ -112,7 +112,8 @@
       "sendFailed": "The message could not be sent.",
       "connectionFailed": "Could not connect to the server.",
       "sent": "Sent",
-      "sentDescription": "Your message was sent successfully."
+      "sentDescription": "Your message was sent successfully.",
+      "usernameRequired": "The username cannot be empty."
     },
     "tooltip": {
       "correo": "Click to reveal my email (it's to avoid spam bots)"

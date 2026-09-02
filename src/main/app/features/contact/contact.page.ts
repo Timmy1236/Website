@@ -67,6 +67,7 @@ const Contact = {
                 m("input#contact-username", {
                   type: "text",
                   maxlength: 100,
+                  required: true,
                   autocomplete: "username",
                   value: contactState.form.username,
                   oninput: (event: Event) => {

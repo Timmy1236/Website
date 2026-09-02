@@ -104,6 +104,7 @@
     "toast": {
       "error": "Error",
       "messageRequired": "El mensaje no puede estar vacío.",
+      "usernameRequired": "El nombre de usuario no puede estar vacío.",
       "tooLong": "El mensaje o contacto supera el límite permitido.",
       "sendFailed": "No se pudo enviar el mensaje.",
       "connectionFailed": "No se pudo conectar con el servidor.",
