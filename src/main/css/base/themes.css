@@ -208,6 +208,5 @@
   background-position: bottom;
   animation: var(--color-background-animation);
   z-index: -2;
-  pointer-events: none;
   image-rendering: pixelated;
 }

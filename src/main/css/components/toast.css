@@ -14,6 +14,8 @@
   transition: right 0.35s ease-in-out;
   font-family: Pixel, monospace;
   text-shadow: 3px 2px 1px rgb(0 0 0 / 30%);
+  pointer-events: none;
+  user-select: none;
 }
 
 .toast[data-type="achievement"] {
@@ -62,5 +64,4 @@
   flex-direction: column-reverse;
   gap: 10px;
   z-index: 9999;
-  pointer-events: none;
 }

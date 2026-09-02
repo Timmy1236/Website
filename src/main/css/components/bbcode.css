@@ -4,7 +4,6 @@
   width: auto;
   vertical-align: -15%; 
   flex-shrink: 0;
-  pointer-events: none;
   image-rendering: pixelated;
 }
 

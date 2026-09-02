@@ -49,7 +49,8 @@
 .profile-avatar img {
   width: 100%;
   height: 100%;
-	filter: drop-shadow(0 3px 0 rgb(0 0 0 / 30%));
+  filter: drop-shadow(0 3px 0 rgb(0 0 0 / 30%));
+  pointer-events: all;
 }
 
 .profile-socials {
@@ -66,6 +67,7 @@
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transform-style: preserve-3d;
+  user-select: none;
 }
 
 .cover-image {
@@ -83,7 +85,6 @@
   background: linear-gradient(0deg,rgb(0 0 0 / 0%) 0%, rgb(255 255 255 / 39%) 100%);
   opacity: 0;
   mix-blend-mode: overlay;
-  pointer-events: none;
   transition: opacity 0.3s ease, background 0.3s ease;
 }
 
@@ -141,7 +142,6 @@
 .tag img {
   width: 22px;
   margin-right: 7px;
-  pointer-events: none;
 }
 
 .tag:not(:last-child) {

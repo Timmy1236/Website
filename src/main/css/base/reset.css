@@ -36,6 +36,11 @@ body {
   cursor: var(--normal-mouse-image), auto;
 }
 
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
 label {
   cursor: var(--normal-mouse-image), auto;
 }
