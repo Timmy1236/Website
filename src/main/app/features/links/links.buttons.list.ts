@@ -64,7 +64,7 @@ export const neighborSites: ButtonSite[] = [
   },
   {
     url: "https://entama.nekoweb.org/",
-    button: "https://entama.nekoweb.org/img/buttonentama2.GIF",
+    button: "https://entama.nekoweb.org/img/buttonentama3.gif",
     preview: _preview("entama")
   },
   {
