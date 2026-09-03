@@ -57,15 +57,14 @@ function _loadFromStorage(): Settings {
 function _checkVersion(): boolean {
   const savedVersion = localStorage.getItem("settingsVersion");
 
-  cLog("DEBUG", "Settings Logic", `Version de settings local: ${savedVersion}v`);
-  cLog("DEBUG", "Settings Logic", `Version de settings Nekoweb: ${SETTINGS_VERSION}v`);
+  cLog("DEBUG", "Settings Logic", `Versiones: Local: v${savedVersion} | Web: ${SETTINGS_VERSION}`);
 
   if (savedVersion === SETTINGS_VERSION) {
-    cLog("INFO", "Settings Logic", "Las versiones son las mismas, deben de ser compatibles, no es necesario realizar una actualización.");
+    cLog("DEBUG", "Settings Logic", "Las versiones son las mismas, deberían de ser compatibles y no haber errores.");
     return false;
   }
   else {
-    cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado.");
+    cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado y evitar errores.");
     initDefaultSettings();
     localStorage.setItem("settingsVersion", SETTINGS_VERSION);
     return true;
@@ -78,8 +77,6 @@ function _checkVersion(): boolean {
  * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
  */
 export function initSettings(): boolean {
-  cLog("INFO", "Settings Logic", "Inicializando settings.");
-
   const outdated = _checkVersion();
   if (outdated) return false;
 

@@ -26,7 +26,7 @@ async function startApp() {
   console.time("Tiempo de carga");
 
   try {
-    cLog("INFO", "App", "Paso 1/4: Cargando settings...");
+    cLog("INFO", "App", "Paso 1/3: Inicializando settings...");
     const settingsOk = initSettings();
 
     if (!settingsOk) {
@@ -34,14 +34,14 @@ async function startApp() {
       return;
     }
 
-    cLog("INFO", "App", "Paso 2/4: Cargando efectos de sonido y autoplay...");
+    cLog("INFO", "App", "Paso 2/3: Inicializando scripts extras: i18n, autoplay, tooltip, etc...");
     await loadTranslations();
     initSoundsEffects();
     initAutoplay();
     initTooltip();
     initPanelButtons();
 
-    cLog("INFO", "App", "Paso 4/4: Montando rutas...");
+    cLog("INFO", "App", "Paso 3/3: Cargas finalizadas, montando rutas...");
     const root = document.getElementById("app");
 
     if (!root) {
