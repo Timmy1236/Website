@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getSetting } from "../core/settings-logic";
+import { getSettings } from "../core/settings-logic";
 import { getTranslation } from "../core/i18n";
 import { cleanupButtonOverlay } from "../../../app/features/links/links.buttons.overlay";
 
@@ -42,9 +42,9 @@ function _navigate(path: string) {
 }
 
 function _libraryButtons() {
-  const local = getSetting("preferred-language") || "en";
+  const { language } = getSettings();
 
-  if (local === "es") {
+  if (language === "es") {
     return [
       navBtn("sidebar.library.buttons.blog", true, "/content/es/blog/index.html", "doc-text"),
       navBtn("sidebar.library.buttons.changelog", true, "/content/es/changelog/index.html", "doc-changelog")

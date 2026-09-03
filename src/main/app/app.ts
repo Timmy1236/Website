@@ -1,6 +1,6 @@
 import m from "mithril";
 import { cLog } from "./shared/utils/clog.ts";
-import { i18nReady } from "./shared/core/i18n.ts";
+import { loadTranslations } from "./shared/core/i18n.ts";
 import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
 
 import { initSettings } from "./shared/core/settings-logic.ts";
@@ -35,13 +35,11 @@ async function startApp() {
     }
 
     cLog("INFO", "App", "Paso 2/4: Cargando efectos de sonido y autoplay...");
+    await loadTranslations();
     initSoundsEffects();
     initAutoplay();
     initTooltip();
     initPanelButtons();
-
-    cLog("INFO", "App", "Paso 3/4: Esperando traducciones (i18n)...");
-    await i18nReady;
 
     cLog("INFO", "App", "Paso 4/4: Montando rutas...");
     const root = document.getElementById("app");

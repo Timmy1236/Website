@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getSetting } from "./settings-logic";
+import { getSettings } from "./settings-logic";
 
 const translation: Record<string, Record<string, string>> = {
   es: {
@@ -34,9 +34,9 @@ function changePageIcon(newIconUrl: string) {
 
 export function setCurrentPath(path: m.Route, icon: string) {
   const current = path.get();
-  const local = getSetting("preferred-language") || "en";
+  const { language } = getSettings();
 
-  document.title = (translation[local][current] ?? "Website") + " - Timmy";
-  document.documentElement.lang = local;
+  document.title = (translation[language][current] ?? "Website") + " - Timmy";
+  document.documentElement.lang = language;
   changePageIcon(`/assets/images/icons/utils/${icon}.png`);
 }

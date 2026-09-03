@@ -1,6 +1,6 @@
 import m from "mithril";
 import { confirmSettings, restartSettings, draft, refreshDraftFromStorage } from "./configuration.ui.ts";
-import { changeLanguage, getTranslation } from "../../shared/core/i18n.js";
+import { getTranslation } from "../../shared/core/i18n.js";
 import TabPanel from "../../shared/components/tab-panel.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
@@ -143,9 +143,10 @@ const ConfigurationPage = {
 
                   m(".option", [
                     m(".buttons-list", [
-                      m("button.button", { onclick: () => changeLanguage("es") }, "Español"),
-                      m("button.button", { onclick: () => changeLanguage("en") }, "English")
-                    ])
+                      m("button.button", { onclick: () => draft.language = "es" }, "Español"),
+                      m("button.button", { onclick: () => draft.language = "en" }, "English")
+                    ]),
+                    m("p", draft.language)
                   ])
                 ])
               ])

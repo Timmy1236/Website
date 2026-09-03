@@ -9,6 +9,7 @@ export interface Settings {
   readableFont: boolean
   animatedBg: boolean
   theme: string
+  language: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -18,7 +19,8 @@ export const DEFAULT_SETTINGS: Settings = {
   soundsEffects: false,
   readableFont: false,
   animatedBg: false,
-  theme: "simple-purple"
+  theme: "simple-purple",
+  language: "en"
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };

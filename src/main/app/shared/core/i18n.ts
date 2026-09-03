@@ -1,32 +1,16 @@
-type Lang = "es" | "en"; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
-
-let currentLang: Lang = _getSavedLanguage() ?? _getBrowserLanguage();
+import { getSettings } from "./settings-logic";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translations: Record<string, any> = {};
 let loaded = false;
 
-function _getSavedLanguage(): Lang | null {
-  try {
-    const saved = localStorage.getItem("preferred-language");
-    return (saved === "es" || saved === "en") ? saved : null; // NOTE: Esto necesita un retoquesito en algún futuro. Por ahora funciona, pero no lo debido.
-  }
-  catch (e) {
-    console.warn("i18n> Error en LocalStorage: ", e);
-    return null;
-  }
-}
+export async function loadTranslations(): Promise<void> {
+  const { language } = getSettings();
 
-function _getBrowserLanguage(): Lang {
-  const browserLang = navigator.language || "";
-  return browserLang.startsWith("es") ? "es" : "en";
-}
-
-async function _loadTranslations(): Promise<void> {
   try {
-    const response = await fetch(`/assets/translation/${currentLang}.json`);
+    const response = await fetch(`/assets/translation/${language}.json`);
     const json = await response.json();
 
-    translations[currentLang] = json;
+    translations[language] = json;
     loaded = true;
   }
   catch (error) {
@@ -34,39 +18,15 @@ async function _loadTranslations(): Promise<void> {
   }
 }
 
-/**
- * Devuelve un string dependiendo de la key para i18n y del lenguaje actual de la sesión.
- */
 export function getTranslation(key: string): string {
   if (!loaded) return "⚑ i18n ERROR ⚑";
 
-  const keys = key.split(".");
-  let translation = translations[currentLang];
+  const { language } = getSettings();
+  let translation = translations[language];
 
-  for (const k of keys) {
+  for (const k of key.split(".")) {
     translation = translation?.[k];
-  }
-
-  if (!translation) {
-    console.error("Key no encontrada: " + keys);
   }
 
   return translation ?? "⚑ KEY.NO.ENCONTRADA ⚑";
 }
-
-/**
- * Guarda el nuevo lenguaje dado en el localStorage.
- */
-export async function changeLanguage(lang: Lang): Promise<void> {
-  try {
-    currentLang = lang;
-    localStorage.setItem("preferred-language", lang);
-    window.location.reload();
-  }
-  catch (e) {
-    console.warn("i18n> Error en LocalStorage: ", e);
-  }
-}
-
-// Inicializamos la promesa de carga para que otros archivos puedan saber cuándo terminó
-export const i18nReady = _loadTranslations();
