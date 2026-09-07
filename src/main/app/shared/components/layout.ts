@@ -12,7 +12,7 @@ export default {
         m(banner, { role: "banner" }),
         m(".layout-content", [
           m(sidebar, { role: "navigation" }),
-          m(".content-column", { role: "main" }, vnode.children)
+          m("main.content-column", { role: "main" }, vnode.children)
         ])
       ])
     ]);

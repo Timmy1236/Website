@@ -22,9 +22,13 @@
   justify-content: space-between;
 }
 
-.panel-header p {
+.panel-header h1 {
   color: var(--color-text);
+  /* Shh. */
+  margin-bottom: 1px;
+  margin-top: -1px;
   font-size: var(--text-size-medium);
+  font-weight: normal;
 }
 
 .panel-controls {

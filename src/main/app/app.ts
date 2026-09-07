@@ -2,7 +2,6 @@ import m from "mithril";
 import { cLog } from "./shared/utils/clog.ts";
 import { loadTranslations } from "./shared/core/i18n.ts";
 import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
-
 import { initSettings } from "./shared/core/settings-logic.ts";
 import { initAutoplay } from "./shared/core/autoplay.ts";
 import { initSoundsEffects } from "./shared/core/sound-effects.ts";

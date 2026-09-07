@@ -76,8 +76,10 @@ const Home = {
               : this.latest
                 ? m("div.entry-content", [
                   m("div", [
-                    m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
-                    m("p.entry-date", this.latest.changelog.date),
+                    m(".entry-header", [
+                      m("a.entry-title link", { href: "content/" + this.latest.changelog.url }, this.latest.changelog.title),
+                      m("p.entry-date", this.latest.changelog.date)
+                    ]),
                     m("p", this.latest.changelog.description)
                   ]),
                   m("div", [
@@ -97,8 +99,10 @@ const Home = {
               : this.latest
                 ? m("div.entry-content", [
                   m("div", [
-                    m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
-                    m("p.entry-date", this.latest.blog.date),
+                    m(".entry-header", [
+                      m("a.entry-title link", { href: "content/" + this.latest.blog.url }, this.latest.blog.title),
+                      m("p.entry-date", this.latest.blog.date)
+                    ]),
                     m("p", this.latest.blog.description)
                   ]),
                   m("div", [

@@ -21,7 +21,7 @@ const Project = {
               })
             ),
 
-            m("h1.project-title", "Timmy's Dumpster")
+            m("p.project-title", "Timmy's Dumpster")
           ]),
 
           m(".project-body", [
@@ -59,7 +59,7 @@ const Project = {
               })
             ),
 
-            m("h1.project-title", "Leafy")
+            m("p.project-title", "Leafy")
           ]),
 
           m(".project-body", [

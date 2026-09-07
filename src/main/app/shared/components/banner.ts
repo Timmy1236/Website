@@ -5,12 +5,12 @@ const text = "timmy.nekoweb.org";
 
 export default {
   view: () =>
-    m(".banner-panel",
+    m("header.banner-panel",
       m(".panel-frame", [
         m(".banner", [
           m(".banner-bg"),
 
-          m("p.banner-title",
+          m("h1.banner-title",
             m(".wave-text",
               text.split("").map((char, i) =>
                 m("span.wave-container", { style: { "--i": i } },

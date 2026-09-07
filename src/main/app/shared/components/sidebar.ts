@@ -64,15 +64,15 @@ function _externalNavigate(url: string) {
 
 export default {
   view: () =>
-    m("div.sidebar", [
+    m("nav.sidebar", [
 
       // Main Navigation
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", getTranslation("sidebar.navigation.title")),
+            m("h1", getTranslation("sidebar.navigation.title")),
             m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+              m("button.panel-button", { "data-panel-action": "minimize" }, "―")
             ])
           ]),
           m(".panel-content", [
@@ -93,9 +93,9 @@ export default {
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("p", getTranslation("sidebar.library.title")),
+            m("h1", getTranslation("sidebar.library.title")),
             m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "▼")
+              m("button.panel-button", { "data-panel-action": "minimize" }, "―")
             ])
           ]),
           m(".panel-content", [
