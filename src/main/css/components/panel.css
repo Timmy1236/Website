@@ -24,7 +24,7 @@
 
 .panel-header p {
   color: var(--color-text);
-  font-size: 24px;
+  font-size: var(--text-size-medium);
 }
 
 .panel-controls {
@@ -123,7 +123,7 @@
   opacity: 0.45;
   transition: 0.2s;
   font-family: Pixel, monospace;
-  font-size: 20px;
+  font-size: var(--text-size-small);
   border: 0 solid transparent;
 }
 

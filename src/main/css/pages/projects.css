@@ -11,8 +11,7 @@
 }
 
 .project-title {
-  font-size: 36px;
-  margin: 0;
+  font-size: var(--text-size-xl);
 }
 
 .project-body {
@@ -50,6 +49,7 @@
   object-fit: cover;
   aspect-ratio: 16 / 10;
   max-width: 100%;
+  pointer-events: all;
 }
 
 .projects-links {

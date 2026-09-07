@@ -35,7 +35,7 @@
 
 .toast-name {
   margin: 0;
-  font-size: 24px;
+  font-size: var(--text-size-medium);
   vertical-align: center;
   color: var(--color-accent);
 }
@@ -45,7 +45,7 @@
 }
 
 .toast-desc {
-  font-size: 22px;
+  font-size: var(--text-size-small);
 }
 
 .toast.visible {

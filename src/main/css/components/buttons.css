@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   font-family: Pixel, monospace;
-  font-size: 22px;
+  font-size: var(--text-size-medium);
   color: var(--color-text);
   background-color: rgb(0 0 0 / 10%);
   border: 2px rgb(0 0 0 / 40%) solid;
@@ -48,8 +48,8 @@
 }
 
 .button-sidebar span {
-  font-size: clamp(1rem, 1.35rem, 1.35rem);
   text-shadow: var(--text-shadow);
+  font-size: var(--text-size-small);
 }
 
 .button-sidebar.active {

@@ -23,7 +23,7 @@
 .contact-counter {
   align-self: flex-end;
   opacity: 0.6;
-  font-size: 14px;
+  font-size: var(--text-size-mini);
 }
 
 .contact-submit {

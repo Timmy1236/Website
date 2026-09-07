@@ -9,7 +9,17 @@
   --panel-header-padding: 0 2px 0 4px;
   --panel-header-text-size: 24px;
   --panel-content-padding: 6.5px 8px;
+  
+  /* Text */
   --text-shadow: 2px 2px 0px rgb(0 0 0 / 30%);
+  --text-size-xl: clamp(1.25rem, 2vw + 0.25rem, 2.5rem);
+  --text-size-big: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
+  --text-size-medium: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
+  --text-size-small: clamp(1rem, 2vw + 0.25rem, 1.3rem);
+  --text-size-mini: clamp(0.8rem, 2vw + 0.25rem, 0.9rem);
+  --text-banner-size: clamp(1.25rem, 7vw + 0.25rem, 4rem);
+
+  /* Button */
   --button-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.725), background-color 0.3s;
   --button-hover-transform: translateY(-2.5px);
   --button-hover-shadow: 0 3px 0 rgb(0 0 0 / 32.9%);
