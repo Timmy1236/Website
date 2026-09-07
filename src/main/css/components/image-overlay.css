@@ -10,21 +10,25 @@
 }
 
 .image-overlay img {
-  border: 4px var(--color-foreground) solid;
+  border: 3px var(--color-foreground) solid;
   max-width: 90%;
-  box-shadow: var(--panel-shadow);
+  max-height: 90%;
 }
 
-.image-overlay .close-btn {
+.close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 24px;
   background: none;
   border: none;
-  padding: 4px 7px; 
+  padding: 2px 5px; 
   color: white;
   background-color: var(--color-foreground);
   cursor: pointer;
-    box-shadow: var(--panel-shadow);
+  box-shadow: var(--panel-shadow);
+}
+
+.close-btn:hover {
+  filter: brightness(1.5);
 }

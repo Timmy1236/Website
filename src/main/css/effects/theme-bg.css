@@ -1,0 +1,12 @@
+.theme-bg {
+  position: fixed;
+  inset: calc(var(--bg-offset-y) * -1) calc(var(--bg-offset-x) * -1);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: var(--bg-repeat);
+  background-size: var(--bg-size);
+  background-position: bottom;
+  animation: var(--bg-animation);
+  z-index: -2;
+  image-rendering: pixelated;
+}
