@@ -6,9 +6,9 @@ const isWatch = process.argv[2] === "watch";
 const options = {
   entryPoints: [
     { in: "src/main/app/app.ts", out: "main/app" },
-    { in: "src/library/app/app.ts", out: "library/app" },
     { in: "src/main/css/main.css", out: "main/styles" },
-    { in: "src/library/css/main.css", out: "pages" }
+    { in: "src/library/app/app.ts", out: "library/app" },
+    { in: "src/library/css/main.css", out: "library/styles" }
   ],
   outdir: "public/dist",
   bundle: true,
