@@ -5,98 +5,116 @@ const _localButton = (x: string) => `/assets/images/buttons/${x}.png`;
 
 export const neighborSites: ButtonSite[] = [
   {
+    owner: "chantu",
     url: "https://chantu.nekoweb.org/",
     button: "https://chantu.nekoweb.org/imgs/buttons/Chantu.png",
     preview: _preview("chantu"),
     note: "links.buttonWall.notes.chantu"
   },
   {
+    owner: "slowslushie",
     url: "https://slowslushie.nekoweb.org/",
     button: _localButton("slowslushie-fix"),
     preview: _preview("slowslushie"),
     note: "links.buttonWall.notes.slowslushie"
   },
   {
+    owner: "nyani58",
     url: "https://nyani58.nekoweb.org/",
     button: "https://file.garden/Z6nZpUcjoTvBXgF3/assets/realimportant/nyani58_button1.gif",
     preview: _preview("nyani58"),
     note: "links.buttonWall.notes.nyani58"
   },
   {
+    owner: "nogood angel",
     url: "https://nogood-angel.nekoweb.org/",
     button: "https://nogood-angel.moe/images/graphics/buttons/button2.webp",
     preview: _preview("nogoodangel")
   },
   {
+    owner: "someones insane",
     url: "https://someones-insane.nekoweb.org/",
     button: "https://someones-insane.nekoweb.org/images/imapettyasshole_button.gif",
     preview: _preview("someonesInsane")
   },
   {
+    owner: "yefreitor",
     url: "https://yefreitor.com/",
     button: "https://yefreitor.com/img/button.png",
     preview: _preview("yefreitor")
   },
   {
+    owner: "ellen",
     url: "https://ellen.nekoweb.org/",
     button: "https://ellen.nekoweb.org/Images/oc%20headshot%20style.png",
     preview: _preview("ellen")
   },
   {
+    owner: "ramon",
     url: "https://ramon.nekoweb.org/",
     button: "https://ramon.nekoweb.org/botonesyblinkies/botonramon.png",
     preview: _preview("ramon")
   },
   {
+    owner: "reduxflakes",
     url: "https://reduxflakes.nekoweb.org/",
     button: "https://reduxflakes.nekoweb.org/img/hcl6TIROJn-88.webp",
     preview: _preview("reduxflakes")
   },
   {
+    owner: "lucksiyo",
     url: "https://lucksiyo.xyz/",
     button: "https://lucksiyo.xyz/resources/button.png",
     preview: _preview("lucksiyo")
   },
   {
+    owner: "calijori",
     url: "https://calijori.com/",
     button: "https://file.garden/aQNtCESHqyYXcwhI/mygraphics/calibutton.jpg",
     preview: _preview("calijori")
   },
   {
+    owner: "entama",
     url: "https://entama.nekoweb.org/",
     button: "https://entama.nekoweb.org/img/buttonentama3.gif",
     preview: _preview("entama")
   },
   {
+    owner: "venus territory",
     url: "https://venus-territory.nekoweb.org/",
     button: "https://venus-territory.nekoweb.org/media/venus-territory-rose.png",
     preview: _preview("venus")
   },
   {
+    owner: "jovidmtp",
     url: "https://jovidmtp.nekoweb.org/",
     button: _localButton("jovidmtp"),
     preview: _preview("jovidmtp"),
     tooltip: "links.buttonWall.tooltip.placeholder"
   },
   {
+    owner: "cbz",
     url: "https://cbz.nekoweb.org/",
     button: _localButton("cbz"),
     preview: _preview("cbz"),
     tooltip: "links.buttonWall.tooltip.placeholder"
   },
   {
+    owner: "amoeba",
     url: "https://amoeba.nekoweb.org/",
     button: _localButton("amoeba"),
     preview: _preview("amoeba"),
     tooltip: "links.buttonWall.tooltip.placeholder"
   },
   {
+    owner: "hyacintho",
     url: "https://hyacintho.nekoweb.org/",
     button: _localButton("hyacintho"),
     preview: _preview("hyacintho"),
     tooltip: "links.buttonWall.tooltip.placeholder"
   },
   {
+    owner: "recalls",
     url: "https://recalls.zone/",
     button: _localButton("recall"),
     preview: _preview("recalls"),
@@ -106,12 +124,14 @@ export const neighborSites: ButtonSite[] = [
 
 export const likesSite: ButtonSite[] = [
   {
+    owner: "jbc",
     url: "https://jbc.lol/",
     button: "https://jbc.lol/imgs/buttons/jbtn.png",
     preview: _preview("jbc"),
     note: "links.buttonWall.notes.jbc"
   },
   {
+    owner: "loyaltyfreakmusic",
     url: "https://loyaltyfreakmusic.com/",
     button: "https://loyaltyfreakmusic.com/wp-content/uploads/2024/12/LFM_bouton.gif",
     preview: _preview("loyaltyfreakmusic"),
@@ -120,6 +140,7 @@ export const likesSite: ButtonSite[] = [
 ];
 
 export const MyButton: ButtonSite = {
+  owner: "timmy",
   url: "https://timmy.nekoweb.org/",
   button: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
   preview: _preview("timmy"),

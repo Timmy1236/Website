@@ -59,7 +59,7 @@ const Home = {
         title: getTranslation("home.welcome.title"),
         content: m("div", { style: "display: flex;" }, [
           m("p", m.trust(parseBBCode(getTranslation("home.welcome.text")))),
-          m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;" })
+          m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;", alt: "Alien dancing" })
         ])
       }),
 

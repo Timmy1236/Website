@@ -25,7 +25,7 @@ const Others = {
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
                 onmouseleave: () => hideButtonOverlay()
               },
-              m("img", { src: site.button, alt: site.url })
+              m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}`, loading: "eager", fetchpriority: "high", decoding: "async", width: 88, height: 31 })
               )
             )
           ),
@@ -39,7 +39,7 @@ const Others = {
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
                 onmouseleave: () => hideButtonOverlay()
               },
-              m("img", { src: site.button, alt: site.url })
+              m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}` })
               )
             )
           ),
@@ -52,6 +52,7 @@ const Others = {
             },
             m("img", {
               src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
+              alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${MyButton.owner}`,
               onclick: () => {
                 navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png");
                 showToast("info", true, "Button!", false, "toast.timmyButton", true);
@@ -66,14 +67,14 @@ const Others = {
         title: getTranslation("links.credits.title"),
         content: [
           m(".tree-section", [
-            m("p.heading.tree-header", "Hosting"),
+            m("h2.heading.tree-header", "Hosting"),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "NekoWeb")),
               m(".tree-item", m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "File Garden"))
             ])
           ]),
           m(".tree-section", [
-            m("p.heading.tree-header", "Librerías"),
+            m("h2.heading.tree-header", "Librerías"),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril.js")),
               m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "Eleventy")),
@@ -81,7 +82,7 @@ const Others = {
             ])
           ]),
           m(".tree-section", [
-            m("p.heading.tree-header", "Herramientas Externas"),
+            m("h2.heading.tree-header", "Herramientas Externas"),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://ditherit.com/", target: "_blank" }, "Dither it!")),
               m(".tree-item", m("a.link", { href: "https://compress-or-die.com/", target: "_blank" }, "Compress or Die")),
@@ -89,14 +90,14 @@ const Others = {
             ])
           ]),
           m(".tree-section", [
-            m("p.heading.tree-header", "Audios & Canciones"),
+            m("h2.heading.tree-header", "Audios & Canciones"),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw", target: "_blank" }, "Lack of Color - That tenderness")),
               m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, "Source Engine"))
             ])
           ]),
           m(".tree-section", [
-            m("p.heading.tree-header", "Imágenes"),
+            m("h2.heading.tree-header", "Imágenes"),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Voices of the Void screenshots")),
               m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki", target: "_blank" }, "Die of Death screenshots"))
@@ -107,14 +108,13 @@ const Others = {
 
       m(panel, {
         title: "iFrame: WebTiles",
-        content: m("div.iframe.container", [
+        content: m("div.iframe", [
           m("iframe", {
             src: "https://webtiles.kicya.net/e/timmy.nekoweb.org",
             width: "250",
             height: "270",
             frameborder: "0"
-          }),
-          m("textarea", "<iframe src=\"https://webtiles.kicya.net/e/timmy.nekoweb.org\" width=\"250\" height=\"270\" frameborder=\"0\"></iframe>".trim())
+          })
         ])
       })
     ]);

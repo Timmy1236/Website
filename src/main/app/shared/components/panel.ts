@@ -14,8 +14,8 @@ const panel: m.ClosureComponent<PanelAttrs> = () => {
           m(".panel-header", [
             m("h1", title),
             m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "―"),
-              m("button.panel-button", { "data-panel-action": "close" }, "X")
+              m("button.panel-button", { "data-panel-action": "minimize", tabindex: "-1" }, "―"),
+              m("button.panel-button", { "data-panel-action": "close", tabindex: "-1" }, "X")
             ])
           ]),
 

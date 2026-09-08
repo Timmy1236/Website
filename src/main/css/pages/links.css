@@ -64,9 +64,7 @@
   object-fit: cover;
 }
 
-.iframe.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  place-items: center center;
+.iframe {
+  margin: auto;
+  padding: 10px 0;
 }

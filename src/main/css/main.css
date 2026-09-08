@@ -32,6 +32,7 @@
 @import url("./components/bbcode.css");
 @import url("./components/image-overlay.css");
 @import url("./components/tree.css");
+@import url("./components/visually-hidden.css");
 
 /* En caso que un navegador no soporte @import (? */
 html.app-loaded .no-js {

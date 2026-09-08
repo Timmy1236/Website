@@ -5,6 +5,7 @@ let hideTimer: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
 
 export interface ButtonSite {
+  owner: string
   url: string
   button: string
   preview: string

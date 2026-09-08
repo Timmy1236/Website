@@ -13,7 +13,7 @@ function navBtn(label: string, external: boolean, path: string, img: string | nu
   return m("button.button.button-sidebar", attrs, [
     m("img", {
       src: img ? `/assets/images/icons/utils/${img}.png` : "/assets/images/icons/utils/no-icon.png",
-      alt: img ? img : "question mark",
+      alt: "",
       width: "16px", height: "16px"
     }),
     m("span", getTranslation(label))
@@ -65,15 +65,11 @@ function _externalNavigate(url: string) {
 export default {
   view: () =>
     m("nav.sidebar", [
-
-      // Main Navigation
+      // Main
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("h1", getTranslation("sidebar.navigation.title")),
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "―")
-            ])
+            m("h1", getTranslation("sidebar.navigation.title"))
           ]),
           m(".panel-content", [
             m(".sidebar-buttons-container", [
@@ -89,14 +85,11 @@ export default {
         ])
       ]),
 
-      // 'Library' sub-site navigation
+      // 'Library'
       m(".panel-frame", [
         m(".panel.nav-content", [
           m(".panel-header", [
-            m("h1", getTranslation("sidebar.library.title")),
-            m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize" }, "―")
-            ])
+            m("h1", getTranslation("sidebar.library.title"))
           ]),
           m(".panel-content", [
             m(".sidebar-buttons-container", [
