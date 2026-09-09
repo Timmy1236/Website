@@ -1,8 +1,10 @@
 import { getTranslation } from "../../shared/core/i18n";
 
-let rafId: number | null = null;
+let trackingFrame: number | null = null;
+let showFrame: number | null = null;
 let hideTimer: ReturnType<typeof setTimeout> | null = null;
 let currentTarget: HTMLElement | null = null;
+let stateVersion = 0;
 
 export interface ButtonSite {
   owner: string
@@ -17,41 +19,31 @@ const overlay = document.createElement("div");
 overlay.id = "button-overlay";
 document.body.appendChild(overlay);
 
-/**
- * Limpia completamente el overlay.
- */
-export function cleanupButtonOverlay(): void {
-  if (rafId !== null) {
-    cancelAnimationFrame(rafId);
-    rafId = null;
-  }
-
-  if (hideTimer !== null) {
-    clearTimeout(hideTimer);
-    hideTimer = null;
-  }
-
-  overlay.classList.remove("visible");
-  overlay.style.clipPath = "none";
-  overlay.innerHTML = "";
-
-  currentTarget = null;
-}
-
 export function showButtonOverlay(site: ButtonSite, el: HTMLElement): void {
-  currentTarget = el;
+  const version = ++stateVersion;
 
-  if (hideTimer !== null) {
-    clearTimeout(hideTimer);
-    hideTimer = null;
-  }
+  _cancelTracking();
+  _cancelShowFrame();
+  _cancelHideTimer();
+
+  currentTarget = el;
 
   overlay.innerHTML = "";
   overlay.appendChild(_renderOverlayContent(site));
+  _updateClipPath();
 
-  startTracking();
+  _startTracking(el, version);
 
-  requestAnimationFrame(() => {
+  showFrame = requestAnimationFrame(() => {
+    showFrame = null;
+
+    if (version !== stateVersion || currentTarget !== el || !el.isConnected) return;
+
+    if (!el.matches(":hover")) {
+      hideButtonOverlay(el);
+      return;
+    }
+
     overlay.classList.add("visible");
   });
 }
@@ -59,45 +51,77 @@ export function showButtonOverlay(site: ButtonSite, el: HTMLElement): void {
 /**
  * Actualiza continuamente el clip-path mientras el overlay esté visible, para evitar que el botón sufra del blur.
  */
-function startTracking() {
-  if (rafId !== null)
-    cancelAnimationFrame(rafId);
-
+function _startTracking(target: HTMLElement, version: number): void {
   const loop = () => {
-    if (!currentTarget) {
-      rafId = null;
+    trackingFrame = null;
+
+    if (version !== stateVersion || currentTarget !== target) {
       return;
     }
 
-    // Si por algún motivo nunca llegó el mouseleave.
-    if (!currentTarget.matches(":hover")) {
-      hideButtonOverlay();
+    // Fallback por si el navegador no entrega el mouseleave esperado.
+    if (!target.isConnected || !target.matches(":hover")) {
+      hideButtonOverlay(target);
       return;
     }
 
     _updateClipPath();
 
-    rafId = requestAnimationFrame(loop);
+    trackingFrame = requestAnimationFrame(loop);
   };
 
-  rafId = requestAnimationFrame(loop);
+  trackingFrame = requestAnimationFrame(loop);
 }
 
-export function hideButtonOverlay(): void {
-  overlay.classList.remove("visible");
+export function hideButtonOverlay(target?: HTMLElement): void {
+  if (target && currentTarget !== target) return;
 
-  if (rafId !== null) {
-    cancelAnimationFrame(rafId);
-    rafId = null;
-  }
+  _hideOverlay();
+}
 
-  overlay.style.clipPath = "none";
+function _hideOverlay(clearImmediately = false): void {
+  stateVersion++;
   currentTarget = null;
 
+  _cancelTracking();
+  _cancelShowFrame();
+  _cancelHideTimer();
+
+  overlay.classList.remove("visible");
+  overlay.style.clipPath = "none";
+
+  if (clearImmediately) {
+    overlay.innerHTML = "";
+    return;
+  }
+
+  // Mantiene el contenido durante la transición de opacidad, pero no deja
+  // ningún callback pendiente capaz de reactivar el overlay.
   hideTimer = setTimeout(() => {
     overlay.innerHTML = "";
     hideTimer = null;
   }, 300);
+}
+
+function _cancelTracking(): void {
+  if (trackingFrame === null) return;
+
+  cancelAnimationFrame(trackingFrame);
+  trackingFrame = null;
+}
+
+function _cancelShowFrame(): void {
+  if (showFrame === null) return;
+
+  cancelAnimationFrame(showFrame);
+  showFrame = null;
+}
+
+function _cancelHideTimer(): void {
+  if (hideTimer === null) return;
+
+  clearTimeout(hideTimer);
+  hideTimer = null;
 }
 
 function _updateClipPath() {

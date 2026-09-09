@@ -1,7 +1,6 @@
 import m from "mithril";
 import { getSettings } from "../core/settings-logic";
 import { getTranslation } from "../core/i18n";
-import { cleanupButtonOverlay } from "../../../app/features/links/links.buttons.overlay";
 
 let isTransitioning = false;
 let currentPath: string;
@@ -31,7 +30,6 @@ function _navigate(path: string) {
 
   mainColumn.classList.add("exit");
   setTimeout(() => {
-    cleanupButtonOverlay();
     m.route.set(path);
 
     requestAnimationFrame(() => {

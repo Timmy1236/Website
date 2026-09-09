@@ -23,7 +23,7 @@ const Others = {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: () => hideButtonOverlay()
+                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
               },
               m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}`, loading: "eager", fetchpriority: "high", decoding: "async", width: 88, height: 31 })
               )
@@ -37,7 +37,7 @@ const Others = {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: () => hideButtonOverlay()
+                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
               },
               m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}` })
               )
@@ -48,7 +48,7 @@ const Others = {
           m(".website-buttons",
             m("a", {
               "data-tooltip-i18n": MyButton.tooltip ? MyButton.tooltip : null,
-              onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: () => hideButtonOverlay()
+              onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
             },
             m("img", {
               src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
