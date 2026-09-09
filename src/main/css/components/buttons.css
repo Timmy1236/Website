@@ -48,8 +48,8 @@
 }
 
 .button-sidebar span {
-  text-shadow: var(--text-shadow);
   font-size: var(--text-size-small);
+  pointer-events: none;
 }
 
 .button-sidebar.active {
