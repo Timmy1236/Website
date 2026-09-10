@@ -69,7 +69,7 @@ const Home = {
 
         // ==== CHANGELOG ====
         m(panel, {
-          title: getTranslation("home.welcome.title"),
+          title: getTranslation("home.entries.changelog.title"),
           content: [
             this.error
               ? m("p", "Error")
@@ -92,7 +92,7 @@ const Home = {
 
         // ==== BLOG ====
         m(panel, {
-          title: getTranslation("home.welcome.title"),
+          title: getTranslation("home.entries.blog.title"),
           content: [
             this.error
               ? m("p", "Error")
