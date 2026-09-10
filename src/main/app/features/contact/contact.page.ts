@@ -124,9 +124,7 @@ const Contact = {
               onclick: function () { reveal("outlook"); }, "data-tooltip-i18n": "contact.tooltip.correo"
             }, "#t##o##c#"),
             m("p", m.trust(parseBBCode(getTranslation("contact.socials.discord")))),
-            m("a.link", {
-              href: "https://discordapp.com/users/375889010419171328", target: "_blank"
-            }, "@timmy1236")
+            m("a.link", { href: "https://discordapp.com/users/375889010419171328" }, "@timmy1236")
           ]
         })
       ])

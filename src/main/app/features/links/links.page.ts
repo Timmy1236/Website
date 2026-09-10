@@ -69,38 +69,38 @@ const Others = {
           m(".tree-section", [
             m("h2.heading.tree-header", "Hosting"),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://nekoweb.org/", target: "_blank" }, "NekoWeb")),
-              m(".tree-item", m("a.link", { href: "https://filegarden.com/", target: "_blank" }, "File Garden"))
+              m(".tree-item", m("a.link", { href: "https://nekoweb.org/" }, "NekoWeb")),
+              m(".tree-item", m("a.link", { href: "https://filegarden.com/" }, "File Garden"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", "Librerías"),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://mithril.js.org/", target: "_blank" }, "Mithril.js")),
-              m(".tree-item", m("a.link", { href: "https://www.11ty.dev/", target: "_blank" }, "Eleventy")),
-              m(".tree-item", m("a.link", { href: "https://esbuild.github.io/", target: "_blank" }, "ESBuild"))
+              m(".tree-item", m("a.link", { href: "https://mithril.js.org/" }, "Mithril.js")),
+              m(".tree-item", m("a.link", { href: "https://www.11ty.dev/" }, "Eleventy")),
+              m(".tree-item", m("a.link", { href: "https://esbuild.github.io/" }, "ESBuild"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", "Herramientas Externas"),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://ditherit.com/", target: "_blank" }, "Dither it!")),
-              m(".tree-item", m("a.link", { href: "https://compress-or-die.com/", target: "_blank" }, "Compress or Die")),
-              m(".tree-item", m("a.link", { href: "https://ezgif.com/", target: "_blank" }, "Ezgif"))
+              m(".tree-item", m("a.link", { href: "https://ditherit.com/" }, "Dither it!")),
+              m(".tree-item", m("a.link", { href: "https://compress-or-die.com/" }, "Compress or Die")),
+              m(".tree-item", m("a.link", { href: "https://ezgif.com/" }, "Ezgif"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", "Audios & Canciones"),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw", target: "_blank" }, "Lack of Color - That tenderness")),
-              m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2", target: "_blank" }, "Source Engine"))
+              m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw" }, "Lack of Color - That tenderness")),
+              m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2" }, "Source Engine"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", "Imágenes"),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/", target: "_blank" }, "Voices of the Void screenshots")),
-              m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki", target: "_blank" }, "Die of Death screenshots"))
+              m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void screenshots")),
+              m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death screenshots"))
             ])
           ])
         ]
