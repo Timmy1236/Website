@@ -145,6 +145,9 @@
     "credits": {
       "title": "Créditos"
     },
+    "siteboxGallery": {
+      "title": "Galería de Sitebox"
+    },
     "buttonWall": {
       "title": "Muro de Botones",
       "list": {

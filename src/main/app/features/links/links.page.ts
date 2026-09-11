@@ -5,6 +5,7 @@ import { showToast } from "../../shared/components/toast.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import panel from "../../shared/components/panel.ts";
+import { siteboxGalleryStyles, renderSiteboxIframe } from "./links.sitebox.gallery.ts";
 
 const Others = {
   oncreate() {
@@ -104,6 +105,11 @@ const Others = {
             ])
           ])
         ]
+      }),
+
+      m(panel, {
+        title: getTranslation("links.siteboxGallery.title"),
+        content: m(".sitebox-gallery", siteboxGalleryStyles.map(renderSiteboxIframe))
       }),
 
       m(panel, {

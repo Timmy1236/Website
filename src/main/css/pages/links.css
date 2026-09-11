@@ -68,3 +68,20 @@
   margin: auto;
   padding: 10px 0;
 }
+
+.sitebox-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 10px 0 4px;
+}
+
+.sitebox-gallery-frame {
+  flex: 0 0 275px;
+  width: 280px;
+  height: 200px;
+  border: 0;
+  background: transparent;
+}

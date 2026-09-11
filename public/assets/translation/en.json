@@ -149,6 +149,9 @@
     "credits": {
       "title": "Credits"
     },
+    "siteboxGallery": {
+      "title": "Sitebox Gallery"
+    },
     "buttonWall": {
       "title": "Button Wall",
       "list": {
