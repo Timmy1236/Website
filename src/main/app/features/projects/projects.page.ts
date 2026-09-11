@@ -15,13 +15,8 @@ const Project = {
         title: getTranslation("projects.title"),
         content: [
           m(".project-header", [
-            m(".project-icon",
-              m("img", {
-                src: "./assets/images/pages/projects/website/icon.webp", alt: "Website icon"
-              })
-            ),
-
-            m("p.project-title", "Timmy's Dumpster")
+            m(".project-icon", m("img", { src: "./assets/images/pages/projects/website/icon.webp", alt: "Website icon" })),
+            m("h2.project-title", "Timmy's Dumpster")
           ]),
 
           m(".project-body", [
@@ -53,13 +48,8 @@ const Project = {
         title: getTranslation("projects.title"),
         content: [
           m(".project-header", [
-            m(".project-icon",
-              m("img", {
-                src: "./assets/images/icons/leafy.webp", alt: "Leafy icon"
-              })
-            ),
-
-            m("p.project-title", "Leafy")
+            m(".project-icon", m("img", { src: "./assets/images/icons/leafy.webp", alt: "Leafy icon" })),
+            m("h2.project-title", "Leafy")
           ]),
 
           m(".project-body", [
