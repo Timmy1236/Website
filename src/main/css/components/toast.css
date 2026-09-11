@@ -1,5 +1,4 @@
 .toast {
-  --toast-color: #8B9DEE;
   --toast-icon: "ⓘ ";
 
   position: relative;
@@ -19,17 +18,14 @@
 }
 
 .toast[data-type="achievement"] {
-  --toast-color: #EEDC8B;
   --toast-icon: "★ ";
 }
 
 .toast[data-type="error"] {
-  --toast-color: #F55;
   --toast-icon: "⚠ ";
 }
 
 .toast[data-type="affirmative"] {
-  --toast-color: #55ff96;
   --toast-icon: "✔ ";
 }
 
