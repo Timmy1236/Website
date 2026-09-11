@@ -46,19 +46,19 @@ const webmasterPage = {
       m(panel, {
         title: getTranslation("webmaster.tech-stack.title"),
         content: [
-          m("h2", getTranslation("webmaster.tech-stack.languages")),
+          m("h2.header", getTranslation("webmaster.tech-stack.languages")),
           m(".scroll-tag-container", [
             tagLanguages.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2", getTranslation("webmaster.tech-stack.infra")),
+          m("h2.header", getTranslation("webmaster.tech-stack.infra")),
           m(".scroll-tag-container", [
             tagInfra.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2", getTranslation("webmaster.tech-stack.software")),
+          m("h2.header", getTranslation("webmaster.tech-stack.software")),
           m(".scroll-tag-container", [
             tagSoftware.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
@@ -70,7 +70,7 @@ const webmasterPage = {
       m(panel, {
         title: getTranslation("webmaster.interest.title"),
         content: [
-          m("h2", getTranslation("webmaster.interest.games")),
+          m("h2.header", getTranslation("webmaster.interest.games")),
           m(".scroll-cover-container", [
             gamesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
@@ -78,7 +78,7 @@ const webmasterPage = {
               ])
             )
           ]),
-          m("h2", getTranslation("webmaster.interest.series")),
+          m("h2.header", getTranslation("webmaster.interest.series")),
           m(".scroll-cover-container", [
             seriesMoviesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [

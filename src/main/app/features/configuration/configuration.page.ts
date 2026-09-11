@@ -50,7 +50,7 @@ const ConfigurationPage = {
               label: getTranslation("settings.list.visual"),
               content: () => m("div", [
                 m(".settings-group", [
-                  m("h2.group-title", getTranslation("settings.sections.visual-effects")),
+                  m("h2.group-title.header", getTranslation("settings.sections.visual-effects")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "static-effect", checked: draft.staticEffect,
@@ -77,7 +77,7 @@ const ConfigurationPage = {
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title", getTranslation("settings.sections.text")),
+                  m("h2.group-title.header", getTranslation("settings.sections.text")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "readable-font", checked: draft.readableFont,
@@ -88,7 +88,7 @@ const ConfigurationPage = {
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title", getTranslation("settings.sections.themes")),
+                  m("h2.group-title.header", getTranslation("settings.sections.themes")),
 
                   m(".option-list", themes
                     .filter(theme => !theme.unlocked || theme.unlocked())
@@ -116,7 +116,7 @@ const ConfigurationPage = {
             {
               label: getTranslation("settings.list.audio"),
               content: () => m(".settings-group", [
-                m("h2.group-title", getTranslation("settings.sections.audio")),
+                m("h2.group-title.header", getTranslation("settings.sections.audio")),
 
                 m(".option", [
                   m("input", {
@@ -139,7 +139,7 @@ const ConfigurationPage = {
               label: getTranslation("settings.list.others"),
               content: () => m(".settings-group", [
                 m(".settings-group", [
-                  m("h2.group-title", getTranslation("settings.sections.languages")),
+                  m("h2.group-title.header", getTranslation("settings.sections.languages")),
 
                   m(".option", [
                     m(".buttons-list", [
