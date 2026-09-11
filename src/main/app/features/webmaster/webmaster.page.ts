@@ -30,9 +30,15 @@ const webmasterPage = {
             m(".profile-section", [
               m("p.profile-section-title", getTranslation("webmaster.socials-title")),
               m(".profile-socials", [
-                m("button.button", { onclick: () => window.open("https://github.com/Timmy1236", "_blank"), "data-tooltip": "github.com/Timmy1236" }, m("img", { src: "./assets/images/icons/socials/github.png", alt: "" }), m("span.visually-hidden", "GitHub account")),
-                m("button.button", { onclick: () => window.open("https://discordapp.com/users/375889010419171328", "_blank"), "data-tooltip": "@timmy1236" }, m("img", { src: "./assets/images/icons/socials/discord.png", alt: "" }), m("span.visually-hidden", "Discord account")),
-                m("button.button", { onclick: () => window.open("https://steamcommunity.com/id/Timmy1236/", "_blank"), "data-tooltip": "STEAM_0:1:96376877" }, m("img", { src: "./assets/images/icons/socials/steam.png", alt: "" }), m("span.visually-hidden", "Steam account"))
+                m("a", { href: "https://github.com/Timmy1236" }, [
+                  m("img", { src: "./assets/images/icons/socials/github.png", alt: "GitHub" })
+                ]),
+                m("a", { href: "https://discordapp.com/users/375889010419171328" }, [
+                  m("img", { src: "./assets/images/icons/socials/discord.png", alt: "Discord" })
+                ]),
+                m("a", { href: "https://steamcommunity.com/id/Timmy1236/" }, [
+                  m("img", { src: "./assets/images/icons/socials/steam.png", alt: "Steam" })
+                ])
               ])
             ])
           ])

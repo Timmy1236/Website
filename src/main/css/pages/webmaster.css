@@ -55,9 +55,14 @@
 
 .profile-socials {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   height: 40px;
   justify-content: center;
+}
+
+.profile-socials img {
+  filter: drop-shadow(var(--text-shadow));
+  width: 30px;
 }
 
 /* Covers */
