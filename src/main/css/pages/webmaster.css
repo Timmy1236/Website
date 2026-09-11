@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
 	justify-content: space-around;
+  flex-direction: column;
 }
 
 .profile-info {
@@ -24,7 +25,7 @@
 
 .profile-status {
   font-size: var(--text-size-small);
-  padding-left: 3px;
+  text-align: center;
 	text-decoration: underline;
 }
 

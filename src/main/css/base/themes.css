@@ -13,7 +13,7 @@
   
   /* Text */
   --text-shadow: 2px 2px 0px rgb(0 0 0 / 30%);
-  --text-size-xl: clamp(1.25rem, 2vw + 0.25rem, 2.5rem);
+  --text-size-xl: clamp(1.25rem, 2.5vw + 0.25rem, 3rem);
   --text-size-big: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
   --text-size-medium: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
   --text-size-small: clamp(1rem, 2vw + 0.25rem, 1.3rem);
@@ -150,7 +150,7 @@
 
   /* Text */
   --text-shadow: 1px 1px 2px rgb(0 0 0 / 80%);
-  --text-size-xl: clamp(1.25rem, 2vw + 0.25rem, 2.5rem);
+  --text-size-xl: clamp(1.25rem, 2.5vw + 0.25rem, 3rem);
   --text-size-big: clamp(1.25rem, 2vw + 0.25rem, 1.75rem);
   --text-size-medium: clamp(1.25rem, 2vw + 0.25rem, 1.5rem);
   --text-size-small: clamp(1rem, 2vw + 0.25rem, 1.3rem);

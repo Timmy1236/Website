@@ -14,7 +14,7 @@ const webmasterPage = {
 
   view: function () {
     return m(".content", [
-      m(".panel-grid-2", { style: "--panel-col-1:315px; --panel-col-2:1fr;" }, [
+      m(".panel-grid-2", { style: "--panel-col-1:300px; --panel-col-2:1fr;" }, [
         m(panel, {
           title: getTranslation("webmaster.profile-title"),
           content: m(".profile-panel-content", [
@@ -24,11 +24,10 @@ const webmasterPage = {
               ),
               m(".profile-info", [
                 m("h2.profile-username", "Timmy1236"),
-                m("a.profile-status#status", { "data-tooltip-i18n": "tooltip.pages.webmaster.profile.status", onclick: loadStatus }, "Status")
+                m("p.profile-status#status", { "data-tooltip-i18n": "tooltip.pages.webmaster.profile.status", onclick: loadStatus }, "Status")
               ])
             ]),
             m(".profile-section", [
-              m("p.profile-section-title", getTranslation("webmaster.socials-title")),
               m(".profile-socials", [
                 m("a", { href: "https://github.com/Timmy1236" }, [
                   m("img", { src: "./assets/images/icons/socials/github.png", alt: "GitHub" })
@@ -38,6 +37,9 @@ const webmasterPage = {
                 ]),
                 m("a", { href: "https://steamcommunity.com/id/Timmy1236/" }, [
                   m("img", { src: "./assets/images/icons/socials/steam.png", alt: "Steam" })
+                ]),
+                m("a", { href: "https://www.roblox.com/users/89179192/profile" }, [
+                  m("img", { src: "./assets/images/icons/socials/roblox.png", alt: "Roblox" })
                 ])
               ])
             ])
