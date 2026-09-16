@@ -64,7 +64,7 @@ async function startApp() {
     cLog("INFO", "App", "Pagina cargada correctamente. ฅ ≽^•⩊•^≼ ฅ");
   }
   catch (error) {
-    cLog("ERROR", "App", `Fallo cargando la app: ${error}`);
+    cLog("ERROR", "App", "Fallo garrafal.", error);
   }
 }
 
