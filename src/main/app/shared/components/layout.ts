@@ -2,8 +2,12 @@ import m from "mithril";
 import banner from "./banner.ts";
 import sidebar from "./sidebar.ts";
 import { getSettings } from "../core/settings-logic";
+import { applyPanelStagger } from "../handlers/panel-stagger.ts";
 
 export default {
+  oncreate: applyPanelStagger,
+  onupdate: applyPanelStagger,
+
   view(vnode: m.Vnode) {
     const { vignetteEffect } = getSettings();
     return m("div.layout", [

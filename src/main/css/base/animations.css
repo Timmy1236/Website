@@ -41,3 +41,15 @@
   90% { transform: translate(10%, 5%); }
   100% { transform: translate(5%, 0); }
 }
+
+@keyframes panel-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
