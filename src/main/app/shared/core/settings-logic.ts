@@ -1,3 +1,4 @@
+import { initializeWebGLBackground } from "../components/background-shader";
 import { cLog } from "../utils/clog";
 const SETTINGS_VERSION = "3";
 
@@ -7,37 +8,57 @@ export interface Settings {
   backgroundMusic: boolean
   soundsEffects: boolean
   readableFont: boolean
-  animatedBg: boolean
   theme: string
   language: string
+  background: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  staticEffect: false,
-  vignetteEffect: false,
-  backgroundMusic: false,
-  soundsEffects: false,
+  staticEffect: true,
+  vignetteEffect: true,
+  backgroundMusic: true,
+  soundsEffects: true,
   readableFont: false,
-  animatedBg: false,
   theme: "simple-purple",
-  language: "en"
+  language: "en",
+  background: "webgl"
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
 
 function _loadStaticEffect() {
-  const bgDiv = document.createElement("div");
-  bgDiv.className = "static";
-  document.body.prepend(bgDiv);
+  if (currentSettings.staticEffect) {
+    const bgDiv = document.createElement("div");
+    bgDiv.className = "static";
+    document.body.prepend(bgDiv);
+  }
 }
 
-/**
- * Añade los atributos de 'theme' y 'color' al documento, usando lo que haya en currentSettings.
- */
 function _loadTheme() {
   const [theme, color] = currentSettings.theme.split("-");
   document.documentElement.setAttribute("data-theme", theme);
   document.documentElement.setAttribute("data-color", color);
+}
+
+function _loadBackground() {
+  const setting = currentSettings.background;
+  const div = document.createElement("div");
+  const canvas = document.createElement("canvas");
+
+  switch (setting) {
+    case "css":
+      div.className = "theme-bg";
+      document.body.appendChild(div);
+      break;
+    case "webgl":
+      canvas.id = "background-canvas";
+      document.body.appendChild(canvas);
+      initializeWebGLBackground();
+      break;
+    case "none":
+    default:
+      break;
+  }
 }
 
 /**
@@ -52,7 +73,7 @@ function _loadFromStorage(): Settings {
 }
 
 /**
- * Checkeamos si el navegador del usuario tiene guardada la misma versión de settings que esta en la pagina.
+ * Checkeamos si el usuario tiene la misma version local comparado con {@link SETTINGS_VERSION}. En caso que no, se forzara un {@link initDefaultSettings}
  */
 function _checkVersion(): boolean {
   const savedVersion = localStorage.getItem("settingsVersion");
@@ -61,45 +82,43 @@ function _checkVersion(): boolean {
 
   if (savedVersion === SETTINGS_VERSION) {
     cLog("DEBUG", "Settings Logic", "Las versiones son las mismas, deberían de ser compatibles y no haber errores.");
-    return false;
+    return true;
   }
   else {
     cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado y evitar errores.");
     initDefaultSettings();
-    localStorage.setItem("settingsVersion", SETTINGS_VERSION);
-    return true;
+    return false;
   }
 }
 
 /**
- * Carga y aplica todas las configuraciones. Se ejecuta una sola vez cuando la pagina arranca.
- * @returns `true` si todo se inicializo correctamente.
- * `false` si la version de settings esta vieja y ya se disparo un reload (en ese caso, no hay que seguir cargando nada más).
+ * Inicializa los settings. Antes de aplicarlos, se hace un checkeo de versiones.
+ * @see {@link _checkVersion}
  */
 export function initSettings(): boolean {
-  const outdated = _checkVersion();
-  if (outdated) return false;
+  if (_checkVersion()) {
+    loadSettings();
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 
+async function loadSettings(): Promise<void> {
   currentSettings = _loadFromStorage();
 
   cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
 
-  _loadTheme();
-  if (currentSettings.staticEffect) _loadStaticEffect();
+  await _loadTheme();
+  await _loadBackground();
+  await _loadStaticEffect();
   if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
-  if (!currentSettings.animatedBg) {
-    const t = document.querySelector(".theme-bg") as HTMLElement;
-    t.style.animation = "none";
-  }
-
-  return true;
 }
 
-/**
- * Sobrescribe las configuraciones guardadas por las del default, tanto en memoria como en LocalStorage.
- */
 export function initDefaultSettings() {
   localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
+  localStorage.setItem("settingsVersion", SETTINGS_VERSION);
   window.location.reload();
 }
 

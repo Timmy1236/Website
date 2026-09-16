@@ -29,9 +29,23 @@ const themes = [
   }
 ];
 
-const selectTheme = (e: Event) => {
-  draft.theme = (e.target as HTMLInputElement).value;
-};
+const background = [
+  {
+    value: "none",
+    image: "/assets/images/pages/configuration/empty.png",
+    label: "Empty"
+  },
+  {
+    value: "css",
+    image: "/assets/images/pages/configuration/checkboard.png",
+    label: "Checkboard - CSS"
+  },
+  {
+    value: "webgl",
+    image: "/assets/images/pages/configuration/liquify.png",
+    label: "Liquify - WebGL 2"
+  }
+];
 
 const ConfigurationPage = {
   oncreate() {
@@ -65,14 +79,6 @@ const ConfigurationPage = {
                       onchange: (e: Event) => { draft.vignetteEffect = (e.target as HTMLInputElement).checked; }
                     }),
                     m("label", { for: "vignette-effect" }, getTranslation("settings.options.vignetteEffects"))
-                  ]),
-
-                  m(".option", [
-                    m("input", {
-                      type: "checkbox", id: "animatedBg", checked: draft.animatedBg,
-                      onchange: (e: Event) => { draft.animatedBg = (e.target as HTMLInputElement).checked; }
-                    }),
-                    m("label", { for: "animatedBg" }, getTranslation("settings.options.animatedBg"))
                   ])
                 ]),
 
@@ -99,7 +105,7 @@ const ConfigurationPage = {
                           name: "theme",
                           value: theme.value,
                           checked: draft.theme === theme.value,
-                          onchange: selectTheme
+                          onchange: (e: Event) => { draft.theme = (e.target as HTMLInputElement).value; }
                         }),
 
                         m("img.option-list-item-image", {
@@ -109,6 +115,29 @@ const ConfigurationPage = {
                         m("p.option-list-item-text", theme.label)
                       ])
                     )
+                  )
+                ]),
+
+                m(".settings-group", [
+                  m("h2.group-title.header", getTranslation("settings.sections.background")),
+
+                  m(".option-list", background.map(background =>
+                    m("label.option-list-item", [
+                      m("input", {
+                        type: "radio",
+                        name: "background",
+                        value: background.value,
+                        checked: draft.background === background.value,
+                        onchange: (e: Event) => { draft.background = (e.target as HTMLInputElement).value; }
+                      }),
+
+                      m("img.option-list-item-image", {
+                        src: background.image
+                      }),
+
+                      m("p.option-list-item-text", background.label)
+                    ])
+                  )
                   )
                 ])
               ])

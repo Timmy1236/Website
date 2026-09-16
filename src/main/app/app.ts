@@ -8,7 +8,6 @@ import { initSoundsEffects } from "./shared/core/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
 import { initPanelButtons } from "./shared/components/panel-buttons.ts";
 
-// Pages
 import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
 import Webmaster from "./features/webmaster/webmaster.page.ts";
@@ -26,12 +25,7 @@ async function startApp() {
 
   try {
     cLog("INFO", "App", "Paso 1/3: Inicializando settings...");
-    const settingsOk = initSettings();
-
-    if (!settingsOk) {
-      cLog("ADVERTENCIA", "App", "Version de settings desactualizada, esperando reload...");
-      return;
-    }
+    await initSettings();
 
     cLog("INFO", "App", "Paso 2/3: Inicializando scripts extras: i18n, autoplay, tooltip, etc...");
     await loadTranslations();

@@ -125,7 +125,8 @@
       "audio": "Audio",
       "themes": "Themes",
       "languages": "Languages",
-      "text": "Text"
+      "text": "Text",
+      "background": "Background"
     },
     "options": {
       "staticEffects": "Static",

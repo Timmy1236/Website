@@ -1,3 +1,12 @@
+#background-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -2;
+}
+
 .theme-bg {
   position: fixed;
   inset: calc(var(--bg-offset-y) * -1) calc(var(--bg-offset-x) * -1);
