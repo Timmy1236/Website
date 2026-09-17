@@ -17,11 +17,10 @@ import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 import Page404 from "./features/404/404.page.ts";
-
-document.documentElement.classList.add("app-loaded");
 import { initToast } from "./shared/components/toast.ts";
 
 async function startApp() {
+  document.getElementById("warning")?.remove();
   console.time("Tiempo de carga");
 
   try {

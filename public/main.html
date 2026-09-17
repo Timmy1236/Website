@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div class="no-js"><p>Tu navegador necesita tener JavaScript activado y que tenga soporte a ES6-Modules.<br><br>Your browser needs to have JavaScript enabled and support ES6 modules.</p></div>
+  <div id="warning"><p style="font-size: 30px; margin: 20px;">Hey, si estás viendo esto significa que tienes JavaScript desactivado en tu navegador, tristemente, es imposible visitar mi página sin JS ya que está programada usando el framework: mithril.js. Si quieres entrar, necesito que lo actives.<br><br>Hey, if you're seeing this, it means you have JavaScript disabled in your browser. Unfortunately, it's impossible to visit my site without JS, since it's built using the mithril.js framework. If you want to access the site, you'll need to enable it.</p></div>
+  <script nomodule>document.getElementById("warning").innerHTML = '<p style="font-size: 30px; margin: 20px;">Tu navegador tiene JavaScript activado pero no es compatible con módulos ES6 modernos. Por favor, actualiza tu navegador para entrar.<br><br>Your browser has JavaScript enabled but does not support modern ES6 Modules. Please update your browser to access the site.<br><br><a href = "https://caniuse.com/es6-module">Can i use es6 modules?</a></p>';</script>
   <div id="app"></div>
   <div id="nekoweb-stats" style="display: none" data-views="<!--# views -->" data-updates="<!--# updates -->" data-followers="<!--# followers -->"></div>
   <script type="module" src="/dist/main/app.js"></script>
