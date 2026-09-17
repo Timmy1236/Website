@@ -5,17 +5,17 @@ eleventyExcludeFromCollections: true
 
 {
   "blog": {
-    "title": "{{ collections.blog_en[0].data.title }}",
-    "url": "{{ collections.blog_en[0].url }}",
-    "date": "{{ collections.blog_en[0].date | readableDate }}",
-    "description": "{{ collections.blog_en[0].data.description }}",
-    "preview": "{{ collections.blog_en[0].data.preview }}"
+    "title": {{ collections.blog_en[0].data.title | json | safe }},
+    "url": {{ collections.blog_en[0].url | json | safe }},
+    "date": {{ collections.blog_en[0].date | readableDate | json | safe }},
+    "description": {{ collections.blog_en[0].data.description | json | safe }},
+    "preview": {{ collections.blog_en[0].data.preview | json | safe }}
   },
   "changelog": {
-    "title": "{{ collections.changelog_en[0].data.title }}",
-    "url": "{{ collections.changelog_en[0].url }}",
-    "date": "{{ collections.changelog_en[0].date | readableDate }}",
-    "description": "{{ collections.changelog_en[0].data.description }}",
-    "preview": "{{ collections.changelog_en[0].data.preview }}"
+    "title": {{ collections.changelog_en[0].data.title | json | safe }},
+    "url": {{ collections.changelog_en[0].url | json | safe }},
+    "date": {{ collections.changelog_en[0].date | readableDate | json | safe }},
+    "description": {{ collections.changelog_en[0].data.description | json | safe }},
+    "preview": {{ collections.changelog_en[0].data.preview | json | safe }}
   }
 }

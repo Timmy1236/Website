@@ -97,6 +97,10 @@ export default async function (eleventyConfig) {
     return new Date(date).toLocaleDateString();
   });
 
+  eleventyConfig.addFilter("json", (value) => {
+    return JSON.stringify(value);
+  });
+
   eleventyConfig.addFilter("XMLDate", (date) => {
     return new Date(date).toISOString().split("T")[0];
   });
