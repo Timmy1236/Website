@@ -1,10 +1,25 @@
-type toastType = "info" | "achievement" | "error" | "affirmative";
-const achievementAudio = new Audio("/assets/sounds/sfx/achievement.mp3");
-const stack = document.getElementById("toast-container");
 import { getTranslation } from "../core/i18n";
 import { getSettings } from "../core/settings-logic";
 
-export function showToast(type: toastType, playSound: boolean, name: string, nameIsi18n: boolean, desc: string, descIsi18n: boolean) {
+type ToastType = "info" | "achievement" | "error" | "affirmative";
+const achievementAudio = new Audio("/assets/sounds/sfx/achievement.mp3");
+
+export interface ToastOptions {
+  type: ToastType
+  playSound?: boolean
+  name: string
+  desc: string
+}
+
+export function initToast(): void {
+  const test = document.createElement("div");
+  test.id = "toast-container";
+  document.body.append(test);
+}
+
+export function showToast(options: ToastOptions): void {
+  const stack = document.getElementById("toast-container");
+
   if (!stack) {
     return console.error("%ctoast%c Error, toast-container no encontrado?", "color: #ff4040; background: #282A35;", "color: white");
   }
@@ -13,20 +28,20 @@ export function showToast(type: toastType, playSound: boolean, name: string, nam
 
   const toast = document.createElement("div");
   toast.className = "toast";
-  toast.dataset.type = type;
+  toast.dataset.type = options.type;
 
   const toastName = document.createElement("p");
   toastName.className = "toast-name";
-  toastName.textContent = nameIsi18n ? getTranslation(name) : name;
+  toastName.textContent = getTranslation(options.name);
 
   const toastDesc = document.createElement("p");
   toastDesc.className = "toast-desc";
-  toastDesc.textContent = descIsi18n ? getTranslation(desc) : desc;
+  toastDesc.textContent = getTranslation(options.desc);
 
   toast.append(toastName, toastDesc);
   stack.appendChild(toast);
 
-  if (playSound && soundsEffects) {
+  if (options.playSound && soundsEffects) {
     if (!achievementAudio.paused) {
       achievementAudio.currentTime = 0;
     }

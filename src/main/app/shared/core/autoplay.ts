@@ -51,8 +51,7 @@ function _playSong(): void {
   if (lastSong !== songSrc) {
     let songName = songSrc.split("/").pop()?.slice(0, -4).replace(/_/g, " ");
     if (!songName) songName = "null";
-
-    showToast("info", false, "toast.player", true, songName, false);
+    showToast({ type: "info", name: "toast.player", desc: songName });
   }
 
   lastSong = songSrc;

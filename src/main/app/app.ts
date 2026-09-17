@@ -19,6 +19,7 @@ import Achievements from "./features/achievements/achievements.page.ts";
 import Page404 from "./features/404/404.page.ts";
 
 document.documentElement.classList.add("app-loaded");
+import { initToast } from "./shared/components/toast.ts";
 
 async function startApp() {
   console.time("Tiempo de carga");
@@ -29,6 +30,7 @@ async function startApp() {
 
     cLog("INFO", "App", "Paso 2/3: Inicializando scripts extras: i18n, autoplay, tooltip, etc...");
     await loadTranslations();
+    initToast();
     initSoundsEffects();
     initAutoplay();
     initTooltip();

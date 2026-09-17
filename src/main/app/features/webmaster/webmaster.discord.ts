@@ -29,7 +29,7 @@ export async function loadStatus() {
   }
   else {
     cLog("INFO", "Discord", "Intento de obtener el status de Discord cuando no paso mas de un minuto.");
-    showToast("info", true, "webmaster.toasts.status.title", true, "webmaster.toasts.status.desc", true);
+    showToast({ type: "info", playSound: true, name: "webmaster.toasts.status.title", desc: "webmaster.toasts.status.desc" });
   }
 }
 

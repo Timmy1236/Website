@@ -80,7 +80,10 @@ export function unlockAchievement(id: string): void {
   saved[id] = { unlocked: true };
   saveAchievements(saved);
 
-  if (achievement.notify) showToast("achievement", true, achievement.name, false, achievement.description, true);
+  if (achievement.notify) {
+    showToast({ type: "achievement", playSound: true, name: achievement.name, desc: achievement.description });
+  }
+
   cLog("INFO", "Achievements Logic", `Logro: '${id}' desbloqueado!`);
 }
 

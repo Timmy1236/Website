@@ -56,7 +56,7 @@ const Others = {
               alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${MyButton.owner}`,
               onclick: () => {
                 navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png");
-                showToast("info", true, "Button!", false, "toast.timmyButton", true);
+                showToast({ type: "info", playSound: true, name: "Button!", desc: "toast.timmyButton" });
               }
             })
             )
