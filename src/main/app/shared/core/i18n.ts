@@ -25,8 +25,14 @@ export function getTranslation(key: string): string {
   const { language } = getSettings();
   let translation = translations[language];
 
-  for (const k of key.split(".")) {
-    translation = translation?.[k];
+  if (key.includes(".")) {
+    for (const k of key.split(".")) {
+      translation = translation?.[k];
+    }
+  }
+  else {
+    cLog("ADVERTENCIA", "i18n", "El key dado para traducir no corresponde el formato normal: X.X, se volverá la key intacta.");
+    return key;
   }
 
   return translation ?? "⚑ KEY.NO.ENCONTRADA ⚑";
