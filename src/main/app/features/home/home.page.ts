@@ -18,23 +18,6 @@ export interface Latest {
   changelog: Entry
 }
 
-function renderPreview(src: string) {
-  const extension = src.split(".").pop()?.toLowerCase();
-
-  if (extension === "mp4") {
-    return m("video.entry-image", {
-      src,
-      muted: true,
-      loop: true,
-      autoplay: true,
-      playsinline: true,
-      preload: "metadata"
-    });
-  }
-
-  return m("img.entry-image", { src });
-}
-
 const Home = {
   latest: null as Latest | null,
   error: false,
@@ -83,7 +66,7 @@ const Home = {
                     m("p", this.latest.changelog.description)
                   ]),
                   m("div", [
-                    renderPreview(this.latest.changelog.preview)
+                    m("img.entry-image", { src: this.latest.changelog.preview })
                   ])
                 ])
                 : m("p", "Cargando...")
@@ -106,7 +89,7 @@ const Home = {
                     m("p", this.latest.blog.description)
                   ]),
                   m("div", [
-                    renderPreview(this.latest.blog.preview)
+                    m("img.entry-image", { src: this.latest.blog.preview })
                   ])
                 ])
                 : m("p", "Cargando...")

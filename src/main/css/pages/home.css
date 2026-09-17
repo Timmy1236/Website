@@ -6,6 +6,7 @@
 .entry-image {
   width: 100%;
   aspect-ratio: 2 / 1;
+  image-rendering: crisp-edges;
 }
 
 .entry-content {
