@@ -1,3 +1,4 @@
+import { cLog } from "../utils/clog";
 import { getSettings } from "./settings-logic";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translations: Record<string, any> = {};
@@ -14,7 +15,7 @@ export async function loadTranslations(): Promise<void> {
     loaded = true;
   }
   catch (error) {
-    console.error("[i18n] Error al cargar traducciones:", error);
+    cLog("ERROR", "i18n", "Error al cargar las traducciones", error);
   }
 }
 

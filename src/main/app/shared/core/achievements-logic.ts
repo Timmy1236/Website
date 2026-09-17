@@ -42,8 +42,8 @@ function getSavedAchievements() {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : {};
   }
-  catch (e) {
-    console.warn("achievements-logic.js> Error leyendo LocalStorage:", e);
+  catch (error) {
+    cLog("ERROR", "achievements-logic", "Error al leer el LocalStorage, huh?", error);
     return {};
   }
 }
@@ -55,8 +55,8 @@ function saveAchievements(data: object) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
-  catch (e) {
-    console.error("achievements-logic.js> Error guardando en LocalStorage:", e);
+  catch (error) {
+    cLog("ERROR", "achievements-logic", "Error al guardar en el LocalStorage, huh?", error);
   }
 }
 

@@ -61,7 +61,7 @@ export async function sendContactForm(): Promise<void> {
     showToast({ type: "affirmative", playSound: true, name: "contact.toast.sent", desc: "contact.toast.sentDescription" });
   }
   catch (error) {
-    console.error("contact-form> Error enviando formulario:", error);
+    cLog("ERROR", "contact-form", "Error al enviar el formulario", error);
     showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.connectionFailed" });
   }
   finally {

@@ -1,5 +1,6 @@
 import { getTranslation } from "../core/i18n";
 import { getSettings } from "../core/settings-logic";
+import { cLog } from "../utils/clog";
 
 type ToastType = "info" | "achievement" | "error" | "affirmative";
 const achievementAudio = new Audio("/assets/sounds/sfx/achievement.mp3");
@@ -21,7 +22,7 @@ export function showToast(options: ToastOptions): void {
   const stack = document.getElementById("toast-container");
 
   if (!stack) {
-    return console.error("%ctoast%c Error, toast-container no encontrado?", "color: #ff4040; background: #282A35;", "color: white");
+    return cLog("ERROR", "toast", "div: 'toast-container' no encontrado?");
   }
 
   const { soundsEffects } = getSettings();
