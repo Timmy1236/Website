@@ -1,10 +1,10 @@
 ---
 title: "DIE OF DEATH"
-date: 2026-07-11
+date: 2026-09-17
 locale: "en"
-description: "TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY TODAY"
+description: "Dude."
 layout: layouts/base.html
-preview: "/content/assets/images/blog/dod/preview.webp"
+preview: "/content/assets/images/blog/dod/preview.png"
 back: /content/en/blog/index.html
 tags: ["microblog"]
 ---
@@ -15,7 +15,7 @@ tags: ["microblog"]
 
 [roblox.com/events/9164893861577884260](https://www.roblox.com/events/9164893861577884260)
 
-<img src="/content/assets/images/blog/dod/pursuer.webp" class="post-image">
+<video controls src="/content/assets/images/blog/dod/hitboxes.mp4" class="post-image"></video>
 
 </section>
 
