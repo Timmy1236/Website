@@ -76,7 +76,7 @@ export default {
               navBtn("sidebar.navigation.buttons.webmaster", false, "/webmaster", "user"),
               navBtn("sidebar.navigation.buttons.contact", false, "/contact", "contact"),
               navBtn("sidebar.navigation.buttons.links", false, "/links", "link"),
-              navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "achievement"),
+              // navBtn("sidebar.navigation.buttons.achievements", false, "/achievements", "achievement"),
               navBtn("sidebar.navigation.buttons.configuration", false, "/configuration", "settings")
             ])
           ])
