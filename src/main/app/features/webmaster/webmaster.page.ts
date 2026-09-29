@@ -16,7 +16,7 @@ const webmasterPage = {
     return m(".content", [
       m(".panel-grid-2", { style: "--panel-col-1:300px; --panel-col-2:1fr;" }, [
         m(panel, {
-          title: getTranslation("webmaster.profile-title"),
+          title: getTranslation("main.webmaster.windows.profile.title"),
           content: m(".profile-panel-content", [
             m(".profile-header", [
               m(".profile-avatar",
@@ -46,27 +46,28 @@ const webmasterPage = {
           ])
         }),
         m(panel, {
-          title: getTranslation("webmaster.about-me.title"),
-          content: m("p", m.trust(parseBBCode(getTranslation("webmaster.about-me.description"))))
+          title: getTranslation("main.webmaster.windows.about-me.title"),
+          content: m("p", m.trust(parseBBCode(getTranslation("main.webmaster.windows.about-me.description"))))
         })
       ]),
 
+      // === [Tech stack] ===
       m(panel, {
-        title: getTranslation("webmaster.tech-stack.title"),
+        title: getTranslation("main.webmaster.windows.tech-stack.title"),
         content: [
-          m("h2.header", getTranslation("webmaster.tech-stack.languages")),
+          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.languages")),
           m(".scroll-tag-container", [
             tagLanguages.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2.header", getTranslation("webmaster.tech-stack.infra")),
+          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.infra")),
           m(".scroll-tag-container", [
             tagInfra.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2.header", getTranslation("webmaster.tech-stack.software")),
+          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.software")),
           m(".scroll-tag-container", [
             tagSoftware.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
@@ -76,9 +77,9 @@ const webmasterPage = {
       }),
 
       m(panel, {
-        title: getTranslation("webmaster.interest.title"),
+        title: getTranslation("main.webmaster.windows.interest.title"),
         content: [
-          m("h2.header", getTranslation("webmaster.interest.games")),
+          m("h2.header", getTranslation("main.webmaster.windows.interest.list.games")),
           m(".scroll-cover-container", [
             gamesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
@@ -86,7 +87,7 @@ const webmasterPage = {
               ])
             )
           ]),
-          m("h2.header", getTranslation("webmaster.interest.series")),
+          m("h2.header", getTranslation("main.webmaster.windows.interest.list.series")),
           m(".scroll-cover-container", [
             seriesMoviesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [

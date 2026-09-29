@@ -9,21 +9,21 @@ export const neighborSites: ButtonSite[] = [
     url: "https://chantu.nekoweb.org/",
     button: "https://chantu.nekoweb.org/imgs/buttons/Chantu.png",
     preview: _preview("chantu"),
-    note: "links.buttonWall.notes.chantu"
+    note: "main.links.windows.button-wall.content.notes.chantu"
   },
   {
     owner: "slowslushie",
     url: "https://slowslushie.nekoweb.org/",
     button: _localButton("slowslushie-fix"),
     preview: _preview("slowslushie"),
-    note: "links.buttonWall.notes.slowslushie"
+    note: "main.links.windows.button-wall.content.notes.slowslushie"
   },
   {
     owner: "nyani58",
     url: "https://nyani58.nekoweb.org/",
     button: "https://file.garden/Z6nZpUcjoTvBXgF3/assets/realimportant/nyani58_button1.gif",
     preview: _preview("nyani58"),
-    note: "links.buttonWall.notes.nyani58"
+    note: "main.links.windows.button-wall.content.notes.nyani58"
   },
   {
     owner: "nogood angel",
@@ -89,36 +89,31 @@ export const neighborSites: ButtonSite[] = [
     owner: "jovidmtp",
     url: "https://jovidmtp.nekoweb.org/",
     button: _localButton("jovidmtp"),
-    preview: _preview("jovidmtp"),
-    tooltip: "links.buttonWall.tooltip.placeholder"
+    preview: _preview("jovidmtp")
   },
   {
     owner: "cbz",
     url: "https://cbz.nekoweb.org/",
     button: _localButton("cbz"),
-    preview: _preview("cbz"),
-    tooltip: "links.buttonWall.tooltip.placeholder"
+    preview: _preview("cbz")
   },
   {
     owner: "amoeba",
     url: "https://amoeba.nekoweb.org/",
     button: _localButton("amoeba"),
-    preview: _preview("amoeba"),
-    tooltip: "links.buttonWall.tooltip.placeholder"
+    preview: _preview("amoeba")
   },
   {
     owner: "hyacintho",
     url: "https://hyacintho.nekoweb.org/",
     button: _localButton("hyacintho"),
-    preview: _preview("hyacintho"),
-    tooltip: "links.buttonWall.tooltip.placeholder"
+    preview: _preview("hyacintho")
   },
   {
     owner: "recalls",
     url: "https://recalls.zone/",
     button: _localButton("recall"),
-    preview: _preview("recalls"),
-    tooltip: "links.buttonWall.tooltip.placeholder"
+    preview: _preview("recalls")
   }
 ];
 
@@ -128,14 +123,14 @@ export const likesSite: ButtonSite[] = [
     url: "https://jbc.lol/",
     button: "https://jbc.lol/imgs/buttons/jbtn.png",
     preview: _preview("jbc"),
-    note: "links.buttonWall.notes.jbc"
+    note: "main.links.windows.button-wall.content.notes.jbc"
   },
   {
     owner: "loyaltyfreakmusic",
     url: "https://loyaltyfreakmusic.com/",
     button: "https://loyaltyfreakmusic.com/wp-content/uploads/2024/12/LFM_bouton.gif",
     preview: _preview("loyaltyfreakmusic"),
-    note: "links.buttonWall.notes.loyaltyfreakmusic"
+    note: "main.links.windows.button-wall.content.notes.loyaltyfreakmusic"
   }
 ];
 
@@ -144,5 +139,5 @@ export const MyButton: ButtonSite = {
   url: "https://timmy.nekoweb.org/",
   button: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
   preview: _preview("timmy"),
-  tooltip: "links.buttonWall.tooltip.timmy"
+  note: "main.links.windows.button-wall.content.notes.timmy"
 };

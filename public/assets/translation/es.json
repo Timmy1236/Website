@@ -1,4 +1,161 @@
 {
+  "main": {
+    "home": {
+      "windows": {
+        "welcome": {
+          "title": "Bienvenido!",
+          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
+        },
+        "latestChangelog": {
+          "title": "Ultimo Changelog"
+        },
+        "latestBlog": {
+          "title": "Ultimo Blog"
+        }
+      }
+    },
+    "projects": {
+      "windows": {
+        "dumpster": {
+          "title": "Proyecto - Dumpster",
+          "description": "Mi sitio web personal hosteado en Nekoweb, sera mi rincon del internet donde guardare todo tipo de proyecto que he hecho o estoy desarrollando actualmente, lo que estas viendo ahora mismo es uno de mis proyectos publico mas grandes que tengo!"
+        },
+        "leafy": {
+          "title": "Proyecto - Leafy",
+          "description": "Un simple bot para discord hecho en discord.js, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
+        }
+      }
+    },
+    "webmaster": {
+      "windows": {
+        "profile": {
+          "title": "Perfil"
+        },
+        "about-me": {
+          "title": "Sobre mi",
+          "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, homelabbing. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
+        },
+        "tech-stack": {
+          "title": "Tech stack",
+          "list": {
+            "languages": "Lenguajes",
+            "infra": "Infra",
+            "software": "Softwares"
+          }
+        },
+        "interest": {
+          "title": "Aficiones",
+          "list": {
+            "games": "Juegos",
+            "series": "Series"
+          }
+        }
+      }
+    },
+    "contact": {
+      "windows": {
+        "socials": {
+          "title": "Contacto",
+          "content": {
+            "description": "Si quieres comunicarte conmigo de forma directa, solamente cuento con [b]tres opciones[/b] actualmente, una de ellas es usar el formulario de mensajes directos, las otras son...[br][/br][br][/br]",
+            "email": "[b]Por correo[/b]",
+            "discord": "[br][/br][b]Por discord[/b]"
+          }
+        },
+        "form": {
+          "title": "Enviar mensaje",
+          "content": {
+            "labelUsername": "Nombre de usuario *",
+            "labelContact": "Contacto (opcional)",
+            "placeholderContact": "Correo, red social o pagina web.",
+            "labelMessage": "Mensaje *",
+            "placeholderMessage": "Escribe tu mensaje, feedback, enojo, frustración o insultos.",
+            "submit": "Enviar",
+            "sending": "Enviando..."
+          }
+        }
+      }
+    },
+    "links": {
+      "windows": {
+        "button-wall": {
+          "title": "Muro de Botones",
+          "content": {
+            "neighbors": "Nekoweb Seguidores",
+            "likes": "Sitios Geniales",
+            "myButton": "... Yo",
+            "notes": {
+              "chantu": "La primera persona que conocí en Nekoweb ¡Super friendly!",
+              "slowslushie": "Banner por encima, el sidebar a la izquierda, el contenido a la derecha... El contenido principal a la derecha... ¡Mi pagina es original y no se lo robe a nadie!",
+              "nyani58": "¿¿¿DONDE MIERDA ESTOY???",
+              "jbc": "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
+              "loyaltyfreakmusic": "Si no fuera por esta página, no hubiera encontrado música sin copyright para mi sitio.",
+              "timmy": "Si me clickeas podras copiar la url de la imagen de mi boton :3"
+            }
+          }
+        },
+        "credits": {
+          "title": "Créditos",
+          "content": {
+            "host": "Hosting",
+            "dependencies": "Dependencias",
+            "websites": "Paginas utiles",
+            "audio": "Audios & Canciones",
+            "images": "Imágenes"
+          }
+        },
+        "sitebox-gallery": {
+          "title": "Galería de Sitebox"
+        }
+      }
+    },
+    "settings": {
+      "windows": {
+        "settings": {
+          "title": "Configuración",
+          "buttonConfirm": "Confirmar",
+          "buttonReset": "Reiniciar configuración"
+        }
+      },
+      "sub-windows": {
+        "visual": {
+          "title": "Visual",
+          "content": {
+            "visual-effects": "Efectos visuales",
+            "themes": "Temas",
+            "background": "Fondo",
+            "text": "Texto",
+            "animatedBg": "Fondo animado",
+            "vignetteEffects": "Viñeta",
+            "staticEffects": "Estática",
+            "readableFont": "Fuente legible"
+          }
+        },
+        "audio": {
+          "title": "Audio",
+          "content": {
+            "audio": "Audio",
+            "backgroundMusic": "Música de fondo",
+            "soundsEffects": "Efectos de sonidos"
+          }
+        },
+        "others": {
+          "title": "Otros",
+          "content": {
+            "languages": "Lenguajes"
+          }
+        }
+      }
+    },
+    "404": {
+      "windows": {
+        "error": {
+          "title": "ERROR 404",
+          "description": "... ¿Como has llegado aquí en primer lugar?"
+        }
+      }
+    }
+  },
   "sidebar": {
     "navigation": {
       "title": "Navegación",
@@ -16,164 +173,15 @@
     "library": {
       "title": "Librería",
       "buttons": {
-        "sitemap": "Sitemap",
         "blog": "Blog",
         "changelog": "Changelog"
       }
-    },
-    "nekoweb": {
-      "title": "Nekoweb",
-      "buttons": {
-        "visits": "Visitas: ",
-        "followers": "Seguidores: ",
-        "follow": "Seguirme"
-      }
     }
-  },
-  "home": {
-    "welcome": {
-      "title": "Bienvenido!",
-      "text": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
-    },
-    "entries": {
-      "blog": {
-        "title": "Ultimo Blog"
-      },
-      "changelog": {
-        "title": "Ultimo Changelog"
-      },
-      "commit": {
-        "title": "Ultimo Commit"
-      }
-    }
-  },
-  "webmaster": {
-    "profile-title": "Perfil",
-    "activity-title": "Actividad",
-    "about-me": {
-      "title": "Sobre mi",
-      "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]¿Cómo hace la gente para presentarse ellos mismos sin sentirse raro?[/url][/opacity][/i] [br][/br] ¡Hey! Soy Timmy[opacity=50][u][i][tooltip=Originalmente un numero capicua. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], un chabón de 20 años que vive en [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] Simplemente soy otro [u][tooltip=Desarrollador de Software backend... NEEEERD]programador[/tooltip][/u] más del montón. Mis hobbys se basan en cualquier cosa que tenga que ver relacionado con la tecnología. Gaming, series, películas, modelado en 3D, desarrollo de videojuegos, cyberseguridad, homelabbing. Siempre estuve interesado en el [i]Arte[/i], dibujar y plasmar mi creatividad en algo físico, pero nunca se me dio la mano para todo ese tipos de cosas, así que me quede con la compu escribiendo letras hasta que algo mágico aparezca."
-    },
-    "tech-stack": {
-      "title": "Tech stack",
-      "languages": "Lenguajes",
-      "infra": "Infra",
-      "software": "Softwares"
-    },
-    "interest": {
-      "title": "Aficiones",
-      "games": "Juegos",
-      "series": "Series"
-    },
-    "toasts": {
-      "status": {
-        "title": "Espera.",
-        "desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
-      }
-    }
-  },
-  "projects": {
-    "title": "Proyectos",
-    "list": {
-      "website": {
-        "description": "Mi sitio web personal hosteado en Nekoweb, sera mi rincon del internet donde guardare todo tipo de proyecto que he hecho o estoy desarrollando actualmente, lo que estas viendo ahora mismo es uno de mis proyectos publico mas grandes que tengo!"
-      },
-      "leafy": {
-        "description": "Un simple bot para discord hecho en discord.js, nada más, simple como eso. No necesitas servicios externos o un setup complicado. "
-      }
-    }
-  },
-  "contact": {
-    "socials": {
-      "title": "Contacto",
-      "description": "Si quieres comunicarte conmigo de forma directa, solamente cuento con [b]tres opciones[/b] actualmente, una de ellas es usar el formulario de mensajes directos, las otras son...[br][/br][br][/br]",
-      "email": "[b]Por correo[/b]",
-      "discord": "[br][/br][b]Por discord[/b]"
-    },
-    "form": {
-      "title": "Enviar mensaje",
-      "usernameLabel": "Nombre de usuario *",
-      "contactLabel": "Contacto (opcional)",
-      "contactPlaceholder": "Correo, red social o pagina web.",
-      "messageLabel": "Mensaje *",
-      "messagePlaceholder": "Escribe tu mensaje, feedback, enojo, frustración o insultos.",
-      "submit": "Enviar",
-      "sending": "Enviando..."
-    },
-    "toast": {
-      "error": "Error",
-      "messageRequired": "El mensaje no puede estar vacío.",
-      "usernameRequired": "El nombre de usuario no puede estar vacío.",
-      "tooLong": "El mensaje o contacto supera el límite permitido.",
-      "sendFailed": "No se pudo enviar el mensaje.",
-      "connectionFailed": "No se pudo conectar con el servidor.",
-      "sent": "Enviado",
-      "sentDescription": "Tu mensaje fue enviado correctamente."
-    },
-    "tooltip": {
-      "correo": "Clickea para revelar mi correo (es para evitar los bot de spam)"
-    }
-  },
-  "settings": {
-    "title": "Configuración",
-    "list": {
-      "visual": "Visual",
-      "audio": "Audio",
-      "others": "Otros"
-    },
-    "sections": {
-      "visual-effects": "Efectos visuales",
-      "audio": "Audio",
-      "themes": "Temas",
-      "background": "Fondo",
-      "text": "Texto",
-      "languages": "Lenguajes"
-    },
-    "options": {
-      "staticEffects": "Estática",
-      "backgroundMusic": "Música de fondo",
-      "vignetteEffects": "Viñeta",
-      "soundsEffects": "Efectos de sonidos",
-      "readableFont": "Fuente legible",
-      "animatedBg": "Fondo animado"
-    },
-    "buttons": {
-      "confirm": "Confirmar",
-      "reset": "Reiniciar configuración"
-    }
-  },
-  "links": {
-    "credits": {
-      "title": "Créditos"
-    },
-    "siteboxGallery": {
-      "title": "Galería de Sitebox"
-    },
-    "buttonWall": {
-      "title": "Muro de Botones",
-      "list": {
-        "neighbors": "Nekoweb Seguidores",
-        "likes": "Sitios Geniales",
-        "myButton": "... Yo"
-      },
-      "notes": {
-        "chantu": "La primera persona que conocí en Nekoweb ¡Super friendly!",
-        "slowslushie": "Banner por encima, el sidebar a la izquierda, el contenido a la derecha... El contenido principal a la derecha... ¡Mi pagina es original y no se lo robe a nadie!",
-        "nyani58": "¿¿¿DONDE MIERDA ESTOY???",
-        "jbc": "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
-        "loyaltyfreakmusic": "Si no fuera por esta página, no hubiera encontrado música sin copyright para mi sitio."
-      },
-      "tooltip": {
-        "placeholder": "[ BOTÓN PLACEHOLDER ]",
-        "timmy": "Clickeame para copiar el link!"
-      }
-    }
-  },
-  "404": {
-    "title": "ERROR 404",
-    "description": "... ¿Como has llegado aquí en primer lugar?"
   },
   "tooltip": {
+    "contact": {
+      "correo": "Clickea para revelar mi correo (es para evitar los bot de spam)"
+    },
     "pages": {
       "webmaster": {
         "interests": {
@@ -184,7 +192,7 @@
           "warframe": "Irónicamente unos de los mejores juegos amigables para los jugadores F2P, no creo que existe actualmente uno que le llegue al mismo nivel.",
           "roblox": "cada dia tengo menos ganas de seguir en esta mierda.",
           "isaac": "Había 0 necesidad de hacer un cover tan durísimo como este.",
-          "hl": "Unas de las mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)",
+          "hl": "Unas de lass mejores sagas de toda Valve... Una pena que nunca veremos una tercera entrega :)",
           "tf": "¡Tengo 1,000 horas en Team Fortress 2! ... Sigo jugando de forma horrible.",
           "portal1": "Tardas 20 minutos quieto mirando al puzzle como resolverlo...",
           "portal2": "Tardas 20 minutos quieto mirando al puzzle como resolverlo... ¡Esta vez con un amigo!",
@@ -200,12 +208,25 @@
       }
     }
   },
-  "others": {
-    "resetSettings": "¿Estas seguro que quieres reiniciar la configuración por defecto?"
-  },
   "toast": {
+    "webmaster": {
+      "status": {
+        "title": "Espera.",
+        "desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
+      }
+    },
     "player": "Reproduciendo...",
-    "timmyButton": "Link del botón copiado!"
+    "timmyButton": "Link del botón copiado!",
+    "contact": {
+      "error": "Error",
+      "messageRequired": "El mensaje no puede estar vacío.",
+      "usernameRequired": "El nombre de usuario no puede estar vacío.",
+      "tooLong": "El mensaje o contacto supera el límite permitido.",
+      "sendFailed": "No se pudo enviar el mensaje.",
+      "connectionFailed": "No se pudo conectar con el servidor.",
+      "sent": "Enviado",
+      "sentDescription": "Tu mensaje fue enviado correctamente."
+    }
   },
   "achievements": {
     "title": "Logros",
@@ -217,6 +238,10 @@
       "404": {
         "name": "Error 404",
         "desc": "¿Como llegastes hasta acá?"
+      },
+      "oyasumi": {
+        "name": "Buenas noches",
+        "desc": "No son horas para estar en esta pagina."
       }
     },
     "secretName": "Logro secreto",

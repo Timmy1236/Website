@@ -39,9 +39,9 @@ const Home = {
   view: function () {
     return m(".content", [
       m(panel, {
-        title: getTranslation("home.welcome.title"),
+        title: getTranslation("main.home.windows.welcome.title"),
         content: m("div", { style: "display: flex;" }, [
-          m("p", m.trust(parseBBCode(getTranslation("home.welcome.text")))),
+          m("p", m.trust(parseBBCode(getTranslation("main.home.windows.welcome.description")))),
           m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;", alt: "Alien dancing" })
         ])
       }),
@@ -52,7 +52,7 @@ const Home = {
 
         // ==== CHANGELOG ====
         m(panel, {
-          title: getTranslation("home.entries.changelog.title"),
+          title: getTranslation("main.home.windows.latestChangelog.title"),
           content: [
             this.error
               ? m("p", "Error")
@@ -75,7 +75,7 @@ const Home = {
 
         // ==== BLOG ====
         m(panel, {
-          title: getTranslation("home.entries.blog.title"),
+          title: getTranslation("main.home.windows.latestBlog.title"),
           content: [
             this.error
               ? m("p", "Error")

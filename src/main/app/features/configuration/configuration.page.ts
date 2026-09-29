@@ -58,19 +58,19 @@ const ConfigurationPage = {
     return m(".content", [
       m(".panel-frame", [
         m(TabPanel, {
-          title: getTranslation("settings.title"),
+          title: getTranslation("main.settings.windows.settings.title"),
           tabs: [
             {
-              label: getTranslation("settings.list.visual"),
+              label: getTranslation("main.settings.sub-windows.visual.title"),
               content: () => m("div", [
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("settings.sections.visual-effects")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.visual-effects")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "static-effect", checked: draft.staticEffect,
                       onchange: (e: Event) => { draft.staticEffect = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "static-effect" }, getTranslation("settings.options.staticEffects"))
+                    m("label", { for: "static-effect" }, getTranslation("main.settings.sub-windows.visual.content.staticEffects"))
                   ]),
 
                   m(".option", [
@@ -78,23 +78,23 @@ const ConfigurationPage = {
                       type: "checkbox", id: "vignette-effect", checked: draft.vignetteEffect,
                       onchange: (e: Event) => { draft.vignetteEffect = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "vignette-effect" }, getTranslation("settings.options.vignetteEffects"))
+                    m("label", { for: "vignette-effect" }, getTranslation("main.settings.sub-windows.visual.content.vignetteEffects"))
                   ])
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("settings.sections.text")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.text")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "readable-font", checked: draft.readableFont,
                       onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "readable-font" }, getTranslation("settings.options.readableFont"))
+                    m("label", { for: "readable-font" }, getTranslation("main.settings.sub-windows.visual.content.readableFont"))
                   ])
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("settings.sections.themes")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.themes")),
 
                   m(".option-list", themes
                     .filter(theme => !theme.unlocked || theme.unlocked())
@@ -119,7 +119,7 @@ const ConfigurationPage = {
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("settings.sections.background")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background")),
 
                   m(".option-list", background.map(background =>
                     m("label.option-list-item", [
@@ -143,16 +143,16 @@ const ConfigurationPage = {
               ])
             },
             {
-              label: getTranslation("settings.list.audio"),
+              label: getTranslation("main.settings.sub-windows.audio.title"),
               content: () => m(".settings-group", [
-                m("h2.group-title.header", getTranslation("settings.sections.audio")),
+                m("h2.group-title.header", getTranslation("main.settings.sub-windows.audio.content.audio")),
 
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "background-music-toggle", checked: draft.backgroundMusic,
                     onchange: (e: Event) => { draft.backgroundMusic = (e.target as HTMLInputElement).checked; }
                   }),
-                  m("label", { for: "background-music-toggle" }, getTranslation("settings.options.backgroundMusic"))
+                  m("label", { for: "background-music-toggle" }, getTranslation("main.settings.sub-windows.audio.content.backgroundMusic"))
                 ]),
 
                 m(".option", [
@@ -160,15 +160,15 @@ const ConfigurationPage = {
                     type: "checkbox", id: "sound-effects-toggle", checked: draft.soundsEffects,
                     onchange: (e: Event) => { draft.soundsEffects = (e.target as HTMLInputElement).checked; }
                   }),
-                  m("label", { for: "sound-effects-toggle" }, getTranslation("settings.options.soundsEffects"))
+                  m("label", { for: "sound-effects-toggle" }, getTranslation("main.settings.sub-windows.audio.content.soundsEffects"))
                 ])
               ])
             },
             {
-              label: getTranslation("settings.list.others"),
+              label: getTranslation("main.settings.sub-windows.others.title"),
               content: () => m(".settings-group", [
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("settings.sections.languages")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.others.content.languages")),
 
                   m(".option", [
                     m(".buttons-list", [
@@ -182,8 +182,8 @@ const ConfigurationPage = {
             }
           ],
           outTab: m(".configuration-buttons", [
-            m("button.button", { onclick: () => confirmSettings() }, getTranslation("settings.buttons.confirm")),
-            m("button.button", { onclick: () => restartSettings() }, getTranslation("settings.buttons.reset"))
+            m("button.button", { onclick: () => confirmSettings() }, getTranslation("main.settings.windows.settings.buttonConfirm")),
+            m("button.button", { onclick: () => restartSettings() }, getTranslation("main.settings.windows.settings.buttonReset"))
           ])
         })
       ])

@@ -24,7 +24,7 @@ export async function sendContactForm(): Promise<void> {
   const message = contactState.form.message.trim();
 
   if (!username) {
-    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.usernameRequired" });
+    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "toast.contact.usernameRequired" });
     return;
   }
 

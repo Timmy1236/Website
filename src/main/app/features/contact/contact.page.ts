@@ -22,7 +22,8 @@ function reveal(email: string) {
       const f = t.replace("#m#", ".me");
       email1.textContent = f;
     }
-  } else {
+  }
+  else {
     const email = document.getElementById("email2");
     if (email && !rev2) {
       email.style.pointerEvents = "none";
@@ -54,7 +55,7 @@ const Contact = {
 
         // ==== CONTACT FORUM ====
         m(panel, {
-          title: getTranslation("contact.form.title"),
+          title: getTranslation("main.contact.windows.form.title"),
           content: [
             m("form.contact-form", {
               onsubmit: (event: SubmitEvent) => {
@@ -63,7 +64,7 @@ const Contact = {
               }
             }, [
               m("div.contact-field", [
-                m("label", { for: "contact-username" }, getTranslation("contact.form.usernameLabel")),
+                m("label", { for: "contact-username" }, getTranslation("main.contact.windows.form.content.labelUsername")),
                 m("input#contact-username", {
                   type: "text",
                   maxlength: 100,
@@ -76,12 +77,12 @@ const Contact = {
                 })
               ]),
               m("div.contact-field", [
-                m("label", { for: "contact-contact" }, getTranslation("contact.form.contactLabel")),
+                m("label", { for: "contact-contact" }, getTranslation("main.contact.windows.form.content.labelContact")),
                 m("input#contact-contact", {
                   type: "text",
                   maxlength: 100,
                   autocomplete: "email",
-                  placeholder: getTranslation("contact.form.contactPlaceholder"),
+                  placeholder: getTranslation("main.contact.windows.form.content.placeholderContact"),
                   value: contactState.form.contact,
                   oninput: (event: Event) => {
                     contactState.form.contact = (event.target as HTMLInputElement).value;
@@ -89,11 +90,11 @@ const Contact = {
                 })
               ]),
               m("div.contact-field", [
-                m("label", { for: "contact-message" }, getTranslation("contact.form.messageLabel")),
+                m("label", { for: "contact-message" }, getTranslation("main.contact.windows.form.content.labelMessage")),
                 m("textarea#contact-message", {
                   maxlength: 500,
                   required: true,
-                  placeholder: getTranslation("contact.form.messagePlaceholder"),
+                  placeholder: getTranslation("main.contact.windows.form.content.placeholderMessage"),
                   value: contactState.form.message,
                   oninput: (event: Event) => {
                     contactState.form.message = (event.target as HTMLTextAreaElement).value;
@@ -105,25 +106,25 @@ const Contact = {
                 type: "submit",
                 disabled: contactState.submitting
               }, contactState.submitting
-                ? getTranslation("contact.form.sending")
-                : getTranslation("contact.form.submit"))
+                ? getTranslation("main.contact.windows.form.content.sending")
+                : getTranslation("main.contact.windows.form.content.submit"))
             ])
           ]
         }),
 
         // ==== EMAIL & SOCIALS ====
         m(panel, {
-          title: getTranslation("contact.socials.title"),
+          title: getTranslation("main.contact.windows.socials.title"),
           content: [
-            m("p", m.trust(parseBBCode(getTranslation("contact.socials.description")))),
-            m("p", m.trust(parseBBCode(getTranslation("contact.socials.email")))),
+            m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.description")))),
+            m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.email")))),
             m("a.link#email1", {
-              onclick: function () { reveal("proton"); }, "data-tooltip-i18n": "contact.tooltip.correo"
+              onclick: function () { reveal("proton"); }, "data-tooltip-i18n": "tooltip.contact.correo"
             }, "#t##p##m#"),
             m("a.link#email2", {
-              onclick: function () { reveal("outlook"); }, "data-tooltip-i18n": "contact.tooltip.correo"
+              onclick: function () { reveal("outlook"); }, "data-tooltip-i18n": "tooltip.contact.correo"
             }, "#t##o##c#"),
-            m("p", m.trust(parseBBCode(getTranslation("contact.socials.discord")))),
+            m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.discord")))),
             m("a.link", { href: "https://discordapp.com/users/375889010419171328" }, "@timmy1236")
           ]
         })

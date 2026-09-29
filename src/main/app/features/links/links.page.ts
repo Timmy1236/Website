@@ -15,9 +15,9 @@ const Others = {
   view: function () {
     return m(".content", [
       m(panel, {
-        title: getTranslation("links.buttonWall.title"),
+        title: getTranslation("main.links.windows.button-wall.title"),
         content: [
-          m("h2.header", getTranslation("links.buttonWall.list.neighbors")),
+          m("h2.header", getTranslation("main.links.windows.button-wall.content.neighbors")),
           m(".website-buttons",
             neighborSites.map(site =>
               m("a", {
@@ -31,7 +31,7 @@ const Others = {
             )
           ),
 
-          m("h2.header", getTranslation("links.buttonWall.list.likes")),
+          m("h2.header", getTranslation("main.links.windows.button-wall.content.likes")),
           m(".website-buttons",
             likesSite.map(site =>
               m("a", {
@@ -45,37 +45,35 @@ const Others = {
             )
           ),
 
-          m("h2.header", getTranslation("links.buttonWall.list.myButton")),
+          m("h2.header", getTranslation("main.links.windows.button-wall.content.myButton")),
           m(".website-buttons",
             m("a", {
               "data-tooltip-i18n": MyButton.tooltip ? MyButton.tooltip : null,
-              onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement), onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
-            },
-            m("img", {
-              src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
-              alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${MyButton.owner}`,
+              onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement),
+              onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
               onclick: () => {
                 navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png");
                 showToast({ type: "info", playSound: true, name: "Button!", desc: "toast.timmyButton" });
               }
-            })
+            },
+            m("img", { src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png", alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${MyButton.owner}` })
             )
           )
         ]
       }),
 
       m(panel, {
-        title: getTranslation("links.credits.title"),
+        title: getTranslation("main.links.windows.credits.title"),
         content: [
           m(".tree-section", [
-            m("h2.heading.tree-header.header", "Hosting"),
+            m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.host")),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://nekoweb.org/" }, "NekoWeb")),
               m(".tree-item", m("a.link", { href: "https://filegarden.com/" }, "File Garden"))
             ])
           ]),
           m(".tree-section", [
-            m("h2.heading.tree-header.header", "Librerías"),
+            m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.dependencies")),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://mithril.js.org/" }, "Mithril.js")),
               m(".tree-item", m("a.link", { href: "https://www.11ty.dev/" }, "Eleventy")),
@@ -83,7 +81,7 @@ const Others = {
             ])
           ]),
           m(".tree-section", [
-            m("h2.heading.tree-header.header", "Herramientas Externas"),
+            m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.websites")),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://ditherit.com/" }, "Dither it!")),
               m(".tree-item", m("a.link", { href: "https://compress-or-die.com/" }, "Compress or Die")),
@@ -91,14 +89,14 @@ const Others = {
             ])
           ]),
           m(".tree-section", [
-            m("h2.heading.tree-header.header", "Audios & Canciones"),
+            m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.audio")),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw" }, "Lack of Color - That tenderness")),
               m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2" }, "Source Engine"))
             ])
           ]),
           m(".tree-section", [
-            m("h2.heading.tree-header.header", "Imágenes"),
+            m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.images")),
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void screenshots")),
               m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death screenshots"))
@@ -108,7 +106,7 @@ const Others = {
       }),
 
       m(panel, {
-        title: getTranslation("links.siteboxGallery.title"),
+        title: getTranslation("main.links.windows.sitebox-gallery.title"),
         content: m(".sitebox-gallery", siteboxGalleryStyles.map(renderSiteboxIframe))
       }),
 

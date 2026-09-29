@@ -14,9 +14,9 @@ const Page404 = {
   view: function () {
     return m(".content", [
       m(panel, {
-        title: getTranslation("404.title"),
+        title: getTranslation("main.404.windows.error.title"),
         content: [
-          m("p", m.trust(parseBBCode(getTranslation("404.description"))))
+          m("p", m.trust(parseBBCode(getTranslation("main.404.windows.error.description"))))
         ]
       })
     ]);

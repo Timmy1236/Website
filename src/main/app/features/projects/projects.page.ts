@@ -12,7 +12,7 @@ const Project = {
   view: function () {
     return m(".content", [
       m(panel, {
-        title: getTranslation("projects.title"),
+        title: getTranslation("main.projects.windows.dumpster.title"),
         content: [
           m(".project-header", [
             m(".project-icon", m("img", { src: "./assets/images/pages/projects/website/icon.webp", alt: "Website icon" })),
@@ -20,7 +20,7 @@ const Project = {
           ]),
 
           m(".project-body", [
-            m("p.project-description", getTranslation("projects.list.website.description"))
+            m("p.project-description", getTranslation("main.projects.windows.dumpster.description"))
           ]),
 
           m(".project-gallery", [
@@ -45,7 +45,7 @@ const Project = {
       }),
 
       m(panel, {
-        title: getTranslation("projects.title"),
+        title: getTranslation("main.projects.windows.leafy.title"),
         content: [
           m(".project-header", [
             m(".project-icon", m("img", { src: "./assets/images/icons/leafy.webp", alt: "Leafy icon" })),
@@ -53,7 +53,7 @@ const Project = {
           ]),
 
           m(".project-body", [
-            m("p.project-description", getTranslation("projects.list.leafy.description"))
+            m("p.project-description", getTranslation("main.projects.windows.leafy.description"))
           ]),
 
           m(".projects-links", [

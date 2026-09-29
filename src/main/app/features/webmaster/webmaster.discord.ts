@@ -10,15 +10,13 @@ export interface Data {
   discord_status: string
 }
 
-const userID = "375889010419171328";
-
 let lastCheckTime = new Date();
 let time: Date;
 let fristCheck: boolean;
 
 export async function loadStatus() {
   time = new Date();
-  const lastCheck = ((time.getTime() - lastCheckTime.getTime()) / 60000); // En minutos
+  const lastCheck = ((time.getTime() - lastCheckTime.getTime()) / 60000);
 
   if ((lastCheck >= 1) || fristCheck !== true) {
     fristCheck = true;
@@ -29,7 +27,7 @@ export async function loadStatus() {
   }
   else {
     cLog("INFO", "Discord", "Intento de obtener el status de Discord cuando no paso mas de un minuto.");
-    showToast({ type: "info", playSound: true, name: "webmaster.toasts.status.title", desc: "webmaster.toasts.status.desc" });
+    showToast({ type: "info", playSound: true, name: "toast.webmaster.status.title", desc: "toast.webmaster.status.desc" });
   }
 }
 
@@ -38,7 +36,7 @@ async function _getStatus() {
   if (!statusElement) return;
   statusElement.textContent = "...";
 
-  const response = await fetch(`https://api.lanyard.rest/v1/users/${userID}`);
+  const response = await fetch("https://api.lanyard.rest/v1/users/375889010419171328");
   const json: LanyardResponse = await response.json();
 
   if (!json.success) throw new Error("No se pudo obtener la información del usuario.");
