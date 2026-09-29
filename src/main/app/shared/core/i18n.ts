@@ -20,7 +20,7 @@ export async function loadTranslations(): Promise<void> {
 }
 
 export function getTranslation(key: string): string {
-  if (!loaded) return "⚑ i18n ERROR ⚑";
+  if (!loaded) return "⚠️ i18n error";
 
   const { language } = getSettings();
   let translation = translations[language];
@@ -35,5 +35,11 @@ export function getTranslation(key: string): string {
     return key;
   }
 
-  return translation ?? "⚑ KEY.NO.ENCONTRADA ⚑";
+  if (translation) {
+    return translation;
+  }
+  else {
+    cLog("ERROR", "i18n", `Key: ${key} no encontrada.`);
+    return "⚠️ Key no encontrada";
+  }
 }
