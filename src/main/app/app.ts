@@ -1,12 +1,14 @@
 import m from "mithril";
+
 import { cLog } from "./shared/utils/clog.ts";
 import { loadTranslations } from "./shared/core/i18n.ts";
-import { onFirstVisit } from "./shared/handlers/achievements-trigger.ts";
+import { onVisit } from "./shared/handlers/achievements-trigger.ts";
 import { initSettings } from "./shared/core/settings-logic.ts";
 import { initAutoplay } from "./shared/core/autoplay.ts";
 import { initSoundsEffects } from "./shared/core/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
 import { initPanelButtons } from "./shared/components/panel-buttons.ts";
+import { initToast } from "./shared/components/toast.ts";
 
 import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
@@ -17,32 +19,27 @@ import Links from "./features/links/links.page.ts";
 import Configuration from "./features/configuration/configuration.page.ts";
 import Achievements from "./features/achievements/achievements.page.ts";
 import Page404 from "./features/404/404.page.ts";
-import { initToast } from "./shared/components/toast.ts";
 
 async function startApp() {
-  document.getElementById("warning")?.remove();
-  console.time("Tiempo de carga");
-
   try {
+    document.getElementById("warning")?.remove();
+
     cLog("INFO", "App", "Paso 1/3: Inicializando settings...");
     await initSettings();
 
-    cLog("INFO", "App", "Paso 2/3: Inicializando scripts extras: i18n, autoplay, tooltip, etc...");
-    await loadTranslations();
-    initToast();
-    initSoundsEffects();
-    initAutoplay();
-    initTooltip();
-    initPanelButtons();
+    cLog("INFO", "App", "Paso 2/3: Inicializando las demás funciones: i18n, autoplay, tooltip, etc...");
+    await Promise.all([
+      loadTranslations(),
+      initToast(),
+      initSoundsEffects(),
+      initAutoplay(),
+      initTooltip(),
+      initPanelButtons()
+    ]);
 
     cLog("INFO", "App", "Paso 3/3: Cargas finalizadas, montando rutas...");
     const root = document.getElementById("app");
-
-    if (!root) {
-      throw new Error("No se encontró el elemento #app en el HTML.");
-    }
-
-    onFirstVisit();
+    if (!root) throw new Error("No se encontró el elemento #app en el HTML.");
 
     m.route(root, "/home", {
       "/home": { render: () => m(Layout, m(Home)) },
@@ -55,7 +52,7 @@ async function startApp() {
       "/:404": { render: () => m(Layout, m(Page404)) }
     });
 
-    console.timeEnd("Tiempo de carga");
+    onVisit();
     cLog("INFO", "App", "Pagina cargada correctamente. ฅ ≽^•⩊•^≼ ฅ");
   }
   catch (error) {
