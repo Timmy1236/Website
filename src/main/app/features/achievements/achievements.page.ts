@@ -2,7 +2,7 @@ import m from "mithril";
 import { getAchievementsList, AchievementDefinition } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
-import panel from "../../shared/components/panel.ts";
+import { panel } from "../../shared/components/panels.ts";
 
 const AchievementsPage = {
   oncreate() {

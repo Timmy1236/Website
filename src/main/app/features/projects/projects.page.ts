@@ -2,7 +2,7 @@ import m from "mithril";
 import { createImageOverlay } from "../../shared/components/image-overlay.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { getTranslation } from "../../shared/core/i18n.js";
-import panel from "../../shared/components/panel.ts";
+import { panel } from "../../shared/components/panels.ts";
 
 const Project = {
   oncreate() {

@@ -3,7 +3,7 @@ import { getLatest } from "./home.latest.ts";
 import { getTranslation } from "../../shared/core/i18n.js";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import panel from "../../shared/components/panel.ts";
+import { panel } from "../../shared/components/panels.ts";
 
 export interface Entry {
   title: string

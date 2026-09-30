@@ -1,7 +1,7 @@
 import m from "mithril";
 import { confirmSettings, restartSettings, draft, refreshDraftFromStorage } from "./configuration.ui.ts";
 import { getTranslation } from "../../shared/core/i18n.js";
-import TabPanel from "../../shared/components/tab-panel.ts";
+import { TabPanel } from "../../shared/components/panels.ts";
 import { isUnlocked } from "../../shared/core/achievements-logic.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 

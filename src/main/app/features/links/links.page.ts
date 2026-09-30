@@ -4,7 +4,7 @@ import { neighborSites, likesSite, MyButton } from "./links.buttons.list.ts";
 import { showToast } from "../../shared/components/toast.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
-import panel from "../../shared/components/panel.ts";
+import { panel } from "../../shared/components/panels.ts";
 import { siteboxGalleryStyles, renderSiteboxIframe } from "./links.sitebox.gallery.ts";
 import { addAchievementProgress } from "../../shared/core/achievements-logic.ts";
 

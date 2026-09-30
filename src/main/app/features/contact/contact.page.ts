@@ -2,7 +2,7 @@ import m from "mithril";
 import { getTranslation } from "../../shared/core/i18n.js";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import panel from "../../shared/components/panel.ts";
+import { panel } from "../../shared/components/panels.ts";
 import { contactState, sendContactForm } from "../../shared/handlers/contact-form.ts";
 
 // Super protección anti bot scrapper 3000
