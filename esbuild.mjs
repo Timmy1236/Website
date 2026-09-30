@@ -1,5 +1,6 @@
 import { argv } from "node:process";
 import { build, context } from "esbuild";
+import { glsl } from "esbuild-plugin-glsl";
 
 const isWatch = argv[2] === "watch";
 
@@ -10,6 +11,7 @@ const options = {
     { in: "src/library/app/app.ts", out: "library/app" },
     { in: "src/library/css/main.css", out: "library/styles" }
   ],
+  plugins: [glsl({ minify: true })],
   outdir: "public/dist",
   bundle: true,
   minify: true,

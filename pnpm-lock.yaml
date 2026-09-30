@@ -191,6 +191,9 @@ importers:
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
+      esbuild-plugin-glsl:
+        specifier: ^1.4.2
+        version: 1.4.2(esbuild@0.28.2)
       eslint:
         specifier: ^10.11.0
         version: 10.11.0(supports-color@10.2.2)
@@ -1060,6 +1063,12 @@ packages:
 
   error-ex@1.3.4:
     resolution: {integrity: sha512-sqQamAnR14VgCr1A618A3sGrygcpK+HEbenA/HiEAkkUwcZIIB/tgWqHFxWgOyDh4nB4JCRimh79dR5Ywc9MDQ==}
+
+  esbuild-plugin-glsl@1.4.2:
+    resolution: {integrity: sha512-yNXs6k3Mw5fM+sZccHEuBJL3bgb8kT7C3e0+m79X6kyUSQkq5CiYxjfFbMZcsRr+Zi5NVeOGQ581rrUj2tFcuA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      esbuild: 0.x.x
 
   esbuild@0.28.2:
     resolution: {integrity: sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA==}
@@ -2736,6 +2745,10 @@ snapshots:
   error-ex@1.3.4:
     dependencies:
       is-arrayish: 0.2.1
+
+  esbuild-plugin-glsl@1.4.2(esbuild@0.28.2):
+    dependencies:
+      esbuild: 0.28.2
 
   esbuild@0.28.2:
     optionalDependencies:

@@ -1,11 +1,7 @@
-/**
- * Carga el código fuente de un shader desde un archivo externo.
- */
-async function _loadShader(path: string): Promise<string> {
-  const response = await fetch(path);
-  if (!response.ok) throw new Error(`No se pudo cargar el shader: ${path}`);
-  return response.text();
-}
+// @ts-expect-error Archivo .frag importado
+import fragmentSource from "../../../../../public/assets/shaders/background.frag";
+// @ts-expect-error Archivo .vert importado
+import vertexSource from "../../../../../public/assets/shaders/background.vert";
 
 /**
  * Crea y compila un shader en el contexto WebGL.
@@ -84,11 +80,6 @@ export async function initializeWebGLBackground(): Promise<void> {
 
   const canvas: HTMLCanvasElement = canvasElement;
   const gl: WebGL2RenderingContext = glContext as WebGL2RenderingContext;
-
-  const [vertexSource, fragmentSource] = await Promise.all([
-    _loadShader("./assets/shaders/background.vert"),
-    _loadShader("./assets/shaders/background.frag")
-  ]);
 
   const vertexShader = _createShader(gl, gl.VERTEX_SHADER, vertexSource);
   const fragmentShader = _createShader(gl, gl.FRAGMENT_SHADER, fragmentSource);
