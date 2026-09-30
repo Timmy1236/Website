@@ -242,6 +242,18 @@
       "oyasumi": {
         "name": "Buenas noches",
         "desc": "No son horas para estar en esta pagina."
+      },
+      "explorer": {
+        "name": "Explorador",
+        "desc": "Visita las demás paginas webs que hay en la sección 'Links'"
+      },
+      "math": {
+        "name": "Math.random()",
+        "desc": "Cada vez que entras se genera un numero aleatorio de 0 hasta 100, necesitas que salga el numero 100 para desbloquear este logro, buena suerte."
+      },
+      "owner": {
+        "name": "MET THE OWNER",
+        "desc": "LO HICISTES, ME ENCONTRASTES CONECTADO, ME CONOCISTES, WOOOOOOOOO"
       }
     },
     "secretName": "Logro secreto",

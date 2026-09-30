@@ -6,6 +6,7 @@ import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import panel from "../../shared/components/panel.ts";
 import { siteboxGalleryStyles, renderSiteboxIframe } from "./links.sitebox.gallery.ts";
+import { addAchievementProgress } from "../../shared/core/achievements-logic.ts";
 
 const Others = {
   oncreate() {
@@ -24,7 +25,10 @@ const Others = {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
+                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
+                onclick: () => {
+                  addAchievementProgress("explorer", 1);
+                }
               },
               m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}`, loading: "eager", fetchpriority: "high", decoding: "async", width: 88, height: 31 })
               )
@@ -38,7 +42,10 @@ const Others = {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
                 onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement)
+                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
+                onclick: () => {
+                  addAchievementProgress("explorer", 1);
+                }
               },
               m("img", { src: site.button, alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${site.owner}` })
               )

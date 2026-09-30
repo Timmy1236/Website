@@ -242,6 +242,18 @@
       "oyasumi": {
         "name": "Good night",
         "desc": "These are not hours to be on this page."
+      },
+      "explorer": {
+        "name": "Explorer",
+        "desc": "Visit the other websites listed in the “Links” section on the button wall"
+      },
+      "math": {
+        "name": "Math.random()",
+        "desc": "Every time you visit my page, a random number between 0 and 100 is generated. You need to get the number 100 to unlock this achievement. Good luck."
+      },
+      "owner": {
+        "name": "MET THE OWNER",
+        "desc": "YOU DID IT, YOU FOUND ME ONLINE, YOU MET ME, WOOOOOOOOO"
       }
     },
     "secretName": "Secret achievement",

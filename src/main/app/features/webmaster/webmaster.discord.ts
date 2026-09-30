@@ -1,4 +1,5 @@
 import { showToast } from "../../shared/components/toast";
+import { unlockAchievement } from "../../shared/core/achievements-logic";
 import { cLog } from "../../shared/utils/clog";
 
 export interface LanyardResponse {
@@ -54,6 +55,10 @@ async function _getStatus() {
   };
 
   const current = statusMap[status as Status] || statusMap.offline;
+
+  if (current.text == "Online") {
+    unlockAchievement("owner");
+  }
 
   statusElement.textContent = current.text;
   statusElement.style.color = current.color;

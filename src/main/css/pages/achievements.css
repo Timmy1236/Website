@@ -11,15 +11,20 @@
   padding: 8px;
   border: 2px solid rgb(0 0 0 / 40%);
   background: rgb(0 0 0 / 10%);
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .achievement-card.unlocked {
   opacity: 1;
-  border-color: #EEDC8B;
+  border-color: var(--color-foreground);
 }
 
 .achievement-icon {
-  font-size: 32px;
-  color: #EEDC8B;
+  width: 80px;
+  height: 80px;
+}
+
+.achievement-progress {
+  margin: 6px 0 0;
+  font-size: 0.85em;
 }
