@@ -1,7 +1,7 @@
-/* eslint-disable no-undef */
+import { argv } from "node:process";
 import { build, context } from "esbuild";
 
-const isWatch = process.argv[2] === "watch";
+const isWatch = argv[2] === "watch";
 
 const options = {
   entryPoints: [
