@@ -92,7 +92,8 @@ const Others = {
             m(".tree-list", [
               m(".tree-item", m("a.link", { href: "https://ditherit.com/" }, "Dither it!")),
               m(".tree-item", m("a.link", { href: "https://compress-or-die.com/" }, "Compress or Die")),
-              m(".tree-item", m("a.link", { href: "https://ezgif.com/" }, "Ezgif"))
+              m(".tree-item", m("a.link", { href: "https://ezgif.com/" }, "Ezgif")),
+              m(".tree-item", m("a.link", { href: "https://jsoncrack.com/" }, "JSON Interactive editor"))
             ])
           ]),
           m(".tree-section", [
@@ -105,8 +106,10 @@ const Others = {
           m(".tree-section", [
             m("h2.heading.tree-header.header", getTranslation("main.links.windows.credits.content.images")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void screenshots")),
-              m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death screenshots"))
+              m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void")),
+              m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death")),
+              m(".tree-item", m("a.link", { href: "https://www.steamgriddb.com/" }, "Games cover")),
+              m(".tree-item", m("a.link", { href: "https://www.imdb.com/" }, "Series or Movies covers"))
             ])
           ])
         ]
