@@ -1,6 +1,7 @@
 const _imgIcon = (x: string) => `/assets/images/pages/webmaster/icons/${x}.svg`;
 const _CoverGames = (x: string) => `/assets/images/pages/webmaster/covers/games/${x}.webp`;
 const _CoverSeries = (x: string) => `/assets/images/pages/webmaster/covers/series/${x}.webp`;
+const _CoverMovies = (x: string) => `/assets/images/pages/webmaster/covers/movies/${x}.webp`;
 
 interface tag {
   text: string
@@ -180,7 +181,7 @@ export const gamesCover: cover[] = [
   }
 ];
 
-export const seriesMoviesCover: cover[] = [
+export const seriesCover: cover[] = [
   {
     title: "Tres Acordes",
     cover: _CoverSeries("tres-acordes"),
@@ -205,5 +206,28 @@ export const seriesMoviesCover: cover[] = [
     title: "Madness Combat",
     cover: _CoverSeries("madness-combat"),
     link: "https://www.imdb.com/es/title/tt2072604/"
+  },
+  {
+    title: "Black Mirror",
+    cover: _CoverSeries("black-mirror"),
+    link: "https://www.imdb.com/es/title/tt2072604/"
+  }
+];
+
+export const moviesCover: cover[] = [
+  {
+    title: "Project Hail Mary",
+    cover: _CoverMovies("hail-mary"),
+    link: "https://www.imdb.com/title/tt12042730/"
+  },
+  {
+    title: "Interstellar",
+    cover: _CoverMovies("interstellar"),
+    link: "https://www.imdb.com/title/tt0816692/"
+  },
+  {
+    title: "Chappie",
+    cover: _CoverMovies("chappie"),
+    link: "https://www.imdb.com/title/tt1823672/"
   }
 ];

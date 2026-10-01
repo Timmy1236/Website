@@ -5,7 +5,7 @@ import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import { click } from "../../shared/handlers/profile-clicker.ts";
 import { panel } from "../../shared/components/panels.ts";
-import { gamesCover, seriesMoviesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";
+import { gamesCover, moviesCover, seriesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";
 
 const webmasterPage = {
   oncreate() {
@@ -83,15 +83,23 @@ const webmasterPage = {
           m(".scroll-cover-container", [
             gamesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
-                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the video game: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the game: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
               ])
             )
           ]),
           m("h2.header", getTranslation("main.webmaster.windows.interest.list.series")),
           m(".scroll-cover-container", [
-            seriesMoviesCover.map(cover =>
+            seriesCover.map(cover =>
               m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
-                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the series or movie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the serie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+              ])
+            )
+          ]),
+          m("h2.header", { "data-tooltip-i18n": "tooltip.pages.webmaster.list.movies" }, getTranslation("main.webmaster.windows.interest.list.movies")),
+          m(".scroll-cover-container", [
+            moviesCover.map(cover =>
+              m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
+                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the movie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
               ])
             )
           ])

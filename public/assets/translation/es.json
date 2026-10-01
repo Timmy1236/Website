@@ -47,7 +47,8 @@
           "title": "Aficiones",
           "list": {
             "games": "Juegos",
-            "series": "Series"
+            "series": "Series",
+            "movies": "Películas"
           }
         }
       }
@@ -184,6 +185,9 @@
     },
     "pages": {
       "webmaster": {
+        "list": {
+          "movies": "No era muy fan de ver películas, pero estoy viendo algunas últimamente. Si me das tiempo añadiré algunas mas tarde."
+        },
         "interests": {
           "votv": "Simulador de estar en el escritorio una hora intentando agarrar una señal para que al final simplemente falle y tengas que hacerlo todo de nuevo.",
           "minecraft": "Minceraft",

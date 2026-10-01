@@ -1,5 +1,13 @@
 {
   "main": {
+    "404": {
+      "windows": {
+        "error": {
+          "title": "ERROR 404",
+          "description": "...How did you get here in the first place?"
+        }
+      }
+    },
     "home": {
       "windows": {
         "welcome": {
@@ -47,7 +55,8 @@
           "title": "Interest",
           "list": {
             "games": "Games",
-            "series": "Series"
+            "series": "Series",
+            "movies": "Movies"
           }
         }
       }
@@ -146,14 +155,6 @@
           }
         }
       }
-    },
-    "404": {
-      "windows": {
-        "error": {
-          "title": "ERROR 404",
-          "description": "...How did you get here in the first place?"
-        }
-      }
     }
   },
   "sidebar": {
@@ -201,6 +202,9 @@
         },
         "profile": {
           "status": "Click to find out if I am connected right now on Discord or not."
+        },
+        "list": {
+          "movies": "I wasn't a big fan of watching movies, but I'm watching some lately. \nIf you give me time I will add some later."
         }
       },
       "others": {
@@ -231,13 +235,13 @@
   "achievements": {
     "title": "Achievements",
     "list": {
-      "welcome": {
-        "name": "Welcome",
-        "desc": "Of all the pages you could have gone to, and you decide on this one. Because?"
-      },
       "404": {
         "name": "Error 404",
         "desc": "How did you get here?"
+      },
+      "welcome": {
+        "name": "Welcome",
+        "desc": "Of all the pages you could have gone to, and you decide on this one. Because?"
       },
       "oyasumi": {
         "name": "Good night",
