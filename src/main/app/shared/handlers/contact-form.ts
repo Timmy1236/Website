@@ -24,17 +24,17 @@ export async function sendContactForm(): Promise<void> {
   const message = contactState.form.message.trim();
 
   if (!username) {
-    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "toast.contact.usernameRequired" });
+    showToast({ type: "error", playSound: true, name: "toast.pages.contact.error", desc: "toast.pages.contact.usernameRequired" });
     return;
   }
 
   if (!message) {
-    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.messageRequired" });
+    showToast({ type: "error", playSound: true, name: "toast.pages.contact.error", desc: "toast.pages.contact.messageRequired" });
     return;
   }
 
   if (contact.length > MAX_CONTACT_LENGTH || message.length > MAX_MESSAGE_LENGTH || username.length > MAX_USERNAME_LENGTH) {
-    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.tooLong" });
+    showToast({ type: "error", playSound: true, name: "toast.pages.contact.error", desc: "toast.pages.contact.tooLong" });
     return;
   }
 
@@ -51,18 +51,18 @@ export async function sendContactForm(): Promise<void> {
     await response.text();
 
     if (!response.ok) {
-      showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.sendFailed" });
+      showToast({ type: "error", playSound: true, name: "toast.pages.contact.error", desc: "toast.pages.contact.sendFailed" });
       return;
     }
 
     contactState.form.username = "";
     contactState.form.contact = "";
     contactState.form.message = "";
-    showToast({ type: "affirmative", playSound: true, name: "contact.toast.sent", desc: "contact.toast.sentDescription" });
+    showToast({ type: "affirmative", playSound: true, name: "toast.pages.contact.sent", desc: "toast.pages.contact.sentDescription" });
   }
   catch (error) {
     cLog("ERROR", "contact-form", "Error al enviar el formulario", error);
-    showToast({ type: "error", playSound: true, name: "contact.toast.error", desc: "contact.toast.connectionFailed" });
+    showToast({ type: "error", playSound: true, name: "toast.pages.contact.error", desc: "toast.pages.contact.connectionFailed" });
   }
   finally {
     contactState.submitting = false;

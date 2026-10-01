@@ -213,24 +213,26 @@
     }
   },
   "toast": {
-    "webmaster": {
-      "status": {
-        "title": "Stop.",
-        "desc": "Wait at least more than a minute to get my status back."
+    "pages": {
+      "webmaster": {
+        "status": {
+          "title": "Stop.",
+          "desc": "Wait at least more than a minute to get my status back."
+        }
+      },
+      "contact": {
+        "error": "Error",
+        "messageRequired": "The message cannot be empty.",
+        "usernameRequired": "The username cannot be empty.",
+        "tooLong": "The message or contact exceeds the allowed limit.",
+        "sendFailed": "The message could not be sent.",
+        "connectionFailed": "Could not connect to the server.",
+        "sent": "Sent",
+        "sentDescription": "Your message was sent successfully."
       }
     },
     "player": "Playing...",
-    "timmyButton": "Copied button link!",
-    "contact": {
-      "error": "Error",
-      "messageRequired": "The message cannot be empty.",
-      "usernameRequired": "The username cannot be empty.",
-      "tooLong": "The message or contact exceeds the allowed limit.",
-      "sendFailed": "The message could not be sent.",
-      "connectionFailed": "Could not connect to the server.",
-      "sent": "Sent",
-      "sentDescription": "Your message was sent successfully."
-    }
+    "timmyButton": "Copied button link!"
   },
   "achievements": {
     "title": "Achievements",

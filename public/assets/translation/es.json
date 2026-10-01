@@ -213,24 +213,26 @@
     }
   },
   "toast": {
-    "webmaster": {
-      "status": {
-        "title": "Espera.",
-        "desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
+    "pages": {
+      "webmaster": {
+        "status": {
+          "title": "Espera.",
+          "desc": "Espera al menos mas de un minuto para obtener de vuelta mi status."
+        }
+      },
+      "contact": {
+        "error": "Error",
+        "messageRequired": "El mensaje no puede estar vacío.",
+        "usernameRequired": "El nombre de usuario no puede estar vacío.",
+        "tooLong": "El mensaje o contacto supera el límite permitido.",
+        "sendFailed": "No se pudo enviar el mensaje.",
+        "connectionFailed": "No se pudo conectar con el servidor.",
+        "sent": "Enviado",
+        "sentDescription": "Tu mensaje fue enviado correctamente."
       }
     },
     "player": "Reproduciendo...",
-    "timmyButton": "Link del botón copiado!",
-    "contact": {
-      "error": "Error",
-      "messageRequired": "El mensaje no puede estar vacío.",
-      "usernameRequired": "El nombre de usuario no puede estar vacío.",
-      "tooLong": "El mensaje o contacto supera el límite permitido.",
-      "sendFailed": "No se pudo enviar el mensaje.",
-      "connectionFailed": "No se pudo conectar con el servidor.",
-      "sent": "Enviado",
-      "sentDescription": "Tu mensaje fue enviado correctamente."
-    }
+    "timmyButton": "Link del botón copiado!"
   },
   "achievements": {
     "title": "Logros",
