@@ -86,6 +86,12 @@ export const neighborSites: ButtonSite[] = [
     preview: _preview("venus")
   },
   {
+    owner: "Ulon",
+    url: "https://ulon.dev/",
+    button: "https://ulon.nekoweb.org/images/ulon_button2.gif",
+    preview: _preview("ulon")
+  },
+  {
     owner: "jovidmtp",
     url: "https://jovidmtp.nekoweb.org/",
     button: _localButton("jovidmtp"),
