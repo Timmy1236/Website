@@ -14,7 +14,7 @@ export function confirmSettings() {
 }
 
 export function restartSettings() {
-  if (confirm(getTranslation("others.resetSettings")) == true) {
+  if (confirm(getTranslation("toast.pages.configuration.reset")) == true) {
     initDefaultSettings();
   }
 }

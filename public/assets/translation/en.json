@@ -123,7 +123,7 @@
         "settings": {
           "title": "Configuration",
           "buttonConfirm": "Confirm",
-          "buttonReset": "Reset settings"
+          "buttonReset": "Reset"
         }
       },
       "sub-windows": {

@@ -115,7 +115,7 @@
         "settings": {
           "title": "Configuración",
           "buttonConfirm": "Confirmar",
-          "buttonReset": "Reiniciar configuración"
+          "buttonReset": "Reiniciar"
         }
       },
       "sub-windows": {
@@ -229,6 +229,9 @@
         "connectionFailed": "No se pudo conectar con el servidor.",
         "sent": "Enviado",
         "sentDescription": "Tu mensaje fue enviado correctamente."
+      },
+      "configuration": {
+        "reset": "¿Estas seguro de reiniciar tu configuración?"
       }
     },
     "player": "Reproduciendo...",
