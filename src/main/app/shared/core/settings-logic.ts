@@ -6,6 +6,7 @@ export interface Settings {
   staticEffect: boolean
   vignetteEffect: boolean
   backgroundMusic: boolean
+  musicVolume: number
   soundsEffects: boolean
   readableFont: boolean
   theme: string
@@ -18,6 +19,7 @@ export const DEFAULT_SETTINGS: Settings = {
   staticEffect: true,
   vignetteEffect: true,
   backgroundMusic: true,
+  musicVolume: 25,
   soundsEffects: true,
   readableFont: false,
   theme: "simple-purple",

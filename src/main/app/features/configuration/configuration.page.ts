@@ -191,6 +191,14 @@ const ConfigurationPage = {
                   m("label", { for: "background-music-toggle" }, getTranslation("main.settings.sub-windows.audio.content.backgroundMusic"))
                 ]),
 
+                m(".option.music-volume-option", [
+                  m("input.music-volume-slider", {
+                    type: "range", id: "music-volume-slider", min: 0, max: 100, step: 1, value: draft.musicVolume, "aria-label": "Music volume",
+                    oninput: (e: Event) => { draft.musicVolume = Number((e.target as HTMLInputElement).value); }
+                  }),
+                  m("label", { for: "music-volume-slider" }, `Music volume: ${draft.musicVolume}%`)
+                ]),
+
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "sound-effects-toggle", checked: draft.soundsEffects,

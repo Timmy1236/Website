@@ -5,12 +5,10 @@ import { cLog } from "../utils/clog";
 let playing = false;
 let lastSong: string;
 
+const audio = new Audio();
 const songsArray: string[] = [
   "./assets/sounds/music/Lack_of_Color-That_tenderness.ogg"
 ];
-const volume = 0.25;
-
-const audio = new Audio();
 
 /**
  * Inicializa los listeners globales para el Autoplay.
@@ -40,11 +38,12 @@ export function initAutoplay() {
  * Selecciona y reproduce una canción aleatoria.
  */
 function _playSong(): void {
+  const { musicVolume } = getSettings();
   const songSrc: string = songsArray[Math.floor(Math.random() * songsArray.length)];
   if (!songSrc) return;
 
   audio.src = songSrc;
-  audio.volume = volume;
+  audio.volume = (musicVolume / 100);
 
   audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
 
@@ -64,7 +63,6 @@ function _handleAudioState() {
   if (document.hasFocus() && !audio.muted && playing) {
     if (audio.paused) {
       audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
-      audio.volume = volume;
     }
   }
   else {

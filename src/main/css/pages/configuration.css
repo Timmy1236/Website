@@ -6,6 +6,57 @@
   padding-left: 10px;
 }
 
+.music-volume-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 40%;
+}
+
+.music-volume-option .music-volume-slider {
+  appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 18px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.music-volume-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  background: var(--color-foreground);
+}
+
+.music-volume-slider::-moz-range-track {
+  height: 8px;
+  background: var(--color-foreground);
+}
+
+.music-volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -5px;
+  border: 2px solid var(--color-foreground);
+  border-radius: 0;
+  background: var(--color-background);
+}
+
+.music-volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-foreground);
+  border-radius: 0;
+  background: var(--color-background);
+}
+
+.music-volume-option label {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: right;
+}
+
 #theme-select {
   padding-left: 0;
   padding-right: 10px;
