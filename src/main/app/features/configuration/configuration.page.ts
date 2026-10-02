@@ -47,6 +47,19 @@ const background = [
   }
 ];
 
+const sidebar = [
+  {
+    value: "right",
+    image: "/assets/images/pages/configuration/purple.webp",
+    label: "Right"
+  },
+  {
+    value: "left",
+    image: "/assets/images/pages/configuration/left-sidebar.png",
+    label: "Left"
+  }
+];
+
 const ConfigurationPage = {
   oncreate() {
     setCurrentPath(m.route, "settings");
@@ -136,6 +149,29 @@ const ConfigurationPage = {
                       }),
 
                       m("p.option-list-item-text", background.label)
+                    ])
+                  )
+                  )
+                ]),
+
+                m(".settings-group", [
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background")),
+
+                  m(".option-list", sidebar.map(sidebar =>
+                    m("label.option-list-item", [
+                      m("input", {
+                        type: "radio",
+                        name: "sidebar",
+                        value: sidebar.value,
+                        checked: draft.sidebarPosition === sidebar.value,
+                        onchange: (e: Event) => { draft.sidebarPosition = (e.target as HTMLInputElement).value; }
+                      }),
+
+                      m("img.option-list-item-image", {
+                        src: sidebar.image
+                      }),
+
+                      m("p.option-list-item-text", sidebar.label)
                     ])
                   )
                   )

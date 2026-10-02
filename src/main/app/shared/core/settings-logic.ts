@@ -11,6 +11,7 @@ export interface Settings {
   theme: string
   language: string
   background: string
+  sidebarPosition: string
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -21,7 +22,8 @@ export const DEFAULT_SETTINGS: Settings = {
   readableFont: false,
   theme: "simple-purple",
   language: "en",
-  background: "webgl"
+  background: "webgl",
+  sidebarPosition: "right"
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
