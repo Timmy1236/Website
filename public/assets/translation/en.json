@@ -12,7 +12,7 @@
       "windows": {
         "welcome": {
           "title": "Welcome!",
-          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welco[i]oOoMeEee!...[/i][/rainbow] Thanks for visiting my digital dumpster. This is my little corner of the web where I'll document every project I make in the future. Right now you're on the [u]Home[/u] page and there isn't really anything special besides the latest entries and highlighted news, so go explore the site if you find something interesting, if there even is anything. Remember to come back sometime in the future and always, always [url=https://www.refreshyourcache.com/en/cache/]clear your browser cache[/url]."
+          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welcom[i]EeEeE!...[/i][/rainbow] Thank you for visiting my personal corner of the internet, but right now the site is in a state of endless development. Don't be surprised to see: unfinished sections, errors in certain features, inconsistencies, genetic mutations, anomalies, etc. If this isn't your first time here, remember to clear your [url=https://www.refreshyourcache.com/en/cache/]browser's cache[/url] to see the latest version of the site.."
         },
         "latestChangelog": {
           "title": "Latest Changelog"

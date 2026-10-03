@@ -4,7 +4,7 @@
       "windows": {
         "welcome": {
           "title": "Bienvenido!",
-          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi basurero digital. Este es mi rincón de la web donde documentare todos los proyectos que haga en algún futuro. Ahora mismo te encuentras en el [u]Inicio[/u] y no habra nada especial a parte de las ultimas entradas y noticias que destaque, mejor navega por la pagina si encuentras algo, si es que hay. Recuerda volver en algún futuro y siempre, y siempre, [url=https://www.refreshyourcache.com/en/cache/]limpia el cache de tu navegador[/url]."
+          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]¡Bienvenid[i]oOoOo!...[/i][/rainbow] Gracias por visitar a mi rincón personal del internet, pero ahora mismo la pagina se encuentra en un estado de desarrollo infinito. No te sorprendas al ver: secciones sin terminar, errores en ciertas funciones, inconsistencia, mutaciones genéticas, anomalías, etc. Si no es la primera vez que estas aquí, recuerda en refrescar el [url=https://www.refreshyourcache.com/en/cache/]cache de tu navegador[/url] para tener la ultima versión de la pagina."
         },
         "latestChangelog": {
           "title": "Ultimo Changelog"

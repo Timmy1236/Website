@@ -40,10 +40,9 @@ const Home = {
     return m(".content", [
       m(panel, {
         title: getTranslation("main.home.windows.welcome.title"),
-        content: m("div", { style: "display: flex;" }, [
-          m("p", m.trust(parseBBCode(getTranslation("main.home.windows.welcome.description")))),
-          m("img", { src: "./assets/images/pages/home/alien.gif", style: "height:130px;pointer-events:none;", alt: "Alien dancing" })
-        ])
+        content: [
+          m("p", m.trust(parseBBCode(getTranslation("main.home.windows.welcome.description"))))
+        ]
       }),
 
       m(".panel-grid-2", {
