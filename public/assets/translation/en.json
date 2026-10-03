@@ -229,6 +229,9 @@
         "connectionFailed": "Could not connect to the server.",
         "sent": "Sent",
         "sentDescription": "Your message was sent successfully."
+      },
+      "configuration": {
+        "reset": "Are you sure to reset your settings?"
       }
     },
     "player": "Playing...",
