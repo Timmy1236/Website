@@ -76,9 +76,9 @@
           "content": {
             "labelUsername": "Username *",
             "labelContact": "Contact (optional)",
-            "placeholderContact": "Email, Discord, or social network",
+            "placeholderContact": "Email, social media, or website.",
             "labelMessage": "Message",
-            "placeholderMessage": "Write your message...",
+            "placeholderMessage": "Write your message, feedback, anger, frustration, or insults.",
             "submit": "Send",
             "sending": "Sending..."
           }
@@ -94,7 +94,7 @@
             "likes": "Cool Sites!",
             "myButton": "... Me.",
             "notes": {
-              "chantu": "The first person I met on Nekoweb who also happened to speak Spanish. If it wasn't for Chantu, I probably would've stayed on GitHub Pages because of how intimidating this whole site looked. Super friendly!",
+              "chantu": "The first person I met when I switched from GitHub Pages to Nekoweb, so friendly!",
               "slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
               "nyani58": "WHERE THE HELL AM I???",
               "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
