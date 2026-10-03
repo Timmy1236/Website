@@ -155,7 +155,7 @@ const ConfigurationPage = {
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.sidebar")),
 
                   m(".option-list", sidebar.map(sidebar =>
                     m("label.option-list-item", [
