@@ -18,9 +18,9 @@ export interface Settings {
 export const DEFAULT_SETTINGS: Settings = {
   staticEffect: true,
   vignetteEffect: true,
-  backgroundMusic: true,
+  backgroundMusic: false,
   musicVolume: 25,
-  soundsEffects: true,
+  soundsEffects: false,
   readableFont: false,
   theme: "simple-purple",
   language: "en",
