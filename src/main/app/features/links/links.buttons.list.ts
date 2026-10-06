@@ -92,6 +92,12 @@ export const neighborSites: ButtonSite[] = [
     preview: _preview("ulon")
   },
   {
+    owner: "nurnen",
+    url: "https://nurnen.nekoweb.org/home.html",
+    button: "https://files.catbox.moe/m6skav.gif",
+    preview: _preview("nurnen")
+  },
+  {
     owner: "jovidmtp",
     url: "https://jovidmtp.nekoweb.org/",
     button: _localButton("jovidmtp"),
