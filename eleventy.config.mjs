@@ -1,5 +1,17 @@
+import { minify } from "html-minifier-next";
+
 export default async function (eleventyConfig) {
   const locales = ["es", "en"];
+
+  // Minificador de HTML
+  // --------
+  eleventyConfig.addTransform("html-minifier-next", async function (content) {
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      let minified = await minify(content, { preset: "comprehensive" });
+      return minified;
+    }
+    return content;
+  });
 
   // Globales
   // --------
