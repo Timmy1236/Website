@@ -201,8 +201,8 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2(eslint@10.12.0(supports-color@10.2.2))
       html-minifier-next:
-        specifier: ^8.10.5
-        version: 8.10.5
+        specifier: ^8.10.6
+        version: 8.10.6
       stylelint:
         specifier: ^17.16.0
         version: 17.16.0(@typescript/typescript6@6.0.2)(supports-color@10.2.2)
@@ -1354,8 +1354,8 @@ packages:
   hookified@2.2.0:
     resolution: {integrity: sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA==}
 
-  html-minifier-next@8.10.5:
-    resolution: {integrity: sha512-UpL6V/eGNY2kED1ZK5fmTmTcS6cQ1lEjbVh3GQOpyRsgqUchcfDuD7cX7zE+0R/RvNORl9rdMJFNaWWc0TNvQw==}
+  html-minifier-next@8.10.6:
+    resolution: {integrity: sha512-iCIZp1x+AtzpjGuDgbF8mTJiKOkV6VU26lpDXvaPjeyoJxLC34AGRM80ExiKZlk1nVjMfiuyiWhwu9x5+7oN4w==}
     engines: {node: '>=22.13'}
     hasBin: true
     peerDependencies:
@@ -3251,7 +3251,7 @@ snapshots:
 
   hookified@2.2.0: {}
 
-  html-minifier-next@8.10.5:
+  html-minifier-next@8.10.6:
     dependencies:
       commander: 15.0.0
       entities: 8.1.0
