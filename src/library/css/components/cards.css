@@ -1,0 +1,52 @@
+.cards-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  padding: 8px;
+  border: 2px solid var(--color-foreground);
+  transition: all 0.1s;
+  opacity: 0.75;
+}
+
+.card:hover {
+  background-color: #373444;
+  border: 2px solid var(--color-foreground);
+  opacity: 1;
+}
+
+.card-title {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-link {
+  font-size: 1.4em;
+  color: var(--color-accent);
+}
+
+.card-date {
+  font-size: 0.95em;
+  opacity: 0.8;
+}
+
+.card-description {
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+
+.card-tag-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.card-tag {
+  font-size: 0.85em;
+  opacity: 0.8;
+}

@@ -1,0 +1,23 @@
+.container {
+  background-color: var(--color-background);
+  margin: 10px auto;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  margin: 10px 0;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.content > *:first-child {
+  margin-top: 0;
+}
+
+.content > *:last-child {
+  margin-bottom: 0;
+}
