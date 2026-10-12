@@ -8,7 +8,6 @@ const options = {
   entryPoints: [
     { in: "src/main/app/app.ts", out: "main/app" },
     { in: "src/main/css/main.css", out: "main/styles" },
-    { in: "src/library/app/app.ts", out: "library/app" },
     { in: "src/library/css/main.css", out: "library/styles" }
   ],
   plugins: [glsl({ minify: true })],
