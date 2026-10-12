@@ -10,6 +10,7 @@
   },
   "packageManager": "pnpm@12.8.1",
   "scripts": {
+    "server": "start http://localhost:1236/ && cd public && python -m http.server 1236",
     "clean": "node -e \"fs.rmSync('public/dist', { recursive: true, force: true }); fs.rmSync('public/content', { recursive: true, force: true })\"",
     "build": "pnpm clean && concurrently \"pnpm:eleventy\" \"pnpm:esbuild\"",
     "dev": "pnpm clean && concurrently \"pnpm:eleventy:watch\" \"pnpm:esbuild:watch\"",
