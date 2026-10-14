@@ -91,7 +91,7 @@
               "nyani58": "¿¿¿DONDE MIERDA ESTOY???",
               "jbc": "Nekobox realmente me ayudo demasiado para tener un sitebox al menos decente, me parece extraño que eso no sea una función nativa en nekoweb, tengo problemas con el css de mi propia pagina y estos quieren que lo haga a ciegas???",
               "loyaltyfreakmusic": "Si no fuera por esta página, no hubiera encontrado música sin copyright para mi sitio.",
-              "timmy": "Si me clickeas podras copiar la url de la imagen de mi boton :3"
+              "dimden": "Es dimden, el creador de nekoweb, duh."
             }
           }
         },
@@ -208,6 +208,9 @@
           "status": "Clickea para saber si me encuentro conectado ahora mismo en Discord o no."
         }
       },
+      "links": {
+        "timmy": "Si me clickeas, abriré una pagina con el url del botón para que puedas descargarlo."
+      },
       "others": {
         "follow": "Seguirme"
       }
@@ -235,8 +238,7 @@
         "reset": "¿Estas seguro de reiniciar tu configuración?"
       }
     },
-    "player": "Reproduciendo...",
-    "timmyButton": "Link del botón copiado!"
+    "player": "Reproduciendo..."
   },
   "achievements": {
     "title": "Logros",

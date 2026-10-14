@@ -99,7 +99,7 @@
               "nyani58": "WHERE THE HELL AM I???",
               "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
               "loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site.",
-              "timmy": "Click me to copy the image URL of my button :3"
+              "dimden": "It's dimden, the creator of nekoweb, duh."
             }
           }
         },
@@ -210,6 +210,9 @@
       },
       "others": {
         "follow": "Follow Me"
+      },
+      "links": {
+        "timmy": "If you click me, I will open a page with the url of the button so you can download it."
       }
     }
   },
@@ -235,8 +238,7 @@
         "reset": "Are you sure to reset your settings?"
       }
     },
-    "player": "Playing...",
-    "timmyButton": "Copied button link!"
+    "player": "Playing..."
   },
   "achievements": {
     "title": "Achievements",

@@ -1,7 +1,6 @@
 import m from "mithril";
 import { showButtonOverlay, hideButtonOverlay } from "./links.buttons.overlay.ts";
-import { neighborSites, likesSite, MyButton } from "./links.buttons.list.ts";
-import { showToast } from "../../shared/components/toast.ts";
+import { neighborSites, likesSite } from "./links.buttons.list.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import { panel } from "../../shared/components/panels.ts";
@@ -54,16 +53,14 @@ const Others = {
 
           m("h2.header", getTranslation("main.links.windows.button-wall.content.myButton")),
           m(".website-buttons",
-            m("a", {
-              "data-tooltip-i18n": MyButton.tooltip ? MyButton.tooltip : null,
-              onmouseenter: (e: MouseEvent) => showButtonOverlay(MyButton, e.currentTarget as HTMLElement),
-              onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
-              onclick: () => {
-                navigator.clipboard.writeText("https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png");
-                showToast({ type: "info", playSound: true, name: "Button!", desc: "toast.timmyButton" });
-              }
-            },
-            m("img", { src: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png", alt: `A decorative, clickable button 88x31px that will take you to the user's page: ${MyButton.owner}` })
+            m("a", { href: "/assets/images/pages/links/buttons/timmy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/assets/images/pages/links/buttons/timmy.png", alt: "" })
+            ),
+            m("a", { href: "/assets/images/pages/links/buttons/timmy_old.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/assets/images/pages/links/buttons/timmy_old.png", alt: "" })
+            ),
+            m("a", { href: "/assets/images/pages/links/buttons/timy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/assets/images/pages/links/buttons/timy.png", alt: "" })
             )
           )
         ]

@@ -1,130 +1,125 @@
 import { type ButtonSite } from "./links.buttons.overlay.ts";
 
 const _preview = (x: string) => `/assets/images/pages/links/previews/${x}.webp`;
-const _localButton = (x: string) => `/assets/images/buttons/${x}.png`;
+const _button = (x: string, y: string) => `/assets/images/pages/links/buttons/${x}.${y}`;
+const _note = (x: string) => `main.links.windows.button-wall.content.notes.${x}`;
 
 export const neighborSites: ButtonSite[] = [
   {
     owner: "chantu",
     url: "https://chantu.nekoweb.org/",
-    button: "https://chantu.nekoweb.org/imgs/buttons/Chantu.png",
+    button: _button("chantu", "png"),
     preview: _preview("chantu"),
-    note: "main.links.windows.button-wall.content.notes.chantu"
+    note: _note("chantu")
   },
   {
     owner: "slowslushie",
     url: "https://slowslushie.nekoweb.org/",
-    button: _localButton("slowslushie-fix"),
+    button: _button("slowslushie", "png"),
     preview: _preview("slowslushie"),
-    note: "main.links.windows.button-wall.content.notes.slowslushie"
+    note: _note("slowslushie")
   },
   {
     owner: "nyani58",
     url: "https://nyani58.nekoweb.org/",
-    button: "https://file.garden/Z6nZpUcjoTvBXgF3/assets/realimportant/nyani58_button1.gif",
+    button: _button("nyani58", "gif"),
     preview: _preview("nyani58"),
-    note: "main.links.windows.button-wall.content.notes.nyani58"
+    note: _note("nyani58")
   },
   {
     owner: "nogood angel",
     url: "https://nogood-angel.nekoweb.org/",
-    button: "https://nogood-angel.moe/images/graphics/buttons/button2.webp",
+    button: _button("nogood-angel", "png"),
     preview: _preview("nogoodangel")
   },
   {
     owner: "someones insane",
     url: "https://someones-insane.nekoweb.org/",
-    button: "https://someones-insane.nekoweb.org/images/imapettyasshole_button.gif",
+    button: _button("someones-insane", "gif"),
     preview: _preview("someonesInsane")
   },
   {
     owner: "yefreitor",
     url: "https://yefreitor.com/",
-    button: "https://yefreitor.com/img/button.png",
+    button: _button("yefreitor", "png"),
     preview: _preview("yefreitor")
   },
   {
     owner: "ellen",
     url: "https://ellen.nekoweb.org/",
-    button: "https://ellen.nekoweb.org/Images/oc%20headshot%20style.png",
+    button: _button("ellen", "png"),
     preview: _preview("ellen")
   },
   {
     owner: "ramon",
     url: "https://ramon.nekoweb.org/",
-    button: "https://ramon.nekoweb.org/botonesyblinkies/botonramon.png",
+    button: _button("ramon", "png"),
     preview: _preview("ramon")
   },
   {
     owner: "reduxflakes",
     url: "https://reduxflakes.nekoweb.org/",
-    button: "https://reduxflakes.nekoweb.org/img/hcl6TIROJn-88.webp",
+    button: _button("reduxflakes", "webp"),
     preview: _preview("reduxflakes")
   },
   {
     owner: "lucksiyo",
     url: "https://lucksiyo.xyz/",
-    button: "https://lucksiyo.xyz/resources/button.png",
+    button: _button("lucksiyo", "png"),
     preview: _preview("lucksiyo")
   },
   {
     owner: "calijori",
     url: "https://calijori.com/",
-    button: "https://file.garden/aQNtCESHqyYXcwhI/mygraphics/calibutton.jpg",
+    button: _button("calijori", "gif"),
     preview: _preview("calijori")
-  },
-  {
-    owner: "entama",
-    url: "https://entama.nekoweb.org/",
-    button: "https://entama.nekoweb.org/img/buttonentama3.gif",
-    preview: _preview("entama")
   },
   {
     owner: "venus territory",
     url: "https://venus-territory.nekoweb.org/",
-    button: "https://venus-territory.nekoweb.org/media/venus-territory-rose.png",
+    button: _button("venus-territory", "png"),
     preview: _preview("venus")
   },
   {
     owner: "Ulon",
     url: "https://ulon.dev/",
-    button: "https://ulon.nekoweb.org/images/ulon_button2.gif",
+    button: _button("ulon", "gif"),
     preview: _preview("ulon")
   },
   {
     owner: "nurnen",
     url: "https://nurnen.nekoweb.org/home.html",
-    button: "https://files.catbox.moe/m6skav.gif",
+    button: _button("nurnen", "gif"),
     preview: _preview("nurnen")
   },
   {
     owner: "jovidmtp",
     url: "https://jovidmtp.nekoweb.org/",
-    button: _localButton("jovidmtp"),
+    button: _button("jovidmtp", "png"),
     preview: _preview("jovidmtp")
   },
   {
     owner: "cbz",
     url: "https://cbz.nekoweb.org/",
-    button: _localButton("cbz"),
+    button: _button("cbz", "png"),
     preview: _preview("cbz")
   },
   {
     owner: "amoeba",
     url: "https://amoeba.nekoweb.org/",
-    button: _localButton("amoeba"),
+    button: _button("amoeba", "png"),
     preview: _preview("amoeba")
   },
   {
     owner: "hyacintho",
     url: "https://hyacintho.nekoweb.org/",
-    button: _localButton("hyacintho"),
+    button: _button("hyacintho", "png"),
     preview: _preview("hyacintho")
   },
   {
     owner: "recalls",
     url: "https://recalls.zone/",
-    button: _localButton("recall"),
+    button: _button("recall", "png"),
     preview: _preview("recalls")
   }
 ];
@@ -132,24 +127,23 @@ export const neighborSites: ButtonSite[] = [
 export const likesSite: ButtonSite[] = [
   {
     owner: "jbc",
+    url: "https://dimden.dev/",
+    button: "https://dimden.dev/services/images/88x31.gif",
+    preview: _preview("dimden"),
+    note: _note("dimden")
+  },
+  {
+    owner: "jbc",
     url: "https://jbc.lol/",
-    button: "https://jbc.lol/imgs/buttons/jbtn.png",
+    button: _button("jbc", "gif"),
     preview: _preview("jbc"),
-    note: "main.links.windows.button-wall.content.notes.jbc"
+    note: _note("jbc")
   },
   {
     owner: "loyaltyfreakmusic",
     url: "https://loyaltyfreakmusic.com/",
-    button: "https://loyaltyfreakmusic.com/wp-content/uploads/2024/12/LFM_bouton.gif",
+    button: _button("loyaltyfreakmusic", "gif"),
     preview: _preview("loyaltyfreakmusic"),
-    note: "main.links.windows.button-wall.content.notes.loyaltyfreakmusic"
+    note: _note("loyaltyfreakmusic")
   }
 ];
-
-export const MyButton: ButtonSite = {
-  owner: "timmy",
-  url: "https://timmy.nekoweb.org/",
-  button: "https://timmy.nekoweb.org/assets/images/buttons/timmy_button.png",
-  preview: _preview("timmy"),
-  note: "main.links.windows.button-wall.content.notes.timmy"
-};
