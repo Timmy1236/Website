@@ -2,22 +2,12 @@
 title: "GitHub"
 date: 2026-02-20
 locale: "en"
-description: "If you want to see just how terrible the code on this page is and how many unnecessary scripts it contains, you can now easily do so on GitHub."
-layout: layouts/base.html
+description: "The code of my website can be find on GitHub!"
+layout: layouts/post.html
 back: /content/en/blog/index.html
-tags: ["blog"]
+tags: ["blog", "micro"]
 ---
 
-<article class="post">
+... Yeah, that's it, nothing else. I just came to let you know that this website now has a public repository on GitHub at: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare). That's it, bye!
 
-<section>
-
-# GitHub
-
-... yeah, that's it, nothing else. I just came to let you know that this website now has a public repository on GitHub at: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare). That's it, bye!
-
-<img src="/content/assets/images/blog/github/cat.gif" class="post-image">
-
-</section>
-
-</article>
+![Cat alien jam emoji](/content/assets/images/blog/github/alien.gif)

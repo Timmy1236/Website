@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ locale | default: 'es' }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>{{ title }}</title>
+  <meta property="og:site_name" content="Timmy Website">
+  <meta property="og:image" content="{{ site.url }}{{ preview }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta name="theme-color" content="#282a36" />
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/dist/library/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="head">
+      <div class="head-title">
+        <h1>{{ title }}</h1>
+        <p class="head-description">{{ description }}</p>
+      </div>
+
+      <div class="head-links">
+        {% if locale == 'es' %}
+        <a href={{back}} class="active">&lt; volver</a>
+        {% else %}
+        <a href={{back}} class="active">&lt; return</a>
+        {% endif %}
+
+        <div class="language-switcher">
+          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
+          {% if locale == 'es' %}
+          <a class="active">es</a>
+          <div class="separator-line"></div>
+          <a href="{{ currentUrl | replace: '/es/', '/en/' }}">en</a>
+          {% else %}
+          <a href="{{ currentUrl | replace: '/en/', '/es/' }}">es</a>
+          <div class="separator-line"></div>
+          <a class="active">en</a>
+          {% endif %}
+        </div>
+
+      </div>
+    </header>
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+</body>
+
+</html>

@@ -4,19 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/assets/images/favicon/pages.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>{{ title }} - Timmy</title>
+  <meta property="og:site_name" content="Timmy Website">
+  <meta property="og:image" content="{{ site.url }}{{ preview }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta name="theme-color" content="#282a36" />
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/dist/library/styles.css">
-  <script type="module" src="/dist/library/app.js"></script>
 </head>
 
 <body>
-  <a id="top"></a>
   <div class="container">
-    <div class="head">
+    <header class="head">
       <div class="head-title">
         <h1>{{ title }}</h1>
+        <p class="head-description">{{ description }}</p>
       </div>
+
       <div class="head-links">
         {% if back %}
 
@@ -27,60 +32,41 @@
         {% endif %}
 
         {% else %}
-        <div class="nav">
+        <nav>
           <a href="/main.html">main</a>
-          <p class="separator">|</p>
-          <a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif
-            %}>blog</a>
-          <p class="separator">|</p>
-          <a href="/content/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %}
-            class="active" {% endif %}>changelog</a>
-        </div>
+          <div class="separator-line"></div>
+          <a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif %}>blog</a>
+          <div class="separator-line"></div>
+          <a href="/content/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %} class="active" {% endif %}>changelog</a>
+        </nav>
 
         {% endif %}
 
         <div class="language-switcher">
+          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
           {% if locale == 'es' %}
           <a class="active">es</a>
-          <p class="separator">|</p>
-          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
+          <div class="separator-line"></div>
           <a href="{{ currentUrl | replace: '/es/', '/en/' }}">en</a>
           {% else %}
-          {%- capture currentUrl -%}{{ page.url | url }}{%- endcapture -%}
           <a href="{{ currentUrl | replace: '/en/', '/es/' }}">es</a>
-          <p class="separator">|</p>
+          <div class="separator-line"></div>
           <a class="active">en</a>
           {% endif %}
         </div>
-
       </div>
-    </div>
+    </header>
 
     <div class="content">
       {{ content }}
     </div>
 
-    <div class="footer">
+    <footer class="footer">
       <div class="footer-content">
-        <p>
-          {% if locale == 'es' %}
-          RSS: <a href="/content/es/rss/feed.xml">Feed</a>, <a href="/content/es/rss/blog.xml">Blog</a>, <a
-            href="/content/es/rss/changelog.xml">Changelog</a>
-          <br>
-          Pagina hecha con: <a href="https://www.11ty.dev/">11ty</a>
-          <br>
-          <a href="#top" class="boton-subir">Volver arriba</a>
-          {% else %}
-          RSS: <a href="/content/en/rss/feed.xml">Feed</a>, <a href="/content/en/rss/blog.xml">Blog</a>, <a
-            href="/content/en/rss/changelog.xml">Changelog</a>
-          <br>
-          Page made with: <a href="https://www.11ty.dev/">11ty</a>
-          <br>
-          <a href="#top" class="boton-subir">Back to up</a> <br>
-          {% endif %}
-        </p>
+        <p>RSS Español: <a href="/content/es/rss/feed.xml">Feed</a>, <a href="/content/es/rss/blog.xml">Blog</a>, <a href="/content/es/rss/changelog.xml">Changelog</a></p>
+        <p>RSS English: <a href="/content/en/rss/feed.xml">Feed</a>, <a href="/content/en/rss/blog.xml">Blog</a>, <a href="/content/en/rss/changelog.xml">Changelog</a></p>
       </div>
-    </div>
+    </footer>
   </div>
 </body>
 

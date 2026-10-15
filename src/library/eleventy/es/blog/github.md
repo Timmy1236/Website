@@ -2,22 +2,12 @@
 title: "GitHub"
 date: 2026-02-20
 locale: "es"
-description: "Si quieres ver lo horrible que es el código de esta pagina y la cantidad innecesaria de scripts que tienes, ahora puedes hacerlo perfectamente desde GitHub."
-layout: layouts/base.html
+description: "El código fuente de mi sitio web se encuentra en GitHub!"
+layout: layouts/post.html
 back: /content/es/blog/index.html
-tags: ["microblog"]
+tags: ["blog", "micro"]
 ---
 
-<article class="post">
+... Solamente vine a avisar que el código fuente de mi sitio web se encuentra en un repositorio publico en GitHub, lo podes ver acá: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare)... Era eso, ya esta. Gudbay!
 
-<section>
-
-# GitHub
-
-... yeah, eso mismo, nada mas. Solo vine a avisar que ahora este sitio web cuenta con un repositorio publico en el mismo GitHub en: [github.com/Timmy1236/Website](https://github.com/Timmy1236/Website/compare), ya esta, gudbay!
-
-<img src="/content/assets/images/blog/github/cat.gif" class="post-image">
-
-</section>
-
-</article>
+![Cat alien jam emoji](/content/assets/images/blog/github/alien.gif)

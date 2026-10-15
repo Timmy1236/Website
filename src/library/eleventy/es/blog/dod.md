@@ -3,18 +3,10 @@ title: "DIE OF DEATH"
 date: 2026-09-17
 locale: "es"
 description: "Dude."
-layout: layouts/base.html
+layout: layouts/post.html
 preview: "/content/assets/images/blog/dod/preview.webp"
 back: /content/es/blog/index.html
-tags: ["microblog"]
+tags: ["no-blog", "micro"]
 ---
 
-<article class="post">
-
-<section>
-
-<video controls src="/content/assets/images/blog/dod/hitboxes.mp4" class="post-image"></video>
-
-</section>
-
-</article>
+<video controls src="/content/assets/images/blog/dod/hitboxes.mp4"></video>
