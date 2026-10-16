@@ -29,16 +29,16 @@ const webmasterPage = {
             ]),
             m(".profile-section", [
               m(".profile-socials", [
-                m("a", { href: "https://github.com/Timmy1236" }, [
+                m("a.profile-social-icon", { href: "https://github.com/Timmy1236" }, [
                   m("img", { src: "./assets/images/icons/socials/github.png", alt: "GitHub" })
                 ]),
-                m("a", { href: "https://discordapp.com/users/375889010419171328" }, [
+                m("a.profile-social-icon", { href: "https://discordapp.com/users/375889010419171328" }, [
                   m("img", { src: "./assets/images/icons/socials/discord.png", alt: "Discord" })
                 ]),
-                m("a", { href: "https://steamcommunity.com/id/Timmy1236/" }, [
+                m("a.profile-social-icon", { href: "https://steamcommunity.com/id/Timmy1236/" }, [
                   m("img", { src: "./assets/images/icons/socials/steam.png", alt: "Steam" })
                 ]),
-                m("a", { href: "https://www.roblox.com/users/89179192/profile" }, [
+                m("a.profile-social-icon", { href: "https://www.roblox.com/users/89179192/profile" }, [
                   m("img", { src: "./assets/images/icons/socials/roblox.png", alt: "Roblox" })
                 ])
               ])

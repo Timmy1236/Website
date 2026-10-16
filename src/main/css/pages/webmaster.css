@@ -61,9 +61,15 @@
   justify-content: center;
 }
 
-.profile-socials img {
+.profile-social-icon img {
+  transition: all 0.15s ease-in-out;
   filter: drop-shadow(var(--text-shadow));
   width: 30px;
+}
+
+.profile-social-icon:hover img {
+  transition: all 0.15s ease-in-out;
+  transform: scale(1.3);
 }
 
 /* Covers */
