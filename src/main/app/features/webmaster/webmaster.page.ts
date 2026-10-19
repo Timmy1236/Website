@@ -3,7 +3,7 @@ import { loadStatus } from "./webmaster.discord.js";
 import { setCurrentPath } from "../../shared/core/html-meta.js";
 import { parseBBCode } from "../../shared/utils/bbcode.js";
 import { getTranslation } from "../../shared/core/i18n.ts";
-import { click } from "../../shared/handlers/profile-clicker.ts";
+import { click } from "./webmaster.profile-clicker.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { gamesCover, moviesCover, seriesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";
 
