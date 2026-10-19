@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/Timmy1236/Website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy": "^3.1.7",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/mithril": "^2.2.9",
