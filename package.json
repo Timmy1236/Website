@@ -51,7 +51,7 @@
     "concurrently": "^10.0.5",
     "esbuild": "^0.28.2",
     "esbuild-plugin-glsl": "^1.4.2",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "eslint-plugin-compat": "^7.0.2",
     "html-minifier-next": "^8.10.5",
     "stylelint": "^17.16.0",
