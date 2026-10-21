@@ -9,22 +9,22 @@ const themes = [
   {
     value: "simple-purple",
     image: "/assets/images/pages/configuration/purple.webp",
-    label: "Purple"
+    label: "main.settings.sub-windows.visual.content.themes.options.purple"
   },
   {
     value: "simple-green",
     image: "/assets/images/pages/configuration/green.webp",
-    label: "Green"
+    label: "main.settings.sub-windows.visual.content.themes.options.green"
   },
   {
     value: "simple-dark",
     image: "/assets/images/pages/configuration/dark.webp",
-    label: "Dark"
+    label: "main.settings.sub-windows.visual.content.themes.options.dark"
   },
   {
     value: "omori-darkspace",
     image: "/assets/images/pages/configuration/omori.webp",
-    label: "Darkspace",
+    label: "main.settings.sub-windows.visual.content.themes.options.darkspace",
     unlocked: () => isUnlocked("oyasumi")
   }
 ];
@@ -33,30 +33,30 @@ const background = [
   {
     value: "none",
     image: "/assets/images/pages/configuration/empty.png",
-    label: "Empty"
+    label: "main.settings.sub-windows.visual.content.background.options.empty"
   },
   {
     value: "css",
     image: "/assets/images/pages/configuration/checkboard.png",
-    label: "Checkboard - CSS"
+    label: "main.settings.sub-windows.visual.content.background.options.checkboard"
   },
   {
     value: "webgl",
     image: "/assets/images/pages/configuration/liquify.png",
-    label: "Liquify - WebGL 2"
+    label: "main.settings.sub-windows.visual.content.background.options.liquify"
   }
 ];
 
 const sidebar = [
   {
-    value: "right",
+    value: "left",
     image: "/assets/images/pages/configuration/purple.webp",
-    label: "Right"
+    label: "main.settings.sub-windows.visual.content.sidebar.options.left"
   },
   {
-    value: "left",
-    image: "/assets/images/pages/configuration/left-sidebar.png",
-    label: "Left"
+    value: "right",
+    image: "/assets/images/pages/configuration/right.png",
+    label: "main.settings.sub-windows.visual.content.sidebar.options.right"
   }
 ];
 
@@ -77,13 +77,13 @@ const ConfigurationPage = {
               label: getTranslation("main.settings.sub-windows.visual.title"),
               content: () => m("div", [
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.visual-effects")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.visual-effects.title")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "static-effect", checked: draft.staticEffect,
                       onchange: (e: Event) => { draft.staticEffect = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "static-effect" }, getTranslation("main.settings.sub-windows.visual.content.staticEffects"))
+                    m("label", { for: "static-effect" }, getTranslation("main.settings.sub-windows.visual.content.visual-effects.options.static"))
                   ]),
 
                   m(".option", [
@@ -91,23 +91,23 @@ const ConfigurationPage = {
                       type: "checkbox", id: "vignette-effect", checked: draft.vignetteEffect,
                       onchange: (e: Event) => { draft.vignetteEffect = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "vignette-effect" }, getTranslation("main.settings.sub-windows.visual.content.vignetteEffects"))
+                    m("label", { for: "vignette-effect" }, getTranslation("main.settings.sub-windows.visual.content.visual-effects.options.vignette"))
                   ])
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.text")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.text.title")),
                   m(".option", [
                     m("input", {
                       type: "checkbox", id: "readable-font", checked: draft.readableFont,
                       onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
                     }),
-                    m("label", { for: "readable-font" }, getTranslation("main.settings.sub-windows.visual.content.readableFont"))
+                    m("label", { for: "readable-font" }, getTranslation("main.settings.sub-windows.visual.content.text.options.readableFont"))
                   ])
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.themes")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.themes.title")),
 
                   m(".option-list", themes
                     .filter(theme => !theme.unlocked || theme.unlocked())
@@ -125,14 +125,14 @@ const ConfigurationPage = {
                           src: theme.image
                         }),
 
-                        m("p.option-list-item-text", theme.label)
+                        m("p.option-list-item-text", getTranslation(theme.label))
                       ])
                     )
                   )
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background.title")),
 
                   m(".option-list", background.map(background =>
                     m("label.option-list-item", [
@@ -148,14 +148,14 @@ const ConfigurationPage = {
                         src: background.image
                       }),
 
-                      m("p.option-list-item-text", background.label)
+                      m("p.option-list-item-text", getTranslation(background.label))
                     ])
                   )
                   )
                 ]),
 
                 m(".settings-group", [
-                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.sidebar")),
+                  m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.sidebar.title")),
 
                   m(".option-list", sidebar.map(sidebar =>
                     m("label.option-list-item", [
@@ -171,7 +171,7 @@ const ConfigurationPage = {
                         src: sidebar.image
                       }),
 
-                      m("p.option-list-item-text", sidebar.label)
+                      m("p.option-list-item-text", getTranslation(sidebar.label))
                     ])
                   )
                   )

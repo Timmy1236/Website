@@ -127,20 +127,6 @@
         }
       },
       "sub-windows": {
-        "visual": {
-          "title": "Visual",
-          "content": {
-            "visual-effects": "Visual Effects",
-            "themes": "Themes",
-            "background": "Background",
-            "sidebar": "Sidebar",
-            "text": "Text",
-            "animatedBg": "Animated Background",
-            "vignetteEffects": "Vignette",
-            "staticEffects": "Static",
-            "readableFont": "Readable Font"
-          }
-        },
         "audio": {
           "title": "Audio",
           "content": {
@@ -154,6 +140,48 @@
           "content": {
             "languages": "Languages"
           }
+        },
+        "visual": {
+          "content": {
+            "background": {
+              "options": {
+                "checkboard": "Chess - CSS",
+                "empty": "Empty",
+                "liquify": "Liquid - WebGL 2"
+              },
+              "title": "Background"
+            },
+            "sidebar": {
+              "options": {
+                "left": "Left",
+                "right": "Right"
+              },
+              "title": "Sidebar"
+            },
+            "text": {
+              "options": {
+                "readableFont": "Readable font"
+              },
+              "title": "Text"
+            },
+            "themes": {
+              "options": {
+                "dark": "Dark",
+                "darkspace": "Darkspace",
+                "green": "Green",
+                "purple": "Purple"
+              },
+              "title": "Topics"
+            },
+            "visual-effects": {
+              "options": {
+                "static": "Static",
+                "vignette": "Vignette"
+              },
+              "title": "Visual effects"
+            }
+          },
+          "title": "Visual"
         }
       }
     }

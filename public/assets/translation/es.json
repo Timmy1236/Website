@@ -122,15 +122,43 @@
         "visual": {
           "title": "Visual",
           "content": {
-            "visual-effects": "Efectos visuales",
-            "themes": "Temas",
-            "background": "Fondo",
-            "sidebar": "Sidebar",
-            "text": "Texto",
-            "animatedBg": "Fondo animado",
-            "vignetteEffects": "Viñeta",
-            "staticEffects": "Estática",
-            "readableFont": "Fuente legible"
+            "visual-effects": {
+              "title": "Efectos visuales",
+              "options": {
+                "vignette": "Viñeta",
+                "static": "Estática"
+              }
+            },
+            "text": {
+              "title": "Texto",
+              "options": {
+                "readableFont": "Fuente legible"
+              }
+            },
+            "themes": {
+              "title": "Temas",
+              "options": {
+                "purple": "Morado",
+                "green": "Verde",
+                "dark": "Oscuro",
+                "darkspace": "Darkspace"
+              }
+            },
+            "background": {
+              "title": "Fondo",
+              "options": {
+                "empty": "Vacio",
+                "checkboard": "Ajedrez - CSS",
+                "liquify": "Liquido - WebGL 2"
+              }
+            },
+            "sidebar": {
+              "title": "Sidebar",
+              "options": {
+                "right": "Derecha",
+                "left": "Izquierda"
+              }
+            }
           }
         },
         "audio": {

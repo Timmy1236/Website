@@ -25,7 +25,7 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: "simple-purple",
   language: "en",
   background: "webgl",
-  sidebarPosition: "right"
+  sidebarPosition: "left"
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
