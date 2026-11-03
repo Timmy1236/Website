@@ -43,22 +43,22 @@
   },
   "homepage": "https://github.com/Timmy1236/Website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy": "^3.1.7",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/mithril": "^2.2.9",
     "@typescript/native": "npm:typescript@^7.0.2",
-    "concurrently": "^10.0.5",
+    "concurrently": "^10.0.6",
     "esbuild": "^0.28.2",
     "esbuild-plugin-glsl": "^1.4.2",
-    "eslint": "^10.12.0",
+    "eslint": "^10.14.0",
     "eslint-plugin-compat": "^7.0.2",
-    "html-minifier-next": "^8.10.5",
+    "html-minifier-next": "^9.1.1",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-no-unsupported-browser-features": "^8.1.2",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "typescript-eslint": "^8.71.0"
+    "typescript-eslint": "^8.72.1"
   },
   "dependencies": {
     "mithril": "^2.3.8"
