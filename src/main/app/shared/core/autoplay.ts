@@ -22,8 +22,8 @@ export function initAutoplay() {
     _playSong();
   });
 
-  window.addEventListener("blur", _handleAudioState);
-  window.addEventListener("focus", _handleAudioState);
+  window.addEventListener("blur", _handleAudioFocus);
+  window.addEventListener("focus", _handleAudioFocus);
 
   document.body.addEventListener("click", () => {
     if (!playing) {
@@ -57,16 +57,28 @@ function _playSong(): void {
 }
 
 /**
- * Pausa o reanuda la música dependiendo de si el usuario está mirando la página.
+ * Mutea el audio si se esta reproduciendo, o continua el audio si esta pausado.
  */
-function _handleAudioState() {
-  if (document.hasFocus() && !audio.muted && playing) {
-    if (audio.paused) {
-      audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
-    }
+export function handleAudioPause() {
+  if (!playing) {
+    audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
+    playing = true;
   }
   else {
-    if (!audio.paused) {
+    audio.pause();
+    playing = false;
+  }
+}
+
+/**
+ * Checkea si el audio no esta muteado. En caso que no, pausara o continuara si el usuario sale o vuelve a la pagina.
+ */
+function _handleAudioFocus() {
+  if (playing) {
+    if (document.hasFocus()) {
+      audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
+    }
+    else {
       audio.pause();
     }
   }

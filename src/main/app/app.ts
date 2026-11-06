@@ -9,6 +9,7 @@ import { initSoundsEffects } from "./shared/core/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
 import { initPanelButtons } from "./shared/components/panels.ts";
 import { initToast } from "./shared/components/toast.ts";
+import { initShorcuts } from "./shared/handlers/shortcuts.ts";
 
 import Layout from "./shared/components/layout.ts";
 import Home from "./features/home/home.page.ts";
@@ -27,6 +28,7 @@ async function startApp() {
     cLog("INFO", "App", "Paso 1/3: Inicializando settings...");
     await initSettings();
 
+    // NOTE: Esto se podría mejorar en algún futuro, en vez de cargar todos los scripts y después verificar si son activados por el usuario, verificar primero si son necesarios y después cargarlos.
     cLog("INFO", "App", "Paso 2/3: Inicializando las demás funciones: i18n, autoplay, tooltip, etc...");
     await Promise.all([
       loadTranslations(),
@@ -34,7 +36,8 @@ async function startApp() {
       initSoundsEffects(),
       initAutoplay(),
       initTooltip(),
-      initPanelButtons()
+      initPanelButtons(),
+      initShorcuts()
     ]);
 
     cLog("INFO", "App", "Paso 3/3: Cargas finalizadas, montando rutas...");
