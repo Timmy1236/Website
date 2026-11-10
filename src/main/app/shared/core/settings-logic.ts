@@ -114,9 +114,9 @@ async function loadSettings(): Promise<void> {
 
   cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
 
-  await _loadTheme();
-  await _loadBackground();
-  await _loadStaticEffect();
+  _loadTheme();
+  _loadBackground();
+  _loadStaticEffect();
   if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
 }
 
