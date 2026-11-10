@@ -179,8 +179,9 @@
   --color-text: #FBFBFB;
   --color-accent: #97ffcf;
   --color-accent2: #49ffaa;
-  --color-background: #111;
-  --color-foreground: #111;
+  /* stylelint-disable-next-line color-hex-length */
+  --color-background: #111111;
+  --color-foreground: #181818;
 
   /* Panel */
   --panel-padding: 5px;
