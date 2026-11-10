@@ -6,6 +6,7 @@ import { getTranslation } from "../../shared/core/i18n.ts";
 import { click } from "./webmaster.profile-clicker.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { gamesCover, moviesCover, seriesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";
+import { createImageOverlay } from "../../shared/components/image-overlay.js";
 
 const webmasterPage = {
   oncreate() {
@@ -82,7 +83,7 @@ const webmasterPage = {
           m("h2.header", getTranslation("main.webmaster.windows.interest.list.games")),
           m(".scroll-cover-container", [
             gamesCover.map(cover =>
-              m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
+              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
                 m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the game: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
               ])
             )
@@ -90,7 +91,7 @@ const webmasterPage = {
           m("h2.header", getTranslation("main.webmaster.windows.interest.list.series")),
           m(".scroll-cover-container", [
             seriesCover.map(cover =>
-              m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
+              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
                 m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the serie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
               ])
             )
@@ -98,7 +99,7 @@ const webmasterPage = {
           m("h2.header", { "data-tooltip-i18n": "tooltip.pages.webmaster.list.movies" }, getTranslation("main.webmaster.windows.interest.list.movies")),
           m(".scroll-cover-container", [
             moviesCover.map(cover =>
-              m("a.cover", { href: cover.link, "data-tooltip-i18n": cover.fact }, [
+              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
                 m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the movie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
               ])
             )

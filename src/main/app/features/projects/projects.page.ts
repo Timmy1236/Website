@@ -26,19 +26,19 @@ const Project = {
           m(".project-gallery", [
             m(".image-preview", [
               m("img", {
-                onclick: () => { createImageOverlay("/assets/images/pages/projects/website/1.0.0.png"); }, src: "/assets/images/pages/projects/website/preview_1.0.0.webp", alt: "2025"
+                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_1.0.0.webp", fullImage: "/assets/images/pages/projects/website/1.0.0.png", title: "Timmy's Dumpster · v1.6", alt: "2025", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_1.0.0.webp", alt: "2025"
               }),
               m("p.image-text", "2025 Oct - v1.6")
             ]),
             m(".image-preview", [
               m("img", {
-                onclick: () => { createImageOverlay("/assets/images/pages/projects/website/2.0.0.png"); }, src: "/assets/images/pages/projects/website/preview_2.0.0.webp", alt: "2026"
+                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_2.0.0.webp", fullImage: "/assets/images/pages/projects/website/2.0.0.png", title: "Timmy's Dumpster · v2.0", alt: "2026", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_2.0.0.webp", alt: "2026"
               }),
               m("p.image-text", "2026 Apr - v2.0")
             ]),
             m(".image-preview", [
               m("img", {
-                onclick: () => { createImageOverlay("/assets/images/pages/projects/website/2.1.0.png"); }, src: "/assets/images/pages/projects/website/preview_2.1.0.webp", alt: "2026"
+                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_2.1.0.webp", fullImage: "/assets/images/pages/projects/website/2.1.0.png", title: "Timmy's Dumpster · v2.1", alt: "2026", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_2.1.0.webp", alt: "2026"
               }),
               m("p.image-text", "2026 Oct - v2.1")
             ])

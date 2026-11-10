@@ -1,6 +1,6 @@
 import m from "mithril";
-import { showButtonOverlay, hideButtonOverlay } from "./links.buttons.overlay.ts";
 import { neighborSites, likesSite } from "./links.buttons.list.ts";
+import { createImageOverlay } from "../../shared/components/image-overlay.js";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import { panel } from "../../shared/components/panels.ts";
@@ -23,9 +23,9 @@ const Others = {
               m("a", {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
-                onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
-                onclick: () => {
+                onclick: (e: MouseEvent) => {
+                  e.preventDefault();
+                  createImageOverlay({ image: site.preview, title: site.owner, description: site.note, link: site.url, previewWidth: 850 });
                   addAchievementProgress("explorer", 1);
                 }
               },
@@ -40,9 +40,9 @@ const Others = {
               m("a", {
                 "data-tooltip-i18n": site.tooltip ? site.tooltip : null,
                 href: site.url,
-                onmouseenter: (e: MouseEvent) => showButtonOverlay(site, e.currentTarget as HTMLElement),
-                onmouseleave: (e: MouseEvent) => hideButtonOverlay(e.currentTarget as HTMLElement),
-                onclick: () => {
+                onclick: (e: MouseEvent) => {
+                  e.preventDefault();
+                  createImageOverlay({ image: site.preview, title: site.owner, description: site.note, link: site.url, previewWidth: 850 });
                   addAchievementProgress("explorer", 1);
                 }
               },

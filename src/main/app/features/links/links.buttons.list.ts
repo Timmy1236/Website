@@ -1,4 +1,11 @@
-import { type ButtonSite } from "./links.buttons.overlay.ts";
+export interface ButtonSite {
+  owner: string
+  url: string
+  button: string
+  preview: string
+  note?: string
+  tooltip?: string
+}
 
 const _preview = (x: string) => `/assets/images/pages/links/previews/${x}.webp`;
 const _button = (x: string, y: string) => `/assets/images/pages/links/buttons/${x}.${y}`;
