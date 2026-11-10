@@ -93,10 +93,6 @@ export const tagSoftware: tag[] = [
   {
     text: "Aseprite",
     icon: _imgIcon("aseprite")
-  },
-  {
-    text: "SQLite",
-    icon: _imgIcon("sqlite")
   }
 ];
 
@@ -122,7 +118,7 @@ export const gamesCover: cover[] = [
   {
     title: "Terraria",
     cover: _CoverGames("terraria"),
-    fact: "tooltip.pages.webmaster.interests.hytale",
+    fact: "tooltip.pages.webmaster.interests.terraria",
     link: "https://store.steampowered.com/app/105600/terraria/"
   },
   {
@@ -210,7 +206,7 @@ export const seriesCover: cover[] = [
   {
     title: "Black Mirror",
     cover: _CoverSeries("black-mirror"),
-    link: "https://www.imdb.com/es/title/tt2072604/"
+    link: "https://www.imdb.com/es/title/tt2085059/"
   }
 ];
 
