@@ -61,9 +61,12 @@ const sidebar = [
 ];
 
 const ConfigurationPage = {
+  oninit() {
+    refreshDraftFromStorage();
+  },
+
   oncreate() {
     setCurrentPath(m.route, "settings");
-    refreshDraftFromStorage();
     m.redraw();
   },
 
