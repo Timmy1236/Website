@@ -133,7 +133,7 @@ export const neighborSites: ButtonSite[] = [
 
 export const likesSite: ButtonSite[] = [
   {
-    owner: "jbc",
+    owner: "dimden",
     url: "https://dimden.dev/",
     button: "https://dimden.dev/services/images/88x31.gif",
     preview: _preview("dimden"),
