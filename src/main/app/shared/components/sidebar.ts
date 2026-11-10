@@ -20,6 +20,7 @@ function navBtn(label: string, external: boolean, path: string, img: string | nu
 }
 
 function _navigate(path: string) {
+  if (path === m.route.get()) return;
   if (isTransitioning) return;
   currentPath = path;
 
@@ -31,6 +32,7 @@ function _navigate(path: string) {
   mainColumn.classList.add("exit");
   setTimeout(() => {
     m.route.set(path);
+    currentPath = "";
 
     requestAnimationFrame(() => {
       mainColumn.classList.remove("exit");
