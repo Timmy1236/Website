@@ -15,7 +15,7 @@ const translation: Record<string, Record<string, string>> = {
   en: {
     "/home": "Home",
     "/webmaster": "Webmaster",
-    "/projects": "Project",
+    "/projects": "Projects",
     "/links": "Links",
     "/achievements": "Achievements",
     "/configuration": "Configuration",
