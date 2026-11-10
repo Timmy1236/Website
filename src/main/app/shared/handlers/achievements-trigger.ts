@@ -16,5 +16,4 @@ export function onVisit() {
   if (rnd == 100) {
     unlockAchievement("math");
   }
-  console.log(rnd);
 }
