@@ -15,6 +15,8 @@ let lastCheckTime = new Date();
 let time: Date;
 let fristCheck: boolean;
 
+const statusElement = document.getElementById("status") as HTMLParagraphElement;
+
 export async function loadStatus() {
   time = new Date();
   const lastCheck = ((time.getTime() - lastCheckTime.getTime()) / 60000);
@@ -33,33 +35,40 @@ export async function loadStatus() {
 }
 
 async function _getStatus() {
-  const statusElement = document.getElementById("status") as HTMLParagraphElement;
-  if (!statusElement) return;
-  statusElement.textContent = "...";
+  try {
+    if (!statusElement) return;
+    statusElement.textContent = "...";
 
-  const response = await fetch("https://api.lanyard.rest/v1/users/375889010419171328");
-  const json: LanyardResponse = await response.json();
+    const response = await fetch("https://api.lanyard.rest/v1/users/375889010419171328");
+    const json: LanyardResponse = await response.json();
 
-  if (!json.success) throw new Error("No se pudo obtener la información del usuario.");
+    if (!json.success) throw new Error("No se pudo obtener la información del usuario.");
 
-  const data = json.data;
-  const status = data.discord_status;
+    const data = json.data;
+    const status = data.discord_status;
 
-  type Status = "online" | "idle" | "dnd" | "offline";
+    type Status = "online" | "idle" | "dnd" | "offline";
 
-  const statusMap: Record<Status, { text: string, color: string }> = {
-    online: { text: "Online", color: "#43b581" },
-    idle: { text: "AFK", color: "#faa61a" },
-    dnd: { text: "No molestar", color: "#f04747" },
-    offline: { text: "Offline", color: "#747f8d" }
-  };
+    const statusMap: Record<Status, { text: string, color: string }> = {
+      online: { text: "Online", color: "#43b581" },
+      idle: { text: "AFK", color: "#faa61a" },
+      dnd: { text: "No molestar", color: "#f04747" },
+      offline: { text: "Offline", color: "#747f8d" }
+    };
 
-  const current = statusMap[status as Status] || statusMap.offline;
+    const current = statusMap[status as Status] || statusMap.offline;
 
-  if (current.text == "Online") {
-    unlockAchievement("owner");
+    if (current.text == "Online") {
+      unlockAchievement("owner");
+    }
+
+    statusElement.textContent = current.text;
+    statusElement.style.color = current.color;
   }
+  catch (e) {
+    cLog("ERROR", "Discord", "Error al obtener status.", e);
 
-  statusElement.textContent = current.text;
-  statusElement.style.color = current.color;
+    statusElement.textContent = "Error";
+    statusElement.style.color = "#f04747";
+  }
 }
