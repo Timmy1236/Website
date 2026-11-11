@@ -15,8 +15,7 @@ const songsArray: string[] = [
  * Escucha la primera interacción del usuario para arrancar la música si está activada.
  */
 export function initAutoplay() {
-  const { backgroundMusic } = getSettings();
-  if (!backgroundMusic) return;
+  if (!getSettings().backgroundMusic) return;
 
   audio.addEventListener("ended", () => {
     _playSong();
@@ -60,6 +59,9 @@ function _playSong(): void {
  * Mutea el audio si se esta reproduciendo, o continua el audio si esta pausado.
  */
 export function handleAudioPause() {
+  if (!getSettings().backgroundMusic) return;
+  if (!audio.src) return cLog("ADVERTENCIA", "AutoPlay", "Dude, estas intentando mutearlo cuando ni una canción empezó???"); ;
+
   if (!playing) {
     audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
     playing = true;
