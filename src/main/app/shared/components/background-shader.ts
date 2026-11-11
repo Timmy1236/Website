@@ -71,7 +71,7 @@ function _getThemeColors(): { background: [number, number, number], foreground: 
 /**
  * Configura e inicia el bucle de renderizado del fondo animado en WebGL2.
  */
-export async function initializeWebGLBackground(): Promise<void> {
+export function initializeWebGLBackground(): void {
   const canvasElement = document.querySelector<HTMLCanvasElement>("#background-canvas");
   if (!canvasElement) throw new Error("No se encontró #background-canvas.");
 
@@ -124,7 +124,7 @@ export async function initializeWebGLBackground(): Promise<void> {
   gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
 
   function resize(): void {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1);
     const width = Math.floor(window.innerWidth * dpr);
     const height = Math.floor(window.innerHeight * dpr);
 
@@ -135,15 +135,24 @@ export async function initializeWebGLBackground(): Promise<void> {
     gl.viewport(0, 0, width, height);
   }
 
+  const targetFPS = 25; // NOTE: Creo que 25 FPS es lo mas eficiente, seria mejor que esto se pudiera cambiar en config.
+  const frameInterval = 1000 / targetFPS;
+  let lastTime = 0;
+
   function render(timestamp: number): void {
+    requestAnimationFrame(render);
+
+    const elapsed = timestamp - lastTime;
+    if (elapsed < frameInterval) return;
+
+    lastTime = timestamp - (elapsed % frameInterval);
+
     resize();
 
     gl.uniform2f(resolution, canvas.width, canvas.height);
     gl.uniform1f(time, timestamp * 0.001);
 
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-
-    requestAnimationFrame(render);
   }
 
   requestAnimationFrame(render);
