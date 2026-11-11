@@ -1,11 +1,20 @@
-import { getSettings } from "../../shared/core/settings-logic";
+import { getSettings } from "../../shared/core/settings-logic.ts";
+import type { Latest } from "./home.page.ts";
 
-export async function getLatest() {
-  const { language } = getSettings();
-  const url = `/content/latest/${language}.json`;
+let latestPromise: Promise<Latest> | null = null;
 
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-  return await response.json();
+export function getLatest(): Promise<Latest> {
+  if (!latestPromise) {
+    const { language } = getSettings();
+    latestPromise = fetch(`/content/latest/${language}.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .catch((err) => {
+        latestPromise = null;
+        throw err;
+      });
+  }
+  return latestPromise;
 }
