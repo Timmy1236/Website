@@ -99,14 +99,9 @@ function _checkVersion(): boolean {
  * Inicializa los settings. Antes de aplicarlos, se hace un checkeo de versiones.
  * @see {@link _checkVersion}
  */
-export function initSettings(): boolean {
-  if (_checkVersion()) {
-    loadSettings();
-    return true;
-  }
-  else {
-    return false;
-  }
+export function initSettings(): void {
+  if (!_checkVersion()) _resetSettings();
+  loadSettings();
 }
 
 async function loadSettings(): Promise<void> {
@@ -121,9 +116,13 @@ async function loadSettings(): Promise<void> {
 }
 
 export function initDefaultSettings() {
+  _resetSettings();
+  window.location.reload();
+}
+
+function _resetSettings() {
   localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
   localStorage.setItem("settingsVersion", SETTINGS_VERSION);
-  window.location.reload();
 }
 
 export function saveSettings(newSettings: Settings) {
