@@ -15,8 +15,6 @@ let lastCheckTime = new Date();
 let time: Date;
 let fristCheck: boolean;
 
-const statusElement = document.getElementById("status") as HTMLParagraphElement;
-
 export async function loadStatus() {
   time = new Date();
   const lastCheck = ((time.getTime() - lastCheckTime.getTime()) / 60000);
@@ -36,6 +34,8 @@ export async function loadStatus() {
 
 async function _getStatus() {
   try {
+    const statusElement = document.getElementById("status") as HTMLParagraphElement;
+
     if (!statusElement) return;
     statusElement.textContent = "...";
 
