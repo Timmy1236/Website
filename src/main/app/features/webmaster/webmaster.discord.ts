@@ -33,9 +33,8 @@ export async function loadStatus() {
 }
 
 async function _getStatus() {
+  const statusElement = document.getElementById("status") as HTMLParagraphElement;
   try {
-    const statusElement = document.getElementById("status") as HTMLParagraphElement;
-
     if (!statusElement) return;
     statusElement.textContent = "...";
 
