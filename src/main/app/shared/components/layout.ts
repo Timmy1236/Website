@@ -13,10 +13,10 @@ export default {
     return m("div.layout", [
       vignetteEffect ? m("div.vignette", { id: "vignette" }) : null,
       m(".container", [
-        m(banner, { role: "banner" }),
+        m(banner),
         m(".layout-content", { class: sidebarPosition }, [
-          m(sidebar, { role: "navigation" }),
-          m("main.content-column", { role: "main" }, vnode.children)
+          m(sidebar),
+          m("main.content-column", vnode.children)
         ])
       ])
     ]);
