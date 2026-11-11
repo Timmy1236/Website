@@ -40,7 +40,6 @@
 .profile-avatar {
   width: 90px;
   height: 90px;
-  transition: squeak 0.07s ease;
 }
 
 .profile-avatar:active {

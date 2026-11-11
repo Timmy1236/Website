@@ -26,13 +26,6 @@
   gap: 15px;
 }
 
-.project-gallery img {
-  width: 348px;
-  height: 195px;
-  object-fit: cover;
-  background-color: #111;
-}
-
 .image-preview {
   position: relative;
   width: 100%;

@@ -32,7 +32,6 @@
 .toast-name {
   margin: 0;
   font-size: var(--text-size-medium);
-  vertical-align: center;
   color: var(--color-accent);
 }
 
