@@ -133,11 +133,3 @@ export function saveSettings(newSettings: Settings) {
 export function getSettings(): Settings {
   return { ...currentSettings };
 }
-
-export function getSetting(key: string): string | null {
-  return localStorage.getItem(key);
-}
-
-export function saveSetting(key: string, value: string): void {
-  localStorage.setItem(key, value);
-}
