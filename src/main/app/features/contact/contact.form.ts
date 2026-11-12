@@ -1,6 +1,6 @@
 import m from "mithril";
-import { showToast } from "../components/toast.ts";
-import { cLog } from "../utils/clog.ts";
+import { showToast } from "../../shared/components/toast.ts";
+import { cLog } from "../../shared/utils/clog.ts";
 
 const CONTACT_WORKER_URL = "https://webhook.timmy1236.workers.dev/";
 const MAX_USERNAME_LENGTH = 100;

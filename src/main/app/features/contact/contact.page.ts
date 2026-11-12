@@ -3,7 +3,7 @@ import { getTranslation } from "../../shared/core/i18n.js";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { panel } from "../../shared/components/panels.ts";
-import { contactState, sendContactForm } from "../../shared/handlers/contact-form.ts";
+import { contactState, sendContactForm } from "./contact.form.ts";
 
 // Super protección anti bot scrapper 3000
 // NOTE: No es lo mejor, pero obliga interactuar con la pagina en vez de que este escrito de forma raw en HTML, incluido en el mismo código, por eso hay tantos .replace
