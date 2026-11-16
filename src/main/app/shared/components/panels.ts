@@ -19,43 +19,36 @@ interface PanelAttrs {
 
 export const TabPanel: m.ClosureComponent<TabPanelAttrs> = () => {
   let activeTab = 0;
+  let closed = false;
+  let collapsed = false;
 
   return {
-    oninit(vnode: m.Vnode<TabPanelAttrs>) {
+    oninit(vnode) {
       activeTab = vnode.attrs.defaultTab || 0;
     },
 
-    view(vnode: m.Vnode<TabPanelAttrs>) {
+    view(vnode) {
+      if (closed) return null;
       const { tabs = [], title, outTab } = vnode.attrs;
 
-      return m(".panel.tabs", [
-
-        // HEADER
-        m(".panel-header", [
-          typeof title === "string"
-            ? m("p", title)
-            : m("p", title, "Tabs"),
-
-          m(".panel-controls", [
-            m("button.panel-button", { "data-panel-action": "minimize" }, "―"),
-            m("button.panel-button", { "data-panel-action": "close" }, "X")
-          ])
-        ]),
-
-        // TABS BAR
-        m(".panel-tabs",
-          tabs.map((tab, index) =>
-            m("button.panel-tab", {
-              class: activeTab === index ? "active" : "",
-              onclick: () => { activeTab = index; }
-            }, tab.label)
-          )
-        ),
-
-        // CONTENT
-        m(".panel-content.tabs", [
-          tabs[activeTab]?.content?.(),
-          outTab || null
+      return m(".panel-frame", { class: collapsed ? "collapsed" : "" }, [
+        m(".panel.tabs", [
+          // HEADER
+          m(".panel-header", [
+            m("h1", title),
+            m(".panel-controls", [
+              m("button.panel-button", { tabindex: "-1", onclick: () => { collapsed = !collapsed; } }, "―"),
+              m("button.panel-button", { tabindex: "-1", onclick: () => { closed = true; } }, "X")
+            ])
+          ]),
+          // TABS BAR
+          m(".panel-tabs", { class: collapsed ? "collapsed" : "" },
+            tabs.map((tab, index) =>
+              m("button.panel-tab", { class: [activeTab === index ? "active" : "", collapsed ? "collapsed" : ""].filter(Boolean).join(" "), onclick: () => { activeTab = index; } }, tab.label)
+            )
+          ),
+          // CONTENT
+          m(".panel-content.tabs", { class: collapsed ? "collapsed" : "" }, [tabs[activeTab]?.content?.(), outTab || null])
         ])
       ]);
     }
@@ -63,60 +56,28 @@ export const TabPanel: m.ClosureComponent<TabPanelAttrs> = () => {
 };
 
 export const panel: m.ClosureComponent<PanelAttrs> = () => {
+  let closed = false;
+  let collapsed = false;
+
   return {
-    view(vnode: m.Vnode<PanelAttrs>) {
+    view(vnode) {
+      if (closed) return null;
       const { content, title } = vnode.attrs;
-      return m(".panel-frame", [
+
+      return m(".panel-frame", { class: collapsed ? "collapsed" : "" }, [
         m(".panel", [
+          // HEADER
           m(".panel-header", [
             m("h1", title),
             m(".panel-controls", [
-              m("button.panel-button", { "data-panel-action": "minimize", tabindex: "-1" }, "―"),
-              m("button.panel-button", { "data-panel-action": "close", tabindex: "-1" }, "X")
+              m("button.panel-button", { tabindex: "-1", onclick: () => { collapsed = !collapsed; } }, "―"),
+              m("button.panel-button", { tabindex: "-1", onclick: () => { closed = true; } }, "X")
             ])
           ]),
-
-          m(".panel-content", [
-            content
-          ])
+          // CONTENT
+          m(".panel-content", { class: collapsed ? "collapsed" : "" }, [content])
         ])
       ]);
     }
   };
 };
-
-export function initPanelButtons() {
-  document.addEventListener("click", (event) => {
-    if (!(event.target instanceof HTMLElement)) return;
-
-    const btn = event.target.closest("[data-panel-action]");
-    if (!(btn instanceof HTMLElement)) return;
-
-    const panel = btn.closest(".panel");
-    if (!(panel instanceof HTMLElement)) return;
-
-    const frame = panel.closest(".panel-frame");
-    const action = btn.dataset.panelAction;
-
-    if (action === "minimize") {
-      const content = panel.querySelector(".panel-content");
-      if (!(content instanceof HTMLElement)) return;
-
-      content.classList.toggle("collapsed");
-      const isCollapsed = content.classList.contains("collapsed");
-
-      frame?.classList.toggle("collapsed", isCollapsed);
-    }
-
-    if (action === "close") {
-      const target = frame || panel;
-      const grid = target.closest(".panel-grid-2");
-
-      target.remove();
-
-      if (grid instanceof HTMLElement && grid.children.length === 0) {
-        grid.remove();
-      }
-    }
-  });
-}

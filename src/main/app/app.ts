@@ -7,7 +7,6 @@ import { initSettings } from "./shared/core/settings-logic.ts";
 import { initAutoplay } from "./shared/core/autoplay.ts";
 import { initSoundsEffects } from "./shared/core/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
-import { initPanelButtons } from "./shared/components/panels.ts";
 import { initToast } from "./shared/components/toast.ts";
 import { initShorcuts } from "./shared/handlers/shortcuts.ts";
 
@@ -36,7 +35,6 @@ async function startApp() {
       initSoundsEffects(),
       initAutoplay(),
       initTooltip(),
-      initPanelButtons(),
       initShorcuts()
     ]);
 
