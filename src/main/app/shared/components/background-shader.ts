@@ -123,10 +123,16 @@ export function initializeWebGLBackground(): void {
   gl.enableVertexAttribArray(position);
   gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
 
+  // TODO: Estos variables deberían de ser configurable por el mismo usuario, pero honestamente, estoy DEMASIADO cansado y quemado para esto, hacerlo mas tarde. - Timmy
+  const targetFPS = 30;
+  const resolutionRender = 0.7;
+
+  const frameInterval = 1000 / targetFPS;
+  let lastTime = 0;
+
   function resize(): void {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1);
-    const width = Math.floor(window.innerWidth * dpr);
-    const height = Math.floor(window.innerHeight * dpr);
+    const width = Math.floor(window.innerWidth * resolutionRender);
+    const height = Math.floor(window.innerHeight * resolutionRender);
 
     if (canvas.width === width && canvas.height === height) return;
 
@@ -134,10 +140,6 @@ export function initializeWebGLBackground(): void {
     canvas.height = height;
     gl.viewport(0, 0, width, height);
   }
-
-  const targetFPS = 25; // NOTE: Creo que 25 FPS es lo mas eficiente, seria mejor que esto se pudiera cambiar en config.
-  const frameInterval = 1000 / targetFPS;
-  let lastTime = 0;
 
   function render(timestamp: number): void {
     requestAnimationFrame(render);
