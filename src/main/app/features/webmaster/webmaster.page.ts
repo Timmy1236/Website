@@ -1,12 +1,12 @@
 import m from "mithril";
-import { loadStatus } from "./webmaster.discord.js";
-import { setCurrentPath } from "../../shared/core/html-meta.js";
-import { parseBBCode } from "../../shared/utils/bbcode.js";
+import { loadStatus } from "./webmaster.discord.ts";
+import { setCurrentPath } from "../../shared/core/html-meta.ts";
+import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import { click } from "./webmaster.profile-clicker.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { gamesCover, moviesCover, seriesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";
-import { createImageOverlay } from "../../shared/components/image-overlay.js";
+import { createImageOverlay } from "../../shared/components/image-overlay.ts";
 
 const webmasterPage = {
   oncreate() {

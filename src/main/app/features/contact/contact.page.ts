@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getTranslation } from "../../shared/core/i18n.js";
+import { getTranslation } from "../../shared/core/i18n.ts";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { panel } from "../../shared/components/panels.ts";

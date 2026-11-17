@@ -1,6 +1,6 @@
 import m from "mithril";
 import { neighborSites, likesSite } from "./links.buttons.list.ts";
-import { createImageOverlay } from "../../shared/components/image-overlay.js";
+import { createImageOverlay } from "../../shared/components/image-overlay.ts";
 import { setCurrentPath } from "../../shared/core/html-meta.ts";
 import { getTranslation } from "../../shared/core/i18n.ts";
 import { panel } from "../../shared/components/panels.ts";

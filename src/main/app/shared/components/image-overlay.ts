@@ -1,4 +1,4 @@
-import { getTranslation } from "../core/i18n.js";
+import { getTranslation } from "../core/i18n.ts";
 
 export interface ImageOverlayDetails {
   image: string
