@@ -44,18 +44,10 @@ function _navigate(path: string) {
 function _libraryButtons() {
   const { language } = getSettings();
 
-  if (language === "es") {
-    return [
-      navBtn("sidebar.library.buttons.blog", true, "/content/es/blog/index.html", "doc-text"),
-      navBtn("sidebar.library.buttons.changelog", true, "/content/es/changelog/index.html", "doc-changelog")
-    ];
-  }
-  else {
-    return [
-      navBtn("sidebar.library.buttons.blog", true, "/content/en/blog/index.html", "doc-text"),
-      navBtn("sidebar.library.buttons.changelog", true, "/content/en/changelog/index.html", "doc-changelog")
-    ];
-  }
+  return [
+    navBtn("sidebar.library.buttons.blog", true, `/content/${language}/blog/index.html`, "doc-text"),
+    navBtn("sidebar.library.buttons.changelog", true, `/content/${language}/changelog/index.html`, "doc-changelog")
+  ];
 }
 
 function _externalNavigate(url: string) {
