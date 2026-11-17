@@ -2,7 +2,6 @@ import { getTranslation } from "../core/i18n.js";
 
 export interface ImageOverlayDetails {
   image: string
-  fullImage?: string
   alt?: string
   title?: string
   description?: string
@@ -44,7 +43,7 @@ export function createImageOverlay(details: ImageOverlayDetails | string, alt = 
   };
 
   image.onerror = () => showOverlay(overlay);
-  image.src = data.fullImage ?? data.image;
+  image.src = data.image;
 
   // Cerrar el cuadro y limpiar el listener de teclado.
   const dismiss = () => {
@@ -138,7 +137,7 @@ function createMainImage(data: ImageOverlayDetails): HTMLDivElement {
   const wrap = createElement("div", "image-overlay-main-wrap");
 
   const image = createElement("img", "image-overlay-main");
-  image.src = data.fullImage ?? data.image;
+  image.src = data.image;
   image.alt = data.alt ?? "";
   wrap.appendChild(image);
 

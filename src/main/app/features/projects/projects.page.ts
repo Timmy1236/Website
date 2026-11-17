@@ -23,24 +23,15 @@ const Project = {
             m("p.project-description", getTranslation("main.projects.windows.dumpster.description"))
           ]),
 
-          m(".project-gallery", [
-            m(".image-preview", [
-              m("img", {
-                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_1.0.0.webp", fullImage: "/assets/images/pages/projects/website/1.0.0.png", title: "Timmy's Dumpster · v1.6", alt: "2025", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_1.0.0.webp", alt: "2025"
-              }),
-              m("p.image-text", "2025 Oct - v1.6")
+          m(".gallery-container", { style: "--gallery-width: 320; --gallery-height: 200;" }, [
+            m("a.gallery-item", { onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/1.0.0.png", title: "Timmy's Dumpster · v1.6", alt: "Website screenshot, version v1.6", previewWidth: 850, description: "main.projects.windows.dumpster.gallery.1-0-0" }); } }, [
+              m("img.gallery-image", { src: "/assets/images/pages/projects/website/preview_1.0.0.webp" })
             ]),
-            m(".image-preview", [
-              m("img", {
-                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_2.0.0.webp", fullImage: "/assets/images/pages/projects/website/2.0.0.png", title: "Timmy's Dumpster · v2.0", alt: "2026", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_2.0.0.webp", alt: "2026"
-              }),
-              m("p.image-text", "2026 Apr - v2.0")
+            m("a.gallery-item", { onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/2.0.0.png", title: "Timmy's Dumpster · v2.0", alt: "Website screenshot, version v2.0", previewWidth: 850, description: "main.projects.windows.dumpster.gallery.2-0-0" }); } }, [
+              m("img.gallery-image", { src: "/assets/images/pages/projects/website/preview_2.0.0.webp" })
             ]),
-            m(".image-preview", [
-              m("img", {
-                onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/preview_2.1.0.webp", fullImage: "/assets/images/pages/projects/website/2.1.0.png", title: "Timmy's Dumpster · v2.1", alt: "2026", previewWidth: 850 }); }, src: "/assets/images/pages/projects/website/preview_2.1.0.webp", alt: "2026"
-              }),
-              m("p.image-text", "2026 Oct - v2.1")
+            m("a.gallery-item", { onclick: () => { createImageOverlay({ image: "/assets/images/pages/projects/website/2.1.0.png", title: "Timmy's Dumpster · v2.1", alt: "Website screenshot, version v2.1", previewWidth: 850, description: "main.projects.windows.dumpster.gallery.2-1-0" }); } }, [
+              m("img.gallery-image", { src: "/assets/images/pages/projects/website/preview_2.1.0.webp" })
             ])
           ]),
 

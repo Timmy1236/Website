@@ -1,0 +1,32 @@
+.gallery-container {
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 3px 1px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-foreground) var(--color-background);
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  user-select: none;
+  margin: 10px 7px;
+  border: 2px solid var(--color-foreground);
+}
+
+.gallery-item:hover {
+  transform: scale(calc(1 + (10 / var(--gallery-width))));
+  box-shadow: var(--button-hover-shadow);
+  filter: brightness(110%);
+} 
+
+.gallery-image {
+  width: calc(var(--gallery-width) * 1px);
+  height: calc(var(--gallery-height) * 1px);
+  object-fit: cover;
+  display: block;
+}

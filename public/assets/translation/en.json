@@ -1,302 +1,308 @@
 {
-  "main": {
-    "404": {
-      "windows": {
-        "error": {
-          "title": "ERROR 404",
-          "description": "...How did you get here in the first place?"
-        }
-      }
-    },
-    "home": {
-      "windows": {
-        "welcome": {
-          "title": "Welcome!",
-          "description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welcom[i]EeEeE!...[/i][/rainbow] Thank you for visiting my personal corner of the internet, but right now the site is in a state of endless development. Don't be surprised to see: unfinished sections, errors in certain features, inconsistencies, genetic mutations, anomalies, etc. If this isn't your first time here, remember to clear your [url=https://www.refreshyourcache.com/en/cache/]browser's cache[/url] to see the latest version of the site.."
-        },
-        "latestChangelog": {
-          "title": "Latest Changelog"
-        },
-        "latestBlog": {
-          "title": "Latest Blog"
-        }
-      }
-    },
-    "projects": {
-      "windows": {
-        "dumpster": {
-          "title": "Project - Dumpster",
-          "description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!"
-        },
-        "leafy": {
-          "title": "Project - Leafy",
-          "description": "A simple Discord bot made with discord.js, that's it. Nice and simple. No external services or complicated setup required."
-        }
-      }
-    },
-    "webmaster": {
-      "windows": {
-        "profile": {
-          "title": "Profile"
-        },
-        "about-me": {
-          "title": "About Me",
-          "description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, homelabbing. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears."
-        },
-        "tech-stack": {
-          "title": "Tech Stack",
-          "list": {
-            "languages": "Languages",
-            "infra": "Infra",
-            "software": "Softwares"
-          }
-        },
-        "interest": {
-          "title": "Interest",
-          "list": {
-            "games": "Games",
-            "series": "Series",
-            "movies": "Movies"
-          }
-        }
-      }
-    },
-    "contact": {
-      "windows": {
-        "socials": {
-          "title": "Contact",
-          "content": {
-            "description": "If you want to contact me directly, I currently have only [b]three options[/b]; one of them is to use the direct message form, and the others are...[br][/br][br][/br]",
-            "email": "[b]By e-mail[/b]",
-            "discord": "[br][/br][b]By discord[/b]"
-          }
-        },
-        "form": {
-          "title": "Send a message",
-          "content": {
-            "labelUsername": "Username *",
-            "labelContact": "Contact (optional)",
-            "placeholderContact": "Email, social media, or website.",
-            "labelMessage": "Message",
-            "placeholderMessage": "Write your message, feedback, anger, frustration, or insults.",
-            "submit": "Send",
-            "sending": "Sending..."
-          }
-        }
-      }
-    },
-    "links": {
-      "windows": {
-        "button-wall": {
-          "title": "Button Wall",
-          "content": {
-            "neighbors": "Nekoweb Followers",
-            "likes": "Cool Sites!",
-            "myButton": "... Me.",
-            "notes": {
-              "chantu": "The first person I met when I switched from GitHub Pages to Nekoweb, so friendly!",
-              "slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!",
-              "nyani58": "WHERE THE HELL AM I???",
-              "jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
-              "loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site.",
-              "dimden": "It's dimden, the creator of nekoweb, duh."
-            }
-          }
-        },
-        "credits": {
-          "title": "Credits",
-          "content": {
-            "host": "Hosting",
-            "dependencies": "Dependencies",
-            "websites": "Useful Websites",
-            "audio": "Audio & Songs",
-            "images": "Images"
-          }
-        },
-        "sitebox-gallery": {
-          "title": "Sitebox Gallery"
-        }
-      }
-    },
-    "settings": {
-      "windows": {
-        "settings": {
-          "title": "Configuration",
-          "buttonConfirm": "Confirm",
-          "buttonReset": "Reset"
-        }
-      },
-      "sub-windows": {
-        "audio": {
-          "title": "Audio",
-          "content": {
-            "audio": "Audio",
-            "backgroundMusic": "Background Music",
-            "soundsEffects": "Sound Effects"
-          }
-        },
-        "others": {
-          "title": "Others",
-          "content": {
-            "languages": "Languages"
-          }
-        },
-        "visual": {
-          "content": {
-            "background": {
-              "options": {
-                "checkboard": "Chess - CSS",
-                "empty": "Empty",
-                "liquify": "Liquid - WebGL 2"
-              },
-              "title": "Background"
-            },
-            "sidebar": {
-              "options": {
-                "left": "Left",
-                "right": "Right"
-              },
-              "title": "Sidebar"
-            },
-            "text": {
-              "options": {
-                "readableFont": "Readable font"
-              },
-              "title": "Text"
-            },
-            "themes": {
-              "options": {
-                "dark": "Dark",
-                "darkspace": "Darkspace",
-                "green": "Green",
-                "purple": "Purple"
-              },
-              "title": "Topics"
-            },
-            "visual-effects": {
-              "options": {
-                "static": "Static",
-                "vignette": "Vignette"
-              },
-              "title": "Visual effects"
-            }
-          },
-          "title": "Visual"
-        }
-      }
-    }
-  },
-  "sidebar": {
-    "navigation": {
-      "title": "Navigation",
-      "buttons": {
-        "home": "Home",
-        "webmaster": "Webmaster",
-        "projects": "Projects",
-        "links": "Links",
-        "achievements": "Achievements",
-        "configuration": "Configuration",
-        "guestbook": "Guestbook",
-        "contact": "Contact"
-      }
-    },
-    "library": {
-      "title": "Library",
-      "buttons": {
-        "blog": "Blog",
-        "changelog": "Changelog"
-      }
-    }
-  },
-  "tooltip": {
-    "contact": {
-      "correo": "Click to reveal my email (it's to avoid spam bots)"
-    },
-    "pages": {
-      "webmaster": {
-        "interests": {
-          "votv": "A simulator where you spend an hour at your desk trying to get a signal only for it to fail and force you to do everything all over again.",
-          "minecraft": "Minceraft",
-          "hytale": "It's like Minecraft, except it isn't because it's like Terraria, except it isn't because-",
-          "terraria": "It's way too good. But starting a new world always feels painfully slow :(",
-          "warframe": "Ironically one of the most F2P-friendly games ever made. I don't think there's currently another one that reaches the same level.",
-          "roblox": "every day I feel less motivated to keep playing this crap.",
-          "isaac": "There was 0 need to make a cover as hard as this one.",
-          "hl": "One of Valve's greatest franchises... Shame we'll never see a third one :)",
-          "tf": "I have 1,000 hours in Team Fortress 2! ... I still play terribly.",
-          "portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
-          "portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
-          "scp": "Ignoring the fact that the game is built on an absurdly old and niche engine filled with bugs and fatal crashes, it's the only game that genuinely makes me feel scared. Every new area has a chance of SCP-173 camping around a corner waiting to kill you.",
-          "gta": "Cayo Perico."
-        },
-        "profile": {
-          "status": "Click to find out if I am connected right now on Discord or not."
-        },
-        "list": {
-          "movies": "I wasn't a big fan of watching movies, but I'm watching some lately. \nIf you give me time I will add some later."
-        }
-      },
-      "others": {
-        "follow": "Follow Me"
-      },
-      "links": {
-        "timmy": "If you click me, I will open a page with the url of the button so you can download it."
-      }
-    }
-  },
-  "toast": {
-    "pages": {
-      "webmaster": {
-        "status": {
-          "title": "Stop.",
-          "desc": "Wait at least more than a minute to get my status back."
-        }
-      },
-      "contact": {
-        "error": "Error",
-        "messageRequired": "The message cannot be empty.",
-        "usernameRequired": "The username cannot be empty.",
-        "tooLong": "The message or contact exceeds the allowed limit.",
-        "sendFailed": "The message could not be sent.",
-        "connectionFailed": "Could not connect to the server.",
-        "sent": "Sent",
-        "sentDescription": "Your message was sent successfully."
-      },
-      "configuration": {
-        "reset": "Are you sure to reset your settings?"
-      }
-    },
-    "player": "Playing..."
-  },
-  "achievements": {
-    "title": "Achievements",
-    "list": {
-      "404": {
-        "name": "Error 404",
-        "desc": "How did you get here?"
-      },
-      "welcome": {
-        "name": "Welcome",
-        "desc": "Of all the pages you could have gone to, and you decide on this one. Because?"
-      },
-      "oyasumi": {
-        "name": "Good night",
-        "desc": "These are not hours to be on this page."
-      },
-      "explorer": {
-        "name": "Explorer",
-        "desc": "Visit the other websites listed in the “Links” section on the button wall"
-      },
-      "math": {
-        "name": "Math.random()",
-        "desc": "Every time you visit my page, a random number between 0 and 100 is generated. You need to get the number 100 to unlock this achievement. Good luck."
-      },
-      "owner": {
-        "name": "MET THE OWNER",
-        "desc": "YOU DID IT, YOU FOUND ME ONLINE, YOU MET ME, WOOOOOOOOO"
-      }
-    },
-    "secretName": "Secret achievement",
-    "secretDescription": "Shhh..."
-  }
+	"achievements": {
+		"list": {
+			"404": {
+				"desc": "How did you get here?",
+				"name": "Error 404"
+			},
+			"explorer": {
+				"desc": "Visit the other websites listed in the “Links” section on the button wall",
+				"name": "Explorer"
+			},
+			"math": {
+				"desc": "Every time you visit my page, a random number between 0 and 100 is generated. You need to get the number 100 to unlock this achievement. Good luck.",
+				"name": "Math.random()"
+			},
+			"owner": {
+				"desc": "YOU DID IT, YOU FOUND ME ONLINE, YOU MET ME, WOOOOOOOOO",
+				"name": "MET THE OWNER"
+			},
+			"oyasumi": {
+				"desc": "These are not hours to be on this page.",
+				"name": "Good night"
+			},
+			"welcome": {
+				"desc": "Of all the pages you could have gone to, and you decide on this one. Because?",
+				"name": "Welcome"
+			}
+		},
+		"secretDescription": "Shhh...",
+		"secretName": "Secret achievement",
+		"title": "Achievements"
+	},
+	"main": {
+		"404": {
+			"windows": {
+				"error": {
+					"description": "...How did you get here in the first place?",
+					"title": "ERROR 404"
+				}
+			}
+		},
+		"contact": {
+			"windows": {
+				"form": {
+					"content": {
+						"labelContact": "Contact (optional)",
+						"labelMessage": "Message",
+						"labelUsername": "Username *",
+						"placeholderContact": "Email, social media, or website.",
+						"placeholderMessage": "Write your message, feedback, anger, frustration, or insults.",
+						"sending": "Sending...",
+						"submit": "Send"
+					},
+					"title": "Send a message"
+				},
+				"socials": {
+					"content": {
+						"description": "If you want to contact me directly, I currently have only [b]three options[/b]; one of them is to use the direct message form, and the others are...[br][/br][br][/br]",
+						"discord": "[br][/br][b]By discord[/b]",
+						"email": "[b]By e-mail[/b]"
+					},
+					"title": "Contact"
+				}
+			}
+		},
+		"home": {
+			"windows": {
+				"latestBlog": {
+					"title": "Latest Blog"
+				},
+				"latestChangelog": {
+					"title": "Latest Changelog"
+				},
+				"welcome": {
+					"description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welcom[i]EeEeE!...[/i][/rainbow] Thank you for visiting my personal corner of the internet, but right now the site is in a state of endless development. Don't be surprised to see: unfinished sections, errors in certain features, inconsistencies, genetic mutations, anomalies, etc. If this isn't your first time here, remember to clear your [url=https://www.refreshyourcache.com/en/cache/]browser's cache[/url] to see the latest version of the site..",
+					"title": "Welcome!"
+				}
+			}
+		},
+		"links": {
+			"windows": {
+				"button-wall": {
+					"content": {
+						"likes": "Cool Sites!",
+						"myButton": "... Me.",
+						"neighbors": "Nekoweb Followers",
+						"notes": {
+							"chantu": "The first person I met when I switched from GitHub Pages to Nekoweb, so friendly!",
+							"dimden": "It's dimden, the creator of nekoweb, duh.",
+							"jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
+							"loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site.",
+							"nyani58": "WHERE THE HELL AM I???",
+							"slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!"
+						}
+					},
+					"title": "Button Wall"
+				},
+				"credits": {
+					"content": {
+						"audio": "Audio & Songs",
+						"dependencies": "Dependencies",
+						"host": "Hosting",
+						"images": "Images",
+						"websites": "Useful Websites"
+					},
+					"title": "Credits"
+				},
+				"sitebox-gallery": {
+					"title": "Sitebox Gallery"
+				}
+			}
+		},
+		"projects": {
+			"windows": {
+				"dumpster": {
+					"description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!",
+					"gallery": {
+						"1-0-0": "A screenshot of the latest version, v1.X, before the massive refactoring in mithril.js. I always tried to go for a transparent design, but I could never get the balance right so that it would be transparent while still making the text legible. It’s the worst design the entire site has ever had. A refactoring was necessary.",
+						"2-0-0": "The first version of the major refactoring, v2.X. The page has been completely overhauled as planned. It is no longer designed using separate HTML files for each section; everything is now contained in a single HTML file and a JS script. The script features a large number of routes and several virtual nodes, allowing the entire website to function as a Single-Page Application (SPA). That’s why you can now navigate between pages without having to reload the entire page from scratch!",
+						"2-1-0": "A small but decent QoL (Quality of Life) update for the website, an improved visual style, and a few minor fixes and missing elements carried over from the previous version compared to v1.X"
+					},
+					"title": "Project - Dumpster"
+				},
+				"leafy": {
+					"description": "A simple Discord bot made with discord.js, that's it. Nice and simple. No external services or complicated setup required.",
+					"title": "Project - Leafy"
+				}
+			}
+		},
+		"settings": {
+			"sub-windows": {
+				"audio": {
+					"content": {
+						"audio": "Audio",
+						"backgroundMusic": "Background Music",
+						"soundsEffects": "Sound Effects"
+					},
+					"title": "Audio"
+				},
+				"others": {
+					"content": {
+						"languages": "Languages"
+					},
+					"title": "Others"
+				},
+				"visual": {
+					"content": {
+						"background": {
+							"options": {
+								"checkboard": "Chess - CSS",
+								"empty": "Empty",
+								"liquify": "Liquid - WebGL 2"
+							},
+							"title": "Background"
+						},
+						"sidebar": {
+							"options": {
+								"left": "Left",
+								"right": "Right"
+							},
+							"title": "Sidebar"
+						},
+						"text": {
+							"options": {
+								"readableFont": "Readable font"
+							},
+							"title": "Text"
+						},
+						"themes": {
+							"options": {
+								"dark": "Dark",
+								"darkspace": "Darkspace",
+								"green": "Green",
+								"purple": "Purple"
+							},
+							"title": "Topics"
+						},
+						"visual-effects": {
+							"options": {
+								"static": "Static",
+								"vignette": "Vignette"
+							},
+							"title": "Visual effects"
+						}
+					},
+					"title": "Visual"
+				}
+			},
+			"windows": {
+				"settings": {
+					"buttonConfirm": "Confirm",
+					"buttonReset": "Reset",
+					"title": "Configuration"
+				}
+			}
+		},
+		"webmaster": {
+			"windows": {
+				"about-me": {
+					"description": "[i][opacity=50][url=./assets/videos/about-me/3-fun-things-about-yourself.mp4]How do people introduce themselves without feeling awkward?[/url][/opacity][/i] [br][/br] Hey! I'm Timmy[opacity=50][u][i][tooltip=Originally a palindrome number. (123-6-321)](1236)[/opacity][/tooltip][/i][/u], a 20-year-old guy living in [url=https://www.youtube.com/watch?v=c5CQgsFJm0c]Uruguay[/url]. [br][/br][br][/br] I'm just another average [u][tooltip=Backend Software Developer... NEEEERD]programmer[/tooltip][/u]. My hobbies revolve around pretty much anything related to technology. Gaming, TV shows, movies, 3D modeling, game development, cybersecurity, homelabbing. I've always been interested in [i]Art[/i], drawing, and turning my creativity into something physical, but I was never very good at those kinds of things, so I ended up sitting in front of a computer typing random words until something magical appears.",
+					"title": "About Me"
+				},
+				"interest": {
+					"gallery": {
+						"gta": "Want the heist with the most money of all? Cayo Perico. Want the most annoying heist? Cayo Perico. Want the heist with the most bugs in history? Cayo Perico. I hope GTA 6 doesn't have a Cayo Perico.",
+						"hl": "One of the best series Valve has ever created, though sadly it has very little content. I'll be waiting for a third installment! :D",
+						"hytale": "A lot of people say it's like Minecraft because it has certain aspects of Minecraft, but it's not quite Minecraft because it's missing some things from Minecraft, so it's a little more like Terraria because it has certain aspects of Terraria, but it's not quite Terraria because it's missing some things from Terraria-",
+						"isaac": "There was absolutely no need to make a cover as intense as this one. The game? Same thing. There was absolutely no need to make it so epic.",
+						"minecraft": "I'm genuinely hyped about Sift, I can't wait any longer. I NEED IT.",
+						"portal1": "You spend 20 minutes staring at a puzzle trying to figure it out...",
+						"portal2": "You spend 20 minutes staring at a puzzle trying to figure it out... This time with a friend!",
+						"roblox": "It’s the only platform in history that has figured out how to create a game engine that’s both so portable and yet so highly programmable that it allows you to have millions of games in a single one just by requesting certain files. It’s the only platform that treats its users like shit. Not even like numbers on a graph. Worse than that.",
+						"scp": "Ignoring the fact that the game is built on an absurdly old and niche engine filled with bugs and fatal crashes, it's the only game that genuinely makes me feel scared. Every new area has a chance of SCP-173 camping around a corner waiting to kill you.",
+						"terraria": "I really love that it focuses more on combat than on the sandbox aspect itself, but without completely neglecting it. Unfortunately, though, starting a new world is horribly slow :(",
+						"tf": "I've put in over a thousand hours into this game, and I'm still playing like crap. It's a complicated and toxic relationship.",
+						"tres-acordes": "AHRE",
+						"votv": "It's like sitting at your desk for an hour trying to get a signal, only for it to fail in the end and have to start all over again. I love this game, but sometimes it can take a while for an event to trigger, which can get boring or repetitive.",
+						"warframe": "100% recommended. One of the best games and the most F2P-friendly one I've ever played. Sadly, sometimes it goes way overboard with loot, so getting certain characters or advancing through the story can be a grueling grind to the point of burnout. I hope DE can improve some of the farming and tweak certain… mechanics, like having to wait 3 DAYS to craft a Warframe."
+					},
+					"list": {
+						"games": "Games",
+						"movies": "Movies",
+						"series": "Series"
+					},
+					"title": "Interest"
+				},
+				"profile": {
+					"title": "Profile"
+				},
+				"tech-stack": {
+					"list": {
+						"infra": "Infra",
+						"languages": "Languages",
+						"software": "Softwares"
+					},
+					"title": "Tech Stack"
+				}
+			}
+		}
+	},
+	"sidebar": {
+		"library": {
+			"buttons": {
+				"blog": "Blog",
+				"changelog": "Changelog"
+			},
+			"title": "Library"
+		},
+		"navigation": {
+			"buttons": {
+				"achievements": "Achievements",
+				"configuration": "Configuration",
+				"contact": "Contact",
+				"guestbook": "Guestbook",
+				"home": "Home",
+				"links": "Links",
+				"projects": "Projects",
+				"webmaster": "Webmaster"
+			},
+			"title": "Navigation"
+		}
+	},
+	"toast": {
+		"pages": {
+			"configuration": {
+				"reset": "Are you sure to reset your settings?"
+			},
+			"contact": {
+				"connectionFailed": "Could not connect to the server.",
+				"error": "Error",
+				"messageRequired": "The message cannot be empty.",
+				"sendFailed": "The message could not be sent.",
+				"sent": "Sent",
+				"sentDescription": "Your message was sent successfully.",
+				"tooLong": "The message or contact exceeds the allowed limit.",
+				"usernameRequired": "The username cannot be empty."
+			},
+			"webmaster": {
+				"status": {
+					"desc": "Wait at least more than a minute to get my status back.",
+					"title": "Stop."
+				}
+			}
+		},
+		"player": "Playing..."
+	},
+	"tooltip": {
+		"contact": {
+			"correo": "Click to reveal my email (it's to avoid spam bots)"
+		},
+		"pages": {
+			"links": {
+				"timmy": "If you click me, I will open a page with the url of the button so you can download it."
+			},
+			"others": {
+				"follow": "Follow Me"
+			},
+			"webmaster": {
+				"list": {
+					"movies": "I wasn't a big fan of watching movies, but I'm watching some lately. \nIf you give me time I will add some later."
+				},
+				"profile": {
+					"status": "Click to find out if I am connected right now on Discord or not."
+				}
+			}
+		}
+	}
 }

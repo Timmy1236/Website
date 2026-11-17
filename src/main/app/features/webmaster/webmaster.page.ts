@@ -81,26 +81,26 @@ const webmasterPage = {
         title: getTranslation("main.webmaster.windows.interest.title"),
         content: [
           m("h2.header", getTranslation("main.webmaster.windows.interest.list.games")),
-          m(".scroll-cover-container", [
+          m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             gamesCover.map(cover =>
-              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
-                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the game: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+              m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
+                m("img.gallery-image", { src: cover.coverPreview, alt: `A clickable cover art image for the game: ${cover.title}` })
               ])
             )
           ]),
           m("h2.header", getTranslation("main.webmaster.windows.interest.list.series")),
-          m(".scroll-cover-container", [
+          m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             seriesCover.map(cover =>
-              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
-                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the serie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+              m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
+                m("img.gallery-image", { src: cover.coverPreview, alt: `A clickable cover art image for the serie: ${cover.title}` })
               ])
             )
           ]),
           m("h2.header", { "data-tooltip-i18n": "tooltip.pages.webmaster.list.movies" }, getTranslation("main.webmaster.windows.interest.list.movies")),
-          m(".scroll-cover-container", [
+          m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             moviesCover.map(cover =>
-              m("a.cover", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
-                m("img.cover-image", { src: cover.cover, alt: `A clickable cover art image for the movie: ${cover.title}` }) // Mhm, cover.cover -> Timmy 180iq
+              m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
+                m("img.gallery-image", { src: cover.coverPreview, alt: `A clickable cover art image for the movie: ${cover.title}` })
               ])
             )
           ])
