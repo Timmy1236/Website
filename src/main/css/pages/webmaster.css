@@ -81,8 +81,7 @@
 .tag {
   display: flex;
   padding: 3px 6px;
-  background: rgb(0 0 0 / 10%);
-  border: 2px solid rgb(0 0 0 / 40%);
+  border: 2px solid var(--color-foreground);
 }
 
 .tag img {
