@@ -1,7 +1,7 @@
 import m from "mithril";
 import { createImageOverlay } from "../../shared/components/image-overlay.ts";
-import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import { getTranslation } from "../../shared/core/i18n.ts";
+import { setCurrentPath } from "../../shared/services/html-meta.ts";
+import { getTranslation } from "../../shared/services/i18n.ts";
 import { panel } from "../../shared/components/panels.ts";
 
 const Project = {

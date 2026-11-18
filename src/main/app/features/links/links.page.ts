@@ -1,11 +1,11 @@
 import m from "mithril";
 import { neighborSites, likesSite } from "./links.buttons.list.ts";
 import { createImageOverlay } from "../../shared/components/image-overlay.ts";
-import { setCurrentPath } from "../../shared/core/html-meta.ts";
-import { getTranslation } from "../../shared/core/i18n.ts";
+import { setCurrentPath } from "../../shared/services/html-meta.ts";
+import { getTranslation } from "../../shared/services/i18n.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { siteboxGalleryStyles, renderSiteboxIframe } from "./links.sitebox.gallery.ts";
-import { addAchievementProgress } from "../../shared/core/achievements-logic.ts";
+import { addAchievementProgress } from "../../shared/services/achievements-logic.ts";
 
 const Others = {
   oncreate() {

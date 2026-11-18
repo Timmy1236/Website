@@ -1,5 +1,5 @@
 import m from "mithril";
-import { handleAudioPause } from "../core/autoplay";
+import { handleAudioPause } from "../services/autoplay";
 
 // NOTE: No olvidar actualizar esto si se agregan nuevas paginas :3
 const routes: Record<string, string> = {

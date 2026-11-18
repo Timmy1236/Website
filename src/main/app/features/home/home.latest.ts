@@ -1,4 +1,4 @@
-import { getSettings } from "../../shared/core/settings-logic.ts";
+import { getSettings } from "../../shared/services/settings-logic.ts";
 import type { Latest } from "./home.page.ts";
 
 let latestPromise: Promise<Latest> | null = null;

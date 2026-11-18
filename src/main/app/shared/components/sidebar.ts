@@ -1,6 +1,6 @@
 import m from "mithril";
-import { getSettings } from "../core/settings-logic";
-import { getTranslation } from "../core/i18n";
+import { getSettings } from "../services/settings-logic";
+import { getTranslation } from "../services/i18n";
 
 let isTransitioning = false;
 let currentPath: string;

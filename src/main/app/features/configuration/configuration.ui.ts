@@ -1,6 +1,6 @@
-import { initDefaultSettings, saveSettings, getSettings, DEFAULT_SETTINGS } from "../../shared/core/settings-logic.ts";
-import type { Settings } from "../../shared/core/settings-logic.ts";
-import { getTranslation } from "../../shared/core/i18n.ts";
+import { initDefaultSettings, saveSettings, getSettings, DEFAULT_SETTINGS } from "../../shared/services/settings-logic.ts";
+import type { Settings } from "../../shared/services/settings-logic.ts";
+import { getTranslation } from "../../shared/services/i18n.ts";
 
 export const draft: Settings = { ...DEFAULT_SETTINGS };
 

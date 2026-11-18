@@ -1,4 +1,4 @@
-import { unlockAchievement } from "../core/achievements-logic.ts";
+import { unlockAchievement } from "../services/achievements-logic.ts";
 
 export function onPage404() {
   unlockAchievement("404");

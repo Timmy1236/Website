@@ -1,9 +1,9 @@
 import m from "mithril";
 import { confirmSettings, restartSettings, draft, refreshDraftFromStorage } from "./configuration.ui.ts";
-import { getTranslation } from "../../shared/core/i18n.ts";
+import { getTranslation } from "../../shared/services/i18n.ts";
 import { TabPanel } from "../../shared/components/panels.ts";
-import { isUnlocked } from "../../shared/core/achievements-logic.ts";
-import { setCurrentPath } from "../../shared/core/html-meta.ts";
+import { isUnlocked } from "../../shared/services/achievements-logic.ts";
+import { setCurrentPath } from "../../shared/services/html-meta.ts";
 
 const themes = [
   {

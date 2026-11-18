@@ -1,7 +1,7 @@
 import m from "mithril";
-import { getTranslation } from "../../shared/core/i18n.ts";
+import { getTranslation } from "../../shared/services/i18n.ts";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
-import { setCurrentPath } from "../../shared/core/html-meta.ts";
+import { setCurrentPath } from "../../shared/services/html-meta.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { contactState, sendContactForm } from "./contact.form.ts";
 

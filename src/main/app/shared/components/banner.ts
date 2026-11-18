@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getNekoStat } from "../core/nekoweb-stats";
+import { getNekoStat } from "../services/nekoweb-stats";
 
 const text = "timmy.nekoweb.org";
 

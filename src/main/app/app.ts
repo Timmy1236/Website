@@ -1,11 +1,11 @@
 import m from "mithril";
 
 import { cLog } from "./shared/utils/clog.ts";
-import { loadTranslations } from "./shared/core/i18n.ts";
+import { loadTranslations } from "./shared/services/i18n.ts";
 import { onVisit } from "./shared/handlers/achievements-trigger.ts";
-import { initSettings } from "./shared/core/settings-logic.ts";
-import { initAutoplay } from "./shared/core/autoplay.ts";
-import { initSoundsEffects } from "./shared/core/sound-effects.ts";
+import { initSettings } from "./shared/services/settings-logic.ts";
+import { initAutoplay } from "./shared/services/autoplay.ts";
+import { initSoundsEffects } from "./shared/services/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
 import { initToast } from "./shared/components/toast.ts";
 import { initShorcuts } from "./shared/handlers/shortcuts.ts";
