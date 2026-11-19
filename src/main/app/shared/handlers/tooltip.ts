@@ -34,6 +34,11 @@ export function initTooltip() {
 
   document.addEventListener("mousemove", (event) => {
     if (!activeElement) return;
+    if (!activeElement.isConnected) {
+      tooltip.classList.remove("visible");
+      activeElement = null;
+      return;
+    }
 
     const offset = 13;
 
