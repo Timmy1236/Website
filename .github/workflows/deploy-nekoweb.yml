@@ -1,3 +1,5 @@
+name: Deploy Nekoweb
+
 on:
   push:
     tags:
