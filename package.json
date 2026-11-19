@@ -45,20 +45,20 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.8",
     "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.10.0",
+    "@stylistic/eslint-plugin": "^6.0.1",
     "@types/mithril": "^2.2.9",
     "@typescript/native": "npm:typescript@^7.0.2",
     "concurrently": "^10.0.7",
     "esbuild": "^0.28.2",
     "esbuild-plugin-glsl": "^1.4.2",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "eslint-plugin-compat": "^7.0.2",
     "html-minifier-next": "^9.1.2",
     "stylelint": "^18.0.0",
     "stylelint-config-standard": "^41.0.0",
     "stylelint-no-unsupported-browser-features": "^8.1.2",
     "typescript": "npm:@typescript/typescript6@6.0.2",
-    "typescript-eslint": "^8.72.1"
+    "typescript-eslint": "^8.72.2"
   },
   "dependencies": {
     "mithril": "^2.3.8"
