@@ -1,7 +1,7 @@
 import m from "mithril";
-import { getAchievementsList, AchievementDefinition } from "../../shared/services/achievements-logic.ts";
-import { setCurrentPath } from "../../shared/services/html-meta.ts";
-import { getTranslation } from "../../shared/services/i18n.ts";
+import { getAchievementsList, AchievementDefinition } from "../../shared/services/achievements.ts";
+import { setCurrentPath } from "../../shared/services/dynamic-meta.ts";
+import { getTranslation } from "../../shared/services/i18n-translate.ts";
 import { panel } from "../../shared/components/panels.ts";
 
 const AchievementsPage = {

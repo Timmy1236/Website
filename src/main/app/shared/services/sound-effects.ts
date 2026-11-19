@@ -1,4 +1,4 @@
-import { getSettings } from "./settings-logic";
+import { getSettings } from "./settings";
 import { cLog } from "../utils/clog";
 
 const audioCtx = new AudioContext();

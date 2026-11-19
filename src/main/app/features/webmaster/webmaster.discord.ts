@@ -1,5 +1,5 @@
 import { showToast } from "../../shared/components/toast";
-import { unlockAchievement } from "../../shared/services/achievements-logic";
+import { unlockAchievement } from "../../shared/services/achievements";
 import { cLog } from "../../shared/utils/clog";
 
 export interface LanyardResponse {

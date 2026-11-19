@@ -1,8 +1,8 @@
 import m from "mithril";
 import { getLatest } from "./home.latest.ts";
-import { getTranslation } from "../../shared/services/i18n.ts";
+import { getTranslation } from "../../shared/services/i18n-translate.ts";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
-import { setCurrentPath } from "../../shared/services/html-meta.ts";
+import { setCurrentPath } from "../../shared/services/dynamic-meta.ts";
 import { panel } from "../../shared/components/panels.ts";
 
 export interface Entry {

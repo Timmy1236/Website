@@ -1,8 +1,8 @@
 import m from "mithril";
 import { loadStatus } from "./webmaster.discord.ts";
-import { setCurrentPath } from "../../shared/services/html-meta.ts";
+import { setCurrentPath } from "../../shared/services/dynamic-meta.ts";
 import { parseBBCode } from "../../shared/utils/bbcode.ts";
-import { getTranslation } from "../../shared/services/i18n.ts";
+import { getTranslation } from "../../shared/services/i18n-translate.ts";
 import { click } from "./webmaster.profile-clicker.ts";
 import { panel } from "../../shared/components/panels.ts";
 import { gamesCover, moviesCover, seriesCover, tagInfra, tagLanguages, tagSoftware } from "./webmaster.list.ts";

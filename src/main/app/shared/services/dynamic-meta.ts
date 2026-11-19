@@ -1,5 +1,5 @@
 import m from "mithril";
-import { getSettings } from "./settings-logic";
+import { getSettings } from "./settings";
 
 const translation: Record<string, Record<string, string>> = {
   es: {

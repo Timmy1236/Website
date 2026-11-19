@@ -1,4 +1,4 @@
-import { getTranslation } from "../services/i18n.ts";
+import { getTranslation } from "../services/i18n-translate.ts";
 
 export interface ImageOverlayDetails {
   image: string

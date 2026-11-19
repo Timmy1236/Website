@@ -1,4 +1,4 @@
-import { getTranslation } from "../services/i18n.ts";
+import { getTranslation } from "../services/i18n-translate.ts";
 
 const tooltip = document.createElement("div");
 tooltip.id = "tooltip";

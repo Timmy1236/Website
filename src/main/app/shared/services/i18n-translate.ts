@@ -1,5 +1,5 @@
 import { cLog } from "../utils/clog";
-import { getSettings } from "./settings-logic";
+import { getSettings } from "./settings";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const translations: Record<string, any> = {};
 let loaded = false;

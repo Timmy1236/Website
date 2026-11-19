@@ -1,7 +1,7 @@
 import m from "mithril";
 import banner from "./banner.ts";
 import sidebar from "./sidebar.ts";
-import { getSettings } from "../services/settings-logic.ts";
+import { getSettings } from "../services/settings.ts";
 import { applyPanelStagger } from "../handlers/panel-stagger.ts";
 
 export default {

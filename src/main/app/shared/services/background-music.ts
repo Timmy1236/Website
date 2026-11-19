@@ -1,5 +1,5 @@
 import { showToast } from "../components/toast";
-import { getSettings } from "./settings-logic";
+import { getSettings } from "./settings";
 import { cLog } from "../utils/clog";
 
 let playing = false;

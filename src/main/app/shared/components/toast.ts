@@ -1,5 +1,5 @@
-import { getTranslation } from "../services/i18n";
-import { getSettings } from "../services/settings-logic";
+import { getTranslation } from "../services/i18n-translate";
+import { getSettings } from "../services/settings";
 import { cLog } from "../utils/clog";
 
 type ToastType = "info" | "achievement" | "error" | "affirmative";
