@@ -79,7 +79,7 @@ const ConfigurationPage = {
             label: getTranslation("main.settings.sub-windows.visual.title"),
             content: () => m("div", [
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.visual-effects.title")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.visual-effects.title")),
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "static-effect", checked: draft.staticEffect,
@@ -98,7 +98,7 @@ const ConfigurationPage = {
               ]),
 
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.text.title")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.text.title")),
                 m(".option", [
                   m("input", {
                     type: "checkbox", id: "readable-font", checked: draft.readableFont,
@@ -109,7 +109,7 @@ const ConfigurationPage = {
               ]),
 
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.themes.title")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.themes.title")),
 
                 m(".option-list", themes
                   .filter(theme => !theme.unlocked || theme.unlocked())
@@ -134,7 +134,7 @@ const ConfigurationPage = {
               ]),
 
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.background.title")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.background.title")),
 
                 m(".option-list", background.map(background =>
                   m("label.option-list-item", [
@@ -157,7 +157,7 @@ const ConfigurationPage = {
               ]),
 
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.visual.content.sidebar.title")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.sidebar.title")),
 
                 m(".option-list", sidebar.map(sidebar =>
                   m("label.option-list-item", [
@@ -183,7 +183,7 @@ const ConfigurationPage = {
           {
             label: getTranslation("main.settings.sub-windows.audio.title"),
             content: () => m(".settings-group", [
-              m("h2.group-title.header", getTranslation("main.settings.sub-windows.audio.content.audio")),
+              m("h2.group-title", getTranslation("main.settings.sub-windows.audio.content.audio")),
 
               m(".option", [
                 m("input", {
@@ -214,7 +214,7 @@ const ConfigurationPage = {
             label: getTranslation("main.settings.sub-windows.others.title"),
             content: () => m(".settings-group", [
               m(".settings-group", [
-                m("h2.group-title.header", getTranslation("main.settings.sub-windows.others.content.languages")),
+                m("h2.group-title", getTranslation("main.settings.sub-windows.others.content.languages")),
 
                 m(".option", [
                   m(".buttons-list", [

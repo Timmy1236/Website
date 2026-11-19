@@ -56,19 +56,19 @@ const webmasterPage = {
       m(panel, {
         title: getTranslation("main.webmaster.windows.tech-stack.title"),
         content: [
-          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.languages")),
+          m("h2", getTranslation("main.webmaster.windows.tech-stack.list.languages")),
           m(".scroll-tag-container", [
             tagLanguages.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.infra")),
+          m("h2", getTranslation("main.webmaster.windows.tech-stack.list.infra")),
           m(".scroll-tag-container", [
             tagInfra.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
             )
           ]),
-          m("h2.header", getTranslation("main.webmaster.windows.tech-stack.list.software")),
+          m("h2", getTranslation("main.webmaster.windows.tech-stack.list.software")),
           m(".scroll-tag-container", [
             tagSoftware.map(tag =>
               m(".tag", [m("img", { src: tag.icon, alt: "" }), m("span", tag.text)])
@@ -80,7 +80,7 @@ const webmasterPage = {
       m(panel, {
         title: getTranslation("main.webmaster.windows.interest.title"),
         content: [
-          m("h2.header", getTranslation("main.webmaster.windows.interest.list.games")),
+          m("h2", getTranslation("main.webmaster.windows.interest.list.games")),
           m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             gamesCover.map(cover =>
               m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
@@ -88,7 +88,7 @@ const webmasterPage = {
               ])
             )
           ]),
-          m("h2.header", getTranslation("main.webmaster.windows.interest.list.series")),
+          m("h2", getTranslation("main.webmaster.windows.interest.list.series")),
           m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             seriesCover.map(cover =>
               m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
@@ -96,7 +96,7 @@ const webmasterPage = {
               ])
             )
           ]),
-          m("h2.header", { "data-tooltip-i18n": "tooltip.pages.webmaster.list.movies" }, getTranslation("main.webmaster.windows.interest.list.movies")),
+          m("h2", { "data-tooltip-i18n": "tooltip.pages.webmaster.list.movies" }, getTranslation("main.webmaster.windows.interest.list.movies")),
           m(".gallery-container", { style: "--gallery-width: 100; --gallery-height: 150;" }, [
             moviesCover.map(cover =>
               m("a.gallery-item", { href: cover.link, onclick: (e: MouseEvent) => { e.preventDefault(); createImageOverlay({ image: cover.cover, title: cover.title, description: cover.fact, link: cover.link, previewWidth: 600 }); } }, [
