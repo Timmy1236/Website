@@ -32,6 +32,7 @@ export default defineConfig([
       "@stylistic/indent": ["error", 2],
       "@stylistic/comma-dangle": ["error", "never"],
       "@stylistic/no-tabs": "error",
+      "@stylistic/list-style": "off",
       "@stylistic/max-statements-per-line": ["error", { max: 2 }]
     }
   }
