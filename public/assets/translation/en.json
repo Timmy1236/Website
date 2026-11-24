@@ -34,7 +34,7 @@
 		"404": {
 			"windows": {
 				"error": {
-					"description": "...How did you get here in the first place?",
+					"description": "... How did you get here in the first place?",
 					"title": "ERROR 404"
 				}
 			}
@@ -66,13 +66,13 @@
 		"home": {
 			"windows": {
 				"latestBlog": {
-					"title": "Latest Blog"
+					"title": "Latest blog"
 				},
 				"latestChangelog": {
-					"title": "Latest Changelog"
+					"title": "Latest change log"
 				},
 				"welcome": {
-					"description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welcom[i]EeEeE!...[/i][/rainbow] Thank you for visiting my personal corner of the internet, but right now the site is in a state of endless development. Don't be surprised to see: unfinished sections, errors in certain features, inconsistencies, genetic mutations, anomalies, etc. If this isn't your first time here, remember to clear your [url=https://www.refreshyourcache.com/en/cache/]browser's cache[/url] to see the latest version of the site..",
+					"description": "[dataset=sound-click:hi]:wave:[/dataset] [rainbow]Welcom[i]EeEeE!...[/i][/rainbow] Thank you for visiting my personal corner of the internet, but right now the site is in a state of endless development. Don't be surprised to see: unfinished sections, errors in certain features, inconsistencies, genetic mutations, anomalies, etc. If this isn't your first time here, remember to clear your [url=https://www.refreshyourcache.com/en/cache/]browser's cache[/url] to see the latest version of the site.",
 					"title": "Welcome!"
 				}
 			}
@@ -81,13 +81,13 @@
 			"windows": {
 				"button-wall": {
 					"content": {
-						"likes": "Cool Sites!",
-						"myButton": "... Me.",
+						"likes": "Cool Sites",
+						"myButton": "... Me",
 						"neighbors": "Nekoweb Followers",
 						"notes": {
 							"chantu": "The first person I met when I switched from GitHub Pages to Nekoweb, so friendly!",
 							"dimden": "It's dimden, the creator of nekoweb, duh.",
-							"jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native Nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
+							"jbc": "Nekobox genuinely helped me a lot to get at least a decent sitebox. It's weird that isn't a native nekoweb feature. I already struggle with the CSS on my own website and these people expect me to build one blindly???",
 							"loyaltyfreakmusic": "If it wasn't for this page, I wouldn't have found copyright-free music for my site.",
 							"nyani58": "WHERE THE HELL AM I???",
 							"slowslushie": "A banner stretching across both the sidebar and the main content area, a sidebar on the left with buttons to switch pages... main content on the right... My website is completely original and definitely not copied from anyone!"
@@ -116,7 +116,7 @@
 					"description": "My personal website hosted on Nekoweb. It will be my little corner of the internet where I'll store all kinds of projects I've made or am currently developing. What you're looking at right now is one of the biggest public projects I have!",
 					"gallery": {
 						"1-0-0": "A screenshot of the latest version, v1.X, before the massive refactoring in mithril.js. I always tried to go for a transparent design, but I could never get the balance right so that it would be transparent while still making the text legible. It’s the worst design the entire site has ever had. A refactoring was necessary.",
-						"2-0-0": "The first version of the major refactoring, v2.X. The page has been completely overhauled as planned. It is no longer designed using separate HTML files for each section; everything is now contained in a single HTML file and a JS script. The script features a large number of routes and several virtual nodes, allowing the entire website to function as a Single-Page Application (SPA). That’s why you can now navigate between pages without having to reload the entire page from scratch!",
+						"2-0-0": "The first version of the major refactoring, v2.X. The page has been completely overhauled as planned. It is no longer designed using separate HTML files for each section; everything is now contained in a single HTML file and a JS script. The script features a large number of routes and several virtual nodes, allowing the entire website to function as a Single-Page Application SPA. That’s why you can now navigate between pages without having to reload the entire page from scratch!",
 						"2-1-0": "A small but decent QoL (Quality of Life) update for the website, an improved visual style, and a few minor fixes and missing elements carried over from the previous version compared to v1.X"
 					},
 					"title": "Project - Dumpster"
@@ -231,7 +231,7 @@
 					"list": {
 						"infra": "Infra",
 						"languages": "Languages",
-						"software": "Softwares"
+						"software": "Software"
 					},
 					"title": "Tech Stack"
 				}
@@ -286,7 +286,7 @@
 	},
 	"tooltip": {
 		"contact": {
-			"correo": "Click to reveal my email (it's to avoid spam bots)"
+			"correo": "Click to reveal my email (it's to avoid spambots)"
 		},
 		"pages": {
 			"links": {
