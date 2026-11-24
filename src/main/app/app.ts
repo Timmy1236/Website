@@ -1,11 +1,8 @@
 import m from "mithril";
 
 import { cLog } from "./shared/utils/clog.ts";
-import { loadTranslations } from "./shared/services/i18n-translate.ts";
 import { onVisit } from "./shared/handlers/achievements-trigger.ts";
 import { initSettings } from "./shared/services/settings.ts";
-import { initAutoplay } from "./shared/services/background-music.ts";
-import { initSoundsEffects } from "./shared/services/sound-effects.ts";
 import { initTooltip } from "./shared/handlers/tooltip.ts";
 import { initToast } from "./shared/components/toast.ts";
 import { initShorcuts } from "./shared/handlers/shortcuts.ts";
@@ -28,12 +25,9 @@ async function startApp() {
     await initSettings();
 
     // NOTE: Esto se podría mejorar en algún futuro, en vez de cargar todos los scripts y después verificar si son activados por el usuario, verificar primero si son necesarios y después cargarlos.
-    cLog("INFO", "App", "Paso 2/3: Inicializando las demás funciones: i18n, autoplay, tooltip, etc...");
+    cLog("INFO", "App", "Paso 2/3: Inicializando las funciones restantes: toast, tooltip, atajos, etc...");
     await Promise.all([
-      loadTranslations(),
       initToast(),
-      initSoundsEffects(),
-      initAutoplay(),
       initTooltip(),
       initShorcuts()
     ]);

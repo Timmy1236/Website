@@ -1,6 +1,17 @@
-import { initializeWebGLBackground } from "../components/background-shader";
+import { initializeWebGLBackground, type WebGLBackground } from "../components/background-shader";
 import { cLog } from "../utils/clog";
+import { disableAutoplay, enableAutoplay } from "./background-music";
+import { loadTranslations } from "./i18n-translate";
+import { disableSoundEffects, enableSoundEffects } from "./sound-effects";
+
+// NOTE: Esto subelo cuando haces un cambio super importante y necesitas que los usuarios antiguos de la pagina se vean forzado reiniciar los settings, creo que no es lo mejor que se me ocurrió???? Pero estoy cansado para esto.
 const SETTINGS_VERSION = "3";
+
+// NOTE: Las ID de los div's. Los que tienen 'CSS' significa que la ID es importante porque un style es dado por su ID.
+const STATIC_EFFECT_ID = "static-effect-div"; // CSS
+const VIGNETTE_EFFECT_ID = "vignette-effect-div"; // CSS
+const CSS_BACKGROUND_ID = "background-theme";
+const WEBGL_BACKGROUND_ID = "background-canvas";
 
 export interface Settings {
   staticEffect: boolean
@@ -8,7 +19,6 @@ export interface Settings {
   backgroundMusic: boolean
   musicVolume: number
   soundsEffects: boolean
-  readableFont: boolean
   theme: string
   language: string
   background: string
@@ -21,7 +31,6 @@ export const DEFAULT_SETTINGS: Settings = {
   backgroundMusic: false,
   musicVolume: 25,
   soundsEffects: false,
-  readableFont: false,
   theme: "simple-purple",
   language: "en",
   background: "webgl",
@@ -29,105 +38,136 @@ export const DEFAULT_SETTINGS: Settings = {
 };
 
 let currentSettings: Settings = { ...DEFAULT_SETTINGS };
+let activeBackground: "css" | "webgl" | "none" | null = null;
+let webGLBackground: WebGLBackground | null = null;
 
-function _loadStaticEffect() {
-  if (currentSettings.staticEffect) {
-    const bgDiv = document.createElement("div");
-    bgDiv.className = "static";
-    document.body.prepend(bgDiv);
-  }
+export function loadSettings(): void {
+  currentSettings = _loadSettingsStorage();
+  cLog("DEBUG", "Settings", JSON.stringify(currentSettings));
+  _applySettings();
 }
 
-function _loadTheme() {
-  const [theme, color] = currentSettings.theme.split("-");
+/** Applies each setting by creating or removing its effect and updating its service. */
+function _applySettings(): void {
+  _applyTheme(currentSettings.theme);
+  _createElement(STATIC_EFFECT_ID, currentSettings.staticEffect);
+  _createElement(VIGNETTE_EFFECT_ID, currentSettings.vignetteEffect);
+  _applyBackground(currentSettings.background);
+
+  if (currentSettings.backgroundMusic) enableAutoplay();
+  else disableAutoplay();
+
+  if (currentSettings.soundsEffects) enableSoundEffects();
+  else disableSoundEffects();
+
+  loadTranslations(currentSettings.language);
+}
+
+/** Modifica los atributos del documento y el style del CSS aplica los colores. También actualiza los colores del webGL. */
+function _applyTheme(themeValue: string): void {
+  const [theme, color] = themeValue.split("-");
   document.documentElement.setAttribute("data-theme", theme);
   document.documentElement.setAttribute("data-color", color);
+
+  webGLBackground?.updateThemeColors();
 }
 
-function _loadBackground() {
-  const setting = currentSettings.background;
-  const div = document.createElement("div");
-  const canvas = document.createElement("canvas");
-
-  switch (setting) {
-    case "css":
-      div.className = "theme-bg";
-      document.body.appendChild(div);
-      break;
-    case "webgl":
-      canvas.id = "background-canvas";
-      document.body.appendChild(canvas);
-      initializeWebGLBackground();
-      break;
-    case "none":
-    default:
-      break;
+/** Crea un elemento en el documento, si enabled es falso, en vez de crearlo buscara si existe y lo removerá */
+function _createElement(id: string, enabled: boolean): void {
+  const existingElement = document.getElementById(id);
+  if (!enabled) {
+    existingElement?.remove();
+    return;
   }
+
+  if (existingElement) return;
+
+  const element = document.createElement("div");
+  element.id = id;
+  document.body.appendChild(element);
 }
 
-/**
- * Lee el objeto de settings guardado en LocalStorage y lo devuelve. En caso que este faltando
- * un ajuste, se le agregara la default para llenar.
- */
-function _loadFromStorage(): Settings {
+function _applyBackground(setting: string): void {
+  const background = setting === "css" || setting === "webgl" ? setting : "none";
+  if (activeBackground === background) return;
+
+  _removeBackground();
+  if (background === "css") {
+    const element = document.createElement("div");
+    element.id = CSS_BACKGROUND_ID;
+    document.body.appendChild(element);
+  }
+  else if (background === "webgl") {
+    const canvas = document.createElement("canvas");
+    canvas.id = WEBGL_BACKGROUND_ID;
+    document.body.appendChild(canvas);
+
+    try {
+      webGLBackground = initializeWebGLBackground(canvas);
+    }
+    catch (error) {
+      canvas.remove();
+      throw error;
+    }
+  }
+
+  activeBackground = background;
+}
+
+function _removeBackground(): void {
+  webGLBackground?.destroy();
+  webGLBackground = null;
+  document.getElementById(CSS_BACKGROUND_ID)?.remove();
+  document.getElementById(WEBGL_BACKGROUND_ID)?.remove();
+  activeBackground = null;
+}
+
+/** Carga los settings guardado y en caso que algo falte, lo llenara con los del default. */
+function _loadSettingsStorage(): Settings {
   const raw = localStorage.getItem("settings");
   if (!raw) return { ...DEFAULT_SETTINGS };
 
-  return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
+  try {
+    const parsed = JSON.parse(raw) as Partial<Settings>;
+    return { ...DEFAULT_SETTINGS, ...parsed };
+  }
+  catch (error) {
+    cLog("ERROR", "Settings", "No se pudieron leer los settings guardados, se usarán los valores por defecto.", error);
+    return { ...DEFAULT_SETTINGS };
+  }
 }
 
-/**
- * Checkeamos si el usuario tiene la misma version local comparado con {@link SETTINGS_VERSION}. En caso que no, se forzara un {@link initDefaultSettings}
- */
 function _checkVersion(): boolean {
   const savedVersion = localStorage.getItem("settingsVersion");
+  const isSameVersion = savedVersion === SETTINGS_VERSION;
 
-  cLog("DEBUG", "Settings Logic", `Versiones: Local: v${savedVersion} | Web: ${SETTINGS_VERSION}`);
-
-  if (savedVersion === SETTINGS_VERSION) {
-    cLog("DEBUG", "Settings Logic", "Las versiones son las mismas, deberían de ser compatibles y no haber errores.");
-    return true;
-  }
-  else {
-    cLog("ADVERTENCIA", "Settings Logic", "Las versiones no coinciden, es necesario reiniciar para estar actualizado y evitar errores.");
-    initDefaultSettings();
-    return false;
-  }
+  cLog("DEBUG", "Settings", `Comparación de versión de settings. Local: v${savedVersion} | Deploy: v${SETTINGS_VERSION}`);
+  return isSameVersion;
 }
 
-/**
- * Inicializa los settings. Antes de aplicarlos, se hace un checkeo de versiones.
- * @see {@link _checkVersion}
- */
 export function initSettings(): void {
-  if (!_checkVersion()) _resetSettings();
+  if (!_checkVersion()) _writeDefaultSettings();
+
   loadSettings();
 }
 
-async function loadSettings(): Promise<void> {
-  currentSettings = _loadFromStorage();
+export function resetSettings(): void {
+  _writeDefaultSettings();
+  currentSettings = { ...DEFAULT_SETTINGS };
 
-  cLog("DEBUG", "Settings Logic", JSON.stringify(currentSettings));
-
-  _loadTheme();
-  _loadBackground();
-  _loadStaticEffect();
-  if (currentSettings.readableFont) document.documentElement.classList.add("readable-font");
+  _applySettings();
 }
 
-export function initDefaultSettings() {
-  _resetSettings();
-  window.location.reload();
-}
-
-function _resetSettings() {
+function _writeDefaultSettings(): void {
   localStorage.setItem("settings", JSON.stringify(DEFAULT_SETTINGS));
   localStorage.setItem("settingsVersion", SETTINGS_VERSION);
 }
 
-export function saveSettings(newSettings: Settings) {
+export function saveSettings(newSettings: Settings): void {
   currentSettings = { ...newSettings };
   localStorage.setItem("settings", JSON.stringify(currentSettings));
+
+  _applySettings();
 }
 
 export function getSettings(): Settings {

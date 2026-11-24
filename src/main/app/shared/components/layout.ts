@@ -9,9 +9,8 @@ export default {
   onupdate: applyPanelStagger,
 
   view(vnode: m.Vnode) {
-    const { vignetteEffect, sidebarPosition } = getSettings();
+    const { sidebarPosition } = getSettings();
     return m("div.layout", [
-      vignetteEffect ? m("div.vignette", { id: "vignette" }) : null,
       m(".container", [
         m(banner),
         m(".layout-content", { class: sidebarPosition }, [

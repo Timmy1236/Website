@@ -4,7 +4,7 @@
   Link: https://codepen.io/iceable/pen/yLBrZOd
 */
 
-.static {
+#static-effect-div {
   position: fixed;
   inset: -50%;
   width: 200%;

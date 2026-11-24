@@ -7,7 +7,7 @@
   z-index: -2;
 }
 
-.theme-bg {
+#background-theme {
   position: fixed;
   inset: calc(var(--bg-offset-y) * -1) calc(var(--bg-offset-x) * -1);
   background-color: var(--bg-color);

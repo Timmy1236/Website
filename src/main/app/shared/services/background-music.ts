@@ -2,7 +2,8 @@ import { showToast } from "../components/toast";
 import { getSettings } from "./settings";
 import { cLog } from "../utils/clog";
 
-let playing = false;
+let enabled = false;
+let manuallyPaused = false;
 let lastSong: string;
 
 const audio = new Audio();
@@ -10,41 +11,56 @@ const songsArray: string[] = [
   "./assets/sounds/music/Lack_of_Color-That_tenderness.ogg"
 ];
 
-/**
- * Inicializa los listeners globales para el Autoplay.
- * Escucha la primera interacción del usuario para arrancar la música si está activada.
- */
-export function initAutoplay() {
-  if (!getSettings().backgroundMusic) return;
+/** Conecta todos los events listener de audio, pero no reproduce nada, el usuario debe de clickear. */
+// NOTE: Esto es importante ya los navegadores no permite la reproducían automática de audios al entrar un sitio web sin interactuar primero.
+export function enableAutoplay() {
+  if (enabled) return;
+  enabled = true;
+  manuallyPaused = false;
 
-  audio.addEventListener("ended", () => {
-    _playSong();
-  });
+  document.body.addEventListener("click", _startPlayback, { once: true });
 
   window.addEventListener("blur", _handleAudioFocus);
   window.addEventListener("focus", _handleAudioFocus);
 
-  document.body.addEventListener("click", () => {
-    if (!playing) {
-      cLog("INFO", "AutoPlay", "Click detectado, comenzando reproducción de música.");
-      playing = true;
-      _playSong();
-    }
-  }, { once: true });
+  audio.addEventListener("ended", _onSongEnded);
 }
 
-/**
- * Selecciona y reproduce una canción aleatoria.
- */
+/** Elimina todos los events listener de audio y detiene la música que se reproduce actualmente. */
+export function disableAutoplay() {
+  if (!enabled) return;
+  enabled = false;
+
+  document.body.removeEventListener("click", _startPlayback);
+
+  window.removeEventListener("blur", _handleAudioFocus);
+  window.removeEventListener("focus", _handleAudioFocus);
+
+  audio.removeEventListener("ended", _onSongEnded);
+  audio.pause();
+  audio.removeAttribute("src");
+  audio.load();
+}
+
+function _startPlayback() {
+  if (!enabled || manuallyPaused) return;
+  cLog("INFO", "AutoPlay", "Click detectado, comenzando reproducción de música.");
+
+  if (audio.src) _resumePlayback();
+  else _playSong();
+}
+
+function _onSongEnded() {
+  if (enabled && !manuallyPaused) _playSong();
+}
+
+/** Selecciona una música random del array y lo reproduce */
 function _playSong(): void {
-  const { musicVolume } = getSettings();
-  const songSrc: string = songsArray[Math.floor(Math.random() * songsArray.length)];
+  const songSrc = songsArray[Math.floor(Math.random() * songsArray.length)];
   if (!songSrc) return;
 
   audio.src = songSrc;
-  audio.volume = (musicVolume / 100);
-
-  audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
+  _resumePlayback();
 
   if (lastSong !== songSrc) {
     let songName = songSrc.split("/").pop()?.slice(0, -4).replace(/_/g, " ");
@@ -55,33 +71,29 @@ function _playSong(): void {
   lastSong = songSrc;
 }
 
-/**
- * Mutea el audio si se esta reproduciendo, o continua el audio si esta pausado.
- */
-export function handleAudioPause() {
-  if (!getSettings().backgroundMusic) return;
-  if (!audio.src) return cLog("ADVERTENCIA", "AutoPlay", "Dude, estas intentando mutearlo cuando ni una canción empezó???"); ;
+function _resumePlayback() {
+  audio.volume = getSettings().musicVolume / 100;
+  audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
+}
 
-  if (!playing) {
-    audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
-    playing = true;
+/** Pausa o continua la música. */
+export function handleAudioPause() {
+  if (!enabled) return;
+  if (!audio.src) return cLog("ADVERTENCIA", "AutoPlay", "Dude, estas intentando mutearlo cuando ni una canción empezó???");
+
+  if (audio.paused) {
+    manuallyPaused = false;
+    _resumePlayback();
   }
   else {
     audio.pause();
-    playing = false;
+    manuallyPaused = true;
   }
 }
 
-/**
- * Checkea si el audio no esta muteado. En caso que no, pausara o continuara si el usuario sale o vuelve a la pagina.
- */
+/** Si el usuario ignora la pagina, se detendrá la música, continuara si el usuario vuelve. */
 function _handleAudioFocus() {
-  if (playing) {
-    if (document.hasFocus()) {
-      audio.play().catch(err => cLog("ADVERTENCIA", "AutoPlay", `Error al intentar reproducir: ${err}`));
-    }
-    else {
-      audio.pause();
-    }
-  }
+  if (!enabled || !audio.src || manuallyPaused) return;
+  if (document.hasFocus()) _resumePlayback();
+  else audio.pause();
 }

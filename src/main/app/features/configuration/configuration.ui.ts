@@ -1,4 +1,4 @@
-import { initDefaultSettings, saveSettings, getSettings, DEFAULT_SETTINGS } from "../../shared/services/settings.ts";
+import { resetSettings, saveSettings, getSettings, DEFAULT_SETTINGS } from "../../shared/services/settings.ts";
 import type { Settings } from "../../shared/services/settings.ts";
 import { getTranslation } from "../../shared/services/i18n-translate.ts";
 
@@ -10,11 +10,10 @@ export function refreshDraftFromStorage() {
 
 export function confirmSettings() {
   saveSettings(draft);
-  location.reload();
 }
 
 export function restartSettings() {
   if (confirm(getTranslation("toast.pages.configuration.reset")) == true) {
-    initDefaultSettings();
+    resetSettings();
   }
 }

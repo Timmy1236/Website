@@ -98,17 +98,6 @@ const ConfigurationPage = {
               ]),
 
               m(".settings-group", [
-                m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.text.title")),
-                m(".option", [
-                  m("input", {
-                    type: "checkbox", id: "readable-font", checked: draft.readableFont,
-                    onchange: (e: Event) => { draft.readableFont = (e.target as HTMLInputElement).checked; }
-                  }),
-                  m("label", { for: "readable-font" }, getTranslation("main.settings.sub-windows.visual.content.text.options.readableFont"))
-                ])
-              ]),
-
-              m(".settings-group", [
                 m("h2.group-title", getTranslation("main.settings.sub-windows.visual.content.themes.title")),
 
                 m(".option-list", themes

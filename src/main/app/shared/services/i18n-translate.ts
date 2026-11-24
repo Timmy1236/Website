@@ -1,45 +1,46 @@
+import m from "mithril";
+import en from "../../../../../public/assets/translation/en.json";
+import es from "../../../../../public/assets/translation/es.json";
 import { cLog } from "../utils/clog";
-import { getSettings } from "./settings";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const translations: Record<string, any> = {};
-let loaded = false;
 
-export async function loadTranslations(): Promise<void> {
-  const { language } = getSettings();
+const translations = { en, es };
+type Language = keyof typeof translations;
 
-  try {
-    const response = await fetch(`/assets/translation/${language}.json`);
-    const json = await response.json();
+let currentLanguage: Language = "en";
 
-    translations[language] = json;
-    loaded = true;
+/** Cambia el 'currentLanguage' y fuerza a Mithril hacer un redraw.  */
+export function loadTranslations(language: string): void {
+  // NOTE: Esto no debería de pasar nunca, peeeero por las dudas que se me pase y me olvido.
+  if (language === "en" || language === "es") {
+    currentLanguage = language as Language;
   }
-  catch (error) {
-    cLog("ERROR", "i18n", "Error al cargar las traducciones", error);
+  else {
+    cLog("ADVERTENCIA", "i18n", `Idioma no soportado: ${language}. Se usará 'en' por default.`);
+    currentLanguage = "en";
   }
+
+  m.redraw();
 }
 
 export function getTranslation(key: string): string {
-  if (!loaded) return "⚠️ i18n error";
-
-  const { language } = getSettings();
-  let translation = translations[language];
-
-  if (key.includes(".")) {
-    for (const k of key.split(".")) {
-      translation = translation?.[k];
-    }
-  }
-  else {
+  // NOTE: Esto a lo mejor no es buena idea hacerlo honestamente, es como un hack super estúpido para pasar texto que no necesita traducción, no tengo ganas de arreglar esto
+  // TODO: No dejar esto. Arreglarlo mas tarde.
+  if (!key.includes(".")) {
     cLog("ADVERTENCIA", "i18n", "El key dado para traducir no corresponde el formato normal: X.X, se volverá la key intacta.");
     return key;
   }
 
-  if (translation) {
-    return translation;
+  let translation: unknown = translations[currentLanguage];
+  for (const part of key.split(".")) {
+    if (typeof translation !== "object" || translation === null) {
+      translation = undefined;
+      break;
+    }
+    translation = (translation as Record<string, unknown>)[part];
   }
-  else {
-    cLog("ERROR", "i18n", `Key: ${key} no encontrada.`);
-    return "⚠️ Key no encontrada";
-  }
+
+  if (typeof translation === "string") return translation;
+
+  cLog("ERROR", "i18n", `Key: ${key} no encontrada.`);
+  return "⚠️ Key no encontrada";
 }
