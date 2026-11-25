@@ -118,14 +118,14 @@ const Contact = {
           content: [
             m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.description")))),
             m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.email")))),
-            m("a.link#email1", {
+            m("a#email1", {
               onclick: function () { reveal("proton"); }, "data-tooltip-i18n": "tooltip.contact.correo"
             }, "#t##p##m#"),
-            m("a.link#email2", {
+            m("a#email2", {
               onclick: function () { reveal("outlook"); }, "data-tooltip-i18n": "tooltip.contact.correo"
             }, "#t##o##c#"),
             m("p", m.trust(parseBBCode(getTranslation("main.contact.windows.socials.content.discord")))),
-            m("a.link", { href: "https://discordapp.com/users/375889010419171328" }, "@timmy1236")
+            m("a", { href: "https://discordapp.com/users/375889010419171328" }, "@timmy1236")
           ]
         })
       ])

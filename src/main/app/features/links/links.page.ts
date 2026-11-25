@@ -72,41 +72,41 @@ const Others = {
           m(".tree-section", [
             m("h2.heading.tree-header", getTranslation("main.links.windows.credits.content.host")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://nekoweb.org/" }, "NekoWeb")),
-              m(".tree-item", m("a.link", { href: "https://filegarden.com/" }, "File Garden"))
+              m(".tree-item", m("a", { href: "https://nekoweb.org/" }, "NekoWeb")),
+              m(".tree-item", m("a", { href: "https://filegarden.com/" }, "File Garden"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", getTranslation("main.links.windows.credits.content.dependencies")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://mithril.js.org/" }, "Mithril.js")),
-              m(".tree-item", m("a.link", { href: "https://www.11ty.dev/" }, "Eleventy")),
-              m(".tree-item", m("a.link", { href: "https://esbuild.github.io/" }, "ESBuild"))
+              m(".tree-item", m("a", { href: "https://mithril.js.org/" }, "Mithril.js")),
+              m(".tree-item", m("a", { href: "https://www.11ty.dev/" }, "Eleventy")),
+              m(".tree-item", m("a", { href: "https://esbuild.github.io/" }, "ESBuild"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", getTranslation("main.links.windows.credits.content.websites")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://ditherit.com/" }, "Dither it!")),
-              m(".tree-item", m("a.link", { href: "https://compress-or-die.com/" }, "Compress or Die")),
-              m(".tree-item", m("a.link", { href: "https://ezgif.com/" }, "Ezgif")),
-              m(".tree-item", m("a.link", { href: "https://jsoncrack.com/" }, "JSON Interactive editor"))
+              m(".tree-item", m("a", { href: "https://ditherit.com/" }, "Dither it!")),
+              m(".tree-item", m("a", { href: "https://compress-or-die.com/" }, "Compress or Die")),
+              m(".tree-item", m("a", { href: "https://ezgif.com/" }, "Ezgif")),
+              m(".tree-item", m("a", { href: "https://jsoncrack.com/" }, "JSON Interactive editor"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", getTranslation("main.links.windows.credits.content.audio")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw" }, "Lack of Color - That tenderness")),
-              m(".tree-item", m("a.link", { href: "https://github.com/sourcesounds/hl2" }, "Source Engine"))
+              m(".tree-item", m("a", { href: "https://chezmonplaisir.bandcamp.com/album/lofi-ftw" }, "Lack of Color - That tenderness")),
+              m(".tree-item", m("a", { href: "https://github.com/sourcesounds/hl2" }, "Source Engine"))
             ])
           ]),
           m(".tree-section", [
             m("h2.heading.tree-header", getTranslation("main.links.windows.credits.content.images")),
             m(".tree-list", [
-              m(".tree-item", m("a.link", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void")),
-              m(".tree-item", m("a.link", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death")),
-              m(".tree-item", m("a.link", { href: "https://www.steamgriddb.com/" }, "Games cover")),
-              m(".tree-item", m("a.link", { href: "https://www.imdb.com/" }, "Series or Movies covers"))
+              m(".tree-item", m("a", { href: "https://www.reddit.com/r/LiminalSpace/comments/19ek506/voices_of_the_void/" }, "Voices of the Void")),
+              m(".tree-item", m("a", { href: "https://die-of-death.fandom.com/wiki/Die_of_Death_Wiki" }, "Die of Death")),
+              m(".tree-item", m("a", { href: "https://www.steamgriddb.com/" }, "Games cover")),
+              m(".tree-item", m("a", { href: "https://www.imdb.com/" }, "Series or Movies covers"))
             ])
           ])
         ]

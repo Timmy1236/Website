@@ -35,7 +35,7 @@ const BBCODE_RULES: { pattern: RegExp, replace: string | ReplaceFn }[] = [
   },
   {
     pattern: /\[url=([^\]]+)\](.*?)\[\/url\]/gis,
-    replace: (_match: string, href: string, content: string) => `<a class='bb-link link' href='${href}' target='_blank' rel='noopener noreferrer'>${content}</a>`
+    replace: (_match: string, href: string, content: string) => `<a href='${href}' rel='noopener noreferrer'>${content}</a>`
   },
   {
     pattern: /\[rainbow\](.*?)\[\/rainbow\]/gis,
