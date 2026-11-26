@@ -53,14 +53,14 @@ const Others = {
 
           m("h2", getTranslation("main.links.windows.button-wall.content.myButton")),
           m(".website-buttons",
-            m("a", { href: "/assets/images/pages/links/buttons/timmy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
-              m("img", { src: "/assets/images/pages/links/buttons/timmy.png", alt: "" })
+            m("a", { href: "/main/assets/images/pages/links/buttons/timmy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/main/assets/images/pages/links/buttons/timmy.png", alt: "" })
             ),
-            m("a", { href: "/assets/images/pages/links/buttons/timmy_old.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
-              m("img", { src: "/assets/images/pages/links/buttons/timmy_old.png", alt: "" })
+            m("a", { href: "/main/assets/images/pages/links/buttons/timmy_old.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/main/assets/images/pages/links/buttons/timmy_old.png", alt: "" })
             ),
-            m("a", { href: "/assets/images/pages/links/buttons/timy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
-              m("img", { src: "/assets/images/pages/links/buttons/timy.png", alt: "" })
+            m("a", { href: "/main/assets/images/pages/links/buttons/timy.png", "data-tooltip-i18n": "tooltip.pages.links.timmy" },
+              m("img", { src: "/main/assets/images/pages/links/buttons/timy.png", alt: "" })
             )
           )
         ]

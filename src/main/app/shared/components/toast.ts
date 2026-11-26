@@ -3,7 +3,7 @@ import { getSettings } from "../services/settings";
 import { cLog } from "../utils/clog";
 
 type ToastType = "info" | "achievement" | "error" | "affirmative";
-const achievementAudio = new Audio("/assets/sounds/sfx/achievement.mp3");
+const achievementAudio = new Audio("/main/assets/sounds/sfx/achievement.mp3");
 
 export interface ToastOptions {
   type: ToastType

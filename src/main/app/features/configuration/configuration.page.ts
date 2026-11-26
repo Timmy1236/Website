@@ -8,22 +8,22 @@ import { setCurrentPath } from "../../shared/services/dynamic-meta.ts";
 const themes = [
   {
     value: "simple-purple",
-    image: "/assets/images/pages/configuration/purple.webp",
+    image: "/main/assets/images/pages/configuration/purple.webp",
     label: "main.settings.sub-windows.visual.content.themes.options.purple"
   },
   {
     value: "simple-green",
-    image: "/assets/images/pages/configuration/green.webp",
+    image: "/main/assets/images/pages/configuration/green.webp",
     label: "main.settings.sub-windows.visual.content.themes.options.green"
   },
   {
     value: "simple-dark",
-    image: "/assets/images/pages/configuration/dark.webp",
+    image: "/main/assets/images/pages/configuration/dark.webp",
     label: "main.settings.sub-windows.visual.content.themes.options.dark"
   },
   {
     value: "omori-darkspace",
-    image: "/assets/images/pages/configuration/omori.webp",
+    image: "/main/assets/images/pages/configuration/omori.webp",
     label: "main.settings.sub-windows.visual.content.themes.options.darkspace",
     unlocked: () => isUnlocked("oyasumi")
   }
@@ -32,17 +32,17 @@ const themes = [
 const background = [
   {
     value: "none",
-    image: "/assets/images/pages/configuration/empty.png",
+    image: "/main/assets/images/pages/configuration/empty.png",
     label: "main.settings.sub-windows.visual.content.background.options.empty"
   },
   {
     value: "css",
-    image: "/assets/images/pages/configuration/checkboard.png",
+    image: "/main/assets/images/pages/configuration/checkboard.png",
     label: "main.settings.sub-windows.visual.content.background.options.checkboard"
   },
   {
     value: "webgl",
-    image: "/assets/images/pages/configuration/liquify.png",
+    image: "/main/assets/images/pages/configuration/liquify.png",
     label: "main.settings.sub-windows.visual.content.background.options.liquify"
   }
 ];
@@ -50,12 +50,12 @@ const background = [
 const sidebar = [
   {
     value: "left",
-    image: "/assets/images/pages/configuration/purple.webp",
+    image: "/main/assets/images/pages/configuration/purple.webp",
     label: "main.settings.sub-windows.visual.content.sidebar.options.left"
   },
   {
     value: "right",
-    image: "/assets/images/pages/configuration/right.png",
+    image: "/main/assets/images/pages/configuration/right.png",
     label: "main.settings.sub-windows.visual.content.sidebar.options.right"
   }
 ];

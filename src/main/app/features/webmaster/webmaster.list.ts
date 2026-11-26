@@ -1,11 +1,11 @@
-const _imgIcon = (x: string) => `/assets/images/pages/webmaster/icons/${x}.svg`;
+const _imgIcon = (x: string) => `/main/assets/images/pages/webmaster/icons/${x}.svg`;
 
 function _createCover(name: string, category: string, preview: boolean) {
   if (!preview) {
-    return `/assets/images/pages/webmaster/covers/${category}/${name}.webp`;
+    return `/main/assets/images/pages/webmaster/covers/${category}/${name}.webp`;
   }
   else {
-    return `/assets/images/pages/webmaster/covers/${category}/preview_${name}.webp`;
+    return `/main/assets/images/pages/webmaster/covers/${category}/preview_${name}.webp`;
   }
 }
 

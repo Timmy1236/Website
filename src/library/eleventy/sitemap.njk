@@ -1,5 +1,5 @@
 ---
-permalink: ../sitemap.xml
+permalink: ../../sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@ eleventyExcludeFromCollections: true
 
   {% for post in collections.blog_es %}
   <url>
-    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <loc>https://timmy.nekoweb.org/library{{ post.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>{{ post.data.date | XMLDate }}</lastmod>
@@ -46,7 +46,7 @@ eleventyExcludeFromCollections: true
 
   {% for post in collections.blog_en %}
   <url>
-    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <loc>https://timmy.nekoweb.org/library{{ post.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>{{ post.data.date | XMLDate }}</lastmod>
@@ -55,7 +55,7 @@ eleventyExcludeFromCollections: true
 
   {% for post in collections.changelog_es %}
   <url>
-    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <loc>https://timmy.nekoweb.org/library{{ post.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>{{ post.data.date | XMLDate }}</lastmod>
@@ -64,7 +64,7 @@ eleventyExcludeFromCollections: true
 
   {% for post in collections.changelog_en %}
   <url>
-    <loc>https://timmy.nekoweb.org/content{{ post.url }}</loc>
+    <loc>https://timmy.nekoweb.org/library{{ post.url }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>{{ post.data.date | XMLDate }}</lastmod>

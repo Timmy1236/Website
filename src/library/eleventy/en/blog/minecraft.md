@@ -4,8 +4,8 @@ date: 2026-02-28
 locale: "en"
 description: "¿What do you mean the full source code of Minecraft legacy edition got leaked?"
 layout: layouts/post.html
-back: /content/en/blog/index.html
-preview: "/content/assets/images/blog/minecraft/preview.webp"
+back: /library/en/blog/index.html
+preview: "/library/assets/images/blog/minecraft/preview.webp"
 tags: ["blog", "long"]
 ---
 
@@ -35,42 +35,42 @@ Going back to what I was talking about, the Legacy source code leak, yes, that..
 
 1: Download the source code that was supposedly uploaded to [Gofile](https://gofile.io/d/RRf1hv) easy.
 
-![File details: minecraft.rar, size: 2.2 GB, downloads: 5,065, etc...](/content/assets/images/blog/minecraft/1.webp)
+![File details: minecraft.rar, size: 2.2 GB, downloads: 5,065, etc...](/library/assets/images/blog/minecraft/1.webp)
 
 2 (Problem 1): Once downloaded, I extracted the file with WinRAR which was locked with a password, I found it easily in the same thread and it was simply: "fuckanon". Looking at the contents, there was a **.sln** file, a file type commonly used in Visual Studio to organize and manage projects, that means I could open it perfectly with Visual Studio, right?... Ehhh.. No. There were too many error messages and I did not even have the option to compile or do anything since it required a specific version of Visual Studio from 2012, easy to fix, I guess.
 
 3 (Problem 2): When searching for the Visual Studio 2012 installer in older Microsoft versions, it turns out that version is no longer available to the public due to end of support, making it not 'legally' available, now I have to search for a third party installer, great.
 
-![List of downloads for different versions of Visual Studio; the older versions were restricted to subscribers.](/content/assets/images/blog/minecraft/2.webp)
+![List of downloads for different versions of Visual Studio; the older versions were restricted to subscribers.](/library/assets/images/blog/minecraft/2.webp)
 
 4 (Problem 3): I found several copies of the Visual Studio 2012 RC installer, but one was not cracked and the other one I managed to install would not open afterwards, great. Finally I found another one on [archive.org](https://archive.org/details/vs-2012-rc-ult-enu) that worked correctly. <br>
 
 
 5: After wasting an hour of my life looking for an IDE that is no longer supported, I finally managed to open the Legacy .sln project, and I found the surprise that there was a folder I had not seen and a target for a platform that had the same name, "**Windows64**", ... does that mean it can be compiled for Windows? Who knows, might as well try... "***warning MSB3785: No SDKs were found. SDKReference items will not be resolved. If your application requires these references there may be compilation errors.***", so I decided to ignore it and continue my adventure.
 
-![The Minecraft Legacy code viewed in Visual Studio 2012 shows “Windows64” in the list of builds.](/content/assets/images/blog/minecraft/3.webp)
+![The Minecraft Legacy code viewed in Visual Studio 2012 shows “Windows64” in the list of builds.](/library/assets/images/blog/minecraft/3.webp)
 
 6 (Problem 4): ... Did it work? Was it really just doing that?? Can I play Legacy again???? Instead of asking myself more questions, I decided to continue... Oh wow! I try clicking the button, I try pressing enter, but nothing happens. You need a controller to play it, who would have thought, I did not even consider it, you need a controller to play something from consoles, very smart of me. I had to take out a generic controller that I have not used in years because I stopped using them when I switched to PC. Anyway it does not receive my inputs because I guess it expects an Xbox360 one specifically, so that did not help either.
 
-![Minecraft legacy edition menu](/content/assets/images/blog/minecraft/4.webp)
+![Minecraft legacy edition menu](/library/assets/images/blog/minecraft/4.webp)
 
 7: Since my controller was sending generic signals that Legacy did not detect, I had to use the classic solution that is always used in these situations. **X360CE**, that software whose main page now has a medieval story generated with artificial intelligence, nice, I guess. I do not know what one thing has to do with the other. thanks.
 
-![X360CE ads generated with AI](/content/assets/images/blog/minecraft/5.webp)
+![X360CE ads generated with AI](/library/assets/images/blog/minecraft/5.webp)
 
 8 (Problem 5): Oh! No! Wait... it is not working, the classic is failing me. For some strange reason that I do not understand, x360ce is complaining that I do not have Visual C++ 2015-2019 installed, when it is something I should already have installed no matter what. No... actually, I DO HAVE IT INSTALLED, IT FUCKING SAYS IT RIGHT THERE, WHY ARE YOU FAILING!?
 
-![X360CE Error: Cannot find the C++ 2015-2019 redistributable, but the installer says I already have that redistributable](/content/assets/images/blog/minecraft/6.webp)
+![X360CE Error: Cannot find the C++ 2015-2019 redistributable, but the installer says I already have that redistributable](/library/assets/images/blog/minecraft/6.webp)
 
 9: Checking the x360ce GitHub, it turns out everyone is having the same problem, it has not received a proper update in a long time and it cannot even correctly check versions anymore, so I had to install a fixed version by [Glitchtest51](https://github.com/x360ce/x360ce/pull/1576), I guess the page no longer serves the purpose of giving you the software, but a medieval story made with AI.
 
-![GitHub PR, Update C++ Issue helper](/content/assets/images/blog/minecraft/7.webp)
+![GitHub PR, Update C++ Issue helper](/library/assets/images/blog/minecraft/7.webp)
 
 Step 10 (Problem 6): The fixed version now runs without problems since it no longer complains about something that is not broken, but it still is not working because it is also ignoring the fact that it does not even have a driver to understand controllers, so I had to install **[VigemBus](https://vigembusdriver.com/download/)**
 
 FINALLY, I CAN PLAY LEGACY, NOTHING IS FAILING, DOES IT WORK? If I am honest, I expected that after spending 2 and a half hours of my life solving problem after problem, I thought it would lead to nothing, but strangely it works so well that running natively without emulation, it is super stable and barely uses 300mb of RAM in game, there are only small issues like the interface being a bit broken and that saved games do not work unless you enable in debug: "Load/Write Saves From Local Folder Mode" and that is it, for a version designed exclusively for consoles, it did not bring too many problems to compile it on PC, possibly even most of the work was already done by 4J for testing, but since the idea was never to release it on PC, it never saw the light of day.
 
-![Minecraft legacy edition gameplay screenshot](/content/assets/images/blog/minecraft/8.webp)
+![Minecraft legacy edition gameplay screenshot](/library/assets/images/blog/minecraft/8.webp)
 
 # Conclusion
 

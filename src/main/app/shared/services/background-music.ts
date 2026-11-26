@@ -8,7 +8,7 @@ let lastSong: string;
 
 const audio = new Audio();
 const songsArray: string[] = [
-  "./assets/sounds/music/Lack_of_Color-That_tenderness.ogg"
+  "./main/assets/sounds/music/Lack_of_Color-That_tenderness.ogg"
 ];
 
 /** Conecta todos los events listener de audio, pero no reproduce nada, el usuario debe de clickear. */

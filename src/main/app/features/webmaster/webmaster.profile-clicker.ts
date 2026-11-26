@@ -1,5 +1,5 @@
 const plush = ["badware", "killdroid", "artful", "harken", "pursuer"];
-const _plushURL = (x: string) => `/assets/images/pages/webmaster/${x}.webp`;
+const _plushURL = (x: string) => `/main/assets/images/pages/webmaster/${x}.webp`;
 
 let counterClick = 0;
 let counterPlush = 0;

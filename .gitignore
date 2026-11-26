@@ -2,8 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node
 
 ### Custom ###
-public/content
-public/dist
+public/main/dist
+public/library
 public/sitemap.xml
 .vscode
 scripts/

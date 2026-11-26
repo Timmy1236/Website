@@ -4,9 +4,9 @@ date: 2026-09-17
 locale: "es"
 description: "Dude."
 layout: layouts/post.html
-preview: "/content/assets/images/blog/dod/preview.webp"
-back: /content/es/blog/index.html
+preview: "/library/assets/images/blog/dod/preview.webp"
+back: /library/es/blog/index.html
 tags: ["no-blog", "micro"]
 ---
 
-<video controls src="/content/assets/images/blog/dod/hitboxes.mp4"></video>
+<video controls src="/library/assets/images/blog/dod/hitboxes.mp4"></video>

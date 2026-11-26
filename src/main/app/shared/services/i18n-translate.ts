@@ -1,6 +1,6 @@
 import m from "mithril";
-import en from "../../../../../public/assets/translation/en.json";
-import es from "../../../../../public/assets/translation/es.json";
+import en from "../../../../../public/main/assets/translation/en.json";
+import es from "../../../../../public/main/assets/translation/es.json";
 import { cLog } from "../utils/clog";
 
 const translations = { en, es };

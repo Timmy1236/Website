@@ -1,7 +1,7 @@
 // @ts-expect-error Archivo .frag importado
-import fragmentSource from "../../../../../public/assets/shaders/background.frag";
+import fragmentSource from "../../../../../public/main/assets/shaders/background.frag";
 // @ts-expect-error Archivo .vert importado
-import vertexSource from "../../../../../public/assets/shaders/background.vert";
+import vertexSource from "../../../../../public/main/assets/shaders/background.vert";
 
 export interface WebGLBackground {
   updateThemeColors(): void

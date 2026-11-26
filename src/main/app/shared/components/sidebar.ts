@@ -11,7 +11,7 @@ function navBtn(label: string, external: boolean, path: string, img: string | nu
 
   return m("button.button.button-sidebar", attrs, [
     m("img", {
-      src: img ? `/assets/images/icons/utils/${img}.png` : "/assets/images/icons/utils/no-icon.png",
+      src: img ? `/main/assets/images/icons/utils/${img}.png` : "/main/assets/images/icons/utils/no-icon.png",
       alt: "",
       width: "16px", height: "16px"
     }),
@@ -45,8 +45,8 @@ function _libraryButtons() {
   const { language } = getSettings();
 
   return [
-    navBtn("sidebar.library.buttons.blog", true, `/content/${language}/blog/index.html`, "doc-text"),
-    navBtn("sidebar.library.buttons.changelog", true, `/content/${language}/changelog/index.html`, "doc-changelog")
+    navBtn("sidebar.library.buttons.blog", true, `/library/${language}/blog/index.html`, "doc-text"),
+    navBtn("sidebar.library.buttons.changelog", true, `/library/${language}/changelog/index.html`, "doc-changelog")
   ];
 }
 

@@ -21,7 +21,7 @@ const webmasterPage = {
           content: m(".profile-panel-content", [
             m(".profile-header", [
               m(".profile-avatar",
-                m("img#pfp", { onclick: () => click(), "data-sound-click": "squeak", src: "/assets/images/pages/webmaster/badware.webp", alt: "A 'Die of Death' badware plush toy" })
+                m("img#pfp", { onclick: () => click(), "data-sound-click": "squeak", src: "/main/assets/images/pages/webmaster/badware.webp", alt: "A 'Die of Death' badware plush toy" })
               ),
               m(".profile-info", [
                 m("h2.profile-username", "Timmy1236"),
@@ -31,16 +31,16 @@ const webmasterPage = {
             m(".profile-section", [
               m(".profile-socials", [
                 m("a.profile-social-icon", { href: "https://github.com/Timmy1236" }, [
-                  m("img", { src: "./assets/images/icons/socials/github.png", alt: "GitHub" })
+                  m("img", { src: "/main/assets/images/icons/socials/github.png", alt: "GitHub" })
                 ]),
                 m("a.profile-social-icon", { href: "https://discordapp.com/users/375889010419171328" }, [
-                  m("img", { src: "./assets/images/icons/socials/discord.png", alt: "Discord" })
+                  m("img", { src: "/main/assets/images/icons/socials/discord.png", alt: "Discord" })
                 ]),
                 m("a.profile-social-icon", { href: "https://steamcommunity.com/id/Timmy1236/" }, [
-                  m("img", { src: "./assets/images/icons/socials/steam.png", alt: "Steam" })
+                  m("img", { src: "/main/assets/images/icons/socials/steam.png", alt: "Steam" })
                 ]),
                 m("a.profile-social-icon", { href: "https://www.roblox.com/users/89179192/profile" }, [
-                  m("img", { src: "./assets/images/icons/socials/roblox.png", alt: "Roblox" })
+                  m("img", { src: "/main/assets/images/icons/socials/roblox.png", alt: "Roblox" })
                 ])
               ])
             ])

@@ -73,7 +73,7 @@ export function parseBBCode(text: string): string {
   result = result.replace(/:(\w+):/g, (_match, name) => {
     const filename = EMOJI_MAP[name];
     if (!filename) return _match;
-    return `<img class="emoji" src="/assets/images/emojis/${filename}" alt=":${name}:" title=":${name}:">`;
+    return `<img class="emoji" src="/main/assets/images/emojis/${filename}" alt=":${name}:" title=":${name}:">`;
   });
 
   return result;

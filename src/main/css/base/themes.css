@@ -57,14 +57,14 @@
   --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Banner */
-  --banner-image: url("/assets/images/banners/purple.png");
+  --banner-image: url("/main/assets/images/banners/purple.png");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/purple-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/purple-hover.png");
+  --normal-mouse-image: url("/main/assets/images/mouse/purple-normal.png");
+  --hover-mouse-image: url("/main/assets/images/mouse/purple-hover.png");
 
   /* Background */
-  --bg-image: url("/assets/images/backgrounds/purple.png");
+  --bg-image: url("/main/assets/images/backgrounds/purple.png");
   --bg-color: var(--color-background);
 }
 
@@ -90,14 +90,14 @@
   --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Banner */
-  --banner-image: url("/assets/images/banners/green.png");
+  --banner-image: url("/main/assets/images/banners/green.png");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/green-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/green-hover.png");
+  --normal-mouse-image: url("/main/assets/images/mouse/green-normal.png");
+  --hover-mouse-image: url("/main/assets/images/mouse/green-hover.png");
 
   /* Background */
-  --bg-image: url("/assets/images/backgrounds/green.png");
+  --bg-image: url("/main/assets/images/backgrounds/green.png");
   --bg-color: var(--color-background);
 }
 
@@ -123,14 +123,14 @@
   --button-border: 2px rgb(0 0 0 / 40%) solid;
 
   /* Banner */
-  --banner-image: url("/assets/images/banners/nocolor.png");
+  --banner-image: url("/main/assets/images/banners/nocolor.png");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
+  --normal-mouse-image: url("/main/assets/images/mouse/nocolor-normal.png");
+  --hover-mouse-image: url("/main/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --bg-image: url("/assets/images/backgrounds/dark.png");
+  --bg-image: url("/main/assets/images/backgrounds/dark.png");
   --bg-color: var(--color-background);
 }
 
@@ -200,13 +200,13 @@
   --button-border: 2px solid #fbfbfb85;
 
   /* Banner */
-  --banner-image: url("/assets/images/banners/omori-darkspace.gif");
+  --banner-image: url("/main/assets/images/banners/omori-darkspace.gif");
 
   /* Mouse */
-  --normal-mouse-image: url("/assets/images/mouse/nocolor-normal.png");
-  --hover-mouse-image: url("/assets/images/mouse/nocolor-hover.png");
+  --normal-mouse-image: url("/main/assets/images/mouse/nocolor-normal.png");
+  --hover-mouse-image: url("/main/assets/images/mouse/nocolor-hover.png");
 
   /* Background */
-  --bg-image: url("/assets/images/backgrounds/omori.jpg");
+  --bg-image: url("/main/assets/images/backgrounds/omori.jpg");
   --bg-color: var(--color-background);
 }

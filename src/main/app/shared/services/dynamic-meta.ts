@@ -38,5 +38,5 @@ export function setCurrentPath(path: m.Route, icon: string) {
 
   document.title = (translation[language][current] ?? "Website") + " - Timmy";
   document.documentElement.lang = language;
-  changePageIcon(`/assets/images/icons/utils/${icon}.png`);
+  changePageIcon(`/main/assets/images/icons/utils/${icon}.png`);
 }

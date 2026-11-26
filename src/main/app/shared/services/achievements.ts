@@ -25,7 +25,7 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     id: "welcome",
     name: "achievements.list.welcome.name",
     description: "achievements.list.welcome.desc",
-    image: "./assets/images/pages/achievements/hi.webp"
+    image: "/main/assets/images/pages/achievements/hi.webp"
   },
   {
     id: "oyasumi",
@@ -33,14 +33,14 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     description: "achievements.list.oyasumi.desc",
     secret: true,
     notify: true,
-    image: "./assets/images/pages/achievements/sleep.webp"
+    image: "/main/assets/images/pages/achievements/sleep.webp"
   },
   {
     id: "404",
     name: "achievements.list.404.name",
     description: "achievements.list.404.desc",
     notify: true,
-    image: "./assets/images/pages/achievements/error.webp"
+    image: "/main/assets/images/pages/achievements/error.webp"
   },
   {
     id: "explorer",
@@ -48,21 +48,21 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     description: "achievements.list.explorer.desc",
     notify: true,
     maxProgress: 20,
-    image: "./assets/images/pages/achievements/gigglypuff.webp"
+    image: "/main/assets/images/pages/achievements/gigglypuff.webp"
   },
   {
     id: "math",
     name: "achievements.list.math.name",
     description: "achievements.list.math.desc",
     notify: true,
-    image: "./assets/images/pages/achievements/gambling.webp"
+    image: "/main/assets/images/pages/achievements/gambling.webp"
   },
   {
     id: "owner",
     name: "achievements.list.owner.name",
     description: "achievements.list.owner.desc",
     notify: true,
-    image: "./assets/images/pages/achievements/owner.webp"
+    image: "/main/assets/images/pages/achievements/owner.webp"
   }
 ];
 

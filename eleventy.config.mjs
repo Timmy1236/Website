@@ -129,10 +129,10 @@ export default async function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/content/",
+    pathPrefix: "/library/",
     dir: {
       input: "src/library/eleventy/",
-      output: "public/content",
+      output: "public/library",
       includes: "_includes"
     }
   };

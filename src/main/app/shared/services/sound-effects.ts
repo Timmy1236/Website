@@ -14,19 +14,19 @@ interface SoundDefinition {
 
 const SOUND_DEFINITIONS: Record<string, SoundDefinition> = {
   // Teclado y mouse.
-  click: { path: "/assets/sounds/sfx/mouse/mouse-down.mp3", volume: 0.65, rate: [0.9, 1.3] },
-  clickUp: { path: "/assets/sounds/sfx/mouse/mouse-up.mp3", volume: 0.65, rate: [0.9, 1.3] },
-  key: { path: "/assets/sounds/sfx/key.mp3", volume: 0.5, rate: [0.9, 1.3] },
+  click: { path: "/main/assets/sounds/sfx/mouse/mouse-down.mp3", volume: 0.65, rate: [0.9, 1.3] },
+  clickUp: { path: "/main/assets/sounds/sfx/mouse/mouse-up.mp3", volume: 0.65, rate: [0.9, 1.3] },
+  key: { path: "/main/assets/sounds/sfx/key.mp3", volume: 0.5, rate: [0.9, 1.3] },
 
   // Sidebar.
-  buttonHover: { path: "/assets/sounds/sfx/button/button-hover.mp3", volume: 0.5, rate: [1, 1] },
-  buttonClick: { path: "/assets/sounds/sfx/button/button-click.mp3", volume: 0.5, rate: [1, 1] },
-  buttonRelease: { path: "/assets/sounds/sfx/button/button-release.mp3", volume: 0.5, rate: [1, 1] },
+  buttonHover: { path: "/main/assets/sounds/sfx/button/button-hover.mp3", volume: 0.5, rate: [1, 1] },
+  buttonClick: { path: "/main/assets/sounds/sfx/button/button-click.mp3", volume: 0.5, rate: [1, 1] },
+  buttonRelease: { path: "/main/assets/sounds/sfx/button/button-release.mp3", volume: 0.5, rate: [1, 1] },
 
   // Sonidos para features especificas.
-  banner: { path: "/assets/sounds/sfx/others/banner.mp3", volume: 0.2, rate: [0.7, 1.3] },
-  squeak: { path: "/assets/sounds/sfx/others/squeak.mp3", volume: 1, rate: [1, 1] },
-  hi: { path: "/assets/sounds/sfx/others/hi.mp3", volume: 1, rate: [1, 1] }
+  banner: { path: "/main/assets/sounds/sfx/others/banner.mp3", volume: 0.2, rate: [0.7, 1.3] },
+  squeak: { path: "/main/assets/sounds/sfx/others/squeak.mp3", volume: 1, rate: [1, 1] },
+  hi: { path: "/main/assets/sounds/sfx/others/hi.mp3", volume: 1, rate: [1, 1] }
 };
 
 let audioContext: AudioContext | null = null;

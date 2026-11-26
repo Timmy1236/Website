@@ -6,7 +6,7 @@ let latestPromise: Promise<Latest> | null = null;
 export function getLatest(): Promise<Latest> {
   if (!latestPromise) {
     const { language } = getSettings();
-    latestPromise = fetch(`/content/latest/${language}.json`)
+    latestPromise = fetch(`/library/latest/${language}.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();

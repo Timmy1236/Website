@@ -11,7 +11,7 @@
   <meta property="og:description" content="{{ description }}" />
   <meta name="theme-color" content="#282a36" />
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="/dist/library/styles.css">
+  <link rel="stylesheet" href="/library/dist/library/styles.css">
 </head>
 
 <body>
@@ -33,11 +33,11 @@
 
         {% else %}
         <nav>
-          <a href="/main.html">main</a>
+          <a href="/main/">main</a>
           <div class="separator-line"></div>
-          <a href="/content/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif %}>blog</a>
+          <a href="/library/{{ locale | default: 'es' }}/blog/index.html" {% if title=="Blog" %} class="active" {% endif %}>blog</a>
           <div class="separator-line"></div>
-          <a href="/content/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %} class="active" {% endif %}>changelog</a>
+          <a href="/library/{{ locale | default: 'es' }}/changelog/index.html" {% if title=="Changelog" %} class="active" {% endif %}>changelog</a>
         </nav>
 
         {% endif %}
@@ -63,8 +63,8 @@
 
     <footer class="footer">
       <div class="footer-content">
-        <p>RSS Español: <a href="/content/es/rss/feed.xml">Feed</a>, <a href="/content/es/rss/blog.xml">Blog</a>, <a href="/content/es/rss/changelog.xml">Changelog</a></p>
-        <p>RSS English: <a href="/content/en/rss/feed.xml">Feed</a>, <a href="/content/en/rss/blog.xml">Blog</a>, <a href="/content/en/rss/changelog.xml">Changelog</a></p>
+        <p>RSS Español: <a href="/library/es/rss/feed.xml">Feed</a>, <a href="/library/es/rss/blog.xml">Blog</a>, <a href="/library/es/rss/changelog.xml">Changelog</a></p>
+        <p>RSS English: <a href="/library/en/rss/feed.xml">Feed</a>, <a href="/library/en/rss/blog.xml">Blog</a>, <a href="/library/en/rss/changelog.xml">Changelog</a></p>
       </div>
     </footer>
   </div>

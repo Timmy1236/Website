@@ -7,8 +7,8 @@ export interface ButtonSite {
   tooltip?: string
 }
 
-const _preview = (x: string) => `/assets/images/pages/links/previews/${x}.webp`;
-const _button = (x: string, y: string) => `/assets/images/pages/links/buttons/${x}.${y}`;
+const _preview = (x: string) => `/main/assets/images/pages/links/previews/${x}.webp`;
+const _button = (x: string, y: string) => `/main/assets/images/pages/links/buttons/${x}.${y}`;
 const _note = (x: string) => `main.links.windows.button-wall.content.notes.${x}`;
 
 export const neighborSites: ButtonSite[] = [
