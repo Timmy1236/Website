@@ -2,32 +2,45 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .card {
+  display: flex;
   padding: 8px;
-  border: 2px solid var(--color-foreground);
-  transition: all 0.1s;
-  opacity: 0.75;
+  transition: background-color 0.1s;
+  align-items: center;
 }
 
 .card:hover {
   background-color: #373444;
-  border: 2px solid var(--color-foreground);
   opacity: 1;
 }
 
-.card-title {
-  height: 30px;
+.card-right-side {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-title {
+ font-size: 1.4em;
+ color: var(--color-accent);
+}
+
+.card-left-side {
+  width: 200px;
+  min-width: 200px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.card-image {
+  margin: 0;
 }
 
 .card-link {
-  font-size: 1.4em;
-  color: var(--color-accent);
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 .card-date {
@@ -36,8 +49,8 @@
 }
 
 .card-description {
-  margin-top: 6px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
 .card-tag-bar {

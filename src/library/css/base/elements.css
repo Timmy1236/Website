@@ -13,15 +13,6 @@ html {
 a {
   color: var(--color-accent);
   text-decoration: none;
-  background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent));
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 0% 2px;
-  transition: background-size .2s ease-in-out;
-}
-
-a:hover {
-  background-size: 100% 2px;
 }
 
 p {

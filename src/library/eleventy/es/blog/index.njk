@@ -5,28 +5,31 @@ description: Blogs, micro-blogs, posts, etc. No soy de usar redes sociales, esto
 layout: layouts/base.html
 ---
 
-{% set allTags = collections.blog_es | uniqueTags %}
-
 <div class="card-tag-bar">
   Tags:
-  {% for tag in allTags %}
+  {% for tag in collections.blog_es | uniqueTags %}
   <div class="card-tag">{{ tag }}</div>
   {% endfor %}
 </div>
 
 <div class="cards-list">
   {% for post in collections.blog_es %}
-  <div class="card">
-    <span class="card-title">
-      <a class="card-link" href="{{ post.url | url }}"> {{ post.data.title }} </a>
-      <span class="card-date">{{ post.data.date | readableDate }}</span>
-    </span>
-    <p class="card-description">{{ post.data.description }}</p>
-    <div class="card-tag-bar">
-      {% for tag in post.data.tags %}
-      <span class="card-tag">{{ tag }}</span>
-      {% endfor %}
+  <a class="card-link" href="{{ post.url | url }}">
+    <div class="card">
+      <div class="card-left-side">
+        <img class="card-image" src="{{ post.data.preview | default("/library/assets/images/no_preview.png") }}">
+      </div>
+      <div class="card-right-side">
+        <span class="card-title"> {{ post.data.title }}</span>
+        <span class="card-date">{{ post.data.date | readableDate }}</span>
+        <p class="card-description">{{ post.data.description }}</p>
+        <div class="card-tag-bar">
+          {% for tag in post.data.tags %}
+          <span class="card-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
     </div>
-  </div>
+  </a>
   {% endfor %}
 </div>
